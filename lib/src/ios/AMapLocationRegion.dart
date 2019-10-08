@@ -40,6 +40,25 @@ class AMapLocationRegion extends NSObject with NSCopying {
   
 
   // 生成方法们
+  Future<AMapLocationRegion> initWithIdentifier(String identifier) async {
+    // 日志打印
+    print('fluttify-dart: AMapLocationRegion@$refId::initWithIdentifier([\'identifier\':$identifier])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('AMapLocationRegion::initWithIdentifier', {"identifier": identifier, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return AMapLocationRegion()..refId = result;
+    }
+  }
+  
   Future<bool> containsCoordinate(CLLocationCoordinate2D coordinate) async {
     // 日志打印
     print('fluttify-dart: AMapLocationRegion@$refId::containsCoordinate([])');

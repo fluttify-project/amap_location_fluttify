@@ -24,6 +24,7 @@ A new flutter plugin project.
   # 系统framework
   s.frameworks = [
         "QuartzCore",
+		"ExternalAccessory",
 		"CoreLocation",
 		"SystemConfiguration",
 		"CoreTelephony",

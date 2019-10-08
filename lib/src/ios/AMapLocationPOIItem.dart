@@ -34,6 +34,11 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
     return result;
   }
   
+  Future<AMapLocationPoint> get_location() async {
+    final result = await _channel.invokeMethod("AMapLocationPOIItem::get_location", {'refId': refId});
+    return AMapLocationPoint()..refId = result;
+  }
+  
   Future<String> get_tel() async {
     final result = await _channel.invokeMethod("AMapLocationPOIItem::get_tel", {'refId': refId});
     return result;
@@ -82,6 +87,12 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
   
   Future<void> set_address(String address) async {
     await _channel.invokeMethod('AMapLocationPOIItem::set_address', {'refId': refId, "address": address});
+  
+  
+  }
+  
+  Future<void> set_location(AMapLocationPoint location) async {
+    await _channel.invokeMethod('AMapLocationPOIItem::set_location', {'refId': refId, "location": location.refId});
   
   
   }

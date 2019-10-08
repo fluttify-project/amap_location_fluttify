@@ -19,8 +19,29 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     return result;
   }
   
+  Future<AMapGeoFenceRegionStatus> get_fenceStatus() async {
+    final result = await _channel.invokeMethod("AMapGeoFenceRegion::get_fenceStatus", {'refId': refId});
+    return AMapGeoFenceRegionStatus.values[result];
+  }
+  
+  Future<AMapGeoFenceRegionType> get_regionType() async {
+    final result = await _channel.invokeMethod("AMapGeoFenceRegion::get_regionType", {'refId': refId});
+    return AMapGeoFenceRegionType.values[result];
+  }
+  
 
   // 生成setters
+  Future<void> set_fenceStatus(AMapGeoFenceRegionStatus fenceStatus) async {
+    await _channel.invokeMethod('AMapGeoFenceRegion::set_fenceStatus', {'refId': refId, "fenceStatus": fenceStatus.index});
+  
+  
+  }
+  
+  Future<void> set_regionType(AMapGeoFenceRegionType regionType) async {
+    await _channel.invokeMethod('AMapGeoFenceRegion::set_regionType', {'refId': refId, "regionType": regionType.index});
+  
+  
+  }
   
 
   // 生成方法们
