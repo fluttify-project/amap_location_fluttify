@@ -34,6 +34,11 @@ class AMapLocationManager extends NSObject  {
     return result;
   }
   
+  Future<AMapLocationReGeocodeLanguage> get_reGeocodeLanguage() async {
+    final result = await _channel.invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'refId': refId});
+    return AMapLocationReGeocodeLanguage.values[result];
+  }
+  
   Future<bool> get_detectRiskOfFakeLocation() async {
     final result = await _channel.invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation", {'refId': refId});
     return result;
@@ -41,6 +46,36 @@ class AMapLocationManager extends NSObject  {
   
 
   // 生成setters
+  Future<void> set_delegate(AMapLocationManagerDelegate delegate) async {
+    await _channel.invokeMethod('AMapLocationManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
+  
+    MethodChannel('AMapLocationManagerDelegate::Callback')
+      .setMethodCallHandler((methodCall) async {
+        final args = methodCall.arguments as Map;
+        // final refId = args['callerRefId'] as int;
+        // if (refId != this.refId) return;
+  
+        switch (methodCall.method) {
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDoRequireLocationAuth([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDoRequireLocationAuth(AMapLocationManager()..refId = (args['manager']), CLLocationManager()..refId = (args['locationManager']));
+            break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager']));
+            break;
+          default:
+            break;
+        }
+      });
+  }
+  
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
     await _channel.invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', {'refId': refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
@@ -67,6 +102,12 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> set_locatingWithReGeocode(bool locatingWithReGeocode) async {
     await _channel.invokeMethod('AMapLocationManager::set_locatingWithReGeocode', {'refId': refId, "locatingWithReGeocode": locatingWithReGeocode});
+  
+  
+  }
+  
+  Future<void> set_reGeocodeLanguage(AMapLocationReGeocodeLanguage reGeocodeLanguage) async {
+    await _channel.invokeMethod('AMapLocationManager::set_reGeocodeLanguage', {'refId': refId, "reGeocodeLanguage": reGeocodeLanguage.index});
   
   
   }
@@ -180,6 +221,63 @@ class AMapLocationManager extends NSObject  {
   
     // 调用原生方法
     final result = await _channel.invokeMethod('AMapLocationManager::stopUpdatingLocation', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<void> startMonitoringForRegion(AMapLocationRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapLocationManager@$refId::startMonitoringForRegion([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('AMapLocationManager::startMonitoringForRegion', {"region": region.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<void> stopMonitoringForRegion(AMapLocationRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapLocationManager@$refId::stopMonitoringForRegion([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('AMapLocationManager::stopMonitoringForRegion', {"region": region.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<void> requestStateForRegion(AMapLocationRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapLocationManager@$refId::requestStateForRegion([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('AMapLocationManager::requestStateForRegion', {"region": region.refId, "refId": refId});
   
   
     // 接受原生回调

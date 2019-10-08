@@ -6,5 +6,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 mixin AMapLocationManagerDelegate on NSObject {
+  Future<void> amapLocationManagerDoRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {}
+  
+  Future<bool> amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager manager) {}
   
 }
