@@ -33,5 +33,23 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   
 
   // 生成方法们
+  static Future<AMapLocationPoint> locationWithLatitudeLongitude(double lat, double lon) async {
+    // 日志打印
+    print('fluttify-dart: AMapLocationPoint::locationWithLatitude([\'lat\':$lat, \'lon\':$lon])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::locationWithLatitudeLongitude', {"lat": lat, "lon": lon});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return AMapLocationPoint()..refId = result;
+    }
+  }
   
 }

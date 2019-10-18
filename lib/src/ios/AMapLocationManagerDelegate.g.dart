@@ -11,5 +11,30 @@ mixin AMapLocationManagerDelegate on NSObject {
 
   
 
+  @mustCallSuper
+  Future<void> amapLocationManagerDoRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {
+    kCallbackPool[manager.refId] = manager;
+    kCallbackPool[locationManager.refId] = locationManager;
+    debugPrint('amapLocationManagerDoRequireLocationAuth::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManagerDidFailWithError(AMapLocationManager manager, NSError error) {
+    kCallbackPool[manager.refId] = manager;
+    kCallbackPool[error.refId] = error;
+    debugPrint('amapLocationManagerDidFailWithError::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
+    kCallbackPool[manager.refId] = manager;
+    debugPrint('amapLocationManagerDidChangeAuthorizationStatus::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<bool> amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager manager) {
+    kCallbackPool[manager.refId] = manager;
+    debugPrint('amapLocationManagerShouldDisplayHeadingCalibration::kCallbackPool: $kCallbackPool');
+  }
   
 }

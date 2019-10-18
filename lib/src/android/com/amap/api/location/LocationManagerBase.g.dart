@@ -12,6 +12,18 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   
 
   @mustCallSuper
+  Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) {
+  
+    debugPrint('setLocationOption::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) {
+  
+    debugPrint('setLocationListener::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
   Future<void> startLocation() {
   
     debugPrint('startLocation::kCallbackPool: $kCallbackPool');
@@ -21,6 +33,12 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> stopLocation() {
   
     debugPrint('stopLocation::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<com_amap_api_location_AMapLocation> getLastKnownLocation() {
+  
+    debugPrint('getLastKnownLocation::kCallbackPool: $kCallbackPool');
   }
   
   @mustCallSuper
@@ -39,6 +57,12 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<bool> isStarted() {
   
     debugPrint('isStarted::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) {
+  
+    debugPrint('unRegisterLocationListener::kCallbackPool: $kCallbackPool');
   }
   
   @mustCallSuper

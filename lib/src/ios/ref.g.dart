@@ -16,8 +16,38 @@ class Ref_iOS extends Ref {
     return result;
   }
   
+  Future<bool> isKindOfAMapLocationCircleRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationCircleRegion', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isKindOfAMapLocationPolygonRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPolygonRegion', {'refId': refId});
+    return result;
+  }
+  
   Future<bool> isKindOfAMapGeoFenceRegion() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceRegion', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isKindOfAMapGeoFenceCircleRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceCircleRegion', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isKindOfAMapGeoFencePolygonRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFencePolygonRegion', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isKindOfAMapGeoFencePOIRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFencePOIRegion', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isKindOfAMapGeoFenceDistrictRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceDistrictRegion', {'refId': refId});
     return result;
   }
   
@@ -82,9 +112,39 @@ class Ref_iOS extends Ref {
     return AMapLocationRegion()..refId = result;
   }
   
+  Future<AMapLocationCircleRegion> asAMapLocationCircleRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationCircleRegion', {'refId': refId});
+    return AMapLocationCircleRegion()..refId = result;
+  }
+  
+  Future<AMapLocationPolygonRegion> asAMapLocationPolygonRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationPolygonRegion', {'refId': refId});
+    return AMapLocationPolygonRegion()..refId = result;
+  }
+  
   Future<AMapGeoFenceRegion> asAMapGeoFenceRegion() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceRegion', {'refId': refId});
     return AMapGeoFenceRegion()..refId = result;
+  }
+  
+  Future<AMapGeoFenceCircleRegion> asAMapGeoFenceCircleRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceCircleRegion', {'refId': refId});
+    return AMapGeoFenceCircleRegion()..refId = result;
+  }
+  
+  Future<AMapGeoFencePolygonRegion> asAMapGeoFencePolygonRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFencePolygonRegion', {'refId': refId});
+    return AMapGeoFencePolygonRegion()..refId = result;
+  }
+  
+  Future<AMapGeoFencePOIRegion> asAMapGeoFencePOIRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFencePOIRegion', {'refId': refId});
+    return AMapGeoFencePOIRegion()..refId = result;
+  }
+  
+  Future<AMapGeoFenceDistrictRegion> asAMapGeoFenceDistrictRegion() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceDistrictRegion', {'refId': refId});
+    return AMapGeoFenceDistrictRegion()..refId = result;
   }
   
   Future<AMapLocationManager> asAMapLocationManager() async {

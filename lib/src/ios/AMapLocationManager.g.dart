@@ -37,6 +37,11 @@ class AMapLocationManager extends NSObject  {
     return result;
   }
   
+  Future<AMapLocationReGeocodeLanguage> get_reGeocodeLanguage() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'refId': refId});
+    return AMapLocationReGeocodeLanguage.values[result];
+  }
+  
   Future<bool> get_detectRiskOfFakeLocation() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation", {'refId': refId});
     return result;
@@ -44,6 +49,50 @@ class AMapLocationManager extends NSObject  {
   
 
   // 生成setters
+  Future<void> set_delegate(AMapLocationManagerDelegate delegate) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
+  
+    MethodChannel('AMapLocationManagerDelegate::Callback')
+      .setMethodCallHandler((methodCall) async {
+        final args = methodCall.arguments as Map;
+        // final refId = args['callerRefId'] as int;
+        // if (refId != this.refId) return;
+  
+        switch (methodCall.method) {
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDoRequireLocationAuth([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDoRequireLocationAuth(AMapLocationManager()..refId = (args['manager']), CLLocationManager()..refId = (args['locationManager']));
+            break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidFailWithError':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDidFailWithError([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDidFailWithError(AMapLocationManager()..refId = (args['manager']), NSError()..refId = (args['error']));
+            break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDidChangeAuthorizationStatus([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager()..refId = (args['manager']), CLAuthorizationStatus.values[(args['status'])]);
+            break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager']));
+            break;
+          default:
+            break;
+        }
+      });
+  }
+  
   Future<void> set_distanceFilter(double distanceFilter) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_distanceFilter', {'refId': refId, "distanceFilter": distanceFilter});
   
@@ -76,6 +125,12 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> set_locatingWithReGeocode(bool locatingWithReGeocode) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locatingWithReGeocode', {'refId': refId, "locatingWithReGeocode": locatingWithReGeocode});
+  
+  
+  }
+  
+  Future<void> set_reGeocodeLanguage(AMapLocationReGeocodeLanguage reGeocodeLanguage) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeLanguage', {'refId': refId, "reGeocodeLanguage": reGeocodeLanguage.index});
   
   
   }

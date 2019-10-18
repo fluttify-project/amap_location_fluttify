@@ -11,6 +11,11 @@ class Ref_Android extends Ref {
     return result;
   }
   
+  Future<bool> isKindOfcom_autonavi_aps_amapapi_model_AMapLocationServer() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_autonavi_aps_amapapi_model_AMapLocationServer', {'refId': refId});
+    return result;
+  }
+  
   Future<bool> isKindOfcom_amap_api_location_AMapLocationClient() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationClient', {'refId': refId});
     return result;
@@ -75,6 +80,11 @@ class Ref_Android extends Ref {
   Future<com_loc_> ascom_loc_() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::ascom_loc_', {'refId': refId});
     return com_loc_()..refId = result;
+  }
+  
+  Future<com_autonavi_aps_amapapi_model_AMapLocationServer> ascom_autonavi_aps_amapapi_model_AMapLocationServer() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::ascom_autonavi_aps_amapapi_model_AMapLocationServer', {'refId': refId});
+    return com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = result;
   }
   
   Future<com_amap_api_location_AMapLocationClient> ascom_amap_api_location_AMapLocationClient() async {

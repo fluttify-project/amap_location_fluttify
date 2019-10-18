@@ -18,6 +18,30 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   }
   
   @mustCallSuper
+  Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) {
+  
+    debugPrint('setGeoFenceListener::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> addRoundGeoFence(com_amap_api_location_DPoint var1, double var2, String var3) {
+  
+    debugPrint('addRoundGeoFence::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> addPolygonGeoFence(List<com_amap_api_location_DPoint> var1, String var2) {
+  
+    debugPrint('addPolygonGeoFence::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<void> addNearbyGeoFence(String var1, String var2, com_amap_api_location_DPoint var3, double var4, int var5, String var6) {
+  
+    debugPrint('addNearbyGeoFence::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
   Future<void> addKeywordGeoFence(String var1, String var2, String var3, int var4, String var5) {
   
     debugPrint('addKeywordGeoFence::kCallbackPool: $kCallbackPool');
@@ -33,6 +57,12 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> removeGeoFence() {
   
     debugPrint('removeGeoFence::kCallbackPool: $kCallbackPool');
+  }
+  
+  @mustCallSuper
+  Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() {
+  
+    debugPrint('getAllGeoFence::kCallbackPool: $kCallbackPool');
   }
   
   @mustCallSuper

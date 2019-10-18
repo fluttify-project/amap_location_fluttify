@@ -49,9 +49,39 @@ class ObjectFactory_iOS {
     return AMapLocationRegion()..refId = refId;
   }
   
+  static Future<AMapLocationCircleRegion> createAMapLocationCircleRegion() async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationCircleRegion');
+    return AMapLocationCircleRegion()..refId = refId;
+  }
+  
+  static Future<AMapLocationPolygonRegion> createAMapLocationPolygonRegion() async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPolygonRegion');
+    return AMapLocationPolygonRegion()..refId = refId;
+  }
+  
   static Future<AMapGeoFenceRegion> createAMapGeoFenceRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
     return AMapGeoFenceRegion()..refId = refId;
+  }
+  
+  static Future<AMapGeoFenceCircleRegion> createAMapGeoFenceCircleRegion() async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceCircleRegion');
+    return AMapGeoFenceCircleRegion()..refId = refId;
+  }
+  
+  static Future<AMapGeoFencePolygonRegion> createAMapGeoFencePolygonRegion() async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFencePolygonRegion');
+    return AMapGeoFencePolygonRegion()..refId = refId;
+  }
+  
+  static Future<AMapGeoFencePOIRegion> createAMapGeoFencePOIRegion() async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion');
+    return AMapGeoFencePOIRegion()..refId = refId;
+  }
+  
+  static Future<AMapGeoFenceDistrictRegion> createAMapGeoFenceDistrictRegion() async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceDistrictRegion');
+    return AMapGeoFenceDistrictRegion()..refId = refId;
   }
   
   static Future<AMapLocationManager> createAMapLocationManager() async {

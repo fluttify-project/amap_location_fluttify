@@ -241,6 +241,25 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   }
   
+  Future<void> setLocationMode(com_amap_api_location_AMapLocationClientOption_AMapLocationMode var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setLocationMode([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationQualityReport::setLocationMode', {"var1": var1.index, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
   Future<String> getAdviseMessage() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getAdviseMessage([])');

@@ -30,6 +30,59 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
     }
 
     private val handlerMap = mapOf<String, (Registrar, Map<String, Any>, MethodChannel.Result) -> Unit>(
+        "com.autonavi.aps.amapapi.model.AMapLocationServer::toStr" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.autonavi.aps.amapapi.model.AMapLocationServer
+        
+            // 日志打印
+            println("fluttify-kotlin: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::toStr([])")
+        
+            // 开始调用
+            val result = ref.toStr()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.location.LocationManagerBase::setLocationOption" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationClientOption
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::setLocationOption([])")
+        
+            // 开始调用
+            ref.setLocationOption(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.location.LocationManagerBase::setLocationListener" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::setLocationListener([])")
+        
+            // 开始调用
+            ref.setLocationListener(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.location.LocationManagerBase::startLocation" to { registrar, args, methodResult ->
             // 参数
         
@@ -63,6 +116,30 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.location.LocationManagerBase::getLastKnownLocation" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::getLastKnownLocation([])")
+        
+            // 开始调用
+            val result = ref.getLastKnownLocation()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.LocationManagerBase::startAssistantLocation" to { registrar, args, methodResult ->
             // 参数
@@ -115,6 +192,24 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.LocationManagerBase::unRegisterLocationListener" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::unRegisterLocationListener([])")
+        
+            // 开始调用
+            ref.unRegisterLocationListener(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.location.LocationManagerBase::onDestroy" to { registrar, args, methodResult ->
             // 参数
         
@@ -146,6 +241,42 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 开始调用
             ref.disableBackgroundLocation(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.location.AMapLocationClient::setLocationOption" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationClientOption
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::setLocationOption([])")
+        
+            // 开始调用
+            ref.setLocationOption(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.location.AMapLocationClient::setLocationListener" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::setLocationListener([])")
+        
+            // 开始调用
+            ref.setLocationListener(var1)
         
             // 调用结果
             methodResult.success("success")
@@ -183,6 +314,30 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.location.AMapLocationClient::getLastKnownLocation" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::getLastKnownLocation([])")
+        
+            // 开始调用
+            val result = ref.getLastKnownLocation()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClient::startAssistantLocation" to { registrar, args, methodResult ->
             // 参数
@@ -269,6 +424,24 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClient::unRegisterLocationListener" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::unRegisterLocationListener([])")
+        
+            // 开始调用
+            ref.unRegisterLocationListener(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.location.AMapLocationClient::onDestroy" to { registrar, args, methodResult ->
             // 参数
         
@@ -320,6 +493,24 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationListener::onLocationChanged" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocation
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationListener
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationListener@$refId::onLocationChanged([])")
+        
+            // 开始调用
+            ref.onLocationChanged(var1)
+        
+            // 调用结果
+            methodResult.success("success")
         },
         "com.amap.api.location.DPoint::getLongitude" to { registrar, args, methodResult ->
             // 参数
@@ -391,6 +582,80 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.location.CoordinateConverter::from" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var1 = com.amap.api.location.CoordinateConverter.CoordType.values()[args["var1"] as Int]
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.CoordinateConverter
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.CoordinateConverter@$refId::from([])")
+        
+            // 开始调用
+            val result = ref.from(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.CoordinateConverter::coord" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.CoordinateConverter
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.CoordinateConverter@$refId::coord([])")
+        
+            // 开始调用
+            val result = ref.coord(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.CoordinateConverter::convert" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.CoordinateConverter
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.CoordinateConverter@$refId::convert([])")
+        
+            // 开始调用
+            val result = ref.convert()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.CoordinateConverter::isAMapDataAvailable" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -406,6 +671,25 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 开始调用
             val result = com.amap.api.location.CoordinateConverter.isAMapDataAvailable(var0, var2)
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.location.CoordinateConverter::calculateLineDistance" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var0 = HEAP[args["var0"] as Int] as com.amap.api.location.DPoint
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
+        
+            // 调用对象引用
+        
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.CoordinateConverter::calculateLineDistance([])")
+        
+            // 开始调用
+            val result = com.amap.api.location.CoordinateConverter.calculateLineDistance(var0, var1)
         
             // 调用结果
             methodResult.success(result)
@@ -1543,6 +1827,72 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocation::clone" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::clone([])")
+        
+            // 开始调用
+            val result = ref.clone()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocation::getLocationQualityReport" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getLocationQualityReport([])")
+        
+            // 开始调用
+            val result = ref.getLocationQualityReport()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocation::setLocationQualityReport" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationQualityReport
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setLocationQualityReport([])")
+        
+            // 开始调用
+            ref.setLocationQualityReport(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.location.AMapLocation::getCoordType" to { registrar, args, methodResult ->
             // 参数
         
@@ -1681,6 +2031,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setMockEnable" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setMockEnable([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setMockEnable(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::getInterval" to { registrar, args, methodResult ->
             // 参数
         
@@ -1697,6 +2072,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setInterval" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Long
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setInterval([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setInterval(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::isOnceLocation" to { registrar, args, methodResult ->
             // 参数
@@ -1715,6 +2115,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setOnceLocation" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setOnceLocation([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setOnceLocation(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::isNeedAddress" to { registrar, args, methodResult ->
             // 参数
         
@@ -1731,6 +2156,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setNeedAddress" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setNeedAddress([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setNeedAddress(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::isWifiActiveScan" to { registrar, args, methodResult ->
             // 参数
@@ -1749,6 +2199,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setWifiActiveScan" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setWifiActiveScan([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setWifiActiveScan(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::isWifiScan" to { registrar, args, methodResult ->
             // 参数
         
@@ -1765,6 +2240,121 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setWifiScan" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setWifiScan([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setWifiScan(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::getLocationMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLocationMode([])")
+        
+            // 开始调用
+            val result = ref.getLocationMode()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::setLocationMode" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var1 = com.amap.api.location.AMapLocationClientOption.AMapLocationMode.values()[args["var1"] as Int]
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLocationMode([])")
+        
+            // 开始调用
+            val result = ref.setLocationMode(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::getLocationProtocol" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLocationProtocol([])")
+        
+            // 开始调用
+            val result = ref.getLocationProtocol()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::setLocationProtocol" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var0 = com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol.values()[args["var0"] as Int]
+        
+            // 调用对象引用
+        
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption::setLocationProtocol([])")
+        
+            // 开始调用
+            com.amap.api.location.AMapLocationClientOption.setLocationProtocol(var0)
+        
+            // 调用结果
+            methodResult.success("success")
         },
         "com.amap.api.location.AMapLocationClientOption::isKillProcess" to { registrar, args, methodResult ->
             // 参数
@@ -1783,6 +2373,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setKillProcess" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setKillProcess([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setKillProcess(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::isGpsFirst" to { registrar, args, methodResult ->
             // 参数
         
@@ -1799,6 +2414,56 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setGpsFirst" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setGpsFirst([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setGpsFirst(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Long
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setGpsFirstTimeout([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setGpsFirstTimeout(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::getGpsFirstTimeout" to { registrar, args, methodResult ->
             // 参数
@@ -1817,6 +2482,30 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::clone" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::clone([])")
+        
+            // 开始调用
+            val result = ref.clone()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::getHttpTimeOut" to { registrar, args, methodResult ->
             // 参数
         
@@ -1833,6 +2522,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setHttpTimeOut" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Long
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setHttpTimeOut([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setHttpTimeOut(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::isOffset" to { registrar, args, methodResult ->
             // 参数
@@ -1851,6 +2565,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setOffset" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setOffset([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setOffset(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::isLocationCacheEnable" to { registrar, args, methodResult ->
             // 参数
         
@@ -1867,6 +2606,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLocationCacheEnable([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setLocationCacheEnable(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::isOnceLocationLatest" to { registrar, args, methodResult ->
             // 参数
@@ -1885,6 +2649,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setOnceLocationLatest([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setOnceLocationLatest(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::isSensorEnable" to { registrar, args, methodResult ->
             // 参数
         
@@ -1902,6 +2691,56 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationClientOption::setSensorEnable" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setSensorEnable([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setSensorEnable(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Long
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLastLocationLifeCycle([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setLastLocationLifeCycle(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.location.AMapLocationClientOption::getLastLocationLifeCycle" to { registrar, args, methodResult ->
             // 参数
         
@@ -1918,6 +2757,55 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::getGeoLanguage" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getGeoLanguage([])")
+        
+            // 开始调用
+            val result = ref.getGeoLanguage()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::setGeoLanguage" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var1 = com.amap.api.location.AMapLocationClientOption.GeoLanguage.values()[args["var1"] as Int]
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setGeoLanguage([])")
+        
+            // 开始调用
+            val result = ref.setGeoLanguage(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary" to { registrar, args, methodResult ->
             // 参数
@@ -1968,6 +2856,80 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Double
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setDeviceModeDistanceFilter([\"var1\":$var1])")
+        
+            // 开始调用
+            val result = ref.setDeviceModeDistanceFilter(var1.toFloat())
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::setLocationPurpose" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var1 = com.amap.api.location.AMapLocationClientOption.AMapLocationPurpose.values()[args["var1"] as Int]
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLocationPurpose([])")
+        
+            // 开始调用
+            val result = ref.setLocationPurpose(var1)
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.location.AMapLocationClientOption::getLocationPurpose" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLocationPurpose([])")
+        
+            // 开始调用
+            val result = ref.getLocationPurpose()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi" to { registrar, args, methodResult ->
             // 参数
@@ -2280,6 +3242,24 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.AMapLocationQualityReport::setLocationMode" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var1 = com.amap.api.location.AMapLocationClientOption.AMapLocationMode.values()[args["var1"] as Int]
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setLocationMode([])")
+        
+            // 开始调用
+            ref.setLocationMode(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.location.AMapLocationQualityReport::getAdviseMessage" to { registrar, args, methodResult ->
             // 参数
         
@@ -2367,6 +3347,48 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.fence.DistrictItem::getPolyline" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::getPolyline([])")
+        
+            // 开始调用
+            val result = ref.getPolyline()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.fence.DistrictItem::setPolyline" to { registrar, args, methodResult ->
+            // 参数
+            // 列表参数
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.location.DPoint }
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::setPolyline([])")
+        
+            // 开始调用
+            ref.setPolyline(ArrayList(var1))
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.fence.DistrictItem::getDistrictName" to { registrar, args, methodResult ->
             // 参数
         
@@ -2402,6 +3424,29 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.fence.DistrictItem::getCreator" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+        
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.DistrictItem::getCreator([])")
+        
+            // 开始调用
+            val result = com.amap.api.fence.DistrictItem.getCreator()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.fence.GeoFenceClient::setActivateAction" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -2420,28 +3465,69 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success("success")
         },
-        "com.amap.api.fence.GeoFenceClient::addGeoFence" to { registrar, args, methodResult ->
+        "com.amap.api.fence.GeoFenceClient::setGeoFenceListener" to { registrar, args, methodResult ->
             // 参数
-            // jsonable参数
-            val var1 = args["var1"] as String
-            // jsonable参数
-            val var2 = args["var2"] as String
-            // jsonable参数
-            val var3 = args["var3"] as String
-            // jsonable参数
-            val var4 = args["var4"] as Int
-            // jsonable参数
-            val var5 = args["var5"] as String
+        
         
             // 调用对象引用
             val refId = args["refId"] as Int
             val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // 日志打印
-            println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3, \"var4\":$var4, \"var5\":$var5])")
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])")
         
             // 开始调用
-            ref.addGeoFence(var1, var2, var3, var4, var5)
+            ref.setGeoFenceListener(object : com.amap.api.fence.GeoFenceListener {
+                // method channel
+                val callbackChannel = MethodChannel(registrar.messenger(), "com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback")
+        
+                // 回调方法们
+                override fun onGeoFenceCreateFinished(var1: List<com.amap.api.fence.GeoFence>, var2: Int, var3: String): Unit {
+                    // 日志打印
+                    println("fluttify-kotlin-callback: onGeoFenceCreateFinished([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
+        
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
+                    val argvar2 = var2
+                    val argvar3 = var3
+        
+                    // 开始回调
+                    callbackChannel.invokeMethod(
+                        "Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished",
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2,
+                            "var3" to argvar3
+                        )
+                    )
+        
+                    // 方法返回值
+        
+                }
+        
+            })
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceClient::addGeoFence" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
+            // jsonable参数
+            val var2 = args["var2"] as Double
+            // jsonable参数
+            val var3 = args["var3"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\"var2\":$var2, \"var3\":$var3])")
+        
+            // 开始调用
+            ref.addGeoFence(var1, var2.toFloat(), var3)
         
             // 调用结果
             methodResult.success("success")
@@ -2462,6 +3548,30 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceClient::getAllGeoFence" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])")
+        
+            // 开始调用
+            val result = ref.getAllGeoFence()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.fence.GeoFenceClient::setGeoFenceAble" to { registrar, args, methodResult ->
             // 参数
@@ -2533,6 +3643,28 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success(result)
+        },
+        "com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished" to { registrar, args, methodResult ->
+            // 参数
+            // 列表参数
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.fence.GeoFence }
+            // jsonable参数
+            val var2 = args["var2"] as Int
+            // jsonable参数
+            val var3 = args["var3"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceListener
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceListener@$refId::onGeoFenceCreateFinished([\"var2\":$var2, \"var3\":$var3])")
+        
+            // 开始调用
+            ref.onGeoFenceCreateFinished(ArrayList(var1), var2, var3)
+        
+            // 调用结果
+            methodResult.success("success")
         },
         "com.amap.api.fence.GeoFence::getFenceId" to { registrar, args, methodResult ->
             // 参数
@@ -2670,6 +3802,131 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 开始调用
             ref.setType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFence::getPoiItem" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getPoiItem([])")
+        
+            // 开始调用
+            val result = ref.getPoiItem()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.fence.GeoFence::setPoiItem" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.fence.PoiItem
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setPoiItem([])")
+        
+            // 开始调用
+            ref.setPoiItem(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFence::getDistrictItemList" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getDistrictItemList([])")
+        
+            // 开始调用
+            val result = ref.getDistrictItemList()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.fence.GeoFence::setDistrictItemList" to { registrar, args, methodResult ->
+            // 参数
+            // 列表参数
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.fence.DistrictItem }
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setDistrictItemList([])")
+        
+            // 开始调用
+            ref.setDistrictItemList(ArrayList(var1))
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFence::getPointList" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getPointList([])")
+        
+            // 开始调用
+            val result = ref.getPointList()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.fence.GeoFence::setPointList" to { registrar, args, methodResult ->
+            // 参数
+            val var1 = listOf<List<com.amap.api.location.DPoint>>()
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setPointList([])")
+        
+            // 开始调用
+            ref.setPointList(ArrayList(var1))
         
             // 调用结果
             methodResult.success("success")
@@ -2849,6 +4106,48 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.fence.GeoFence::getCenter" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getCenter([])")
+        
+            // 开始调用
+            val result = ref.getCenter()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.fence.GeoFence::setCenter" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setCenter([])")
+        
+            // 开始调用
+            ref.setCenter(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.fence.GeoFence::getMinDis2Center" to { registrar, args, methodResult ->
             // 参数
         
@@ -2954,6 +4253,48 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.fence.GeoFence::setCurrentLocation" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocation
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setCurrentLocation([])")
+        
+            // 开始调用
+            ref.setCurrentLocation(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFence::getCurrentLocation" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getCurrentLocation([])")
+        
+            // 开始调用
+            val result = ref.getCurrentLocation()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.fence.GeoFenceManagerBase::setActivateAction" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -2968,6 +4309,121 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 开始调用
             ref.setActivateAction(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::setGeoFenceListener([])")
+        
+            // 开始调用
+            ref.setGeoFenceListener(object : com.amap.api.fence.GeoFenceListener {
+                // method channel
+                val callbackChannel = MethodChannel(registrar.messenger(), "com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener::Callback")
+        
+                // 回调方法们
+                override fun onGeoFenceCreateFinished(var1: List<com.amap.api.fence.GeoFence>, var2: Int, var3: String): Unit {
+                    // 日志打印
+                    println("fluttify-kotlin-callback: onGeoFenceCreateFinished([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
+        
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
+                    val argvar2 = var2
+                    val argvar3 = var3
+        
+                    // 开始回调
+                    callbackChannel.invokeMethod(
+                        "Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished",
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2,
+                            "var3" to argvar3
+                        )
+                    )
+        
+                    // 方法返回值
+        
+                }
+        
+            })
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
+            // jsonable参数
+            val var2 = args["var2"] as Double
+            // jsonable参数
+            val var3 = args["var3"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addRoundGeoFence([\"var2\":$var2, \"var3\":$var3])")
+        
+            // 开始调用
+            ref.addRoundGeoFence(var1, var2.toFloat(), var3)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceManagerBase::addPolygonGeoFence" to { registrar, args, methodResult ->
+            // 参数
+            // 列表参数
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.location.DPoint }
+            // jsonable参数
+            val var2 = args["var2"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addPolygonGeoFence([\"var2\":$var2])")
+        
+            // 开始调用
+            ref.addPolygonGeoFence(ArrayList(var1), var2)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceManagerBase::addNearbyGeoFence" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+            // jsonable参数
+            val var2 = args["var2"] as String
+            // 引用参数
+            val var3 = HEAP[args["var3"] as Int] as com.amap.api.location.DPoint
+            // jsonable参数
+            val var4 = args["var4"] as Double
+            // jsonable参数
+            val var5 = args["var5"] as Int
+            // jsonable参数
+            val var6 = args["var6"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addNearbyGeoFence([\"var1\":$var1, \"var2\":$var2, \"var4\":$var4, \"var5\":$var5, \"var6\":$var6])")
+        
+            // 开始调用
+            ref.addNearbyGeoFence(var1, var2, var3, var4.toFloat(), var5, var6)
         
             // 调用结果
             methodResult.success("success")
@@ -3034,6 +4490,30 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.fence.GeoFenceManagerBase::getAllGeoFence" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::getAllGeoFence([])")
+        
+            // 开始调用
+            val result = ref.getAllGeoFence()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.fence.GeoFenceManagerBase::setGeoFenceAble" to { registrar, args, methodResult ->
             // 参数
@@ -3490,6 +4970,45 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.fence.PoiItem::getCreator" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+        
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.PoiItem::getCreator([])")
+        
+            // 开始调用
+            val result = com.amap.api.fence.PoiItem.getCreator()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String" to { registrar, args, methodResult ->
+            Log.d("ObjectFactory", "创建对象: com_autonavi_aps_amapapi_model_AMapLocationServer__String")
+        
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 创建对象
+            val obj = com.autonavi.aps.amapapi.model.AMapLocationServer(var1)
+            HEAP[obj.hashCode()] = obj
+        
+            // 打印当前HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
+        
+            methodResult.success(obj.hashCode())
         },
         "ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context" to { registrar, args, methodResult ->
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context")

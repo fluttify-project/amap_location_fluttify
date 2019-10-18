@@ -165,6 +165,120 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   }
   
+  Future<com_amap_api_fence_PoiItem> getPoiItem() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPoiItem([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getPoiItem', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_fence_PoiItem()..refId = result;
+    }
+  }
+  
+  Future<void> setPoiItem(com_amap_api_fence_PoiItem var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPoiItem([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPoiItem', {"var1": var1.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<List<com_amap_api_fence_DistrictItem>> getDistrictItemList() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getDistrictItemList([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getDistrictItemList', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_fence_DistrictItem()..refId = it).toList();
+    }
+  }
+  
+  Future<void> setDistrictItemList(List<com_amap_api_fence_DistrictItem> var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setDistrictItemList([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setDistrictItemList', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<List<com_amap_api_location_DPoint>> getPointList() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPointList([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getPointList', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_location_DPoint()..refId = it).toList();
+    }
+  }
+  
+  Future<void> setPointList(List<List<com_amap_api_location_DPoint>> var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPointList([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPointList', {"var1": [], "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
   Future<double> getRadius() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getRadius([])');
@@ -355,6 +469,44 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   }
   
+  Future<com_amap_api_location_DPoint> getCenter() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCenter([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getCenter', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_DPoint()..refId = result;
+    }
+  }
+  
+  Future<void> setCenter(com_amap_api_location_DPoint var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCenter([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setCenter', {"var1": var1.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
   Future<double> getMinDis2Center() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getMinDis2Center([])');
@@ -466,6 +618,44 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
       return null;
     } else {
       return result;
+    }
+  }
+  
+  Future<void> setCurrentLocation(com_amap_api_location_AMapLocation var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCurrentLocation([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setCurrentLocation', {"var1": var1.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<com_amap_api_location_AMapLocation> getCurrentLocation() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCurrentLocation([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getCurrentLocation', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_AMapLocation()..refId = result;
     }
   }
   

@@ -1115,6 +1115,63 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   }
   
+  Future<com_amap_api_location_AMapLocation> clone() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::clone([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::clone', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_AMapLocation()..refId = result;
+    }
+  }
+  
+  Future<com_amap_api_location_AMapLocationQualityReport> getLocationQualityReport() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationQualityReport([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationQualityReport', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_AMapLocationQualityReport()..refId = result;
+    }
+  }
+  
+  Future<void> setLocationQualityReport(com_amap_api_location_AMapLocationQualityReport var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationQualityReport([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport', {"var1": var1.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
   Future<String> getCoordType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCoordType([])');

@@ -53,6 +53,11 @@ class ObjectFactory_Android {
   }
 
   
+  static Future<com_autonavi_aps_amapapi_model_AMapLocationServer> createcom_autonavi_aps_amapapi_model_AMapLocationServer__String(String var1) async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String', {"var1": var1});
+    return com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = refId;
+  }
+  
   static Future<com_amap_api_location_AMapLocationClient> createcom_amap_api_location_AMapLocationClient__android_content_Context(android_content_Context var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context', {"var1": var1.refId});
     return com_amap_api_location_AMapLocationClient()..refId = refId;

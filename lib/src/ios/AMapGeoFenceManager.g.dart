@@ -7,6 +7,11 @@ import 'package:flutter/services.dart';
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapGeoFenceManager extends NSObject  {
   // 生成getters
+  Future<AMapGeoFenceActiveAction> get_activeAction() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction", {'refId': refId});
+    return AMapGeoFenceActiveAction.values[result];
+  }
+  
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically", {'refId': refId});
     return result;
@@ -24,6 +29,49 @@ class AMapGeoFenceManager extends NSObject  {
   
 
   // 生成setters
+  Future<void> set_delegate(AMapGeoFenceManagerDelegate delegate) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
+  
+    MethodChannel('AMapGeoFenceManagerDelegate::Callback')
+      .setMethodCallHandler((methodCall) async {
+        final args = methodCall.arguments as Map;
+        // final refId = args['callerRefId'] as int;
+        // if (refId != this.refId) return;
+  
+        switch (methodCall.method) {
+          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth':
+            // 日志打印
+            print('fluttify-dart-callback: amapGeoFenceManagerDoRequireLocationAuth([])');
+        
+              // 调用回调方法
+            delegate?.amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager()..refId = (args['manager']), CLLocationManager()..refId = (args['locationManager']));
+            break;
+          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror':
+            // 日志打印
+            print('fluttify-dart-callback: amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror([\'customID\':$args[customID]])');
+        
+              // 调用回调方法
+            delegate?.amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror(AMapGeoFenceManager()..refId = (args['manager']), (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it).toList(), args['customID'], NSError()..refId = (args['error']));
+            break;
+          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror':
+            // 日志打印
+            print('fluttify-dart-callback: amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror([\'customID\':$args[customID]])');
+        
+              // 调用回调方法
+            delegate?.amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror(AMapGeoFenceManager()..refId = (args['manager']), AMapGeoFenceRegion()..refId = (args['region']), args['customID'], NSError()..refId = (args['error']));
+            break;
+          default:
+            break;
+        }
+      });
+  }
+  
+  Future<void> set_activeAction(AMapGeoFenceActiveAction activeAction) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction', {'refId': refId, "activeAction": activeAction.index});
+  
+  
+  }
+  
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically', {'refId': refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
@@ -139,6 +187,25 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
+  Future<AMapGeoFenceRegionActiveStatus> statusWithGeoFenceRegion(AMapGeoFenceRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapGeoFenceManager@$refId::statusWithGeoFenceRegion([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::statusWithGeoFenceRegion', {"region": region.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return AMapGeoFenceRegionActiveStatus.values[result];
+    }
+  }
+  
   Future<List> geoFenceRegionsWithCustomID(String customID) async {
     // 日志打印
     print('fluttify-dart: AMapGeoFenceManager@$refId::geoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -215,6 +282,25 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
+  Future<bool> pauseTheGeoFenceRegion(AMapGeoFenceRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapGeoFenceManager@$refId::pauseTheGeoFenceRegion([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseTheGeoFenceRegion', {"region": region.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
   Future<List> startGeoFenceRegionsWithCustomID(String customID) async {
     // 日志打印
     print('fluttify-dart: AMapGeoFenceManager@$refId::startGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -231,6 +317,44 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
+    }
+  }
+  
+  Future<bool> startTheGeoFenceRegion(AMapGeoFenceRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapGeoFenceManager@$refId::startTheGeoFenceRegion([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startTheGeoFenceRegion', {"region": region.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<void> removeTheGeoFenceRegion(AMapGeoFenceRegion region) async {
+    // 日志打印
+    print('fluttify-dart: AMapGeoFenceManager@$refId::removeTheGeoFenceRegion([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeTheGeoFenceRegion', {"region": region.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
     }
   }
   
