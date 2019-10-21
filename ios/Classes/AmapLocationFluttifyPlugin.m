@@ -1107,6 +1107,20 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           methodResult(@(result));
       },
       
+      @"AMapLocationManager::get_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapLocationManager::get_desiredAccuracy");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
+      
+          // 开始调用
+          CLLocationAccuracy result = ref.desiredAccuracy;
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
       @"AMapLocationManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_pausesLocationUpdatesAutomatically");
       
@@ -1733,6 +1747,20 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
           ref.distanceFilter = distanceFilter;
+          methodResult(@"success");
+      },
+      
+      @"AMapLocationManager::set_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapLocationManager::set_desiredAccuracy");
+      
+          // 参数
+          // jsonable参数
+          CLLocationAccuracy desiredAccuracy = [args[@"desiredAccuracy"] doubleValue];
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
+      
+          ref.desiredAccuracy = desiredAccuracy;
           methodResult(@"success");
       },
       

@@ -13,6 +13,12 @@ class AMapLocationManager extends NSObject  {
     return result;
   }
   
+  Future<double> get_desiredAccuracy() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_desiredAccuracy", {'refId': refId});
+  
+    return result;
+  }
+  
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically", {'refId': refId});
   
@@ -103,6 +109,12 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> set_distanceFilter(double distanceFilter) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_distanceFilter', {'refId': refId, "distanceFilter": distanceFilter});
+  
+  
+  }
+  
+  Future<void> set_desiredAccuracy(double desiredAccuracy) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_desiredAccuracy', {'refId': refId, "desiredAccuracy": desiredAccuracy});
   
   
   }
