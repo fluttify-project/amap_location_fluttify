@@ -31,6 +31,12 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     return AMapGeoFenceRegionType.values[result];
   }
   
+  Future<CLLocation> get_currentLocation() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation", {'refId': refId});
+    kNativeObjectPool.add(CLLocation()..refId = result);
+    return CLLocation()..refId = result;
+  }
+  
 
   // 生成setters
   Future<void> set_fenceStatus(AMapGeoFenceRegionStatus fenceStatus) async {
@@ -41,6 +47,12 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   
   Future<void> set_regionType(AMapGeoFenceRegionType regionType) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_regionType', {'refId': refId, "regionType": regionType.index});
+  
+  
+  }
+  
+  Future<void> set_currentLocation(CLLocation currentLocation) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_currentLocation', {'refId': refId, "currentLocation": currentLocation.refId});
   
   
   }

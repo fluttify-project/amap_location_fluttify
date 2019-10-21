@@ -168,6 +168,8 @@ class CLLocationCoordinate2D extends Ref_iOS {
 
 class CLLocation extends Ref_iOS {}
 
+class CLHeading extends Ref_iOS {}
+
 class CGRect extends Ref_iOS {}
 
 class CGPoint extends Ref_iOS {}

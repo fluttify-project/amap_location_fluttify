@@ -87,6 +87,20 @@ class AMapLocationManager extends NSObject  {
               // 调用回调方法
             delegate?.amapLocationManagerDidFailWithError(AMapLocationManager()..refId = (args['manager']), NSError()..refId = (args['error']));
             break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDidUpdateLocation([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDidUpdateLocation(AMapLocationManager()..refId = (args['manager']), CLLocation()..refId = (args['location']));
+            break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDidUpdateLocationreGeocode([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDidUpdateLocationreGeocode(AMapLocationManager()..refId = (args['manager']), CLLocation()..refId = (args['location']), AMapLocationReGeocode()..refId = (args['reGeocode']));
+            break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus':
             // 日志打印
             print('fluttify-dart-callback: amapLocationManagerDidChangeAuthorizationStatus([])');
@@ -100,6 +114,13 @@ class AMapLocationManager extends NSObject  {
         
               // 调用回调方法
             delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager']));
+            break;
+          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading':
+            // 日志打印
+            print('fluttify-dart-callback: amapLocationManagerDidUpdateHeading([])');
+        
+              // 调用回调方法
+            delegate?.amapLocationManagerDidUpdateHeading(AMapLocationManager()..refId = (args['manager']), CLHeading()..refId = (args['newHeading']));
             break;
           default:
             break;
