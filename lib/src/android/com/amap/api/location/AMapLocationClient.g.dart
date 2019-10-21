@@ -38,11 +38,28 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::setLocationListener([])');
   
     // 调用原生方法
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::setLocationListener', {"var1": var1.refId, "refId": refId});
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::setLocationListener', {"refId": refId});
   
   
     // 接受原生回调
+    MethodChannel('com.amap.api.location.AMapLocationClient::setLocationListener::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          // final refId = args['callerRefId'] as int;
+          // if (refId != this.refId) return;
   
+          switch (methodCall.method) {
+            case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
+              // 日志打印
+              print('fluttify-dart-callback: onLocationChanged([])');
+        
+                // 调用回调方法
+              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1']));
+              break;
+            default:
+              break;
+          }
+        });
   
     // 返回值
     if (result == null) {
@@ -218,11 +235,28 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::unRegisterLocationListener([])');
   
     // 调用原生方法
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::unRegisterLocationListener', {"var1": var1.refId, "refId": refId});
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::unRegisterLocationListener', {"refId": refId});
   
   
     // 接受原生回调
+    MethodChannel('com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          // final refId = args['callerRefId'] as int;
+          // if (refId != this.refId) return;
   
+          switch (methodCall.method) {
+            case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
+              // 日志打印
+              print('fluttify-dart-callback: onLocationChanged([])');
+        
+                // 调用回调方法
+              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1']));
+              break;
+            default:
+              break;
+          }
+        });
   
     // 返回值
     if (result == null) {

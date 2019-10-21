@@ -13,13 +13,13 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
 
   @mustCallSuper
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) {
-  
+    kNativeObjectPool.add(var1);
     debugPrint('setLocationOption::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) {
-  
+    kNativeObjectPool.add(var1);
     debugPrint('setLocationListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
@@ -61,7 +61,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   
   @mustCallSuper
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) {
-  
+    kNativeObjectPool.add(var1);
     debugPrint('unRegisterLocationListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
