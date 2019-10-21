@@ -119,6 +119,13 @@ class AmapLocation {
     }
   }
 
+  static Future<void> stopLocation() {
+    return platform(
+      android: (pool) => _androidClient.stopLocation(),
+      ios: (pool) => _iosClient.stopUpdatingLocation(),
+    );
+  }
+
   static void dispose() {
     kNativeObjectPool
       ..forEach(release)
