@@ -1,6 +1,5 @@
 /// 定位模式
-enum LocationMode {
-  HighAccuracy,
-  BatterySaving,
-  DeviceSensor,
+enum LocationAccuracy {
+  High,
+  Low,
 }

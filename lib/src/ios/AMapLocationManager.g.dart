@@ -259,7 +259,7 @@ class AMapLocationManager extends NSObject  {
           // if (refId != this.refId) return;
   
           switch (methodCall.method) {
-            case 'AMapLocationManager::requestLocationWithReGeocode_Callback::completionBlock':
+            case 'Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock':
               // 日志打印
         
         

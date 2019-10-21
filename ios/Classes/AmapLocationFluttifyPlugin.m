@@ -662,7 +662,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           // 开始调用
           BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
               FlutterMethodChannel *channel = [FlutterMethodChannel
-                  methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
+                  methodChannelWithName:@"AMapLocationManager::requestLocationWithReGeocodeCompletionBlock::Callback"
                         binaryMessenger:[self->_registrar messenger]];
       
               NSLog(@"");
@@ -678,29 +678,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
               NSNumber* argerror = @(error.hash);
               HEAP_AmapLocationFluttify[argerror] = error;
       
-              // __block #__callback_result_type__# _callbackResult = nil;
-              // [channel invokeMethod:@"#__callback_method__#"
-              //             arguments:@{#__callback_args__#}
-              //                result:^(id result) {
-              //                  #__raw_callback_result__#
-              //                }];
-              //
-              // while (_callbackResult == nil) {
-              //   // _callbackResult有值前, 空转
-              // }
-              //
-              // #__struct_value__#
-              //
-              // return #__callback_result__#;
-      
-              // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
-              // 相关issue https://github.com/flutter/flutter/issues/28310
-              NSLog(@"暂不支持有返回值的回调方法");
-      
-              ////////////////////////////如果需要手写代码, 请写在这里/////////////////////////////
-      
-              ////////////////////////////////////////////////////////////////////////////////
-      
+              [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation, @"regeocode": argregeocode, @"error": argerror}];
       
           }];
       
