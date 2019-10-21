@@ -13,6 +13,12 @@ class AMapLocationManager extends NSObject  {
     return result;
   }
   
+  Future<double> get_desiredAccuracy() async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_desiredAccuracy", {'refId': refId});
+  
+    return result;
+  }
+  
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically", {'refId': refId});
   
@@ -103,6 +109,12 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> set_distanceFilter(double distanceFilter) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_distanceFilter', {'refId': refId, "distanceFilter": distanceFilter});
+  
+  
+  }
+  
+  Future<void> set_desiredAccuracy(double desiredAccuracy) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_desiredAccuracy', {'refId': refId, "desiredAccuracy": desiredAccuracy});
   
   
   }
@@ -221,6 +233,43 @@ class AMapLocationManager extends NSObject  {
   
     // 接受原生回调
   
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  Future<bool> requestLocationWithReGeocodeCompletionBlock(bool withReGeocode, void completionBlock(CLLocation location, AMapLocationReGeocode regeocode, NSError error)) async {
+    // 日志打印
+    print('fluttify-dart: AMapLocationManager@$refId::requestLocationWithReGeocode([\'withReGeocode\':$withReGeocode])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::requestLocationWithReGeocodeCompletionBlock', {"withReGeocode": withReGeocode, "refId": refId});
+  
+  
+    // 接受原生回调
+    MethodChannel('AMapLocationManager::requestLocationWithReGeocodeCompletionBlock::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          // final refId = args['callerRefId'] as int;
+          // if (refId != this.refId) return;
+  
+          switch (methodCall.method) {
+            case 'Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock':
+              // 日志打印
+        
+        
+                // 调用回调方法
+              completionBlock(CLLocation()..refId = (args['location']), AMapLocationReGeocode()..refId = (args['regeocode']), NSError()..refId = (args['error']));
+              break;
+            default:
+              break;
+          }
+        });
   
     // 返回值
     if (result == null) {

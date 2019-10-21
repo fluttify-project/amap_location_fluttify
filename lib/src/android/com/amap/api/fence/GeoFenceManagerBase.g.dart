@@ -19,25 +19,25 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   
   @mustCallSuper
   Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) {
-  
+    kNativeObjectPool.add(var1);
     debugPrint('setGeoFenceListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> addRoundGeoFence(com_amap_api_location_DPoint var1, double var2, String var3) {
-  
+    kNativeObjectPool.add(var1);
     debugPrint('addRoundGeoFence::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> addPolygonGeoFence(List<com_amap_api_location_DPoint> var1, String var2) {
-  
+    kNativeObjectPool.addAll(var1);
     debugPrint('addPolygonGeoFence::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> addNearbyGeoFence(String var1, String var2, com_amap_api_location_DPoint var3, double var4, int var5, String var6) {
-  
+    kNativeObjectPool.add(var3);
     debugPrint('addNearbyGeoFence::kNativeObjectPool: $kNativeObjectPool');
   }
   

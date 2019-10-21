@@ -9,19 +9,16 @@ class AMapServices extends NSObject  {
   // 生成getters
   Future<String> get_apiKey() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapServices::get_apiKey", {'refId': refId});
-  
     return result;
   }
   
   Future<bool> get_enableHTTPS() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapServices::get_enableHTTPS", {'refId': refId});
-  
     return result;
   }
   
   Future<bool> get_crashReportEnabled() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapServices::get_crashReportEnabled", {'refId': refId});
-  
     return result;
   }
   
@@ -47,5 +44,23 @@ class AMapServices extends NSObject  {
   
 
   // 生成方法们
+  static Future<AMapServices> sharedServices() async {
+    // 日志打印
+    print('fluttify-dart: AMapServices::sharedServices([])');
+  
+    // 调用原生方法
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapServices::sharedServices', );
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return AMapServices()..refId = result;
+    }
+  }
   
 }

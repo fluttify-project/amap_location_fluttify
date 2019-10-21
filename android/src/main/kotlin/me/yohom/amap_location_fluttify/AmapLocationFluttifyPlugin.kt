@@ -67,8 +67,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         },
         "com.amap.api.location.LocationManagerBase::setLocationListener" to { registrar, args, methodResult ->
             // 参数
-            // 引用参数
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
         
             // 调用对象引用
             val refId = args["refId"] as Int
@@ -78,7 +77,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::setLocationListener([])")
         
             // 开始调用
-            ref.setLocationListener(var1)
+            ref.setLocationListener(object : com.amap.api.location.AMapLocationListener {
+                // method channel
+                val callbackChannel = MethodChannel(registrar.messenger(), "com.amap.api.location.LocationManagerBase::setLocationListener::Callback")
+        
+                // 回调方法们
+                override fun onLocationChanged(var1: com.amap.api.location.AMapLocation): Unit {
+                    // 日志打印
+                    println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
+        
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+        
+                    // 开始回调
+                    callbackChannel.invokeMethod(
+                        "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
+                    )
+        
+                    // 方法返回值
+        
+                }
+        
+            })
         
             // 调用结果
             methodResult.success("success")
@@ -194,8 +217,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         },
         "com.amap.api.location.LocationManagerBase::unRegisterLocationListener" to { registrar, args, methodResult ->
             // 参数
-            // 引用参数
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
         
             // 调用对象引用
             val refId = args["refId"] as Int
@@ -205,7 +227,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::unRegisterLocationListener([])")
         
             // 开始调用
-            ref.unRegisterLocationListener(var1)
+            ref.unRegisterLocationListener(object : com.amap.api.location.AMapLocationListener {
+                // method channel
+                val callbackChannel = MethodChannel(registrar.messenger(), "com.amap.api.location.LocationManagerBase::unRegisterLocationListener::Callback")
+        
+                // 回调方法们
+                override fun onLocationChanged(var1: com.amap.api.location.AMapLocation): Unit {
+                    // 日志打印
+                    println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
+        
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+        
+                    // 开始回调
+                    callbackChannel.invokeMethod(
+                        "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
+                    )
+        
+                    // 方法返回值
+        
+                }
+        
+            })
         
             // 调用结果
             methodResult.success("success")
@@ -265,8 +311,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         },
         "com.amap.api.location.AMapLocationClient::setLocationListener" to { registrar, args, methodResult ->
             // 参数
-            // 引用参数
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
         
             // 调用对象引用
             val refId = args["refId"] as Int
@@ -276,7 +321,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::setLocationListener([])")
         
             // 开始调用
-            ref.setLocationListener(var1)
+            ref.setLocationListener(object : com.amap.api.location.AMapLocationListener {
+                // method channel
+                val callbackChannel = MethodChannel(registrar.messenger(), "com.amap.api.location.AMapLocationClient::setLocationListener::Callback")
+        
+                // 回调方法们
+                override fun onLocationChanged(var1: com.amap.api.location.AMapLocation): Unit {
+                    // 日志打印
+                    println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
+        
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+        
+                    // 开始回调
+                    callbackChannel.invokeMethod(
+                        "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
+                    )
+        
+                    // 方法返回值
+        
+                }
+        
+            })
         
             // 调用结果
             methodResult.success("success")
@@ -426,8 +495,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         },
         "com.amap.api.location.AMapLocationClient::unRegisterLocationListener" to { registrar, args, methodResult ->
             // 参数
-            // 引用参数
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationListener
+        
         
             // 调用对象引用
             val refId = args["refId"] as Int
@@ -437,7 +505,31 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::unRegisterLocationListener([])")
         
             // 开始调用
-            ref.unRegisterLocationListener(var1)
+            ref.unRegisterLocationListener(object : com.amap.api.location.AMapLocationListener {
+                // method channel
+                val callbackChannel = MethodChannel(registrar.messenger(), "com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback")
+        
+                // 回调方法们
+                override fun onLocationChanged(var1: com.amap.api.location.AMapLocation): Unit {
+                    // 日志打印
+                    println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
+        
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+        
+                    // 开始回调
+                    callbackChannel.invokeMethod(
+                        "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
+                    )
+        
+                    // 方法返回值
+        
+                }
+        
+            })
         
             // 调用结果
             methodResult.success("success")

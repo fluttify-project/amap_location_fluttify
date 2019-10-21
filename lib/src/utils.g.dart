@@ -13,12 +13,12 @@ Future<T> platform<T>({
   if (android != null && Platform.isAndroid) {
     final releasePool = <Ref_Android>[];
     final result = await android(releasePool);
-    releasePool.forEach((it) => ObjectFactory_Android.release(it));
+    releasePool..forEach((it) => ObjectFactory_Android.release(it))..clear();
     return result;
   } else if (ios != null && Platform.isIOS) {
     final releasePool = <Ref_iOS>[];
     final result = await ios(releasePool);
-    releasePool.forEach((it) => ObjectFactory_iOS.release(it));
+    releasePool..forEach((it) => ObjectFactory_iOS.release(it))..clear();
     return result;
   } else {
     return Future.value();

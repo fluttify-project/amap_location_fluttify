@@ -41,72 +41,114 @@ class ObjectFactory_iOS {
 
   static Future<AMapGeoFenceManager> createAMapGeoFenceManager() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceManager');
-    return AMapGeoFenceManager()..refId = refId;
+    final object = AMapGeoFenceManager()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationRegion> createAMapLocationRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationRegion');
-    return AMapLocationRegion()..refId = refId;
+    final object = AMapLocationRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationCircleRegion> createAMapLocationCircleRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationCircleRegion');
-    return AMapLocationCircleRegion()..refId = refId;
+    final object = AMapLocationCircleRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationPolygonRegion> createAMapLocationPolygonRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPolygonRegion');
-    return AMapLocationPolygonRegion()..refId = refId;
+    final object = AMapLocationPolygonRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapGeoFenceRegion> createAMapGeoFenceRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
-    return AMapGeoFenceRegion()..refId = refId;
+    final object = AMapGeoFenceRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapGeoFenceCircleRegion> createAMapGeoFenceCircleRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceCircleRegion');
-    return AMapGeoFenceCircleRegion()..refId = refId;
+    final object = AMapGeoFenceCircleRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapGeoFencePolygonRegion> createAMapGeoFencePolygonRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFencePolygonRegion');
-    return AMapGeoFencePolygonRegion()..refId = refId;
+    final object = AMapGeoFencePolygonRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapGeoFencePOIRegion> createAMapGeoFencePOIRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion');
-    return AMapGeoFencePOIRegion()..refId = refId;
+    final object = AMapGeoFencePOIRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapGeoFenceDistrictRegion> createAMapGeoFenceDistrictRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceDistrictRegion');
-    return AMapGeoFenceDistrictRegion()..refId = refId;
+    final object = AMapGeoFenceDistrictRegion()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationManager> createAMapLocationManager() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationManager');
-    return AMapLocationManager()..refId = refId;
+    final object = AMapLocationManager()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationReGeocode> createAMapLocationReGeocode() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationReGeocode');
-    return AMapLocationReGeocode()..refId = refId;
+    final object = AMapLocationReGeocode()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationPoint> createAMapLocationPoint() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPoint');
-    return AMapLocationPoint()..refId = refId;
+    final object = AMapLocationPoint()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationPOIItem> createAMapLocationPOIItem() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPOIItem');
-    return AMapLocationPOIItem()..refId = refId;
+    final object = AMapLocationPOIItem()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
   static Future<AMapLocationDistrictItem> createAMapLocationDistrictItem() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationDistrictItem');
-    return AMapLocationDistrictItem()..refId = refId;
+    final object = AMapLocationDistrictItem()..refId = refId;
+  
+    kNativeObjectPool.add(object);
+    return object;
   }
   
 }
