@@ -1,10 +1,13 @@
-import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 import 'package:amap_location_fluttify/amap_location_fluttify.dart';
+import 'package:decorated_flutter/decorated_flutter.dart';
+import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  await AmapCore.init('f6422eadda731fb0d9ffb3260a5cf899');
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -12,45 +15,47 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-
-  @override
-  void initState() {
-    super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await AmapLocationFluttify.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
+  Location _location;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+        appBar: AppBar(title: const Text('Plugin example app')),
+        body: DecoratedColumn(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            RaisedButton(
+              child: Text('获取单次定位'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  _location = await AmapLocation.getLocation();
+                  setState(() {});
+                }
+              },
+            ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.address,
+                builder: (context, ss) => Center(child: Text(ss.data)),
+              ),
+          ],
         ),
       ),
     );
+  }
+}
+
+Future<bool> requestPermission() async {
+  final permissions =
+      await PermissionHandler().requestPermissions([PermissionGroup.location]);
+
+  if (permissions[PermissionGroup.location] == PermissionStatus.granted) {
+    return true;
+  } else {
+    toast('需要定位权限!');
+    return false;
   }
 }
