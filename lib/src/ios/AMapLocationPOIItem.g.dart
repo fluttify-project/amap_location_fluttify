@@ -9,51 +9,61 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
   // 生成getters
   Future<String> get_pId() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_pId", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_type() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_type", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_typeCode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_typeCode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_address() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_address", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapLocationPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapLocationPoint()..refId = result);
     return AMapLocationPoint()..refId = result;
   }
   
   Future<String> get_tel() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_tel", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_district() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_district", {'refId': refId});
+  
     return result;
   }
   

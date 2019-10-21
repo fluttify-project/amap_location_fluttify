@@ -9,6 +9,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   // 生成getters
   Future<String> get_cityCode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode", {'refId': refId});
+  
     return result;
   }
   

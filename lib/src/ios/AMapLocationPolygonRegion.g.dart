@@ -9,11 +9,13 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
   // 生成getters
   Future<CLLocationCoordinate2D> get_coordinates() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_coordinates", {'refId': refId});
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
     return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_count", {'refId': refId});
+  
     return result;
   }
   
@@ -37,6 +39,7 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapLocationPolygonRegion()..refId = result);
       return AMapLocationPolygonRegion()..refId = result;
     }
   }

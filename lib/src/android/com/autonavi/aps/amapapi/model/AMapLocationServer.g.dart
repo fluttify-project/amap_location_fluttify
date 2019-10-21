@@ -28,6 +28,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

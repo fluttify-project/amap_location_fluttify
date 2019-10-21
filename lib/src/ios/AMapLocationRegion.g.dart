@@ -9,16 +9,19 @@ class AMapLocationRegion extends NSObject with NSCopying {
   // 生成getters
   Future<String> get_identifier() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_identifier", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_notifyOnEntry() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnEntry", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_notifyOnExit() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnExit", {'refId': refId});
+  
     return result;
   }
   
@@ -53,6 +56,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapLocationRegion()..refId = result);
       return AMapLocationRegion()..refId = result;
     }
   }
@@ -72,6 +76,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

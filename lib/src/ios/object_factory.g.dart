@@ -109,43 +109,28 @@ class ObjectFactory_iOS {
     return AMapLocationDistrictItem()..refId = refId;
   }
   
-  static Future<AMapURLSearch> createAMapURLSearch() async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapURLSearch');
-    return AMapURLSearch()..refId = refId;
-  }
-  
-  static Future<AMapNaviConfig> createAMapNaviConfig() async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNaviConfig');
-    return AMapNaviConfig()..refId = refId;
-  }
-  
-  static Future<AMapRouteConfig> createAMapRouteConfig() async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRouteConfig');
-    return AMapRouteConfig()..refId = refId;
-  }
-  
-  static Future<AMapPOIConfig> createAMapPOIConfig() async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIConfig');
-    return AMapPOIConfig()..refId = refId;
-  }
-  
-  static Future<AMapServices> createAMapServices() async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapServices');
-    return AMapServices()..refId = refId;
-  }
-  
 }
 
 class NSObject extends Ref_iOS {}
 
 // 结构体
-class CLLocationCoordinate2D extends Ref_iOS {}
+class CLLocationCoordinate2D extends Ref_iOS {
+  Future<double> get latitude {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocationCoordinate2D::get_latitude', {'refId': refId});
+  }
+
+  Future<double> get longitude {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocationCoordinate2D::get_longitude', {'refId': refId});
+  }
+}
 
 class CLLocation extends Ref_iOS {}
 
 class CGRect extends Ref_iOS {}
 
 class CGPoint extends Ref_iOS {}
+
+class CGSize extends Ref_iOS {}
 
 class UIEdgeInsets extends Ref_iOS {}
 
@@ -163,3 +148,13 @@ class UIView extends NSObject {}
 class UIControl extends NSObject {}
 
 class UIImage extends NSObject {}
+
+// 枚举
+enum CLAuthorizationStatus {
+  kCLAuthorizationStatusNotDetermined,
+  kCLAuthorizationStatusRestricted,
+  kCLAuthorizationStatusDenied,
+  kCLAuthorizationStatusAuthorizedAlways,
+  kCLAuthorizationStatusAuthorizedWhenInUse,
+  kCLAuthorizationStatusAuthorized,
+}

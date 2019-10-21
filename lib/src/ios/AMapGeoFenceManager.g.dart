@@ -9,21 +9,25 @@ class AMapGeoFenceManager extends NSObject  {
   // 生成getters
   Future<AMapGeoFenceActiveAction> get_activeAction() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction", {'refId': refId});
+  
     return AMapGeoFenceActiveAction.values[result];
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_allowsBackgroundLocationUpdates() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_allowsBackgroundLocationUpdates", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_detectRiskOfFakeLocation() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_detectRiskOfFakeLocation", {'refId': refId});
+  
     return result;
   }
   
@@ -107,6 +111,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -126,6 +131,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -145,6 +151,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -164,6 +171,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -183,6 +191,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -202,6 +211,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return AMapGeoFenceRegionActiveStatus.values[result];
     }
   }
@@ -221,6 +231,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
       return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
     }
   }
@@ -240,6 +251,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
       return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
     }
   }
@@ -259,6 +271,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
       return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
     }
   }
@@ -278,6 +291,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
       return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
     }
   }
@@ -297,6 +311,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -316,6 +331,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
       return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
     }
   }
@@ -335,6 +351,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -354,6 +371,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -373,6 +391,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -392,6 +411,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

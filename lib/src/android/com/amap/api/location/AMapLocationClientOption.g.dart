@@ -28,6 +28,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -123,6 +128,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -142,6 +148,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -161,6 +168,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -180,6 +188,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -199,6 +208,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -218,6 +228,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -237,6 +248,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -256,6 +268,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -275,6 +288,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[result];
     }
   }
@@ -294,6 +308,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -313,6 +328,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[result];
     }
   }
@@ -332,6 +348,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -351,6 +368,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -370,6 +388,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -389,6 +408,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -408,6 +428,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -427,6 +448,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -446,6 +468,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -465,6 +488,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -484,6 +508,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -503,6 +528,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -522,6 +548,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -541,6 +568,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -560,6 +588,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -579,6 +608,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -598,6 +628,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -617,6 +648,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -636,6 +668,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -655,6 +688,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -674,6 +708,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -693,6 +728,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -712,6 +748,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[result];
     }
   }
@@ -731,6 +768,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -750,6 +788,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -769,6 +808,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -788,6 +828,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -807,6 +848,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -826,6 +868,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result);
       return com_amap_api_location_AMapLocationClientOption()..refId = result;
     }
   }
@@ -845,6 +888,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[result];
     }
   }
@@ -864,6 +908,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -883,6 +928,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -902,6 +948,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -921,6 +968,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

@@ -9,6 +9,7 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion  {
   // 生成getters
   Future<AMapLocationPOIItem> get_POIItem() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePOIRegion::get_POIItem", {'refId': refId});
+    kNativeObjectPool.add(AMapLocationPOIItem()..refId = result);
     return AMapLocationPOIItem()..refId = result;
   }
   

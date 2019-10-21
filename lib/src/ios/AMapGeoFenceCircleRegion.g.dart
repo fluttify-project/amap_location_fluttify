@@ -9,11 +9,13 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion  {
   // 生成getters
   Future<CLLocationCoordinate2D> get_center() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_center", {'refId': refId});
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
     return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<double> get_radius() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_radius", {'refId': refId});
+  
     return result;
   }
   

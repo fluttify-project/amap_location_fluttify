@@ -9,11 +9,13 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
   // 生成getters
   Future<CLLocationCoordinate2D> get_center() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center", {'refId': refId});
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
     return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<double> get_radius() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius", {'refId': refId});
+  
     return result;
   }
   
@@ -37,6 +39,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapLocationCircleRegion()..refId = result);
       return AMapLocationCircleRegion()..refId = result;
     }
   }

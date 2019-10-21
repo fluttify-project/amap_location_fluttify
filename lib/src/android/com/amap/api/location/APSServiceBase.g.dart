@@ -14,13 +14,13 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   @mustCallSuper
   Future<void> onCreate() {
   
-    debugPrint('onCreate::kCallbackPool: $kCallbackPool');
+    debugPrint('onCreate::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onDestroy() {
   
-    debugPrint('onDestroy::kCallbackPool: $kCallbackPool');
+    debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

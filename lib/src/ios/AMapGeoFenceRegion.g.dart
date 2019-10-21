@@ -9,21 +9,25 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   // 生成getters
   Future<String> get_identifier() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_identifier", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_customID() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_customID", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoFenceRegionStatus> get_fenceStatus() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus", {'refId': refId});
+  
     return AMapGeoFenceRegionStatus.values[result];
   }
   
   Future<AMapGeoFenceRegionType> get_regionType() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType", {'refId': refId});
+  
     return AMapGeoFenceRegionType.values[result];
   }
   

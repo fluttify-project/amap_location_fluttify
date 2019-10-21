@@ -9,41 +9,49 @@ class AMapLocationManager extends NSObject  {
   // 生成getters
   Future<double> get_distanceFilter() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_distanceFilter", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_allowsBackgroundLocationUpdates() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_allowsBackgroundLocationUpdates", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_locationTimeout() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_locationTimeout", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_reGeocodeTimeout() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_reGeocodeTimeout", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_locatingWithReGeocode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_locatingWithReGeocode", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapLocationReGeocodeLanguage> get_reGeocodeLanguage() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'refId': refId});
+  
     return AMapLocationReGeocodeLanguage.values[result];
   }
   
   Future<bool> get_detectRiskOfFakeLocation() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation", {'refId': refId});
+  
     return result;
   }
   
@@ -158,6 +166,7 @@ class AMapLocationManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -177,6 +186,7 @@ class AMapLocationManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -196,6 +206,7 @@ class AMapLocationManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -215,6 +226,7 @@ class AMapLocationManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -234,6 +246,7 @@ class AMapLocationManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -253,6 +266,7 @@ class AMapLocationManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

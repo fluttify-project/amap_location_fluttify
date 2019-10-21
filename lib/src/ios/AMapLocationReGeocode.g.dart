@@ -9,71 +9,85 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
   // 生成getters
   Future<String> get_formattedAddress() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_formattedAddress", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_country() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_country", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_district() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_district", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_township() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_township", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_neighborhood() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_neighborhood", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_building() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_building", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_street() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_street", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_number() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_number", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_POIName() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_POIName", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_AOIName() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_AOIName", {'refId': refId});
+  
     return result;
   }
   

@@ -9,11 +9,13 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   // 生成getters
   Future<double> get_latitude() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_latitude", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_longitude() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_longitude", {'refId': refId});
+  
     return result;
   }
   
@@ -48,6 +50,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapLocationPoint()..refId = result);
       return AMapLocationPoint()..refId = result;
     }
   }

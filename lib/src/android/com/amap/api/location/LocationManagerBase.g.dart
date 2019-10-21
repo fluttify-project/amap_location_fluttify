@@ -14,67 +14,67 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   @mustCallSuper
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) {
   
-    debugPrint('setLocationOption::kCallbackPool: $kCallbackPool');
+    debugPrint('setLocationOption::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) {
   
-    debugPrint('setLocationListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setLocationListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> startLocation() {
   
-    debugPrint('startLocation::kCallbackPool: $kCallbackPool');
+    debugPrint('startLocation::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> stopLocation() {
   
-    debugPrint('stopLocation::kCallbackPool: $kCallbackPool');
+    debugPrint('stopLocation::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() {
   
-    debugPrint('getLastKnownLocation::kCallbackPool: $kCallbackPool');
+    debugPrint('getLastKnownLocation::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> startAssistantLocation() {
   
-    debugPrint('startAssistantLocation::kCallbackPool: $kCallbackPool');
+    debugPrint('startAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> stopAssistantLocation() {
   
-    debugPrint('stopAssistantLocation::kCallbackPool: $kCallbackPool');
+    debugPrint('stopAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<bool> isStarted() {
   
-    debugPrint('isStarted::kCallbackPool: $kCallbackPool');
+    debugPrint('isStarted::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) {
   
-    debugPrint('unRegisterLocationListener::kCallbackPool: $kCallbackPool');
+    debugPrint('unRegisterLocationListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onDestroy() {
   
-    debugPrint('onDestroy::kCallbackPool: $kCallbackPool');
+    debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> disableBackgroundLocation(bool var1) {
   
-    debugPrint('disableBackgroundLocation::kCallbackPool: $kCallbackPool');
+    debugPrint('disableBackgroundLocation::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

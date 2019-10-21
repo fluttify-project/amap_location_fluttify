@@ -13,25 +13,25 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
 
   @mustCallSuper
   Future<void> amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
-    kCallbackPool[manager.refId] = manager;
-    kCallbackPool[locationManager.refId] = locationManager;
-    debugPrint('amapGeoFenceManagerDoRequireLocationAuth::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(locationManager);
+    debugPrint('amapGeoFenceManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror(AMapGeoFenceManager manager, List<AMapGeoFenceRegion> regions, String customID, NSError error) {
-    kCallbackPool[manager.refId] = manager;
-    kCallbackPool.addAll(Map.fromIterable(regions, key: (it) => it.refId, value: (it) => it));
-    kCallbackPool[error.refId] = error;
-    debugPrint('amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.addAll(regions);
+    kNativeObjectPool.add(error);
+    debugPrint('amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror(AMapGeoFenceManager manager, AMapGeoFenceRegion region, String customID, NSError error) {
-    kCallbackPool[manager.refId] = manager;
-    kCallbackPool[region.refId] = region;
-    kCallbackPool[error.refId] = error;
-    debugPrint('amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(region);
+    kNativeObjectPool.add(error);
+    debugPrint('amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

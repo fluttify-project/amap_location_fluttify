@@ -13,28 +13,28 @@ mixin AMapLocationManagerDelegate on NSObject {
 
   @mustCallSuper
   Future<void> amapLocationManagerDoRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {
-    kCallbackPool[manager.refId] = manager;
-    kCallbackPool[locationManager.refId] = locationManager;
-    debugPrint('amapLocationManagerDoRequireLocationAuth::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(locationManager);
+    debugPrint('amapLocationManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> amapLocationManagerDidFailWithError(AMapLocationManager manager, NSError error) {
-    kCallbackPool[manager.refId] = manager;
-    kCallbackPool[error.refId] = error;
-    debugPrint('amapLocationManagerDidFailWithError::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(error);
+    debugPrint('amapLocationManagerDidFailWithError::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
-    kCallbackPool[manager.refId] = manager;
-    debugPrint('amapLocationManagerDidChangeAuthorizationStatus::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    debugPrint('amapLocationManagerDidChangeAuthorizationStatus::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<bool> amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager manager) {
-    kCallbackPool[manager.refId] = manager;
-    debugPrint('amapLocationManagerShouldDisplayHeadingCalibration::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool.add(manager);
+    debugPrint('amapLocationManagerShouldDisplayHeadingCalibration::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }
