@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
   Location _location;
 
   @override
@@ -30,8 +30,13 @@ class _MyAppState extends State<MyApp> {
               child: Text('获取单次定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  _location = await AmapLocation.getLocation();
-                  setState(() {});
+                  AmapLocation.setLocationListener(
+                    once: false,
+                    locationChanged: (location) {
+                      _location = location;
+                      setState(() {});
+                    },
+                  );
                 }
               },
             ),
@@ -39,7 +44,7 @@ class _MyAppState extends State<MyApp> {
               FutureBuilder<String>(
                 initialData: '',
                 future: _location.address,
-                builder: (context, ss) => Center(child: Text(ss.data)),
+                builder: (context, ss) => Center(child: Text(ss.data ?? '')),
               ),
           ],
         ),
