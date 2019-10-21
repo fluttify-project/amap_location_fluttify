@@ -7,12 +7,15 @@ import 'enums.dart';
 import 'models.dart';
 
 class AmapLocation {
+  static com_amap_api_location_AMapLocationClient _androidClient;
+  static AMapLocationManager _iosClient;
+
   /// 获取单次定位信息
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout]
   /// 设置是否开启定位缓存机制[cacheEnable].
   static Future<Location> getLocation({
-    LocationAccuracy mode,
+    LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     int timeout,
   }) async {
@@ -27,12 +30,13 @@ class AmapLocation {
             await ObjectFactory_Android.getandroid_app_Application();
 
         // 创建定位客户端
-        final client = await ObjectFactory_Android
+        _androidClient ??= await ObjectFactory_Android
             .createcom_amap_api_location_AMapLocationClient__android_content_Context(
                 context);
 
         // 设置回调
-        await client.setLocationListener(_AndroidLocationDelegate(_controller));
+        await _androidClient
+            .setLocationListener(_AndroidLocationDelegate(_controller));
 
         // 创建选项
         final options = await ObjectFactory_Android
@@ -68,46 +72,51 @@ class AmapLocation {
         if (timeout != null) await options.setHttpTimeOut(timeout);
 
         // 设置选项
-        await client.setLocationOption(options);
+        await _androidClient.setLocationOption(options);
 
         // 开始定位
-        await client.startLocation();
+        await _androidClient.startLocation();
+
+        pool..add(options);
 
         return _controller.stream.first;
       },
       ios: (pool) async {
-        final locationManager =
-            await ObjectFactory_iOS.createAMapLocationManager();
-
-        // 设置回调
-        locationManager.set_delegate(_IOSLocationDelegate(_controller));
+        _iosClient ??= await ObjectFactory_iOS.createAMapLocationManager();
 
         // 设置定位模式
         if (mode != null)
           switch (mode) {
             // 高精度定位模式：会同时使用网络定位和GPS定位，优先返回最高精度的定位结果，以及对应的地址描述信息。
             case LocationAccuracy.High:
-              await locationManager.set_desiredAccuracy(100);
+              await _iosClient.set_desiredAccuracy(10);
               break;
             // 低功耗定位模式：不会使用GPS和其他传感器，只会使用网络定位（Wi-Fi和基站定位）；
             case LocationAccuracy.Low:
-              await locationManager.set_desiredAccuracy(10);
-
+              await _iosClient.set_desiredAccuracy(100);
               break;
           }
         // 设置定位请求超时时间，默认为30秒。
-        if (timeout != null) await locationManager.set_locationTimeout(timeout);
+        if (timeout != null) await _iosClient.set_locationTimeout(timeout);
 
-        locationManager.requestLocationWithReGeocodeCompletionBlock(
+        _iosClient.requestLocationWithReGeocodeCompletionBlock(
           needAddress ?? true,
           (location, regeocode, error) {
-            _controller..add(Location.ios(location, regeocode))..close();
+            _controller
+              ..add(Location.ios(location, regeocode))
+              ..close();
           },
         );
 
         return _controller.stream.first;
       },
     );
+  }
+
+  static void dispose() {
+    kNativeObjectPool
+      ..forEach(release)
+      ..clear();
   }
 }
 
@@ -127,10 +136,4 @@ class _AndroidLocationDelegate extends java_lang_Object
       _streamController?.close();
     }
   }
-}
-
-class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
-  _IOSLocationDelegate(this._streamController);
-
-  final StreamController _streamController;
 }
