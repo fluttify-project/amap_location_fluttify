@@ -148,3 +148,13 @@ class UIView extends NSObject {}
 class UIControl extends NSObject {}
 
 class UIImage extends NSObject {}
+
+// 枚举
+enum CLAuthorizationStatus {
+  kCLAuthorizationStatusNotDetermined,
+  kCLAuthorizationStatusRestricted,
+  kCLAuthorizationStatusDenied,
+  kCLAuthorizationStatusAuthorizedAlways,
+  kCLAuthorizationStatusAuthorizedWhenInUse,
+  kCLAuthorizationStatusAuthorized,
+}
