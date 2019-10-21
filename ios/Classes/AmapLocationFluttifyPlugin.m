@@ -646,6 +646,68 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           // 无返回值
           methodResult(@"success");
       },
+      @"AMapLocationManager::requestLocationWithReGeocodeCompletionBlock": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+          // jsonable参数
+          BOOL withReGeocode = [args[@"withReGeocode"] boolValue];
+      
+      
+          // 调用对象引用
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(暂未实现参数打印)", @(refId));
+      
+          // 开始调用
+          BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
+              FlutterMethodChannel *channel = [FlutterMethodChannel
+                  methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
+                        binaryMessenger:[self->_registrar messenger]];
+      
+              NSLog(@"");
+      
+              // 构造可以直接传输的参数
+              // 引用回调参数
+              NSNumber* arglocation = @(location.hash);
+              HEAP_AmapLocationFluttify[arglocation] = location;
+              // 引用回调参数
+              NSNumber* argregeocode = @(regeocode.hash);
+              HEAP_AmapLocationFluttify[argregeocode] = regeocode;
+              // 引用回调参数
+              NSNumber* argerror = @(error.hash);
+              HEAP_AmapLocationFluttify[argerror] = error;
+      
+              // __block #__callback_result_type__# _callbackResult = nil;
+              // [channel invokeMethod:@"#__callback_method__#"
+              //             arguments:@{#__callback_args__#}
+              //                result:^(id result) {
+              //                  #__raw_callback_result__#
+              //                }];
+              //
+              // while (_callbackResult == nil) {
+              //   // _callbackResult有值前, 空转
+              // }
+              //
+              // #__struct_value__#
+              //
+              // return #__callback_result__#;
+      
+              // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
+              // 相关issue https://github.com/flutter/flutter/issues/28310
+              NSLog(@"暂不支持有返回值的回调方法");
+      
+              ////////////////////////////如果需要手写代码, 请写在这里/////////////////////////////
+      
+              ////////////////////////////////////////////////////////////////////////////////
+      
+      
+          }];
+      
+          // 调用结果
+          // 返回值: Value
+          methodResult(@(result));
+      },
       @"AMapLocationManager::startUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
       
