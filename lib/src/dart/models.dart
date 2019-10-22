@@ -17,6 +17,33 @@ class Location {
     );
   }
 
+  Future<double> get latitude {
+    return platform(
+      android: (pool) => _androidModel.getLatitude(),
+      ios: (pool) async {
+        final coordinate = await _iosLocation.coordinate;
+        return coordinate.latitude;
+      },
+    );
+  }
+
+  Future<double> get longitude {
+    return platform(
+      android: (pool) => _androidModel.getLongitude(),
+      ios: (pool) async {
+        final coordinate = await _iosLocation.coordinate;
+        return coordinate.longitude;
+      },
+    );
+  }
+
+  Future<double> get altitude {
+    return platform(
+      android: (pool) => _androidModel.getAltitude(),
+      ios: (pool) => _iosLocation.altitude,
+    );
+  }
+
   Future<String> get country {
     return platform(
       android: (pool) => _androidModel.getCountry(),
