@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('获取单次定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  AmapLocation.setLocationListener(
+                  AmapLocation.startLocation(
                     once: true,
                     locationChanged: (location) {
                       _location = location;
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('获取连续定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  AmapLocation.setLocationListener(
+                  AmapLocation.startLocation(
                     once: false,
                     locationChanged: (location) {
                       _location = location;

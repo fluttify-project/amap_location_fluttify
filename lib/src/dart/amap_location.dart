@@ -28,7 +28,7 @@ class AmapLocation {
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout]
   /// 设置是否开启定位缓存机制[cacheEnable].
-  static void setLocationListener({
+  static void startLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     int timeout,
