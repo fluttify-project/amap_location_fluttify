@@ -10,6 +10,7 @@ import 'models.dart';
 
 typedef void _OnLocationChanged(Location location);
 
+/// 释放原生对象Mixin
 mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
   @override
   void dispose() {
@@ -18,6 +19,7 @@ mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
   }
 }
 
+/// 高德定位 主类
 class AmapLocation {
   static com_amap_api_location_AMapLocationClient _androidClient;
   static AMapLocationManager _iosClient;
@@ -119,6 +121,7 @@ class AmapLocation {
     }
   }
 
+  /// 停止定位
   static Future<void> stopLocation() {
     return platform(
       android: (pool) => _androidClient.stopLocation(),
@@ -126,6 +129,7 @@ class AmapLocation {
     );
   }
 
+  /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
   static void dispose() {
     kNativeObjectPool
       ..forEach(release)

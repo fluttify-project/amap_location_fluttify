@@ -1,6 +1,7 @@
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 
+/// 定位结果 model
 class Location {
   Location.android(this._androidModel);
 
@@ -10,6 +11,7 @@ class Location {
   CLLocation _iosLocation;
   AMapLocationReGeocode _iosRegeocode;
 
+  /// 地址全称
   Future<String> get address {
     return platform(
       android: (pool) => _androidModel.getAddress(),
@@ -17,6 +19,7 @@ class Location {
     );
   }
 
+  /// 纬度
   Future<double> get latitude {
     return platform(
       android: (pool) => _androidModel.getLatitude(),
@@ -27,6 +30,7 @@ class Location {
     );
   }
 
+  /// 经度
   Future<double> get longitude {
     return platform(
       android: (pool) => _androidModel.getLongitude(),
@@ -37,6 +41,7 @@ class Location {
     );
   }
 
+  /// 海拔
   Future<double> get altitude {
     return platform(
       android: (pool) => _androidModel.getAltitude(),
@@ -44,6 +49,7 @@ class Location {
     );
   }
 
+  /// 国家
   Future<String> get country {
     return platform(
       android: (pool) => _androidModel.getCountry(),
@@ -51,6 +57,7 @@ class Location {
     );
   }
 
+  /// 省份
   Future<String> get province {
     return platform(
       android: (pool) => _androidModel.getProvince(),
@@ -58,6 +65,7 @@ class Location {
     );
   }
 
+  /// 城市
   Future<String> get city {
     return platform(
       android: (pool) => _androidModel.getCity(),
@@ -65,6 +73,7 @@ class Location {
     );
   }
 
+  /// 城市编号
   Future<String> get cityCode {
     return platform(
       android: (pool) => _androidModel.getCityCode(),
@@ -72,6 +81,7 @@ class Location {
     );
   }
 
+  /// 邮编
   Future<String> get adCode {
     return platform(
       android: (pool) => _androidModel.getAdCode(),
@@ -79,6 +89,7 @@ class Location {
     );
   }
 
+  /// 区域
   Future<String> get district {
     return platform(
       android: (pool) => _androidModel.getDistrict(),
@@ -86,6 +97,7 @@ class Location {
     );
   }
 
+  /// poi名称
   Future<String> get poiName {
     return platform(
       android: (pool) => _androidModel.getPoiName(),
@@ -93,6 +105,7 @@ class Location {
     );
   }
 
+  /// 街道
   Future<String> get street {
     return platform(
       android: (pool) => _androidModel.getStreet(),
@@ -100,6 +113,7 @@ class Location {
     );
   }
 
+  /// 街道号
   Future<String> get streetNumber {
     return platform(
       android: (pool) => _androidModel.getStreetNum(),
@@ -107,6 +121,7 @@ class Location {
     );
   }
 
+  /// aoi名称
   Future<String> get aoiName {
     return platform(
       android: (pool) => _androidModel.getAoiName(),
