@@ -111,6 +111,27 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
                 builder: (_, ss) =>
                     Center(child: Text('aoiName: ${ss.data}' ?? '')),
               ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.latitude,
+                builder: (_, ss) =>
+                    Center(child: Text('latitude: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.longitude,
+                builder: (_, ss) =>
+                    Center(child: Text('longitude: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.altitude,
+                builder: (_, ss) =>
+                    Center(child: Text('altitude: ${ss.data}' ?? '')),
+              ),
           ],
         ),
       ),
