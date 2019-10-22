@@ -19,7 +19,15 @@ import 'package:amap_location_fluttify/amap_location_fluttify.dart';
 
 使用:
 ```dart 
-await AmapLocation.getLocation();
+if (await requestPermission()) {
+  AmapLocation.setLocationListener(
+    once: true,
+    locationChanged: (location) {
+      _location = location;
+      setState(() {});
+    },
+  );
+}
 ```
 
 ## 请作者喝杯奶茶
