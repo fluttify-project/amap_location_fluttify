@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
   Location _location;
 
   @override
@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(title: const Text('Plugin example app')),
         body: DecoratedColumn(
+          padding: EdgeInsets.symmetric(horizontal: kSpaceLarge),
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -30,8 +31,27 @@ class _MyAppState extends State<MyApp> {
               child: Text('获取单次定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  _location = await AmapLocation.getLocation();
-                  setState(() {});
+                  AmapLocation.setLocationListener(
+                    once: true,
+                    locationChanged: (location) {
+                      _location = location;
+                      setState(() {});
+                    },
+                  );
+                }
+              },
+            ),
+            RaisedButton(
+              child: Text('获取连续定位'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  AmapLocation.setLocationListener(
+                    once: false,
+                    locationChanged: (location) {
+                      _location = location;
+                      setState(() {});
+                    },
+                  );
                 }
               },
             ),
@@ -39,7 +59,78 @@ class _MyAppState extends State<MyApp> {
               FutureBuilder<String>(
                 initialData: '',
                 future: _location.address,
-                builder: (context, ss) => Center(child: Text(ss.data)),
+                builder: (_, ss) =>
+                    Center(child: Text('address: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.country,
+                builder: (_, ss) =>
+                    Center(child: Text('country: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.province,
+                builder: (_, ss) =>
+                    Center(child: Text('province: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.city,
+                builder: (_, ss) =>
+                    Center(child: Text('city: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.district,
+                builder: (_, ss) =>
+                    Center(child: Text('district: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.poiName,
+                builder: (_, ss) =>
+                    Center(child: Text('poiName: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.street,
+                builder: (_, ss) =>
+                    Center(child: Text('street: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<String>(
+                initialData: '',
+                future: _location.aoiName,
+                builder: (_, ss) =>
+                    Center(child: Text('aoiName: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.latitude,
+                builder: (_, ss) =>
+                    Center(child: Text('latitude: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.longitude,
+                builder: (_, ss) =>
+                    Center(child: Text('longitude: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.altitude,
+                builder: (_, ss) =>
+                    Center(child: Text('altitude: ${ss.data}' ?? '')),
               ),
           ],
         ),

@@ -26,6 +26,21 @@ mixin AMapLocationManagerDelegate on NSObject {
   }
   
   @mustCallSuper
+  Future<void> amapLocationManagerDidUpdateLocation(AMapLocationManager manager, CLLocation location) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(location);
+    debugPrint('amapLocationManagerDidUpdateLocation::kNativeObjectPool: $kNativeObjectPool');
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManagerDidUpdateLocationreGeocode(AMapLocationManager manager, CLLocation location, AMapLocationReGeocode reGeocode) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(location);
+    kNativeObjectPool.add(reGeocode);
+    debugPrint('amapLocationManagerDidUpdateLocationreGeocode::kNativeObjectPool: $kNativeObjectPool');
+  }
+  
+  @mustCallSuper
   Future<void> amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
     kNativeObjectPool.add(manager);
     debugPrint('amapLocationManagerDidChangeAuthorizationStatus::kNativeObjectPool: $kNativeObjectPool');
@@ -35,6 +50,13 @@ mixin AMapLocationManagerDelegate on NSObject {
   Future<bool> amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager manager) {
     kNativeObjectPool.add(manager);
     debugPrint('amapLocationManagerShouldDisplayHeadingCalibration::kNativeObjectPool: $kNativeObjectPool');
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManagerDidUpdateHeading(AMapLocationManager manager, CLHeading newHeading) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(newHeading);
+    debugPrint('amapLocationManagerDidUpdateHeading::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

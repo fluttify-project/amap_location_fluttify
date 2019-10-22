@@ -166,7 +166,7 @@ class CLLocationCoordinate2D extends Ref_iOS {
   }
 }
 
-class CLLocation extends Ref_iOS {}
+class CLHeading extends Ref_iOS {}
 
 class CGRect extends Ref_iOS {}
 
@@ -178,6 +178,44 @@ class UIEdgeInsets extends Ref_iOS {}
 
 // 类
 class CLLocationManager extends NSObject {}
+
+class CLLocation extends NSObject {
+  Future<CLLocationCoordinate2D> get coordinate async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_coordinate', {'refId': refId});
+    return CLLocationCoordinate2D()..refId = result;
+  }
+
+  Future<double> get altitude {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_altitude', {'refId': refId});
+  }
+
+  Future<double> get horizontalAccuracy {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_horizontalAccuracy', {'refId': refId});
+  }
+
+  Future<double> get verticalAccuracy {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_verticalAccuracy', {'refId': refId});
+  }
+
+  Future<double> get course {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_course', {'refId': refId});
+  }
+
+  Future<double> get speed {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_speed', {'refId': refId});
+  }
+
+  Future<CLFloor> get floor async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_floor', {'refId': refId});
+    return CLFloor()..refId = result;
+  }
+}
+
+class CLFloor extends NSObject {
+  Future<String> get level {
+    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLFloor::get_level', {'refId': refId});
+  }
+}
 
 class NSError extends NSObject {}
 
