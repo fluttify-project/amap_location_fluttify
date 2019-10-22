@@ -180,8 +180,9 @@ class UIEdgeInsets extends Ref_iOS {}
 class CLLocationManager extends NSObject {}
 
 class CLLocation extends NSObject {
-  Future<CLLocationCoordinate2D> get coordinate {
-    return MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_coordinate', {'refId': refId});
+  Future<CLLocationCoordinate2D> get coordinate async {
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('CLLocation::get_coordinate', {'refId': refId});
+    return CLLocationCoordinate2D()..refId = result;
   }
 
   Future<double> get altitude {

@@ -3013,7 +3013,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
     CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
     CLFloor* floor = location.floor;
 
-    HEAP[@(floor.hash)] = floor;
+    HEAP_AmapLocationFluttify[@(floor.hash)] = floor;
 
     methodResult(@(floor.hash));
   }
