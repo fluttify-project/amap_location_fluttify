@@ -23,33 +23,33 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
     // 处理方法们
     _handlerMap = @{
       @"AMapGeoFenceManager::addCircleRegionForMonitoringWithCenterRadiuscustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 结构体参数
+          // args
+          // struct arg
           NSValue* centerValue = (NSValue*) HEAP_AmapLocationFluttify[@([args[@"center"] integerValue])];
           CLLocationCoordinate2D center;
           [centerValue getValue:&center];
-          // jsonable参数
+          // jsonable arg
           CLLocationDistance radius = [args[@"radius"] doubleValue];
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref addCircleRegionForMonitoringWithCenter : center radius: radius customID: customID];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinatesCountcustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 列表参数
+          // args
+          // list arg
           NSArray* coordinatesRefIdArray = (NSArray*) args[@"coordinates"];
           CLLocationCoordinate2D coordinates[coordinatesRefIdArray.count];
       
@@ -59,139 +59,139 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
               [coordinatesValue getValue:&coordinatesItem];
               coordinates[i] = coordinatesItem;
           }
-          // jsonable参数
+          // jsonable arg
           NSInteger count = [args[@"count"] integerValue];
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref addPolygonRegionForMonitoringWithCoordinates : coordinates count: count customID: customID];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeywordPOITypecitysizecustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* keyword = (NSString*) args[@"keyword"];
-          // jsonable参数
+          // jsonable arg
           NSString* type = (NSString*) args[@"type"];
-          // jsonable参数
+          // jsonable arg
           NSString* city = (NSString*) args[@"city"];
-          // jsonable参数
+          // jsonable arg
           NSInteger size = [args[@"size"] integerValue];
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref addKeywordPOIRegionForMonitoringWithKeyword : keyword POIType: type city: city size: size customID: customID];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPointAroundRadiuskeywordPOITypesizecustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 结构体参数
+          // args
+          // struct arg
           NSValue* locationPointValue = (NSValue*) HEAP_AmapLocationFluttify[@([args[@"locationPoint"] integerValue])];
           CLLocationCoordinate2D locationPoint;
           [locationPointValue getValue:&locationPoint];
-          // jsonable参数
+          // jsonable arg
           NSInteger aroundRadius = [args[@"aroundRadius"] integerValue];
-          // jsonable参数
+          // jsonable arg
           NSString* keyword = (NSString*) args[@"keyword"];
-          // jsonable参数
+          // jsonable arg
           NSString* type = (NSString*) args[@"type"];
-          // jsonable参数
+          // jsonable arg
           NSInteger size = [args[@"size"] integerValue];
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref addAroundPOIRegionForMonitoringWithLocationPoint : locationPoint aroundRadius: aroundRadius keyword: keyword POIType: type size: size customID: customID];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictNameCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* districtName = (NSString*) args[@"districtName"];
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref addDistrictRegionForMonitoringWithDistrictName : districtName customID: customID];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::statusWithGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@([args[@"region"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           AMapGeoFenceRegionActiveStatus result = [ref statusWithGeoFenceRegion: region];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapGeoFenceManager::geoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           NSArray* result = [ref geoFenceRegionsWithCustomID: customID];
       
-          // 调用结果
+          // result
           // 返回值: 列表
           NSMutableArray* refIdList = [NSMutableArray array];
           for (int i = 0; i < result.count; i++) {
@@ -203,21 +203,21 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           methodResult(refIdList);
       },
       @"AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           NSArray* result = [ref monitoringGeoFenceRegionsWithCustomID: customID];
       
-          // 调用结果
+          // result
           // 返回值: 列表
           NSMutableArray* refIdList = [NSMutableArray array];
           for (int i = 0; i < result.count; i++) {
@@ -229,21 +229,21 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           methodResult(refIdList);
       },
       @"AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           NSArray* result = [ref pausedGeoFenceRegionsWithCustomID: customID];
       
-          // 调用结果
+          // result
           // 返回值: 列表
           NSMutableArray* refIdList = [NSMutableArray array];
           for (int i = 0; i < result.count; i++) {
@@ -255,21 +255,21 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           methodResult(refIdList);
       },
       @"AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           NSArray* result = [ref pauseGeoFenceRegionsWithCustomID: customID];
       
-          // 调用结果
+          // result
           // 返回值: 列表
           NSMutableArray* refIdList = [NSMutableArray array];
           for (int i = 0; i < result.count; i++) {
@@ -281,40 +281,40 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           methodResult(refIdList);
       },
       @"AMapGeoFenceManager::pauseTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@([args[@"region"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           BOOL result = [ref pauseTheGeoFenceRegion: region];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapGeoFenceManager::startGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           NSArray* result = [ref startGeoFenceRegionsWithCustomID: customID];
       
-          // 调用结果
+          // result
           // 返回值: 列表
           NSMutableArray* refIdList = [NSMutableArray array];
           for (int i = 0; i < result.count; i++) {
@@ -326,226 +326,226 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
           methodResult(refIdList);
       },
       @"AMapGeoFenceManager::startTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@([args[@"region"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           BOOL result = [ref startTheGeoFenceRegion: region];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapGeoFenceManager::removeTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@([args[@"region"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref removeTheGeoFenceRegion : region];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref removeGeoFenceRegionsWithCustomID : customID];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManager::removeAllGeoFenceRegions": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref removeAllGeoFenceRegions ];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           CLLocationManager* locationManager = (CLLocationManager*) HEAP_AmapLocationFluttify[@([args[@"locationManager"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapGeoFenceManager : manager doRequireLocationAuth: locationManager];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 列表参数
+          // list arg
           NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
           NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
           for (int i = 0; i < regions.count; i++) {
               AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[[regionsRefArray objectAtIndex:i]];
               [regions addObject:item];
           }
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
-          // 引用参数
+          // ref arg
           NSError* error = (NSError*) HEAP_AmapLocationFluttify[@([args[@"error"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapGeoFenceManager : manager didAddRegionForMonitoringFinished: regions customID: customID error: error];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@([args[@"region"] integerValue])];
-          // jsonable参数
+          // jsonable arg
           NSString* customID = (NSString*) args[@"customID"];
-          // 引用参数
+          // ref arg
           NSError* error = (NSError*) HEAP_AmapLocationFluttify[@([args[@"error"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapGeoFenceManager : manager didGeoFencesStatusChangedForRegion: region customID: customID error: error];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationRegion::initWithIdentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* identifier = (NSString*) args[@"identifier"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           AMapLocationRegion* result = [ref initWithIdentifier: identifier];
       
-          // 调用结果
+          // result
           // 返回值: 引用
           HEAP_AmapLocationFluttify[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapLocationRegion::containsCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 结构体参数
+          // args
+          // struct arg
           NSValue* coordinateValue = (NSValue*) HEAP_AmapLocationFluttify[@([args[@"coordinate"] integerValue])];
           CLLocationCoordinate2D coordinate;
           [coordinateValue getValue:&coordinate];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           BOOL result = [ref containsCoordinate: coordinate];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapLocationCircleRegion::initWithCenterRadiusidentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 结构体参数
+          // args
+          // struct arg
           NSValue* centerValue = (NSValue*) HEAP_AmapLocationFluttify[@([args[@"center"] integerValue])];
           CLLocationCoordinate2D center;
           [centerValue getValue:&center];
-          // jsonable参数
+          // jsonable arg
           CLLocationDistance radius = [args[@"radius"] doubleValue];
-          // jsonable参数
+          // jsonable arg
           NSString* identifier = (NSString*) args[@"identifier"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           AMapLocationCircleRegion* result = [ref initWithCenter: center radius: radius identifier: identifier];
       
-          // 调用结果
+          // result
           // 返回值: 引用
           HEAP_AmapLocationFluttify[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapLocationPolygonRegion::initWithCoordinatesCountidentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 列表参数
+          // args
+          // list arg
           NSArray* coordinatesRefIdArray = (NSArray*) args[@"coordinates"];
           CLLocationCoordinate2D coordinates[coordinatesRefIdArray.count];
       
@@ -555,112 +555,112 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
               [coordinatesValue getValue:&coordinatesItem];
               coordinates[i] = coordinatesItem;
           }
-          // jsonable参数
+          // jsonable arg
           NSInteger count = [args[@"count"] integerValue];
-          // jsonable参数
+          // jsonable arg
           NSString* identifier = (NSString*) args[@"identifier"];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           AMapLocationPolygonRegion* result = [ref initWithCoordinates: coordinates count: count identifier: identifier];
       
-          // 调用结果
+          // result
           // 返回值: 引用
           HEAP_AmapLocationFluttify[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapLocationManager::headingAvailable": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
       
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager::headingAvailable(暂未实现参数打印)");
       
-          // 开始调用
+          // invoke native method
           BOOL result = [AMapLocationManager headingAvailable];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapLocationManager::startUpdatingHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref startUpdatingHeading ];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManager::stopUpdatingHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref stopUpdatingHeading ];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManager::dismissHeadingCalibrationDisplay": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref dismissHeadingCalibrationDisplay ];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManager::requestLocationWithReGeocodeCompletionBlock": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL withReGeocode = [args[@"withReGeocode"] boolValue];
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(暂未实现参数打印)", @(refId));
       
-          // 开始调用
-          BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
+          // invoke native method
+          BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation* location, AMapLocationReGeocode* regeocode, NSError* error) {
               FlutterMethodChannel *channel = [FlutterMethodChannel
                   methodChannelWithName:@"AMapLocationManager::requestLocationWithReGeocodeCompletionBlock::Callback"
                         binaryMessenger:[self->_registrar messenger]];
@@ -668,13 +668,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
               NSLog(@"");
       
               // 构造可以直接传输的参数
-              // 引用回调参数
+              // ref callback arg
               NSNumber* arglocation = @(location.hash);
               HEAP_AmapLocationFluttify[arglocation] = location;
-              // 引用回调参数
+              // ref callback arg
               NSNumber* argregeocode = @(regeocode.hash);
               HEAP_AmapLocationFluttify[argregeocode] = regeocode;
-              // 引用回调参数
+              // ref callback arg
               NSNumber* argerror = @(error.hash);
               HEAP_AmapLocationFluttify[argerror] = error;
       
@@ -682,210 +682,210 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       
           }];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapLocationManager::startUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref startUpdatingLocation ];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManager::stopUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
+          // args
       
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref stopUpdatingLocation ];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           CLLocationManager* locationManager = (CLLocationManager*) HEAP_AmapLocationFluttify[@([args[@"locationManager"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapLocationManager : manager doRequireLocationAuth: locationManager];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManagerDelegate::amapLocationManagerDidFailWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           NSError* error = (NSError*) HEAP_AmapLocationFluttify[@([args[@"error"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapLocationManager : manager didFailWithError: error];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[@([args[@"location"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapLocationManager : manager didUpdateLocation: location];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[@([args[@"location"] integerValue])];
-          // 引用参数
+          // ref arg
           AMapLocationReGeocode* reGeocode = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@([args[@"reGeocode"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapLocationManager : manager didUpdateLocation: location reGeocode: reGeocode];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 枚举参数
+          // enum arg
           CLAuthorizationStatus status = (CLAuthorizationStatus) [args[@"status"] integerValue];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapLocationManager : manager didChangeAuthorizationStatus: status];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManagerShouldDisplayHeadingCalibration(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           BOOL result = [ref amapLocationManagerShouldDisplayHeadingCalibration: manager];
       
-          // 调用结果
+          // result
           // 返回值: Value
           methodResult(@(result));
       },
       @"AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationManager* manager = (AMapLocationManager*) HEAP_AmapLocationFluttify[@([args[@"manager"] integerValue])];
-          // 引用参数
+          // ref arg
           CLHeading* newHeading = (CLHeading*) HEAP_AmapLocationFluttify[@([args[@"newHeading"] integerValue])];
       
-          // 调用对象引用
+          // ref
           NSInteger refId = [args[@"refId"] integerValue];
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
       
-          // 开始调用
+          // invoke native method
           [ref amapLocationManager : manager didUpdateHeading: newHeading];
       
-          // 调用结果
+          // result
           // 无返回值
           methodResult(@"success");
       },
       @"AMapLocationPoint::locationWithLatitudeLongitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           CGFloat lat = [args[@"lat"] floatValue];
-          // jsonable参数
+          // jsonable arg
           CGFloat lon = [args[@"lon"] floatValue];
       
-          // 调用对象引用
+          // ref
       
       
-          // 日志打印
+          // print log
           NSLog(@"fluttify-objc: AMapLocationPoint::locationWithLatitude(暂未实现参数打印)");
       
-          // 开始调用
+          // invoke native method
           AMapLocationPoint* result = [AMapLocationPoint locationWithLatitude: lat longitude: lon];
       
-          // 调用结果
+          // result
           // 返回值: 引用
           HEAP_AmapLocationFluttify[@(result.hash)] = result;
           methodResult(@(result.hash));
@@ -893,11 +893,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::get_activeAction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::get_activeAction");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapGeoFenceActiveAction result = ref.activeAction;
       
           // 返回值: Value
@@ -907,11 +907,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.pausesLocationUpdatesAutomatically;
       
           // 返回值: Value
@@ -921,11 +921,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.allowsBackgroundLocationUpdates;
       
           // 返回值: Value
@@ -935,11 +935,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::get_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::get_detectRiskOfFakeLocation");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.detectRiskOfFakeLocation;
       
           // 返回值: Value
@@ -949,11 +949,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationRegion::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationRegion::get_identifier");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.identifier;
       
           // 返回值: jsonable
@@ -963,11 +963,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationRegion::get_notifyOnEntry": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationRegion::get_notifyOnEntry");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.notifyOnEntry;
       
           // 返回值: Value
@@ -977,11 +977,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationRegion::get_notifyOnExit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationRegion::get_notifyOnExit");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.notifyOnExit;
       
           // 返回值: Value
@@ -991,11 +991,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationCircleRegion::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationCircleRegion::get_center");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationCoordinate2D result = ref.center;
       
           // 返回值: 结构体
@@ -1008,11 +1008,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationCircleRegion::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationCircleRegion::get_radius");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationDistance result = ref.radius;
       
           // 返回值: Value
@@ -1022,11 +1022,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPolygonRegion::get_coordinates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPolygonRegion::get_coordinates");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationCoordinate2D* result = ref.coordinates;
       
           // 返回值: 结构体
@@ -1039,11 +1039,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPolygonRegion::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPolygonRegion::get_count");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSInteger result = ref.count;
       
           // 返回值: Value
@@ -1053,11 +1053,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::get_identifier");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.identifier;
       
           // 返回值: jsonable
@@ -1067,11 +1067,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::get_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::get_customID");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.customID;
       
           // 返回值: jsonable
@@ -1081,11 +1081,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::get_fenceStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::get_fenceStatus");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapGeoFenceRegionStatus result = ref.fenceStatus;
       
           // 返回值: Value
@@ -1095,11 +1095,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::get_regionType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::get_regionType");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapGeoFenceRegionType result = ref.regionType;
       
           // 返回值: Value
@@ -1109,11 +1109,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::get_currentLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::get_currentLocation");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocation* result = ref.currentLocation;
       
           // 返回值: 引用
@@ -1124,11 +1124,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceCircleRegion::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceCircleRegion::get_center");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationCoordinate2D result = ref.center;
       
           // 返回值: 结构体
@@ -1141,11 +1141,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceCircleRegion::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceCircleRegion::get_radius");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationDistance result = ref.radius;
       
           // 返回值: Value
@@ -1155,11 +1155,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFencePolygonRegion::get_coordinates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFencePolygonRegion::get_coordinates");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationCoordinate2D* result = ref.coordinates;
       
           // 返回值: 结构体
@@ -1172,11 +1172,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFencePolygonRegion::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFencePolygonRegion::get_count");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSInteger result = ref.count;
       
           // 返回值: Value
@@ -1186,11 +1186,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFencePOIRegion::get_POIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFencePOIRegion::get_POIItem");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFencePOIRegion* ref = (AMapGeoFencePOIRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapLocationPOIItem* result = ref.POIItem;
       
           // 返回值: 引用
@@ -1201,11 +1201,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceDistrictRegion::get_districtItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceDistrictRegion::get_districtItem");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoFenceDistrictRegion* ref = (AMapGeoFenceDistrictRegion*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapLocationDistrictItem* result = ref.districtItem;
       
           // 返回值: 引用
@@ -1216,11 +1216,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_distanceFilter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_distanceFilter");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationDistance result = ref.distanceFilter;
       
           // 返回值: Value
@@ -1230,11 +1230,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_desiredAccuracy");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CLLocationAccuracy result = ref.desiredAccuracy;
       
           // 返回值: Value
@@ -1244,11 +1244,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_pausesLocationUpdatesAutomatically");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.pausesLocationUpdatesAutomatically;
       
           // 返回值: Value
@@ -1258,11 +1258,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_allowsBackgroundLocationUpdates");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.allowsBackgroundLocationUpdates;
       
           // 返回值: Value
@@ -1272,11 +1272,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_locationTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_locationTimeout");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSInteger result = ref.locationTimeout;
       
           // 返回值: Value
@@ -1286,11 +1286,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_reGeocodeTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_reGeocodeTimeout");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSInteger result = ref.reGeocodeTimeout;
       
           // 返回值: Value
@@ -1300,11 +1300,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_locatingWithReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_locatingWithReGeocode");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.locatingWithReGeocode;
       
           // 返回值: Value
@@ -1314,11 +1314,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_reGeocodeLanguage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_reGeocodeLanguage");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapLocationReGeocodeLanguage result = ref.reGeocodeLanguage;
       
           // 返回值: Value
@@ -1328,11 +1328,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::get_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::get_detectRiskOfFakeLocation");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationManager* ref = (AMapLocationManager*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           BOOL result = ref.detectRiskOfFakeLocation;
       
           // 返回值: Value
@@ -1342,11 +1342,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_formattedAddress");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.formattedAddress;
       
           // 返回值: jsonable
@@ -1356,11 +1356,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_country": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_country");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.country;
       
           // 返回值: jsonable
@@ -1370,11 +1370,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_province");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.province;
       
           // 返回值: jsonable
@@ -1384,11 +1384,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_city");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.city;
       
           // 返回值: jsonable
@@ -1398,11 +1398,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_district");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.district;
       
           // 返回值: jsonable
@@ -1412,11 +1412,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_township": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_township");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.township;
       
           // 返回值: jsonable
@@ -1426,11 +1426,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_neighborhood");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.neighborhood;
       
           // 返回值: jsonable
@@ -1440,11 +1440,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_building");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.building;
       
           // 返回值: jsonable
@@ -1454,11 +1454,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_citycode");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.citycode;
       
           // 返回值: jsonable
@@ -1468,11 +1468,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_adcode");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.adcode;
       
           // 返回值: jsonable
@@ -1482,11 +1482,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_street": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_street");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.street;
       
           // 返回值: jsonable
@@ -1496,11 +1496,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_number": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_number");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.number;
       
           // 返回值: jsonable
@@ -1510,11 +1510,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_POIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_POIName");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.POIName;
       
           // 返回值: jsonable
@@ -1524,11 +1524,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::get_AOIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::get_AOIName");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.AOIName;
       
           // 返回值: jsonable
@@ -1538,11 +1538,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPoint::get_latitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPoint::get_latitude");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPoint* ref = (AMapLocationPoint*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CGFloat result = ref.latitude;
       
           // 返回值: Value
@@ -1552,11 +1552,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPoint::get_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPoint::get_longitude");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPoint* ref = (AMapLocationPoint*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           CGFloat result = ref.longitude;
       
           // 返回值: Value
@@ -1566,11 +1566,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_pId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_pId");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.pId;
       
           // 返回值: jsonable
@@ -1580,11 +1580,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_name");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.name;
       
           // 返回值: jsonable
@@ -1594,11 +1594,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_type");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.type;
       
           // 返回值: jsonable
@@ -1608,11 +1608,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_typeCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_typeCode");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.typeCode;
       
           // 返回值: jsonable
@@ -1622,11 +1622,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_address");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.address;
       
           // 返回值: jsonable
@@ -1636,11 +1636,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_location");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           AMapLocationPoint* result = ref.location;
       
           // 返回值: 引用
@@ -1651,11 +1651,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_tel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_tel");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.tel;
       
           // 返回值: jsonable
@@ -1665,11 +1665,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_province");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.province;
       
           // 返回值: jsonable
@@ -1679,11 +1679,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_city");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.city;
       
           // 返回值: jsonable
@@ -1693,11 +1693,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::get_district");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.district;
       
           // 返回值: jsonable
@@ -1707,11 +1707,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationDistrictItem::get_cityCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationDistrictItem::get_cityCode");
       
-          // 引用对象
+          // ref object
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) HEAP_AmapLocationFluttify[@(refId)];
       
-          // 开始调用
+          // invoke native method
           NSString* result = ref.cityCode;
       
           // 返回值: jsonable
@@ -1721,7 +1721,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::set_delegate");
       
-          // 参数
+          // args
       
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1734,8 +1734,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::set_activeAction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::set_activeAction");
       
-          // 参数
-          // 枚举参数
+          // args
+          // enum arg
           AMapGeoFenceActiveAction activeAction = (AMapGeoFenceActiveAction) [args[@"activeAction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1748,8 +1748,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1762,8 +1762,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::set_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::set_allowsBackgroundLocationUpdates");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1776,8 +1776,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceManager::set_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceManager::set_detectRiskOfFakeLocation");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1790,8 +1790,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationRegion::set_notifyOnEntry": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationRegion::set_notifyOnEntry");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL notifyOnEntry = [args[@"notifyOnEntry"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1804,8 +1804,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationRegion::set_notifyOnExit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationRegion::set_notifyOnExit");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL notifyOnExit = [args[@"notifyOnExit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1818,8 +1818,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::set_fenceStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::set_fenceStatus");
       
-          // 参数
-          // 枚举参数
+          // args
+          // enum arg
           AMapGeoFenceRegionStatus fenceStatus = (AMapGeoFenceRegionStatus) [args[@"fenceStatus"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1832,8 +1832,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::set_regionType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::set_regionType");
       
-          // 参数
-          // 枚举参数
+          // args
+          // enum arg
           AMapGeoFenceRegionType regionType = (AMapGeoFenceRegionType) [args[@"regionType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1846,8 +1846,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapGeoFenceRegion::set_currentLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapGeoFenceRegion::set_currentLocation");
       
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           CLLocation* currentLocation = (CLLocation*) HEAP_AmapLocationFluttify[@([args[@"currentLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1860,7 +1860,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_delegate");
       
-          // 参数
+          // args
       
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1873,8 +1873,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_distanceFilter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_distanceFilter");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           CLLocationDistance distanceFilter = [args[@"distanceFilter"] doubleValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1887,8 +1887,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_desiredAccuracy");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           CLLocationAccuracy desiredAccuracy = [args[@"desiredAccuracy"] doubleValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1901,8 +1901,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_pausesLocationUpdatesAutomatically");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1915,8 +1915,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_allowsBackgroundLocationUpdates");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1929,8 +1929,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_locationTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_locationTimeout");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSInteger locationTimeout = [args[@"locationTimeout"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1943,8 +1943,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_reGeocodeTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_reGeocodeTimeout");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSInteger reGeocodeTimeout = [args[@"reGeocodeTimeout"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1957,8 +1957,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_locatingWithReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_locatingWithReGeocode");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL locatingWithReGeocode = [args[@"locatingWithReGeocode"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1971,8 +1971,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_reGeocodeLanguage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_reGeocodeLanguage");
       
-          // 参数
-          // 枚举参数
+          // args
+          // enum arg
           AMapLocationReGeocodeLanguage reGeocodeLanguage = (AMapLocationReGeocodeLanguage) [args[@"reGeocodeLanguage"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1985,8 +1985,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationManager::set_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationManager::set_detectRiskOfFakeLocation");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1999,8 +1999,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_formattedAddress");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2013,8 +2013,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_country");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* country = (NSString*) args[@"country"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2027,8 +2027,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_province");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2041,8 +2041,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_city");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2055,8 +2055,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_district");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2069,8 +2069,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_township": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_township");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* township = (NSString*) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2083,8 +2083,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_neighborhood");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* neighborhood = (NSString*) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2097,8 +2097,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_building");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2111,8 +2111,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_citycode");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2125,8 +2125,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_adcode");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2139,8 +2139,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_street": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_street");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* street = (NSString*) args[@"street"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2153,8 +2153,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_number": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_number");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* number = (NSString*) args[@"number"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2167,8 +2167,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_POIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_POIName");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* POIName = (NSString*) args[@"POIName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2181,8 +2181,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationReGeocode::set_AOIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationReGeocode::set_AOIName");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* AOIName = (NSString*) args[@"AOIName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2195,8 +2195,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPoint::set_latitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPoint::set_latitude");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           CGFloat latitude = [args[@"latitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2209,8 +2209,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPoint::set_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPoint::set_longitude");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           CGFloat longitude = [args[@"longitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2223,8 +2223,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_pId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_pId");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* pId = (NSString*) args[@"pId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2237,8 +2237,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_name");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2251,8 +2251,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_type");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2265,8 +2265,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_typeCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_typeCode");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* typeCode = (NSString*) args[@"typeCode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2279,8 +2279,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_address");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2293,8 +2293,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_location");
       
-          // 参数
-          // 引用参数
+          // args
+          // ref arg
           AMapLocationPoint* location = (AMapLocationPoint*) HEAP_AmapLocationFluttify[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2307,8 +2307,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_tel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_tel");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* tel = (NSString*) args[@"tel"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2321,8 +2321,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_province");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2335,8 +2335,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_city");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2349,8 +2349,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationPOIItem::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationPOIItem::set_district");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -2363,8 +2363,8 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
       @"AMapLocationDistrictItem::set_cityCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapLocationDistrictItem::set_cityCode");
       
-          // 参数
-          // jsonable参数
+          // args
+          // jsonable arg
           NSString* cityCode = (NSString*) args[@"cityCode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
@@ -3052,11 +3052,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* arglocationManager = @(locationManager.hash);
   HEAP_AmapLocationFluttify[arglocationManager] = locationManager;
 
@@ -3072,22 +3072,22 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 列表回调参数
+  // list callback arg
   NSMutableArray<NSNumber*>* argregions = [NSMutableArray arrayWithCapacity:regions.count];
   for (int i = 0; i < regions.count; i++) {
       NSObject* item = ((NSObject*) [regions objectAtIndex:i]);
-      // 返回给dart端的数据
+      // return to dart side data
       argregions[i] = @(item.hash);
-      // 放到HEAP_AmapLocationFluttify中的数据
+      // add to HEAP_AmapLocationFluttify
       HEAP_AmapLocationFluttify[@(item.hash)] = item;
   }
-  // jsonable回调参数
+  // jsonable callback arg
   NSString* argcustomID = customID;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argerror = @(error.hash);
   HEAP_AmapLocationFluttify[argerror] = error;
 
@@ -3103,16 +3103,16 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argregion = @(region.hash);
   HEAP_AmapLocationFluttify[argregion] = region;
-  // jsonable回调参数
+  // jsonable callback arg
   NSString* argcustomID = customID;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argerror = @(error.hash);
   HEAP_AmapLocationFluttify[argerror] = error;
 
@@ -3128,11 +3128,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* arglocationManager = @(locationManager.hash);
   HEAP_AmapLocationFluttify[arglocationManager] = locationManager;
 
@@ -3148,11 +3148,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidFailWithError");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argerror = @(error.hash);
   HEAP_AmapLocationFluttify[argerror] = error;
 
@@ -3168,11 +3168,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* arglocation = @(location.hash);
   HEAP_AmapLocationFluttify[arglocation] = location;
 
@@ -3188,14 +3188,14 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* arglocation = @(location.hash);
   HEAP_AmapLocationFluttify[arglocation] = location;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argreGeocode = @(reGeocode.hash);
   HEAP_AmapLocationFluttify[argreGeocode] = reGeocode;
 
@@ -3211,11 +3211,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 枚举回调参数
+  // enum callback arg
   NSNumber* argstatus = @((NSInteger) status);
 
   [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus" arguments:@{@"manager": argmanager, @"status": argstatus}];
@@ -3230,7 +3230,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration");
 
-  // 构造可以直接传输的参数
+  // convert to jsonable arg
   
 
   // __block #__callback_result_type__# _callbackResult = nil;
@@ -3267,11 +3267,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argnewHeading = @(newHeading.hash);
   HEAP_AmapLocationFluttify[argnewHeading] = newHeading;
 
@@ -3287,11 +3287,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidStartMonitoringForRegion");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argregion = @(region.hash);
   HEAP_AmapLocationFluttify[argregion] = region;
 
@@ -3307,11 +3307,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidEnterRegion");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argregion = @(region.hash);
   HEAP_AmapLocationFluttify[argregion] = region;
 
@@ -3327,11 +3327,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidExitRegion");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argregion = @(region.hash);
   HEAP_AmapLocationFluttify[argregion] = region;
 
@@ -3347,13 +3347,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidDetermineStateforRegion");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 枚举回调参数
+  // enum callback arg
   NSNumber* argstate = @((NSInteger) state);
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argregion = @(region.hash);
   HEAP_AmapLocationFluttify[argregion] = region;
 
@@ -3369,14 +3369,14 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
   NSLog(@"AMapLocationManagerDelegate::amapLocationManagerMonitoringDidFailForRegionwithError");
 
-  // 构造可以直接传输的参数
-  // 引用回调参数
+  // convert to jsonable arg
+  // ref callback arg
   NSNumber* argmanager = @(manager.hash);
   HEAP_AmapLocationFluttify[argmanager] = manager;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argregion = @(region.hash);
   HEAP_AmapLocationFluttify[argregion] = region;
-  // 引用回调参数
+  // ref callback arg
   NSNumber* argerror = @(error.hash);
   HEAP_AmapLocationFluttify[argerror] = error;
 
