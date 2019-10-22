@@ -2953,6 +2953,78 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapLocationFluttify;
 
     methodResult(@(_structValue.longitude));
   }
+  // CLLocation获取coordinate
+  else if ([@"CLLocation::get_coordinate" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+
+    CLLocationCoordinate2D data = location.coordinate;
+
+    NSValue* dataValue = [NSValue value:&data withObjCType:@encode(CLLocationCoordinate2D)];
+    HEAP_AmapLocationFluttify[@(dataValue.hash)] = dataValue;
+
+    methodResult(@(dataValue.hash));
+  }
+  // CLLocation获取altitude
+  else if ([@"CLLocation::get_altitude" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+
+    methodResult(@(location.altitude));
+  }
+  // CLLocation获取horizontalAccuracy
+  else if ([@"CLLocation::get_horizontalAccuracy" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+
+    methodResult(@(location.horizontalAccuracy));
+  }
+  // CLLocation获取verticalAccuracy
+  else if ([@"CLLocation::get_verticalAccuracy" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+
+    methodResult(@(location.verticalAccuracy));
+  }
+  // CLLocation获取course
+  else if ([@"CLLocation::get_course" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+
+    methodResult(@(location.course));
+  }
+  // CLLocation获取speed
+  else if ([@"CLLocation::get_speed" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+
+    methodResult(@(location.speed));
+  }
+  // CLLocation获取floor
+  else if ([@"CLLocation::get_floor" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLLocation* location = (CLLocation*) HEAP_AmapLocationFluttify[refId];
+    CLFloor* floor = location.floor;
+
+    HEAP[@(floor.hash)] = floor;
+
+    methodResult(@(floor.hash));
+  }
+  // CLFloor获取level
+  else if ([@"CLFloor::get_level" isEqualToString:methodCall.method]) {
+    NSNumber* refId = (NSNumber*) args[@"refId"];
+
+    CLFloor* floor = (CLFloor*) HEAP_AmapLocationFluttify[refId];
+
+    methodResult(@(floor.level));
+  }
   // 创建UIImage
   else if ([@"ObjectFactory::createUIImage" isEqualToString:methodCall.method]) {
     FlutterStandardTypedData* bitmapBytes = (FlutterStandardTypedData*) args[@"bitmapBytes"];
