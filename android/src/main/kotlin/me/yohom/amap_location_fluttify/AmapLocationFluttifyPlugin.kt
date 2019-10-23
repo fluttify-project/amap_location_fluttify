@@ -9,11 +9,7 @@ import android.util.Log
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry.Registrar
-
-// The stack that exists on the Dart side for a method call is enabled only when the MethodChannel passing parameters are limited
-val STACK_AmapLocationFluttify = mutableMapOf<String, Any>()
-// Container for Dart side random access objects
-val HEAP_AmapLocationFluttify = mutableMapOf<Int, Any>()
+import me.yohom.foundation_fluttify.HEAP
 
 @Suppress("FunctionName", "UsePropertyAccessSyntax", "RedundantUnitReturnType", "UNUSED_PARAMETER", "SpellCheckingInspection", "ConvertToStringTemplate", "DEPRECATION", "UNUSED_VARIABLE")
 class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChannel.MethodCallHandler {
@@ -36,7 +32,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.autonavi.aps.amapapi.model.AMapLocationServer
+            val ref = HEAP[refId] as com.autonavi.aps.amapapi.model.AMapLocationServer
         
             // print log
             println("fluttify-kotlin: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::toStr([])")
@@ -50,11 +46,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.LocationManagerBase::setLocationOption" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationClientOption
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationClientOption
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::setLocationOption([])")
@@ -71,7 +67,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::setLocationListener([])")
@@ -87,7 +83,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
                     println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
         
                     // convert to jsonable data
-                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
         
                     // call dart method
                     callbackChannel.invokeMethod(
@@ -112,7 +108,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::startLocation([])")
@@ -129,7 +125,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::stopLocation([])")
@@ -146,7 +142,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::getLastKnownLocation([])")
@@ -157,7 +153,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -170,7 +166,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::startAssistantLocation([])")
@@ -187,7 +183,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::stopAssistantLocation([])")
@@ -204,7 +200,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::isStarted([])")
@@ -221,7 +217,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::unRegisterLocationListener([])")
@@ -237,7 +233,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
                     println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
         
                     // convert to jsonable data
-                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
         
                     // call dart method
                     callbackChannel.invokeMethod(
@@ -262,7 +258,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::onDestroy([])")
@@ -280,7 +276,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.LocationManagerBase
+            val ref = HEAP[refId] as com.amap.api.location.LocationManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.LocationManagerBase@$refId::disableBackgroundLocation([\"var1\":$var1])")
@@ -294,11 +290,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.AMapLocationClient::setLocationOption" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationClientOption
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationClientOption
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::setLocationOption([])")
@@ -315,7 +311,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::setLocationListener([])")
@@ -331,7 +327,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
                     println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
         
                     // convert to jsonable data
-                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
         
                     // call dart method
                     callbackChannel.invokeMethod(
@@ -356,7 +352,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::startLocation([])")
@@ -373,7 +369,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::stopLocation([])")
@@ -390,7 +386,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::getLastKnownLocation([])")
@@ -401,7 +397,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -414,7 +410,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::startAssistantLocation([])")
@@ -431,7 +427,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::stopAssistantLocation([])")
@@ -448,7 +444,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::getVersion([])")
@@ -482,7 +478,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::isStarted([])")
@@ -499,7 +495,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::unRegisterLocationListener([])")
@@ -515,7 +511,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
                     println("fluttify-kotlin-callback: onLocationChanged([\"var1\":$var1])")
         
                     // convert to jsonable data
-                    val argvar1 = var1.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode()
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
         
                     // call dart method
                     callbackChannel.invokeMethod(
@@ -540,7 +536,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::onDestroy([])")
@@ -558,7 +554,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClient
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClient@$refId::disableBackgroundLocation([\"var1\":$var1])")
@@ -572,7 +568,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.AMapLocationClient::getDeviceId" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var0 = HEAP_AmapLocationFluttify[args["var0"] as Int] as android.content.Context
+            val var0 = HEAP[args["var0"] as Int] as android.content.Context
         
             // ref
         
@@ -589,11 +585,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.AMapLocationListener::onLocationChanged" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocation
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocation
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationListener
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationListener
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationListener@$refId::onLocationChanged([])")
@@ -610,7 +606,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.DPoint
+            val ref = HEAP[refId] as com.amap.api.location.DPoint
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.DPoint@$refId::getLongitude([])")
@@ -628,7 +624,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.DPoint
+            val ref = HEAP[refId] as com.amap.api.location.DPoint
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.DPoint@$refId::setLongitude([\"var1\":$var1])")
@@ -645,7 +641,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.DPoint
+            val ref = HEAP[refId] as com.amap.api.location.DPoint
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.DPoint@$refId::getLatitude([])")
@@ -663,7 +659,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.DPoint
+            val ref = HEAP[refId] as com.amap.api.location.DPoint
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.DPoint@$refId::setLatitude([\"var1\":$var1])")
@@ -681,7 +677,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.CoordinateConverter
+            val ref = HEAP[refId] as com.amap.api.location.CoordinateConverter
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.CoordinateConverter@$refId::from([])")
@@ -692,7 +688,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -702,11 +698,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.CoordinateConverter::coord" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.DPoint
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.CoordinateConverter
+            val ref = HEAP[refId] as com.amap.api.location.CoordinateConverter
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.CoordinateConverter@$refId::coord([])")
@@ -717,7 +713,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -730,7 +726,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.CoordinateConverter
+            val ref = HEAP[refId] as com.amap.api.location.CoordinateConverter
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.CoordinateConverter@$refId::convert([])")
@@ -741,7 +737,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -770,9 +766,9 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.CoordinateConverter::calculateLineDistance" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var0 = HEAP_AmapLocationFluttify[args["var0"] as Int] as com.amap.api.location.DPoint
+            val var0 = HEAP[args["var0"] as Int] as com.amap.api.location.DPoint
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.DPoint
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
         
             // ref
         
@@ -844,7 +840,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol@$refId::getValue([])")
@@ -891,7 +887,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.UmidtokenInfo::setUmidtoken" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var0 = HEAP_AmapLocationFluttify[args["var0"] as Int] as android.content.Context
+            val var0 = HEAP[args["var0"] as Int] as android.content.Context
             // jsonable arg
             val var1 = args["var1"] as String
         
@@ -913,7 +909,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getGpsAccuracyStatus([])")
@@ -931,7 +927,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setGpsAccuracyStatus([\"var1\":$var1])")
@@ -948,7 +944,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getLocationType([])")
@@ -966,7 +962,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setLocationType([\"var1\":$var1])")
@@ -983,7 +979,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getLocationDetail([])")
@@ -1001,7 +997,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setLocationDetail([\"var1\":$var1])")
@@ -1018,7 +1014,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getErrorCode([])")
@@ -1036,7 +1032,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setErrorCode([\"var1\":$var1])")
@@ -1053,7 +1049,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getErrorInfo([])")
@@ -1071,7 +1067,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setErrorInfo([\"var1\":$var1])")
@@ -1088,7 +1084,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getCountry([])")
@@ -1106,7 +1102,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setCountry([\"var1\":$var1])")
@@ -1123,7 +1119,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getRoad([])")
@@ -1141,7 +1137,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setRoad([\"var1\":$var1])")
@@ -1158,7 +1154,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getAddress([])")
@@ -1176,7 +1172,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setAddress([\"var1\":$var1])")
@@ -1193,7 +1189,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getProvince([])")
@@ -1211,7 +1207,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setProvince([\"var1\":$var1])")
@@ -1228,7 +1224,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getCity([])")
@@ -1246,7 +1242,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setCity([\"var1\":$var1])")
@@ -1263,7 +1259,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getDistrict([])")
@@ -1281,7 +1277,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setDistrict([\"var1\":$var1])")
@@ -1298,7 +1294,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getCityCode([])")
@@ -1316,7 +1312,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setCityCode([\"var1\":$var1])")
@@ -1333,7 +1329,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getAdCode([])")
@@ -1351,7 +1347,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setAdCode([\"var1\":$var1])")
@@ -1368,7 +1364,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getPoiName([])")
@@ -1386,7 +1382,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setPoiName([\"var1\":$var1])")
@@ -1403,7 +1399,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getLatitude([])")
@@ -1421,7 +1417,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setLatitude([\"var1\":$var1])")
@@ -1438,7 +1434,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getLongitude([])")
@@ -1456,7 +1452,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setLongitude([\"var1\":$var1])")
@@ -1473,7 +1469,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getSatellites([])")
@@ -1491,7 +1487,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setSatellites([\"var1\":$var1])")
@@ -1508,7 +1504,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getStreet([])")
@@ -1526,7 +1522,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setStreet([\"var1\":$var1])")
@@ -1543,7 +1539,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getStreetNum([])")
@@ -1561,7 +1557,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setNumber([\"var1\":$var1])")
@@ -1579,7 +1575,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setOffset([\"var1\":$var1])")
@@ -1596,7 +1592,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::isOffset([])")
@@ -1613,7 +1609,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getAoiName([])")
@@ -1631,7 +1627,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setAoiName([\"var1\":$var1])")
@@ -1648,7 +1644,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getBuildingId([])")
@@ -1666,7 +1662,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setBuildingId([\"var1\":$var1])")
@@ -1683,7 +1679,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getFloor([])")
@@ -1700,7 +1696,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::isFixLastLocation([])")
@@ -1718,7 +1714,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setFixLastLocation([\"var1\":$var1])")
@@ -1736,7 +1732,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setFloor([\"var1\":$var1])")
@@ -1753,7 +1749,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::isMock([])")
@@ -1771,7 +1767,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setMock([\"var1\":$var1])")
@@ -1788,7 +1784,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getDescription([])")
@@ -1806,7 +1802,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setDescription([\"var1\":$var1])")
@@ -1823,7 +1819,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::toStr([])")
@@ -1840,7 +1836,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getAccuracy([])")
@@ -1857,7 +1853,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getBearing([])")
@@ -1874,7 +1870,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getAltitude([])")
@@ -1891,7 +1887,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getSpeed([])")
@@ -1908,7 +1904,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getProvider([])")
@@ -1925,7 +1921,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::clone([])")
@@ -1936,7 +1932,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -1949,7 +1945,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getLocationQualityReport([])")
@@ -1960,7 +1956,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -1970,11 +1966,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.location.AMapLocation::setLocationQualityReport" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocationQualityReport
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocationQualityReport
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setLocationQualityReport([])")
@@ -1991,7 +1987,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getCoordType([])")
@@ -2009,7 +2005,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setCoordType([\"var1\":$var1])")
@@ -2027,7 +2023,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setTrustedLevel([\"var1\":$var1])")
@@ -2044,7 +2040,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getTrustedLevel([])")
@@ -2061,7 +2057,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::getConScenario([])")
@@ -2079,7 +2075,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocation
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocation
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocation@$refId::setConScenario([\"var1\":$var1])")
@@ -2112,7 +2108,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isMockEnable([])")
@@ -2130,7 +2126,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setMockEnable([\"var1\":$var1])")
@@ -2141,7 +2137,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2154,7 +2150,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getInterval([])")
@@ -2172,7 +2168,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setInterval([\"var1\":$var1])")
@@ -2183,7 +2179,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2196,7 +2192,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isOnceLocation([])")
@@ -2214,7 +2210,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setOnceLocation([\"var1\":$var1])")
@@ -2225,7 +2221,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2238,7 +2234,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isNeedAddress([])")
@@ -2256,7 +2252,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setNeedAddress([\"var1\":$var1])")
@@ -2267,7 +2263,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2280,7 +2276,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isWifiActiveScan([])")
@@ -2298,7 +2294,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setWifiActiveScan([\"var1\":$var1])")
@@ -2309,7 +2305,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2322,7 +2318,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isWifiScan([])")
@@ -2340,7 +2336,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setWifiScan([\"var1\":$var1])")
@@ -2351,7 +2347,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2364,7 +2360,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLocationMode([])")
@@ -2375,7 +2371,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2389,7 +2385,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLocationMode([])")
@@ -2400,7 +2396,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2413,7 +2409,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLocationProtocol([])")
@@ -2424,7 +2420,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2454,7 +2450,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isKillProcess([])")
@@ -2472,7 +2468,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setKillProcess([\"var1\":$var1])")
@@ -2483,7 +2479,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2496,7 +2492,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isGpsFirst([])")
@@ -2514,7 +2510,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setGpsFirst([\"var1\":$var1])")
@@ -2525,7 +2521,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2539,7 +2535,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setGpsFirstTimeout([\"var1\":$var1])")
@@ -2550,7 +2546,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2563,7 +2559,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getGpsFirstTimeout([])")
@@ -2580,7 +2576,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::clone([])")
@@ -2591,7 +2587,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2604,7 +2600,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getHttpTimeOut([])")
@@ -2622,7 +2618,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setHttpTimeOut([\"var1\":$var1])")
@@ -2633,7 +2629,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2646,7 +2642,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isOffset([])")
@@ -2664,7 +2660,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setOffset([\"var1\":$var1])")
@@ -2675,7 +2671,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2688,7 +2684,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isLocationCacheEnable([])")
@@ -2706,7 +2702,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLocationCacheEnable([\"var1\":$var1])")
@@ -2717,7 +2713,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2730,7 +2726,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isOnceLocationLatest([])")
@@ -2748,7 +2744,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setOnceLocationLatest([\"var1\":$var1])")
@@ -2759,7 +2755,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2772,7 +2768,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::isSensorEnable([])")
@@ -2790,7 +2786,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setSensorEnable([\"var1\":$var1])")
@@ -2801,7 +2797,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2815,7 +2811,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLastLocationLifeCycle([\"var1\":$var1])")
@@ -2826,7 +2822,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2839,7 +2835,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLastLocationLifeCycle([])")
@@ -2856,7 +2852,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getGeoLanguage([])")
@@ -2867,7 +2863,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2881,7 +2877,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setGeoLanguage([])")
@@ -2892,7 +2888,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2938,7 +2934,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getDeviceModeDistanceFilter([])")
@@ -2956,7 +2952,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setDeviceModeDistanceFilter([\"var1\":$var1])")
@@ -2967,7 +2963,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -2981,7 +2977,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::setLocationPurpose([])")
@@ -2992,7 +2988,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -3005,7 +3001,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getLocationPurpose([])")
@@ -3016,7 +3012,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -3079,7 +3075,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationClientOption
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationClientOption
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationClientOption@$refId::getScanWifiInterval([])")
@@ -3096,7 +3092,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.APSServiceBase
+            val ref = HEAP[refId] as com.amap.api.location.APSServiceBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.APSServiceBase@$refId::onCreate([])")
@@ -3113,7 +3109,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.APSServiceBase
+            val ref = HEAP[refId] as com.amap.api.location.APSServiceBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.APSServiceBase@$refId::onDestroy([])")
@@ -3131,7 +3127,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setWifiAble([\"var1\":$var1])")
@@ -3149,7 +3145,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setGpsStatus([\"var1\":$var1])")
@@ -3167,7 +3163,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setGPSSatellites([\"var1\":$var1])")
@@ -3184,7 +3180,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::isWifiAble([])")
@@ -3201,7 +3197,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSStatus([])")
@@ -3218,7 +3214,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSSatellites([])")
@@ -3235,7 +3231,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::getNetworkType([])")
@@ -3253,7 +3249,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setNetworkType([\"var1\":$var1])")
@@ -3270,7 +3266,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::getNetUseTime([])")
@@ -3288,7 +3284,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setNetUseTime([\"var1\":$var1])")
@@ -3306,7 +3302,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setInstallHighDangerMockApp([\"var1\":$var1])")
@@ -3323,7 +3319,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::isInstalledHighDangerMockApp([])")
@@ -3341,7 +3337,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::setLocationMode([])")
@@ -3358,7 +3354,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.location.AMapLocationQualityReport
+            val ref = HEAP[refId] as com.amap.api.location.AMapLocationQualityReport
         
             // print log
             println("fluttify-kotlin: com.amap.api.location.AMapLocationQualityReport@$refId::getAdviseMessage([])")
@@ -3375,7 +3371,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::getCitycode([])")
@@ -3393,7 +3389,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::setCitycode([\"var1\":$var1])")
@@ -3410,7 +3406,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::getAdcode([])")
@@ -3428,7 +3424,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::setAdcode([\"var1\":$var1])")
@@ -3445,7 +3441,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::getPolyline([])")
@@ -3456,7 +3452,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 for (item in result) {
-                    HEAP_AmapLocationFluttify[item.hashCode()] = item
+                    HEAP[item.hashCode()] = item
                 }
                 methodResult.success(result.map { it.hashCode() })
             } else {
@@ -3466,11 +3462,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.DistrictItem::setPolyline" to { registrar, args, methodResult ->
             // args
             // list arg
-            val var1 = (args["var1"] as List<Int>).map { HEAP_AmapLocationFluttify[it] as com.amap.api.location.DPoint }
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.location.DPoint }
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::setPolyline([])")
@@ -3487,7 +3483,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::getDistrictName([])")
@@ -3505,7 +3501,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.DistrictItem
+            val ref = HEAP[refId] as com.amap.api.fence.DistrictItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.DistrictItem@$refId::setDistrictName([\"var1\":$var1])")
@@ -3532,7 +3528,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -3546,7 +3542,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::setActivateAction([\"var1\":$var1])")
@@ -3563,7 +3559,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])")
@@ -3579,7 +3575,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
                     println("fluttify-kotlin-callback: onGeoFenceCreateFinished([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
         
                     // convert to jsonable data
-                    val argvar1 = var1.map { it.apply { HEAP_AmapLocationFluttify[it.hashCode()] = it }.hashCode() }
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
                     val argvar2 = var2
                     val argvar3 = var3
         
@@ -3605,7 +3601,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFenceClient::addGeoFence" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.DPoint
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
             // jsonable arg
             val var2 = args["var2"] as Double
             // jsonable arg
@@ -3613,7 +3609,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\"var2\":$var2, \"var3\":$var3])")
@@ -3630,7 +3626,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])")
@@ -3647,7 +3643,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])")
@@ -3658,7 +3654,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 for (item in result) {
-                    HEAP_AmapLocationFluttify[item.hashCode()] = item
+                    HEAP[item.hashCode()] = item
                 }
                 methodResult.success(result.map { it.hashCode() })
             } else {
@@ -3674,7 +3670,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceAble([\"var1\":$var1, \"var2\":$var2])")
@@ -3691,7 +3687,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::pauseGeoFence([])")
@@ -3708,7 +3704,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::resumeGeoFence([])")
@@ -3725,7 +3721,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceClient
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceClient
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceClient@$refId::isPause([])")
@@ -3739,7 +3735,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished" to { registrar, args, methodResult ->
             // args
             // list arg
-            val var1 = (args["var1"] as List<Int>).map { HEAP_AmapLocationFluttify[it] as com.amap.api.fence.GeoFence }
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.fence.GeoFence }
             // jsonable arg
             val var2 = args["var2"] as Int
             // jsonable arg
@@ -3747,7 +3743,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceListener
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceListener
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceListener@$refId::onGeoFenceCreateFinished([\"var2\":$var2, \"var3\":$var3])")
@@ -3764,7 +3760,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getFenceId([])")
@@ -3782,7 +3778,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setFenceId([\"var1\":$var1])")
@@ -3799,7 +3795,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getCustomId([])")
@@ -3817,7 +3813,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setCustomId([\"var1\":$var1])")
@@ -3834,7 +3830,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getPendingIntentAction([])")
@@ -3852,7 +3848,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setPendingIntentAction([\"var1\":$var1])")
@@ -3869,7 +3865,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getType([])")
@@ -3887,7 +3883,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setType([\"var1\":$var1])")
@@ -3904,7 +3900,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getPoiItem([])")
@@ -3915,7 +3911,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -3925,11 +3921,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFence::setPoiItem" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.fence.PoiItem
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.fence.PoiItem
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setPoiItem([])")
@@ -3946,7 +3942,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getDistrictItemList([])")
@@ -3957,7 +3953,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 for (item in result) {
-                    HEAP_AmapLocationFluttify[item.hashCode()] = item
+                    HEAP[item.hashCode()] = item
                 }
                 methodResult.success(result.map { it.hashCode() })
             } else {
@@ -3967,11 +3963,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFence::setDistrictItemList" to { registrar, args, methodResult ->
             // args
             // list arg
-            val var1 = (args["var1"] as List<Int>).map { HEAP_AmapLocationFluttify[it] as com.amap.api.fence.DistrictItem }
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.fence.DistrictItem }
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setDistrictItemList([])")
@@ -3988,7 +3984,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getPointList([])")
@@ -3999,7 +3995,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 for (item in result) {
-                    HEAP_AmapLocationFluttify[item.hashCode()] = item
+                    HEAP[item.hashCode()] = item
                 }
                 methodResult.success(result.map { it.hashCode() })
             } else {
@@ -4012,7 +4008,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setPointList([])")
@@ -4029,7 +4025,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getRadius([])")
@@ -4047,7 +4043,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setRadius([\"var1\":$var1])")
@@ -4064,7 +4060,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getExpiration([])")
@@ -4082,7 +4078,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setExpiration([\"var1\":$var1])")
@@ -4099,7 +4095,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getActivatesAction([])")
@@ -4117,7 +4113,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setActivatesAction([\"var1\":$var1])")
@@ -4134,7 +4130,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getStatus([])")
@@ -4152,7 +4148,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setStatus([\"var1\":$var1])")
@@ -4169,7 +4165,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getEnterTime([])")
@@ -4187,7 +4183,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setEnterTime([\"var1\":$var1])")
@@ -4204,7 +4200,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getCenter([])")
@@ -4215,7 +4211,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -4225,11 +4221,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFence::setCenter" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.DPoint
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setCenter([])")
@@ -4246,7 +4242,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getMinDis2Center([])")
@@ -4264,7 +4260,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setMinDis2Center([\"var1\":$var1])")
@@ -4281,7 +4277,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getMaxDis2Center([])")
@@ -4299,7 +4295,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setMaxDis2Center([\"var1\":$var1])")
@@ -4316,7 +4312,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::isAble([])")
@@ -4334,7 +4330,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setAble([\"var1\":$var1])")
@@ -4348,11 +4344,11 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFence::setCurrentLocation" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.AMapLocation
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.AMapLocation
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setCurrentLocation([])")
@@ -4369,7 +4365,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFence
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getCurrentLocation([])")
@@ -4380,7 +4376,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -4394,7 +4390,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::setActivateAction([\"var1\":$var1])")
@@ -4411,7 +4407,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::setGeoFenceListener([])")
@@ -4427,7 +4423,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
                     println("fluttify-kotlin-callback: onGeoFenceCreateFinished([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
         
                     // convert to jsonable data
-                    val argvar1 = var1.map { it.apply { HEAP_AmapLocationFluttify[it.hashCode()] = it }.hashCode() }
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
                     val argvar2 = var2
                     val argvar3 = var3
         
@@ -4453,7 +4449,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence" to { registrar, args, methodResult ->
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as com.amap.api.location.DPoint
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.location.DPoint
             // jsonable arg
             val var2 = args["var2"] as Double
             // jsonable arg
@@ -4461,7 +4457,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addRoundGeoFence([\"var2\":$var2, \"var3\":$var3])")
@@ -4475,13 +4471,13 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         "com.amap.api.fence.GeoFenceManagerBase::addPolygonGeoFence" to { registrar, args, methodResult ->
             // args
             // list arg
-            val var1 = (args["var1"] as List<Int>).map { HEAP_AmapLocationFluttify[it] as com.amap.api.location.DPoint }
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.location.DPoint }
             // jsonable arg
             val var2 = args["var2"] as String
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addPolygonGeoFence([\"var2\":$var2])")
@@ -4499,7 +4495,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // jsonable arg
             val var2 = args["var2"] as String
             // ref arg
-            val var3 = HEAP_AmapLocationFluttify[args["var3"] as Int] as com.amap.api.location.DPoint
+            val var3 = HEAP[args["var3"] as Int] as com.amap.api.location.DPoint
             // jsonable arg
             val var4 = args["var4"] as Double
             // jsonable arg
@@ -4509,7 +4505,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addNearbyGeoFence([\"var1\":$var1, \"var2\":$var2, \"var4\":$var4, \"var5\":$var5, \"var6\":$var6])")
@@ -4535,7 +4531,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addKeywordGeoFence([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3, \"var4\":$var4, \"var5\":$var5])")
@@ -4555,7 +4551,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::addDistrictGeoFence([\"var1\":$var1, \"var2\":$var2])")
@@ -4572,7 +4568,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::removeGeoFence([])")
@@ -4589,7 +4585,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::getAllGeoFence([])")
@@ -4600,7 +4596,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 for (item in result) {
-                    HEAP_AmapLocationFluttify[item.hashCode()] = item
+                    HEAP[item.hashCode()] = item
                 }
                 methodResult.success(result.map { it.hashCode() })
             } else {
@@ -4616,7 +4612,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::setGeoFenceAble([\"var1\":$var1, \"var2\":$var2])")
@@ -4633,7 +4629,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::pauseGeoFence([])")
@@ -4650,7 +4646,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::resumeGeoFence([])")
@@ -4667,7 +4663,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.GeoFenceManagerBase
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFenceManagerBase
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.GeoFenceManagerBase@$refId::isPause([])")
@@ -4684,7 +4680,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getLatitude([])")
@@ -4702,7 +4698,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setLatitude([\"var1\":$var1])")
@@ -4719,7 +4715,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getLongitude([])")
@@ -4737,7 +4733,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setLongitude([\"var1\":$var1])")
@@ -4754,7 +4750,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getPoiId([])")
@@ -4772,7 +4768,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setPoiId([\"var1\":$var1])")
@@ -4789,7 +4785,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getPoiType([])")
@@ -4807,7 +4803,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setPoiType([\"var1\":$var1])")
@@ -4824,7 +4820,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getTypeCode([])")
@@ -4842,7 +4838,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setTypeCode([\"var1\":$var1])")
@@ -4859,7 +4855,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getAddress([])")
@@ -4877,7 +4873,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setAddress([\"var1\":$var1])")
@@ -4894,7 +4890,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getTel([])")
@@ -4912,7 +4908,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setTel([\"var1\":$var1])")
@@ -4929,7 +4925,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getProvince([])")
@@ -4947,7 +4943,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setProvince([\"var1\":$var1])")
@@ -4964,7 +4960,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getCity([])")
@@ -4982,7 +4978,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setCity([\"var1\":$var1])")
@@ -4999,7 +4995,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getAdname([])")
@@ -5016,7 +5012,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::getPoiName([])")
@@ -5034,7 +5030,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setPoiName([\"var1\":$var1])")
@@ -5052,7 +5048,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // ref
             val refId = args["refId"] as Int
-            val ref = HEAP_AmapLocationFluttify[refId] as com.amap.api.fence.PoiItem
+            val ref = HEAP[refId] as com.amap.api.fence.PoiItem
         
             // print log
             println("fluttify-kotlin: com.amap.api.fence.PoiItem@$refId::setAdname([\"var1\":$var1])")
@@ -5079,7 +5075,7 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
             // result
             if (result != null) {
                 val returnRefId = result.hashCode()
-                HEAP_AmapLocationFluttify[returnRefId] = result
+                HEAP[returnRefId] = result
         
                 methodResult.success(returnRefId)
             } else {
@@ -5095,10 +5091,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.autonavi.aps.amapapi.model.AMapLocationServer(var1)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5107,14 +5103,14 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as android.content.Context
+            val var1 = HEAP[args["var1"] as Int] as android.content.Context
         
             // create target object
             val obj = com.amap.api.location.AMapLocationClient(var1)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5126,10 +5122,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.DPoint()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5144,10 +5140,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.DPoint(var1, var3)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5156,14 +5152,14 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as android.content.Context
+            val var1 = HEAP[args["var1"] as Int] as android.content.Context
         
             // create target object
             val obj = com.amap.api.location.CoordinateConverter(var1)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5175,10 +5171,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.CoordUtil()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5190,10 +5186,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.UmidtokenInfo()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5206,10 +5202,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.AMapLocation(var1)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5218,14 +5214,14 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as android.location.Location
+            val var1 = HEAP[args["var1"] as Int] as android.location.Location
         
             // create target object
             val obj = com.amap.api.location.AMapLocation(var1)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5237,10 +5233,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.AMapLocationClientOption()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5252,10 +5248,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.location.AMapLocationQualityReport()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5267,10 +5263,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.fence.DistrictItem()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5279,14 +5275,14 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // args
             // ref arg
-            val var1 = HEAP_AmapLocationFluttify[args["var1"] as Int] as android.content.Context
+            val var1 = HEAP[args["var1"] as Int] as android.content.Context
         
             // create target object
             val obj = com.amap.api.fence.GeoFenceClient(var1)
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5298,10 +5294,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.fence.GeoFence()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         },
@@ -5313,10 +5309,10 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
         
             // create target object
             val obj = com.amap.api.fence.PoiItem()
-            HEAP_AmapLocationFluttify[obj.hashCode()] = obj
+            HEAP[obj.hashCode()] = obj
         
-            // print current HEAP_AmapLocationFluttify
-            Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
+            // print current HEAP
+            Log.d("ObjectFactory", "HEAP: $HEAP")
         
             methodResult.success(obj.hashCode())
         }
@@ -5324,89 +5320,6 @@ class AmapLocationFluttifyPlugin(private val registrar: Registrar): MethodChanne
 
     override fun onMethodCall(methodCall: MethodCall, methodResult: MethodChannel.Result) {
         val args = methodCall.arguments as? Map<String, Any> ?: mapOf()
-        when (methodCall.method) {
-            // get Application obejct
-            "ObjectFactory::getandroid_app_Application" -> {
-                methodResult.success(registrar.activity().application.apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode())
-            }
-            // get FlutterActivity object
-            "ObjectFactory::getandroid_app_Activity" -> {
-                methodResult.success(registrar.activity().apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode())
-            }
-            // create android.os.Bundle
-            "ObjectFactory::createandroid_os_Bundle" -> {
-                methodResult.success(Bundle().apply { HEAP_AmapLocationFluttify[hashCode()] = this }.hashCode())
-            }
-            // create bitmap object
-            "ObjectFactory::createandroid_graphics_Bitmap" -> {
-                val bitmapBytes = args["bitmapBytes"] as ByteArray
-                val bitmap = android.graphics.BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.size)
-
-                HEAP_AmapLocationFluttify[bitmap.hashCode()] = bitmap
-
-                methodResult.success(bitmap.hashCode())
-            }
-            // release an object
-            "ObjectFactory::release" -> {
-                Log.d("ObjectFactory", "释放对象: ${HEAP_AmapLocationFluttify[args["refId"] as Int]?.javaClass}@${args["refId"]}")
-
-                HEAP_AmapLocationFluttify.remove(args["refId"] as Int)
-
-                methodResult.success("success")
-
-                // print current HEAP_AmapLocationFluttify
-                Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
-            }
-            // clear objects in HEAP_AmapLocationFluttify
-            "ObjectFactory::clearHeap" -> {
-                Log.d("ObjectFactory", "CLEAR HEAP")
-
-                HEAP_AmapLocationFluttify.clear()
-                methodResult.success("success")
-
-                // print current HEAP_AmapLocationFluttify
-                Log.d("ObjectFactory", "HEAP_AmapLocationFluttify: $HEAP_AmapLocationFluttify")
-            }
-            // push an object to stack
-            "ObjectFactory::pushStack" -> {
-                val name = args["name"] as String
-                val refId = args["refId"] as Int
-
-                Log.d("ObjectFactory", "PUSH OBJECT: ${HEAP_AmapLocationFluttify[refId]?.javaClass}@${refId}")
-
-                HEAP_AmapLocationFluttify[refId]?.run { STACK_AmapLocationFluttify[name] = this }
-
-                methodResult.success("success")
-
-                // print current STACK_AmapLocationFluttify
-                Log.d("ObjectFactory", "STACK_AmapLocationFluttify: $STACK_AmapLocationFluttify")
-            }
-            // push a jsonable to stack
-            "ObjectFactory::pushStackJsonable" -> {
-                val name = args["name"] as String
-                val data = args["data"]
-
-                Log.d("ObjectFactory", "压入jsonable: ${data?.javaClass}@${data}")
-
-                STACK_AmapLocationFluttify[name] = data!!
-
-                methodResult.success("success")
-
-                // 打印当前STACK_AmapLocationFluttify
-                Log.d("ObjectFactory", "STACK_AmapLocationFluttify: $STACK_AmapLocationFluttify")
-            }
-            // clear STACK
-            "ObjectFactory::clearStack" -> {
-                STACK_AmapLocationFluttify.clear()
-
-                methodResult.success("success")
-
-                // print current STACK_AmapLocationFluttify
-                Log.d("ObjectFactory", "STACK_AmapLocationFluttify: $STACK_AmapLocationFluttify")
-            }
-            else -> {
-                handlerMap[methodCall.method]?.invoke(registrar, args, methodResult) ?: methodResult.notImplemented()
-            }
-        }
+        handlerMap[methodCall.method]?.invoke(registrar, args, methodResult) ?: methodResult.notImplemented()
     }
 }

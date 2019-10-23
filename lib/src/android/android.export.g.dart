@@ -1,4 +1,4 @@
-export 'ref.g.dart';
+export 'type_op.g.dart';
 export 'object_factory.g.dart';
 export 'com/loc/.g.dart';
 export 'com/autonavi/aps/amapapi/model/AMapLocationServer.g.dart';
@@ -25,3 +25,4 @@ export 'com/amap/api/fence/GeoFenceManagerBase.g.dart';
 export 'com/amap/api/fence/GeoFenceListener.g.dart';
 export 'com/amap/api/fence/GeoFence.g.dart';
 export '../utils.g.dart';
+export 'package:foundation_fluttify/foundation_fluttify.dart';

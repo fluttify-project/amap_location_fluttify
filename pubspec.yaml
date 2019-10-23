@@ -1,6 +1,6 @@
 name: amap_location_fluttify
-description: A new flutter plugin project.
-version: 0.2.1+38df15a
+description: An `Amap` location component, based on `fluttify` engine.
+version: 0.2.1+e0ef7a2
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_location_fluttify
 
@@ -10,7 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  amap_core_fluttify: ^0.0.2
+  foundation_fluttify: ^0.0.4
+  amap_core_fluttify: ^0.0.6
 
 dev_dependencies:
   flutter_test:

@@ -37,7 +37,8 @@ class AmapLocation {
   }) async {
     if (Platform.isAndroid) {
       // 获取上下文, 这里获取的是Application
-      final context = await ObjectFactory_Android.getandroid_app_Application();
+      final context =
+          await PlatformFactory_Android.getandroid_app_Application();
 
       // 创建定位客户端
       _androidClient ??= await ObjectFactory_Android
