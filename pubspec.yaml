@@ -1,6 +1,6 @@
 name: amap_location_fluttify
 description: An `Amap` location component, based on `fluttify` engine.
-version: 0.2.1+38df15a
+version: 0.2.1+e0ef7a2
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_location_fluttify
 
