@@ -54,8 +54,8 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationPoint()..refId = result);
-      return AMapLocationPoint()..refId = result;
+      kNativeObjectPool.add(AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify');
+      return AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   

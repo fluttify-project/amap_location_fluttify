@@ -472,8 +472,8 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = result);
-      return com_amap_api_fence_PoiItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = result..tag = 'amap_location_fluttify');
+      return com_amap_api_fence_PoiItem()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   

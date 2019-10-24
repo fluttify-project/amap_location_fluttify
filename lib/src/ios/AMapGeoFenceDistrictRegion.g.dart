@@ -13,8 +13,8 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion  {
   // generate getters
   Future<AMapLocationDistrictItem> get_districtItem() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem", {'refId': refId});
-    kNativeObjectPool.add(AMapLocationDistrictItem()..refId = result);
-    return AMapLocationDistrictItem()..refId = result;
+    kNativeObjectPool.add(AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify');
+    return AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify';
   }
   
 

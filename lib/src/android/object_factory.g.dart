@@ -15,7 +15,7 @@ class ObjectFactory_Android {
   
   static Future<com_autonavi_aps_amapapi_model_AMapLocationServer> createcom_autonavi_aps_amapapi_model_AMapLocationServer__String(String var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String', {"var1": var1});
-    final object = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = refId;
+    final object = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -23,7 +23,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_AMapLocationClient> createcom_amap_api_location_AMapLocationClient__android_content_Context(android_content_Context var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_location_AMapLocationClient()..refId = refId;
+    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -31,7 +31,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_DPoint> createcom_amap_api_location_DPoint__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__');
-    final object = com_amap_api_location_DPoint()..refId = refId;
+    final object = com_amap_api_location_DPoint()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -39,7 +39,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_DPoint> createcom_amap_api_location_DPoint__double__double(double var1, double var3) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__double__double', {"var1": var1, "var3": var3});
-    final object = com_amap_api_location_DPoint()..refId = refId;
+    final object = com_amap_api_location_DPoint()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -47,7 +47,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_CoordinateConverter> createcom_amap_api_location_CoordinateConverter__android_content_Context(android_content_Context var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_location_CoordinateConverter()..refId = refId;
+    final object = com_amap_api_location_CoordinateConverter()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -55,7 +55,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_CoordUtil> createcom_amap_api_location_CoordUtil__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__');
-    final object = com_amap_api_location_CoordUtil()..refId = refId;
+    final object = com_amap_api_location_CoordUtil()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -63,7 +63,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_UmidtokenInfo> createcom_amap_api_location_UmidtokenInfo__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_UmidtokenInfo__');
-    final object = com_amap_api_location_UmidtokenInfo()..refId = refId;
+    final object = com_amap_api_location_UmidtokenInfo()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -71,7 +71,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_AMapLocation> createcom_amap_api_location_AMapLocation__String(String var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
-    final object = com_amap_api_location_AMapLocation()..refId = refId;
+    final object = com_amap_api_location_AMapLocation()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -79,7 +79,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_AMapLocation> createcom_amap_api_location_AMapLocation__android_location_Location(android_location_Location var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1.refId});
-    final object = com_amap_api_location_AMapLocation()..refId = refId;
+    final object = com_amap_api_location_AMapLocation()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -87,7 +87,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_AMapLocationClientOption> createcom_amap_api_location_AMapLocationClientOption__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__');
-    final object = com_amap_api_location_AMapLocationClientOption()..refId = refId;
+    final object = com_amap_api_location_AMapLocationClientOption()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -95,7 +95,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_location_AMapLocationQualityReport> createcom_amap_api_location_AMapLocationQualityReport__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
-    final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId;
+    final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -103,7 +103,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_fence_DistrictItem> createcom_amap_api_fence_DistrictItem__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_fence_DistrictItem__');
-    final object = com_amap_api_fence_DistrictItem()..refId = refId;
+    final object = com_amap_api_fence_DistrictItem()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -111,7 +111,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_fence_GeoFenceClient> createcom_amap_api_fence_GeoFenceClient__android_content_Context(android_content_Context var1) async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_fence_GeoFenceClient()..refId = refId;
+    final object = com_amap_api_fence_GeoFenceClient()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -119,7 +119,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_fence_GeoFence> createcom_amap_api_fence_GeoFence__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFence__');
-    final object = com_amap_api_fence_GeoFence()..refId = refId;
+    final object = com_amap_api_fence_GeoFence()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -127,7 +127,7 @@ class ObjectFactory_Android {
   
   static Future<com_amap_api_fence_PoiItem> createcom_amap_api_fence_PoiItem__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_fence_PoiItem__');
-    final object = com_amap_api_fence_PoiItem()..refId = refId;
+    final object = com_amap_api_fence_PoiItem()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;

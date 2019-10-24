@@ -192,8 +192,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = result);
-      return com_amap_api_fence_PoiItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = result..tag = 'amap_location_fluttify');
+      return com_amap_api_fence_PoiItem()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   
@@ -232,8 +232,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_fence_DistrictItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_fence_DistrictItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_fence_DistrictItem()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_fence_DistrictItem()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -272,8 +272,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_location_DPoint()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_location_DPoint()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_location_DPoint()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_location_DPoint()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -512,8 +512,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = result);
-      return com_amap_api_location_DPoint()..refId = result;
+      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify');
+      return com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   
@@ -692,8 +692,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = result);
-      return com_amap_api_location_AMapLocation()..refId = result;
+      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = result..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocation()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   

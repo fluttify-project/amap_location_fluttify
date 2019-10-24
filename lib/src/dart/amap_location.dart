@@ -132,9 +132,12 @@ class AmapLocation {
 
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
   static void dispose() {
+    final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
     kNativeObjectPool
-      ..forEach(release)
-      ..clear();
+      ..where(isCurrentPlugin).forEach(release)
+      ..removeWhere(isCurrentPlugin);
+    if (_androidClient != null) release(_androidClient);
+    if (_iosClient != null) release(_iosClient);
   }
 }
 

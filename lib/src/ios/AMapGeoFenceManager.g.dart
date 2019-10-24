@@ -235,8 +235,8 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -255,8 +255,8 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -275,8 +275,8 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -295,8 +295,8 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -335,8 +335,8 @@ class AMapGeoFenceManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => NSObject()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList());
+      return (result as List).cast<int>().map((it) => NSObject()..refId = it..tag = 'amap_location_fluttify').toList();
     }
   }
   

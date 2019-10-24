@@ -37,8 +37,8 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   
   Future<CLLocation> get_currentLocation() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation", {'refId': refId});
-    kNativeObjectPool.add(CLLocation()..refId = result);
-    return CLLocation()..refId = result;
+    kNativeObjectPool.add(CLLocation()..refId = result..tag = 'amap_location_fluttify');
+    return CLLocation()..refId = result..tag = 'amap_location_fluttify';
   }
   
 
