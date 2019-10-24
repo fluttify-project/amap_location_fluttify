@@ -43,8 +43,8 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
   
   Future<AMapLocationPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_location", {'refId': refId});
-    kNativeObjectPool.add(AMapLocationPoint()..refId = result);
-    return AMapLocationPoint()..refId = result;
+    kNativeObjectPool.add(AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify');
+    return AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify';
   }
   
   Future<String> get_tel() async {

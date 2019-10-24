@@ -14,7 +14,7 @@ class ObjectFactory_iOS {
 
   static Future<AMapGeoFenceManager> createAMapGeoFenceManager() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceManager');
-    final object = AMapGeoFenceManager()..refId = refId;
+    final object = AMapGeoFenceManager()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -22,7 +22,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationRegion> createAMapLocationRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationRegion');
-    final object = AMapLocationRegion()..refId = refId;
+    final object = AMapLocationRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,7 +30,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationCircleRegion> createAMapLocationCircleRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationCircleRegion');
-    final object = AMapLocationCircleRegion()..refId = refId;
+    final object = AMapLocationCircleRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -38,7 +38,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationPolygonRegion> createAMapLocationPolygonRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPolygonRegion');
-    final object = AMapLocationPolygonRegion()..refId = refId;
+    final object = AMapLocationPolygonRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -46,7 +46,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoFenceRegion> createAMapGeoFenceRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
-    final object = AMapGeoFenceRegion()..refId = refId;
+    final object = AMapGeoFenceRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -54,7 +54,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoFenceCircleRegion> createAMapGeoFenceCircleRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceCircleRegion');
-    final object = AMapGeoFenceCircleRegion()..refId = refId;
+    final object = AMapGeoFenceCircleRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -62,7 +62,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoFencePolygonRegion> createAMapGeoFencePolygonRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFencePolygonRegion');
-    final object = AMapGeoFencePolygonRegion()..refId = refId;
+    final object = AMapGeoFencePolygonRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -70,7 +70,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoFencePOIRegion> createAMapGeoFencePOIRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion');
-    final object = AMapGeoFencePOIRegion()..refId = refId;
+    final object = AMapGeoFencePOIRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -78,7 +78,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoFenceDistrictRegion> createAMapGeoFenceDistrictRegion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoFenceDistrictRegion');
-    final object = AMapGeoFenceDistrictRegion()..refId = refId;
+    final object = AMapGeoFenceDistrictRegion()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -86,7 +86,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationManager> createAMapLocationManager() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationManager');
-    final object = AMapLocationManager()..refId = refId;
+    final object = AMapLocationManager()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -94,7 +94,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationReGeocode> createAMapLocationReGeocode() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationReGeocode');
-    final object = AMapLocationReGeocode()..refId = refId;
+    final object = AMapLocationReGeocode()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -102,7 +102,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationPoint> createAMapLocationPoint() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPoint');
-    final object = AMapLocationPoint()..refId = refId;
+    final object = AMapLocationPoint()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -110,7 +110,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationPOIItem> createAMapLocationPOIItem() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationPOIItem');
-    final object = AMapLocationPOIItem()..refId = refId;
+    final object = AMapLocationPOIItem()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -118,7 +118,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationDistrictItem> createAMapLocationDistrictItem() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationDistrictItem');
-    final object = AMapLocationDistrictItem()..refId = refId;
+    final object = AMapLocationDistrictItem()..refId = refId..tag = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;

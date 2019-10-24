@@ -1192,8 +1192,8 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = result);
-      return com_amap_api_location_AMapLocation()..refId = result;
+      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = result..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocation()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   
@@ -1212,8 +1212,8 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationQualityReport()..refId = result);
-      return com_amap_api_location_AMapLocationQualityReport()..refId = result;
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationQualityReport()..refId = result..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationQualityReport()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   

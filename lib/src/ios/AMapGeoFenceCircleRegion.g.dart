@@ -13,8 +13,8 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion  {
   // generate getters
   Future<CLLocationCoordinate2D> get_center() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_center", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify';
   }
   
   Future<double> get_radius() async {

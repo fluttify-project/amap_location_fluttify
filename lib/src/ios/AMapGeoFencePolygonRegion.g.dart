@@ -13,8 +13,8 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion  {
   // generate getters
   Future<CLLocationCoordinate2D> get_coordinates() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_coordinates", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify';
   }
   
   Future<int> get_count() async {

@@ -60,8 +60,8 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationRegion()..refId = result);
-      return AMapLocationRegion()..refId = result;
+      kNativeObjectPool.add(AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify');
+      return AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify';
     }
   }
   
