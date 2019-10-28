@@ -9,7 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class ObjectFactory_Android {
+class AmapLocationFluttifyFactoryAndroid {
   static final _channel = MethodChannel('me.yohom/amap_location_fluttify');
 
   

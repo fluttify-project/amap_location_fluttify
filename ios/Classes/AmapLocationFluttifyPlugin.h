@@ -4,6 +4,13 @@
 
 #import <Flutter/Flutter.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapLocationKit/AMapGeoFenceError.h>
+#import <AMapLocationKit/AMapGeoFenceManager.h>
+#import <AMapLocationKit/AMapLocationRegionObj.h>
+#import <AMapLocationKit/AMapLocationVersion.h>
+#import <AMapLocationKit/AMapGeoFenceRegionObj.h>
+#import <AMapLocationKit/AMapLocationManager.h>
+#import <AMapLocationKit/AMapLocationCommonObj.h>
 
 @interface AmapLocationFluttifyPlugin : NSObject<AMapGeoFenceManagerDelegate, AMapLocationManagerDelegate, FlutterPlugin>
 

@@ -41,7 +41,7 @@ class AmapLocation {
           await PlatformFactory_Android.getandroid_app_Application();
 
       // 创建定位客户端
-      _androidClient ??= await ObjectFactory_Android
+      _androidClient ??= await AmapLocationFluttifyFactoryAndroid
           .createcom_amap_api_location_AMapLocationClient__android_content_Context(
               context);
 
@@ -50,7 +50,7 @@ class AmapLocation {
           .setLocationListener(_AndroidLocationDelegate(locationChanged));
 
       // 创建选项
-      final options = await ObjectFactory_Android
+      final options = await AmapLocationFluttifyFactoryAndroid
           .createcom_amap_api_location_AMapLocationClientOption__();
       // 设置单次定位
       await options.setOnceLocation(once);
@@ -88,7 +88,7 @@ class AmapLocation {
       // 开始定位
       await _androidClient.startLocation();
     } else if (Platform.isIOS) {
-      _iosClient ??= await ObjectFactory_iOS.createAMapLocationManager();
+      _iosClient ??= await AmapLocationFluttifyFactoryIOS.createAMapLocationManager();
 
       // 设置回调
       _iosClient.set_delegate(_IOSLocationDelegate(locationChanged));
