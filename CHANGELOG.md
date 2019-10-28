@@ -1,3 +1,6 @@
+## 0.2.4
+- fix: 导出enums.dart; 删除utils.g.dart
+
 ## 0.2.3
 - fix: 高德的key不应该放在library模块里
 
