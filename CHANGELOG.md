@@ -1,3 +1,7 @@
+## 0.2.5
+- enhancement: 经纬度统一使用LatLng
+- enhancement: 调整设置回调的位置
+
 ## 0.2.4
 - fix: 导出enums.dart; 删除utils.g.dart
 
