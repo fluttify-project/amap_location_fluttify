@@ -1,3 +1,4 @@
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 
@@ -19,7 +20,22 @@ class Location {
     );
   }
 
+  /// 经纬度
+  Future<LatLng> get latLng {
+    return platform(
+      android: (pool) async => LatLng(
+        await _androidModel.getLatitude(),
+        await _androidModel.getLongitude(),
+      ),
+      ios: (pool) async {
+        final coordinate = await _iosLocation.coordinate;
+        return LatLng(await coordinate.latitude, await coordinate.longitude);
+      },
+    );
+  }
+
   /// 纬度
+  @Deprecated('使用[latLng]代替')
   Future<double> get latitude {
     return platform(
       android: (pool) => _androidModel.getLatitude(),
@@ -31,6 +47,7 @@ class Location {
   }
 
   /// 经度
+  @Deprecated('使用[latLng]代替')
   Future<double> get longitude {
     return platform(
       android: (pool) => _androidModel.getLongitude(),
