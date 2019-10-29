@@ -90,9 +90,6 @@ class AmapLocation {
     } else if (Platform.isIOS) {
       _iosClient ??= await AmapLocationFluttifyFactoryIOS.createAMapLocationManager();
 
-      // 设置回调
-      _iosClient.set_delegate(_IOSLocationDelegate(locationChanged));
-
       // 设置定位模式
       if (mode != null)
         switch (mode) {
@@ -116,6 +113,8 @@ class AmapLocation {
           },
         );
       } else {
+        // 设置回调
+        await _iosClient.set_delegate(_IOSLocationDelegate(locationChanged));
         await _iosClient.set_locatingWithReGeocode(true);
         await _iosClient.startUpdatingLocation();
       }
