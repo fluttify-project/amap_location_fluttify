@@ -52,21 +52,21 @@ class AMapGeoFenceManager extends NSObject  {
             print('fluttify-dart-callback: amapGeoFenceManagerDoRequireLocationAuth([])');
         
             // handle the native call
-            delegate?.amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager()..refId = (args['manager']), CLLocationManager()..refId = (args['locationManager']));
+            delegate?.amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocationManager()..refId = (args['locationManager'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror':
             // print log
             print('fluttify-dart-callback: amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror([\'customID\':$args[customID]])');
         
             // handle the native call
-            delegate?.amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror(AMapGeoFenceManager()..refId = (args['manager']), (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it).toList(), args['customID'], NSError()..refId = (args['error']));
+            delegate?.amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror(AMapGeoFenceManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag = 'amap_location_fluttify').toList(), args['customID'], NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror':
             // print log
             print('fluttify-dart-callback: amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror([\'customID\':$args[customID]])');
         
             // handle the native call
-            delegate?.amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror(AMapGeoFenceManager()..refId = (args['manager']), AMapGeoFenceRegion()..refId = (args['region']), args['customID'], NSError()..refId = (args['error']));
+            delegate?.amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror(AMapGeoFenceManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', AMapGeoFenceRegion()..refId = (args['region'])..tag = 'amap_location_fluttify', args['customID'], NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
             break;
           default:
             break;

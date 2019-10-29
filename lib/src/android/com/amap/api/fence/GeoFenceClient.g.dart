@@ -58,7 +58,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
               print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':$args[var2], \'var3\':$args[var3]])');
         
               // handle the native call
-              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it).toList(), args['var2'], args['var3']);
+              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it..tag = 'amap_location_fluttify').toList(), args['var2'], args['var3']);
               break;
             default:
               break;
