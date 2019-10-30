@@ -411,7 +411,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
           NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
-          for (int i = 0; i < regions.count; i++) {
+          for (int i = 0; i < regionsRefArray.count; i++) {
               AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP[[regionsRefArray objectAtIndex:i]];
               [regions addObject:item];
           }
@@ -2800,6 +2800,51 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSLog(@"HEAP: %@", HEAP);
       },
       
+      @"AMapLocationCoordinateConvert::AMapLocationCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // struct arg
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+          CLLocationCoordinate2D coordinate;
+          [coordinateValue getValue:&coordinate];
+          // enum arg
+          AMapLocationCoordinateType type = (AMapLocationCoordinateType) [args[@"type"] integerValue];
+      
+          // ref
+      
+      
+          // print log
+          NSLog(@"fluttify-objc: AMapLocationCoordinateConvert::AMapLocationCoordinateConvert(暂未实现参数打印)");
+      
+          // invoke native method
+          CLLocationCoordinate2D result = AMapLocationCoordinateConvert(coordinate, type);
+      
+          // result
+          // 返回值: 结构体
+          NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          HEAP[@(resultValue.hash)] = resultValue;
+      
+          methodResult(@(resultValue.hash));
+      },
+      @"AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // struct arg
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+          CLLocationCoordinate2D coordinate;
+          [coordinateValue getValue:&coordinate];
+      
+          // ref
+      
+      
+          // print log
+          NSLog(@"fluttify-objc: AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate(暂未实现参数打印)");
+      
+          // invoke native method
+          BOOL result = AMapLocationDataAvailableForCoordinate(coordinate);
+      
+          // result
+          // 返回值: Value
+          methodResult(@(result));
+      },
     };
   }
 
