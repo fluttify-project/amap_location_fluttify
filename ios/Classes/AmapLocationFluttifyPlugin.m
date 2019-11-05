@@ -34,11 +34,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref addCircleRegionForMonitoringWithCenter : center radius: radius customID: customID];
@@ -65,11 +64,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref addPolygonRegionForMonitoringWithCoordinates : coordinates count: count customID: customID];
@@ -92,11 +90,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref addKeywordPOIRegionForMonitoringWithKeyword : keyword POIType: type city: city size: size customID: customID];
@@ -123,11 +120,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref addAroundPOIRegionForMonitoringWithLocationPoint : locationPoint aroundRadius: aroundRadius keyword: keyword POIType: type size: size customID: customID];
@@ -144,11 +140,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref addDistrictRegionForMonitoringWithDistrictName : districtName customID: customID];
@@ -163,11 +158,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           AMapGeoFenceRegionActiveStatus result = [ref statusWithGeoFenceRegion: region];
@@ -182,11 +176,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           NSArray* result = [ref geoFenceRegionsWithCustomID: customID];
@@ -208,11 +201,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           NSArray* result = [ref monitoringGeoFenceRegionsWithCustomID: customID];
@@ -234,11 +226,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           NSArray* result = [ref pausedGeoFenceRegionsWithCustomID: customID];
@@ -260,11 +251,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           NSArray* result = [ref pauseGeoFenceRegionsWithCustomID: customID];
@@ -286,11 +276,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref pauseTheGeoFenceRegion: region];
@@ -305,11 +294,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           NSArray* result = [ref startGeoFenceRegionsWithCustomID: customID];
@@ -331,11 +319,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref startTheGeoFenceRegion: region];
@@ -350,11 +337,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref removeTheGeoFenceRegion : region];
@@ -369,11 +355,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* customID = (NSString*) args[@"customID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref removeGeoFenceRegionsWithCustomID : customID];
@@ -387,11 +372,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[@(refId)];
+          AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref removeAllGeoFenceRegions ];
@@ -408,11 +392,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           CLLocationManager* locationManager = (CLLocationManager*) HEAP[@([args[@"locationManager"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[@(refId)];
+          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapGeoFenceManager : manager doRequireLocationAuth: locationManager];
@@ -428,7 +411,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
           NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
-          for (int i = 0; i < regions.count; i++) {
+          for (int i = 0; i < regionsRefArray.count; i++) {
               AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP[[regionsRefArray objectAtIndex:i]];
               [regions addObject:item];
           }
@@ -438,11 +421,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[@(refId)];
+          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapGeoFenceManager : manager didAddRegionForMonitoringFinished: regions customID: customID error: error];
@@ -463,11 +445,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[@(refId)];
+          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapGeoFenceManager : manager didGeoFencesStatusChangedForRegion: region customID: customID error: error];
@@ -482,11 +463,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* identifier = (NSString*) args[@"identifier"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[@(refId)];
+          AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           AMapLocationRegion* result = [ref initWithIdentifier: identifier];
@@ -504,11 +484,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           [coordinateValue getValue:&coordinate];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[@(refId)];
+          AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref containsCoordinate: coordinate];
@@ -529,11 +508,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* identifier = (NSString*) args[@"identifier"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[@(refId)];
+          AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           AMapLocationCircleRegion* result = [ref initWithCenter: center radius: radius identifier: identifier];
@@ -561,11 +539,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* identifier = (NSString*) args[@"identifier"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[@(refId)];
+          AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           AMapLocationPolygonRegion* result = [ref initWithCoordinates: coordinates count: count identifier: identifier];
@@ -597,11 +574,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationManager* ref = (AMapLocationManager*) HEAP[@(refId)];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref startUpdatingHeading ];
@@ -615,11 +591,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationManager* ref = (AMapLocationManager*) HEAP[@(refId)];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref stopUpdatingHeading ];
@@ -633,11 +608,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationManager* ref = (AMapLocationManager*) HEAP[@(refId)];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref dismissHeadingCalibrationDisplay ];
@@ -653,11 +627,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationManager* ref = (AMapLocationManager*) HEAP[@(refId)];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation* location, AMapLocationReGeocode* regeocode, NSError* error) {
@@ -691,11 +664,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationManager* ref = (AMapLocationManager*) HEAP[@(refId)];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref startUpdatingLocation ];
@@ -709,11 +681,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationManager* ref = (AMapLocationManager*) HEAP[@(refId)];
+          AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref stopUpdatingLocation ];
@@ -730,11 +701,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           CLLocationManager* locationManager = (CLLocationManager*) HEAP[@([args[@"locationManager"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapLocationManager : manager doRequireLocationAuth: locationManager];
@@ -751,11 +721,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapLocationManager : manager didFailWithError: error];
@@ -772,11 +741,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapLocationManager : manager didUpdateLocation: location];
@@ -795,11 +763,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationReGeocode* reGeocode = (AMapLocationReGeocode*) HEAP[@([args[@"reGeocode"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapLocationManager : manager didUpdateLocation: location reGeocode: reGeocode];
@@ -816,11 +783,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           CLAuthorizationStatus status = (CLAuthorizationStatus) [args[@"status"] integerValue];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapLocationManager : manager didChangeAuthorizationStatus: status];
@@ -835,11 +801,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManagerShouldDisplayHeadingCalibration(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManagerShouldDisplayHeadingCalibration(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref amapLocationManagerShouldDisplayHeadingCalibration: manager];
@@ -856,11 +821,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           CLHeading* newHeading = (CLHeading*) HEAP[@([args[@"newHeading"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[@(refId)];
+          id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref amapLocationManager : manager didUpdateHeading: newHeading];
@@ -2690,7 +2654,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2701,7 +2667,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2712,7 +2680,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2723,7 +2693,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2734,7 +2706,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2745,7 +2719,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2756,7 +2732,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2767,7 +2745,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2778,7 +2758,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2789,7 +2771,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2800,7 +2784,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2811,7 +2797,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2822,7 +2810,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2833,9 +2823,56 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
+      @"AMapLocationCoordinateConvert::AMapLocationCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // struct arg
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+          CLLocationCoordinate2D coordinate;
+          [coordinateValue getValue:&coordinate];
+          // enum arg
+          AMapLocationCoordinateType type = (AMapLocationCoordinateType) [args[@"type"] integerValue];
+      
+          // ref
+      
+      
+          // print log
+          NSLog(@"fluttify-objc: AMapLocationCoordinateConvert::AMapLocationCoordinateConvert(暂未实现参数打印)");
+      
+          // invoke native method
+          CLLocationCoordinate2D result = AMapLocationCoordinateConvert(coordinate, type);
+      
+          // result
+          // 返回值: 结构体
+          NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          HEAP[@(resultValue.hash)] = resultValue;
+      
+          methodResult(@(resultValue.hash));
+      },
+      @"AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // struct arg
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+          CLLocationCoordinate2D coordinate;
+          [coordinateValue getValue:&coordinate];
+      
+          // ref
+      
+      
+          // print log
+          NSLog(@"fluttify-objc: AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate(暂未实现参数打印)");
+      
+          // invoke native method
+          BOOL result = AMapLocationDataAvailableForCoordinate(coordinate);
+      
+          // result
+          // 返回值: Value
+          methodResult(@(result));
+      },
     };
   }
 

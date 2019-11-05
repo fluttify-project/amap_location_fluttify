@@ -18,13 +18,19 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   @mustCallSuper
   Future<void> onCreate() {
   
-    debugPrint('onCreate::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onCreate::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onDestroy() {
   
-    debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

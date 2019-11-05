@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -79,52 +80,66 @@ class AMapLocationManager extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerDoRequireLocationAuth([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerDoRequireLocationAuth([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerDoRequireLocationAuth(AMapLocationManager()..refId = (args['manager']), CLLocationManager()..refId = (args['locationManager']));
+            delegate?.amapLocationManagerDoRequireLocationAuth(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocationManager()..refId = (args['locationManager'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidFailWithError':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerDidFailWithError([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerDidFailWithError([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerDidFailWithError(AMapLocationManager()..refId = (args['manager']), NSError()..refId = (args['error']));
+            delegate?.amapLocationManagerDidFailWithError(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerDidUpdateLocation([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerDidUpdateLocation([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerDidUpdateLocation(AMapLocationManager()..refId = (args['manager']), CLLocation()..refId = (args['location']));
+            delegate?.amapLocationManagerDidUpdateLocation(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocation()..refId = (args['location'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerDidUpdateLocationreGeocode([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerDidUpdateLocationreGeocode([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerDidUpdateLocationreGeocode(AMapLocationManager()..refId = (args['manager']), CLLocation()..refId = (args['location']), AMapLocationReGeocode()..refId = (args['reGeocode']));
+            delegate?.amapLocationManagerDidUpdateLocationreGeocode(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocation()..refId = (args['location'])..tag = 'amap_location_fluttify', AMapLocationReGeocode()..refId = (args['reGeocode'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerDidChangeAuthorizationStatus([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerDidChangeAuthorizationStatus([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager()..refId = (args['manager']), CLAuthorizationStatus.values[(args['status'])]);
+            delegate?.amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLAuthorizationStatus.values[(args['status'])]);
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager']));
+            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading':
             // print log
-            print('fluttify-dart-callback: amapLocationManagerDidUpdateHeading([])');
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: amapLocationManagerDidUpdateHeading([])');
+            }
         
             // handle the native call
-            delegate?.amapLocationManagerDidUpdateHeading(AMapLocationManager()..refId = (args['manager']), CLHeading()..refId = (args['newHeading']));
+            delegate?.amapLocationManagerDidUpdateHeading(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLHeading()..refId = (args['newHeading'])..tag = 'amap_location_fluttify');
             break;
           default:
             break;
@@ -190,7 +205,9 @@ class AMapLocationManager extends NSObject  {
   // generate methods
   static Future<bool> headingAvailable() async {
     // print log
-    print('fluttify-dart: AMapLocationManager::headingAvailable([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager::headingAvailable([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::headingAvailable', );
@@ -210,7 +227,9 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> startUpdatingHeading() async {
     // print log
-    print('fluttify-dart: AMapLocationManager@$refId::startUpdatingHeading([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager@$refId::startUpdatingHeading([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::startUpdatingHeading', {"refId": refId});
@@ -230,7 +249,9 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> stopUpdatingHeading() async {
     // print log
-    print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingHeading([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingHeading([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::stopUpdatingHeading', {"refId": refId});
@@ -250,7 +271,9 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> dismissHeadingCalibrationDisplay() async {
     // print log
-    print('fluttify-dart: AMapLocationManager@$refId::dismissHeadingCalibrationDisplay([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager@$refId::dismissHeadingCalibrationDisplay([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay', {"refId": refId});
@@ -270,7 +293,9 @@ class AMapLocationManager extends NSObject  {
   
   Future<bool> requestLocationWithReGeocodeCompletionBlock(bool withReGeocode, void completionBlock(CLLocation location, AMapLocationReGeocode regeocode, NSError error)) async {
     // print log
-    print('fluttify-dart: AMapLocationManager@$refId::requestLocationWithReGeocode([\'withReGeocode\':$withReGeocode])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager@$refId::requestLocationWithReGeocode([\'withReGeocode\':$withReGeocode])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::requestLocationWithReGeocodeCompletionBlock', {"withReGeocode": withReGeocode, "refId": refId});
@@ -286,10 +311,12 @@ class AMapLocationManager extends NSObject  {
           switch (methodCall.method) {
             case 'Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock':
               // print log
+              if (!kReleaseMode) {
         
+              }
         
               // handle the native call
-              completionBlock(CLLocation()..refId = (args['location']), AMapLocationReGeocode()..refId = (args['regeocode']), NSError()..refId = (args['error']));
+              completionBlock(CLLocation()..refId = (args['location'])..tag = 'amap_location_fluttify', AMapLocationReGeocode()..refId = (args['regeocode'])..tag = 'amap_location_fluttify', NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
               break;
             default:
               break;
@@ -307,7 +334,9 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> startUpdatingLocation() async {
     // print log
-    print('fluttify-dart: AMapLocationManager@$refId::startUpdatingLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager@$refId::startUpdatingLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::startUpdatingLocation', {"refId": refId});
@@ -327,7 +356,9 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> stopUpdatingLocation() async {
     // print log
-    print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::stopUpdatingLocation', {"refId": refId});

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   // generate methods
   static Future<int> convertToGcj(List<double> var0, List<double> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.location.CoordUtil::convertToGcj([\'var0\':$var0, \'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.location.CoordUtil::convertToGcj([\'var0\':$var0, \'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::convertToGcj', {"var0": var0, "var1": var1});
@@ -39,7 +42,9 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   
   static Future<bool> isLoadedSo() async {
     // print log
-    print('fluttify-dart: com.amap.api.location.CoordUtil::isLoadedSo([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.location.CoordUtil::isLoadedSo([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo', );
@@ -59,7 +64,9 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   
   static Future<void> setLoadedSo(bool var0) async {
     // print log
-    print('fluttify-dart: com.amap.api.location.CoordUtil::setLoadedSo([\'var0\':$var0])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.location.CoordUtil::setLoadedSo([\'var0\':$var0])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo', {"var0": var0});

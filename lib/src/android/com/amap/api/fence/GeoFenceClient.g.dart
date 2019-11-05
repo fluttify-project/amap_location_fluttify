@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   // generate methods
   Future<void> setActivateAction(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setActivateAction([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setActivateAction([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::setActivateAction', {"var1": var1, "refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::setGeoFenceListener', {"refId": refId});
@@ -55,10 +60,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
               // print log
-              print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':$args[var2], \'var3\':$args[var3]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':$args[var2], \'var3\':$args[var3]])');
+              }
         
               // handle the native call
-              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it).toList(), args['var2'], args['var3']);
+              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it..tag = 'amap_location_fluttify').toList(), args['var2'], args['var3']);
               break;
             default:
               break;
@@ -76,7 +83,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<void> addGeoFence(com_amap_api_location_DPoint var1, double var2, String var3) async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2, \'var3\':$var3])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2, \'var3\':$var3])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::addGeoFence', {"var1": var1.refId, "var2": var2, "var3": var3, "refId": refId});
@@ -96,7 +105,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<void> removeGeoFence() async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::removeGeoFence', {"refId": refId});
@@ -116,7 +127,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::getAllGeoFence', {"refId": refId});
@@ -136,7 +149,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<void> setGeoFenceAble(String var1, bool var2) async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceAble([\'var1\':$var1, \'var2\':$var2])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceAble([\'var1\':$var1, \'var2\':$var2])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::setGeoFenceAble', {"var1": var1, "var2": var2, "refId": refId});
@@ -156,7 +171,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<void> pauseGeoFence() async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::pauseGeoFence([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::pauseGeoFence([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::pauseGeoFence', {"refId": refId});
@@ -176,7 +193,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<void> resumeGeoFence() async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::resumeGeoFence([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::resumeGeoFence([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::resumeGeoFence', {"refId": refId});
@@ -196,7 +215,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   Future<bool> isPause() async {
     // print log
-    print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::isPause([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::isPause([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::isPause', {"refId": refId});

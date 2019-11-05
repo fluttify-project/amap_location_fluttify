@@ -55,6 +55,14 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
                 }
               },
             ),
+            RaisedButton(
+              child: Text('停止定位'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  await AmapLocation.stopLocation();
+                }
+              },
+            ),
             if (_location != null)
               FutureBuilder<String>(
                 initialData: '',
