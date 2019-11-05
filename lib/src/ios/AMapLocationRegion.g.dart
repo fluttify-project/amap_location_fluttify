@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -47,7 +48,9 @@ class AMapLocationRegion extends NSObject with NSCopying {
   // generate methods
   Future<AMapLocationRegion> initWithIdentifier(String identifier) async {
     // print log
-    print('fluttify-dart: AMapLocationRegion@$refId::initWithIdentifier([\'identifier\':$identifier])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationRegion@$refId::initWithIdentifier([\'identifier\':$identifier])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::initWithIdentifier', {"identifier": identifier, "refId": refId});
@@ -67,7 +70,9 @@ class AMapLocationRegion extends NSObject with NSCopying {
   
   Future<bool> containsCoordinate(CLLocationCoordinate2D coordinate) async {
     // print log
-    print('fluttify-dart: AMapLocationRegion@$refId::containsCoordinate([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapLocationRegion@$refId::containsCoordinate([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate.refId, "refId": refId});

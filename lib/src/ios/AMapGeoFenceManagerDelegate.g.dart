@@ -19,7 +19,10 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
   Future<void> amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(locationManager);
-    debugPrint('amapGeoFenceManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('amapGeoFenceManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
@@ -27,7 +30,10 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.addAll(regions);
     kNativeObjectPool.add(error);
-    debugPrint('amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
@@ -35,7 +41,10 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(region);
     kNativeObjectPool.add(error);
-    debugPrint('amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

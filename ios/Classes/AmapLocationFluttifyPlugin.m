@@ -2654,7 +2654,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2665,7 +2667,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2676,7 +2680,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2687,7 +2693,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2698,7 +2706,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2709,7 +2719,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2720,7 +2732,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2731,7 +2745,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2742,7 +2758,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2753,7 +2771,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2764,7 +2784,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2775,7 +2797,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2786,7 +2810,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2797,7 +2823,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"AMapLocationCoordinateConvert::AMapLocationCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {

@@ -18,67 +18,100 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   @mustCallSuper
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setLocationOption::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setLocationOption::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setLocationListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setLocationListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> startLocation() {
   
-    debugPrint('startLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('startLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> stopLocation() {
   
-    debugPrint('stopLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('stopLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() {
   
-    debugPrint('getLastKnownLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getLastKnownLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> startAssistantLocation() {
   
-    debugPrint('startAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('startAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> stopAssistantLocation() {
   
-    debugPrint('stopAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('stopAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<bool> isStarted() {
   
-    debugPrint('isStarted::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('isStarted::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('unRegisterLocationListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('unRegisterLocationListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onDestroy() {
   
-    debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> disableBackgroundLocation(bool var1) {
   
-    debugPrint('disableBackgroundLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('disableBackgroundLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }
