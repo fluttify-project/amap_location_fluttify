@@ -88,7 +88,8 @@ class AmapLocation {
       // 开始定位
       await _androidClient.startLocation();
     } else if (Platform.isIOS) {
-      _iosClient ??= await AmapLocationFluttifyFactoryIOS.createAMapLocationManager();
+      _iosClient ??=
+          await AmapLocationFluttifyFactoryIOS.createAMapLocationManager();
 
       // 设置定位模式
       if (mode != null)
@@ -135,8 +136,12 @@ class AmapLocation {
     kNativeObjectPool
       ..where(isCurrentPlugin).forEach(release)
       ..removeWhere(isCurrentPlugin);
+
     if (_androidClient != null) release(_androidClient);
     if (_iosClient != null) release(_iosClient);
+
+    _androidClient = null;
+    _iosClient = null;
   }
 }
 
