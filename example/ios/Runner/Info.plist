@@ -43,7 +43,9 @@
 	<false/>
 	<key>io.flutter.embedded_views_preview</key>
 	<string>YES</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>需要定位</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>需要后台定位</string>
 </dict>
 </plist>
