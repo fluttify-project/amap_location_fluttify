@@ -1,3 +1,6 @@
+## 0.2.6
+- fix: dispose时，置空_androidClient和_iosClient，防止在页面级别的State中释放了client之后，重新定位时，client不为空而没有去重新创建原生client导致的原生client为空。
+
 ## 0.2.5
 - enhancement: 经纬度统一使用LatLng
 - enhancement: 调整设置回调的位置
