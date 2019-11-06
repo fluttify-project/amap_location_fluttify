@@ -19,11 +19,12 @@ import 'package:amap_location_fluttify/amap_location_fluttify.dart';
 
 使用:
 ```dart 
+/// !注意: 只要是返回Future的方法, 一律使用`await`修饰, 确保当前方法执行完成后再执行下一行, 在不能使用`await`修饰的环境下, 在`then`方法中执行下一步.
 /// 初始化 iOS在init方法中设置, android需要去AndroidManifest.xml里去设置, 详见 https://lbs.amap.com/api/android-sdk/gettingstarted
 await AmapCore.init('ios key');
 
 if (await requestPermission()) {
-  AmapLocation.startLocation(
+  await AmapLocation.startLocation(
     once: true,
     locationChanged: (location) {
       _location = location;
