@@ -1,3 +1,7 @@
+## 0.2.7
+- doc: 增加`await`的说明
+- feat: 增加ios端requireAlwaysAuth的处理
+
 ## 0.2.6
 - fix: dispose时，置空_androidClient和_iosClient，防止在页面级别的State中释放了client之后，重新定位时，client不为空而没有去重新创建原生client导致的原生client为空。
 
