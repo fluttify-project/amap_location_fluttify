@@ -1,3 +1,5 @@
+![Logo](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/Logo-Landscape.png?raw=true)
+
 # 高德 `定位`组件
 
 [![pub package](https://img.shields.io/pub/v/amap_location_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_location_fluttify)
@@ -19,11 +21,12 @@ import 'package:amap_location_fluttify/amap_location_fluttify.dart';
 
 使用:
 ```dart 
+/// !注意: 只要是返回Future的方法, 一律使用`await`修饰, 确保当前方法执行完成后再执行下一行, 在不能使用`await`修饰的环境下, 在`then`方法中执行下一步.
 /// 初始化 iOS在init方法中设置, android需要去AndroidManifest.xml里去设置, 详见 https://lbs.amap.com/api/android-sdk/gettingstarted
 await AmapCore.init('ios key');
 
 if (await requestPermission()) {
-  AmapLocation.startLocation(
+  await AmapLocation.startLocation(
     once: true,
     locationChanged: (location) {
       _location = location;
@@ -39,7 +42,10 @@ if (await requestPermission()) {
     - 区别: `amap_base`使用的是常规的开发方式, 还是以`MethodChannel`为中心在dart和原生以及各个原生平台之间斡旋. 而`fluttify`系列插件是在[fluttify](https://github.com/fluttify-project/fluttify-core-example)引擎生成的dart接口之上去开发插件, 屏蔽了原生代码, 开发插件时不再需要在不同的原生代码之间斡旋, 只需要专注于整合不同平台的api即可.
 
 ## 请作者喝杯奶茶
-<img src="./other/1557492318.jpg" height="300">  <img src="./other/WechatIMG111.jpeg" height="300">
+<img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true" height="300">  <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true" height="300">
+
+## qq群
+<img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/QQ%E7%BE%A4.png?raw=true" height="250">
 
 ## LICENSE
 > Copyright 2019 yohom
