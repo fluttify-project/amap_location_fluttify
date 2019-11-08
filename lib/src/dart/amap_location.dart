@@ -9,6 +9,7 @@ import 'enums.dart';
 import 'models.dart';
 
 typedef void _OnLocationChanged(Location location);
+typedef void _OnRequireAlwaysAuth(CLLocationManager manager);
 
 /// 释放原生对象Mixin
 mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
@@ -23,6 +24,9 @@ mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
 class AmapLocation {
   static com_amap_api_location_AMapLocationClient _androidClient;
   static AMapLocationManager _iosClient;
+
+  static final _iosLocationDelegate = _IOSLocationDelegate();
+  static final _androidLocationDelegate = _AndroidLocationDelegate();
 
   /// 获取定位信息
   ///
@@ -46,8 +50,8 @@ class AmapLocation {
               context);
 
       // 设置回调
-      await _androidClient
-          .setLocationListener(_AndroidLocationDelegate(locationChanged));
+      await _androidClient.setLocationListener(
+          _androidLocationDelegate.._onLocationChanged = locationChanged);
 
       // 创建选项
       final options = await AmapLocationFluttifyFactoryAndroid
@@ -115,7 +119,8 @@ class AmapLocation {
         );
       } else {
         // 设置回调
-        await _iosClient.set_delegate(_IOSLocationDelegate(locationChanged));
+        await _iosClient.set_delegate(
+            _iosLocationDelegate.._onLocationChanged = locationChanged);
         await _iosClient.set_locatingWithReGeocode(true);
         await _iosClient.startUpdatingLocation();
       }
@@ -127,6 +132,21 @@ class AmapLocation {
     return platform(
       android: (pool) => _androidClient.stopLocation(),
       ios: (pool) => _iosClient.stopUpdatingLocation(),
+    );
+  }
+
+  /// 请求后台定位 *仅iOS
+  static Future<void> requireAlwaysAuth() {
+    return platform(
+      android: (pool) async {},
+      ios: (pool) async {
+        final onRequireAuth = (manager) async {
+          await manager?.requestAlwaysAuthorization();
+        };
+        await _iosClient.set_delegate(
+          _iosLocationDelegate.._onRequireAlwaysAuth = onRequireAuth,
+        );
+      },
     );
   }
 
@@ -147,9 +167,7 @@ class AmapLocation {
 
 class _AndroidLocationDelegate extends java_lang_Object
     with com_amap_api_location_AMapLocationListener {
-  _AndroidLocationDelegate(this._onLocationChanged);
-
-  final _OnLocationChanged _onLocationChanged;
+  _OnLocationChanged _onLocationChanged;
 
   @override
   Future<void> onLocationChanged(
@@ -163,9 +181,8 @@ class _AndroidLocationDelegate extends java_lang_Object
 }
 
 class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
-  _IOSLocationDelegate(this._onLocationChanged);
-
-  final _OnLocationChanged _onLocationChanged;
+  _OnLocationChanged _onLocationChanged;
+  _OnRequireAlwaysAuth _onRequireAlwaysAuth;
 
   @override
   Future<void> amapLocationManagerDidUpdateLocationreGeocode(
@@ -180,6 +197,17 @@ class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
     );
     if (_onLocationChanged != null) {
       _onLocationChanged(Location.ios(location, reGeocode));
+    }
+  }
+
+  @override
+  Future<void> amapLocationManagerDoRequireLocationAuth(
+    AMapLocationManager manager,
+    CLLocationManager locationManager,
+  ) async {
+    super.amapLocationManagerDoRequireLocationAuth(manager, locationManager);
+    if (_onRequireAlwaysAuth != null) {
+      _onRequireAlwaysAuth(locationManager);
     }
   }
 }
