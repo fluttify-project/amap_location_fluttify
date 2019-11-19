@@ -31,7 +31,7 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
   // generate methods
   Future<AMapLocationPolygonRegion> initWithCoordinatesCountidentifier(List<CLLocationCoordinate2D> coordinates, int count, String identifier) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationPolygonRegion@$refId::initWithCoordinates([\'count\':$count, \'identifier\':$identifier])');
     }
   

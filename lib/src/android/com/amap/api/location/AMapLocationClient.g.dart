@@ -20,7 +20,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   // generate methods
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::setLocationOption([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::setLocationListener([])');
     }
   
@@ -83,7 +83,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> startLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::startLocation([])');
     }
   
@@ -105,7 +105,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> stopLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::stopLocation([])');
     }
   
@@ -127,7 +127,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::getLastKnownLocation([])');
     }
   
@@ -149,7 +149,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> startAssistantLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::startAssistantLocation([])');
     }
   
@@ -171,7 +171,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> stopAssistantLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::stopAssistantLocation([])');
     }
   
@@ -193,7 +193,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<String> getVersion() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::getVersion([])');
     }
   
@@ -215,7 +215,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   static Future<void> setApiKey(String var0) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient::setApiKey([\'var0\':$var0])');
     }
   
@@ -237,7 +237,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<bool> isStarted() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::isStarted([])');
     }
   
@@ -259,7 +259,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::unRegisterLocationListener([])');
     }
   
@@ -300,7 +300,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> onDestroy() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::onDestroy([])');
     }
   
@@ -322,7 +322,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   Future<void> disableBackgroundLocation(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::disableBackgroundLocation([\'var1\':$var1])');
     }
   
@@ -344,7 +344,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   static Future<String> getDeviceId(android_content_Context var0) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationClient::getDeviceId([])');
     }
   

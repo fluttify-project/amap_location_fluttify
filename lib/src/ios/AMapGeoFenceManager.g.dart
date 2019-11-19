@@ -109,7 +109,7 @@ class AMapGeoFenceManager extends NSObject  {
   // generate methods
   Future<void> addCircleRegionForMonitoringWithCenterRadiuscustomID(CLLocationCoordinate2D center, double radius, String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::addCircleRegionForMonitoringWithCenter([\'radius\':$radius, \'customID\':$customID])');
     }
   
@@ -131,7 +131,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> addPolygonRegionForMonitoringWithCoordinatesCountcustomID(List<CLLocationCoordinate2D> coordinates, int count, String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::addPolygonRegionForMonitoringWithCoordinates([\'count\':$count, \'customID\':$customID])');
     }
   
@@ -153,7 +153,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> addKeywordPOIRegionForMonitoringWithKeywordPOITypecitysizecustomID(String keyword, String type, String city, int size, String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::addKeywordPOIRegionForMonitoringWithKeyword([\'keyword\':$keyword, \'type\':$type, \'city\':$city, \'size\':$size, \'customID\':$customID])');
     }
   
@@ -175,7 +175,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> addAroundPOIRegionForMonitoringWithLocationPointAroundRadiuskeywordPOITypesizecustomID(CLLocationCoordinate2D locationPoint, int aroundRadius, String keyword, String type, int size, String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::addAroundPOIRegionForMonitoringWithLocationPoint([\'aroundRadius\':$aroundRadius, \'keyword\':$keyword, \'type\':$type, \'size\':$size, \'customID\':$customID])');
     }
   
@@ -197,7 +197,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> addDistrictRegionForMonitoringWithDistrictNameCustomID(String districtName, String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::addDistrictRegionForMonitoringWithDistrictName([\'districtName\':$districtName, \'customID\':$customID])');
     }
   
@@ -219,7 +219,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<AMapGeoFenceRegionActiveStatus> statusWithGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::statusWithGeoFenceRegion([])');
     }
   
@@ -241,7 +241,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<List> geoFenceRegionsWithCustomID(String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::geoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
@@ -263,7 +263,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<List> monitoringGeoFenceRegionsWithCustomID(String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::monitoringGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
@@ -285,7 +285,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<List> pausedGeoFenceRegionsWithCustomID(String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::pausedGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
@@ -307,7 +307,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<List> pauseGeoFenceRegionsWithCustomID(String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::pauseGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
@@ -329,7 +329,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<bool> pauseTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::pauseTheGeoFenceRegion([])');
     }
   
@@ -351,7 +351,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<List> startGeoFenceRegionsWithCustomID(String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::startGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
@@ -373,7 +373,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<bool> startTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::startTheGeoFenceRegion([])');
     }
   
@@ -395,7 +395,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> removeTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::removeTheGeoFenceRegion([])');
     }
   
@@ -417,7 +417,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> removeGeoFenceRegionsWithCustomID(String customID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::removeGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
@@ -439,7 +439,7 @@ class AMapGeoFenceManager extends NSObject  {
   
   Future<void> removeAllGeoFenceRegions() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::removeAllGeoFenceRegions([])');
     }
   

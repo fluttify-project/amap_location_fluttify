@@ -16,7 +16,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
-import me.yohom.foundation_fluttify.BuildConfig;
+import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import androidx.annotation.NonNull;
 
 @SuppressWarnings("ALL")
@@ -38,7 +38,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::toStr(" + "" + ")");
             }
         
@@ -58,7 +58,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::setLocationOption(" + var1 + ")");
             }
         
@@ -77,7 +77,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::setLocationListener(" + "" + ")");
             }
         
@@ -122,7 +122,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::startLocation(" + "" + ")");
             }
         
@@ -141,7 +141,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::stopLocation(" + "" + ")");
             }
         
@@ -160,7 +160,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::getLastKnownLocation(" + "" + ")");
             }
         
@@ -186,7 +186,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::startAssistantLocation(" + "" + ")");
             }
         
@@ -205,7 +205,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::stopAssistantLocation(" + "" + ")");
             }
         
@@ -224,7 +224,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::isStarted(" + "" + ")");
             }
         
@@ -243,7 +243,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::unRegisterLocationListener(" + "" + ")");
             }
         
@@ -288,7 +288,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::onDestroy(" + "" + ")");
             }
         
@@ -308,7 +308,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::disableBackgroundLocation(" + var1 + ")");
             }
         
@@ -328,7 +328,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::setLocationOption(" + var1 + ")");
             }
         
@@ -347,7 +347,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::setLocationListener(" + "" + ")");
             }
         
@@ -392,7 +392,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::startLocation(" + "" + ")");
             }
         
@@ -411,7 +411,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::stopLocation(" + "" + ")");
             }
         
@@ -430,7 +430,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::getLastKnownLocation(" + "" + ")");
             }
         
@@ -456,7 +456,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::startAssistantLocation(" + "" + ")");
             }
         
@@ -475,7 +475,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::stopAssistantLocation(" + "" + ")");
             }
         
@@ -494,7 +494,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::getVersion(" + "" + ")");
             }
         
@@ -513,7 +513,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient::setApiKey(" + var0 + ")");
             }
         
@@ -532,7 +532,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::isStarted(" + "" + ")");
             }
         
@@ -551,7 +551,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::unRegisterLocationListener(" + "" + ")");
             }
         
@@ -596,7 +596,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::onDestroy(" + "" + ")");
             }
         
@@ -616,7 +616,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClient ref = (com.amap.api.location.AMapLocationClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient@" + refId + "::disableBackgroundLocation(" + var1 + ")");
             }
         
@@ -635,7 +635,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClient::getDeviceId(" + var0 + ")");
             }
         
@@ -655,7 +655,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationListener ref = (com.amap.api.location.AMapLocationListener) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationListener@" + refId + "::onLocationChanged(" + var1 + ")");
             }
         
@@ -674,7 +674,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.DPoint ref = (com.amap.api.location.DPoint) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.DPoint@" + refId + "::getLongitude(" + "" + ")");
             }
         
@@ -694,7 +694,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.DPoint ref = (com.amap.api.location.DPoint) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.DPoint@" + refId + "::setLongitude(" + var1 + ")");
             }
         
@@ -713,7 +713,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.DPoint ref = (com.amap.api.location.DPoint) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.DPoint@" + refId + "::getLatitude(" + "" + ")");
             }
         
@@ -733,7 +733,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.DPoint ref = (com.amap.api.location.DPoint) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.DPoint@" + refId + "::setLatitude(" + var1 + ")");
             }
         
@@ -753,7 +753,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.CoordinateConverter ref = (com.amap.api.location.CoordinateConverter) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordinateConverter@" + refId + "::from(" + var1 + ")");
             }
         
@@ -780,7 +780,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.CoordinateConverter ref = (com.amap.api.location.CoordinateConverter) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordinateConverter@" + refId + "::coord(" + var1 + ")");
             }
         
@@ -806,7 +806,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.CoordinateConverter ref = (com.amap.api.location.CoordinateConverter) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordinateConverter@" + refId + "::convert(" + "" + ")");
             }
         
@@ -834,7 +834,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordinateConverter::isAMapDataAvailable(" + var0 + var2 + ")");
             }
         
@@ -855,7 +855,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordinateConverter::calculateLineDistance(" + var0 + var1 + ")");
             }
         
@@ -876,7 +876,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordUtil::convertToGcj(" + var0 + var1 + ")");
             }
         
@@ -894,7 +894,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordUtil::isLoadedSo(" + "" + ")");
             }
         
@@ -913,7 +913,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.CoordUtil::setLoadedSo(" + var0 + ")");
             }
         
@@ -932,7 +932,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol ref = (com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol@" + refId + "::getValue(" + "" + ")");
             }
         
@@ -950,7 +950,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.UmidtokenInfo::getUmidtoken(" + "" + ")");
             }
         
@@ -969,7 +969,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.UmidtokenInfo::setLocAble(" + var0 + ")");
             }
         
@@ -990,7 +990,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.UmidtokenInfo::setUmidtoken(" + var0 + var1 + ")");
             }
         
@@ -1009,7 +1009,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getGpsAccuracyStatus(" + "" + ")");
             }
         
@@ -1029,7 +1029,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setGpsAccuracyStatus(" + var1 + ")");
             }
         
@@ -1048,7 +1048,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getLocationType(" + "" + ")");
             }
         
@@ -1068,7 +1068,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setLocationType(" + var1 + ")");
             }
         
@@ -1087,7 +1087,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getLocationDetail(" + "" + ")");
             }
         
@@ -1107,7 +1107,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setLocationDetail(" + var1 + ")");
             }
         
@@ -1126,7 +1126,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getErrorCode(" + "" + ")");
             }
         
@@ -1146,7 +1146,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setErrorCode(" + var1 + ")");
             }
         
@@ -1165,7 +1165,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getErrorInfo(" + "" + ")");
             }
         
@@ -1185,7 +1185,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setErrorInfo(" + var1 + ")");
             }
         
@@ -1204,7 +1204,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getCountry(" + "" + ")");
             }
         
@@ -1224,7 +1224,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setCountry(" + var1 + ")");
             }
         
@@ -1243,7 +1243,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getRoad(" + "" + ")");
             }
         
@@ -1263,7 +1263,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setRoad(" + var1 + ")");
             }
         
@@ -1282,7 +1282,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getAddress(" + "" + ")");
             }
         
@@ -1302,7 +1302,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setAddress(" + var1 + ")");
             }
         
@@ -1321,7 +1321,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getProvince(" + "" + ")");
             }
         
@@ -1341,7 +1341,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setProvince(" + var1 + ")");
             }
         
@@ -1360,7 +1360,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getCity(" + "" + ")");
             }
         
@@ -1380,7 +1380,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setCity(" + var1 + ")");
             }
         
@@ -1399,7 +1399,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getDistrict(" + "" + ")");
             }
         
@@ -1419,7 +1419,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setDistrict(" + var1 + ")");
             }
         
@@ -1438,7 +1438,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getCityCode(" + "" + ")");
             }
         
@@ -1458,7 +1458,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setCityCode(" + var1 + ")");
             }
         
@@ -1477,7 +1477,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getAdCode(" + "" + ")");
             }
         
@@ -1497,7 +1497,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setAdCode(" + var1 + ")");
             }
         
@@ -1516,7 +1516,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getPoiName(" + "" + ")");
             }
         
@@ -1536,7 +1536,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setPoiName(" + var1 + ")");
             }
         
@@ -1555,7 +1555,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getLatitude(" + "" + ")");
             }
         
@@ -1575,7 +1575,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setLatitude(" + var1 + ")");
             }
         
@@ -1594,7 +1594,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getLongitude(" + "" + ")");
             }
         
@@ -1614,7 +1614,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setLongitude(" + var1 + ")");
             }
         
@@ -1633,7 +1633,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getSatellites(" + "" + ")");
             }
         
@@ -1653,7 +1653,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setSatellites(" + var1 + ")");
             }
         
@@ -1672,7 +1672,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getStreet(" + "" + ")");
             }
         
@@ -1692,7 +1692,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setStreet(" + var1 + ")");
             }
         
@@ -1711,7 +1711,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getStreetNum(" + "" + ")");
             }
         
@@ -1731,7 +1731,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setNumber(" + var1 + ")");
             }
         
@@ -1751,7 +1751,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setOffset(" + var1 + ")");
             }
         
@@ -1770,7 +1770,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::isOffset(" + "" + ")");
             }
         
@@ -1789,7 +1789,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getAoiName(" + "" + ")");
             }
         
@@ -1809,7 +1809,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setAoiName(" + var1 + ")");
             }
         
@@ -1828,7 +1828,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getBuildingId(" + "" + ")");
             }
         
@@ -1848,7 +1848,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setBuildingId(" + var1 + ")");
             }
         
@@ -1867,7 +1867,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getFloor(" + "" + ")");
             }
         
@@ -1886,7 +1886,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::isFixLastLocation(" + "" + ")");
             }
         
@@ -1906,7 +1906,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setFixLastLocation(" + var1 + ")");
             }
         
@@ -1926,7 +1926,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setFloor(" + var1 + ")");
             }
         
@@ -1945,7 +1945,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::isMock(" + "" + ")");
             }
         
@@ -1965,7 +1965,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setMock(" + var1 + ")");
             }
         
@@ -1984,7 +1984,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getDescription(" + "" + ")");
             }
         
@@ -2004,7 +2004,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setDescription(" + var1 + ")");
             }
         
@@ -2023,7 +2023,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::toStr(" + "" + ")");
             }
         
@@ -2042,7 +2042,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getAccuracy(" + "" + ")");
             }
         
@@ -2061,7 +2061,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getBearing(" + "" + ")");
             }
         
@@ -2080,7 +2080,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getAltitude(" + "" + ")");
             }
         
@@ -2099,7 +2099,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getSpeed(" + "" + ")");
             }
         
@@ -2118,7 +2118,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getProvider(" + "" + ")");
             }
         
@@ -2137,7 +2137,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::clone(" + "" + ")");
             }
         
@@ -2163,7 +2163,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getLocationQualityReport(" + "" + ")");
             }
         
@@ -2190,7 +2190,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setLocationQualityReport(" + var1 + ")");
             }
         
@@ -2209,7 +2209,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getCoordType(" + "" + ")");
             }
         
@@ -2229,7 +2229,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setCoordType(" + var1 + ")");
             }
         
@@ -2249,7 +2249,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setTrustedLevel(" + var1 + ")");
             }
         
@@ -2268,7 +2268,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getTrustedLevel(" + "" + ")");
             }
         
@@ -2287,7 +2287,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::getConScenario(" + "" + ")");
             }
         
@@ -2307,7 +2307,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::setConScenario(" + var1 + ")");
             }
         
@@ -2325,7 +2325,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::getAPIKEY(" + "" + ")");
             }
         
@@ -2344,7 +2344,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isMockEnable(" + "" + ")");
             }
         
@@ -2364,7 +2364,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setMockEnable(" + var1 + ")");
             }
         
@@ -2390,7 +2390,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getInterval(" + "" + ")");
             }
         
@@ -2410,7 +2410,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setInterval(" + var1 + ")");
             }
         
@@ -2436,7 +2436,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isOnceLocation(" + "" + ")");
             }
         
@@ -2456,7 +2456,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setOnceLocation(" + var1 + ")");
             }
         
@@ -2482,7 +2482,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isNeedAddress(" + "" + ")");
             }
         
@@ -2502,7 +2502,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setNeedAddress(" + var1 + ")");
             }
         
@@ -2528,7 +2528,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isWifiActiveScan(" + "" + ")");
             }
         
@@ -2548,7 +2548,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setWifiActiveScan(" + var1 + ")");
             }
         
@@ -2574,7 +2574,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isWifiScan(" + "" + ")");
             }
         
@@ -2594,7 +2594,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setWifiScan(" + var1 + ")");
             }
         
@@ -2620,7 +2620,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getLocationMode(" + "" + ")");
             }
         
@@ -2647,7 +2647,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setLocationMode(" + var1 + ")");
             }
         
@@ -2673,7 +2673,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getLocationProtocol(" + "" + ")");
             }
         
@@ -2699,7 +2699,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::setLocationProtocol(" + var0 + ")");
             }
         
@@ -2718,7 +2718,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isKillProcess(" + "" + ")");
             }
         
@@ -2738,7 +2738,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setKillProcess(" + var1 + ")");
             }
         
@@ -2764,7 +2764,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isGpsFirst(" + "" + ")");
             }
         
@@ -2784,7 +2784,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setGpsFirst(" + var1 + ")");
             }
         
@@ -2811,7 +2811,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setGpsFirstTimeout(" + var1 + ")");
             }
         
@@ -2837,7 +2837,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getGpsFirstTimeout(" + "" + ")");
             }
         
@@ -2856,7 +2856,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::clone(" + "" + ")");
             }
         
@@ -2882,7 +2882,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getHttpTimeOut(" + "" + ")");
             }
         
@@ -2902,7 +2902,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setHttpTimeOut(" + var1 + ")");
             }
         
@@ -2928,7 +2928,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isOffset(" + "" + ")");
             }
         
@@ -2948,7 +2948,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setOffset(" + var1 + ")");
             }
         
@@ -2974,7 +2974,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isLocationCacheEnable(" + "" + ")");
             }
         
@@ -2994,7 +2994,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setLocationCacheEnable(" + var1 + ")");
             }
         
@@ -3020,7 +3020,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isOnceLocationLatest(" + "" + ")");
             }
         
@@ -3040,7 +3040,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setOnceLocationLatest(" + var1 + ")");
             }
         
@@ -3066,7 +3066,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::isSensorEnable(" + "" + ")");
             }
         
@@ -3086,7 +3086,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setSensorEnable(" + var1 + ")");
             }
         
@@ -3113,7 +3113,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setLastLocationLifeCycle(" + var1 + ")");
             }
         
@@ -3139,7 +3139,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getLastLocationLifeCycle(" + "" + ")");
             }
         
@@ -3158,7 +3158,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getGeoLanguage(" + "" + ")");
             }
         
@@ -3185,7 +3185,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setGeoLanguage(" + var1 + ")");
             }
         
@@ -3211,7 +3211,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary(" + var0 + ")");
             }
         
@@ -3229,7 +3229,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary(" + "" + ")");
             }
         
@@ -3248,7 +3248,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getDeviceModeDistanceFilter(" + "" + ")");
             }
         
@@ -3268,7 +3268,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setDeviceModeDistanceFilter(" + var1 + ")");
             }
         
@@ -3295,7 +3295,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::setLocationPurpose(" + var1 + ")");
             }
         
@@ -3321,7 +3321,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getLocationPurpose(" + "" + ")");
             }
         
@@ -3346,7 +3346,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi(" + "" + ")");
             }
         
@@ -3365,7 +3365,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi(" + var0 + ")");
             }
         
@@ -3384,7 +3384,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption::setScanWifiInterval(" + var0 + ")");
             }
         
@@ -3403,7 +3403,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationClientOption@" + refId + "::getScanWifiInterval(" + "" + ")");
             }
         
@@ -3422,7 +3422,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.APSServiceBase ref = (com.amap.api.location.APSServiceBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.APSServiceBase@" + refId + "::onCreate(" + "" + ")");
             }
         
@@ -3441,7 +3441,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.APSServiceBase ref = (com.amap.api.location.APSServiceBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.APSServiceBase@" + refId + "::onDestroy(" + "" + ")");
             }
         
@@ -3461,7 +3461,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setWifiAble(" + var1 + ")");
             }
         
@@ -3481,7 +3481,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setGpsStatus(" + var1 + ")");
             }
         
@@ -3501,7 +3501,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setGPSSatellites(" + var1 + ")");
             }
         
@@ -3520,7 +3520,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::isWifiAble(" + "" + ")");
             }
         
@@ -3539,7 +3539,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::getGPSStatus(" + "" + ")");
             }
         
@@ -3558,7 +3558,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::getGPSSatellites(" + "" + ")");
             }
         
@@ -3577,7 +3577,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::getNetworkType(" + "" + ")");
             }
         
@@ -3597,7 +3597,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setNetworkType(" + var1 + ")");
             }
         
@@ -3616,7 +3616,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::getNetUseTime(" + "" + ")");
             }
         
@@ -3636,7 +3636,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setNetUseTime(" + var1 + ")");
             }
         
@@ -3656,7 +3656,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setInstallHighDangerMockApp(" + var1 + ")");
             }
         
@@ -3675,7 +3675,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::isInstalledHighDangerMockApp(" + "" + ")");
             }
         
@@ -3695,7 +3695,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::setLocationMode(" + var1 + ")");
             }
         
@@ -3714,7 +3714,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocationQualityReport ref = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationQualityReport@" + refId + "::getAdviseMessage(" + "" + ")");
             }
         
@@ -3733,7 +3733,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::getCitycode(" + "" + ")");
             }
         
@@ -3753,7 +3753,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::setCitycode(" + var1 + ")");
             }
         
@@ -3772,7 +3772,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::getAdcode(" + "" + ")");
             }
         
@@ -3792,7 +3792,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::setAdcode(" + var1 + ")");
             }
         
@@ -3811,7 +3811,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::getPolyline(" + "" + ")");
             }
         
@@ -3844,7 +3844,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::setPolyline(" + var1 + ")");
             }
         
@@ -3863,7 +3863,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::getDistrictName(" + "" + ")");
             }
         
@@ -3883,7 +3883,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.DistrictItem ref = (com.amap.api.fence.DistrictItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.DistrictItem@" + refId + "::setDistrictName(" + var1 + ")");
             }
         
@@ -3903,7 +3903,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::setActivateAction(" + var1 + ")");
             }
         
@@ -3922,7 +3922,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::setGeoFenceListener(" + "" + ")");
             }
         
@@ -3979,7 +3979,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + var3 + ")");
             }
         
@@ -3998,7 +3998,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::removeGeoFence(" + "" + ")");
             }
         
@@ -4017,7 +4017,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::getAllGeoFence(" + "" + ")");
             }
         
@@ -4048,7 +4048,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::setGeoFenceAble(" + var1 + var2 + ")");
             }
         
@@ -4067,7 +4067,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::pauseGeoFence(" + "" + ")");
             }
         
@@ -4086,7 +4086,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::resumeGeoFence(" + "" + ")");
             }
         
@@ -4105,7 +4105,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::isPause(" + "" + ")");
             }
         
@@ -4133,7 +4133,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceListener ref = (com.amap.api.fence.GeoFenceListener) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceListener@" + refId + "::onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
             }
         
@@ -4152,7 +4152,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getFenceId(" + "" + ")");
             }
         
@@ -4172,7 +4172,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setFenceId(" + var1 + ")");
             }
         
@@ -4191,7 +4191,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getCustomId(" + "" + ")");
             }
         
@@ -4211,7 +4211,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setCustomId(" + var1 + ")");
             }
         
@@ -4230,7 +4230,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getPendingIntentAction(" + "" + ")");
             }
         
@@ -4250,7 +4250,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setPendingIntentAction(" + var1 + ")");
             }
         
@@ -4269,7 +4269,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getType(" + "" + ")");
             }
         
@@ -4289,7 +4289,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setType(" + var1 + ")");
             }
         
@@ -4308,7 +4308,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getPoiItem(" + "" + ")");
             }
         
@@ -4335,7 +4335,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setPoiItem(" + var1 + ")");
             }
         
@@ -4354,7 +4354,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getDistrictItemList(" + "" + ")");
             }
         
@@ -4387,7 +4387,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setDistrictItemList(" + var1 + ")");
             }
         
@@ -4406,7 +4406,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getPointList(" + "" + ")");
             }
         
@@ -4425,7 +4425,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setPointList(" + var1 + ")");
             }
         
@@ -4444,7 +4444,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getRadius(" + "" + ")");
             }
         
@@ -4464,7 +4464,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setRadius(" + var1 + ")");
             }
         
@@ -4483,7 +4483,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getExpiration(" + "" + ")");
             }
         
@@ -4503,7 +4503,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setExpiration(" + var1 + ")");
             }
         
@@ -4522,7 +4522,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getActivatesAction(" + "" + ")");
             }
         
@@ -4542,7 +4542,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setActivatesAction(" + var1 + ")");
             }
         
@@ -4561,7 +4561,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getStatus(" + "" + ")");
             }
         
@@ -4581,7 +4581,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setStatus(" + var1 + ")");
             }
         
@@ -4600,7 +4600,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getEnterTime(" + "" + ")");
             }
         
@@ -4620,7 +4620,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setEnterTime(" + var1 + ")");
             }
         
@@ -4639,7 +4639,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getCenter(" + "" + ")");
             }
         
@@ -4666,7 +4666,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setCenter(" + var1 + ")");
             }
         
@@ -4685,7 +4685,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getMinDis2Center(" + "" + ")");
             }
         
@@ -4705,7 +4705,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setMinDis2Center(" + var1 + ")");
             }
         
@@ -4724,7 +4724,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getMaxDis2Center(" + "" + ")");
             }
         
@@ -4744,7 +4744,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setMaxDis2Center(" + var1 + ")");
             }
         
@@ -4763,7 +4763,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::isAble(" + "" + ")");
             }
         
@@ -4783,7 +4783,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setAble(" + var1 + ")");
             }
         
@@ -4803,7 +4803,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setCurrentLocation(" + var1 + ")");
             }
         
@@ -4822,7 +4822,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getCurrentLocation(" + "" + ")");
             }
         
@@ -4849,7 +4849,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::setActivateAction(" + var1 + ")");
             }
         
@@ -4868,7 +4868,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::setGeoFenceListener(" + "" + ")");
             }
         
@@ -4925,7 +4925,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::addRoundGeoFence(" + var1 + var2 + var3 + ")");
             }
         
@@ -4951,7 +4951,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::addPolygonGeoFence(" + var1 + var2 + ")");
             }
         
@@ -4981,7 +4981,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::addNearbyGeoFence(" + var1 + var2 + var3 + var4 + var5 + var6 + ")");
             }
         
@@ -5009,7 +5009,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::addKeywordGeoFence(" + var1 + var2 + var3 + var4 + var5 + ")");
             }
         
@@ -5031,7 +5031,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::addDistrictGeoFence(" + var1 + var2 + ")");
             }
         
@@ -5050,7 +5050,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::removeGeoFence(" + "" + ")");
             }
         
@@ -5069,7 +5069,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::getAllGeoFence(" + "" + ")");
             }
         
@@ -5100,7 +5100,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::setGeoFenceAble(" + var1 + var2 + ")");
             }
         
@@ -5119,7 +5119,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::pauseGeoFence(" + "" + ")");
             }
         
@@ -5138,7 +5138,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::resumeGeoFence(" + "" + ")");
             }
         
@@ -5157,7 +5157,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::isPause(" + "" + ")");
             }
         
@@ -5176,7 +5176,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getLatitude(" + "" + ")");
             }
         
@@ -5196,7 +5196,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setLatitude(" + var1 + ")");
             }
         
@@ -5215,7 +5215,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getLongitude(" + "" + ")");
             }
         
@@ -5235,7 +5235,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setLongitude(" + var1 + ")");
             }
         
@@ -5254,7 +5254,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getPoiId(" + "" + ")");
             }
         
@@ -5274,7 +5274,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setPoiId(" + var1 + ")");
             }
         
@@ -5293,7 +5293,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getPoiType(" + "" + ")");
             }
         
@@ -5313,7 +5313,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setPoiType(" + var1 + ")");
             }
         
@@ -5332,7 +5332,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getTypeCode(" + "" + ")");
             }
         
@@ -5352,7 +5352,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setTypeCode(" + var1 + ")");
             }
         
@@ -5371,7 +5371,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getAddress(" + "" + ")");
             }
         
@@ -5391,7 +5391,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setAddress(" + var1 + ")");
             }
         
@@ -5410,7 +5410,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getTel(" + "" + ")");
             }
         
@@ -5430,7 +5430,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setTel(" + var1 + ")");
             }
         
@@ -5449,7 +5449,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getProvince(" + "" + ")");
             }
         
@@ -5469,7 +5469,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setProvince(" + var1 + ")");
             }
         
@@ -5488,7 +5488,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getCity(" + "" + ")");
             }
         
@@ -5508,7 +5508,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setCity(" + var1 + ")");
             }
         
@@ -5527,7 +5527,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getAdname(" + "" + ")");
             }
         
@@ -5546,7 +5546,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::getPoiName(" + "" + ")");
             }
         
@@ -5566,7 +5566,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setPoiName(" + var1 + ")");
             }
         
@@ -5586,7 +5586,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.fence.PoiItem ref = (com.amap.api.fence.PoiItem) getHEAP().get(refId);
         
             // print log
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.PoiItem@" + refId + "::setAdname(" + var1 + ")");
             }
         
@@ -5608,7 +5608,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5626,7 +5626,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5643,7 +5643,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5663,7 +5663,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5681,7 +5681,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5698,7 +5698,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5715,7 +5715,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5733,7 +5733,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5751,7 +5751,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5768,7 +5768,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5785,7 +5785,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5802,7 +5802,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5820,7 +5820,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5837,7 +5837,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         
@@ -5854,7 +5854,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
-            if (BuildConfig.DEBUG) {
+            if (getEnableLog()) {
                 Log.d("ObjectFactory", "HEAP: " + getHEAP());
             }
         

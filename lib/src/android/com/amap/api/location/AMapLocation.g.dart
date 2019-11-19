@@ -20,7 +20,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   // generate methods
   Future<int> getGpsAccuracyStatus() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getGpsAccuracyStatus([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setGpsAccuracyStatus(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setGpsAccuracyStatus([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<int> getLocationType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationType([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setLocationType(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationType([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getLocationDetail() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationDetail([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setLocationDetail(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationDetail([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<int> getErrorCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getErrorCode([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setErrorCode(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setErrorCode([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getErrorInfo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getErrorInfo([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setErrorInfo(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setErrorInfo([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getCountry() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCountry([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setCountry(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCountry([\'var1\':$var1])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getRoad() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getRoad([])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setRoad(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setRoad([\'var1\':$var1])');
     }
   
@@ -328,7 +328,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getAddress() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAddress([])');
     }
   
@@ -350,7 +350,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setAddress(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setAddress([\'var1\':$var1])');
     }
   
@@ -372,7 +372,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getProvince() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getProvince([])');
     }
   
@@ -394,7 +394,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setProvince(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setProvince([\'var1\':$var1])');
     }
   
@@ -416,7 +416,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCity([])');
     }
   
@@ -438,7 +438,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setCity(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCity([\'var1\':$var1])');
     }
   
@@ -460,7 +460,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getDistrict() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getDistrict([])');
     }
   
@@ -482,7 +482,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setDistrict(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setDistrict([\'var1\':$var1])');
     }
   
@@ -504,7 +504,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getCityCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCityCode([])');
     }
   
@@ -526,7 +526,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setCityCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCityCode([\'var1\':$var1])');
     }
   
@@ -548,7 +548,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getAdCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAdCode([])');
     }
   
@@ -570,7 +570,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setAdCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setAdCode([\'var1\':$var1])');
     }
   
@@ -592,7 +592,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getPoiName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getPoiName([])');
     }
   
@@ -614,7 +614,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setPoiName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setPoiName([\'var1\':$var1])');
     }
   
@@ -636,7 +636,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<double> getLatitude() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLatitude([])');
     }
   
@@ -658,7 +658,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setLatitude(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLatitude([\'var1\':$var1])');
     }
   
@@ -680,7 +680,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<double> getLongitude() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLongitude([])');
     }
   
@@ -702,7 +702,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setLongitude(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLongitude([\'var1\':$var1])');
     }
   
@@ -724,7 +724,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<int> getSatellites() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getSatellites([])');
     }
   
@@ -746,7 +746,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setSatellites(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setSatellites([\'var1\':$var1])');
     }
   
@@ -768,7 +768,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getStreet() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getStreet([])');
     }
   
@@ -790,7 +790,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setStreet(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setStreet([\'var1\':$var1])');
     }
   
@@ -812,7 +812,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getStreetNum() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getStreetNum([])');
     }
   
@@ -834,7 +834,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setNumber(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setNumber([\'var1\':$var1])');
     }
   
@@ -856,7 +856,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setOffset(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setOffset([\'var1\':$var1])');
     }
   
@@ -878,7 +878,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<bool> isOffset() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::isOffset([])');
     }
   
@@ -900,7 +900,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getAoiName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAoiName([])');
     }
   
@@ -922,7 +922,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setAoiName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setAoiName([\'var1\':$var1])');
     }
   
@@ -944,7 +944,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getBuildingId() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getBuildingId([])');
     }
   
@@ -966,7 +966,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setBuildingId(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setBuildingId([\'var1\':$var1])');
     }
   
@@ -988,7 +988,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getFloor() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getFloor([])');
     }
   
@@ -1010,7 +1010,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<bool> isFixLastLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::isFixLastLocation([])');
     }
   
@@ -1032,7 +1032,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setFixLastLocation(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setFixLastLocation([\'var1\':$var1])');
     }
   
@@ -1054,7 +1054,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setFloor(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setFloor([\'var1\':$var1])');
     }
   
@@ -1076,7 +1076,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<bool> isMock() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::isMock([])');
     }
   
@@ -1098,7 +1098,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setMock(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setMock([\'var1\':$var1])');
     }
   
@@ -1120,7 +1120,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getDescription() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getDescription([])');
     }
   
@@ -1142,7 +1142,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setDescription(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setDescription([\'var1\':$var1])');
     }
   
@@ -1164,7 +1164,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> toStr() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::toStr([])');
     }
   
@@ -1186,7 +1186,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<double> getAccuracy() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAccuracy([])');
     }
   
@@ -1208,7 +1208,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<double> getBearing() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getBearing([])');
     }
   
@@ -1230,7 +1230,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<double> getAltitude() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAltitude([])');
     }
   
@@ -1252,7 +1252,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<double> getSpeed() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getSpeed([])');
     }
   
@@ -1274,7 +1274,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getProvider() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getProvider([])');
     }
   
@@ -1296,7 +1296,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<com_amap_api_location_AMapLocation> clone() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::clone([])');
     }
   
@@ -1318,7 +1318,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<com_amap_api_location_AMapLocationQualityReport> getLocationQualityReport() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationQualityReport([])');
     }
   
@@ -1340,7 +1340,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setLocationQualityReport(com_amap_api_location_AMapLocationQualityReport var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationQualityReport([])');
     }
   
@@ -1362,7 +1362,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<String> getCoordType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCoordType([])');
     }
   
@@ -1384,7 +1384,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setCoordType(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCoordType([\'var1\':$var1])');
     }
   
@@ -1406,7 +1406,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setTrustedLevel(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setTrustedLevel([\'var1\':$var1])');
     }
   
@@ -1428,7 +1428,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<int> getTrustedLevel() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getTrustedLevel([])');
     }
   
@@ -1450,7 +1450,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<int> getConScenario() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getConScenario([])');
     }
   
@@ -1472,7 +1472,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   Future<void> setConScenario(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setConScenario([\'var1\':$var1])');
     }
   

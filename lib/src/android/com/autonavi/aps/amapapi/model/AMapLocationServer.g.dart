@@ -20,7 +20,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   // generate methods
   Future<String> toStr() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::toStr([])');
     }
   

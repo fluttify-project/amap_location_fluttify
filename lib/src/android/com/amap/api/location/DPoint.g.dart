@@ -20,7 +20,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   // generate methods
   Future<double> getLongitude() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.DPoint@$refId::getLongitude([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   
   Future<void> setLongitude(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.DPoint@$refId::setLongitude([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   
   Future<double> getLatitude() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.DPoint@$refId::getLatitude([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   
   Future<void> setLatitude(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.DPoint@$refId::setLatitude([\'var1\':$var1])');
     }
   

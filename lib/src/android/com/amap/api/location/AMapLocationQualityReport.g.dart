@@ -20,7 +20,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   // generate methods
   Future<void> setWifiAble(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setWifiAble([\'var1\':$var1])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<void> setGpsStatus(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setGpsStatus([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<void> setGPSSatellites(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setGPSSatellites([\'var1\':$var1])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<bool> isWifiAble() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::isWifiAble([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<int> getGPSStatus() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSStatus([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<int> getGPSSatellites() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSSatellites([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<String> getNetworkType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getNetworkType([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<void> setNetworkType(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setNetworkType([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<int> getNetUseTime() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getNetUseTime([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<void> setNetUseTime(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setNetUseTime([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<void> setInstallHighDangerMockApp(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setInstallHighDangerMockApp([\'var1\':$var1])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<bool> isInstalledHighDangerMockApp() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::isInstalledHighDangerMockApp([])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<void> setLocationMode(com_amap_api_location_AMapLocationClientOption_AMapLocationMode var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setLocationMode([])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   
   Future<String> getAdviseMessage() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getAdviseMessage([])');
     }
   
