@@ -31,7 +31,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
   // generate methods
   Future<AMapLocationCircleRegion> initWithCenterRadiusidentifier(CLLocationCoordinate2D center, double radius, String identifier) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationCircleRegion@$refId::initWithCenter([\'radius\':$radius, \'identifier\':$identifier])');
     }
   

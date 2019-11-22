@@ -205,7 +205,7 @@ class AMapLocationManager extends NSObject  {
   // generate methods
   static Future<bool> headingAvailable() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager::headingAvailable([])');
     }
   
@@ -227,7 +227,7 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> startUpdatingHeading() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager@$refId::startUpdatingHeading([])');
     }
   
@@ -249,7 +249,7 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> stopUpdatingHeading() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingHeading([])');
     }
   
@@ -271,7 +271,7 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> dismissHeadingCalibrationDisplay() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager@$refId::dismissHeadingCalibrationDisplay([])');
     }
   
@@ -293,7 +293,7 @@ class AMapLocationManager extends NSObject  {
   
   Future<bool> requestLocationWithReGeocodeCompletionBlock(bool withReGeocode, void completionBlock(CLLocation location, AMapLocationReGeocode regeocode, NSError error)) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager@$refId::requestLocationWithReGeocode([\'withReGeocode\':$withReGeocode])');
     }
   
@@ -334,7 +334,7 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> startUpdatingLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager@$refId::startUpdatingLocation([])');
     }
   
@@ -356,7 +356,7 @@ class AMapLocationManager extends NSObject  {
   
   Future<void> stopUpdatingLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingLocation([])');
     }
   

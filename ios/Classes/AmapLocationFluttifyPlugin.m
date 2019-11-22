@@ -10,6 +10,8 @@ typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSStri
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
 extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+// 日志打印开关
+extern BOOL enableLog;
 
 @implementation AmapLocationFluttifyPlugin {
   NSObject <FlutterPluginRegistrar> * _registrar;
@@ -37,7 +39,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref addCircleRegionForMonitoringWithCenter : center radius: radius customID: customID];
@@ -67,7 +71,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref addPolygonRegionForMonitoringWithCoordinates : coordinates count: count customID: customID];
@@ -93,7 +99,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref addKeywordPOIRegionForMonitoringWithKeyword : keyword POIType: type city: city size: size customID: customID];
@@ -123,7 +131,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref addAroundPOIRegionForMonitoringWithLocationPoint : locationPoint aroundRadius: aroundRadius keyword: keyword POIType: type size: size customID: customID];
@@ -143,7 +153,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref addDistrictRegionForMonitoringWithDistrictName : districtName customID: customID];
@@ -161,7 +173,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           AMapGeoFenceRegionActiveStatus result = [ref statusWithGeoFenceRegion: region];
@@ -179,7 +193,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           NSArray* result = [ref geoFenceRegionsWithCustomID: customID];
@@ -204,7 +220,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           NSArray* result = [ref monitoringGeoFenceRegionsWithCustomID: customID];
@@ -229,7 +247,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           NSArray* result = [ref pausedGeoFenceRegionsWithCustomID: customID];
@@ -254,7 +274,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           NSArray* result = [ref pauseGeoFenceRegionsWithCustomID: customID];
@@ -279,7 +301,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           BOOL result = [ref pauseTheGeoFenceRegion: region];
@@ -297,7 +321,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           NSArray* result = [ref startGeoFenceRegionsWithCustomID: customID];
@@ -322,7 +348,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           BOOL result = [ref startTheGeoFenceRegion: region];
@@ -340,7 +368,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref removeTheGeoFenceRegion : region];
@@ -358,7 +388,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref removeGeoFenceRegionsWithCustomID : customID];
@@ -375,7 +407,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref removeAllGeoFenceRegions ];
@@ -395,7 +429,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapGeoFenceManager : manager doRequireLocationAuth: locationManager];
@@ -424,7 +460,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapGeoFenceManager : manager didAddRegionForMonitoringFinished: regions customID: customID error: error];
@@ -448,7 +486,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapGeoFenceManager : manager didGeoFencesStatusChangedForRegion: region customID: customID error: error];
@@ -466,7 +506,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           AMapLocationRegion* result = [ref initWithIdentifier: identifier];
@@ -487,7 +529,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           BOOL result = [ref containsCoordinate: coordinate];
@@ -511,7 +555,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           AMapLocationCircleRegion* result = [ref initWithCenter: center radius: radius identifier: identifier];
@@ -542,7 +588,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           AMapLocationPolygonRegion* result = [ref initWithCoordinates: coordinates count: count identifier: identifier];
@@ -560,7 +608,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager::headingAvailable(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager::headingAvailable(暂未实现参数打印)");
+          }
       
           // invoke native method
           BOOL result = [AMapLocationManager headingAvailable];
@@ -577,7 +627,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref startUpdatingHeading ];
@@ -594,7 +646,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref stopUpdatingHeading ];
@@ -611,7 +665,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref dismissHeadingCalibrationDisplay ];
@@ -630,7 +686,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation* location, AMapLocationReGeocode* regeocode, NSError* error) {
@@ -638,7 +696,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
                   methodChannelWithName:@"AMapLocationManager::requestLocationWithReGeocodeCompletionBlock::Callback"
                         binaryMessenger:[self->_registrar messenger]];
       
-              NSLog(@"");
+              // print log
+              if (enableLog) {
+                  NSLog(@"");
+              }
       
               // 构造可以直接传输的参数
               // ref callback arg
@@ -667,7 +728,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref startUpdatingLocation ];
@@ -684,7 +747,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationManager* ref = (AMapLocationManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref stopUpdatingLocation ];
@@ -704,7 +769,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapLocationManager : manager doRequireLocationAuth: locationManager];
@@ -724,7 +791,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapLocationManager : manager didFailWithError: error];
@@ -744,7 +813,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapLocationManager : manager didUpdateLocation: location];
@@ -766,7 +837,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapLocationManager : manager didUpdateLocation: location reGeocode: reGeocode];
@@ -786,7 +859,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapLocationManager : manager didChangeAuthorizationStatus: status];
@@ -804,7 +879,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManagerShouldDisplayHeadingCalibration(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManagerShouldDisplayHeadingCalibration(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           BOOL result = [ref amapLocationManagerShouldDisplayHeadingCalibration: manager];
@@ -824,7 +901,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(暂未实现参数打印)", args[@"refId"]);
+          }
       
           // invoke native method
           [ref amapLocationManager : manager didUpdateHeading: newHeading];
@@ -844,7 +923,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationPoint::locationWithLatitude(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationPoint::locationWithLatitude(暂未实现参数打印)");
+          }
       
           // invoke native method
           AMapLocationPoint* result = [AMapLocationPoint locationWithLatitude: lat longitude: lon];
@@ -855,7 +936,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           methodResult(@(result.hash));
       },
       @"AMapGeoFenceManager::get_activeAction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::get_activeAction");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::get_activeAction");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -869,7 +953,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -883,7 +970,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -897,7 +987,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::get_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::get_detectRiskOfFakeLocation");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::get_detectRiskOfFakeLocation");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -911,7 +1004,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationRegion::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationRegion::get_identifier");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationRegion::get_identifier");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -925,7 +1021,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationRegion::get_notifyOnEntry": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationRegion::get_notifyOnEntry");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationRegion::get_notifyOnEntry");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -939,7 +1038,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationRegion::get_notifyOnExit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationRegion::get_notifyOnExit");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationRegion::get_notifyOnExit");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -953,7 +1055,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationCircleRegion::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationCircleRegion::get_center");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationCircleRegion::get_center");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -970,7 +1075,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationCircleRegion::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationCircleRegion::get_radius");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationCircleRegion::get_radius");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -984,7 +1092,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPolygonRegion::get_coordinates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPolygonRegion::get_coordinates");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPolygonRegion::get_coordinates");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1001,7 +1112,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPolygonRegion::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPolygonRegion::get_count");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPolygonRegion::get_count");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1015,7 +1129,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::get_identifier");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::get_identifier");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1029,7 +1146,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::get_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::get_customID");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::get_customID");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1043,7 +1163,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::get_fenceStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::get_fenceStatus");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::get_fenceStatus");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1057,7 +1180,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::get_regionType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::get_regionType");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::get_regionType");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1071,7 +1197,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::get_currentLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::get_currentLocation");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::get_currentLocation");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1086,7 +1215,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceCircleRegion::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceCircleRegion::get_center");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceCircleRegion::get_center");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1103,7 +1235,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceCircleRegion::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceCircleRegion::get_radius");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceCircleRegion::get_radius");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1117,7 +1252,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFencePolygonRegion::get_coordinates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFencePolygonRegion::get_coordinates");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFencePolygonRegion::get_coordinates");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1134,7 +1272,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFencePolygonRegion::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFencePolygonRegion::get_count");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFencePolygonRegion::get_count");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1148,7 +1289,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFencePOIRegion::get_POIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFencePOIRegion::get_POIItem");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFencePOIRegion::get_POIItem");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1163,7 +1307,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceDistrictRegion::get_districtItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceDistrictRegion::get_districtItem");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceDistrictRegion::get_districtItem");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1178,7 +1325,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_distanceFilter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_distanceFilter");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_distanceFilter");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1192,7 +1342,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_desiredAccuracy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_desiredAccuracy");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1206,7 +1359,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_pausesLocationUpdatesAutomatically");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_pausesLocationUpdatesAutomatically");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1220,7 +1376,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_allowsBackgroundLocationUpdates");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_allowsBackgroundLocationUpdates");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1234,7 +1393,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_locationTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_locationTimeout");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_locationTimeout");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1248,7 +1410,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_reGeocodeTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_reGeocodeTimeout");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_reGeocodeTimeout");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1262,7 +1427,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_locatingWithReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_locatingWithReGeocode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_locatingWithReGeocode");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1276,7 +1444,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_reGeocodeLanguage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_reGeocodeLanguage");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_reGeocodeLanguage");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1290,7 +1461,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::get_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::get_detectRiskOfFakeLocation");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::get_detectRiskOfFakeLocation");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1304,7 +1478,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_formattedAddress");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_formattedAddress");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1318,7 +1495,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_country": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_country");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_country");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1332,7 +1512,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_province");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_province");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1346,7 +1529,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_city");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_city");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1360,7 +1546,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_district");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_district");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1374,7 +1563,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_township": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_township");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_township");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1388,7 +1580,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_neighborhood");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_neighborhood");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1402,7 +1597,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_building");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_building");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1416,7 +1614,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_citycode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_citycode");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1430,7 +1631,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_adcode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_adcode");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1444,7 +1648,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_street": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_street");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_street");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1458,7 +1665,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_number": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_number");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_number");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1472,7 +1682,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_POIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_POIName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_POIName");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1486,7 +1699,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::get_AOIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::get_AOIName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::get_AOIName");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1500,7 +1716,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPoint::get_latitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPoint::get_latitude");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPoint::get_latitude");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1514,7 +1733,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPoint::get_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPoint::get_longitude");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPoint::get_longitude");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1528,7 +1750,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_pId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_pId");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_pId");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1542,7 +1767,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_name");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_name");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1556,7 +1784,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_type");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_type");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1570,7 +1801,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_typeCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_typeCode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_typeCode");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1584,7 +1818,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_address");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_address");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1598,7 +1835,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_location");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_location");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1613,7 +1853,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_tel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_tel");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_tel");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1627,7 +1870,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_province");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_province");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1641,7 +1887,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_city");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_city");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1655,7 +1904,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::get_district");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::get_district");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1669,7 +1921,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationDistrictItem::get_cityCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationDistrictItem::get_cityCode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationDistrictItem::get_cityCode");
+          }
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
@@ -1683,7 +1938,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::set_delegate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::set_delegate");
+          }
       
           // args
       
@@ -1696,7 +1954,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::set_activeAction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::set_activeAction");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::set_activeAction");
+          }
       
           // args
           // enum arg
@@ -1710,7 +1971,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically");
+          }
       
           // args
           // jsonable arg
@@ -1724,7 +1988,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::set_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::set_allowsBackgroundLocationUpdates");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::set_allowsBackgroundLocationUpdates");
+          }
       
           // args
           // jsonable arg
@@ -1738,7 +2005,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceManager::set_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceManager::set_detectRiskOfFakeLocation");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceManager::set_detectRiskOfFakeLocation");
+          }
       
           // args
           // jsonable arg
@@ -1752,7 +2022,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationRegion::set_notifyOnEntry": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationRegion::set_notifyOnEntry");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationRegion::set_notifyOnEntry");
+          }
       
           // args
           // jsonable arg
@@ -1766,7 +2039,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationRegion::set_notifyOnExit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationRegion::set_notifyOnExit");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationRegion::set_notifyOnExit");
+          }
       
           // args
           // jsonable arg
@@ -1780,7 +2056,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::set_fenceStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::set_fenceStatus");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::set_fenceStatus");
+          }
       
           // args
           // enum arg
@@ -1794,7 +2073,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::set_regionType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::set_regionType");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::set_regionType");
+          }
       
           // args
           // enum arg
@@ -1808,7 +2090,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapGeoFenceRegion::set_currentLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapGeoFenceRegion::set_currentLocation");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapGeoFenceRegion::set_currentLocation");
+          }
       
           // args
           // ref arg
@@ -1822,7 +2107,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_delegate");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_delegate");
+          }
       
           // args
       
@@ -1835,7 +2123,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_distanceFilter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_distanceFilter");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_distanceFilter");
+          }
       
           // args
           // jsonable arg
@@ -1849,7 +2140,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_desiredAccuracy");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_desiredAccuracy");
+          }
       
           // args
           // jsonable arg
@@ -1863,7 +2157,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_pausesLocationUpdatesAutomatically");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_pausesLocationUpdatesAutomatically");
+          }
       
           // args
           // jsonable arg
@@ -1877,7 +2174,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_allowsBackgroundLocationUpdates");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_allowsBackgroundLocationUpdates");
+          }
       
           // args
           // jsonable arg
@@ -1891,7 +2191,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_locationTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_locationTimeout");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_locationTimeout");
+          }
       
           // args
           // jsonable arg
@@ -1905,7 +2208,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_reGeocodeTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_reGeocodeTimeout");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_reGeocodeTimeout");
+          }
       
           // args
           // jsonable arg
@@ -1919,7 +2225,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_locatingWithReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_locatingWithReGeocode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_locatingWithReGeocode");
+          }
       
           // args
           // jsonable arg
@@ -1933,7 +2242,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_reGeocodeLanguage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_reGeocodeLanguage");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_reGeocodeLanguage");
+          }
       
           // args
           // enum arg
@@ -1947,7 +2259,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationManager::set_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationManager::set_detectRiskOfFakeLocation");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationManager::set_detectRiskOfFakeLocation");
+          }
       
           // args
           // jsonable arg
@@ -1961,7 +2276,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_formattedAddress");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_formattedAddress");
+          }
       
           // args
           // jsonable arg
@@ -1975,7 +2293,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_country");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_country");
+          }
       
           // args
           // jsonable arg
@@ -1989,7 +2310,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_province");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_province");
+          }
       
           // args
           // jsonable arg
@@ -2003,7 +2327,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_city");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_city");
+          }
       
           // args
           // jsonable arg
@@ -2017,7 +2344,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_district");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_district");
+          }
       
           // args
           // jsonable arg
@@ -2031,7 +2361,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_township": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_township");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_township");
+          }
       
           // args
           // jsonable arg
@@ -2045,7 +2378,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_neighborhood");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_neighborhood");
+          }
       
           // args
           // jsonable arg
@@ -2059,7 +2395,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_building");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_building");
+          }
       
           // args
           // jsonable arg
@@ -2073,7 +2412,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_citycode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_citycode");
+          }
       
           // args
           // jsonable arg
@@ -2087,7 +2429,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_adcode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_adcode");
+          }
       
           // args
           // jsonable arg
@@ -2101,7 +2446,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_street": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_street");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_street");
+          }
       
           // args
           // jsonable arg
@@ -2115,7 +2463,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_number": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_number");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_number");
+          }
       
           // args
           // jsonable arg
@@ -2129,7 +2480,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_POIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_POIName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_POIName");
+          }
       
           // args
           // jsonable arg
@@ -2143,7 +2497,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationReGeocode::set_AOIName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationReGeocode::set_AOIName");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationReGeocode::set_AOIName");
+          }
       
           // args
           // jsonable arg
@@ -2157,7 +2514,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPoint::set_latitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPoint::set_latitude");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPoint::set_latitude");
+          }
       
           // args
           // jsonable arg
@@ -2171,7 +2531,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPoint::set_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPoint::set_longitude");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPoint::set_longitude");
+          }
       
           // args
           // jsonable arg
@@ -2185,7 +2548,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_pId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_pId");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_pId");
+          }
       
           // args
           // jsonable arg
@@ -2199,7 +2565,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_name");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_name");
+          }
       
           // args
           // jsonable arg
@@ -2213,7 +2582,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_type");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_type");
+          }
       
           // args
           // jsonable arg
@@ -2227,7 +2599,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_typeCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_typeCode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_typeCode");
+          }
       
           // args
           // jsonable arg
@@ -2241,7 +2616,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_address");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_address");
+          }
       
           // args
           // jsonable arg
@@ -2255,7 +2633,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_location");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_location");
+          }
       
           // args
           // ref arg
@@ -2269,7 +2650,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_tel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_tel");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_tel");
+          }
       
           // args
           // jsonable arg
@@ -2283,7 +2667,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_province");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_province");
+          }
       
           // args
           // jsonable arg
@@ -2297,7 +2684,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_city");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_city");
+          }
       
           // args
           // jsonable arg
@@ -2311,7 +2701,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationPOIItem::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationPOIItem::set_district");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationPOIItem::set_district");
+          }
       
           // args
           // jsonable arg
@@ -2325,7 +2718,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"AMapLocationDistrictItem::set_cityCode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapLocationDistrictItem::set_cityCode");
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapLocationDistrictItem::set_cityCode");
+          }
       
           // args
           // jsonable arg
@@ -2647,185 +3043,199 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       },
       
       @"ObjectFactory::createAMapGeoFenceManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapGeoFenceManager");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapGeoFenceManager");
+          }
       
           AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationRegion");
+          }
       
           AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationCircleRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationCircleRegion");
+          }
       
           AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationPolygonRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationPolygonRegion");
+          }
       
           AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapGeoFenceRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapGeoFenceRegion");
+          }
       
           AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapGeoFenceCircleRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapGeoFenceCircleRegion");
+          }
       
           AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapGeoFencePolygonRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapGeoFencePolygonRegion");
+          }
       
           AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapGeoFencePOIRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapGeoFencePOIRegion");
+          }
       
           AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapGeoFenceDistrictRegion");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapGeoFenceDistrictRegion");
+          }
       
           AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationManager");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationManager");
+          }
       
           AMapLocationManager* ref = [[AMapLocationManager alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationReGeocode");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationReGeocode");
+          }
       
           AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationPoint");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationPoint");
+          }
       
           AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationPOIItem");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationPOIItem");
+          }
       
           AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapLocationDistrictItem");
+          // print log
+          if (enableLog) {
+              NSLog(@"ObjectFactory::createAMapLocationDistrictItem");
+          }
       
           AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-      #ifdef DEBUG
-          NSLog(@"HEAP: %@", HEAP);
-      #endif
+          if (enableLog) NSLog(@"HEAP: %@", HEAP);
       },
       
       @"AMapLocationCoordinateConvert::AMapLocationCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2841,7 +3251,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationCoordinateConvert::AMapLocationCoordinateConvert(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationCoordinateConvert::AMapLocationCoordinateConvert(暂未实现参数打印)");
+          }
       
           // invoke native method
           CLLocationCoordinate2D result = AMapLocationCoordinateConvert(coordinate, type);
@@ -2864,7 +3276,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // print log
-          NSLog(@"fluttify-objc: AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate(暂未实现参数打印)");
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate(暂未实现参数打印)");
+          }
       
           // invoke native method
           BOOL result = AMapLocationDataAvailableForCoordinate(coordinate);
@@ -2908,8 +3322,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -2928,8 +3344,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -2959,8 +3377,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -2984,8 +3404,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3004,8 +3426,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidFailWithError");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidFailWithError");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3024,8 +3448,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3044,8 +3470,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3067,8 +3495,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3086,8 +3516,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration");
+  }
 
   // convert to jsonable arg
   
@@ -3123,8 +3555,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3143,8 +3577,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidStartMonitoringForRegion");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidStartMonitoringForRegion");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3163,8 +3599,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidEnterRegion");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidEnterRegion");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3183,8 +3621,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidExitRegion");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidExitRegion");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3203,8 +3643,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidDetermineStateforRegion");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidDetermineStateforRegion");
+  }
 
   // convert to jsonable arg
   // ref callback arg
@@ -3225,8 +3667,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
             binaryMessenger:[_registrar messenger]];
-
-  NSLog(@"AMapLocationManagerDelegate::amapLocationManagerMonitoringDidFailForRegionwithError");
+  // print log
+  if (enableLog) {
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerMonitoringDidFailForRegionwithError");
+  }
 
   // convert to jsonable arg
   // ref callback arg

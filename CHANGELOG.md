@@ -1,3 +1,6 @@
+## 0.3.0
+- 更新底层
+
 ## 0.2.7
 - doc: 增加`await`的说明
 - feat: 增加ios端requireAlwaysAuth的处理

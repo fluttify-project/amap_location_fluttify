@@ -20,7 +20,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   // generate methods
   Future<String> getCitycode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::getCitycode([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<void> setCitycode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::setCitycode([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<String> getAdcode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::getAdcode([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<void> setAdcode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::setAdcode([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<List<com_amap_api_location_DPoint>> getPolyline() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::getPolyline([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<void> setPolyline(List<com_amap_api_location_DPoint> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::setPolyline([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<String> getDistrictName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::getDistrictName([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   
   Future<void> setDistrictName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::setDistrictName([\'var1\':$var1])');
     }
   
