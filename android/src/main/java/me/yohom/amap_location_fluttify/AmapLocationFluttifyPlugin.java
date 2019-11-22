@@ -29,6 +29,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
     private Registrar registrar;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
+        // method
         put("com.autonavi.aps.amapapi.model.AMapLocationServer::toStr", (args, methodResult) -> {
             // args
         
@@ -48,6 +49,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::setLocationOption", (args, methodResult) -> {
             // args
             // ref arg
@@ -68,6 +70,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::setLocationListener", (args, methodResult) -> {
             // args
         
@@ -93,6 +96,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                     Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
         
@@ -113,6 +117,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::startLocation", (args, methodResult) -> {
             // args
         
@@ -132,6 +137,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::stopLocation", (args, methodResult) -> {
             // args
         
@@ -151,6 +157,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::getLastKnownLocation", (args, methodResult) -> {
             // args
         
@@ -177,6 +184,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::startAssistantLocation", (args, methodResult) -> {
             // args
         
@@ -196,6 +204,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::stopAssistantLocation", (args, methodResult) -> {
             // args
         
@@ -215,6 +224,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::isStarted", (args, methodResult) -> {
             // args
         
@@ -234,6 +244,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::unRegisterLocationListener", (args, methodResult) -> {
             // args
         
@@ -259,6 +270,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                     Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
         
@@ -279,6 +291,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::onDestroy", (args, methodResult) -> {
             // args
         
@@ -298,6 +311,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.LocationManagerBase::disableBackgroundLocation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -318,6 +332,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::setLocationOption", (args, methodResult) -> {
             // args
             // ref arg
@@ -338,6 +353,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::setLocationListener", (args, methodResult) -> {
             // args
         
@@ -363,6 +379,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                     Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
         
@@ -383,6 +400,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::startLocation", (args, methodResult) -> {
             // args
         
@@ -402,6 +420,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::stopLocation", (args, methodResult) -> {
             // args
         
@@ -421,6 +440,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::getLastKnownLocation", (args, methodResult) -> {
             // args
         
@@ -447,6 +467,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::startAssistantLocation", (args, methodResult) -> {
             // args
         
@@ -466,6 +487,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::stopAssistantLocation", (args, methodResult) -> {
             // args
         
@@ -485,6 +507,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::getVersion", (args, methodResult) -> {
             // args
         
@@ -504,6 +527,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::setApiKey", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -523,6 +547,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::isStarted", (args, methodResult) -> {
             // args
         
@@ -542,6 +567,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::unRegisterLocationListener", (args, methodResult) -> {
             // args
         
@@ -567,6 +593,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                     Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
         
@@ -587,6 +614,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::onDestroy", (args, methodResult) -> {
             // args
         
@@ -606,6 +634,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::disableBackgroundLocation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -626,6 +655,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClient::getDeviceId", (args, methodResult) -> {
             // args
             // ref arg
@@ -645,6 +675,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationListener::onLocationChanged", (args, methodResult) -> {
             // args
             // ref arg
@@ -665,6 +696,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.DPoint::getLongitude", (args, methodResult) -> {
             // args
         
@@ -684,6 +716,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.DPoint::setLongitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -704,6 +737,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.DPoint::getLatitude", (args, methodResult) -> {
             // args
         
@@ -723,6 +757,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.DPoint::setLatitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -743,6 +778,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.CoordinateConverter::from", (args, methodResult) -> {
             // args
             // enum arg
@@ -770,6 +806,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.CoordinateConverter::coord", (args, methodResult) -> {
             // args
             // ref arg
@@ -797,6 +834,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.CoordinateConverter::convert", (args, methodResult) -> {
             // args
         
@@ -823,6 +861,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.CoordinateConverter::isAMapDataAvailable", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -844,6 +883,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.CoordinateConverter::calculateLineDistance", (args, methodResult) -> {
             // args
             // ref arg
@@ -865,6 +905,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.CoordUtil::convertToGcj", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -886,6 +927,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.CoordUtil::isLoadedSo", (args, methodResult) -> {
             // args
         
@@ -904,6 +946,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.CoordUtil::setLoadedSo", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -923,6 +966,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol::getValue", (args, methodResult) -> {
             // args
         
@@ -942,6 +986,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.UmidtokenInfo::getUmidtoken", (args, methodResult) -> {
             // args
         
@@ -960,6 +1005,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.UmidtokenInfo::setLocAble", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -979,6 +1025,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.UmidtokenInfo::setUmidtoken", (args, methodResult) -> {
             // args
             // ref arg
@@ -1000,6 +1047,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getGpsAccuracyStatus", (args, methodResult) -> {
             // args
         
@@ -1019,6 +1067,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setGpsAccuracyStatus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1039,6 +1088,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getLocationType", (args, methodResult) -> {
             // args
         
@@ -1058,6 +1108,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setLocationType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1078,6 +1129,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getLocationDetail", (args, methodResult) -> {
             // args
         
@@ -1097,6 +1149,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setLocationDetail", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1117,6 +1170,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getErrorCode", (args, methodResult) -> {
             // args
         
@@ -1136,6 +1190,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setErrorCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1156,6 +1211,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getErrorInfo", (args, methodResult) -> {
             // args
         
@@ -1175,6 +1231,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setErrorInfo", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1195,6 +1252,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getCountry", (args, methodResult) -> {
             // args
         
@@ -1214,6 +1272,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setCountry", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1234,6 +1293,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getRoad", (args, methodResult) -> {
             // args
         
@@ -1253,6 +1313,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1273,6 +1334,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getAddress", (args, methodResult) -> {
             // args
         
@@ -1292,6 +1354,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setAddress", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1312,6 +1375,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getProvince", (args, methodResult) -> {
             // args
         
@@ -1331,6 +1395,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1351,6 +1416,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getCity", (args, methodResult) -> {
             // args
         
@@ -1370,6 +1436,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1390,6 +1457,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getDistrict", (args, methodResult) -> {
             // args
         
@@ -1409,6 +1477,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setDistrict", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1429,6 +1498,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getCityCode", (args, methodResult) -> {
             // args
         
@@ -1448,6 +1518,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1468,6 +1539,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getAdCode", (args, methodResult) -> {
             // args
         
@@ -1487,6 +1559,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1507,6 +1580,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getPoiName", (args, methodResult) -> {
             // args
         
@@ -1526,6 +1600,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setPoiName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1546,6 +1621,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getLatitude", (args, methodResult) -> {
             // args
         
@@ -1565,6 +1641,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setLatitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1585,6 +1662,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getLongitude", (args, methodResult) -> {
             // args
         
@@ -1604,6 +1682,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setLongitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1624,6 +1703,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getSatellites", (args, methodResult) -> {
             // args
         
@@ -1643,6 +1723,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setSatellites", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1663,6 +1744,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getStreet", (args, methodResult) -> {
             // args
         
@@ -1682,6 +1764,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setStreet", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1702,6 +1785,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getStreetNum", (args, methodResult) -> {
             // args
         
@@ -1721,6 +1805,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setNumber", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1741,6 +1826,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::setOffset", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1761,6 +1847,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::isOffset", (args, methodResult) -> {
             // args
         
@@ -1780,6 +1867,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getAoiName", (args, methodResult) -> {
             // args
         
@@ -1799,6 +1887,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setAoiName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1819,6 +1908,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getBuildingId", (args, methodResult) -> {
             // args
         
@@ -1838,6 +1928,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setBuildingId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1858,6 +1949,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getFloor", (args, methodResult) -> {
             // args
         
@@ -1877,6 +1969,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::isFixLastLocation", (args, methodResult) -> {
             // args
         
@@ -1896,6 +1989,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setFixLastLocation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1916,6 +2010,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::setFloor", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1936,6 +2031,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::isMock", (args, methodResult) -> {
             // args
         
@@ -1955,6 +2051,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setMock", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1975,6 +2072,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getDescription", (args, methodResult) -> {
             // args
         
@@ -1994,6 +2092,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setDescription", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2014,6 +2113,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::toStr", (args, methodResult) -> {
             // args
         
@@ -2033,6 +2133,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getAccuracy", (args, methodResult) -> {
             // args
         
@@ -2052,6 +2153,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getBearing", (args, methodResult) -> {
             // args
         
@@ -2071,6 +2173,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getAltitude", (args, methodResult) -> {
             // args
         
@@ -2090,6 +2193,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getSpeed", (args, methodResult) -> {
             // args
         
@@ -2109,6 +2213,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getProvider", (args, methodResult) -> {
             // args
         
@@ -2128,6 +2233,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::clone", (args, methodResult) -> {
             // args
         
@@ -2154,6 +2260,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocation::getLocationQualityReport", (args, methodResult) -> {
             // args
         
@@ -2180,6 +2287,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocation::setLocationQualityReport", (args, methodResult) -> {
             // args
             // ref arg
@@ -2200,6 +2308,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getCoordType", (args, methodResult) -> {
             // args
         
@@ -2219,6 +2328,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setCoordType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2239,6 +2349,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::setTrustedLevel", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2259,6 +2370,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocation::getTrustedLevel", (args, methodResult) -> {
             // args
         
@@ -2278,6 +2390,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::getConScenario", (args, methodResult) -> {
             // args
         
@@ -2297,6 +2410,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocation::setConScenario", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2317,6 +2431,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getAPIKEY", (args, methodResult) -> {
             // args
         
@@ -2335,6 +2450,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isMockEnable", (args, methodResult) -> {
             // args
         
@@ -2354,6 +2470,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setMockEnable", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2381,6 +2498,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getInterval", (args, methodResult) -> {
             // args
         
@@ -2400,6 +2518,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setInterval", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2427,6 +2546,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isOnceLocation", (args, methodResult) -> {
             // args
         
@@ -2446,6 +2566,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setOnceLocation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2473,6 +2594,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isNeedAddress", (args, methodResult) -> {
             // args
         
@@ -2492,6 +2614,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setNeedAddress", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2519,6 +2642,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isWifiActiveScan", (args, methodResult) -> {
             // args
         
@@ -2538,6 +2662,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setWifiActiveScan", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2565,6 +2690,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isWifiScan", (args, methodResult) -> {
             // args
         
@@ -2584,6 +2710,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setWifiScan", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2611,6 +2738,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getLocationMode", (args, methodResult) -> {
             // args
         
@@ -2637,6 +2765,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setLocationMode", (args, methodResult) -> {
             // args
             // enum arg
@@ -2664,6 +2793,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getLocationProtocol", (args, methodResult) -> {
             // args
         
@@ -2690,6 +2820,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setLocationProtocol", (args, methodResult) -> {
             // args
             // enum arg
@@ -2709,6 +2840,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isKillProcess", (args, methodResult) -> {
             // args
         
@@ -2728,6 +2860,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setKillProcess", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2755,6 +2888,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isGpsFirst", (args, methodResult) -> {
             // args
         
@@ -2774,6 +2908,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setGpsFirst", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2801,6 +2936,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2828,6 +2964,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getGpsFirstTimeout", (args, methodResult) -> {
             // args
         
@@ -2847,6 +2984,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::clone", (args, methodResult) -> {
             // args
         
@@ -2873,6 +3011,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getHttpTimeOut", (args, methodResult) -> {
             // args
         
@@ -2892,6 +3031,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setHttpTimeOut", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2919,6 +3059,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isOffset", (args, methodResult) -> {
             // args
         
@@ -2938,6 +3079,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setOffset", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2965,6 +3107,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isLocationCacheEnable", (args, methodResult) -> {
             // args
         
@@ -2984,6 +3127,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3011,6 +3155,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isOnceLocationLatest", (args, methodResult) -> {
             // args
         
@@ -3030,6 +3175,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3057,6 +3203,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isSensorEnable", (args, methodResult) -> {
             // args
         
@@ -3076,6 +3223,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setSensorEnable", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3103,6 +3251,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3130,6 +3279,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getLastLocationLifeCycle", (args, methodResult) -> {
             // args
         
@@ -3149,6 +3299,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getGeoLanguage", (args, methodResult) -> {
             // args
         
@@ -3175,6 +3326,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setGeoLanguage", (args, methodResult) -> {
             // args
             // enum arg
@@ -3202,6 +3354,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3221,6 +3374,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary", (args, methodResult) -> {
             // args
         
@@ -3239,6 +3393,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getDeviceModeDistanceFilter", (args, methodResult) -> {
             // args
         
@@ -3258,6 +3413,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3285,6 +3441,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setLocationPurpose", (args, methodResult) -> {
             // args
             // enum arg
@@ -3312,6 +3469,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getLocationPurpose", (args, methodResult) -> {
             // args
         
@@ -3338,6 +3496,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi", (args, methodResult) -> {
             // args
         
@@ -3356,6 +3515,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3375,6 +3535,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::setScanWifiInterval", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3394,6 +3555,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationClientOption::getScanWifiInterval", (args, methodResult) -> {
             // args
         
@@ -3413,6 +3575,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.APSServiceBase::onCreate", (args, methodResult) -> {
             // args
         
@@ -3432,6 +3595,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.APSServiceBase::onDestroy", (args, methodResult) -> {
             // args
         
@@ -3451,6 +3615,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setWifiAble", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3471,6 +3636,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setGpsStatus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3491,6 +3657,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setGPSSatellites", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3511,6 +3678,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::isWifiAble", (args, methodResult) -> {
             // args
         
@@ -3530,6 +3698,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::getGPSStatus", (args, methodResult) -> {
             // args
         
@@ -3549,6 +3718,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::getGPSSatellites", (args, methodResult) -> {
             // args
         
@@ -3568,6 +3738,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::getNetworkType", (args, methodResult) -> {
             // args
         
@@ -3587,6 +3758,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setNetworkType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3607,6 +3779,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::getNetUseTime", (args, methodResult) -> {
             // args
         
@@ -3626,6 +3799,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setNetUseTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3646,6 +3820,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3666,6 +3841,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::isInstalledHighDangerMockApp", (args, methodResult) -> {
             // args
         
@@ -3685,6 +3861,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::setLocationMode", (args, methodResult) -> {
             // args
             // enum arg
@@ -3705,6 +3882,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.location.AMapLocationQualityReport::getAdviseMessage", (args, methodResult) -> {
             // args
         
@@ -3724,6 +3902,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.DistrictItem::getCitycode", (args, methodResult) -> {
             // args
         
@@ -3743,6 +3922,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.DistrictItem::setCitycode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3763,6 +3943,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.DistrictItem::getAdcode", (args, methodResult) -> {
             // args
         
@@ -3782,6 +3963,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.DistrictItem::setAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3802,6 +3984,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.DistrictItem::getPolyline", (args, methodResult) -> {
             // args
         
@@ -3830,6 +4013,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.DistrictItem::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -3854,6 +4038,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.DistrictItem::getDistrictName", (args, methodResult) -> {
             // args
         
@@ -3873,6 +4058,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.DistrictItem::setDistrictName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3893,6 +4079,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::setActivateAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3913,6 +4100,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::setGeoFenceListener", (args, methodResult) -> {
             // args
         
@@ -3938,12 +4126,15 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                     Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
         
                     // convert to jsonable data
+                    // list arg
                     List<Integer> argvar1 = new ArrayList<>();
                     for (com.amap.api.fence.GeoFence item : var1) {
                         getHEAP().put(item.hashCode(), item);
                         argvar1.add(item.hashCode());
                     }
+                    // jsonable arg
                     int argvar2 = var2;
+                    // jsonable arg
                     String argvar3 = var3;
         
                     // call dart method
@@ -3965,6 +4156,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::addGeoFence", (args, methodResult) -> {
             // args
             // ref arg
@@ -3989,6 +4181,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::removeGeoFence", (args, methodResult) -> {
             // args
         
@@ -4008,6 +4201,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::getAllGeoFence", (args, methodResult) -> {
             // args
         
@@ -4036,6 +4230,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::setGeoFenceAble", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4058,6 +4253,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::pauseGeoFence", (args, methodResult) -> {
             // args
         
@@ -4077,6 +4273,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::resumeGeoFence", (args, methodResult) -> {
             // args
         
@@ -4096,6 +4293,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceClient::isPause", (args, methodResult) -> {
             // args
         
@@ -4115,6 +4313,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished", (args, methodResult) -> {
             // args
             // list arg
@@ -4143,6 +4342,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getFenceId", (args, methodResult) -> {
             // args
         
@@ -4162,6 +4362,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setFenceId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4182,6 +4383,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getCustomId", (args, methodResult) -> {
             // args
         
@@ -4201,6 +4403,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setCustomId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4221,6 +4424,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getPendingIntentAction", (args, methodResult) -> {
             // args
         
@@ -4240,6 +4444,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setPendingIntentAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4260,6 +4465,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getType", (args, methodResult) -> {
             // args
         
@@ -4279,6 +4485,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4299,6 +4506,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getPoiItem", (args, methodResult) -> {
             // args
         
@@ -4325,6 +4533,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.GeoFence::setPoiItem", (args, methodResult) -> {
             // args
             // ref arg
@@ -4345,6 +4554,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getDistrictItemList", (args, methodResult) -> {
             // args
         
@@ -4373,6 +4583,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.GeoFence::setDistrictItemList", (args, methodResult) -> {
             // args
             // list arg
@@ -4397,6 +4608,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getPointList", (args, methodResult) -> {
             // args
         
@@ -4416,6 +4628,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(new ArrayList());
         });
+        // method
         put("com.amap.api.fence.GeoFence::setPointList", (args, methodResult) -> {
             // args
             List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
@@ -4435,6 +4648,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getRadius", (args, methodResult) -> {
             // args
         
@@ -4454,6 +4668,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setRadius", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4474,6 +4689,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getExpiration", (args, methodResult) -> {
             // args
         
@@ -4493,6 +4709,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setExpiration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4513,6 +4730,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getActivatesAction", (args, methodResult) -> {
             // args
         
@@ -4532,6 +4750,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setActivatesAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4552,6 +4771,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getStatus", (args, methodResult) -> {
             // args
         
@@ -4571,6 +4791,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setStatus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4591,6 +4812,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getEnterTime", (args, methodResult) -> {
             // args
         
@@ -4610,6 +4832,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setEnterTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4630,6 +4853,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getCenter", (args, methodResult) -> {
             // args
         
@@ -4656,6 +4880,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.GeoFence::setCenter", (args, methodResult) -> {
             // args
             // ref arg
@@ -4676,6 +4901,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getMinDis2Center", (args, methodResult) -> {
             // args
         
@@ -4695,6 +4921,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setMinDis2Center", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4715,6 +4942,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getMaxDis2Center", (args, methodResult) -> {
             // args
         
@@ -4734,6 +4962,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setMaxDis2Center", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4754,6 +4983,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::isAble", (args, methodResult) -> {
             // args
         
@@ -4773,6 +5003,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.GeoFence::setAble", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4793,6 +5024,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::setCurrentLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -4813,6 +5045,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFence::getCurrentLocation", (args, methodResult) -> {
             // args
         
@@ -4839,6 +5072,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::setActivateAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4859,6 +5093,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener", (args, methodResult) -> {
             // args
         
@@ -4884,12 +5119,15 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                     Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
         
                     // convert to jsonable data
+                    // list arg
                     List<Integer> argvar1 = new ArrayList<>();
                     for (com.amap.api.fence.GeoFence item : var1) {
                         getHEAP().put(item.hashCode(), item);
                         argvar1.add(item.hashCode());
                     }
+                    // jsonable arg
                     int argvar2 = var2;
+                    // jsonable arg
                     String argvar3 = var3;
         
                     // call dart method
@@ -4911,6 +5149,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence", (args, methodResult) -> {
             // args
             // ref arg
@@ -4935,6 +5174,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::addPolygonGeoFence", (args, methodResult) -> {
             // args
             // list arg
@@ -4961,6 +5201,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::addNearbyGeoFence", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4991,6 +5232,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::addKeywordGeoFence", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5019,6 +5261,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::addDistrictGeoFence", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5041,6 +5284,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::removeGeoFence", (args, methodResult) -> {
             // args
         
@@ -5060,6 +5304,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::getAllGeoFence", (args, methodResult) -> {
             // args
         
@@ -5088,6 +5333,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::setGeoFenceAble", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5110,6 +5356,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::pauseGeoFence", (args, methodResult) -> {
             // args
         
@@ -5129,6 +5376,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::resumeGeoFence", (args, methodResult) -> {
             // args
         
@@ -5148,6 +5396,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.GeoFenceManagerBase::isPause", (args, methodResult) -> {
             // args
         
@@ -5167,6 +5416,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::getLatitude", (args, methodResult) -> {
             // args
         
@@ -5186,6 +5436,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setLatitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5206,6 +5457,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getLongitude", (args, methodResult) -> {
             // args
         
@@ -5225,6 +5477,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setLongitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5245,6 +5498,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getPoiId", (args, methodResult) -> {
             // args
         
@@ -5264,6 +5518,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setPoiId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5284,6 +5539,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getPoiType", (args, methodResult) -> {
             // args
         
@@ -5303,6 +5559,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setPoiType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5323,6 +5580,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getTypeCode", (args, methodResult) -> {
             // args
         
@@ -5342,6 +5600,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setTypeCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5362,6 +5621,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getAddress", (args, methodResult) -> {
             // args
         
@@ -5381,6 +5641,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setAddress", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5401,6 +5662,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getTel", (args, methodResult) -> {
             // args
         
@@ -5420,6 +5682,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setTel", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5440,6 +5703,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getProvince", (args, methodResult) -> {
             // args
         
@@ -5459,6 +5723,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5479,6 +5744,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getCity", (args, methodResult) -> {
             // args
         
@@ -5498,6 +5764,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5518,6 +5785,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::getAdname", (args, methodResult) -> {
             // args
         
@@ -5537,6 +5805,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::getPoiName", (args, methodResult) -> {
             // args
         
@@ -5556,6 +5825,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.fence.PoiItem::setPoiName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5576,6 +5846,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.fence.PoiItem::setAdname", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5596,6 +5867,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // result
             methodResult.success("success");
         });
+        // factory
         put("ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_autonavi_aps_amapapi_model_AMapLocationServer__String");
         
@@ -5614,6 +5886,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context");
         
@@ -5632,6 +5905,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_DPoint__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__");
         
@@ -5649,6 +5923,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_DPoint__double__double", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__double__double");
         
@@ -5669,6 +5944,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordinateConverter__android_content_Context");
         
@@ -5687,6 +5963,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_CoordUtil__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordUtil__");
         
@@ -5704,6 +5981,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_UmidtokenInfo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_UmidtokenInfo__");
         
@@ -5721,6 +5999,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_AMapLocation__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__String");
         
@@ -5739,6 +6018,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__android_location_Location");
         
@@ -5757,6 +6037,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClientOption__");
         
@@ -5774,6 +6055,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationQualityReport__");
         
@@ -5791,6 +6073,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_fence_DistrictItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_fence_DistrictItem__");
         
@@ -5808,6 +6091,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFenceClient__android_content_Context");
         
@@ -5826,6 +6110,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_fence_GeoFence__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFence__");
         
@@ -5843,6 +6128,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_fence_PoiItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_fence_PoiItem__");
         
