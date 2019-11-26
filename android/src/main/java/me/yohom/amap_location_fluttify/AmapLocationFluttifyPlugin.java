@@ -3429,7 +3429,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setDeviceModeDistanceFilter(var1.floatValue());
+            com.amap.api.location.AMapLocationClientOption result = ref.setDeviceModeDistanceFilter(new Double(var1).floatValue());
         
             // result
             if (result != null) {
@@ -3594,6 +3594,31 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.location.APSServiceBase::onStartCommand", (args, methodResult) -> {
+            // args
+            // ref arg
+            android.content.Intent var1 = (android.content.Intent) getHEAP().get((int) args.get("var1"));
+            // jsonable arg
+            int var2 = (int) args.get("var2");
+            // jsonable arg
+            int var3 = (int) args.get("var3");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.location.APSServiceBase ref = (com.amap.api.location.APSServiceBase) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.location.APSServiceBase@" + refId + "::onStartCommand(" + var1 + var2 + var3 + ")");
+            }
+        
+            // invoke native method
+            int result = ref.onStartCommand(var1, var2, var3);
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("com.amap.api.location.APSServiceBase::onDestroy", (args, methodResult) -> {
@@ -4176,7 +4201,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addGeoFence(var1, var2.floatValue(), var3);
+            ref.addGeoFence(var1, new Double(var2).floatValue(), var3);
         
             // result
             methodResult.success("success");
@@ -4684,7 +4709,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setRadius(var1.floatValue());
+            ref.setRadius(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -4937,7 +4962,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setMinDis2Center(var1.floatValue());
+            ref.setMinDis2Center(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -4978,7 +5003,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setMaxDis2Center(var1.floatValue());
+            ref.setMaxDis2Center(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -5169,7 +5194,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addRoundGeoFence(var1, var2.floatValue(), var3);
+            ref.addRoundGeoFence(var1, new Double(var2).floatValue(), var3);
         
             // result
             methodResult.success("success");
@@ -5227,7 +5252,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addNearbyGeoFence(var1, var2, var3, var4.floatValue(), var5, var6);
+            ref.addNearbyGeoFence(var1, var2, var3, new Double(var4).floatValue(), var5, var6);
         
             // result
             methodResult.success("success");
@@ -5896,6 +5921,27 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             // create target object
             com.amap.api.location.AMapLocationClient obj = new com.amap.api.location.AMapLocationClient(var1);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent");
+        
+            // args
+            // ref arg
+            android.content.Context var1 = (android.content.Context) getHEAP().get((int) args.get("var1"));
+            // ref arg
+            android.content.Intent var2 = (android.content.Intent) getHEAP().get((int) args.get("var2"));
+        
+            // create target object
+            com.amap.api.location.AMapLocationClient obj = new com.amap.api.location.AMapLocationClient(var1, var2);
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP

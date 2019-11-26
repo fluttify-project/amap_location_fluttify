@@ -18,7 +18,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   
 
   // generate methods
-  static Future<int> convertToGcj(List<double> var0, List<double> var1) async {
+  static Future<int> convertToGcj(Float64List var0, Float64List var1) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.location.CoordUtil::convertToGcj([\'var0\':$var0, \'var1\':$var1])');
