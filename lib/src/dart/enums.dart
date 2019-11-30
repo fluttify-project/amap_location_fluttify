@@ -2,4 +2,5 @@
 enum LocationAccuracy {
   High,
   Low,
+//  DeviceSensor,
 }

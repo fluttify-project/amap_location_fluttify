@@ -25,6 +25,15 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   }
   
   @mustCallSuper
+  Future<int> onStartCommand(android_content_Intent var1, int var2, int var3) {
+    kNativeObjectPool.add(var1);
+  
+    if (!kReleaseMode) {
+      debugPrint('onStartCommand::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
   Future<void> onDestroy() {
   
   
