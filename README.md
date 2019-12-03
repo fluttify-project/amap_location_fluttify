@@ -27,7 +27,7 @@ import 'package:amap_location_fluttify/amap_location_fluttify.dart';
 await AmapCore.init('ios key');
 
 if (await requestPermission()) {
-  await AmapLocation.startLocation(
+  AmapLocation.startLocation(
     once: true,
     locationChanged: (location) {
       _location = location;
