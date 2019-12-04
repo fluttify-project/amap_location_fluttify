@@ -19,7 +19,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setLocationOption::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setLocationListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> startLocation() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('startLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> stopLocation() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('stopLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getLastKnownLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> startAssistantLocation() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('startAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> stopAssistantLocation() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('stopAssistantLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -82,7 +82,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<bool> isStarted() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('isStarted::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -91,7 +91,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('unRegisterLocationListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -100,7 +100,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> onDestroy() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -109,7 +109,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> disableBackgroundLocation(bool var1) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('disableBackgroundLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }

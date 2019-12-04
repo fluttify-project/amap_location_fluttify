@@ -60,7 +60,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onLocationChanged([])');
               }
         
@@ -277,7 +277,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onLocationChanged([])');
               }
         

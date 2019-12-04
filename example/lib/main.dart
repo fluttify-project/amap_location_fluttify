@@ -31,13 +31,8 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('获取单次定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  AmapLocation.startLocation(
-                    once: true,
-                    locationChanged: (location) {
-                      _location = location;
-                      setState(() {});
-                    },
-                  );
+                  final location = await AmapLocation.fetchLocation();
+                  setState(() => _location = location);
                 }
               },
             ),
@@ -45,13 +40,9 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('获取连续定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  AmapLocation.startLocation(
-                    once: false,
-                    locationChanged: (location) {
-                      _location = location;
-                      setState(() {});
-                    },
-                  );
+                  await for (final location in AmapLocation.listenLocation()) {
+                    setState(() => _location = location);
+                  }
                 }
               },
             ),

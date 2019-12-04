@@ -19,7 +19,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> setActivateAction(int var1) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setActivateAction::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setGeoFenceListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> addRoundGeoFence(com_amap_api_location_DPoint var1, double var2, String var3) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('addRoundGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +46,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> addPolygonGeoFence(List<com_amap_api_location_DPoint> var1, String var2) {
     kNativeObjectPool.addAll(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('addPolygonGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +55,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> addNearbyGeoFence(String var1, String var2, com_amap_api_location_DPoint var3, double var4, int var5, String var6) {
     kNativeObjectPool.add(var3);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('addNearbyGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +64,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> addKeywordGeoFence(String var1, String var2, String var3, int var4, String var5) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('addKeywordGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +73,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> addDistrictGeoFence(String var1, String var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('addDistrictGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -82,7 +82,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> removeGeoFence() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('removeGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -91,7 +91,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getAllGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -100,7 +100,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> setGeoFenceAble(String var1, bool var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setGeoFenceAble::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -109,7 +109,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> pauseGeoFence() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('pauseGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -118,7 +118,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<void> resumeGeoFence() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('resumeGeoFence::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -127,7 +127,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   Future<bool> isPause() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('isPause::kNativeObjectPool: $kNativeObjectPool');
     }
   }
