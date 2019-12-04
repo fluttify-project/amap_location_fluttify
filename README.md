@@ -26,14 +26,17 @@ import 'package:amap_location_fluttify/amap_location_fluttify.dart';
 /// 初始化 iOS在init方法中设置, android需要去AndroidManifest.xml里去设置, 详见 https://lbs.amap.com/api/android-sdk/gettingstarted
 await AmapCore.init('ios key');
 
+// 单次定位
 if (await requestPermission()) {
-  AmapLocation.startLocation(
-    once: true,
-    locationChanged: (location) {
-      _location = location;
-      setState(() {});
-    },
-  );
+  final location = await AmapLocation.fetchLocation();
+  setState(() => _location = location);
+}
+
+// 连续定位
+if (await requestPermission()) {
+  await for (final location in AmapLocation.listenLocation()) {
+    setState(() => _location = location);
+  }
 }
 ```
 
