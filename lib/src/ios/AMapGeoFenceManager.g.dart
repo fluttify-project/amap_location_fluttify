@@ -50,7 +50,7 @@ class AMapGeoFenceManager extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapGeoFenceManagerDoRequireLocationAuth([])');
             }
         
@@ -59,7 +59,7 @@ class AMapGeoFenceManager extends NSObject  {
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror([\'customID\':$args[customID]])');
             }
         
@@ -68,7 +68,7 @@ class AMapGeoFenceManager extends NSObject  {
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror([\'customID\':$args[customID]])');
             }
         

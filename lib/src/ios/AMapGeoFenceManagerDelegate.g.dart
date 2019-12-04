@@ -20,7 +20,7 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(locationManager);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapGeoFenceManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -31,7 +31,7 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
     kNativeObjectPool.addAll(regions);
     kNativeObjectPool.add(error);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -42,7 +42,7 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
     kNativeObjectPool.add(region);
     kNativeObjectPool.add(error);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror::kNativeObjectPool: $kNativeObjectPool');
     }
   }

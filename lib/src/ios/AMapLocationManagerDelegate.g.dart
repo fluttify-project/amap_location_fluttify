@@ -20,7 +20,7 @@ mixin AMapLocationManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(locationManager);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -30,7 +30,7 @@ mixin AMapLocationManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(error);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerDidFailWithError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -40,7 +40,7 @@ mixin AMapLocationManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(location);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerDidUpdateLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -51,7 +51,7 @@ mixin AMapLocationManagerDelegate on NSObject {
     kNativeObjectPool.add(location);
     kNativeObjectPool.add(reGeocode);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerDidUpdateLocationreGeocode::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -60,7 +60,7 @@ mixin AMapLocationManagerDelegate on NSObject {
   Future<void> amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
     kNativeObjectPool.add(manager);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerDidChangeAuthorizationStatus::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -69,7 +69,7 @@ mixin AMapLocationManagerDelegate on NSObject {
   Future<bool> amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager manager) {
     kNativeObjectPool.add(manager);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerShouldDisplayHeadingCalibration::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -79,7 +79,7 @@ mixin AMapLocationManagerDelegate on NSObject {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(newHeading);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerDidUpdateHeading::kNativeObjectPool: $kNativeObjectPool');
     }
   }

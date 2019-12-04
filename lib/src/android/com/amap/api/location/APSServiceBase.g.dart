@@ -19,7 +19,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   Future<void> onCreate() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCreate::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +28,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   Future<int> onStartCommand(android_content_Intent var1, int var2, int var3) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onStartCommand::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +37,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   Future<void> onDestroy() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onDestroy::kNativeObjectPool: $kNativeObjectPool');
     }
   }

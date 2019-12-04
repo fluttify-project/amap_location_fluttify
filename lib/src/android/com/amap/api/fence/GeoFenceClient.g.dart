@@ -60,7 +60,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':$args[var2], \'var3\':$args[var3]])');
               }
         

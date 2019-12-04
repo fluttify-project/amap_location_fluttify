@@ -80,7 +80,7 @@ class AMapLocationManager extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerDoRequireLocationAuth([])');
             }
         
@@ -89,7 +89,7 @@ class AMapLocationManager extends NSObject  {
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidFailWithError':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerDidFailWithError([])');
             }
         
@@ -98,7 +98,7 @@ class AMapLocationManager extends NSObject  {
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerDidUpdateLocation([])');
             }
         
@@ -107,7 +107,7 @@ class AMapLocationManager extends NSObject  {
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerDidUpdateLocationreGeocode([])');
             }
         
@@ -116,7 +116,7 @@ class AMapLocationManager extends NSObject  {
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerDidChangeAuthorizationStatus([])');
             }
         
@@ -125,7 +125,7 @@ class AMapLocationManager extends NSObject  {
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
             }
         
@@ -134,7 +134,7 @@ class AMapLocationManager extends NSObject  {
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: amapLocationManagerDidUpdateHeading([])');
             }
         
@@ -311,7 +311,7 @@ class AMapLocationManager extends NSObject  {
           switch (methodCall.method) {
             case 'Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
         
               }
         

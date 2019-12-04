@@ -44,7 +44,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.toStr();
+            String result;
+            try {
+                result = ref.toStr();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -65,7 +72,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationOption(var1);
+            try {
+                ref.setLocationOption(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -85,7 +98,8 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
+            try {
+                ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.LocationManagerBase::setLocationListener::Callback");
         
@@ -113,6 +127,11 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -132,7 +151,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.startLocation();
+            try {
+                ref.startLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -152,7 +177,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.stopLocation();
+            try {
+                ref.stopLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -172,7 +203,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocation result = ref.getLastKnownLocation();
+            com.amap.api.location.AMapLocation result;
+            try {
+                result = ref.getLastKnownLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -199,7 +237,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.startAssistantLocation();
+            try {
+                ref.startAssistantLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -219,7 +263,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.stopAssistantLocation();
+            try {
+                ref.stopAssistantLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -239,7 +289,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isStarted();
+            boolean result;
+            try {
+                result = ref.isStarted();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -259,7 +316,8 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
+            try {
+                ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.LocationManagerBase::unRegisterLocationListener::Callback");
         
@@ -287,6 +345,11 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -306,7 +369,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.onDestroy();
+            try {
+                ref.onDestroy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -327,7 +396,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.disableBackgroundLocation(var1);
+            try {
+                ref.disableBackgroundLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -348,7 +423,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationOption(var1);
+            try {
+                ref.setLocationOption(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -368,7 +449,8 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
+            try {
+                ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.AMapLocationClient::setLocationListener::Callback");
         
@@ -396,6 +478,11 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -415,7 +502,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.startLocation();
+            try {
+                ref.startLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -435,7 +528,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.stopLocation();
+            try {
+                ref.stopLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -455,7 +554,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocation result = ref.getLastKnownLocation();
+            com.amap.api.location.AMapLocation result;
+            try {
+                result = ref.getLastKnownLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -482,7 +588,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.startAssistantLocation();
+            try {
+                ref.startAssistantLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -502,7 +614,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.stopAssistantLocation();
+            try {
+                ref.stopAssistantLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -522,7 +640,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getVersion();
+            String result;
+            try {
+                result = ref.getVersion();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -542,7 +667,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClient.setApiKey(var0);
+            try {
+                com.amap.api.location.AMapLocationClient.setApiKey(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -562,7 +693,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isStarted();
+            boolean result;
+            try {
+                result = ref.isStarted();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -582,7 +720,8 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
+            try {
+                ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback");
         
@@ -610,6 +749,11 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -629,7 +773,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.onDestroy();
+            try {
+                ref.onDestroy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -650,7 +800,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.disableBackgroundLocation(var1);
+            try {
+                ref.disableBackgroundLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -670,7 +826,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = com.amap.api.location.AMapLocationClient.getDeviceId(var0);
+            String result;
+            try {
+                result = com.amap.api.location.AMapLocationClient.getDeviceId(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -691,7 +854,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.onLocationChanged(var1);
+            try {
+                ref.onLocationChanged(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -711,7 +880,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getLongitude();
+            double result;
+            try {
+                result = ref.getLongitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -732,7 +908,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLongitude(var1);
+            try {
+                ref.setLongitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -752,7 +934,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getLatitude();
+            double result;
+            try {
+                result = ref.getLatitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -773,7 +962,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLatitude(var1);
+            try {
+                ref.setLatitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -794,7 +989,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.CoordinateConverter result = ref.from(var1);
+            com.amap.api.location.CoordinateConverter result;
+            try {
+                result = ref.from(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -822,7 +1024,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.CoordinateConverter result = ref.coord(var1);
+            com.amap.api.location.CoordinateConverter result;
+            try {
+                result = ref.coord(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -849,7 +1058,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.DPoint result = ref.convert();
+            com.amap.api.location.DPoint result;
+            try {
+                result = ref.convert();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -878,7 +1094,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = com.amap.api.location.CoordinateConverter.isAMapDataAvailable(var0, var2);
+            boolean result;
+            try {
+                result = com.amap.api.location.CoordinateConverter.isAMapDataAvailable(var0, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -900,7 +1123,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = com.amap.api.location.CoordinateConverter.calculateLineDistance(var0, var1);
+            float result;
+            try {
+                result = com.amap.api.location.CoordinateConverter.calculateLineDistance(var0, var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -922,7 +1152,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = com.amap.api.location.CoordUtil.convertToGcj(var0, var1);
+            int result;
+            try {
+                result = com.amap.api.location.CoordUtil.convertToGcj(var0, var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -941,7 +1178,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = com.amap.api.location.CoordUtil.isLoadedSo();
+            boolean result;
+            try {
+                result = com.amap.api.location.CoordUtil.isLoadedSo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -961,7 +1205,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.CoordUtil.setLoadedSo(var0);
+            try {
+                com.amap.api.location.CoordUtil.setLoadedSo(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -981,7 +1231,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getValue();
+            int result;
+            try {
+                result = ref.getValue();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1000,7 +1257,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = com.amap.api.location.UmidtokenInfo.getUmidtoken();
+            String result;
+            try {
+                result = com.amap.api.location.UmidtokenInfo.getUmidtoken();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1020,7 +1284,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.UmidtokenInfo.setLocAble(var0);
+            try {
+                com.amap.api.location.UmidtokenInfo.setLocAble(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1042,7 +1312,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.UmidtokenInfo.setUmidtoken(var0, var1);
+            try {
+                com.amap.api.location.UmidtokenInfo.setUmidtoken(var0, var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1062,7 +1338,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getGpsAccuracyStatus();
+            int result;
+            try {
+                result = ref.getGpsAccuracyStatus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1083,7 +1366,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGpsAccuracyStatus(var1);
+            try {
+                ref.setGpsAccuracyStatus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1103,7 +1392,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getLocationType();
+            int result;
+            try {
+                result = ref.getLocationType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1124,7 +1420,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationType(var1);
+            try {
+                ref.setLocationType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1144,7 +1446,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getLocationDetail();
+            String result;
+            try {
+                result = ref.getLocationDetail();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1165,7 +1474,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationDetail(var1);
+            try {
+                ref.setLocationDetail(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1185,7 +1500,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getErrorCode();
+            int result;
+            try {
+                result = ref.getErrorCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1206,7 +1528,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setErrorCode(var1);
+            try {
+                ref.setErrorCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1226,7 +1554,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getErrorInfo();
+            String result;
+            try {
+                result = ref.getErrorInfo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1247,7 +1582,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setErrorInfo(var1);
+            try {
+                ref.setErrorInfo(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1267,7 +1608,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCountry();
+            String result;
+            try {
+                result = ref.getCountry();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1288,7 +1636,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCountry(var1);
+            try {
+                ref.setCountry(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1308,7 +1662,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getRoad();
+            String result;
+            try {
+                result = ref.getRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1329,7 +1690,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setRoad(var1);
+            try {
+                ref.setRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1349,7 +1716,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAddress();
+            String result;
+            try {
+                result = ref.getAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1370,7 +1744,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAddress(var1);
+            try {
+                ref.setAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1390,7 +1770,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getProvince();
+            String result;
+            try {
+                result = ref.getProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1411,7 +1798,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setProvince(var1);
+            try {
+                ref.setProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1431,7 +1824,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1452,7 +1852,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1472,7 +1878,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getDistrict();
+            String result;
+            try {
+                result = ref.getDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1493,7 +1906,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setDistrict(var1);
+            try {
+                ref.setDistrict(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1513,7 +1932,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1534,7 +1960,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1554,7 +1986,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1575,7 +2014,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1595,7 +2040,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getPoiName();
+            String result;
+            try {
+                result = ref.getPoiName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1616,7 +2068,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPoiName(var1);
+            try {
+                ref.setPoiName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1636,7 +2094,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getLatitude();
+            double result;
+            try {
+                result = ref.getLatitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1657,7 +2122,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLatitude(var1);
+            try {
+                ref.setLatitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1677,7 +2148,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getLongitude();
+            double result;
+            try {
+                result = ref.getLongitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1698,7 +2176,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLongitude(var1);
+            try {
+                ref.setLongitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1718,7 +2202,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getSatellites();
+            int result;
+            try {
+                result = ref.getSatellites();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1739,7 +2230,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setSatellites(var1);
+            try {
+                ref.setSatellites(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1759,7 +2256,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getStreet();
+            String result;
+            try {
+                result = ref.getStreet();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1780,7 +2284,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setStreet(var1);
+            try {
+                ref.setStreet(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1800,7 +2310,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getStreetNum();
+            String result;
+            try {
+                result = ref.getStreetNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1821,7 +2338,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setNumber(var1);
+            try {
+                ref.setNumber(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1842,7 +2365,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setOffset(var1);
+            try {
+                ref.setOffset(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1862,7 +2391,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isOffset();
+            boolean result;
+            try {
+                result = ref.isOffset();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1882,7 +2418,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAoiName();
+            String result;
+            try {
+                result = ref.getAoiName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1903,7 +2446,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAoiName(var1);
+            try {
+                ref.setAoiName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1923,7 +2472,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getBuildingId();
+            String result;
+            try {
+                result = ref.getBuildingId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1944,7 +2500,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setBuildingId(var1);
+            try {
+                ref.setBuildingId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1964,7 +2526,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getFloor();
+            String result;
+            try {
+                result = ref.getFloor();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1984,7 +2553,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isFixLastLocation();
+            boolean result;
+            try {
+                result = ref.isFixLastLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2005,7 +2581,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setFixLastLocation(var1);
+            try {
+                ref.setFixLastLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2026,7 +2608,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setFloor(var1);
+            try {
+                ref.setFloor(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2046,7 +2634,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isMock();
+            boolean result;
+            try {
+                result = ref.isMock();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2067,7 +2662,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setMock(var1);
+            try {
+                ref.setMock(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2087,7 +2688,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getDescription();
+            String result;
+            try {
+                result = ref.getDescription();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2108,7 +2716,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setDescription(var1);
+            try {
+                ref.setDescription(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2128,7 +2742,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.toStr();
+            String result;
+            try {
+                result = ref.toStr();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2148,7 +2769,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getAccuracy();
+            float result;
+            try {
+                result = ref.getAccuracy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2168,7 +2796,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getBearing();
+            float result;
+            try {
+                result = ref.getBearing();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2188,7 +2823,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getAltitude();
+            double result;
+            try {
+                result = ref.getAltitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2208,7 +2850,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getSpeed();
+            float result;
+            try {
+                result = ref.getSpeed();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2228,7 +2877,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getProvider();
+            String result;
+            try {
+                result = ref.getProvider();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2248,7 +2904,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocation result = ref.clone();
+            com.amap.api.location.AMapLocation result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2275,7 +2938,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationQualityReport result = ref.getLocationQualityReport();
+            com.amap.api.location.AMapLocationQualityReport result;
+            try {
+                result = ref.getLocationQualityReport();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2303,7 +2973,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationQualityReport(var1);
+            try {
+                ref.setLocationQualityReport(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2323,7 +2999,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCoordType();
+            String result;
+            try {
+                result = ref.getCoordType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2344,7 +3027,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCoordType(var1);
+            try {
+                ref.setCoordType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2365,7 +3054,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setTrustedLevel(var1);
+            try {
+                ref.setTrustedLevel(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2385,7 +3080,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getTrustedLevel();
+            int result;
+            try {
+                result = ref.getTrustedLevel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2405,7 +3107,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getConScenario();
+            int result;
+            try {
+                result = ref.getConScenario();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2426,7 +3135,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setConScenario(var1);
+            try {
+                ref.setConScenario(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2445,7 +3160,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = com.amap.api.location.AMapLocationClientOption.getAPIKEY();
+            String result;
+            try {
+                result = com.amap.api.location.AMapLocationClientOption.getAPIKEY();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2465,7 +3187,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isMockEnable();
+            boolean result;
+            try {
+                result = ref.isMockEnable();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2486,7 +3215,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setMockEnable(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setMockEnable(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2513,7 +3249,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getInterval();
+            long result;
+            try {
+                result = ref.getInterval();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2534,7 +3277,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setInterval(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setInterval(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2561,7 +3311,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isOnceLocation();
+            boolean result;
+            try {
+                result = ref.isOnceLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2582,7 +3339,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setOnceLocation(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setOnceLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2609,7 +3373,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isNeedAddress();
+            boolean result;
+            try {
+                result = ref.isNeedAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2630,7 +3401,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setNeedAddress(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setNeedAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2657,7 +3435,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isWifiActiveScan();
+            boolean result;
+            try {
+                result = ref.isWifiActiveScan();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2678,7 +3463,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setWifiActiveScan(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setWifiActiveScan(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2705,7 +3497,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isWifiScan();
+            boolean result;
+            try {
+                result = ref.isWifiScan();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2726,7 +3525,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setWifiScan(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setWifiScan(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2753,7 +3559,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.AMapLocationMode result = ref.getLocationMode();
+            com.amap.api.location.AMapLocationClientOption.AMapLocationMode result;
+            try {
+                result = ref.getLocationMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2781,7 +3594,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setLocationMode(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setLocationMode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2808,7 +3628,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol result = ref.getLocationProtocol();
+            com.amap.api.location.AMapLocationClientOption.AMapLocationProtocol result;
+            try {
+                result = ref.getLocationProtocol();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2835,7 +3662,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.setLocationProtocol(var0);
+            try {
+                com.amap.api.location.AMapLocationClientOption.setLocationProtocol(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2855,7 +3688,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isKillProcess();
+            boolean result;
+            try {
+                result = ref.isKillProcess();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2876,7 +3716,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setKillProcess(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setKillProcess(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2903,7 +3750,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isGpsFirst();
+            boolean result;
+            try {
+                result = ref.isGpsFirst();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2924,7 +3778,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setGpsFirst(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setGpsFirst(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2952,7 +3813,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setGpsFirstTimeout(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setGpsFirstTimeout(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2979,7 +3847,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getGpsFirstTimeout();
+            long result;
+            try {
+                result = ref.getGpsFirstTimeout();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2999,7 +3874,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.clone();
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3026,7 +3908,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getHttpTimeOut();
+            long result;
+            try {
+                result = ref.getHttpTimeOut();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3047,7 +3936,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setHttpTimeOut(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setHttpTimeOut(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3074,7 +3970,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isOffset();
+            boolean result;
+            try {
+                result = ref.isOffset();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3095,7 +3998,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setOffset(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setOffset(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3122,7 +4032,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isLocationCacheEnable();
+            boolean result;
+            try {
+                result = ref.isLocationCacheEnable();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3143,7 +4060,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setLocationCacheEnable(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setLocationCacheEnable(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3170,7 +4094,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isOnceLocationLatest();
+            boolean result;
+            try {
+                result = ref.isOnceLocationLatest();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3191,7 +4122,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setOnceLocationLatest(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setOnceLocationLatest(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3218,7 +4156,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isSensorEnable();
+            boolean result;
+            try {
+                result = ref.isSensorEnable();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3239,7 +4184,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setSensorEnable(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setSensorEnable(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3267,7 +4219,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setLastLocationLifeCycle(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setLastLocationLifeCycle(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3294,7 +4253,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getLastLocationLifeCycle();
+            long result;
+            try {
+                result = ref.getLastLocationLifeCycle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3314,7 +4280,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.GeoLanguage result = ref.getGeoLanguage();
+            com.amap.api.location.AMapLocationClientOption.GeoLanguage result;
+            try {
+                result = ref.getGeoLanguage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3342,7 +4315,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setGeoLanguage(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setGeoLanguage(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3369,7 +4349,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.setDownloadCoordinateConvertLibrary(var0);
+            try {
+                com.amap.api.location.AMapLocationClientOption.setDownloadCoordinateConvertLibrary(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3388,7 +4374,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = com.amap.api.location.AMapLocationClientOption.isDownloadCoordinateConvertLibrary();
+            boolean result;
+            try {
+                result = com.amap.api.location.AMapLocationClientOption.isDownloadCoordinateConvertLibrary();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3408,7 +4401,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getDeviceModeDistanceFilter();
+            float result;
+            try {
+                result = ref.getDeviceModeDistanceFilter();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3429,7 +4429,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setDeviceModeDistanceFilter(new Double(var1).floatValue());
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setDeviceModeDistanceFilter(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3457,7 +4464,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption result = ref.setLocationPurpose(var1);
+            com.amap.api.location.AMapLocationClientOption result;
+            try {
+                result = ref.setLocationPurpose(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3484,7 +4498,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.AMapLocationPurpose result = ref.getLocationPurpose();
+            com.amap.api.location.AMapLocationClientOption.AMapLocationPurpose result;
+            try {
+                result = ref.getLocationPurpose();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3510,7 +4531,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = com.amap.api.location.AMapLocationClientOption.isOpenAlwaysScanWifi();
+            boolean result;
+            try {
+                result = com.amap.api.location.AMapLocationClientOption.isOpenAlwaysScanWifi();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3530,7 +4558,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.setOpenAlwaysScanWifi(var0);
+            try {
+                com.amap.api.location.AMapLocationClientOption.setOpenAlwaysScanWifi(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3550,7 +4584,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocationClientOption.setScanWifiInterval(var0);
+            try {
+                com.amap.api.location.AMapLocationClientOption.setScanWifiInterval(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3570,7 +4610,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getScanWifiInterval();
+            long result;
+            try {
+                result = ref.getScanWifiInterval();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3590,7 +4637,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.onCreate();
+            try {
+                ref.onCreate();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3615,7 +4668,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.onStartCommand(var1, var2, var3);
+            int result;
+            try {
+                result = ref.onStartCommand(var1, var2, var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3635,7 +4695,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.onDestroy();
+            try {
+                ref.onDestroy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3656,7 +4722,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setWifiAble(var1);
+            try {
+                ref.setWifiAble(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3677,7 +4749,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGpsStatus(var1);
+            try {
+                ref.setGpsStatus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3698,7 +4776,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGPSSatellites(var1);
+            try {
+                ref.setGPSSatellites(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3718,7 +4802,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isWifiAble();
+            boolean result;
+            try {
+                result = ref.isWifiAble();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3738,7 +4829,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getGPSStatus();
+            int result;
+            try {
+                result = ref.getGPSStatus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3758,7 +4856,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getGPSSatellites();
+            int result;
+            try {
+                result = ref.getGPSSatellites();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3778,7 +4883,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getNetworkType();
+            String result;
+            try {
+                result = ref.getNetworkType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3799,7 +4911,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setNetworkType(var1);
+            try {
+                ref.setNetworkType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3819,7 +4937,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getNetUseTime();
+            long result;
+            try {
+                result = ref.getNetUseTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3840,7 +4965,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setNetUseTime(var1);
+            try {
+                ref.setNetUseTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3861,7 +4992,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setInstallHighDangerMockApp(var1);
+            try {
+                ref.setInstallHighDangerMockApp(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3881,7 +5018,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isInstalledHighDangerMockApp();
+            boolean result;
+            try {
+                result = ref.isInstalledHighDangerMockApp();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3902,7 +5046,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLocationMode(var1);
+            try {
+                ref.setLocationMode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3922,7 +5072,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAdviseMessage();
+            String result;
+            try {
+                result = ref.getAdviseMessage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3942,7 +5099,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCitycode();
+            String result;
+            try {
+                result = ref.getCitycode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3963,7 +5127,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCitycode(var1);
+            try {
+                ref.setCitycode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3983,7 +5153,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAdcode();
+            String result;
+            try {
+                result = ref.getAdcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4004,7 +5181,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAdcode(var1);
+            try {
+                ref.setAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4024,7 +5207,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            List<com.amap.api.location.DPoint> result = ref.getPolyline();
+            List<com.amap.api.location.DPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4058,7 +5248,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4078,7 +5274,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getDistrictName();
+            String result;
+            try {
+                result = ref.getDistrictName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4099,7 +5302,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setDistrictName(var1);
+            try {
+                ref.setDistrictName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4120,7 +5329,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setActivateAction(var1);
+            try {
+                ref.setActivateAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4140,7 +5355,8 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
+            try {
+                ref.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback");
         
@@ -4177,6 +5393,11 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4201,7 +5422,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addGeoFence(var1, new Double(var2).floatValue(), var3);
+            try {
+                ref.addGeoFence(var1, new Double(var2).floatValue(), var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4221,7 +5448,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.removeGeoFence();
+            try {
+                ref.removeGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4241,7 +5474,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            List<com.amap.api.fence.GeoFence> result = ref.getAllGeoFence();
+            List<com.amap.api.fence.GeoFence> result;
+            try {
+                result = ref.getAllGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4273,7 +5513,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGeoFenceAble(var1, var2);
+            try {
+                ref.setGeoFenceAble(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4293,7 +5539,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.pauseGeoFence();
+            try {
+                ref.pauseGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4313,7 +5565,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.resumeGeoFence();
+            try {
+                ref.resumeGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4333,7 +5591,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isPause();
+            boolean result;
+            try {
+                result = ref.isPause();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4362,7 +5627,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.onGeoFenceCreateFinished(new ArrayList(var1), var2, var3);
+            try {
+                ref.onGeoFenceCreateFinished(new ArrayList(var1), var2, var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4382,7 +5653,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getFenceId();
+            String result;
+            try {
+                result = ref.getFenceId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4403,7 +5681,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setFenceId(var1);
+            try {
+                ref.setFenceId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4423,7 +5707,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCustomId();
+            String result;
+            try {
+                result = ref.getCustomId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4444,7 +5735,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCustomId(var1);
+            try {
+                ref.setCustomId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4464,7 +5761,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getPendingIntentAction();
+            String result;
+            try {
+                result = ref.getPendingIntentAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4485,7 +5789,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPendingIntentAction(var1);
+            try {
+                ref.setPendingIntentAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4505,7 +5815,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getType();
+            int result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4526,7 +5843,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setType(var1);
+            try {
+                ref.setType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4546,7 +5869,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.fence.PoiItem result = ref.getPoiItem();
+            com.amap.api.fence.PoiItem result;
+            try {
+                result = ref.getPoiItem();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4574,7 +5904,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPoiItem(var1);
+            try {
+                ref.setPoiItem(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4594,7 +5930,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            List<com.amap.api.fence.DistrictItem> result = ref.getDistrictItemList();
+            List<com.amap.api.fence.DistrictItem> result;
+            try {
+                result = ref.getDistrictItemList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4628,7 +5971,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setDistrictItemList(new ArrayList(var1));
+            try {
+                ref.setDistrictItemList(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4648,7 +5997,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            List<List<com.amap.api.location.DPoint>> result = ref.getPointList();
+            List<List<com.amap.api.location.DPoint>> result;
+            try {
+                result = ref.getPointList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(new ArrayList());
@@ -4668,7 +6024,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPointList(new ArrayList(var1));
+            try {
+                ref.setPointList(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4688,7 +6050,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getRadius();
+            float result;
+            try {
+                result = ref.getRadius();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4709,7 +6078,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setRadius(new Double(var1).floatValue());
+            try {
+                ref.setRadius(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4729,7 +6104,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getExpiration();
+            long result;
+            try {
+                result = ref.getExpiration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4750,7 +6132,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setExpiration(var1);
+            try {
+                ref.setExpiration(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4770,7 +6158,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getActivatesAction();
+            int result;
+            try {
+                result = ref.getActivatesAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4791,7 +6186,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setActivatesAction(var1);
+            try {
+                ref.setActivatesAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4811,7 +6212,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            int result = ref.getStatus();
+            int result;
+            try {
+                result = ref.getStatus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4832,7 +6240,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setStatus(var1);
+            try {
+                ref.setStatus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4852,7 +6266,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            long result = ref.getEnterTime();
+            long result;
+            try {
+                result = ref.getEnterTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4873,7 +6294,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setEnterTime(var1);
+            try {
+                ref.setEnterTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4893,7 +6320,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.DPoint result = ref.getCenter();
+            com.amap.api.location.DPoint result;
+            try {
+                result = ref.getCenter();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4921,7 +6355,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCenter(var1);
+            try {
+                ref.setCenter(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4941,7 +6381,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getMinDis2Center();
+            float result;
+            try {
+                result = ref.getMinDis2Center();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4962,7 +6409,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setMinDis2Center(new Double(var1).floatValue());
+            try {
+                ref.setMinDis2Center(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4982,7 +6435,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            float result = ref.getMaxDis2Center();
+            float result;
+            try {
+                result = ref.getMaxDis2Center();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5003,7 +6463,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setMaxDis2Center(new Double(var1).floatValue());
+            try {
+                ref.setMaxDis2Center(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5023,7 +6489,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isAble();
+            boolean result;
+            try {
+                result = ref.isAble();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5044,7 +6517,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAble(var1);
+            try {
+                ref.setAble(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5065,7 +6544,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCurrentLocation(var1);
+            try {
+                ref.setCurrentLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5085,7 +6570,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            com.amap.api.location.AMapLocation result = ref.getCurrentLocation();
+            com.amap.api.location.AMapLocation result;
+            try {
+                result = ref.getCurrentLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5113,7 +6605,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setActivateAction(var1);
+            try {
+                ref.setActivateAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5133,7 +6631,8 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
+            try {
+                ref.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener::Callback");
         
@@ -5170,6 +6669,11 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5194,7 +6698,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addRoundGeoFence(var1, new Double(var2).floatValue(), var3);
+            try {
+                ref.addRoundGeoFence(var1, new Double(var2).floatValue(), var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5221,7 +6731,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addPolygonGeoFence(new ArrayList(var1), var2);
+            try {
+                ref.addPolygonGeoFence(new ArrayList(var1), var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5252,7 +6768,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addNearbyGeoFence(var1, var2, var3, new Double(var4).floatValue(), var5, var6);
+            try {
+                ref.addNearbyGeoFence(var1, var2, var3, new Double(var4).floatValue(), var5, var6);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5281,7 +6803,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addKeywordGeoFence(var1, var2, var3, var4, var5);
+            try {
+                ref.addKeywordGeoFence(var1, var2, var3, var4, var5);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5304,7 +6832,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.addDistrictGeoFence(var1, var2);
+            try {
+                ref.addDistrictGeoFence(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5324,7 +6858,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.removeGeoFence();
+            try {
+                ref.removeGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5344,7 +6884,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            List<com.amap.api.fence.GeoFence> result = ref.getAllGeoFence();
+            List<com.amap.api.fence.GeoFence> result;
+            try {
+                result = ref.getAllGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5376,7 +6923,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setGeoFenceAble(var1, var2);
+            try {
+                ref.setGeoFenceAble(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5396,7 +6949,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.pauseGeoFence();
+            try {
+                ref.pauseGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5416,7 +6975,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.resumeGeoFence();
+            try {
+                ref.resumeGeoFence();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5436,7 +7001,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            boolean result = ref.isPause();
+            boolean result;
+            try {
+                result = ref.isPause();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5456,7 +7028,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getLatitude();
+            double result;
+            try {
+                result = ref.getLatitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5477,7 +7056,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLatitude(var1);
+            try {
+                ref.setLatitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5497,7 +7082,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            double result = ref.getLongitude();
+            double result;
+            try {
+                result = ref.getLongitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5518,7 +7110,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setLongitude(var1);
+            try {
+                ref.setLongitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5538,7 +7136,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getPoiId();
+            String result;
+            try {
+                result = ref.getPoiId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5559,7 +7164,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPoiId(var1);
+            try {
+                ref.setPoiId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5579,7 +7190,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getPoiType();
+            String result;
+            try {
+                result = ref.getPoiType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5600,7 +7218,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPoiType(var1);
+            try {
+                ref.setPoiType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5620,7 +7244,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getTypeCode();
+            String result;
+            try {
+                result = ref.getTypeCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5641,7 +7272,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setTypeCode(var1);
+            try {
+                ref.setTypeCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5661,7 +7298,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAddress();
+            String result;
+            try {
+                result = ref.getAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5682,7 +7326,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAddress(var1);
+            try {
+                ref.setAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5702,7 +7352,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getTel();
+            String result;
+            try {
+                result = ref.getTel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5723,7 +7380,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setTel(var1);
+            try {
+                ref.setTel(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5743,7 +7406,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getProvince();
+            String result;
+            try {
+                result = ref.getProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5764,7 +7434,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setProvince(var1);
+            try {
+                ref.setProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5784,7 +7460,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5805,7 +7488,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5825,7 +7514,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getAdname();
+            String result;
+            try {
+                result = ref.getAdname();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5845,7 +7541,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            String result = ref.getPoiName();
+            String result;
+            try {
+                result = ref.getPoiName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5866,7 +7569,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setPoiName(var1);
+            try {
+                ref.setPoiName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5887,7 +7596,13 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             }
         
             // invoke native method
-            ref.setAdname(var1);
+            try {
+                ref.setAdname(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
