@@ -1,3 +1,6 @@
+## 0.4.0
+- enhance: [breaking change] 单次和连续定位单独实现，并返回Future和Stream
+
 ## 0.3.2
 - 解决依赖冲突
 
