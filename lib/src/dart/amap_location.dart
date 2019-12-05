@@ -58,8 +58,11 @@ class AmapLocation {
         // 设置回调
         await _androidClient.setLocationListener(
           _androidLocationDelegate
-            .._onLocationChanged =
-                (location) => completer.complete(Location.android(location)),
+            .._onLocationChanged = (location) {
+              if (!completer.isCompleted) {
+                completer.complete(Location.android(location));
+              }
+            },
         );
 
         // 创建选项
@@ -117,7 +120,9 @@ class AmapLocation {
         await _iosClient.requestLocationWithReGeocodeCompletionBlock(
           needAddress ?? true,
           (location, regeocode, error) {
-            completer.complete(Location.ios(location, regeocode));
+            if (!completer.isCompleted) {
+              completer.complete(Location.ios(location, regeocode));
+            }
           },
         );
         return completer.future;
