@@ -51,6 +51,7 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               onPressed: () async {
                 if (await requestPermission()) {
                   await AmapLocation.stopLocation();
+                  setState(() => _location = null);
                 }
               },
             ),
