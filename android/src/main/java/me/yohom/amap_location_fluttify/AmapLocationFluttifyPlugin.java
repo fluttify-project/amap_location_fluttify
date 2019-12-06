@@ -107,7 +107,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 @Override
                 public void onLocationChanged(com.amap.api.location.AMapLocation var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -325,7 +327,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 @Override
                 public void onLocationChanged(com.amap.api.location.AMapLocation var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -458,7 +462,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 @Override
                 public void onLocationChanged(com.amap.api.location.AMapLocation var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -729,7 +735,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 @Override
                 public void onLocationChanged(com.amap.api.location.AMapLocation var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -5364,7 +5372,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 @Override
                 public void onGeoFenceCreateFinished(List<com.amap.api.fence.GeoFence> var1, int var2, String var3) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
+                    }
         
                     // convert to jsonable data
                     // list arg
@@ -5981,33 +5991,6 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             // result
             methodResult.success("success");
-        });
-        // method
-        put("com.amap.api.fence.GeoFence::getPointList", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getPointList(" + "" + ")");
-            }
-        
-            // invoke native method
-            List<List<com.amap.api.location.DPoint>> result;
-            try {
-                result = ref.getPointList();
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success(new ArrayList());
         });
         // method
         put("com.amap.api.fence.GeoFence::setPointList", (args, methodResult) -> {
@@ -6640,7 +6623,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 @Override
                 public void onGeoFenceCreateFinished(List<com.amap.api.fence.GeoFence> var1, int var2, String var3) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
+                    }
         
                     // convert to jsonable data
                     // list arg
