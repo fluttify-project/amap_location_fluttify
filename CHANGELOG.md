@@ -1,3 +1,6 @@
+## 0.4.1
+- fix: 单次定位防止重复订阅
+
 ## 0.4.0
 - enhance: [breaking change] 单次和连续定位单独实现，并返回Future和Stream
 
