@@ -33,8 +33,8 @@ class AmapLocation {
 
   static StreamController<Location> _locationController;
 
-  static final _iosLocationDelegate = _IOSLocationDelegate();
-  static final _androidLocationDelegate = _AndroidLocationDelegate();
+  static _IOSLocationDelegate _iosLocationDelegate;
+  static _AndroidLocationDelegate _androidLocationDelegate;
 
   /// 单次获取定位信息
   ///
@@ -54,6 +54,18 @@ class AmapLocation {
         _androidClient ??=
             await createcom_amap_api_location_AMapLocationClient__android_content_Context(
                 context);
+
+        if (_androidLocationDelegate == null) {
+          _androidLocationDelegate = _AndroidLocationDelegate();
+          // 设置回调
+          await _androidClient.setLocationListener(_androidLocationDelegate);
+        }
+
+        _androidLocationDelegate._onLocationChanged = (location) {
+          if (!completer.isCompleted) {
+            completer.complete(Location.android(location));
+          }
+        };
 
         // 设置回调
         await _androidClient.setLocationListener(
@@ -103,7 +115,7 @@ class AmapLocation {
         _iosClient ??= await createAMapLocationManager();
 
         // 设置定位模式
-        if (mode != null)
+        if (mode != null) {
           switch (mode) {
             // 高精度定位模式：会同时使用网络定位和GPS定位，优先返回最高精度的定位结果，以及对应的地址描述信息。
             case LocationAccuracy.High:
@@ -114,6 +126,7 @@ class AmapLocation {
               await _iosClient.set_desiredAccuracy(100);
               break;
           }
+        }
         // 设置定位请求超时时间，默认为30秒。
         if (timeout != null) await _iosClient.set_locationTimeout(timeout);
 
@@ -207,11 +220,16 @@ class AmapLocation {
       // 设置定位请求超时时间，默认为30秒。
       if (timeout != null) await _iosClient.set_locationTimeout(timeout);
 
-      // 设置回调
-      await _iosClient.set_delegate(_iosLocationDelegate
-        .._onLocationChanged = (location, regeocode) {
-          _locationController.add(Location.ios(location, regeocode));
-        });
+      if (_iosLocationDelegate == null) {
+        _iosLocationDelegate = _IOSLocationDelegate();
+        // 设置回调
+        await _iosClient.set_delegate(_iosLocationDelegate);
+      }
+
+      _iosLocationDelegate._onLocationChanged = (location, regeocode) {
+        _locationController.add(Location.ios(location, regeocode));
+      };
+
       await _iosClient.set_locatingWithReGeocode(true);
       await _iosClient.startUpdatingLocation();
 
@@ -256,6 +274,9 @@ class AmapLocation {
   static void dispose() {
     _locationController?.close();
     _locationController = null;
+
+    _androidLocationDelegate = null;
+    _iosLocationDelegate = null;
 
     final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
     kNativeObjectPool
