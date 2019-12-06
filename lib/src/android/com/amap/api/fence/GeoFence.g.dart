@@ -282,28 +282,6 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   }
   
-  Future<List<List<com_amap_api_location_DPoint>>> getPointList() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPointList([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getPointList', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-      kNativeObjectPool.addAll([] /* 暂时不支持多维列表 */);
-      return [] /* 暂时不支持多维列表 */;
-    }
-  }
-  
   Future<void> setPointList(List<List<com_amap_api_location_DPoint>> var1) async {
     // print log
     if (fluttifyLogEnabled) {

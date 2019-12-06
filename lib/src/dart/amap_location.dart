@@ -67,16 +67,6 @@ class AmapLocation {
           }
         };
 
-        // 设置回调
-        await _androidClient.setLocationListener(
-          _androidLocationDelegate
-            .._onLocationChanged = (location) {
-              if (!completer.isCompleted) {
-                completer.complete(Location.android(location));
-              }
-            },
-        );
-
         // 创建选项
         final options =
             await createcom_amap_api_location_AMapLocationClientOption__();
@@ -164,10 +154,13 @@ class AmapLocation {
               context);
 
       // 设置回调
-      await _androidClient.setLocationListener(_androidLocationDelegate
-        .._onLocationChanged = (location) {
-          _locationController.add(Location.android(location));
-        });
+      if (_androidLocationDelegate == null) {
+        _androidLocationDelegate = _AndroidLocationDelegate();
+        await _androidClient.setLocationListener(_androidLocationDelegate);
+      }
+      _androidLocationDelegate._onLocationChanged = (location) {
+        _locationController.add(Location.android(location));
+      };
 
       // 创建选项
       final options =
@@ -220,12 +213,11 @@ class AmapLocation {
       // 设置定位请求超时时间，默认为30秒。
       if (timeout != null) await _iosClient.set_locationTimeout(timeout);
 
+      // 设置回调
       if (_iosLocationDelegate == null) {
         _iosLocationDelegate = _IOSLocationDelegate();
-        // 设置回调
         await _iosClient.set_delegate(_iosLocationDelegate);
       }
-
       _iosLocationDelegate._onLocationChanged = (location, regeocode) {
         _locationController.add(Location.ios(location, regeocode));
       };
@@ -244,11 +236,15 @@ class AmapLocation {
         _locationController?.close();
         _locationController = null;
 
+        _androidLocationDelegate = null;
+
         await _androidClient.stopLocation();
       },
       ios: (pool) async {
         _locationController?.close();
         _locationController = null;
+
+        _iosLocationDelegate = null;
 
         await _iosClient.stopUpdatingLocation();
       },
