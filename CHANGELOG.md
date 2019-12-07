@@ -1,3 +1,8 @@
+## 0.5.0
+- enhance: 导出amap_core_fluttify
+- roll engine #a918944
+- 适配flutter 1.12.13
+
 ## 0.4.2
 - fix: 连续定位空指针异常
 
