@@ -89,11 +89,18 @@ class AmapLocation {
                   com_amap_api_location_AMapLocationClientOption_AMapLocationMode
                       .Battery_Saving);
               break;
+            case LocationAccuracy.DeviceSensor:
+              await options.setLocationMode(
+                  com_amap_api_location_AMapLocationClientOption_AMapLocationMode
+                      .Device_Sensors);
+              break;
           }
         // 是否返回地址描述
         if (needAddress != null) await options.setNeedAddress(needAddress);
         // 设置定位请求超时时间，默认为30秒。
         if (timeout != null) await options.setHttpTimeOut(timeout);
+
+        await options.setSensorEnable(true);
 
         // 设置选项
         await _androidClient.setLocationOption(options);
@@ -114,6 +121,7 @@ class AmapLocation {
               await _iosClient.set_desiredAccuracy(10);
               break;
             // 低功耗定位模式：不会使用GPS和其他传感器，只会使用网络定位（Wi-Fi和基站定位）；
+            case LocationAccuracy.DeviceSensor:
             case LocationAccuracy.Low:
               await _iosClient.set_desiredAccuracy(100);
               break;
@@ -184,11 +192,18 @@ class AmapLocation {
                 com_amap_api_location_AMapLocationClientOption_AMapLocationMode
                     .Battery_Saving);
             break;
+          case LocationAccuracy.DeviceSensor:
+            await options.setLocationMode(
+                com_amap_api_location_AMapLocationClientOption_AMapLocationMode
+                    .Device_Sensors);
+            break;
         }
       // 是否返回地址描述
       if (needAddress != null) await options.setNeedAddress(needAddress);
       // 设置定位请求超时时间，默认为30秒。
       if (timeout != null) await options.setHttpTimeOut(timeout);
+
+      await options.setSensorEnable(true);
 
       // 设置选项
       await _androidClient.setLocationOption(options);
@@ -209,6 +224,7 @@ class AmapLocation {
             break;
           // 低功耗定位模式：不会使用GPS和其他传感器，只会使用网络定位（Wi-Fi和基站定位）；
           case LocationAccuracy.Low:
+          case LocationAccuracy.DeviceSensor:
             await _iosClient.set_desiredAccuracy(100);
             break;
         }

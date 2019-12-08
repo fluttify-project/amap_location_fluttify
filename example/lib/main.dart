@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await AmapCore.init('f6422eadda731fb0d9ffb3260a5cf899');
   runApp(MyApp());
 }
@@ -131,6 +133,13 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
                 future: _location.altitude,
                 builder: (_, ss) =>
                     Center(child: Text('altitude: ${ss.data}' ?? '')),
+              ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.bearing,
+                builder: (_, ss) =>
+                    Center(child: Text('bearing: ${ss.data}' ?? '')),
               ),
           ],
         ),
