@@ -34,35 +34,19 @@ class Location {
     );
   }
 
-  /// 纬度
-  @Deprecated('使用[latLng]代替')
-  Future<double> get latitude {
-    return platform(
-      android: (pool) => _androidModel.getLatitude(),
-      ios: (pool) async {
-        final coordinate = await _iosLocation.coordinate;
-        return coordinate.latitude;
-      },
-    );
-  }
-
-  /// 经度
-  @Deprecated('使用[latLng]代替')
-  Future<double> get longitude {
-    return platform(
-      android: (pool) => _androidModel.getLongitude(),
-      ios: (pool) async {
-        final coordinate = await _iosLocation.coordinate;
-        return coordinate.longitude;
-      },
-    );
-  }
-
   /// 海拔
   Future<double> get altitude {
     return platform(
       android: (pool) => _androidModel.getAltitude(),
       ios: (pool) => _iosLocation.altitude,
+    );
+  }
+
+  /// 设备朝向/移动方向
+  Future<double> get bearing {
+    return platform(
+      android: (pool) => _androidModel.getBearing(),
+      ios: (pool) => _iosLocation.course,
     );
   }
 

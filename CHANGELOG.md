@@ -1,3 +1,7 @@
+## 0.5.1
+- enhance: 增加bearing(设备移动方向属性), 此属性需要较长时间时间才能获取到数据, 建议在连续定位中使用.
+- enhance: 提供仅在android端有效的DeviceSensor枚举
+
 ## 0.5.0
 - enhance: 导出amap_core_fluttify
 - roll engine #a918944
