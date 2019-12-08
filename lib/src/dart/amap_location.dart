@@ -28,6 +28,8 @@ mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
 
 /// 高德定位 主类
 class AmapLocation {
+  AmapLocation._();
+
   static com_amap_api_location_AMapLocationClient _androidClient;
   static AMapLocationManager _iosClient;
 

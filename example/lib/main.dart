@@ -114,14 +114,14 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
             if (_location != null)
               FutureBuilder<double>(
                 initialData: 0.0,
-                future: _location.latitude,
+                future: _location.latLng.then((it) => it.latitude),
                 builder: (_, ss) =>
                     Center(child: Text('latitude: ${ss.data}' ?? '')),
               ),
             if (_location != null)
               FutureBuilder<double>(
                 initialData: 0.0,
-                future: _location.longitude,
+                future: _location.latLng.then((it) => it.longitude),
                 builder: (_, ss) =>
                     Center(child: Text('longitude: ${ss.data}' ?? '')),
               ),
