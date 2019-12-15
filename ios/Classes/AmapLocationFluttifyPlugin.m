@@ -471,6 +471,32 @@ extern BOOL enableLog;
           // 无返回值
           methodResult(@"success");
       },
+      @"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // args
+          // ref arg
+          AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
+          // ref arg
+          AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
+          // jsonable arg
+          NSString* customID = (NSString*) args[@"customID"];
+          // ref arg
+          NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
+      
+          // ref
+          id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) args[@"refId"]];
+      
+          // print log
+          if (enableLog) {
+              NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(暂未实现参数打印)", args[@"refId"]);
+          }
+      
+          // invoke native method
+          [ref amapGeoFenceManager : manager didGeoFencesStatusChangedForRegion: region customID: customID error: error];
+      
+          // result
+          // 无返回值
+          methodResult(@"success");
+      },
       @"AMapLocationRegion::initWithIdentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // jsonable arg
