@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapGeoFenceManager extends NSObject  {
+  
+
   // generate getters
   Future<AMapGeoFenceActiveAction> get_activeAction() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction", {'refId': refId});

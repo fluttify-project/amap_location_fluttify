@@ -11,6 +11,12 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  {
+  static final int GPS_STATUS_OK = 0;
+  static final int GPS_STATUS_NOGPSPROVIDER = 1;
+  static final int GPS_STATUS_OFF = 2;
+  static final int GPS_STATUS_MODE_SAVING = 3;
+  static final int GPS_STATUS_NOGPSPERMISSION = 4;
+
   // generate getters
   
 

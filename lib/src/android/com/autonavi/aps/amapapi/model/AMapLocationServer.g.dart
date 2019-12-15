@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_location_AMapLocation  {
+  
+
   // generate getters
   
 
@@ -18,26 +20,5 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   
 
   // generate methods
-  Future<String> toStr() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::toStr([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.autonavi.aps.amapapi.model.AMapLocationServer::toStr', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
   
 }

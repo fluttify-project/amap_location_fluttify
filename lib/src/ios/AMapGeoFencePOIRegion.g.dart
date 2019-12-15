@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion  {
+  
+
   // generate getters
   Future<AMapLocationPOIItem> get_POIItem() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePOIRegion::get_POIItem", {'refId': refId});

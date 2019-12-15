@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
+  
+
   // generate getters
   Future<double> get_latitude() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_latitude", {'refId': refId});

@@ -15,6 +15,8 @@ mixin AMapLocationManagerDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<void> amapLocationManagerDoRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {
     kNativeObjectPool.add(manager);

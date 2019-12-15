@@ -15,6 +15,8 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) {
     kNativeObjectPool.add(var1);

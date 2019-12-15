@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
+  
+
   // generate getters
   Future<String> get_cityCode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode", {'refId': refId});

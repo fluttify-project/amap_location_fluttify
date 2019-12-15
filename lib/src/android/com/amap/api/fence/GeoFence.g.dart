@@ -11,6 +11,29 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parcelable {
+  static final String BUNDLE_KEY_FENCEID = "fenceid";
+  static final String BUNDLE_KEY_CUSTOMID = "customId";
+  static final String BUNDLE_KEY_FENCESTATUS = "event";
+  static final String BUNDLE_KEY_LOCERRORCODE = "location_errorcode";
+  static final String BUNDLE_KEY_FENCE = "fence";
+  static final int ADDGEOFENCE_SUCCESS = 0;
+  static final int ERROR_CODE_INVALID_PARAMETER = 1;
+  static final int ERROR_CODE_FAILURE_CONNECTION = 4;
+  static final int ERROR_CODE_FAILURE_PARSER = 5;
+  static final int ERROR_CODE_FAILURE_AUTH = 7;
+  static final int ERROR_CODE_UNKNOWN = 8;
+  static final int ERROR_NO_VALIDFENCE = 16;
+  static final int ERROR_CODE_EXISTS = 17;
+  static final int STATUS_IN = 1;
+  static final int STATUS_OUT = 2;
+  static final int STATUS_STAYED = 3;
+  static final int STATUS_LOCFAIL = 4;
+  static final int STATUS_UNKNOWN = 0;
+  static final int TYPE_ROUND = 0;
+  static final int TYPE_POLYGON = 1;
+  static final int TYPE_AMAPPOI = 2;
+  static final int TYPE_DISTRICT = 3;
+
   // generate getters
   
 

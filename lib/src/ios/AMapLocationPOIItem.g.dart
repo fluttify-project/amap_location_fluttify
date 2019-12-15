@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
+  
+
   // generate getters
   Future<String> get_pId() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_pId", {'refId': refId});

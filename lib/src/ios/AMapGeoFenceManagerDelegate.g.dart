@@ -15,6 +15,8 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<void> amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
     kNativeObjectPool.add(manager);

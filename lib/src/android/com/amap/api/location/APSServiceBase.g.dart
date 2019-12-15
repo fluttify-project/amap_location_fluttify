@@ -15,6 +15,8 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<void> onCreate() {
   

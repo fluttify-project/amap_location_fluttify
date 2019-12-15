@@ -11,6 +11,10 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
+  static final int GEOFENCE_IN = 1;
+  static final int GEOFENCE_OUT = 2;
+  static final int GEOFENCE_STAYED = 4;
+
   // generate getters
   
 

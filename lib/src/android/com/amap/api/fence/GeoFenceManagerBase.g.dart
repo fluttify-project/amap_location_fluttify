@@ -15,6 +15,8 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<void> setActivateAction(int var1) {
   
