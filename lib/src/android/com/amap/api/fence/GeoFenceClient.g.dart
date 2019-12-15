@@ -22,6 +22,28 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
 
   // generate methods
+  Future<android_app_PendingIntent> createPendingIntent(String var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::createPendingIntent([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceClient::createPendingIntent', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+      kNativeObjectPool.add(android_app_PendingIntent()..refId = result..tag = 'amap_location_fluttify');
+      return android_app_PendingIntent()..refId = result..tag = 'amap_location_fluttify';
+    }
+  }
+  
   Future<void> setActivateAction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {

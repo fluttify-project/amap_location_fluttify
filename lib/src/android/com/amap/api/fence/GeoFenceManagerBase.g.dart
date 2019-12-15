@@ -18,6 +18,15 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   
 
   @mustCallSuper
+  Future<android_app_PendingIntent> createPendingIntent(String var1) {
+  
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('createPendingIntent::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
   Future<void> setActivateAction(int var1) {
   
   

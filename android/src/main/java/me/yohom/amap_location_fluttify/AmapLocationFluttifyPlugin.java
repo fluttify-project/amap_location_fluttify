@@ -5874,6 +5874,44 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             methodResult.success("success");
         });
         // method
+        put("com.amap.api.fence.GeoFenceClient::createPendingIntent", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::createPendingIntent(" + var1 + ")");
+            }
+        
+            // invoke native method
+            android.app.PendingIntent result;
+            try {
+                result = ref.createPendingIntent(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
         put("com.amap.api.fence.GeoFenceClient::setActivateAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6575,6 +6613,73 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // invoke native method
             try {
                 ref.setPendingIntentAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFence::getPendingIntent", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getPendingIntent(" + "" + ")");
+            }
+        
+            // invoke native method
+            android.app.PendingIntent result;
+            try {
+                result = ref.getPendingIntent();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("com.amap.api.fence.GeoFence::setPendingIntent", (args, methodResult) -> {
+            // args
+            // ref arg
+            android.app.PendingIntent var1 = (android.app.PendingIntent) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setPendingIntent(" + var1 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.setPendingIntent(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
                 if (getEnableLog()) {
@@ -7411,6 +7516,44 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             com.amap.api.location.AMapLocation result;
             try {
                 result = ref.getCurrentLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceManagerBase::createPendingIntent", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::createPendingIntent(" + var1 + ")");
+            }
+        
+            // invoke native method
+            android.app.PendingIntent result;
+            try {
+                result = ref.createPendingIntent(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
                 if (getEnableLog()) {

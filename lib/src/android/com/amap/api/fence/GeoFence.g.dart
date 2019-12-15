@@ -173,6 +173,50 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   }
   
+  Future<android_app_PendingIntent> getPendingIntent() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPendingIntent([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::getPendingIntent', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+      kNativeObjectPool.add(android_app_PendingIntent()..refId = result..tag = 'amap_location_fluttify');
+      return android_app_PendingIntent()..refId = result..tag = 'amap_location_fluttify';
+    }
+  }
+  
+  Future<void> setPendingIntent(android_app_PendingIntent var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPendingIntent([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPendingIntent', {"var1": var1.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   Future<int> getType() async {
     // print log
     if (fluttifyLogEnabled) {
