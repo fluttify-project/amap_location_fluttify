@@ -68,15 +68,6 @@ class AMapGeoFenceManager extends NSObject  {
             // handle the native call
             delegate?.amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror(AMapGeoFenceManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag = 'amap_location_fluttify').toList(), args['customID'], NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
             break;
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror':
-            // print log
-            if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror([\'customID\':$args[customID]])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror(AMapGeoFenceManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', AMapGeoFenceRegion()..refId = (args['region'])..tag = 'amap_location_fluttify', args['customID'], NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
-            break;
           default:
             break;
         }

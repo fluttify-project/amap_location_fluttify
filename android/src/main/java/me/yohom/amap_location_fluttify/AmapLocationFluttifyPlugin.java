@@ -3023,6 +3023,37 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             methodResult.success(result);
         });
         // method
+        put("com.amap.api.location.AMapLocation::toStr__int", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            int var1 = (int) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::toStr(" + var1 + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.toStr(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
         put("com.amap.api.location.AMapLocation::getAccuracy", (args, methodResult) -> {
             // args
         
@@ -5940,7 +5971,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             methodResult.success("success");
         });
         // method
-        put("com.amap.api.fence.GeoFenceClient::addGeoFence", (args, methodResult) -> {
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__double__String", (args, methodResult) -> {
             // args
             // ref arg
             com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) args.get("var1"));
@@ -5961,6 +5992,152 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             // invoke native method
             try {
                 ref.addGeoFence(var1, new Double(var2).floatValue(), var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__String", (args, methodResult) -> {
+            // args
+            // list arg
+            List<Integer> var1RefIdList = (List<Integer>) args.get("var1");
+            List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
+            for (int refId : var1RefIdList) {
+                var1.add((com.amap.api.location.DPoint) getHEAP().get(refId));
+            }
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(new ArrayList(var1), var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // ref arg
+            com.amap.api.location.DPoint var3 = (com.amap.api.location.DPoint) getHEAP().get((int) args.get("var3"));
+            // jsonable arg
+            Double var4 = (Double) args.get("var4");
+            // jsonable arg
+            int var5 = (int) args.get("var5");
+            // jsonable arg
+            String var6 = (String) args.get("var6");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + var3 + var4 + var5 + var6 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(var1, var2, var3, new Double(var4).floatValue(), var5, var6);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__String__int__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // jsonable arg
+            String var3 = (String) args.get("var3");
+            // jsonable arg
+            int var4 = (int) args.get("var4");
+            // jsonable arg
+            String var5 = (String) args.get("var5");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + var3 + var4 + var5 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(var1, var2, var3, var4, var5);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(var1, var2);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
                 if (getEnableLog()) {
@@ -6001,6 +6178,37 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::removeGeoFence__com_amap_api_fence_GeoFence", (args, methodResult) -> {
+            // args
+            // ref arg
+            com.amap.api.fence.GeoFence var1 = (com.amap.api.fence.GeoFence) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::removeGeoFence(" + var1 + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.removeGeoFence(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("com.amap.api.fence.GeoFenceClient::getAllGeoFence", (args, methodResult) -> {
@@ -7527,6 +7735,37 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceManagerBase::removeGeoFence__com_amap_api_fence_GeoFence", (args, methodResult) -> {
+            // args
+            // ref arg
+            com.amap.api.fence.GeoFence var1 = (com.amap.api.fence.GeoFence) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::removeGeoFence(" + var1 + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.removeGeoFence(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("com.amap.api.fence.GeoFenceManagerBase::getAllGeoFence", (args, methodResult) -> {

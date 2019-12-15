@@ -90,6 +90,15 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   }
   
   @mustCallSuper
+  Future<bool> removeGeoFence__com_amap_api_fence_GeoFence(com_amap_api_fence_GeoFence var1) {
+    kNativeObjectPool.add(var1);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('removeGeoFence__com_amap_api_fence_GeoFence::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
   Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() {
   
   

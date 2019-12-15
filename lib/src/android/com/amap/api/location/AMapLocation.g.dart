@@ -1221,6 +1221,28 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   }
   
+  Future<String> toStr__int(int var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::toStr([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::toStr__int', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   Future<double> getAccuracy() async {
     // print log
     if (fluttifyLogEnabled) {
