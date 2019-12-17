@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import androidx.annotation.NonNull;
 
+// todo 启用新的embedding
 @SuppressWarnings("ALL")
 public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandler {
 
@@ -29,33 +31,6 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
     private Registrar registrar;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
-        // method
-        put("com.autonavi.aps.amapapi.model.AMapLocationServer::toStr", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::toStr(" + "" + ")");
-            }
-        
-            // invoke native method
-            String result;
-            try {
-                result = ref.toStr();
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-                methodResult.error(throwable.getMessage(), null, null);
-                return;
-            }
-        
-            // result
-            methodResult.success(result);
-        });
         // method
         put("com.amap.api.location.LocationManagerBase::setLocationOption", (args, methodResult) -> {
             // args
@@ -76,6 +51,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLocationOption(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -131,6 +109,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             });
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -157,6 +138,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.startLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -183,6 +167,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.stopLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -210,6 +197,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLastKnownLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -243,6 +233,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.startAssistantLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -269,6 +262,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.stopAssistantLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -296,6 +292,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isStarted();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -351,6 +350,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             });
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -377,6 +379,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.onDestroy();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -404,6 +409,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.disableBackgroundLocation(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -431,6 +439,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLocationOption(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -486,6 +497,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             });
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -512,6 +526,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.startLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -538,6 +555,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.stopLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -565,6 +585,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLastKnownLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -598,6 +621,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.startAssistantLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -624,6 +650,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.stopAssistantLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -651,6 +680,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getVersion();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -677,6 +709,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.AMapLocationClient.setApiKey(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -704,6 +739,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isStarted();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -759,6 +797,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             });
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -785,6 +826,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.onDestroy();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -812,6 +856,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.disableBackgroundLocation(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -839,6 +886,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.AMapLocationClient.getDeviceId(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -866,6 +916,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.onLocationChanged(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -893,6 +946,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLongitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -920,6 +976,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLongitude(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -947,6 +1006,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLatitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -974,6 +1036,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLatitude(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1002,6 +1067,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.from(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1037,6 +1105,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.coord(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1071,6 +1142,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.convert();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1107,6 +1181,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.CoordinateConverter.isAMapDataAvailable(var0, var2);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1136,6 +1213,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.CoordinateConverter.calculateLineDistance(var0, var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1165,6 +1245,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.CoordUtil.convertToGcj(var0, var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1191,6 +1274,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.CoordUtil.isLoadedSo();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1217,6 +1303,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.CoordUtil.setLoadedSo(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1244,6 +1333,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getValue();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1270,6 +1362,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.UmidtokenInfo.getUmidtoken();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1296,6 +1391,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.UmidtokenInfo.setLocAble(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1324,6 +1422,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.UmidtokenInfo.setUmidtoken(var0, var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1351,6 +1452,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getGpsAccuracyStatus();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1378,6 +1482,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setGpsAccuracyStatus(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1405,6 +1512,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLocationType();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1432,6 +1542,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLocationType(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1459,6 +1572,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLocationDetail();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1486,6 +1602,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLocationDetail(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1513,6 +1632,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getErrorCode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1540,6 +1662,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setErrorCode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1567,6 +1692,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getErrorInfo();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1594,6 +1722,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setErrorInfo(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1621,6 +1752,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCountry();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1648,6 +1782,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCountry(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1675,6 +1812,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getRoad();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1702,6 +1842,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setRoad(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1729,6 +1872,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAddress();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1756,6 +1902,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAddress(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1783,6 +1932,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getProvince();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1810,6 +1962,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setProvince(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1837,6 +1992,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCity();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1864,6 +2022,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCity(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1891,6 +2052,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getDistrict();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1918,6 +2082,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setDistrict(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1945,6 +2112,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCityCode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1972,6 +2142,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCityCode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -1999,6 +2172,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAdCode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2026,6 +2202,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAdCode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2053,6 +2232,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPoiName();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2080,6 +2262,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPoiName(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2107,6 +2292,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLatitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2134,6 +2322,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLatitude(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2161,6 +2352,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLongitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2188,6 +2382,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLongitude(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2215,6 +2412,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getSatellites();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2242,6 +2442,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setSatellites(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2269,6 +2472,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getStreet();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2296,6 +2502,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setStreet(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2323,6 +2532,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getStreetNum();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2350,6 +2562,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setNumber(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2377,6 +2592,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setOffset(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2404,6 +2622,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isOffset();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2431,6 +2652,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAoiName();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2458,6 +2682,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAoiName(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2485,6 +2712,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getBuildingId();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2512,6 +2742,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setBuildingId(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2539,6 +2772,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getFloor();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2566,6 +2802,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isFixLastLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2593,6 +2832,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setFixLastLocation(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2620,6 +2862,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setFloor(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2647,6 +2892,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isMock();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2674,6 +2922,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setMock(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2701,6 +2952,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getDescription();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2728,6 +2982,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setDescription(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2755,6 +3012,40 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.toStr();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.location.AMapLocation::toStr__int", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            int var1 = (int) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.location.AMapLocation ref = (com.amap.api.location.AMapLocation) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocation@" + refId + "::toStr(" + var1 + ")");
+            }
+        
+            // invoke native method
+            String result;
+            try {
+                result = ref.toStr(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2782,6 +3073,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAccuracy();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2809,6 +3103,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getBearing();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2836,6 +3133,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAltitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2863,6 +3163,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getSpeed();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2890,6 +3193,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getProvider();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2917,6 +3223,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.clone();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2951,6 +3260,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLocationQualityReport();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -2985,6 +3297,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLocationQualityReport(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3012,6 +3327,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCoordType();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3039,6 +3357,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCoordType(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3066,6 +3387,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setTrustedLevel(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3093,6 +3417,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getTrustedLevel();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3120,6 +3447,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getConScenario();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3147,6 +3477,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setConScenario(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3173,6 +3506,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.AMapLocationClientOption.getAPIKEY();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3200,6 +3536,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isMockEnable();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3228,6 +3567,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setMockEnable(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3262,6 +3604,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getInterval();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3290,6 +3635,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setInterval(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3324,6 +3672,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isOnceLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3352,6 +3703,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setOnceLocation(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3386,6 +3740,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isNeedAddress();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3414,6 +3771,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setNeedAddress(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3448,6 +3808,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isWifiActiveScan();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3476,6 +3839,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setWifiActiveScan(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3510,6 +3876,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isWifiScan();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3538,6 +3907,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setWifiScan(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3572,6 +3944,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLocationMode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3607,6 +3982,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setLocationMode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3641,6 +4019,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLocationProtocol();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3674,6 +4055,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.AMapLocationClientOption.setLocationProtocol(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3701,6 +4085,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isKillProcess();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3729,6 +4116,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setKillProcess(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3763,6 +4153,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isGpsFirst();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3791,6 +4184,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setGpsFirst(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3826,6 +4222,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setGpsFirstTimeout(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3860,6 +4259,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getGpsFirstTimeout();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3887,6 +4289,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.clone();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3921,6 +4326,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getHttpTimeOut();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3949,6 +4357,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setHttpTimeOut(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -3983,6 +4394,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isOffset();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4011,6 +4425,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setOffset(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4045,6 +4462,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isLocationCacheEnable();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4073,6 +4493,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setLocationCacheEnable(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4107,6 +4530,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isOnceLocationLatest();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4135,6 +4561,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setOnceLocationLatest(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4169,6 +4598,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isSensorEnable();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4197,6 +4629,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setSensorEnable(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4232,6 +4667,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setLastLocationLifeCycle(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4266,6 +4704,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLastLocationLifeCycle();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4293,6 +4734,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getGeoLanguage();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4328,6 +4772,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setGeoLanguage(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4361,6 +4808,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.AMapLocationClientOption.setDownloadCoordinateConvertLibrary(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4387,6 +4837,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.AMapLocationClientOption.isDownloadCoordinateConvertLibrary();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4414,6 +4867,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getDeviceModeDistanceFilter();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4442,6 +4898,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setDeviceModeDistanceFilter(new Double(var1).floatValue());
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4477,6 +4936,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.setLocationPurpose(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4511,6 +4973,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLocationPurpose();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4544,6 +5009,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = com.amap.api.location.AMapLocationClientOption.isOpenAlwaysScanWifi();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4570,6 +5038,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.AMapLocationClientOption.setOpenAlwaysScanWifi(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4596,6 +5067,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 com.amap.api.location.AMapLocationClientOption.setScanWifiInterval(var0);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4623,6 +5097,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getScanWifiInterval();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4649,6 +5126,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.onCreate();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4681,6 +5161,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.onStartCommand(var1, var2, var3);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4707,6 +5190,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.onDestroy();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4734,6 +5220,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setWifiAble(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4761,6 +5250,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setGpsStatus(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4788,6 +5280,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setGPSSatellites(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4815,6 +5310,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isWifiAble();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4842,6 +5340,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getGPSStatus();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4869,6 +5370,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getGPSSatellites();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4896,6 +5400,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getNetworkType();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4923,6 +5430,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setNetworkType(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4950,6 +5460,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getNetUseTime();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -4977,6 +5490,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setNetUseTime(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5004,6 +5520,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setInstallHighDangerMockApp(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5031,6 +5550,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isInstalledHighDangerMockApp();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5058,6 +5580,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLocationMode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5085,6 +5610,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAdviseMessage();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5112,6 +5640,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCitycode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5139,6 +5670,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCitycode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5166,6 +5700,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAdcode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5193,6 +5730,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAdcode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5220,6 +5760,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPolyline();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5260,6 +5803,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPolyline(new ArrayList(var1));
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5287,6 +5833,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getDistrictName();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5314,12 +5863,53 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setDistrictName(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::createPendingIntent", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::createPendingIntent(" + var1 + ")");
+            }
+        
+            // invoke native method
+            android.app.PendingIntent result;
+            try {
+                result = ref.createPendingIntent(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.fence.GeoFenceClient::setActivateAction", (args, methodResult) -> {
@@ -5341,6 +5931,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setActivateAction(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5405,6 +5998,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             });
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5413,7 +6009,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             methodResult.success("success");
         });
         // method
-        put("com.amap.api.fence.GeoFenceClient::addGeoFence", (args, methodResult) -> {
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__double__String", (args, methodResult) -> {
             // args
             // ref arg
             com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) args.get("var1"));
@@ -5436,6 +6032,155 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.addGeoFence(var1, new Double(var2).floatValue(), var3);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__String", (args, methodResult) -> {
+            // args
+            // list arg
+            List<Integer> var1RefIdList = (List<Integer>) args.get("var1");
+            List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
+            for (int refId : var1RefIdList) {
+                var1.add((com.amap.api.location.DPoint) getHEAP().get(refId));
+            }
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(new ArrayList(var1), var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // ref arg
+            com.amap.api.location.DPoint var3 = (com.amap.api.location.DPoint) getHEAP().get((int) args.get("var3"));
+            // jsonable arg
+            Double var4 = (Double) args.get("var4");
+            // jsonable arg
+            int var5 = (int) args.get("var5");
+            // jsonable arg
+            String var6 = (String) args.get("var6");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + var3 + var4 + var5 + var6 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(var1, var2, var3, new Double(var4).floatValue(), var5, var6);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__String__int__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // jsonable arg
+            String var3 = (String) args.get("var3");
+            // jsonable arg
+            int var4 = (int) args.get("var4");
+            // jsonable arg
+            String var5 = (String) args.get("var5");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + var3 + var4 + var5 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(var1, var2, var3, var4, var5);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::addGeoFence(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.addGeoFence(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5462,12 +6207,46 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.removeGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceClient::removeGeoFence__com_amap_api_fence_GeoFence", (args, methodResult) -> {
+            // args
+            // ref arg
+            com.amap.api.fence.GeoFence var1 = (com.amap.api.fence.GeoFence) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::removeGeoFence(" + var1 + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.removeGeoFence(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("com.amap.api.fence.GeoFenceClient::getAllGeoFence", (args, methodResult) -> {
@@ -5489,6 +6268,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAllGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5527,6 +6309,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setGeoFenceAble(var1, var2);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5553,6 +6338,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.pauseGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5579,6 +6367,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.resumeGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5606,6 +6397,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isPause();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5641,6 +6435,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.onGeoFenceCreateFinished(new ArrayList(var1), var2, var3);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5668,6 +6465,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getFenceId();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5695,6 +6495,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setFenceId(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5722,6 +6525,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCustomId();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5749,6 +6555,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCustomId(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5776,6 +6585,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPendingIntentAction();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5803,6 +6615,76 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPendingIntentAction(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFence::getPendingIntent", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::getPendingIntent(" + "" + ")");
+            }
+        
+            // invoke native method
+            android.app.PendingIntent result;
+            try {
+                result = ref.getPendingIntent();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("com.amap.api.fence.GeoFence::setPendingIntent", (args, methodResult) -> {
+            // args
+            // ref arg
+            android.app.PendingIntent var1 = (android.app.PendingIntent) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFence ref = (com.amap.api.fence.GeoFence) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFence@" + refId + "::setPendingIntent(" + var1 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.setPendingIntent(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5830,6 +6712,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getType();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5857,6 +6742,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setType(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5884,6 +6772,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPoiItem();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5918,6 +6809,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPoiItem(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5945,6 +6839,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getDistrictItemList();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -5985,6 +6882,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setDistrictItemList(new ArrayList(var1));
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6011,6 +6911,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPointList(new ArrayList(var1));
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6038,6 +6941,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getRadius();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6065,6 +6971,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setRadius(new Double(var1).floatValue());
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6092,6 +7001,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getExpiration();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6119,6 +7031,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setExpiration(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6146,6 +7061,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getActivatesAction();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6173,6 +7091,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setActivatesAction(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6200,6 +7121,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getStatus();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6227,6 +7151,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setStatus(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6254,6 +7181,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getEnterTime();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6281,6 +7211,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setEnterTime(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6308,6 +7241,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCenter();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6342,6 +7278,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCenter(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6369,6 +7308,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getMinDis2Center();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6396,6 +7338,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setMinDis2Center(new Double(var1).floatValue());
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6423,6 +7368,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getMaxDis2Center();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6450,6 +7398,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setMaxDis2Center(new Double(var1).floatValue());
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6477,6 +7428,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isAble();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6504,6 +7458,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAble(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6531,6 +7488,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCurrentLocation(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6558,6 +7518,47 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCurrentLocation();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceManagerBase::createPendingIntent", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::createPendingIntent(" + var1 + ")");
+            }
+        
+            // invoke native method
+            android.app.PendingIntent result;
+            try {
+                result = ref.createPendingIntent(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6592,6 +7593,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setActivateAction(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6656,6 +7660,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             });
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6687,6 +7694,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.addRoundGeoFence(var1, new Double(var2).floatValue(), var3);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6720,6 +7730,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.addPolygonGeoFence(new ArrayList(var1), var2);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6757,6 +7770,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.addNearbyGeoFence(var1, var2, var3, new Double(var4).floatValue(), var5, var6);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6792,6 +7808,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.addKeywordGeoFence(var1, var2, var3, var4, var5);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6821,6 +7840,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.addDistrictGeoFence(var1, var2);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6847,12 +7869,46 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.removeGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.fence.GeoFenceManagerBase::removeGeoFence__com_amap_api_fence_GeoFence", (args, methodResult) -> {
+            // args
+            // ref arg
+            com.amap.api.fence.GeoFence var1 = (com.amap.api.fence.GeoFence) getHEAP().get((int) args.get("var1"));
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.fence.GeoFenceManagerBase ref = (com.amap.api.fence.GeoFenceManagerBase) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceManagerBase@" + refId + "::removeGeoFence(" + var1 + ")");
+            }
+        
+            // invoke native method
+            boolean result;
+            try {
+                result = ref.removeGeoFence(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success(result);
         });
         // method
         put("com.amap.api.fence.GeoFenceManagerBase::getAllGeoFence", (args, methodResult) -> {
@@ -6874,6 +7930,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAllGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6912,6 +7971,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setGeoFenceAble(var1, var2);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6938,6 +8000,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.pauseGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6964,6 +8029,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.resumeGeoFence();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -6991,6 +8059,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.isPause();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7018,6 +8089,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLatitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7045,6 +8119,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLatitude(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7072,6 +8149,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getLongitude();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7099,6 +8179,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setLongitude(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7126,6 +8209,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPoiId();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7153,6 +8239,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPoiId(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7180,6 +8269,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPoiType();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7207,6 +8299,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPoiType(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7234,6 +8329,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getTypeCode();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7261,6 +8359,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setTypeCode(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7288,6 +8389,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAddress();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7315,6 +8419,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAddress(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7342,6 +8449,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getTel();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7369,6 +8479,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setTel(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7396,6 +8509,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getProvince();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7423,6 +8539,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setProvince(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7450,6 +8569,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getCity();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7477,6 +8599,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setCity(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7504,6 +8629,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getAdname();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7531,6 +8659,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 result = ref.getPoiName();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7558,6 +8689,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setPoiName(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
@@ -7585,6 +8719,9 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
                 ref.setAdname(var1);
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
                 methodResult.error(throwable.getMessage(), null, null);
                 return;
             }
