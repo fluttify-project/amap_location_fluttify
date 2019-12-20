@@ -50,7 +50,7 @@ class AmapLocation {
     return platform(
       android: (pool) async {
         // 获取上下文, 这里获取的是Application
-        final context = await getandroid_app_Application();
+        final context = await android_app_Application.get();
 
         // 创建定位客户端
         _androidClient ??=
@@ -156,7 +156,7 @@ class AmapLocation {
 
     if (Platform.isAndroid) {
       // 获取上下文, 这里获取的是Application
-      final context = await getandroid_app_Application();
+      final context = await android_app_Application.get();
 
       // 创建定位客户端
       _androidClient ??=
@@ -294,14 +294,14 @@ class AmapLocation {
 
     final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
     kNativeObjectPool
-      ..where(isCurrentPlugin).forEach(release)
+      ..where(isCurrentPlugin).forEach((it) => it.release())
       ..removeWhere(isCurrentPlugin);
 
     if (_androidClient != null) {
       await _androidClient.onDestroy();
-      release(_androidClient);
+      await _androidClient.release();
     }
-    if (_iosClient != null) release(_iosClient);
+    if (_iosClient != null) await _iosClient.release();
 
     _androidClient = null;
     _iosClient = null;
