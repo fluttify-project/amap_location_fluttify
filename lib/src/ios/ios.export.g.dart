@@ -9,7 +9,6 @@ export 'AMapGeoFencePOIRegion.g.dart';
 export 'AMapGeoFenceCircleRegion.g.dart';
 export 'type_op.g.dart';
 export 'AMapLocationErrorCode.g.dart';
-export 'object_factory.g.dart';
 export 'AMapGeoFenceRegion.g.dart';
 export 'AMapGeoFenceManagerDelegate.g.dart';
 export 'AMapLocationPolygonRegion.g.dart';

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_location_AMapLocation extends android_location_Location with android_os_Parcelable {
+  //region constants
   static final int LOCATION_SUCCESS = 0;
   static final int ERROR_CODE_INVALID_PARAMETER = 1;
   static final int ERROR_CODE_FAILURE_WIFI_INFO = 2;
@@ -47,14 +48,36 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   static final int TRUSTED_LEVEL_NORMAL = 2;
   static final int TRUSTED_LEVEL_LOW = 3;
   static final int TRUSTED_LEVEL_BAD = 4;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_location_AMapLocation> create__String(String var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
+    final object = com_amap_api_location_AMapLocation()..refId = refId..tag = 'amap_location_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  static Future<com_amap_api_location_AMapLocation> create__android_location_Location(android_location_Location var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1.refId});
+    final object = com_amap_api_location_AMapLocation()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<int> getGpsAccuracyStatus() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -1551,4 +1574,5 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   }
   
+  //endregion
 }

@@ -53,9 +53,8 @@ class AmapLocation {
         final context = await android_app_Application.get();
 
         // 创建定位客户端
-        _androidClient ??=
-            await createcom_amap_api_location_AMapLocationClient__android_content_Context(
-                context);
+        _androidClient ??= await com_amap_api_location_AMapLocationClient
+            .create__android_content_Context(context);
 
         if (_androidLocationDelegate == null) {
           _androidLocationDelegate = _AndroidLocationDelegate();
@@ -71,7 +70,7 @@ class AmapLocation {
 
         // 创建选项
         final options =
-            await createcom_amap_api_location_AMapLocationClientOption__();
+            await com_amap_api_location_AMapLocationClientOption.create();
         // 设置单次定位
         await options.setOnceLocation(true);
         // 设置定位模式
@@ -111,7 +110,7 @@ class AmapLocation {
         return completer.future;
       },
       ios: (pool) async {
-        _iosClient ??= await createAMapLocationManager();
+        _iosClient ??= await AMapLocationManager.create();
 
         // 设置定位模式
         if (mode != null) {
@@ -159,9 +158,8 @@ class AmapLocation {
       final context = await android_app_Application.get();
 
       // 创建定位客户端
-      _androidClient ??=
-          await createcom_amap_api_location_AMapLocationClient__android_content_Context(
-              context);
+      _androidClient ??= await com_amap_api_location_AMapLocationClient
+          .create__android_content_Context(context);
 
       // 设置回调
       if (_androidLocationDelegate == null) {
@@ -174,7 +172,7 @@ class AmapLocation {
 
       // 创建选项
       final options =
-          await createcom_amap_api_location_AMapLocationClientOption__();
+          await com_amap_api_location_AMapLocationClientOption.create();
       // 设置连续定位
       await options.setOnceLocation(false);
       // 设置定位模式
@@ -213,7 +211,7 @@ class AmapLocation {
 
       yield* _locationController.stream;
     } else if (Platform.isIOS) {
-      _iosClient ??= await createAMapLocationManager();
+      _iosClient ??= await AMapLocationManager.create();
 
       // 设置定位模式
       if (mode != null)

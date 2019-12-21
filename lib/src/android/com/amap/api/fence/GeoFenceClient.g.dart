@@ -11,17 +11,32 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
+  //region constants
   static final int GEOFENCE_IN = 1;
   static final int GEOFENCE_OUT = 2;
   static final int GEOFENCE_STAYED = 4;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_fence_GeoFenceClient> create__android_content_Context(android_content_Context var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context', {"var1": var1.refId});
+    final object = com_amap_api_fence_GeoFenceClient()..refId = refId..tag = 'amap_location_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<android_app_PendingIntent> createPendingIntent(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -371,4 +386,5 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     }
   }
   
+  //endregion
 }
