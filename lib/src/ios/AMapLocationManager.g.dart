@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationManager extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationManager> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationManager');
+    final object = AMapLocationManager()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<double> get_distanceFilter() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_distanceFilter", {'refId': refId});
   
@@ -68,8 +81,9 @@ class AMapLocationManager extends NSObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_delegate(AMapLocationManagerDelegate delegate) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
   
@@ -203,8 +217,9 @@ class AMapLocationManager extends NSObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   static Future<bool> headingAvailable() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -378,4 +393,5 @@ class AMapLocationManager extends NSObject  {
     }
   }
   
+  //endregion
 }

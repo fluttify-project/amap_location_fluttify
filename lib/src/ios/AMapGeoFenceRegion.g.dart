@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapGeoFenceRegion extends NSObject with NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapGeoFenceRegion> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
+    final object = AMapGeoFenceRegion()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_identifier() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_identifier", {'refId': refId});
   
@@ -44,8 +57,9 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     return CLLocation()..refId = result..tag = 'amap_location_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_fenceStatus(AMapGeoFenceRegionStatus fenceStatus) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_fenceStatus', {'refId': refId, "fenceStatus": fenceStatus.index});
   
@@ -64,7 +78,9 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapGeoFenceManager extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapGeoFenceManager> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceManager');
+    final object = AMapGeoFenceManager()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapGeoFenceActiveAction> get_activeAction() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction", {'refId': refId});
   
@@ -38,8 +51,9 @@ class AMapGeoFenceManager extends NSObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_delegate(AMapGeoFenceManagerDelegate delegate) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
   
@@ -107,8 +121,9 @@ class AMapGeoFenceManager extends NSObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   Future<void> addCircleRegionForMonitoringWithCenterRadiuscustomID(CLLocationCoordinate2D center, double radius, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -461,4 +476,5 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
+  //endregion
 }

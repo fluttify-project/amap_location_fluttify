@@ -11,24 +11,40 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationDistrictItem> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationDistrictItem');
+    final object = AMapLocationDistrictItem()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_cityCode() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode", {'refId': refId});
   
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_cityCode(String cityCode) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDistrictItem::set_cityCode', {'refId': refId, "cityCode": cityCode});
   
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

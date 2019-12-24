@@ -1,5 +1,4 @@
 export 'type_op.g.dart';
-export 'object_factory.g.dart';
 export 'com/loc/.g.dart';
 export 'com/autonavi/aps/amapapi/model/AMapLocationServer.g.dart';
 export 'com/amap/api/location/AMapLocationClientOption/AMapLocationProtocol.g.dart';

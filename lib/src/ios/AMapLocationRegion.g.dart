@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationRegion extends NSObject with NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationRegion> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationRegion');
+    final object = AMapLocationRegion()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_identifier() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_identifier", {'refId': refId});
   
@@ -32,8 +45,9 @@ class AMapLocationRegion extends NSObject with NSCopying {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_notifyOnEntry(bool notifyOnEntry) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnEntry', {'refId': refId, "notifyOnEntry": notifyOnEntry});
   
@@ -46,8 +60,9 @@ class AMapLocationRegion extends NSObject with NSCopying {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   Future<AMapLocationRegion> initWithIdentifier(String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -92,4 +107,5 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
   }
   
+  //endregion
 }

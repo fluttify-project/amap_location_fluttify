@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationPoint> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationPoint');
+    final object = AMapLocationPoint()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<double> get_latitude() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_latitude", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_latitude(double latitude) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_latitude', {'refId': refId, "latitude": latitude});
   
@@ -40,8 +54,9 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   static Future<AMapLocationPoint> locationWithLatitudeLongitude(double lat, double lon) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -64,4 +79,5 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     }
   }
   
+  //endregion
 }

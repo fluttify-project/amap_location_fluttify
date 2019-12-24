@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationPOIItem> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationPOIItem');
+    final object = AMapLocationPOIItem()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_pId() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPOIItem::get_pId", {'refId': refId});
   
@@ -74,8 +87,9 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_pId(String pId) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_pId', {'refId': refId, "pId": pId});
   
@@ -136,7 +150,9 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

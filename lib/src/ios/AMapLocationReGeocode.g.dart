@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationReGeocode> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationReGeocode');
+    final object = AMapLocationReGeocode()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_formattedAddress() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_formattedAddress", {'refId': refId});
   
@@ -98,8 +111,9 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_formattedAddress(String formattedAddress) async {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_formattedAddress', {'refId': refId, "formattedAddress": formattedAddress});
   
@@ -184,7 +198,9 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

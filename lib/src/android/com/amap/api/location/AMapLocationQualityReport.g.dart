@@ -11,19 +11,34 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  {
+  //region constants
   static final int GPS_STATUS_OK = 0;
   static final int GPS_STATUS_NOGPSPROVIDER = 1;
   static final int GPS_STATUS_OFF = 2;
   static final int GPS_STATUS_MODE_SAVING = 3;
   static final int GPS_STATUS_NOGPSPERMISSION = 4;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_location_AMapLocationQualityReport> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
+    final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag = 'amap_location_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<void> setWifiAble(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -332,4 +347,5 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   }
   
+  //endregion
 }

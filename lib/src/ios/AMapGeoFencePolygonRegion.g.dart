@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapGeoFencePolygonRegion> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFencePolygonRegion');
+    final object = AMapGeoFencePolygonRegion()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<List<CLLocationCoordinate2D>> get_coordinates() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_coordinates", {'refId': refId});
     kNativeObjectPool.addAll((result as List).cast<int>().map((it) => CLLocationCoordinate2D()..refId = it..tag = 'amap_location_fluttify').toList());
@@ -26,10 +39,13 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

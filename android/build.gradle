@@ -51,6 +51,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     implementation 'androidx.annotation:annotation:1.1.0'
     compileOnly rootProject.findProject(":foundation_fluttify")
-    //  flutter插件依赖
+    // flutter plugin dependency
     compileOnly rootProject.findProject(":amap_core_fluttify")
+    // sdk dependency
+    implementation 'com.amap.api:location:4.7.2'
 }

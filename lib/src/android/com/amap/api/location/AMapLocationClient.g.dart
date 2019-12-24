@@ -11,15 +11,38 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_location_AMapLocationClient> create__android_content_Context(android_content_Context var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context', {"var1": var1.refId});
+    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag = 'amap_location_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  static Future<com_amap_api_location_AMapLocationClient> create__android_content_Context__android_content_Intent(android_content_Context var1, android_content_Intent var2) async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent', {"var1": var1.refId, "var2": var2.refId});
+    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag = 'amap_location_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -366,4 +389,5 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     }
   }
   
+  //endregion
 }

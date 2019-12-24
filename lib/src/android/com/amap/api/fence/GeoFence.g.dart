@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parcelable {
+  //region constants
   static final String BUNDLE_KEY_FENCEID = "fenceid";
   static final String BUNDLE_KEY_CUSTOMID = "customId";
   static final String BUNDLE_KEY_FENCESTATUS = "event";
@@ -33,14 +34,28 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   static final int TYPE_POLYGON = 1;
   static final int TYPE_AMAPPOI = 2;
   static final int TYPE_DISTRICT = 3;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_fence_GeoFence> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFence__');
+    final object = com_amap_api_fence_GeoFence()..refId = refId..tag = 'amap_location_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<String> getFenceId() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -811,4 +826,5 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   }
   
+  //endregion
 }
