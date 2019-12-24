@@ -18,6 +18,8 @@ A new flutter plugin project.
   s.dependency 'foundation_fluttify'
   # flutter plugin dependency
   s.dependency 'amap_core_fluttify'
+  # sdk dependency
+  s.dependency 'AMapLocation', '2.6.3'
 
   s.ios.deployment_target = '8.0'
   # include project framework
