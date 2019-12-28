@@ -11,7 +11,7 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension on Ref {
+extension TypeOpIOS on Ref {
   Future<bool> isAMapGeoFenceManager() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceManager', {'refId': refId});
     return result;
