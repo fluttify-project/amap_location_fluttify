@@ -141,6 +141,13 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
                 builder: (_, ss) =>
                     Center(child: Text('bearing: ${ss.data}' ?? '')),
               ),
+            if (_location != null)
+              FutureBuilder<double>(
+                initialData: 0.0,
+                future: _location.accuracy,
+                builder: (_, ss) =>
+                    Center(child: Text('accuracy: ${ss.data}' ?? '')),
+              ),
           ],
         ),
       ),
