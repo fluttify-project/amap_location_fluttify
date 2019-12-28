@@ -129,4 +129,12 @@ class Location {
       ios: (pool) => _iosRegeocode.get_AOIName(),
     );
   }
+
+  /// 精度
+  Future<double> get accuracy {
+    return platform(
+      android: (pool) => _androidModel.getAccuracy(),
+      ios: (pool) => _iosLocation.horizontalAccuracy,
+    );
+  }
 }

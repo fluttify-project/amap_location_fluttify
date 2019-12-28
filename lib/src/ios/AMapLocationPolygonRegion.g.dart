@@ -16,7 +16,7 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
   //endregion
 
   //region creators
-  static Future<AMapLocationPolygonRegion> create() async {
+  static Future<AMapLocationPolygonRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationPolygonRegion');
     final object = AMapLocationPolygonRegion()..refId = refId..tag = 'amap_location_fluttify';
   

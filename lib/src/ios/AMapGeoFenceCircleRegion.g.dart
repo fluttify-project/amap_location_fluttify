@@ -16,7 +16,7 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion  {
   //endregion
 
   //region creators
-  static Future<AMapGeoFenceCircleRegion> create() async {
+  static Future<AMapGeoFenceCircleRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceCircleRegion');
     final object = AMapGeoFenceCircleRegion()..refId = refId..tag = 'amap_location_fluttify';
   

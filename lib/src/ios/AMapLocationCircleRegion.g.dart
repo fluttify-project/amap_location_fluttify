@@ -16,7 +16,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
   //endregion
 
   //region creators
-  static Future<AMapLocationCircleRegion> create() async {
+  static Future<AMapLocationCircleRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationCircleRegion');
     final object = AMapLocationCircleRegion()..refId = refId..tag = 'amap_location_fluttify';
   

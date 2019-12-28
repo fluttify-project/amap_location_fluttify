@@ -16,7 +16,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   //endregion
 
   //region creators
-  static Future<com_amap_api_fence_PoiItem> create() async {
+  static Future<com_amap_api_fence_PoiItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_fence_PoiItem__');
     final object = com_amap_api_fence_PoiItem()..refId = refId..tag = 'amap_location_fluttify';
   

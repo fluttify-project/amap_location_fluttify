@@ -16,7 +16,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   //endregion
 
   //region creators
-  static Future<com_amap_api_location_DPoint> create() async {
+  static Future<com_amap_api_location_DPoint> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__');
     final object = com_amap_api_location_DPoint()..refId = refId..tag = 'amap_location_fluttify';
   

@@ -20,7 +20,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   //endregion
 
   //region creators
-  static Future<com_amap_api_location_AMapLocationQualityReport> create() async {
+  static Future<com_amap_api_location_AMapLocationQualityReport> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
     final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag = 'amap_location_fluttify';
   

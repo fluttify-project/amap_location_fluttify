@@ -16,7 +16,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapLocationDistrictItem> create() async {
+  static Future<AMapLocationDistrictItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationDistrictItem');
     final object = AMapLocationDistrictItem()..refId = refId..tag = 'amap_location_fluttify';
   

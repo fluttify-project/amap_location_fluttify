@@ -1,3 +1,6 @@
+## 0.8.1
+- feat: Location增加accuracy字段 (#38)
+
 ## 0.8.0
 - enhance: 提升依赖
 - roll engine #ea37ae9

@@ -4,13 +4,13 @@
 Pod::Spec.new do |s|
   s.name             = 'amap_location_fluttify'
   s.version          = '0.0.1'
-  s.summary          = 'An `Amap` Location Component, Powered By `Fluttify` Engine.'
+  s.summary          = 'An `Amap` Location Component, Powered By `Fluttify` Engine, Which Generates Dart Interface For Native SDK.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
   s.homepage         = 'https://github.com/fluttify-project/amap_location_fluttify'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'yohom' => '382146139@qq.com' }
+  s.author           = { 'yohom' => 'yohombao@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
@@ -28,11 +28,11 @@ A new flutter plugin project.
   s.vendored_libraries = '**/*.a'
   # ios system framework
   s.frameworks = [
-        "QuartzCore", "ExternalAccessory", "CoreLocation", "SystemConfiguration", "CoreTelephony", "Security", "OpenGLES", "CoreText", "CoreGraphics", "GLKit"
+        
   ]
   # ios system library
   s.libraries = [
-        "z", "c++"
+        
   ]
   # resources
   s.resources = '*.framework/*.bundle'
