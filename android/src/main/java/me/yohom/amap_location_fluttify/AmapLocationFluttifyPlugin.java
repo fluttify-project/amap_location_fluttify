@@ -27,10 +27,6 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 @SuppressWarnings("ALL")
 public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler {
 
-    private AmapLocationFluttifyPlugin(BinaryMessenger messenger) {
-        this.messenger = messenger;
-    }
-
     private BinaryMessenger messenger;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
@@ -9036,13 +9032,32 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
 
     // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
-        initPlugin(registrar.messenger(), registrar.platformViewRegistry());
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/amap_location_fluttify");
+
+        AmapLocationFluttifyPlugin plugin = new AmapLocationFluttifyPlugin();
+        BinaryMessenger messenger = registrar.messenger();
+        plugin.messenger = messenger;
+
+        channel.setMethodCallHandler(plugin);
+
+        // register platform view
+        PlatformViewRegistry platformViewRegistry = registrar.platformViewRegistry();
+        
     }
 
     // v2 android embedding
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
-        initPlugin(binding.getBinaryMessenger(), binding.getPlatformViewRegistry());
+        final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/amap_location_fluttify");
+
+        messenger = binding.getBinaryMessenger();
+
+        channel.setMethodCallHandler(this);
+
+
+        // register platform view
+        PlatformViewRegistry platformViewRegistry = binding.getPlatformViewRegistry();
+        
     }
 
     @Override
@@ -9064,14 +9079,6 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
         } else {
             methodResult.notImplemented();
         }
-    }
-
-    private static void initPlugin(BinaryMessenger messenger, PlatformViewRegistry platformViewRegistry) {
-        MethodChannel channel = new MethodChannel(messenger, "me.yohom/amap_location_fluttify");
-        channel.setMethodCallHandler(new AmapLocationFluttifyPlugin(messenger));
-
-        // register platform view
-        
     }
 
     @FunctionalInterface
