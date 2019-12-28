@@ -1,3 +1,6 @@
+## 0.8.2
+- roll engine #5c1b957
+
 ## 0.8.1
 - feat: Location增加accuracy字段 (#38)
 
