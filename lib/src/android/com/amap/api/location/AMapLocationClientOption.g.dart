@@ -16,7 +16,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
   //endregion
 
   //region creators
-  static Future<com_amap_api_location_AMapLocationClientOption> create() async {
+  static Future<com_amap_api_location_AMapLocationClientOption> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__');
     final object = com_amap_api_location_AMapLocationClientOption()..refId = refId..tag = 'amap_location_fluttify';
   

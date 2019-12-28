@@ -16,7 +16,7 @@ class AMapLocationManager extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapLocationManager> create() async {
+  static Future<AMapLocationManager> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationManager');
     final object = AMapLocationManager()..refId = refId..tag = 'amap_location_fluttify';
   

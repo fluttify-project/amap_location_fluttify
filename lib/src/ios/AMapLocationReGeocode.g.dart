@@ -16,7 +16,7 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapLocationReGeocode> create() async {
+  static Future<AMapLocationReGeocode> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationReGeocode');
     final object = AMapLocationReGeocode()..refId = refId..tag = 'amap_location_fluttify';
   

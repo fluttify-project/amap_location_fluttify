@@ -70,7 +70,7 @@ class AmapLocation {
 
         // 创建选项
         final options =
-            await com_amap_api_location_AMapLocationClientOption.create();
+            await com_amap_api_location_AMapLocationClientOption.create__();
         // 设置单次定位
         await options.setOnceLocation(true);
         // 设置定位模式
@@ -110,7 +110,7 @@ class AmapLocation {
         return completer.future;
       },
       ios: (pool) async {
-        _iosClient ??= await AMapLocationManager.create();
+        _iosClient ??= await AMapLocationManager.create__();
 
         // 设置定位模式
         if (mode != null) {
@@ -172,7 +172,7 @@ class AmapLocation {
 
       // 创建选项
       final options =
-          await com_amap_api_location_AMapLocationClientOption.create();
+          await com_amap_api_location_AMapLocationClientOption.create__();
       // 设置连续定位
       await options.setOnceLocation(false);
       // 设置定位模式
@@ -211,7 +211,7 @@ class AmapLocation {
 
       yield* _locationController.stream;
     } else if (Platform.isIOS) {
-      _iosClient ??= await AMapLocationManager.create();
+      _iosClient ??= await AMapLocationManager.create__();
 
       // 设置定位模式
       if (mode != null)

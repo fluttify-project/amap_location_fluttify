@@ -16,7 +16,7 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion  {
   //endregion
 
   //region creators
-  static Future<AMapGeoFencePolygonRegion> create() async {
+  static Future<AMapGeoFencePolygonRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFencePolygonRegion');
     final object = AMapGeoFencePolygonRegion()..refId = refId..tag = 'amap_location_fluttify';
   

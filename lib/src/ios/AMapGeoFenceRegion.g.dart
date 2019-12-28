@@ -16,7 +16,7 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapGeoFenceRegion> create() async {
+  static Future<AMapGeoFenceRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
     final object = AMapGeoFenceRegion()..refId = refId..tag = 'amap_location_fluttify';
   

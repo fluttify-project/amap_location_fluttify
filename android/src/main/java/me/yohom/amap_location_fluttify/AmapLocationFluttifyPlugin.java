@@ -13,22 +13,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
+import io.flutter.plugin.platform.PlatformViewRegistry;
+
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
-import androidx.annotation.NonNull;
+import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 
-// todo 启用新的embedding
 @SuppressWarnings("ALL")
-public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandler {
+public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler {
 
-    private AmapLocationFluttifyPlugin(Registrar registrar) {
-        this.registrar = registrar;
+    private AmapLocationFluttifyPlugin(BinaryMessenger messenger) {
+        this.messenger = messenger;
     }
 
-    private Registrar registrar;
+    private BinaryMessenger messenger;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
         // method
@@ -79,7 +82,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             try {
                 ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.LocationManagerBase::setLocationListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.LocationManagerBase::setLocationListener::Callback");
         
                 // call dart method
                 @Override
@@ -320,7 +323,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             try {
                 ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.LocationManagerBase::unRegisterLocationListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.LocationManagerBase::unRegisterLocationListener::Callback");
         
                 // call dart method
                 @Override
@@ -467,7 +470,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             try {
                 ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.AMapLocationClient::setLocationListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.AMapLocationClient::setLocationListener::Callback");
         
                 // call dart method
                 @Override
@@ -767,7 +770,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             try {
                 ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback");
         
                 // call dart method
                 @Override
@@ -5959,7 +5962,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             try {
                 ref.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback");
         
                 // call dart method
                 @Override
@@ -7621,7 +7624,7 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
             try {
                 ref.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener::Callback");
         
                 // call dart method
                 @Override
@@ -9031,12 +9034,20 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         });
     }};
 
+    // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
-        MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/amap_location_fluttify");
-        channel.setMethodCallHandler(new AmapLocationFluttifyPlugin(registrar));
+        initPlugin(registrar.messenger(), registrar.platformViewRegistry());
+    }
 
-        // register platform view
-        
+    // v2 android embedding
+    @Override
+    public void onAttachedToEngine(FlutterPluginBinding binding) {
+        initPlugin(binding.getBinaryMessenger(), binding.getPlatformViewRegistry());
+    }
+
+    @Override
+    public void onDetachedFromEngine(FlutterPluginBinding binding) {
+
     }
 
     @Override
@@ -9053,6 +9064,14 @@ public class AmapLocationFluttifyPlugin implements MethodChannel.MethodCallHandl
         } else {
             methodResult.notImplemented();
         }
+    }
+
+    private static void initPlugin(BinaryMessenger messenger, PlatformViewRegistry platformViewRegistry) {
+        MethodChannel channel = new MethodChannel(messenger, "me.yohom/amap_location_fluttify");
+        channel.setMethodCallHandler(new AmapLocationFluttifyPlugin(messenger));
+
+        // register platform view
+        
     }
 
     @FunctionalInterface
