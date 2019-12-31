@@ -1,3 +1,6 @@
+## 0.8.3
+- roll engine #4d92ce0. 主要解决type_op冲突的问题.
+
 ## 0.8.2
 - roll engine #5c1b957
 
