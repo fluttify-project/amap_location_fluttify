@@ -1,6 +1,6 @@
 name: amap_location_fluttify
 description: An `Amap` Location Component, Powered By `Fluttify` Engine, Which Generates Dart Interface For Native SDK.
-version: 0.8.2+5c1b957
+version: 0.8.3+4d92ce0
 author: yohom <yohombao@gmail.com>
 homepage: https://github.com/fluttify-project/amap_location_fluttify
 
@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  amap_core_fluttify: ^0.5.0+ea37ae9
+  amap_core_fluttify: ^0.5.1+6777f7f
   
 
 dev_dependencies:
