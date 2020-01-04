@@ -1,3 +1,7 @@
+## 0.8.5
+- docs: apk下载链接修正
+- docs: 去重重复的信息
+
 ## 0.8.4
 - enhance: 加入打包的key
 - docs: README加入apk下载二维码
