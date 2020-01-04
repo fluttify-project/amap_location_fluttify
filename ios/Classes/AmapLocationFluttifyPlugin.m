@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "AmapLocationFluttifyPlugin.h"
+#import <objc/runtime.h>
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSString *, NSObject *> *, FlutterResult);
 
