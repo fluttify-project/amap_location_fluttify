@@ -6,9 +6,11 @@
 ![CI](https://github.com/fluttify-project/amap_location_fluttify/workflows/CI/badge.svg)
 [![Gitter](https://badges.gitter.im/fluttify_project/community.svg)](https://gitter.im/fluttify_project/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-**从`0.5.0`开始, Flutter环境改为`1.12.13`, 与`1.9.1`版本不兼容, 如果你想继续使用`1.9.1`版本的Flutter, 请不要升级.**
-
 Dart接口基于[fluttify](https://github.com/yohom/fluttify-core-example)引擎生成. dartdoc[接口文档](https://pub.flutter-io.cn/documentation/amap_location_fluttify/latest/).
+
+| Demo | 微信赞助 | 支付宝赞助 | QQ群 |
+| :----------: | :----------: | :----------: | :----------: |
+| 扫描二维码 <br> 或者 <br> [点击下载](https://github.com/fluttify-project/amap_map_fluttify/blob/master/example/build/app/outputs/apk/release/app-release.apk?raw=true) </br> ![Example](assets/amap_location_fluttify_apk.png) | 如果项目帮到了你 </br> 不妨请作者喝杯奶茶 :) </br> ![微信](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true) | 开源不易 </br> 你的star是我最大的动力 </br> ![支付宝](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true) | 加入QQ群讨论 <br/><br/> ![QQ群](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/QQ%E7%BE%A4.png?raw=true) |
 
 安装: 
 ```yaml
