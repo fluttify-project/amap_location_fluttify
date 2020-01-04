@@ -1,3 +1,8 @@
+## 0.8.4
+- enhance: 加入打包的key
+- docs: README加入apk下载二维码
+- roll engine #107df19
+
 ## 0.8.3
 - roll engine #4d92ce0. 主要解决type_op冲突的问题.
 
