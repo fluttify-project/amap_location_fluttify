@@ -21,6 +21,7 @@ A new flutter plugin project.
   # sdk dependency
   s.dependency 'AMapLocation', '~> 2.6.3'
 
+  s.static_framework = true
   s.ios.deployment_target = '8.0'
   # include project framework
   s.vendored_frameworks = '**/*.framework'
