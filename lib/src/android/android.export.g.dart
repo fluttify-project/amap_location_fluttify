@@ -23,5 +23,4 @@ export 'com/amap/api/fence/GeoFenceClient.g.dart';
 export 'com/amap/api/fence/GeoFenceManagerBase.g.dart';
 export 'com/amap/api/fence/GeoFenceListener.g.dart';
 export 'com/amap/api/fence/GeoFence.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';
 export 'package:amap_core_fluttify/amap_core_fluttify.dart';

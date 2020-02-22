@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 Future<CLLocationCoordinate2D> AMapLocationCoordinateConvert(CLLocationCoordinate2D coordinate, AMapLocationCoordinateType type) async {
   // print log
   if (fluttifyLogEnabled) {

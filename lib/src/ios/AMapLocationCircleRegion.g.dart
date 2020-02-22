@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapLocationCircleRegion extends AMapLocationRegion  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapLocationCircleRegion>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length});
+  
+    final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -65,6 +78,48 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
     } else {
       kNativeObjectPool.add(AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify');
       return AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify';
+    }
+  }
+  
+  //endregion
+}
+
+extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
+  //region getters
+  Future<List<CLLocationCoordinate2D>> get_center_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<double>> get_radius_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  //endregion
+
+  //region methods
+  Future<List<AMapLocationCircleRegion>> initWithCenterRadiusidentifier_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> identifier) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenterRadiusidentifier_batch', [for (int i = 0; i < this.length; i++) {"center": center[i].refId, "radius": radius[i], "identifier": identifier[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
     }
   }
   

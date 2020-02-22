@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapGeoFenceRegion extends NSObject with NSCopying {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapGeoFenceRegion>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceRegion', {'length': length});
+  
+    final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,50 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_currentLocation', {'refId': refId, "currentLocation": currentLocation.refId});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
+  //region getters
+  Future<List<String>> get_identifier_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_identifier_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_customID_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_customID_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapGeoFenceRegionStatus>> get_fenceStatus_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapGeoFenceRegionStatus.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapGeoFenceRegionType>> get_regionType_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapGeoFenceRegionType.values[result]).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<CLLocation>> get_currentLocation_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocation()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
