@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapLocationPolygonRegion extends AMapLocationRegion  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapLocationPolygonRegion>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationPolygonRegion', {'length': length});
+  
+    final List<AMapLocationPolygonRegion> typedResult = resultBatch.map((result) => AMapLocationPolygonRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -65,6 +78,48 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
     } else {
       kNativeObjectPool.add(AMapLocationPolygonRegion()..refId = result..tag = 'amap_location_fluttify');
       return AMapLocationPolygonRegion()..refId = result..tag = 'amap_location_fluttify';
+    }
+  }
+  
+  //endregion
+}
+
+extension AMapLocationPolygonRegion_Batch on List<AMapLocationPolygonRegion> {
+  //region getters
+  Future<List<List<CLLocationCoordinate2D>>> get_coordinates_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_coordinates_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => CLLocationCoordinate2D()..refId = it..tag = 'amap_location_fluttify').toList()).toList();
+    kNativeObjectPool.addAll(typedResult.expand((e) => e));
+    return typedResult;
+  }
+  
+  Future<List<int>> get_count_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_count_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  //endregion
+
+  //region methods
+  Future<List<AMapLocationPolygonRegion>> initWithCoordinatesCountidentifier_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> identifier) async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPolygonRegion::initWithCoordinatesCountidentifier_batch', [for (int i = 0; i < this.length; i++) {"coordinates": coordinates[i].map((it) => it.refId).toList(), "count": count[i], "identifier": identifier[i], "refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => AMapLocationPolygonRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
     }
   }
   

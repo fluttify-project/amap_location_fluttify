@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_location_AMapLocation  {
   //region constants
   
@@ -24,6 +26,17 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     return object;
   }
   
+  static Future<List<com_autonavi_aps_amapapi_model_AMapLocationServer>> create_batch__String(List<String> var1) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_autonavi_aps_amapapi_model_AMapLocationServer__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i]}]);
+  
+    final List<com_autonavi_aps_amapapi_model_AMapLocationServer> typedResult = resultBatch.map((result) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -31,6 +44,16 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_autonavi_aps_amapapi_model_AMapLocationServer> {
+  //region getters
   
   //endregion
 

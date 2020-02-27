@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class com_loc_ extends java_lang_Object  {
   //region constants
   
@@ -24,6 +26,16 @@ class com_loc_ extends java_lang_Object  {
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension com_loc__Batch on List<com_loc_> {
+  //region getters
   
   //endregion
 

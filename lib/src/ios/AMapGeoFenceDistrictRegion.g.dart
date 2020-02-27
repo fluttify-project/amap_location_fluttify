@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion  {
   //region constants
   
@@ -24,6 +26,17 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion  {
     return object;
   }
   
+  static Future<List<AMapGeoFenceDistrictRegion>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceDistrictRegion', {'length': length});
+  
+    final List<AMapGeoFenceDistrictRegion> typedResult = resultBatch.map((result) => AMapGeoFenceDistrictRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
   //endregion
 
   //region getters
@@ -36,6 +49,22 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion  {
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapGeoFenceDistrictRegion_Batch on List<AMapGeoFenceDistrictRegion> {
+  //region getters
+  Future<List<AMapLocationDistrictItem>> get_districtItem_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
   
   //endregion
 

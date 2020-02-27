@@ -10,6 +10,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapGeoFenceCircleRegion>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceCircleRegion', {'length': length});
+  
+    final List<AMapGeoFenceCircleRegion> typedResult = resultBatch.map((result) => AMapGeoFenceCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -42,6 +55,29 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion  {
   //endregion
 
   //region setters
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapGeoFenceCircleRegion_Batch on List<AMapGeoFenceCircleRegion> {
+  //region getters
+  Future<List<CLLocationCoordinate2D>> get_center_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_center_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<double>> get_radius_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_radius_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
   
   //endregion
 

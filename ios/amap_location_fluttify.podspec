@@ -10,7 +10,7 @@ A new flutter plugin project.
                        DESC
   s.homepage         = 'https://github.com/fluttify-project/amap_location_fluttify'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'yohom' => 'yohombao@gmail.com' }
+  s.author           = { 'yohom' => 'yohombao@qq.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
