@@ -27,9 +27,9 @@ class AMapGeoFenceManager extends NSObject  {
   }
   
   static Future<List<AMapGeoFenceManager>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceManager', {'length': length});
   
     final List<AMapGeoFenceManager> typedResult = resultBatch.map((result) => AMapGeoFenceManager()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -524,12 +524,38 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   
   //endregion
 
+  //region setters
+  Future<void> set_activeAction_batch(List<AMapGeoFenceActiveAction> activeAction) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "activeAction": activeAction[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[i]}]);
+  
+  
+  }
+  
+  Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[i]}]);
+  
+  
+  }
+  
+  Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[i]}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<void> addCircleRegionForMonitoringWithCenterRadiuscustomID_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (center.length != radius.length || radius.length != customID.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addCircleRegionForMonitoringWithCenterRadiuscustomID_batch', [for (int i = 0; i < this.length; i++) {"center": center[i].refId, "radius": radius[i], "customID": customID[i], "refId": this[i].refId}]);
@@ -546,10 +572,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> addPolygonRegionForMonitoringWithCoordinatesCountcustomID_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (coordinates.length != count.length || count.length != customID.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinatesCountcustomID_batch', [for (int i = 0; i < this.length; i++) {"coordinates": coordinates[i].map((it) => it.refId).toList(), "count": count[i], "customID": customID[i], "refId": this[i].refId}]);
@@ -566,10 +591,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> addKeywordPOIRegionForMonitoringWithKeywordPOITypecitysizecustomID_batch(List<String> keyword, List<String> type, List<String> city, List<int> size, List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (keyword.length != type.length || type.length != city.length || city.length != size.length || size.length != customID.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeywordPOITypecitysizecustomID_batch', [for (int i = 0; i < this.length; i++) {"keyword": keyword[i], "type": type[i], "city": city[i], "size": size[i], "customID": customID[i], "refId": this[i].refId}]);
@@ -586,10 +610,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> addAroundPOIRegionForMonitoringWithLocationPointAroundRadiuskeywordPOITypesizecustomID_batch(List<CLLocationCoordinate2D> locationPoint, List<int> aroundRadius, List<String> keyword, List<String> type, List<int> size, List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (locationPoint.length != aroundRadius.length || aroundRadius.length != keyword.length || keyword.length != type.length || type.length != size.length || size.length != customID.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPointAroundRadiuskeywordPOITypesizecustomID_batch', [for (int i = 0; i < this.length; i++) {"locationPoint": locationPoint[i].refId, "aroundRadius": aroundRadius[i], "keyword": keyword[i], "type": type[i], "size": size[i], "customID": customID[i], "refId": this[i].refId}]);
@@ -606,10 +629,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> addDistrictRegionForMonitoringWithDistrictNameCustomID_batch(List<String> districtName, List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (districtName.length != customID.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictNameCustomID_batch', [for (int i = 0; i < this.length; i++) {"districtName": districtName[i], "customID": customID[i], "refId": this[i].refId}]);
@@ -626,10 +648,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<AMapGeoFenceRegionActiveStatus>> statusWithGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::statusWithGeoFenceRegion_batch', [for (int i = 0; i < this.length; i++) {"region": region[i].refId, "refId": this[i].refId}]);
@@ -646,10 +667,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<List>> geoFenceRegionsWithCustomID_batch(List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::geoFenceRegionsWithCustomID_batch', [for (int i = 0; i < this.length; i++) {"customID": customID[i], "refId": this[i].refId}]);
@@ -666,10 +686,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<List>> monitoringGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID_batch', [for (int i = 0; i < this.length; i++) {"customID": customID[i], "refId": this[i].refId}]);
@@ -686,10 +705,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<List>> pausedGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID_batch', [for (int i = 0; i < this.length; i++) {"customID": customID[i], "refId": this[i].refId}]);
@@ -706,10 +724,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<List>> pauseGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID_batch', [for (int i = 0; i < this.length; i++) {"customID": customID[i], "refId": this[i].refId}]);
@@ -726,10 +743,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<bool>> pauseTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseTheGeoFenceRegion_batch', [for (int i = 0; i < this.length; i++) {"region": region[i].refId, "refId": this[i].refId}]);
@@ -746,10 +762,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<List>> startGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startGeoFenceRegionsWithCustomID_batch', [for (int i = 0; i < this.length; i++) {"customID": customID[i], "refId": this[i].refId}]);
@@ -766,10 +781,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<List<bool>> startTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startTheGeoFenceRegion_batch', [for (int i = 0; i < this.length; i++) {"region": region[i].refId, "refId": this[i].refId}]);
@@ -786,10 +800,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> removeTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeTheGeoFenceRegion_batch', [for (int i = 0; i < this.length; i++) {"region": region[i].refId, "refId": this[i].refId}]);
@@ -806,10 +819,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> removeGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID_batch', [for (int i = 0; i < this.length; i++) {"customID": customID[i], "refId": this[i].refId}]);
@@ -826,10 +838,9 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   Future<void> removeAllGeoFenceRegions_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeAllGeoFenceRegions_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

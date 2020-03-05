@@ -27,9 +27,9 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   }
   
   static Future<List<AMapGeoFenceRegion>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceRegion', {'length': length});
   
     final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -133,6 +133,27 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
     final typedResult = (resultBatch as List).map((result) => CLLocation()..refId = result..tag = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_fenceStatus_batch(List<AMapGeoFenceRegionStatus> fenceStatus) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_fenceStatus_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "fenceStatus": fenceStatus[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_regionType_batch(List<AMapGeoFenceRegionType> regionType) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_regionType_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "regionType": regionType[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_currentLocation_batch(List<CLLocation> currentLocation) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_currentLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "currentLocation": currentLocation[i].refId}]);
+  
+  
   }
   
   //endregion

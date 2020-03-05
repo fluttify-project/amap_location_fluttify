@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapLocationPolygonRegion extends AMapLocationRegion  {
+class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapLocationPolygonRegion extends AMapLocationRegion  {
   }
   
   static Future<List<AMapLocationPolygonRegion>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationPolygonRegion', {'length': length});
   
     final List<AMapLocationPolygonRegion> typedResult = resultBatch.map((result) => AMapLocationPolygonRegion()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -102,12 +102,15 @@ extension AMapLocationPolygonRegion_Batch on List<AMapLocationPolygonRegion> {
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<AMapLocationPolygonRegion>> initWithCoordinatesCountidentifier_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> identifier) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (coordinates.length != count.length || count.length != identifier.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPolygonRegion::initWithCoordinatesCountidentifier_batch', [for (int i = 0; i < this.length; i++) {"coordinates": coordinates[i].map((it) => it.refId).toList(), "count": count[i], "identifier": identifier[i], "refId": this[i].refId}]);

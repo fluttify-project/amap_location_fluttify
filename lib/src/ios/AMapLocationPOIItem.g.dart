@@ -27,9 +27,9 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
   }
   
   static Future<List<AMapLocationPOIItem>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationPOIItem', {'length': length});
   
     final List<AMapLocationPOIItem> typedResult = resultBatch.map((result) => AMapLocationPOIItem()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -240,6 +240,69 @@ extension AMapLocationPOIItem_Batch on List<AMapLocationPOIItem> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_pId_batch(List<String> pId) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_pId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pId": pId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_name_batch(List<String> name) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+  
+  
+  }
+  
+  Future<void> set_type_batch(List<String> type) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_type_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
+  
+  
+  }
+  
+  Future<void> set_typeCode_batch(List<String> typeCode) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_typeCode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "typeCode": typeCode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_address_batch(List<String> address) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_address_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapLocationPoint> location) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_tel_batch(List<String> tel) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_tel_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tel": tel[i]}]);
+  
+  
+  }
+  
+  Future<void> set_province_batch(List<String> province) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_province_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "province": province[i]}]);
+  
+  
+  }
+  
+  Future<void> set_city_batch(List<String> city) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+  
+  
+  }
+  
+  Future<void> set_district_batch(List<String> district) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPOIItem::set_district_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "district": district[i]}]);
+  
+  
   }
   
   //endregion

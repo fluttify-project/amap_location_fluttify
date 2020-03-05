@@ -27,9 +27,9 @@ class AMapLocationRegion extends NSObject with NSCopying {
   }
   
   static Future<List<AMapLocationRegion>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationRegion', {'length': length});
   
     final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -148,12 +148,26 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
   
   //endregion
 
+  //region setters
+  Future<void> set_notifyOnEntry_batch(List<bool> notifyOnEntry) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnEntry_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "notifyOnEntry": notifyOnEntry[i]}]);
+  
+  
+  }
+  
+  Future<void> set_notifyOnExit_batch(List<bool> notifyOnExit) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnExit_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "notifyOnExit": notifyOnExit[i]}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<AMapLocationRegion>> initWithIdentifier_batch(List<String> identifier) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::initWithIdentifier_batch', [for (int i = 0; i < this.length; i++) {"identifier": identifier[i], "refId": this[i].refId}]);
@@ -170,10 +184,9 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
   }
   
   Future<List<bool>> containsCoordinate_batch(List<CLLocationCoordinate2D> coordinate) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::containsCoordinate_batch', [for (int i = 0; i < this.length; i++) {"coordinate": coordinate[i].refId, "refId": this[i].refId}]);

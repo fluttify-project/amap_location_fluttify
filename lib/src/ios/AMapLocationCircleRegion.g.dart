@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapLocationCircleRegion extends AMapLocationRegion  {
+class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapLocationCircleRegion extends AMapLocationRegion  {
   }
   
   static Future<List<AMapLocationCircleRegion>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length});
   
     final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -102,12 +102,15 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<AMapLocationCircleRegion>> initWithCenterRadiusidentifier_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> identifier) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (center.length != radius.length || radius.length != identifier.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenterRadiusidentifier_batch', [for (int i = 0; i < this.length; i++) {"center": center[i].refId, "radius": radius[i], "identifier": identifier[i], "refId": this[i].refId}]);

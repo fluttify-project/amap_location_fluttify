@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion  {
+class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion  {
   }
   
   static Future<List<AMapGeoFenceDistrictRegion>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceDistrictRegion', {'length': length});
   
     final List<AMapGeoFenceDistrictRegion> typedResult = resultBatch.map((result) => AMapGeoFenceDistrictRegion()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -65,6 +65,10 @@ extension AMapGeoFenceDistrictRegion_Batch on List<AMapGeoFenceDistrictRegion> {
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
+  
+  //endregion
+
+  //region setters
   
   //endregion
 

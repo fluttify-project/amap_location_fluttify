@@ -27,9 +27,9 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
   }
   
   static Future<List<com_amap_api_location_AMapLocationClientOption>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocationClientOption__', {'length': length});
   
     final List<com_amap_api_location_AMapLocationClientOption> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -1112,12 +1112,15 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getAPIKEY_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getAPIKEY_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1134,10 +1137,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isMockEnable_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isMockEnable_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1154,10 +1156,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setMockEnable_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setMockEnable_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1174,10 +1175,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<int>> getInterval_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getInterval_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1194,10 +1194,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setInterval_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setInterval_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1214,10 +1213,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isOnceLocation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOnceLocation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1234,10 +1232,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setOnceLocation_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocation_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1254,10 +1251,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isNeedAddress_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isNeedAddress_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1274,10 +1270,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setNeedAddress_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setNeedAddress_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1294,10 +1289,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isWifiActiveScan_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isWifiActiveScan_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1314,10 +1308,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setWifiActiveScan_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiActiveScan_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1334,10 +1327,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isWifiScan_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isWifiScan_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1354,10 +1346,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setWifiScan_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiScan_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1374,10 +1365,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption_AMapLocationMode>> getLocationMode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationMode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1394,10 +1384,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLocationMode_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationMode> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationMode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].index, "refId": this[i].refId}]);
@@ -1414,10 +1403,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol>> getLocationProtocol_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationProtocol_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1434,10 +1422,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<void> setLocationProtocol_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].index, "refId": this[i].refId}]);
@@ -1454,10 +1441,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isKillProcess_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isKillProcess_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1474,10 +1460,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setKillProcess_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setKillProcess_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1494,10 +1479,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isGpsFirst_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isGpsFirst_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1514,10 +1498,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setGpsFirst_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirst_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1534,10 +1517,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setGpsFirstTimeout_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1554,10 +1536,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<int>> getGpsFirstTimeout_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getGpsFirstTimeout_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1574,10 +1555,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> clone_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::clone_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1594,10 +1574,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<int>> getHttpTimeOut_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getHttpTimeOut_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1614,10 +1593,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setHttpTimeOut_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setHttpTimeOut_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1634,10 +1612,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isOffset_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOffset_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1654,10 +1631,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setOffset_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOffset_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1674,10 +1650,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isLocationCacheEnable_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isLocationCacheEnable_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1694,10 +1669,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLocationCacheEnable_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1714,10 +1688,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isOnceLocationLatest_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOnceLocationLatest_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1734,10 +1707,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setOnceLocationLatest_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1754,10 +1726,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isSensorEnable_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isSensorEnable_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1774,10 +1745,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setSensorEnable_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setSensorEnable_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1794,10 +1764,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLastLocationLifeCycle_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1814,10 +1783,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<int>> getLastLocationLifeCycle_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLastLocationLifeCycle_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1834,10 +1802,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption_GeoLanguage>> getGeoLanguage_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getGeoLanguage_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1854,10 +1821,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setGeoLanguage_batch(List<com_amap_api_location_AMapLocationClientOption_GeoLanguage> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGeoLanguage_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].index, "refId": this[i].refId}]);
@@ -1874,10 +1840,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<void> setDownloadCoordinateConvertLibrary_batch(List<bool> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -1894,10 +1859,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isDownloadCoordinateConvertLibrary_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1914,10 +1878,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<double>> getDeviceModeDistanceFilter_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getDeviceModeDistanceFilter_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1934,10 +1897,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setDeviceModeDistanceFilter_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1954,10 +1916,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLocationPurpose_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationPurpose_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].index, "refId": this[i].refId}]);
@@ -1974,10 +1935,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose>> getLocationPurpose_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationPurpose_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1994,10 +1954,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<bool>> isOpenAlwaysScanWifi_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2014,10 +1973,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<void> setOpenAlwaysScanWifi_batch(List<bool> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -2034,10 +1992,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<void> setScanWifiInterval_batch(List<int> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setScanWifiInterval_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i], "refId": this[i].refId}]);
@@ -2054,10 +2011,9 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   }
   
   Future<List<int>> getScanWifiInterval_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getScanWifiInterval_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
