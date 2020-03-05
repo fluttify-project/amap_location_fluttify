@@ -12,8 +12,12 @@
 #import <AMapLocationKit/AMapLocationManager.h>
 #import <AMapLocationKit/AMapLocationCommonObj.h>
 
+typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
+
 @interface AmapLocationFluttifyPlugin : NSObject<AMapGeoFenceManagerDelegate, AMapLocationManagerDelegate, FlutterPlugin>
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar;
+
+@property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
 
 @end

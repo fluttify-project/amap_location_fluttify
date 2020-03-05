@@ -27,9 +27,9 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   }
   
   static Future<List<AMapLocationDistrictItem>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length});
   
     final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -69,6 +69,15 @@ extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_cityCode_batch(List<String> cityCode) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDistrictItem::set_cityCode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityCode": cityCode[i]}]);
+  
+  
   }
   
   //endregion

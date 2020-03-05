@@ -27,9 +27,9 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   }
   
   static Future<List<com_amap_api_fence_DistrictItem>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_fence_DistrictItem__', {'length': length});
   
     final List<com_amap_api_fence_DistrictItem> typedResult = resultBatch.map((result) => com_amap_api_fence_DistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -232,12 +232,15 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getCitycode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getCitycode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -254,10 +257,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<void> setCitycode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setCitycode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -274,10 +276,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<List<String>> getAdcode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getAdcode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -294,10 +295,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<void> setAdcode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setAdcode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -314,10 +314,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<List<List<com_amap_api_location_DPoint>>> getPolyline_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getPolyline_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -334,10 +333,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<void> setPolyline_batch(List<List<com_amap_api_location_DPoint>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setPolyline_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -354,10 +352,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<List<String>> getDistrictName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getDistrictName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -374,10 +371,9 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   }
   
   Future<void> setDistrictName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setDistrictName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

@@ -27,9 +27,9 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   }
   
   static Future<List<AMapLocationPoint>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length});
   
     final List<AMapLocationPoint> typedResult = resultBatch.map((result) => AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -113,12 +113,26 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
   
   //endregion
 
+  //region setters
+  Future<void> set_latitude_batch(List<double> latitude) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_latitude_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "latitude": latitude[i]}]);
+  
+  
+  }
+  
+  Future<void> set_longitude_batch(List<double> longitude) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_longitude_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "longitude": longitude[i]}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<AMapLocationPoint>> locationWithLatitudeLongitude_batch(List<double> lat, List<double> lon) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (lat.length != lon.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::locationWithLatitudeLongitude_batch', [for (int i = 0; i < this.length; i++) {"lat": lat[i], "lon": lon[i], "refId": this[i].refId}]);

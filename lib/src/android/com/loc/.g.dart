@@ -39,6 +39,10 @@ extension com_loc__Batch on List<com_loc_> {
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   
   //endregion

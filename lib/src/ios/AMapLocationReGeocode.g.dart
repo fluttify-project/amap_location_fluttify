@@ -27,9 +27,9 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
   }
   
   static Future<List<AMapLocationReGeocode>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationReGeocode', {'length': length});
   
     final List<AMapLocationReGeocode> typedResult = resultBatch.map((result) => AMapLocationReGeocode()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -316,6 +316,93 @@ extension AMapLocationReGeocode_Batch on List<AMapLocationReGeocode> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_formattedAddress_batch(List<String> formattedAddress) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_formattedAddress_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "formattedAddress": formattedAddress[i]}]);
+  
+  
+  }
+  
+  Future<void> set_country_batch(List<String> country) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_country_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "country": country[i]}]);
+  
+  
+  }
+  
+  Future<void> set_province_batch(List<String> province) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_province_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "province": province[i]}]);
+  
+  
+  }
+  
+  Future<void> set_city_batch(List<String> city) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+  
+  
+  }
+  
+  Future<void> set_district_batch(List<String> district) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_district_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "district": district[i]}]);
+  
+  
+  }
+  
+  Future<void> set_township_batch(List<String> township) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_township_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "township": township[i]}]);
+  
+  
+  }
+  
+  Future<void> set_neighborhood_batch(List<String> neighborhood) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_neighborhood_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "neighborhood": neighborhood[i]}]);
+  
+  
+  }
+  
+  Future<void> set_building_batch(List<String> building) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_building_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "building": building[i]}]);
+  
+  
+  }
+  
+  Future<void> set_citycode_batch(List<String> citycode) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_citycode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_adcode_batch(List<String> adcode) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_street_batch(List<String> street) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_street_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "street": street[i]}]);
+  
+  
+  }
+  
+  Future<void> set_number_batch(List<String> number) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_number_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "number": number[i]}]);
+  
+  
+  }
+  
+  Future<void> set_POIName_batch(List<String> POIName) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_POIName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "POIName": POIName[i]}]);
+  
+  
+  }
+  
+  Future<void> set_AOIName_batch(List<String> AOIName) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationReGeocode::set_AOIName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "AOIName": AOIName[i]}]);
+  
+  
   }
   
   //endregion

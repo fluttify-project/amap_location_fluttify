@@ -27,9 +27,9 @@ class AMapLocationManager extends NSObject  {
   }
   
   static Future<List<AMapLocationManager>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationManager', {'length': length});
   
     final List<AMapLocationManager> typedResult = resultBatch.map((result) => AMapLocationManager()..refId = result..tag = 'amap_location_fluttify').toList();
@@ -476,12 +476,68 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   
   //endregion
 
+  //region setters
+  Future<void> set_distanceFilter_batch(List<double> distanceFilter) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_distanceFilter_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distanceFilter": distanceFilter[i]}]);
+  
+  
+  }
+  
+  Future<void> set_desiredAccuracy_batch(List<double> desiredAccuracy) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_desiredAccuracy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "desiredAccuracy": desiredAccuracy[i]}]);
+  
+  
+  }
+  
+  Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[i]}]);
+  
+  
+  }
+  
+  Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[i]}]);
+  
+  
+  }
+  
+  Future<void> set_locationTimeout_batch(List<int> locationTimeout) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locationTimeout_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "locationTimeout": locationTimeout[i]}]);
+  
+  
+  }
+  
+  Future<void> set_reGeocodeTimeout_batch(List<int> reGeocodeTimeout) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeTimeout_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reGeocodeTimeout": reGeocodeTimeout[i]}]);
+  
+  
+  }
+  
+  Future<void> set_locatingWithReGeocode_batch(List<bool> locatingWithReGeocode) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locatingWithReGeocode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "locatingWithReGeocode": locatingWithReGeocode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_reGeocodeLanguage_batch(List<AMapLocationReGeocodeLanguage> reGeocodeLanguage) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeLanguage_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reGeocodeLanguage": reGeocodeLanguage[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[i]}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<bool>> headingAvailable_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::headingAvailable_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -498,10 +554,9 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   }
   
   Future<void> startUpdatingHeading_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::startUpdatingHeading_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -518,10 +573,9 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   }
   
   Future<void> stopUpdatingHeading_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::stopUpdatingHeading_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -538,10 +592,9 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   }
   
   Future<void> dismissHeadingCalibrationDisplay_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -558,10 +611,9 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   }
   
   Future<void> startUpdatingLocation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::startUpdatingLocation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -578,10 +630,9 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   }
   
   Future<void> stopUpdatingLocation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::stopUpdatingLocation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
