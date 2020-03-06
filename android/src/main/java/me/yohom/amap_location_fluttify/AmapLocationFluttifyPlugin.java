@@ -63,6 +63,10 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
     // v2 android embedding
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onAttachedToEngine@" + binding);
+        }
+
         final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/amap_location_fluttify");
 
         messenger = binding.getBinaryMessenger();
@@ -77,11 +81,17 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
 
     @Override
     public void onDetachedFromEngine(FlutterPluginBinding binding) {
-
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onDetachedFromEngine@" + binding);
+        }
+        handlerMapList.clear();
     }
 
     @Override
     public void onAttachedToActivity(ActivityPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onAttachedToActivity@" + binding);
+        }
         Activity activity = binding.getActivity();
 
         // register platform view
@@ -89,13 +99,25 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
     }
 
     @Override
-    public void onDetachedFromActivityForConfigChanges() { }
+    public void onDetachedFromActivity() {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onDetachedFromActivity");
+        }
+    }
 
     @Override
-    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) { }
+    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onReattachedToActivityForConfigChanges@" + binding);
+        }
+    }
 
     @Override
-    public void onDetachedFromActivity() { }
+    public void onDetachedFromActivityForConfigChanges() {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onDetachedFromActivityForConfigChanges");
+        }
+    }
 
     @Override
     public void onMethodCall(@NonNull MethodCall methodCall, @NonNull MethodChannel.Result methodResult) {

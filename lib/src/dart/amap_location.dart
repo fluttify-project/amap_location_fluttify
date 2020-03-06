@@ -254,7 +254,7 @@ class AmapLocation {
 
         _androidLocationDelegate = null;
 
-        await _androidClient.stopLocation();
+        await _androidClient?.stopLocation();
       },
       ios: (pool) async {
         _locationController?.close();
@@ -262,7 +262,7 @@ class AmapLocation {
 
         _iosLocationDelegate = null;
 
-        await _iosClient.stopUpdatingLocation();
+        await _iosClient?.stopUpdatingLocation();
       },
     );
   }
@@ -291,9 +291,8 @@ class AmapLocation {
     _iosLocationDelegate = null;
 
     final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
-    kNativeObjectPool
-      ..where(isCurrentPlugin).forEach((it) => it.release())
-      ..removeWhere(isCurrentPlugin);
+    await kNativeObjectPool.where(isCurrentPlugin).release_batch();
+    kNativeObjectPool.removeWhere(isCurrentPlugin);
 
     if (_androidClient != null) {
       await _androidClient.onDestroy();
