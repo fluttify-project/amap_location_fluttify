@@ -1,3 +1,7 @@
+## 0.8.10
+- roll engine #dbad1c35 (#53)
+- fix: 直接调用stopLocation时, 对client的空判断
+
 ## 0.8.9
 - roll engine #0a5ab5f (#39)
 
