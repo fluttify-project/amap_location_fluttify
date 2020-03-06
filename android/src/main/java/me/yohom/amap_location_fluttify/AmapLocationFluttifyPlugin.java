@@ -32,7 +32,7 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 @SuppressWarnings("ALL")
 public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler, ActivityAware {
 
-    private static final List<Map<String, Handler>> handlerMapList = new ArrayList<>();
+    private static List<Map<String, Handler>> handlerMapList;
 
     // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
@@ -47,6 +47,7 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
         plugin.messenger = messenger;
         plugin.platformViewRegistry = platformViewRegistry;
 
+        handlerMapList = new ArrayList<>();
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
@@ -72,6 +73,7 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
         messenger = binding.getBinaryMessenger();
         platformViewRegistry = binding.getPlatformViewRegistry();
 
+        handlerMapList = new ArrayList<>();
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
@@ -84,7 +86,6 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
         if (getEnableLog()) {
             Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onDetachedFromEngine@" + binding);
         }
-        handlerMapList.clear();
     }
 
     @Override
