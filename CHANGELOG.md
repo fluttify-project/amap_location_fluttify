@@ -1,3 +1,6 @@
+## 0.8.9
+- roll engine #0a5ab5f (#39)
+
 ## 0.8.8
 - roll engine #b356b08
 
