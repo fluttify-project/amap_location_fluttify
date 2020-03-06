@@ -596,7 +596,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setExpiration", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -788,7 +788,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setEnterTime", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -6293,7 +6293,7 @@ public class SubHandler1 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -6935,7 +6935,7 @@ public class SubHandler1 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");

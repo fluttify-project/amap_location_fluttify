@@ -113,7 +113,7 @@ public class SubHandler2 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -453,7 +453,7 @@ public class SubHandler2 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -897,7 +897,7 @@ public class SubHandler2 {
             
                     // args
                     // jsonable arg
-                    long var0 = (long) ((Map<String, Object>) args).get("var0");
+                    int var0 = (int) ((Map<String, Object>) args).get("var0");
             
                     // ref
             
@@ -1389,7 +1389,7 @@ public class SubHandler2 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -3078,7 +3078,7 @@ public class SubHandler2 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -3288,7 +3288,7 @@ public class SubHandler2 {
             
                     // args
                     // jsonable arg
-                    long var1 = (long) ((Map<String, Object>) args).get("var1");
+                    int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");

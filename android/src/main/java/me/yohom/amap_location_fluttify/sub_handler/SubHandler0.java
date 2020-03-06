@@ -3841,7 +3841,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClientOption::setInterval", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -4432,7 +4432,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -4569,7 +4569,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClientOption::setHttpTimeOut", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -4882,7 +4882,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -5290,7 +5290,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClientOption::setScanWifiInterval", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var0 = (long) ((Map<String, Object>) args).get("var0");
+                int var0 = (int) ((Map<String, Object>) args).get("var0");
             
                 // ref
             
@@ -5740,7 +5740,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationQualityReport::setNetUseTime", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                long var1 = (long) ((Map<String, Object>) args).get("var1");
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");

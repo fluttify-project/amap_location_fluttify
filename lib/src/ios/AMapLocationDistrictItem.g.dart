@@ -75,7 +75,7 @@ extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
 
   //region setters
   Future<void> set_cityCode_batch(List<String> cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDistrictItem::set_cityCode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityCode": cityCode[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityCode": cityCode[i]}]);
   
   
   }

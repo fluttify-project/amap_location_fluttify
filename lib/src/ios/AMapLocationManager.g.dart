@@ -478,55 +478,55 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
 
   //region setters
   Future<void> set_distanceFilter_batch(List<double> distanceFilter) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_distanceFilter_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distanceFilter": distanceFilter[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_distanceFilter_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distanceFilter": distanceFilter[i]}]);
   
   
   }
   
   Future<void> set_desiredAccuracy_batch(List<double> desiredAccuracy) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_desiredAccuracy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "desiredAccuracy": desiredAccuracy[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_desiredAccuracy_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "desiredAccuracy": desiredAccuracy[i]}]);
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[i]}]);
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[i]}]);
   
   
   }
   
   Future<void> set_locationTimeout_batch(List<int> locationTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locationTimeout_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "locationTimeout": locationTimeout[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locationTimeout_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "locationTimeout": locationTimeout[i]}]);
   
   
   }
   
   Future<void> set_reGeocodeTimeout_batch(List<int> reGeocodeTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeTimeout_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reGeocodeTimeout": reGeocodeTimeout[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeTimeout_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reGeocodeTimeout": reGeocodeTimeout[i]}]);
   
   
   }
   
   Future<void> set_locatingWithReGeocode_batch(List<bool> locatingWithReGeocode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locatingWithReGeocode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "locatingWithReGeocode": locatingWithReGeocode[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_locatingWithReGeocode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "locatingWithReGeocode": locatingWithReGeocode[i]}]);
   
   
   }
   
   Future<void> set_reGeocodeLanguage_batch(List<AMapLocationReGeocodeLanguage> reGeocodeLanguage) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeLanguage_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reGeocodeLanguage": reGeocodeLanguage[i].index}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_reGeocodeLanguage_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reGeocodeLanguage": reGeocodeLanguage[i].index}]);
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[i]}]);
   
   
   }

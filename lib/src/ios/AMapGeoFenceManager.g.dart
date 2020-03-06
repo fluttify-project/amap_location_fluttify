@@ -526,25 +526,25 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
 
   //region setters
   Future<void> set_activeAction_batch(List<AMapGeoFenceActiveAction> activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "activeAction": activeAction[i].index}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "activeAction": activeAction[i].index}]);
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[i]}]);
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[i]}]);
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[i]}]);
   
   
   }

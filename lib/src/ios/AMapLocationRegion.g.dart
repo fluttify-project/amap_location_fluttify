@@ -150,13 +150,13 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
 
   //region setters
   Future<void> set_notifyOnEntry_batch(List<bool> notifyOnEntry) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnEntry_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "notifyOnEntry": notifyOnEntry[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnEntry_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "notifyOnEntry": notifyOnEntry[i]}]);
   
   
   }
   
   Future<void> set_notifyOnExit_batch(List<bool> notifyOnExit) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnExit_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "notifyOnExit": notifyOnExit[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::set_notifyOnExit_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "notifyOnExit": notifyOnExit[i]}]);
   
   
   }

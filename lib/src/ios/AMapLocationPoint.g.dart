@@ -115,13 +115,13 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
 
   //region setters
   Future<void> set_latitude_batch(List<double> latitude) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_latitude_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "latitude": latitude[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_latitude_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "latitude": latitude[i]}]);
   
   
   }
   
   Future<void> set_longitude_batch(List<double> longitude) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_longitude_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "longitude": longitude[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::set_longitude_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "longitude": longitude[i]}]);
   
   
   }
