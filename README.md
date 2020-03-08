@@ -8,9 +8,17 @@
 
 Dart接口基于[fluttify](https://github.com/yohom/fluttify-core-example)引擎生成. dartdoc[接口文档](https://pub.flutter-io.cn/documentation/amap_location_fluttify/latest/).
 
-| Demo | 微信赞助 | 支付宝赞助 | QQ群 |
-| :----------: | :----------: | :----------: | :----------: |
-| 扫描二维码 <br> 或者 <br> [点击下载](https://github.com/fluttify-project/amap_location_fluttify/blob/master/example/build/app/outputs/apk/release/app-release.apk?raw=true) </br> ![Example](assets/amap_location_fluttify_apk.png) | 如果项目帮到了你 </br> 不妨请作者喝杯奶茶 :) </br> ![微信](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true) | 开源不易 </br> 你的star是我最大的动力 </br> ![支付宝](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true) | 加入QQ群讨论 <br/><br/> ![QQ群](https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/QQ%E7%BE%A4.png?raw=true) |
+## 技术支持
+- 请参考 [technical-support-plan](https://github.com/fluttify-project/technical-support-plan) 进行操作, 技术支持工单将以最高优先级处理.
+
+## 接外包
+**本人承接外包项目(地图类app优先), 有意者请联系qq 382146139.**
+
+## DEMO 与 社区
+
+| Demo | QQ群 |
+| :----------: | :----------: |
+| 扫描二维码 <br> 或者 <br> [点击下载](https://github.com/fluttify-project/amap_location_fluttify/blob/master/example/build/app/outputs/apk/release/app-release.apk?raw=true) </br> <img src="assets/amap_map_fluttify_apk.png" height="300"> | 加入QQ群讨论 <br/> <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/QQ%E7%BE%A4.png?raw=true" height="300"> |
 
 安装: 
 ```yaml
@@ -45,13 +53,12 @@ if (await requestPermission()) {
 }
 ```
 
-## FAQ
-- 这个项目跟`amap_base`有什么联系和区别?
-    - 联系: 除了是同一个作者开发的之外没有联系; 
-    - 区别: `amap_base`使用的是常规的开发方式, 还是以`MethodChannel`为中心在dart和原生以及各个原生平台之间斡旋. 而`fluttify`系列插件是在[fluttify](https://github.com/fluttify-project/fluttify-core-example)引擎生成的dart接口之上去开发插件, 屏蔽了原生代码, 开发插件时不再需要在不同的原生代码之间斡旋, 只需要专注于整合不同平台的api即可.
+| 微信支持 | 支付宝支持 |
+| :----------: | :----------: |
+| <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true" height="300"> | <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true" height="300"> |
 
 ## LICENSE
-> Copyright 2019 yohom
+> Copyright 2020 yohom
 >   
 > Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
