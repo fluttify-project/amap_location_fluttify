@@ -4976,7 +4976,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_autonavi_aps_amapapi_model_AMapLocationServer__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_autonavi_aps_amapapi_model_AMapLocationServer__String");
+                }
             
                 // args
                 // jsonable arg
@@ -4995,7 +4997,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -5014,7 +5018,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent");
+                }
             
                 // args
                 // ref arg
@@ -5035,7 +5041,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_DPoint__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__");
+                }
             
                 // args
             
@@ -5053,7 +5061,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_DPoint__double__double", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__double__double");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__double__double");
+                }
             
                 // args
                 // jsonable arg
@@ -5074,7 +5084,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordinateConverter__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordinateConverter__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -5093,7 +5105,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_CoordUtil__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordUtil__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordUtil__");
+                }
             
                 // args
             
@@ -5111,7 +5125,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_UmidtokenInfo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_UmidtokenInfo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_UmidtokenInfo__");
+                }
             
                 // args
             
@@ -5129,7 +5145,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocation__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__String");
+                }
             
                 // args
                 // jsonable arg
@@ -5148,7 +5166,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__android_location_Location");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__android_location_Location");
+                }
             
                 // args
                 // ref arg
@@ -5167,7 +5187,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClientOption__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClientOption__");
+                }
             
                 // args
             
@@ -5185,7 +5207,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationQualityReport__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationQualityReport__");
+                }
             
                 // args
             
@@ -5203,7 +5227,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_DistrictItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_DistrictItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_DistrictItem__");
+                }
             
                 // args
             
@@ -5221,7 +5247,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFenceClient__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFenceClient__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -5240,7 +5268,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_GeoFence__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFence__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFence__");
+                }
             
                 // args
             
@@ -5258,7 +5288,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_PoiItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_PoiItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_PoiItem__");
+                }
             
                 // args
             
