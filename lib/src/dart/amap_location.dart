@@ -252,8 +252,6 @@ class AmapLocation {
         _locationController?.close();
         _locationController = null;
 
-        _androidLocationDelegate = null;
-
         await _androidClient?.stopLocation();
       },
       ios: (pool) async {
