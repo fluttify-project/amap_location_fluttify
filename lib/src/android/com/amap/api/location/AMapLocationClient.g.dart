@@ -369,6 +369,28 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     }
   }
   
+  Future<void> enableBackgroundLocation(int var1, android_app_Notification var2) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::enableBackgroundLocation([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::enableBackgroundLocation', {"var1": var1, "var2": var2.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
   Future<void> disableBackgroundLocation(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -604,6 +626,25 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::onDestroy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<void> enableBackgroundLocation_batch(List<int> var1, List<android_app_Notification> var2) async {
+    if (var1.length != var2.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::enableBackgroundLocation_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i].refId, "refId": this[i].refId}]);
   
   
     // convert native result to dart side object
