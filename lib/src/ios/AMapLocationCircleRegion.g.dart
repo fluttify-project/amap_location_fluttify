@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region constants
+  static const String name__ = 'AMapLocationCircleRegion';
+
   
   //endregion
 
@@ -59,14 +61,14 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //endregion
 
   //region methods
-  Future<AMapLocationCircleRegion> initWithCenterRadiusidentifier(CLLocationCoordinate2D center, double radius, String identifier) async {
+  Future<AMapLocationCircleRegion> initWithCenter_radius_identifier(CLLocationCoordinate2D center, double radius, String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationCircleRegion@$refId::initWithCenter([\'radius\':$radius, \'identifier\':$identifier])');
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenterRadiusidentifier', {"center": center.refId, "radius": radius, "identifier": identifier, "refId": refId});
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center.refId, "radius": radius, "identifier": identifier, "refId": refId});
   
   
     // handle native call
@@ -87,14 +89,14 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
 extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<double>> get_radius_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -107,13 +109,13 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //endregion
 
   //region methods
-  Future<List<AMapLocationCircleRegion>> initWithCenterRadiusidentifier_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> identifier) async {
+  Future<List<AMapLocationCircleRegion>> initWithCenter_radius_identifier_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> identifier) async {
     if (center.length != radius.length || radius.length != identifier.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenterRadiusidentifier_batch', [for (int i = 0; i < this.length; i++) {"center": center[i].refId, "radius": radius[i], "identifier": identifier[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__].refId, "radius": radius[__i__], "identifier": identifier[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

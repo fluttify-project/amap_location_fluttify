@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapLocationDistrictItem';
+
   
   //endregion
 
@@ -65,7 +67,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
   //region getters
   Future<List<String>> get_cityCode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -75,7 +77,7 @@ extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
 
   //region setters
   Future<void> set_cityCode_batch(List<String> cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityCode": cityCode[i]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "cityCode": cityCode[__i__]}]);
   
   
   }

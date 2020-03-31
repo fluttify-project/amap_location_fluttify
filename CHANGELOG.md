@@ -1,3 +1,7 @@
+## 0.9.0
+- enhance: [breaking change] 使用原始值代替Future返回, 简化使用
+- roll engine #939e12d7
+
 ## 0.8.11
 - roll engine #481e45c1
 

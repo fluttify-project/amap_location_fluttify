@@ -1,140 +1,75 @@
 import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
+import 'package:flutter/cupertino.dart';
 
 /// 定位结果 model
 class Location {
-  Location.android(this._androidModel);
-
-  Location.ios(this._iosLocation, this._iosRegeocode);
-
-  com_amap_api_location_AMapLocation _androidModel;
-  CLLocation _iosLocation;
-  AMapLocationReGeocode _iosRegeocode;
+  Location({
+    @required this.address,
+    @required this.latLng,
+    @required this.altitude,
+    @required this.bearing,
+    @required this.country,
+    @required this.province,
+    @required this.city,
+    @required this.cityCode,
+    @required this.adCode,
+    @required this.district,
+    @required this.poiName,
+    @required this.street,
+    @required this.streetNumber,
+    @required this.aoiName,
+    @required this.accuracy,
+  });
 
   /// 地址全称
-  Future<String> get address {
-    return platform(
-      android: (pool) => _androidModel.getAddress(),
-      ios: (pool) => _iosRegeocode.get_formattedAddress(),
-    );
-  }
+  String address;
 
   /// 经纬度
-  Future<LatLng> get latLng {
-    return platform(
-      android: (pool) async => LatLng(
-        await _androidModel.getLatitude(),
-        await _androidModel.getLongitude(),
-      ),
-      ios: (pool) async {
-        final coordinate = await _iosLocation.coordinate;
-        return LatLng(await coordinate.latitude, await coordinate.longitude);
-      },
-    );
-  }
+  LatLng latLng;
 
   /// 海拔
-  Future<double> get altitude {
-    return platform(
-      android: (pool) => _androidModel.getAltitude(),
-      ios: (pool) => _iosLocation.altitude,
-    );
-  }
+  double altitude;
 
   /// 设备朝向/移动方向
-  Future<double> get bearing {
-    return platform(
-      android: (pool) => _androidModel.getBearing(),
-      ios: (pool) => _iosLocation.course,
-    );
-  }
+  double bearing;
 
   /// 国家
-  Future<String> get country {
-    return platform(
-      android: (pool) => _androidModel.getCountry(),
-      ios: (pool) => _iosRegeocode.get_country(),
-    );
-  }
+  String country;
 
   /// 省份
-  Future<String> get province {
-    return platform(
-      android: (pool) => _androidModel.getProvince(),
-      ios: (pool) => _iosRegeocode.get_province(),
-    );
-  }
+  String province;
 
   /// 城市
-  Future<String> get city {
-    return platform(
-      android: (pool) => _androidModel.getCity(),
-      ios: (pool) => _iosRegeocode.get_city(),
-    );
-  }
+  String city;
 
   /// 城市编号
-  Future<String> get cityCode {
-    return platform(
-      android: (pool) => _androidModel.getCityCode(),
-      ios: (pool) => _iosRegeocode.get_citycode(),
-    );
-  }
+  String cityCode;
 
   /// 邮编
-  Future<String> get adCode {
-    return platform(
-      android: (pool) => _androidModel.getAdCode(),
-      ios: (pool) => _iosRegeocode.get_adcode(),
-    );
-  }
+  String adCode;
 
   /// 区域
-  Future<String> get district {
-    return platform(
-      android: (pool) => _androidModel.getDistrict(),
-      ios: (pool) => _iosRegeocode.get_district(),
-    );
-  }
+  String district;
 
   /// poi名称
-  Future<String> get poiName {
-    return platform(
-      android: (pool) => _androidModel.getPoiName(),
-      ios: (pool) => _iosRegeocode.get_POIName(),
-    );
-  }
+  String poiName;
 
   /// 街道
-  Future<String> get street {
-    return platform(
-      android: (pool) => _androidModel.getStreet(),
-      ios: (pool) => _iosRegeocode.get_street(),
-    );
-  }
+  String street;
 
   /// 街道号
-  Future<String> get streetNumber {
-    return platform(
-      android: (pool) => _androidModel.getStreetNum(),
-      ios: (pool) => _iosRegeocode.get_number(),
-    );
-  }
+  String streetNumber;
 
   /// aoi名称
-  Future<String> get aoiName {
-    return platform(
-      android: (pool) => _androidModel.getAoiName(),
-      ios: (pool) => _iosRegeocode.get_AOIName(),
-    );
-  }
+  String aoiName;
 
   /// 精度
-  Future<double> get accuracy {
-    return platform(
-      android: (pool) => _androidModel.getAccuracy(),
-      ios: (pool) => _iosLocation.horizontalAccuracy,
-    );
+  double accuracy;
+
+  @override
+  String toString() {
+    return 'Location{\naddress: $address, \nlatLng: $latLng, \naltitude: $altitude, \nbearing: $bearing, \ncountry: $country, \nprovince: $province, \ncity: $city, \ncityCode: $cityCode, \nadCode: $adCode, \ndistrict: $district, \npoiName: $poiName, \nstreet: $street, \nstreetNumber: $streetNumber, \naoiName: $aoiName, \naccuracy: $accuracy\n}';
   }
 }

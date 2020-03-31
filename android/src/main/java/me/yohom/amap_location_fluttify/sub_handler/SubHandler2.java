@@ -31,11 +31,161 @@ public class SubHandler2 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.location.AMapLocationClientOption::isGpsFirst_batch", (argsBatch, methodResult) -> {
+                List<Boolean> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
+            
+                    // invoke native method
+                    boolean result;
+                    try {
+                        result = ref.isGpsFirst();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    boolean jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.location.AMapLocationClientOption::setGpsFirst_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
+            
+                    // invoke native method
+                    com.amap.api.location.AMapLocationClientOption result;
+                    try {
+                        result = ref.setGpsFirst(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = System.identityHashCode(result);
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
+            
+                    // invoke native method
+                    com.amap.api.location.AMapLocationClientOption result;
+                    try {
+                        result = ref.setGpsFirstTimeout(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = System.identityHashCode(result);
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.location.AMapLocationClientOption::getGpsFirstTimeout_batch", (argsBatch, methodResult) -> {
+                List<Long> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.location.AMapLocationClientOption ref = (com.amap.api.location.AMapLocationClientOption) getHEAP().get(refId);
+            
+                    // invoke native method
+                    long result;
+                    try {
+                        result = ref.getGpsFirstTimeout();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    long jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
             put("com.amap.api.location.AMapLocationClientOption::clone_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -60,7 +210,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -73,8 +223,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::getHttpTimeOut_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -108,12 +258,12 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setHttpTimeOut_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -135,7 +285,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -148,8 +298,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::isOffset_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -183,8 +333,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setOffset_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -210,7 +360,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -223,8 +373,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::isLocationCacheEnable_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -258,8 +408,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -285,7 +435,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -298,8 +448,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::isOnceLocationLatest_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -333,8 +483,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -360,7 +510,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -373,8 +523,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::isSensorEnable_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -408,8 +558,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setSensorEnable_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -435,7 +585,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -448,12 +598,12 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -475,7 +625,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -488,8 +638,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::getLastLocationLifeCycle_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -523,8 +673,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::getGeoLanguage_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -549,7 +699,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -562,8 +712,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setGeoLanguage_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // enum arg
@@ -589,7 +739,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -602,8 +752,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -636,8 +786,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -670,8 +820,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::getDeviceModeDistanceFilter_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -705,8 +855,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -732,7 +882,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -745,8 +895,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setLocationPurpose_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // enum arg
@@ -772,7 +922,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -785,8 +935,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::getLocationPurpose_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -811,7 +961,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -824,8 +974,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -858,8 +1008,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -892,12 +1042,12 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::setScanWifiInterval_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
-                    int var0 = (int) ((Map<String, Object>) args).get("var0");
+                    long var0 = (long) (int) ((Map<String, Object>) args).get("var0");
             
                     // ref
             
@@ -926,8 +1076,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationClientOption::getScanWifiInterval_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -961,8 +1111,8 @@ public class SubHandler2 {
             put("com.amap.api.location.APSServiceBase::onCreate_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -995,8 +1145,8 @@ public class SubHandler2 {
             put("com.amap.api.location.APSServiceBase::onStartCommand_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1035,8 +1185,8 @@ public class SubHandler2 {
             put("com.amap.api.location.APSServiceBase::onDestroy_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1069,8 +1219,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setWifiAble_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1104,8 +1254,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setGpsStatus_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1139,8 +1289,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setGPSSatellites_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1174,8 +1324,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::isWifiAble_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1209,8 +1359,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::getGPSStatus_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1244,8 +1394,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::getGPSSatellites_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1279,8 +1429,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::getNetworkType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1314,8 +1464,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setNetworkType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1349,8 +1499,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::getNetUseTime_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1384,12 +1534,12 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setNetUseTime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -1419,8 +1569,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1454,8 +1604,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::isInstalledHighDangerMockApp_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1489,8 +1639,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::setLocationMode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // enum arg
@@ -1524,8 +1674,8 @@ public class SubHandler2 {
             put("com.amap.api.location.AMapLocationQualityReport::getAdviseMessage_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1559,8 +1709,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::getCitycode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1594,8 +1744,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::setCitycode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1629,8 +1779,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::getAdcode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1664,8 +1814,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::setAdcode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1699,8 +1849,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::getPolyline_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1727,8 +1877,8 @@ public class SubHandler2 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.location.DPoint item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -1741,8 +1891,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::setPolyline_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -1780,8 +1930,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::getDistrictName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1815,8 +1965,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.DistrictItem::setDistrictName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1850,8 +2000,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::createPendingIntent_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1877,7 +2027,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1890,8 +2040,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::setActivateAction_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1925,8 +2075,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__double__String_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1964,8 +2114,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__String_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -2005,8 +2155,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2050,8 +2200,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__String__int__String_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2093,8 +2243,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::addGeoFence__String__String_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2130,8 +2280,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::removeGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2164,8 +2314,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::removeGeoFence__com_amap_api_fence_GeoFence_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2200,8 +2350,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::getAllGeoFence_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2228,8 +2378,8 @@ public class SubHandler2 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.fence.GeoFence item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -2242,8 +2392,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::setGeoFenceAble_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2279,8 +2429,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::pauseGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2313,8 +2463,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::resumeGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2347,8 +2497,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceClient::isPause_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2382,8 +2532,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -2425,8 +2575,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getFenceId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2460,8 +2610,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setFenceId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2495,8 +2645,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getCustomId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2530,8 +2680,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setCustomId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2565,8 +2715,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getPendingIntentAction_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2600,8 +2750,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setPendingIntentAction_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2635,8 +2785,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getPendingIntent_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2661,7 +2811,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2674,8 +2824,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setPendingIntent_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2709,8 +2859,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getType_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2744,8 +2894,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2779,8 +2929,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getPoiItem_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2805,7 +2955,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2818,8 +2968,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setPoiItem_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2853,8 +3003,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getDistrictItemList_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2881,8 +3031,8 @@ public class SubHandler2 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.fence.DistrictItem item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -2895,8 +3045,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setDistrictItemList_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -2934,11 +3084,11 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setPointList_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
-                    List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
+                    List<List<com.amap.api.location.DPoint>> var1 = new ArrayList<>();
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -2968,8 +3118,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getRadius_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3003,8 +3153,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setRadius_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3038,8 +3188,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getExpiration_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3073,12 +3223,12 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setExpiration_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -3108,8 +3258,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getActivatesAction_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3143,8 +3293,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setActivatesAction_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3178,8 +3328,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getStatus_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3213,8 +3363,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setStatus_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3248,8 +3398,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getEnterTime_batch", (argsBatch, methodResult) -> {
                 List<Long> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3283,12 +3433,12 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setEnterTime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
+                    long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -3318,8 +3468,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getCenter_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3344,7 +3494,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -3357,8 +3507,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setCenter_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -3392,8 +3542,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getMinDis2Center_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3427,8 +3577,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setMinDis2Center_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3462,8 +3612,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getMaxDis2Center_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3497,8 +3647,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setMaxDis2Center_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3532,8 +3682,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::isAble_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3567,8 +3717,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setAble_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3602,8 +3752,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::setCurrentLocation_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -3637,8 +3787,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFence::getCurrentLocation_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3663,7 +3813,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -3676,8 +3826,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::createPendingIntent_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3703,7 +3853,7 @@ public class SubHandler2 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -3716,8 +3866,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::setActivateAction_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3751,8 +3901,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -3790,8 +3940,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::addPolygonGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -3831,8 +3981,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::addNearbyGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3876,8 +4026,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::addKeywordGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3919,8 +4069,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::addDistrictGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3956,8 +4106,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::removeGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3990,8 +4140,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::removeGeoFence__com_amap_api_fence_GeoFence_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -4026,8 +4176,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::getAllGeoFence_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4054,8 +4204,8 @@ public class SubHandler2 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.fence.GeoFence item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -4068,8 +4218,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::setGeoFenceAble_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4105,8 +4255,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::pauseGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4139,8 +4289,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::resumeGeoFence_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4173,8 +4323,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.GeoFenceManagerBase::isPause_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4208,8 +4358,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getLatitude_batch", (argsBatch, methodResult) -> {
                 List<Double> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4243,8 +4393,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setLatitude_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4278,8 +4428,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getLongitude_batch", (argsBatch, methodResult) -> {
                 List<Double> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4313,8 +4463,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setLongitude_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4348,8 +4498,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getPoiId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4383,8 +4533,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setPoiId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4418,8 +4568,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getPoiType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4453,8 +4603,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setPoiType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4488,8 +4638,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getTypeCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4523,8 +4673,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setTypeCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4558,8 +4708,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getAddress_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4593,8 +4743,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setAddress_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4628,8 +4778,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getTel_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4663,8 +4813,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setTel_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4698,8 +4848,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4733,8 +4883,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4768,8 +4918,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4803,8 +4953,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4838,8 +4988,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getAdname_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4873,8 +5023,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::getPoiName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4908,8 +5058,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setPoiName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4943,8 +5093,8 @@ public class SubHandler2 {
             put("com.amap.api.fence.PoiItem::setAdname_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4976,7 +5126,9 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_autonavi_aps_amapapi_model_AMapLocationServer__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_autonavi_aps_amapapi_model_AMapLocationServer__String");
+                }
             
                 // args
                 // jsonable arg
@@ -4984,18 +5136,20 @@ public class SubHandler2 {
             
                 // create target object
                 com.autonavi.aps.amapapi.model.AMapLocationServer obj = new com.autonavi.aps.amapapi.model.AMapLocationServer(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -5003,18 +5157,20 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.location.AMapLocationClient obj = new com.amap.api.location.AMapLocationClient(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent");
+                }
             
                 // args
                 // ref arg
@@ -5024,36 +5180,40 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.location.AMapLocationClient obj = new com.amap.api.location.AMapLocationClient(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_DPoint__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.location.DPoint obj = new com.amap.api.location.DPoint();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_DPoint__double__double", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__double__double");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_DPoint__double__double");
+                }
             
                 // args
                 // jsonable arg
@@ -5063,18 +5223,20 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.location.DPoint obj = new com.amap.api.location.DPoint(var1, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordinateConverter__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordinateConverter__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -5082,54 +5244,60 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.location.CoordinateConverter obj = new com.amap.api.location.CoordinateConverter(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_CoordUtil__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordUtil__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_CoordUtil__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.location.CoordUtil obj = new com.amap.api.location.CoordUtil();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_UmidtokenInfo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_UmidtokenInfo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_UmidtokenInfo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.location.UmidtokenInfo obj = new com.amap.api.location.UmidtokenInfo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocation__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__String");
+                }
             
                 // args
                 // jsonable arg
@@ -5137,18 +5305,20 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.location.AMapLocation obj = new com.amap.api.location.AMapLocation(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__android_location_Location");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__android_location_Location");
+                }
             
                 // args
                 // ref arg
@@ -5156,72 +5326,80 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.location.AMapLocation obj = new com.amap.api.location.AMapLocation(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClientOption__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClientOption__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.location.AMapLocationClientOption obj = new com.amap.api.location.AMapLocationClientOption();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationQualityReport__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationQualityReport__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.location.AMapLocationQualityReport obj = new com.amap.api.location.AMapLocationQualityReport();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_DistrictItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_DistrictItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_DistrictItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.fence.DistrictItem obj = new com.amap.api.fence.DistrictItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFenceClient__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFenceClient__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -5229,50 +5407,54 @@ public class SubHandler2 {
             
                 // create target object
                 com.amap.api.fence.GeoFenceClient obj = new com.amap.api.fence.GeoFenceClient(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_GeoFence__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFence__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFence__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.fence.GeoFence obj = new com.amap.api.fence.GeoFence();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_fence_PoiItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_fence_PoiItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_PoiItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.fence.PoiItem obj = new com.amap.api.fence.PoiItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::create_batchcom_autonavi_aps_amapapi_model_AMapLocationServer__String", (argsBatch, methodResult) -> {
@@ -5289,11 +5471,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5302,14 +5484,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.autonavi.aps.amapapi.model.AMapLocationServer obj = new com.autonavi.aps.amapapi.model.AMapLocationServer(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5329,11 +5511,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5342,14 +5524,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.AMapLocationClient obj = new com.amap.api.location.AMapLocationClient(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5369,11 +5551,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5384,14 +5566,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.AMapLocationClient obj = new com.amap.api.location.AMapLocationClient(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5411,11 +5593,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5423,14 +5605,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.DPoint obj = new com.amap.api.location.DPoint();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5450,11 +5632,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5465,14 +5647,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.DPoint obj = new com.amap.api.location.DPoint(var1, var3);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5492,11 +5674,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5505,14 +5687,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.CoordinateConverter obj = new com.amap.api.location.CoordinateConverter(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5532,11 +5714,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5544,14 +5726,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.CoordUtil obj = new com.amap.api.location.CoordUtil();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5571,11 +5753,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5583,14 +5765,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.UmidtokenInfo obj = new com.amap.api.location.UmidtokenInfo();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5610,11 +5792,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5623,14 +5805,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.AMapLocation obj = new com.amap.api.location.AMapLocation(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5650,11 +5832,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5663,14 +5845,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.AMapLocation obj = new com.amap.api.location.AMapLocation(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5690,11 +5872,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5702,14 +5884,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.AMapLocationClientOption obj = new com.amap.api.location.AMapLocationClientOption();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5729,11 +5911,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5741,14 +5923,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.location.AMapLocationQualityReport obj = new com.amap.api.location.AMapLocationQualityReport();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5768,11 +5950,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5780,14 +5962,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.fence.DistrictItem obj = new com.amap.api.fence.DistrictItem();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5807,11 +5989,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5820,14 +6002,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.fence.GeoFenceClient obj = new com.amap.api.fence.GeoFenceClient(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5847,11 +6029,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5859,14 +6041,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.fence.GeoFence obj = new com.amap.api.fence.GeoFence();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -5886,11 +6068,11 @@ public class SubHandler2 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -5898,14 +6080,14 @@ public class SubHandler2 {
             
                     // create target object
                     com.amap.api.fence.PoiItem obj = new com.amap.api.fence.PoiItem();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);

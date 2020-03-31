@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 import 'dart:async';
 import 'dart:io';
 
@@ -62,9 +63,28 @@ class AmapLocation {
           await _androidClient.setLocationListener(_androidLocationDelegate);
         }
 
-        _androidLocationDelegate._onLocationChanged = (location) {
+        _androidLocationDelegate._onLocationChanged = (location) async {
           if (!completer.isCompleted) {
-            completer.complete(Location.android(location));
+            completer.complete(Location(
+              address: await location.getAddress(),
+              latLng: LatLng(
+                await location.getLatitude(),
+                await location.getLongitude(),
+              ),
+              altitude: await location.getAltitude(),
+              bearing: await location.getBearing(),
+              country: await location.getCountry(),
+              province: await location.getProvince(),
+              city: await location.getCity(),
+              cityCode: await location.getCityCode(),
+              adCode: await location.getAdCode(),
+              district: await location.getDistrict(),
+              poiName: await location.getPoiName(),
+              street: await location.getStreet(),
+              streetNumber: await location.getStreetNum(),
+              aoiName: await location.getAoiName(),
+              accuracy: await location.getAccuracy(),
+            ));
           }
         };
 
@@ -129,11 +149,30 @@ class AmapLocation {
         // 设置定位请求超时时间，默认为30秒。
         if (timeout != null) await _iosClient.set_locationTimeout(timeout);
 
-        await _iosClient.requestLocationWithReGeocodeCompletionBlock(
+        await _iosClient.requestLocationWithReGeocode_completionBlock(
           needAddress ?? true,
-          (location, regeocode, error) {
+          (location, regeocode, error) async {
             if (!completer.isCompleted) {
-              completer.complete(Location.ios(location, regeocode));
+              completer.complete(Location(
+                address: await regeocode.get_formattedAddress(),
+                latLng: LatLng(
+                  await location.coordinate.then((it) => it.latitude),
+                  await location.coordinate.then((it) => it.longitude),
+                ),
+                altitude: await location.altitude,
+                bearing: await location.course,
+                country: await regeocode.get_country(),
+                province: await regeocode.get_province(),
+                city: await regeocode.get_city(),
+                cityCode: await regeocode.get_citycode(),
+                adCode: await regeocode.get_adcode(),
+                district: await regeocode.get_district(),
+                poiName: await regeocode.get_POIName(),
+                street: await regeocode.get_street(),
+                streetNumber: await regeocode.get_number(),
+                aoiName: await regeocode.get_AOIName(),
+                accuracy: await location.horizontalAccuracy,
+              ));
             }
           },
         );
@@ -166,8 +205,27 @@ class AmapLocation {
         _androidLocationDelegate = _AndroidLocationDelegate();
         await _androidClient.setLocationListener(_androidLocationDelegate);
       }
-      _androidLocationDelegate._onLocationChanged = (location) {
-        _locationController.add(Location.android(location));
+      _androidLocationDelegate._onLocationChanged = (location) async {
+        _locationController.add(Location(
+          address: await location.getAddress(),
+          latLng: LatLng(
+            await location.getLatitude(),
+            await location.getLongitude(),
+          ),
+          altitude: await location.getAltitude(),
+          bearing: await location.getBearing(),
+          country: await location.getCountry(),
+          province: await location.getProvince(),
+          city: await location.getCity(),
+          cityCode: await location.getCityCode(),
+          adCode: await location.getAdCode(),
+          district: await location.getDistrict(),
+          poiName: await location.getPoiName(),
+          street: await location.getStreet(),
+          streetNumber: await location.getStreetNum(),
+          aoiName: await location.getAoiName(),
+          accuracy: await location.getAccuracy(),
+        ));
       };
 
       // 创建选项
@@ -234,8 +292,27 @@ class AmapLocation {
         _iosLocationDelegate = _IOSLocationDelegate();
         await _iosClient.set_delegate(_iosLocationDelegate);
       }
-      _iosLocationDelegate._onLocationChanged = (location, regeocode) {
-        _locationController.add(Location.ios(location, regeocode));
+      _iosLocationDelegate._onLocationChanged = (location, regeocode) async {
+        _locationController.add(Location(
+          address: await regeocode.get_formattedAddress(),
+          latLng: LatLng(
+            await location.coordinate.then((it) => it.latitude),
+            await location.coordinate.then((it) => it.longitude),
+          ),
+          altitude: await location.altitude,
+          bearing: await location.course,
+          country: await regeocode.get_country(),
+          province: await regeocode.get_province(),
+          city: await regeocode.get_city(),
+          cityCode: await regeocode.get_citycode(),
+          adCode: await regeocode.get_adcode(),
+          district: await regeocode.get_district(),
+          poiName: await regeocode.get_POIName(),
+          street: await regeocode.get_street(),
+          streetNumber: await regeocode.get_number(),
+          aoiName: await regeocode.get_AOIName(),
+          accuracy: await location.horizontalAccuracy,
+        ));
       };
 
       await _iosClient.set_locatingWithReGeocode(true);
@@ -325,12 +402,12 @@ class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
   _OnRequireAlwaysAuth _onRequireAlwaysAuth;
 
   @override
-  Future<void> amapLocationManagerDidUpdateLocationreGeocode(
+  Future<void> amapLocationManager_didUpdateLocation_reGeocode(
     AMapLocationManager manager,
     CLLocation location,
     AMapLocationReGeocode reGeocode,
   ) async {
-    super.amapLocationManagerDidUpdateLocationreGeocode(
+    super.amapLocationManager_didUpdateLocation_reGeocode(
       manager,
       location,
       reGeocode,
@@ -341,11 +418,11 @@ class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
   }
 
   @override
-  Future<void> amapLocationManagerDoRequireLocationAuth(
+  Future<void> amapLocationManager_doRequireLocationAuth(
     AMapLocationManager manager,
     CLLocationManager locationManager,
   ) async {
-    super.amapLocationManagerDoRequireLocationAuth(manager, locationManager);
+    super.amapLocationManager_doRequireLocationAuth(manager, locationManager);
     if (_onRequireAlwaysAuth != null) {
       _onRequireAlwaysAuth(locationManager);
     }

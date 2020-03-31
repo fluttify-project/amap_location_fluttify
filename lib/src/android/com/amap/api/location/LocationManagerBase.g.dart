@@ -110,6 +110,15 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   }
   
   @mustCallSuper
+  Future<void> enableBackgroundLocation(int var1, android_app_Notification var2) {
+    kNativeObjectPool.add(var2);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('enableBackgroundLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
   Future<void> disableBackgroundLocation(bool var1) {
   
   

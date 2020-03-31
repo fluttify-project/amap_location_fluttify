@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   //region constants
+  static const String name__ = 'AMapLocationPolygonRegion';
+
   
   //endregion
 
@@ -42,8 +44,8 @@ class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_coordinates() async {
     final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_coordinates", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => CLLocationCoordinate2D()..refId = it..tag = 'amap_location_fluttify').toList());
-    return (result as List).cast<int>().map((it) => CLLocationCoordinate2D()..refId = it..tag = 'amap_location_fluttify').toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList());
+    return (result as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList();
   }
   
   Future<int> get_count() async {
@@ -59,14 +61,14 @@ class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   //endregion
 
   //region methods
-  Future<AMapLocationPolygonRegion> initWithCoordinatesCountidentifier(List<CLLocationCoordinate2D> coordinates, int count, String identifier) async {
+  Future<AMapLocationPolygonRegion> initWithCoordinates_count_identifier(List<CLLocationCoordinate2D> coordinates, int count, String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapLocationPolygonRegion@$refId::initWithCoordinates([\'count\':$count, \'identifier\':$identifier])');
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPolygonRegion::initWithCoordinatesCountidentifier', {"coordinates": coordinates.map((it) => it.refId).toList(), "count": count, "identifier": identifier, "refId": refId});
+    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPolygonRegion::initWithCoordinates_count_identifier', {"coordinates": coordinates.map((it) => it.refId).toList(), "count": count, "identifier": identifier, "refId": refId});
   
   
     // handle native call
@@ -87,14 +89,14 @@ class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
 extension AMapLocationPolygonRegion_Batch on List<AMapLocationPolygonRegion> {
   //region getters
   Future<List<List<CLLocationCoordinate2D>>> get_coordinates_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_coordinates_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => CLLocationCoordinate2D()..refId = it..tag = 'amap_location_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_coordinates_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<int>> get_count_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_count_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPolygonRegion::get_count_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
@@ -107,13 +109,13 @@ extension AMapLocationPolygonRegion_Batch on List<AMapLocationPolygonRegion> {
   //endregion
 
   //region methods
-  Future<List<AMapLocationPolygonRegion>> initWithCoordinatesCountidentifier_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> identifier) async {
+  Future<List<AMapLocationPolygonRegion>> initWithCoordinates_count_identifier_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> identifier) async {
     if (coordinates.length != count.length || count.length != identifier.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPolygonRegion::initWithCoordinatesCountidentifier_batch', [for (int i = 0; i < this.length; i++) {"coordinates": coordinates[i].map((it) => it.refId).toList(), "count": count[i], "identifier": identifier[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPolygonRegion::initWithCoordinates_count_identifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"coordinates": coordinates[__i__].map((it) => it.refId).toList(), "count": count[__i__], "identifier": identifier[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

@@ -58,95 +58,11 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               },
             ),
             if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.address,
-                builder: (_, ss) =>
-                    Center(child: Text('address: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.country,
-                builder: (_, ss) =>
-                    Center(child: Text('country: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.province,
-                builder: (_, ss) =>
-                    Center(child: Text('province: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.city,
-                builder: (_, ss) =>
-                    Center(child: Text('city: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.district,
-                builder: (_, ss) =>
-                    Center(child: Text('district: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.poiName,
-                builder: (_, ss) =>
-                    Center(child: Text('poiName: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.street,
-                builder: (_, ss) =>
-                    Center(child: Text('street: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<String>(
-                initialData: '',
-                future: _location.aoiName,
-                builder: (_, ss) =>
-                    Center(child: Text('aoiName: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<double>(
-                initialData: 0.0,
-                future: _location.latLng.then((it) => it.latitude),
-                builder: (_, ss) =>
-                    Center(child: Text('latitude: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<double>(
-                initialData: 0.0,
-                future: _location.latLng.then((it) => it.longitude),
-                builder: (_, ss) =>
-                    Center(child: Text('longitude: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<double>(
-                initialData: 0.0,
-                future: _location.altitude,
-                builder: (_, ss) =>
-                    Center(child: Text('altitude: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<double>(
-                initialData: 0.0,
-                future: _location.bearing,
-                builder: (_, ss) =>
-                    Center(child: Text('bearing: ${ss.data}' ?? '')),
-              ),
-            if (_location != null)
-              FutureBuilder<double>(
-                initialData: 0.0,
-                future: _location.accuracy,
-                builder: (_, ss) =>
-                    Center(child: Text('accuracy: ${ss.data}' ?? '')),
+              Center(
+                child: Text(
+                  _location.toString(),
+                  textAlign: TextAlign.center,
+                ),
               ),
           ],
         ),

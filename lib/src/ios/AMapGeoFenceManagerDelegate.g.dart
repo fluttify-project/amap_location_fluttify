@@ -20,34 +20,34 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> amapGeoFenceManagerDoRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
+  Future<void> amapGeoFenceManager_doRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(locationManager);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapGeoFenceManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapGeoFenceManager_doRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror(AMapGeoFenceManager manager, List<AMapGeoFenceRegion> regions, String customID, NSError error) {
+  Future<void> amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager manager, List<AMapGeoFenceRegion> regions, String customID, NSError error) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.addAll(regions);
     kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror(AMapGeoFenceManager manager, AMapGeoFenceRegion region, String customID, NSError error) {
+  Future<void> amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(AMapGeoFenceManager manager, AMapGeoFenceRegion region, String customID, NSError error) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(region);
     kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
