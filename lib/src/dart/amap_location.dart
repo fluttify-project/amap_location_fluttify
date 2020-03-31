@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 import 'dart:async';
 import 'dart:io';
 
@@ -148,7 +149,7 @@ class AmapLocation {
         // 设置定位请求超时时间，默认为30秒。
         if (timeout != null) await _iosClient.set_locationTimeout(timeout);
 
-        await _iosClient.requestLocationWithReGeocodeCompletionBlock(
+        await _iosClient.requestLocationWithReGeocode_completionBlock(
           needAddress ?? true,
           (location, regeocode, error) async {
             if (!completer.isCompleted) {
@@ -291,7 +292,7 @@ class AmapLocation {
         _iosLocationDelegate = _IOSLocationDelegate();
         await _iosClient.set_delegate(_iosLocationDelegate);
       }
-      _iosLocationDelegate._onLocationChanged = (location, regeocode) async{
+      _iosLocationDelegate._onLocationChanged = (location, regeocode) async {
         _locationController.add(Location(
           address: await regeocode.get_formattedAddress(),
           latLng: LatLng(
@@ -401,12 +402,12 @@ class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
   _OnRequireAlwaysAuth _onRequireAlwaysAuth;
 
   @override
-  Future<void> amapLocationManagerDidUpdateLocationreGeocode(
+  Future<void> amapLocationManager_didUpdateLocation_reGeocode(
     AMapLocationManager manager,
     CLLocation location,
     AMapLocationReGeocode reGeocode,
   ) async {
-    super.amapLocationManagerDidUpdateLocationreGeocode(
+    super.amapLocationManager_didUpdateLocation_reGeocode(
       manager,
       location,
       reGeocode,
@@ -417,11 +418,11 @@ class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
   }
 
   @override
-  Future<void> amapLocationManagerDoRequireLocationAuth(
+  Future<void> amapLocationManager_doRequireLocationAuth(
     AMapLocationManager manager,
     CLLocationManager locationManager,
   ) async {
-    super.amapLocationManagerDoRequireLocationAuth(manager, locationManager);
+    super.amapLocationManager_doRequireLocationAuth(manager, locationManager);
     if (_onRequireAlwaysAuth != null) {
       _onRequireAlwaysAuth(locationManager);
     }
