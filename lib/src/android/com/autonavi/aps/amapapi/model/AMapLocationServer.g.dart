@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_location_AMapLocation with android_os_Parcelable {
   //region constants
+  static const String name__ = 'com.autonavi.aps.amapapi.model.AMapLocationServer';
+
   
   //endregion
 
@@ -30,7 +32,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_autonavi_aps_amapapi_model_AMapLocationServer__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_autonavi_aps_amapapi_model_AMapLocationServer__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_autonavi_aps_amapapi_model_AMapLocationServer> typedResult = resultBatch.map((result) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = result..tag = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);

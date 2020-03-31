@@ -6,6 +6,7 @@
 #import <objc/runtime.h>
 #import "SubHandler/SubHandler0.h"
 #import "SubHandler/SubHandler1.h"
+#import "SubHandler/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -27,6 +28,7 @@ extern BOOL enableLog;
 
     [_handlerMap addEntriesFromDictionary: [self getSubHandler0]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler1]];
+    [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 
   return self;
@@ -61,7 +63,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth");
+    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth");
   }
 
   // convert to jsonable arg
@@ -72,7 +74,7 @@ extern BOOL enableLog;
   NSNumber* arglocationManager = @(locationManager.hash);
   HEAP[arglocationManager] = locationManager;
 
-  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDoRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
+  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
   
 }
 
@@ -83,7 +85,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror");
+    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error");
   }
 
   // convert to jsonable arg
@@ -92,10 +94,10 @@ extern BOOL enableLog;
   HEAP[argmanager] = manager;
   // list callback arg
   NSMutableArray<NSNumber*>* argregions = [NSMutableArray arrayWithCapacity:regions.count];
-  for (int i = 0; i < regions.count; i++) {
-      NSObject* item = ((NSObject*) [regions objectAtIndex:i]);
+  for (int __i__ = 0; __i__ < regions.count; __i__++) {
+      NSObject* item = ((NSObject*) [regions objectAtIndex:__i__]);
       // return to dart side data
-      argregions[i] = @(item.hash);
+      argregions[__i__] = @(item.hash);
       // add to HEAP
       HEAP[@(item.hash)] = item;
   }
@@ -105,7 +107,7 @@ extern BOOL enableLog;
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidAddRegionForMonitoringFinishedcustomIDerror" arguments:@{@"manager": argmanager, @"regions": argregions, @"customID": argcustomID, @"error": argerror}];
+  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error" arguments:@{@"manager": argmanager, @"regions": argregions, @"customID": argcustomID, @"error": argerror}];
   
 }
 
@@ -116,7 +118,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror");
+    NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error");
   }
 
   // convert to jsonable arg
@@ -132,7 +134,7 @@ extern BOOL enableLog;
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManagerDidGeoFencesStatusChangedForRegioncustomIDerror" arguments:@{@"manager": argmanager, @"region": argregion, @"customID": argcustomID, @"error": argerror}];
+  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error" arguments:@{@"manager": argmanager, @"region": argregion, @"customID": argcustomID, @"error": argerror}];
   
 }
 
@@ -143,7 +145,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth");
   }
 
   // convert to jsonable arg
@@ -154,7 +156,7 @@ extern BOOL enableLog;
   NSNumber* arglocationManager = @(locationManager.hash);
   HEAP[arglocationManager] = locationManager;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDoRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
   
 }
 
@@ -165,7 +167,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidFailWithError");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didFailWithError");
   }
 
   // convert to jsonable arg
@@ -176,7 +178,7 @@ extern BOOL enableLog;
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidFailWithError" arguments:@{@"manager": argmanager, @"error": argerror}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError" arguments:@{@"manager": argmanager, @"error": argerror}];
   
 }
 
@@ -187,7 +189,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation");
   }
 
   // convert to jsonable arg
@@ -198,7 +200,7 @@ extern BOOL enableLog;
   NSNumber* arglocation = @(location.hash);
   HEAP[arglocation] = location;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocation" arguments:@{@"manager": argmanager, @"location": arglocation}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation" arguments:@{@"manager": argmanager, @"location": arglocation}];
   
 }
 
@@ -209,7 +211,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode");
   }
 
   // convert to jsonable arg
@@ -223,7 +225,7 @@ extern BOOL enableLog;
   NSNumber* argreGeocode = @(reGeocode.hash);
   HEAP[argreGeocode] = reGeocode;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateLocationreGeocode" arguments:@{@"manager": argmanager, @"location": arglocation, @"reGeocode": argreGeocode}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode" arguments:@{@"manager": argmanager, @"location": arglocation, @"reGeocode": argreGeocode}];
   
 }
 
@@ -234,7 +236,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus");
   }
 
   // convert to jsonable arg
@@ -244,7 +246,7 @@ extern BOOL enableLog;
   // enum callback arg
   NSNumber* argstatus = @((NSInteger) status);
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidChangeAuthorizationStatus" arguments:@{@"manager": argmanager, @"status": argstatus}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus" arguments:@{@"manager": argmanager, @"status": argstatus}];
   
 }
 
@@ -285,7 +287,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading");
   }
 
   // convert to jsonable arg
@@ -296,7 +298,7 @@ extern BOOL enableLog;
   NSNumber* argnewHeading = @(newHeading.hash);
   HEAP[argnewHeading] = newHeading;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidUpdateHeading" arguments:@{@"manager": argmanager, @"newHeading": argnewHeading}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading" arguments:@{@"manager": argmanager, @"newHeading": argnewHeading}];
   
 }
 
@@ -307,7 +309,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidStartMonitoringForRegion");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion");
   }
 
   // convert to jsonable arg
@@ -318,7 +320,7 @@ extern BOOL enableLog;
   NSNumber* argregion = @(region.hash);
   HEAP[argregion] = region;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidStartMonitoringForRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
   
 }
 
@@ -329,7 +331,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidEnterRegion");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didEnterRegion");
   }
 
   // convert to jsonable arg
@@ -340,7 +342,7 @@ extern BOOL enableLog;
   NSNumber* argregion = @(region.hash);
   HEAP[argregion] = region;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidEnterRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
   
 }
 
@@ -351,7 +353,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidExitRegion");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didExitRegion");
   }
 
   // convert to jsonable arg
@@ -362,7 +364,7 @@ extern BOOL enableLog;
   NSNumber* argregion = @(region.hash);
   HEAP[argregion] = region;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidExitRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
   
 }
 
@@ -373,7 +375,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerDidDetermineStateforRegion");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion");
   }
 
   // convert to jsonable arg
@@ -386,7 +388,7 @@ extern BOOL enableLog;
   NSNumber* argregion = @(region.hash);
   HEAP[argregion] = region;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerDidDetermineStateforRegion" arguments:@{@"manager": argmanager, @"state": argstate, @"region": argregion}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion" arguments:@{@"manager": argmanager, @"state": argstate, @"region": argregion}];
   
 }
 
@@ -397,7 +399,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManagerMonitoringDidFailForRegionwithError");
+    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError");
   }
 
   // convert to jsonable arg
@@ -411,7 +413,7 @@ extern BOOL enableLog;
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerMonitoringDidFailForRegionwithError" arguments:@{@"manager": argmanager, @"region": argregion, @"error": argerror}];
+  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError" arguments:@{@"manager": argmanager, @"region": argregion, @"error": argerror}];
   
 }
 

@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
   //region constants
+  static const String name__ = 'AMapGeoFenceDistrictRegion';
+
   
   //endregion
 
@@ -60,7 +62,7 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
 extension AMapGeoFenceDistrictRegion_Batch on List<AMapGeoFenceDistrictRegion> {
   //region getters
   Future<List<AMapLocationDistrictItem>> get_districtItem_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final item in this) {'refId': item.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).map((result) => AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;

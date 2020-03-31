@@ -20,52 +20,52 @@ mixin AMapLocationManagerDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> amapLocationManagerDoRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {
+  Future<void> amapLocationManager_doRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(locationManager);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapLocationManagerDoRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapLocationManager_doRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> amapLocationManagerDidFailWithError(AMapLocationManager manager, NSError error) {
+  Future<void> amapLocationManager_didFailWithError(AMapLocationManager manager, NSError error) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapLocationManagerDidFailWithError::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapLocationManager_didFailWithError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> amapLocationManagerDidUpdateLocation(AMapLocationManager manager, CLLocation location) {
+  Future<void> amapLocationManager_didUpdateLocation(AMapLocationManager manager, CLLocation location) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(location);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapLocationManagerDidUpdateLocation::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapLocationManager_didUpdateLocation::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> amapLocationManagerDidUpdateLocationreGeocode(AMapLocationManager manager, CLLocation location, AMapLocationReGeocode reGeocode) {
+  Future<void> amapLocationManager_didUpdateLocation_reGeocode(AMapLocationManager manager, CLLocation location, AMapLocationReGeocode reGeocode) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(location);
     kNativeObjectPool.add(reGeocode);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapLocationManagerDidUpdateLocationreGeocode::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapLocationManager_didUpdateLocation_reGeocode::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
   @mustCallSuper
-  Future<void> amapLocationManagerDidChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
+  Future<void> amapLocationManager_didChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
     kNativeObjectPool.add(manager);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapLocationManagerDidChangeAuthorizationStatus::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapLocationManager_didChangeAuthorizationStatus::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
@@ -79,12 +79,12 @@ mixin AMapLocationManagerDelegate on NSObject {
   }
   
   @mustCallSuper
-  Future<void> amapLocationManagerDidUpdateHeading(AMapLocationManager manager, CLHeading newHeading) {
+  Future<void> amapLocationManager_didUpdateHeading(AMapLocationManager manager, CLHeading newHeading) {
     kNativeObjectPool.add(manager);
     kNativeObjectPool.add(newHeading);
   
     if (fluttifyLogEnabled) {
-      debugPrint('amapLocationManagerDidUpdateHeading::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('amapLocationManager_didUpdateHeading::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
