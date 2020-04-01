@@ -43,15 +43,15 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion with NSCopying {
 
   //region getters
   Future<List<CLLocationCoordinate2D>> get_coordinates() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_coordinates", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList());
-    return (result as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_coordinates", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList();
   }
   
   Future<int> get_count() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_count", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_count", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -69,14 +69,14 @@ extension AMapGeoFencePolygonRegion_Batch on List<AMapGeoFencePolygonRegion> {
   //region getters
   Future<List<List<CLLocationCoordinate2D>>> get_coordinates_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_coordinates_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => CLLocationCoordinate2D()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<int>> get_count_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePolygonRegion::get_count_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }

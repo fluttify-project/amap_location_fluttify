@@ -43,87 +43,87 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_formattedAddress() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_formattedAddress", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_formattedAddress", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_country() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_country", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_country", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_province() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_province", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_province", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_city() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_city", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_city", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_district() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_district", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_district", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_township() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_township", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_township", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_neighborhood() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_neighborhood", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_neighborhood", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_building() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_building", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_building", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_citycode() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_citycode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_citycode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_adcode() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_adcode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_adcode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_street() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_street", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_street", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_number() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_number", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_number", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_POIName() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_POIName", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_POIName", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_AOIName() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_AOIName", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_AOIName", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -224,98 +224,98 @@ extension AMapLocationReGeocode_Batch on List<AMapLocationReGeocode> {
   //region getters
   Future<List<String>> get_formattedAddress_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_formattedAddress_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_country_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_country_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_province_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_province_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_city_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_district_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_district_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_township_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_township_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_neighborhood_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_neighborhood_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_building_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_building_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_citycode_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_citycode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_adcode_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_adcode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_street_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_street_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_number_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_number_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_POIName_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_POIName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_AOIName_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationReGeocode::get_AOIName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }

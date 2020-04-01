@@ -19,18 +19,18 @@ Future<CLLocationCoordinate2D> AMapLocationCoordinateConvert(CLLocationCoordinat
   }
 
   // invoke native method
-  final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCoordinateConvert::AMapLocationCoordinateConvert', {"coordinate": coordinate.refId, "type": type.index});
+  final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCoordinateConvert::AMapLocationCoordinateConvert', {"coordinate": coordinate.refId, "type": type.index});
   
 
   // handle native call
   
 
   // convert native result to dart side object
-  if (result == null) {
+  if (__result__ == null) {
     return null;
   } else {
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify');
-    return CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify';
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify');
+    return CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify';
   }
 }
 
@@ -41,17 +41,17 @@ Future<bool> AMapLocationDataAvailableForCoordinate(CLLocationCoordinate2D coord
   }
 
   // invoke native method
-  final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate', {"coordinate": coordinate.refId});
+  final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate', {"coordinate": coordinate.refId});
   
 
   // handle native call
   
 
   // convert native result to dart side object
-  if (result == null) {
+  if (__result__ == null) {
     return null;
   } else {
     
-    return result;
+    return __result__;
   }
 }

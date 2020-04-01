@@ -57,18 +57,18 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::from', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::from', {"var1": var1.index, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -79,18 +79,18 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::coord', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::coord', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -101,18 +101,18 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::convert', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::convert', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -123,18 +123,18 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable', {"var0": var0, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable', {"var0": var0, "var2": var2});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -145,18 +145,18 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance', {"var0": var0.refId, "var1": var1.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance', {"var0": var0.refId, "var1": var1.refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -186,7 +186,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -205,7 +205,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -224,7 +224,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -243,7 +243,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -262,7 +262,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

@@ -57,18 +57,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getAPIKEY', );
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getAPIKEY', );
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -79,18 +79,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isMockEnable', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isMockEnable', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -101,18 +101,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setMockEnable', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setMockEnable', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -123,18 +123,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getInterval', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getInterval', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -145,18 +145,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setInterval', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setInterval', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -167,18 +167,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOnceLocation', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOnceLocation', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -189,18 +189,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocation', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocation', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -211,18 +211,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isNeedAddress', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isNeedAddress', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -233,18 +233,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setNeedAddress', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setNeedAddress', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -255,18 +255,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isWifiActiveScan', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isWifiActiveScan', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -277,18 +277,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiActiveScan', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiActiveScan', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -299,18 +299,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isWifiScan', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isWifiScan', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -321,18 +321,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiScan', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiScan', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -343,18 +343,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationMode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationMode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[result];
+      return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[__result__];
     }
   }
   
@@ -365,18 +365,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationMode', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationMode', {"var1": var1.index, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -387,18 +387,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationProtocol', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationProtocol', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[result];
+      return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[__result__];
     }
   }
   
@@ -409,18 +409,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol', {"var0": var0.index});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol', {"var0": var0.index});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -431,18 +431,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isKillProcess', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isKillProcess', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -453,18 +453,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setKillProcess', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setKillProcess', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -475,18 +475,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isGpsFirst', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isGpsFirst', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -497,18 +497,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirst', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirst', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -519,18 +519,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -541,18 +541,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getGpsFirstTimeout', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getGpsFirstTimeout', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -563,18 +563,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::clone', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::clone', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -585,18 +585,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getHttpTimeOut', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getHttpTimeOut', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -607,18 +607,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setHttpTimeOut', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setHttpTimeOut', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -629,18 +629,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOffset', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOffset', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -651,18 +651,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOffset', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOffset', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -673,18 +673,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isLocationCacheEnable', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isLocationCacheEnable', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -695,18 +695,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -717,18 +717,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOnceLocationLatest', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOnceLocationLatest', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -739,18 +739,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -761,18 +761,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isSensorEnable', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isSensorEnable', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -783,18 +783,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setSensorEnable', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setSensorEnable', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -805,18 +805,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -827,18 +827,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLastLocationLifeCycle', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLastLocationLifeCycle', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -849,18 +849,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getGeoLanguage', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getGeoLanguage', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[result];
+      return com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[__result__];
     }
   }
   
@@ -871,18 +871,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGeoLanguage', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGeoLanguage', {"var1": var1.index, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -893,18 +893,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary', {"var0": var0});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -915,18 +915,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary', );
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary', );
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -937,18 +937,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getDeviceModeDistanceFilter', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getDeviceModeDistanceFilter', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -959,18 +959,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -981,18 +981,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationPurpose', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationPurpose', {"var1": var1.index, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -1003,18 +1003,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationPurpose', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationPurpose', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[result];
+      return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[__result__];
     }
   }
   
@@ -1025,18 +1025,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi', );
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi', );
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1047,18 +1047,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi', {"var0": var0});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1069,18 +1069,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setScanWifiInterval', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setScanWifiInterval', {"var0": var0});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1091,18 +1091,18 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getScanWifiInterval', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getScanWifiInterval', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1132,7 +1132,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1151,7 +1151,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1170,7 +1170,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1189,7 +1189,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1208,7 +1208,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1227,7 +1227,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1246,7 +1246,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1265,7 +1265,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1284,7 +1284,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1303,7 +1303,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1322,7 +1322,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1341,7 +1341,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1360,7 +1360,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1379,7 +1379,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[result]).toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[__result__]).toList();
     
       return typedResult;
     }
@@ -1398,7 +1398,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1417,7 +1417,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[result]).toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[__result__]).toList();
     
       return typedResult;
     }
@@ -1436,7 +1436,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1455,7 +1455,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1474,7 +1474,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1493,7 +1493,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1512,7 +1512,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1531,7 +1531,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1550,7 +1550,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1569,7 +1569,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1588,7 +1588,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1607,7 +1607,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1626,7 +1626,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1645,7 +1645,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1664,7 +1664,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1683,7 +1683,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1702,7 +1702,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1721,7 +1721,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1740,7 +1740,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1759,7 +1759,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1778,7 +1778,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1797,7 +1797,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1816,7 +1816,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[result]).toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[__result__]).toList();
     
       return typedResult;
     }
@@ -1835,7 +1835,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1854,7 +1854,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1873,7 +1873,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1892,7 +1892,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1911,7 +1911,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1930,7 +1930,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1949,7 +1949,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[result]).toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[__result__]).toList();
     
       return typedResult;
     }
@@ -1968,7 +1968,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1987,7 +1987,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2006,7 +2006,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2025,7 +2025,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

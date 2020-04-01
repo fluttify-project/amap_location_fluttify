@@ -43,9 +43,9 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
 
   //region getters
   Future<AMapLocationDistrictItem> get_districtItem() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem", {'refId': refId});
-    kNativeObjectPool.add(AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify');
-    return AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem", {'refId': refId});
+    kNativeObjectPool.add(AMapLocationDistrictItem()..refId = __result__..tag = 'amap_location_fluttify');
+    return AMapLocationDistrictItem()..refId = __result__..tag = 'amap_location_fluttify';
   }
   
   //endregion
@@ -63,7 +63,7 @@ extension AMapGeoFenceDistrictRegion_Batch on List<AMapGeoFenceDistrictRegion> {
   //region getters
   Future<List<AMapLocationDistrictItem>> get_districtItem_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).map((__result__) => AMapLocationDistrictItem()..refId = __result__..tag = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

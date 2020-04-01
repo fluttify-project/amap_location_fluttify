@@ -43,15 +43,15 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
 
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify');
-    return CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center", {'refId': refId});
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify');
+    return CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify';
   }
   
   Future<double> get_radius() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -68,18 +68,18 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center.refId, "radius": radius, "identifier": identifier, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center.refId, "radius": radius, "identifier": identifier, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify');
-      return AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(AMapLocationCircleRegion()..refId = __result__..tag = 'amap_location_fluttify');
+      return AMapLocationCircleRegion()..refId = __result__..tag = 'amap_location_fluttify';
     }
   }
   
@@ -90,14 +90,14 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<double>> get_radius_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -122,7 +122,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapLocationCircleRegion()..refId = __result__..tag = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

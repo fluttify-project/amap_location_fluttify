@@ -57,18 +57,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getCitycode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getCitycode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -79,18 +79,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setCitycode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setCitycode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -101,18 +101,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getAdcode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getAdcode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -123,18 +123,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setAdcode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setAdcode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -145,18 +145,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getPolyline', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getPolyline', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList());
-      return (result as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList();
     }
   }
   
@@ -167,18 +167,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setPolyline', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setPolyline', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -189,18 +189,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getDistrictName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::getDistrictName', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -211,18 +211,18 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setDistrictName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.DistrictItem::setDistrictName', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -252,7 +252,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -271,7 +271,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -290,7 +290,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -309,7 +309,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -328,7 +328,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -347,7 +347,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -366,7 +366,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -385,7 +385,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
