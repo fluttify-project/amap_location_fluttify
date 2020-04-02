@@ -1,3 +1,6 @@
+## 0.10.0
+- enhance: 更新底层依赖
+
 ## 0.9.0
 - enhance: [breaking change] 使用原始值代替Future返回, 简化使用
 - roll engine #939e12d7
