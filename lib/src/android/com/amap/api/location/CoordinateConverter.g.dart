@@ -22,7 +22,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_location_CoordinateConverter> create__android_content_Context(android_content_Context var1) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_location_CoordinateConverter()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_CoordinateConverter()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
   
-    final List<com_amap_api_location_CoordinateConverter> typedResult = resultBatch.map((result) => com_amap_api_location_CoordinateConverter()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_CoordinateConverter> typedResult = resultBatch.map((result) => com_amap_api_location_CoordinateConverter()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -67,8 +67,8 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -89,8 +89,8 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -111,8 +111,8 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -186,7 +186,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -205,7 +205,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -224,7 +224,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

@@ -22,7 +22,7 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion with NSCopying {
   //region creators
   static Future<AMapGeoFenceCircleRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceCircleRegion');
-    final object = AMapGeoFenceCircleRegion()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapGeoFenceCircleRegion()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceCircleRegion', {'length': length});
   
-    final List<AMapGeoFenceCircleRegion> typedResult = resultBatch.map((result) => AMapGeoFenceCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapGeoFenceCircleRegion> typedResult = resultBatch.map((result) => AMapGeoFenceCircleRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -44,8 +44,8 @@ class AMapGeoFenceCircleRegion extends AMapGeoFenceRegion with NSCopying {
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_center", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify');
-    return CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify';
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify');
+    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify';
   }
   
   Future<double> get_radius() async {
@@ -69,7 +69,7 @@ extension AMapGeoFenceCircleRegion_Batch on List<AMapGeoFenceCircleRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceCircleRegion::get_center_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

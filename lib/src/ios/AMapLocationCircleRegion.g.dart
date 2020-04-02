@@ -22,7 +22,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region creators
   static Future<AMapLocationCircleRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationCircleRegion');
-    final object = AMapLocationCircleRegion()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationCircleRegion()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length});
   
-    final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -44,8 +44,8 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify');
-    return CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify';
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify');
+    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify';
   }
   
   Future<double> get_radius() async {
@@ -78,8 +78,8 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationCircleRegion()..refId = __result__..tag = 'amap_location_fluttify');
-      return AMapLocationCircleRegion()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -90,7 +90,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -122,7 +122,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => AMapLocationCircleRegion()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

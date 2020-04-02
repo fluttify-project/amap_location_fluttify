@@ -22,7 +22,7 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   //region creators
   static Future<AMapGeoFenceRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
-    final object = AMapGeoFenceRegion()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapGeoFenceRegion()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceRegion', {'length': length});
   
-    final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -68,8 +68,8 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   
   Future<CLLocation> get_currentLocation() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation", {'refId': refId});
-    kNativeObjectPool.add(CLLocation()..refId = __result__..tag = 'amap_location_fluttify');
-    return CLLocation()..refId = __result__..tag = 'amap_location_fluttify';
+    kNativeObjectPool.add(CLLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
+    return CLLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
   }
   
   //endregion
@@ -132,7 +132,7 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
   
   Future<List<CLLocation>> get_currentLocation_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => CLLocation()..refId = __result__..tag = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).map((__result__) => CLLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

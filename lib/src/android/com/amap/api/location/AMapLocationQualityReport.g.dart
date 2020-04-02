@@ -26,7 +26,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   //region creators
   static Future<com_amap_api_location_AMapLocationQualityReport> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
-    final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -38,7 +38,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocationQualityReport__', {'length': length});
   
-    final List<com_amap_api_location_AMapLocationQualityReport> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationQualityReport()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_AMapLocationQualityReport> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationQualityReport()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

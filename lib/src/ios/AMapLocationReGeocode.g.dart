@@ -22,7 +22,7 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapLocationReGeocode> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationReGeocode');
-    final object = AMapLocationReGeocode()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationReGeocode()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationReGeocode', {'length': length});
   
-    final List<AMapLocationReGeocode> typedResult = resultBatch.map((result) => AMapLocationReGeocode()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationReGeocode> typedResult = resultBatch.map((result) => AMapLocationReGeocode()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

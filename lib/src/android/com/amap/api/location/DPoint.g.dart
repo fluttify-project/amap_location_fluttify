@@ -22,7 +22,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   //region creators
   static Future<com_amap_api_location_DPoint> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__');
-    final object = com_amap_api_location_DPoint()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_DPoint()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,7 +30,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   
   static Future<com_amap_api_location_DPoint> create__double__double(double var1, double var3) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__double__double', {"var1": var1, "var3": var3});
-    final object = com_amap_api_location_DPoint()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_DPoint()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -42,7 +42,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_DPoint__', {'length': length});
   
-    final List<com_amap_api_location_DPoint> typedResult = resultBatch.map((result) => com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_DPoint> typedResult = resultBatch.map((result) => com_amap_api_location_DPoint()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -53,7 +53,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_DPoint__double__double', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_location_DPoint> typedResult = resultBatch.map((result) => com_amap_api_location_DPoint()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_DPoint> typedResult = resultBatch.map((result) => com_amap_api_location_DPoint()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

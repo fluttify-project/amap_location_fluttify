@@ -22,7 +22,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_location_AMapLocationClient> create__android_content_Context(android_content_Context var1) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,7 +30,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   static Future<com_amap_api_location_AMapLocationClient> create__android_content_Context__android_content_Intent(android_content_Context var1, android_content_Intent var2) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent', {"var1": var1.refId, "var2": var2.refId});
-    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_AMapLocationClient()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -42,7 +42,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocationClient__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
   
-    final List<com_amap_api_location_AMapLocationClient> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationClient()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_AMapLocationClient> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationClient()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -53,7 +53,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__].refId}]);
   
-    final List<com_amap_api_location_AMapLocationClient> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationClient()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_AMapLocationClient> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationClient()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -116,7 +116,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1'])..tag = 'amap_location_fluttify');
+              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1'])..tag__ = 'amap_location_fluttify');
               break;
             default:
               break;
@@ -193,8 +193,8 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -333,7 +333,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1'])..tag = 'amap_location_fluttify');
+              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1'])..tag__ = 'amap_location_fluttify');
               break;
             default:
               break;
@@ -520,7 +520,7 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

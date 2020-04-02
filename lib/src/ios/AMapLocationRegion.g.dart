@@ -22,7 +22,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
   //region creators
   static Future<AMapLocationRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationRegion');
-    final object = AMapLocationRegion()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationRegion()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationRegion', {'length': length});
   
-    final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -95,8 +95,8 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationRegion()..refId = __result__..tag = 'amap_location_fluttify');
-      return AMapLocationRegion()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -179,7 +179,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => AMapLocationRegion()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

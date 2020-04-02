@@ -43,7 +43,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   //region creators
   static Future<com_amap_api_fence_GeoFence> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFence__');
-    final object = com_amap_api_fence_GeoFence()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_fence_GeoFence()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -55,7 +55,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_fence_GeoFence__', {'length': length});
   
-    final List<com_amap_api_fence_GeoFence> typedResult = resultBatch.map((result) => com_amap_api_fence_GeoFence()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_fence_GeoFence> typedResult = resultBatch.map((result) => com_amap_api_fence_GeoFence()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -220,8 +220,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(android_app_PendingIntent()..refId = __result__..tag = 'amap_location_fluttify');
-      return android_app_PendingIntent()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -308,8 +308,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_fence_PoiItem()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -352,8 +352,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
     }
   }
   
@@ -638,8 +638,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -836,8 +836,8 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -981,7 +981,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => android_app_PendingIntent()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1057,7 +1057,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_fence_PoiItem()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1095,7 +1095,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -1342,7 +1342,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_DPoint()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1513,7 +1513,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

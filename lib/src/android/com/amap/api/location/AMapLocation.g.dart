@@ -57,7 +57,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   //region creators
   static Future<com_amap_api_location_AMapLocation> create__String(String var1) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
-    final object = com_amap_api_location_AMapLocation()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_AMapLocation()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -65,7 +65,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   
   static Future<com_amap_api_location_AMapLocation> create__android_location_Location(android_location_Location var1) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1.refId});
-    final object = com_amap_api_location_AMapLocation()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_location_AMapLocation()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -77,7 +77,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_location_AMapLocation> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocation()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_AMapLocation> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocation()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -88,7 +88,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__android_location_Location', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
   
-    final List<com_amap_api_location_AMapLocation> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocation()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_AMapLocation> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocation()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -1419,8 +1419,8 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -1441,8 +1441,8 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -2747,7 +2747,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -2766,7 +2766,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

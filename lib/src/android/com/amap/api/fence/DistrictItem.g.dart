@@ -22,7 +22,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   //region creators
   static Future<com_amap_api_fence_DistrictItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_fence_DistrictItem__');
-    final object = com_amap_api_fence_DistrictItem()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_amap_api_fence_DistrictItem()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_fence_DistrictItem__', {'length': length});
   
-    final List<com_amap_api_fence_DistrictItem> typedResult = resultBatch.map((result) => com_amap_api_fence_DistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_amap_api_fence_DistrictItem> typedResult = resultBatch.map((result) => com_amap_api_fence_DistrictItem()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -155,8 +155,8 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
     }
   }
   
@@ -328,7 +328,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }

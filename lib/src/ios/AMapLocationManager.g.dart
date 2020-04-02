@@ -22,7 +22,7 @@ class AMapLocationManager extends NSObject  {
   //region creators
   static Future<AMapLocationManager> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationManager');
-    final object = AMapLocationManager()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationManager()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationManager extends NSObject  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationManager', {'length': length});
   
-    final List<AMapLocationManager> typedResult = resultBatch.map((result) => AMapLocationManager()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationManager> typedResult = resultBatch.map((result) => AMapLocationManager()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -116,7 +116,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_doRequireLocationAuth(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocationManager()..refId = (args['locationManager'])..tag = 'amap_location_fluttify');
+            delegate?.amapLocationManager_doRequireLocationAuth(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', CLLocationManager()..refId = (args['locationManager'])..tag__ = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError':
             // print log
@@ -125,7 +125,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didFailWithError(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
+            delegate?.amapLocationManager_didFailWithError(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation':
             // print log
@@ -134,7 +134,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didUpdateLocation(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocation()..refId = (args['location'])..tag = 'amap_location_fluttify');
+            delegate?.amapLocationManager_didUpdateLocation(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', CLLocation()..refId = (args['location'])..tag__ = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode':
             // print log
@@ -143,7 +143,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didUpdateLocation_reGeocode(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLLocation()..refId = (args['location'])..tag = 'amap_location_fluttify', AMapLocationReGeocode()..refId = (args['reGeocode'])..tag = 'amap_location_fluttify');
+            delegate?.amapLocationManager_didUpdateLocation_reGeocode(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', CLLocation()..refId = (args['location'])..tag__ = 'amap_location_fluttify', AMapLocationReGeocode()..refId = (args['reGeocode'])..tag__ = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus':
             // print log
@@ -152,7 +152,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didChangeAuthorizationStatus(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLAuthorizationStatus.values[(args['status'])]);
+            delegate?.amapLocationManager_didChangeAuthorizationStatus(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', CLAuthorizationStatus.values[(args['status'])]);
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
             // print log
@@ -161,7 +161,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify');
+            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify');
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading':
             // print log
@@ -170,7 +170,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didUpdateHeading(AMapLocationManager()..refId = (args['manager'])..tag = 'amap_location_fluttify', CLHeading()..refId = (args['newHeading'])..tag = 'amap_location_fluttify');
+            delegate?.amapLocationManager_didUpdateHeading(AMapLocationManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', CLHeading()..refId = (args['newHeading'])..tag__ = 'amap_location_fluttify');
             break;
           default:
             break;
@@ -348,7 +348,7 @@ class AMapLocationManager extends NSObject  {
               }
         
               // handle the native call
-              completionBlock(CLLocation()..refId = (args['location'])..tag = 'amap_location_fluttify', AMapLocationReGeocode()..refId = (args['regeocode'])..tag = 'amap_location_fluttify', NSError()..refId = (args['error'])..tag = 'amap_location_fluttify');
+              completionBlock(CLLocation()..refId = (args['location'])..tag__ = 'amap_location_fluttify', AMapLocationReGeocode()..refId = (args['regeocode'])..tag__ = 'amap_location_fluttify', NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify');
               break;
             default:
               break;

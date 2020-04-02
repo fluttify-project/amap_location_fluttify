@@ -22,7 +22,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapLocationDistrictItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationDistrictItem');
-    final object = AMapLocationDistrictItem()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationDistrictItem()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length});
   
-    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
