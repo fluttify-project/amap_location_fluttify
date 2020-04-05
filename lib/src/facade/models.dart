@@ -21,6 +21,7 @@ class Location {
     @required this.streetNumber,
     @required this.aoiName,
     @required this.accuracy,
+    @required this.speed,
   });
 
   /// 地址全称
@@ -67,6 +68,9 @@ class Location {
 
   /// 精度
   double accuracy;
+
+  /// 速度
+  double speed;
 
   @override
   String toString() {

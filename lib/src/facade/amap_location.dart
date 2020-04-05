@@ -227,6 +227,7 @@ class AmapLocation {
           streetNumber: await location.getStreetNum(),
           aoiName: await location.getAoiName(),
           accuracy: await location.getAccuracy(),
+          speed: await location.getSpeed(),
         ));
       };
 
@@ -316,6 +317,7 @@ class AmapLocation {
           streetNumber: await regeocode.get_number(),
           aoiName: await regeocode.get_AOIName(),
           accuracy: await location.horizontalAccuracy,
+          speed: await location.speed,
         ));
       };
 
