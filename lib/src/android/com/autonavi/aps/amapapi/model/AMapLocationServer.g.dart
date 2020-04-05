@@ -22,7 +22,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   //region creators
   static Future<com_autonavi_aps_amapapi_model_AMapLocationServer> create__String(String var1) async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String', {"var1": var1});
-    final object = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = refId..tag = 'amap_location_fluttify';
+    final object = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_autonavi_aps_amapapi_model_AMapLocationServer__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_autonavi_aps_amapapi_model_AMapLocationServer> typedResult = resultBatch.map((result) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<com_autonavi_aps_amapapi_model_AMapLocationServer> typedResult = resultBatch.map((result) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

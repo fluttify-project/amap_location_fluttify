@@ -22,7 +22,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
   //region creators
   static Future<AMapLocationRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationRegion');
-    final object = AMapLocationRegion()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationRegion()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationRegion', {'length': length});
   
-    final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -43,21 +43,21 @@ class AMapLocationRegion extends NSObject with NSCopying {
 
   //region getters
   Future<String> get_identifier() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_identifier", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_identifier", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<bool> get_notifyOnEntry() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnEntry", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnEntry", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<bool> get_notifyOnExit() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnExit", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnExit", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -85,18 +85,18 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::initWithIdentifier', {"identifier": identifier, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::initWithIdentifier', {"identifier": identifier, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify');
-      return AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -107,18 +107,18 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -129,21 +129,21 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
   //region getters
   Future<List<String>> get_identifier_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_identifier_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_notifyOnEntry_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnEntry_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_notifyOnExit_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationRegion::get_notifyOnExit_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -179,7 +179,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => AMapLocationRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -198,7 +198,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

@@ -22,7 +22,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapLocationDistrictItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationDistrictItem');
-    final object = AMapLocationDistrictItem()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationDistrictItem()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length});
   
-    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -43,9 +43,9 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_cityCode() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -68,7 +68,7 @@ extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
   //region getters
   Future<List<String>> get_cityCode_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationDistrictItem::get_cityCode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }

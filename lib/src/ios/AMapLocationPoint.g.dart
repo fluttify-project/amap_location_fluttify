@@ -22,7 +22,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapLocationPoint> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapLocationPoint');
-    final object = AMapLocationPoint()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapLocationPoint()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length});
   
-    final List<AMapLocationPoint> typedResult = resultBatch.map((result) => AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapLocationPoint> typedResult = resultBatch.map((result) => AMapLocationPoint()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -43,15 +43,15 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<double> get_latitude() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_latitude", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_latitude", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<double> get_longitude() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_longitude", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_longitude", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -79,18 +79,18 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::locationWithLatitude_longitude', {"lat": lat, "lon": lon});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::locationWithLatitude_longitude', {"lat": lat, "lon": lon});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify');
-      return AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify';
+      kNativeObjectPool.add(AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
+      return AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
     }
   }
   
@@ -101,14 +101,14 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_latitude_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_longitude_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationPoint::get_longitude_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -144,7 +144,7 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => AMapLocationPoint()..refId = result..tag = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

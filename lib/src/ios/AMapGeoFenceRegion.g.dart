@@ -22,7 +22,7 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   //region creators
   static Future<AMapGeoFenceRegion> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceRegion');
-    final object = AMapGeoFenceRegion()..refId = refId..tag = 'amap_location_fluttify';
+    final object = AMapGeoFenceRegion()..refId = refId..tag__ = 'amap_location_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -34,7 +34,7 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceRegion', {'length': length});
   
-    final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result..tag = 'amap_location_fluttify').toList();
+    final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -43,33 +43,33 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
 
   //region getters
   Future<String> get_identifier() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_identifier", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_identifier", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_customID() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_customID", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_customID", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapGeoFenceRegionStatus> get_fenceStatus() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus", {'refId': refId});
   
-    return AMapGeoFenceRegionStatus.values[result];
+    return AMapGeoFenceRegionStatus.values[__result__];
   }
   
   Future<AMapGeoFenceRegionType> get_regionType() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType", {'refId': refId});
   
-    return AMapGeoFenceRegionType.values[result];
+    return AMapGeoFenceRegionType.values[__result__];
   }
   
   Future<CLLocation> get_currentLocation() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation", {'refId': refId});
-    kNativeObjectPool.add(CLLocation()..refId = result..tag = 'amap_location_fluttify');
-    return CLLocation()..refId = result..tag = 'amap_location_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation", {'refId': refId});
+    kNativeObjectPool.add(CLLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
+    return CLLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
   }
   
   //endregion
@@ -104,35 +104,35 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
   //region getters
   Future<List<String>> get_identifier_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_identifier_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_customID_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_customID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapGeoFenceRegionStatus>> get_fenceStatus_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoFenceRegionStatus.values[result]).toList();
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoFenceRegionStatus.values[__result__]).toList();
   
     return typedResult;
   }
   
   Future<List<AMapGeoFenceRegionType>> get_regionType_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoFenceRegionType.values[result]).toList();
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoFenceRegionType.values[__result__]).toList();
   
     return typedResult;
   }
   
   Future<List<CLLocation>> get_currentLocation_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_currentLocation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((result) => CLLocation()..refId = result..tag = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).map((__result__) => CLLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
