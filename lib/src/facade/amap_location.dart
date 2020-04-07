@@ -45,7 +45,7 @@ class AmapLocation {
   static Future<Location> fetchLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
-    int timeout,
+    Duration timeout,
   }) async {
     final completer = Completer<Location>();
     return platform(
@@ -117,7 +117,7 @@ class AmapLocation {
         // 是否返回地址描述
         if (needAddress != null) await options.setNeedAddress(needAddress);
         // 设置定位请求超时时间，默认为30秒。
-        if (timeout != null) await options.setHttpTimeOut(timeout);
+        if (timeout != null) await options.setHttpTimeOut(timeout.inSeconds);
 
         await options.setSensorEnable(true);
 
@@ -147,7 +147,9 @@ class AmapLocation {
           }
         }
         // 设置定位请求超时时间，默认为30秒。
-        if (timeout != null) await _iosClient.set_locationTimeout(timeout);
+        if (timeout != null) {
+          await _iosClient.set_locationTimeout(timeout.inSeconds);
+        }
 
         await _iosClient.requestLocationWithReGeocode_completionBlock(
           needAddress ?? true,
@@ -188,7 +190,7 @@ class AmapLocation {
   static Stream<Location> listenLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
-    int timeout,
+    Duration timeout,
   }) async* {
     _locationController ??= StreamController<Location>();
 
@@ -225,6 +227,7 @@ class AmapLocation {
           streetNumber: await location.getStreetNum(),
           aoiName: await location.getAoiName(),
           accuracy: await location.getAccuracy(),
+          speed: await location.getSpeed(),
         ));
       };
 
@@ -257,7 +260,7 @@ class AmapLocation {
       // 是否返回地址描述
       if (needAddress != null) await options.setNeedAddress(needAddress);
       // 设置定位请求超时时间，默认为30秒。
-      if (timeout != null) await options.setHttpTimeOut(timeout);
+      if (timeout != null) await options.setHttpTimeOut(timeout.inSeconds);
 
       await options.setSensorEnable(true);
 
@@ -285,7 +288,9 @@ class AmapLocation {
             break;
         }
       // 设置定位请求超时时间，默认为30秒。
-      if (timeout != null) await _iosClient.set_locationTimeout(timeout);
+      if (timeout != null) {
+        await _iosClient.set_locationTimeout(timeout.inSeconds);
+      }
 
       // 设置回调
       if (_iosLocationDelegate == null) {
@@ -312,6 +317,7 @@ class AmapLocation {
           streetNumber: await regeocode.get_number(),
           aoiName: await regeocode.get_AOIName(),
           accuracy: await location.horizontalAccuracy,
+          speed: await location.speed,
         ));
       };
 
