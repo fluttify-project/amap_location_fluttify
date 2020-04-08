@@ -460,9 +460,9 @@ extern BOOL enableLog;
             AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
             // list arg
             NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
-            NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
+            NSMutableArray<NSArray<AMapGeoFenceRegion*>*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
             for (int __i__ = 0; __i__ < regionsRefArray.count; __i__++) {
-                AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP[[regionsRefArray objectAtIndex:__i__]];
+                NSArray<AMapGeoFenceRegion*>* item = (NSArray<AMapGeoFenceRegion*>*) HEAP[[regionsRefArray objectAtIndex:__i__]];
                 [regions addObject:item];
             }
             // jsonable arg
@@ -1493,9 +1493,9 @@ extern BOOL enableLog;
                 AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
                 // list arg
                 NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
-                NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
+                NSMutableArray<NSArray<AMapGeoFenceRegion*>*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
                 for (int __i__ = 0; __i__ < regionsRefArray.count; __i__++) {
-                    AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP[[regionsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapGeoFenceRegion*>* item = (NSArray<AMapGeoFenceRegion*>*) HEAP[[regionsRefArray objectAtIndex:__i__]];
                     [regions addObject:item];
                 }
                 // jsonable arg
