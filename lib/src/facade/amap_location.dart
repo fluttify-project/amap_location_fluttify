@@ -381,9 +381,9 @@ class AmapLocation {
 
     if (_androidClient != null) {
       await _androidClient.onDestroy();
-      await _androidClient.release();
+      await _androidClient.release__();
     }
-    if (_iosClient != null) await _iosClient.release();
+    if (_iosClient != null) await _iosClient.release__();
 
     _androidClient = null;
     _iosClient = null;
