@@ -95,7 +95,7 @@ class AMapGeoFenceManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', (args['regions'] as List).cast<int>().map((it) => NSObject()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['customID'], NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify');
+            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['customID'], NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify');
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
             // print log
@@ -271,7 +271,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
-  Future<List> geoFenceRegionsWithCustomID(String customID) async {
+  Future<List<NSObject>> geoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::geoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -293,7 +293,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
-  Future<List> monitoringGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<NSObject>> monitoringGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::monitoringGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -315,7 +315,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
-  Future<List> pausedGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<NSObject>> pausedGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::pausedGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -337,7 +337,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
-  Future<List> pauseGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<NSObject>> pauseGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::pauseGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -381,7 +381,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   }
   
-  Future<List> startGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<NSObject>> startGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoFenceManager@$refId::startGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -668,7 +668,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<List<List>> geoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<NSObject>>> geoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -687,7 +687,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<List<List>> monitoringGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<NSObject>>> monitoringGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -706,7 +706,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<List<List>> pausedGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<NSObject>>> pausedGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -725,7 +725,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<List<List>> pauseGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<NSObject>>> pauseGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -763,7 +763,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<List<List>> startGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<NSObject>>> startGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

@@ -379,28 +379,6 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   }
   
-  Future<void> setPointList(List<List<com_amap_api_location_DPoint>> var1) async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPointList([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPointList', {"var1": [], "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-    
-      return __result__;
-    }
-  }
-  
   Future<double> getRadius() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -1101,32 +1079,13 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setDistrictItemList_batch(List<List<java_lang_Object>> var1) async {
+  Future<void> setDistrictItemList_batch(List<List<com_amap_api_fence_DistrictItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setDistrictItemList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  Future<void> setPointList_batch(List<List<java_lang_Object>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPointList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

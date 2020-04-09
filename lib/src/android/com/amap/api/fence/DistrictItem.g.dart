@@ -334,7 +334,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     }
   }
   
-  Future<void> setPolyline_batch(List<List<java_lang_Object>> var1) async {
+  Future<void> setPolyline_batch(List<List<com_amap_api_location_DPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

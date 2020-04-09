@@ -121,7 +121,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => java_lang_Object()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['var2'], args['var3']);
+              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['var2'], args['var3']);
               break;
             default:
               break;
@@ -471,7 +471,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> addGeoFence__List_com_amap_api_location_DPoint___String_batch(List<List<java_lang_Object>> var1, List<String> var2) async {
+  Future<void> addGeoFence__List_com_amap_api_location_DPoint___String_batch(List<List<com_amap_api_location_DPoint>> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
