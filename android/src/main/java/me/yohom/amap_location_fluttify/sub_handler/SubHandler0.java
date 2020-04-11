@@ -31,23 +31,55 @@ public class SubHandler0 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.amap.api.location.LocationManagerBase::setLocationOption", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::a", (args, methodResult) -> {
                 // args
-                // ref arg
-                com.amap.api.location.AMapLocationClientOption var1 = (com.amap.api.location.AMapLocationClientOption) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::setLocationOption(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::a(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.a();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::a__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::a(" + var1 + ")");
                 }
             
                 // invoke native method
                 try {
-                    ref.setLocationOption(var1);
+                    ref.a(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -63,56 +95,55 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.LocationManagerBase::setLocationListener", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::b", (args, methodResult) -> {
                 // args
             
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::setLocationListener(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::b(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.b();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::b__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::b(" + var1 + ")");
                 }
             
                 // invoke native method
                 try {
-                    ref.setLocationListener(new com.amap.api.location.AMapLocationListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.LocationManagerBase::setLocationListener::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onLocationChanged(com.amap.api.location.AMapLocation var1) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
+                    ref.b(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -128,22 +159,55 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.LocationManagerBase::startLocation", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::c", (args, methodResult) -> {
                 // args
             
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::startLocation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::c(" + "" + ")");
+                }
+            
+                // invoke native method
+                int result;
+                try {
+                    result = ref.c();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::c__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::c(" + var1 + ")");
                 }
             
                 // invoke native method
                 try {
-                    ref.startLocation();
+                    ref.c(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -159,22 +223,55 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.LocationManagerBase::stopLocation", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::d", (args, methodResult) -> {
                 // args
             
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::stopLocation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::d(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.d();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::d__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::d(" + var1 + ")");
                 }
             
                 // invoke native method
                 try {
-                    ref.stopLocation();
+                    ref.d(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -190,23 +287,119 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.LocationManagerBase::getLastKnownLocation", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::e", (args, methodResult) -> {
                 // args
             
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::getLastKnownLocation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::e(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.location.AMapLocation result;
+                String result;
                 try {
-                    result = ref.getLastKnownLocation();
+                    result = ref.e();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::e__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::e(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.e(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::g", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::g(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.g();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::h", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::h(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.autonavi.aps.amapapi.model.AMapLocationServer result;
+                try {
+                    result = ref.h();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -226,85 +419,23 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.LocationManagerBase::startAssistantLocation", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::i", (args, methodResult) -> {
                 // args
             
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::startAssistantLocation(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.startAssistantLocation();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.LocationManagerBase::stopAssistantLocation", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::stopAssistantLocation(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.stopAssistantLocation();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.LocationManagerBase::isStarted", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::isStarted(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::i(" + "" + ")");
                 }
             
                 // invoke native method
                 boolean result;
                 try {
-                    result = ref.isStarted();
+                    result = ref.i();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -320,153 +451,247 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.LocationManagerBase::unRegisterLocationListener", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::unRegisterLocationListener(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.LocationManagerBase::unRegisterLocationListener::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onLocationChanged(com.amap.api.location.AMapLocation var1) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-            
-                        // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                }}
-                        );
-            
-                        // method result
-            
-                    }
-            
-                });
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.LocationManagerBase::onDestroy", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::onDestroy(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onDestroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.LocationManagerBase::enableBackgroundLocation", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                int var1 = (int) ((Map<String, Object>) args).get("var1");
-                // ref arg
-                android.app.Notification var2 = (android.app.Notification) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::enableBackgroundLocation(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.enableBackgroundLocation(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.LocationManagerBase::disableBackgroundLocation", (args, methodResult) -> {
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::a__bool", (args, methodResult) -> {
                 // args
                 // jsonable arg
                 boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.LocationManagerBase ref = (com.amap.api.location.LocationManagerBase) getHEAP().get(refId);
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.LocationManagerBase@" + refId + "::disableBackgroundLocation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::a(" + var1 + ")");
                 }
             
                 // invoke native method
                 try {
-                    ref.disableBackgroundLocation(var1);
+                    ref.a(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::j", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::j(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.j();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::f__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::f(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.f(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::k", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::k(" + "" + ")");
+                }
+            
+                // invoke native method
+                long result;
+                try {
+                    result = ref.k();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                long jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::a__int", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                long var1 = (long) (int) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::a(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.a(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::g__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::g(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.g(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::l", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::l(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.l();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
+            put("com.autonavi.aps.amapapi.model.AMapLocationServer::h__String", (args, methodResult) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.autonavi.aps.amapapi.model.AMapLocationServer ref = (com.autonavi.aps.amapapi.model.AMapLocationServer) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.autonavi.aps.amapapi.model.AMapLocationServer@" + refId + "::h(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.h(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1024,38 +1249,6 @@ public class SubHandler0 {
             
                 // convert result to jsonable result
                 String jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.AMapLocationListener::onLocationChanged", (args, methodResult) -> {
-                // args
-                // ref arg
-                com.amap.api.location.AMapLocation var1 = (com.amap.api.location.AMapLocation) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.AMapLocationListener ref = (com.amap.api.location.AMapLocationListener) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.AMapLocationListener@" + refId + "::onLocationChanged(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onLocationChanged(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
             
                 methodResult.success(jsonableResult);
             });
@@ -5418,105 +5611,6 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.location.APSServiceBase::onCreate", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.APSServiceBase ref = (com.amap.api.location.APSServiceBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.APSServiceBase@" + refId + "::onCreate(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onCreate();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.APSServiceBase::onStartCommand", (args, methodResult) -> {
-                // args
-                // ref arg
-                android.content.Intent var1 = (android.content.Intent) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-                // jsonable arg
-                int var2 = (int) ((Map<String, Object>) args).get("var2");
-                // jsonable arg
-                int var3 = (int) ((Map<String, Object>) args).get("var3");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.APSServiceBase ref = (com.amap.api.location.APSServiceBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.APSServiceBase@" + refId + "::onStartCommand(" + var1 + var2 + var3 + ")");
-                }
-            
-                // invoke native method
-                int result;
-                try {
-                    result = ref.onStartCommand(var1, var2, var3);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                int jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.location.APSServiceBase::onDestroy", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.location.APSServiceBase ref = (com.amap.api.location.APSServiceBase) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.location.APSServiceBase@" + refId + "::onDestroy(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.onDestroy();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
             put("com.amap.api.location.AMapLocationQualityReport::setWifiAble", (args, methodResult) -> {
                 // args
                 // jsonable arg
@@ -6107,7 +6201,7 @@ public class SubHandler0 {
                 }
             
                 // invoke native method
-                List<com.amap.api.location.DPoint> result;
+                java.util.List<com.amap.api.location.DPoint> result;
                 try {
                     result = ref.getPolyline();
                 } catch (Throwable throwable) {
@@ -6136,9 +6230,9 @@ public class SubHandler0 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
-                    var1.add((com.amap.api.location.DPoint) getHEAP().get(refId));
+                    ((ArrayList<com.amap.api.location.DPoint>) var1).add((com.amap.api.location.DPoint) getHEAP().get(refId));
                 }
             
                 // ref
@@ -6152,7 +6246,7 @@ public class SubHandler0 {
             
                 // invoke native method
                 try {
-                    ref.setPolyline(new ArrayList(var1));
+                    ref.setPolyline((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6322,7 +6416,7 @@ public class SubHandler0 {
             
                     // call dart method
                     @Override
-                    public void onGeoFenceCreateFinished(List<com.amap.api.fence.GeoFence> var1, int var2, String var3) {
+                    public void onGeoFenceCreateFinished(java.util.List<com.amap.api.fence.GeoFence> var1, int var2, String var3) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
@@ -6406,13 +6500,13 @@ public class SubHandler0 {
                 methodResult.success(jsonableResult);
             });
             // method
-            put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__String", (args, methodResult) -> {
+            put("com.amap.api.fence.GeoFenceClient::addGeoFence__List_com_amap_api_location_DPoint___String", (args, methodResult) -> {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.location.DPoint> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
-                    var1.add((com.amap.api.location.DPoint) getHEAP().get(refId));
+                    ((ArrayList<com.amap.api.location.DPoint>) var1).add((com.amap.api.location.DPoint) getHEAP().get(refId));
                 }
                 // jsonable arg
                 String var2 = (String) ((Map<String, Object>) args).get("var2");
@@ -6428,7 +6522,7 @@ public class SubHandler0 {
             
                 // invoke native method
                 try {
-                    ref.addGeoFence(new ArrayList(var1), var2);
+                    ref.addGeoFence((ArrayList) var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6609,173 +6703,6 @@ public class SubHandler0 {
                 boolean result;
                 try {
                     result = ref.removeGeoFence(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                boolean jsonableResult = result;
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.fence.GeoFenceClient::getAllGeoFence", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::getAllGeoFence(" + "" + ")");
-                }
-            
-                // invoke native method
-                List<com.amap.api.fence.GeoFence> result;
-                try {
-                    result = ref.getAllGeoFence();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (result != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.fence.GeoFence item : result) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.fence.GeoFenceClient::setGeoFenceAble", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-                // jsonable arg
-                boolean var2 = (boolean) ((Map<String, Object>) args).get("var2");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::setGeoFenceAble(" + var1 + var2 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setGeoFenceAble(var1, var2);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.fence.GeoFenceClient::pauseGeoFence", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::pauseGeoFence(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.pauseGeoFence();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.fence.GeoFenceClient::resumeGeoFence", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::resumeGeoFence(" + "" + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.resumeGeoFence();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.fence.GeoFenceClient::isPause", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.fence.GeoFenceClient ref = (com.amap.api.fence.GeoFenceClient) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.fence.GeoFenceClient@" + refId + "::isPause(" + "" + ")");
-                }
-            
-                // invoke native method
-                boolean result;
-                try {
-                    result = ref.isPause();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

@@ -430,91 +430,6 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            CLLocationManager* locationManager = (CLLocationManager*) HEAP[@([args[@"locationManager"] integerValue])];
-        
-            // ref
-            id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(%@, %@)", args[@"refId"], args[@"manager"], args[@"locationManager"]);
-            }
-        
-            // invoke native method
-            [ref amapGeoFenceManager : manager doRequireLocationAuth: locationManager];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
-            // list arg
-            NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
-            NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
-            for (int __i__ = 0; __i__ < regionsRefArray.count; __i__++) {
-                AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP[[regionsRefArray objectAtIndex:__i__]];
-                [regions addObject:item];
-            }
-            // jsonable arg
-            NSString* customID = (NSString*) args[@"customID"];
-            // ref arg
-            NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(%@, %@, %@, %@)", args[@"refId"], args[@"manager"], args[@"regions"], args[@"customID"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref amapGeoFenceManager : manager didAddRegionForMonitoringFinished: regions customID: customID error: error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
-            // jsonable arg
-            NSString* customID = (NSString*) args[@"customID"];
-            // ref arg
-            NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManagerDelegate@%@::amapGeoFenceManager(%@, %@, %@, %@)", args[@"refId"], args[@"manager"], args[@"region"], args[@"customID"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref amapGeoFenceManager : manager didGeoFencesStatusChangedForRegion: region customID: customID error: error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
         @"AMapLocationRegion::initWithIdentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // jsonable arg
@@ -791,174 +706,6 @@ extern BOOL enableLog;
         
             // invoke native method
             [ref stopUpdatingLocation ];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            CLLocationManager* locationManager = (CLLocationManager*) HEAP[@([args[@"locationManager"] integerValue])];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(%@, %@)", args[@"refId"], args[@"manager"], args[@"locationManager"]);
-            }
-        
-            // invoke native method
-            [ref amapLocationManager : manager doRequireLocationAuth: locationManager];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didFailWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(%@, %@)", args[@"refId"], args[@"manager"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref amapLocationManager : manager didFailWithError: error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(%@, %@)", args[@"refId"], args[@"manager"], args[@"location"]);
-            }
-        
-            // invoke native method
-            [ref amapLocationManager : manager didUpdateLocation: location];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
-            // ref arg
-            AMapLocationReGeocode* reGeocode = (AMapLocationReGeocode*) HEAP[@([args[@"reGeocode"] integerValue])];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(%@, %@, %@)", args[@"refId"], args[@"manager"], args[@"location"], args[@"reGeocode"]);
-            }
-        
-            // invoke native method
-            [ref amapLocationManager : manager didUpdateLocation: location reGeocode: reGeocode];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-            // enum arg
-            CLAuthorizationStatus status = (CLAuthorizationStatus) [args[@"status"] integerValue];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(%@, %@)", args[@"refId"], args[@"manager"], args[@"status"]);
-            }
-        
-            // invoke native method
-            [ref amapLocationManager : manager didChangeAuthorizationStatus: status];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManagerShouldDisplayHeadingCalibration(%@)", args[@"refId"], args[@"manager"]);
-            }
-        
-            // invoke native method
-            BOOL result = [ref amapLocationManagerShouldDisplayHeadingCalibration: manager];
-        
-            // result
-            // 返回值: Value
-            id jsonableResult = @(result);
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-            // ref arg
-            CLHeading* newHeading = (CLHeading*) HEAP[@([args[@"newHeading"] integerValue])];
-        
-            // ref
-            id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManagerDelegate@%@::amapLocationManager(%@, %@)", args[@"refId"], args[@"manager"], args[@"newHeading"]);
-            }
-        
-            // invoke native method
-            [ref amapLocationManager : manager didUpdateHeading: newHeading];
         
             // result
             // 无返回值
@@ -1455,100 +1202,6 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
-        @"AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                CLLocationManager* locationManager = (CLLocationManager*) HEAP[@([args[@"locationManager"] integerValue])];
-        
-                // ref
-                id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapGeoFenceManager : manager doRequireLocationAuth: locationManager];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
-                // list arg
-                NSArray<NSNumber*>* regionsRefArray = (NSArray<NSNumber*> *) args[@"regions"];
-                NSMutableArray<AMapGeoFenceRegion*>* regions = [NSMutableArray arrayWithCapacity:regionsRefArray.count];
-                for (int __i__ = 0; __i__ < regionsRefArray.count; __i__++) {
-                    AMapGeoFenceRegion* item = (AMapGeoFenceRegion*) HEAP[[regionsRefArray objectAtIndex:__i__]];
-                    [regions addObject:item];
-                }
-                // jsonable arg
-                NSString* customID = (NSString*) args[@"customID"];
-                // ref arg
-                NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-                // ref
-                id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapGeoFenceManager : manager didAddRegionForMonitoringFinished: regions customID: customID error: error];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoFenceManager* manager = (AMapGeoFenceManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[@([args[@"region"] integerValue])];
-                // jsonable arg
-                NSString* customID = (NSString*) args[@"customID"];
-                // ref arg
-                NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-                // ref
-                id<AMapGeoFenceManagerDelegate> ref = (id<AMapGeoFenceManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapGeoFenceManager : manager didGeoFencesStatusChangedForRegion: region customID: customID error: error];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
         @"AMapLocationRegion::initWithIdentifier_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
@@ -1806,195 +1459,6 @@ extern BOOL enableLog;
         
                 // invoke native method
                 [ref stopUpdatingLocation ];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                CLLocationManager* locationManager = (CLLocationManager*) HEAP[@([args[@"locationManager"] integerValue])];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapLocationManager : manager doRequireLocationAuth: locationManager];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didFailWithError_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapLocationManager : manager didFailWithError: error];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapLocationManager : manager didUpdateLocation: location];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                CLLocation* location = (CLLocation*) HEAP[@([args[@"location"] integerValue])];
-                // ref arg
-                AMapLocationReGeocode* reGeocode = (AMapLocationReGeocode*) HEAP[@([args[@"reGeocode"] integerValue])];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapLocationManager : manager didUpdateLocation: location reGeocode: reGeocode];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-                // enum arg
-                CLAuthorizationStatus status = (CLAuthorizationStatus) [args[@"status"] integerValue];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapLocationManager : manager didChangeAuthorizationStatus: status];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                BOOL result = [ref amapLocationManagerShouldDisplayHeadingCalibration: manager];
-        
-                // result
-                // 返回值: Value
-                id jsonableResult = @(result);
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapLocationManager* manager = (AMapLocationManager*) HEAP[@([args[@"manager"] integerValue])];
-                // ref arg
-                CLHeading* newHeading = (CLHeading*) HEAP[@([args[@"newHeading"] integerValue])];
-        
-                // ref
-                id<AMapLocationManagerDelegate> ref = (id<AMapLocationManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref amapLocationManager : manager didUpdateHeading: newHeading];
         
                 // result
                 // 无返回值
@@ -4410,6 +3874,345 @@ extern BOOL enableLog;
             AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
             ref.regionType = regionType;
+            methodResult(@"success");
+        },
+        
+        @"AMapGeoFenceRegion::set_currentLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapGeoFenceRegion::set_currentLocation");
+            }
+        
+            // args
+            // ref arg
+            CLLocation* currentLocation = (CLLocation*) HEAP[@([args[@"currentLocation"] integerValue])];
+        
+            // ref
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.currentLocation = currentLocation;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_delegate");
+            }
+        
+            // args
+        
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.delegate = self;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_distanceFilter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_distanceFilter");
+            }
+        
+            // args
+            // jsonable arg
+            CLLocationDistance distanceFilter = [args[@"distanceFilter"] doubleValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.distanceFilter = distanceFilter;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_desiredAccuracy");
+            }
+        
+            // args
+            // jsonable arg
+            CLLocationAccuracy desiredAccuracy = [args[@"desiredAccuracy"] doubleValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.desiredAccuracy = desiredAccuracy;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_pausesLocationUpdatesAutomatically");
+            }
+        
+            // args
+            // jsonable arg
+            BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_allowsBackgroundLocationUpdates");
+            }
+        
+            // args
+            // jsonable arg
+            BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_locationTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_locationTimeout");
+            }
+        
+            // args
+            // jsonable arg
+            NSInteger locationTimeout = [args[@"locationTimeout"] longValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.locationTimeout = locationTimeout;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_reGeocodeTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_reGeocodeTimeout");
+            }
+        
+            // args
+            // jsonable arg
+            NSInteger reGeocodeTimeout = [args[@"reGeocodeTimeout"] longValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.reGeocodeTimeout = reGeocodeTimeout;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_locatingWithReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_locatingWithReGeocode");
+            }
+        
+            // args
+            // jsonable arg
+            BOOL locatingWithReGeocode = [args[@"locatingWithReGeocode"] boolValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.locatingWithReGeocode = locatingWithReGeocode;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_reGeocodeLanguage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_reGeocodeLanguage");
+            }
+        
+            // args
+            // enum arg
+            AMapLocationReGeocodeLanguage reGeocodeLanguage = (AMapLocationReGeocodeLanguage) [args[@"reGeocodeLanguage"] integerValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.reGeocodeLanguage = reGeocodeLanguage;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationManager::set_detectRiskOfFakeLocation");
+            }
+        
+            // args
+            // jsonable arg
+            BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
+        
+            // ref
+            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_formattedAddress");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.formattedAddress = formattedAddress;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_country");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* country = (NSString*) args[@"country"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.country = country;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_province");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* province = (NSString*) args[@"province"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.province = province;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_city");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* city = (NSString*) args[@"city"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.city = city;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_district");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* district = (NSString*) args[@"district"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.district = district;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_township": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_township");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* township = (NSString*) args[@"township"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.township = township;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_neighborhood");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* neighborhood = (NSString*) args[@"neighborhood"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.neighborhood = neighborhood;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_building": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_building");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* building = (NSString*) args[@"building"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.building = building;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_citycode");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* citycode = (NSString*) args[@"citycode"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.citycode = citycode;
             methodResult(@"success");
         },
         

@@ -84,6 +84,7 @@ class AmapLocation {
               streetNumber: await location.getStreetNum(),
               aoiName: await location.getAoiName(),
               accuracy: await location.getAccuracy(),
+              speed: await location.speed,
             ));
           }
         };
@@ -174,6 +175,7 @@ class AmapLocation {
                 streetNumber: await regeocode.get_number(),
                 aoiName: await regeocode.get_AOIName(),
                 accuracy: await location.horizontalAccuracy,
+                speed: await location.speed,
               ));
             }
           },
@@ -379,9 +381,9 @@ class AmapLocation {
 
     if (_androidClient != null) {
       await _androidClient.onDestroy();
-      await _androidClient.release();
+      await _androidClient.release__();
     }
-    if (_iosClient != null) await _iosClient.release();
+    if (_iosClient != null) await _iosClient.release__();
 
     _androidClient = null;
     _iosClient = null;
