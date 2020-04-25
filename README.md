@@ -47,9 +47,8 @@ if (await requestPermission()) {
 
 // 连续定位
 if (await requestPermission()) {
-  await for (final location in AmapLocation.listenLocation()) {
-    setState(() => _location = location);
-  }
+  AmapLocation.listenLocation()
+    .listen((location) => setState(() => _location = location));
 }
 ```
 
