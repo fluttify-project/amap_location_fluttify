@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_AMapLocationClientOption extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
   //endregion
 
   //region methods
+  
   static Future<String> getAPIKEY() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isMockEnable() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setMockEnable(bool var1) async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getInterval() async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setInterval(int var1) async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isOnceLocation() async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setOnceLocation(bool var1) async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isNeedAddress() async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setNeedAddress(bool var1) async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isWifiActiveScan() async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setWifiActiveScan(bool var1) async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isWifiScan() async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setWifiScan(bool var1) async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption_AMapLocationMode> getLocationMode() async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[__result__];
     
-      return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[__result__];
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setLocationMode(com_amap_api_location_AMapLocationClientOption_AMapLocationMode var1) async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol> getLocationProtocol() async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[__result__];
     
-      return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[__result__];
+      return __return__;
     }
   }
+  
   
   static Future<void> setLocationProtocol(com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol var0) async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isKillProcess() async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setKillProcess(bool var1) async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isGpsFirst() async {
     // print log
@@ -485,10 +525,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setGpsFirst(bool var1) async {
     // print log
@@ -507,10 +549,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setGpsFirstTimeout(int var1) async {
     // print log
@@ -529,10 +573,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getGpsFirstTimeout() async {
     // print log
@@ -551,10 +597,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> clone() async {
     // print log
@@ -573,10 +621,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getHttpTimeOut() async {
     // print log
@@ -595,10 +645,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setHttpTimeOut(int var1) async {
     // print log
@@ -617,10 +669,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isOffset() async {
     // print log
@@ -639,10 +693,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setOffset(bool var1) async {
     // print log
@@ -661,10 +717,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isLocationCacheEnable() async {
     // print log
@@ -683,10 +741,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setLocationCacheEnable(bool var1) async {
     // print log
@@ -705,10 +765,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isOnceLocationLatest() async {
     // print log
@@ -727,10 +789,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setOnceLocationLatest(bool var1) async {
     // print log
@@ -749,10 +813,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isSensorEnable() async {
     // print log
@@ -771,10 +837,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setSensorEnable(bool var1) async {
     // print log
@@ -793,10 +861,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setLastLocationLifeCycle(int var1) async {
     // print log
@@ -815,10 +885,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getLastLocationLifeCycle() async {
     // print log
@@ -837,10 +909,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption_GeoLanguage> getGeoLanguage() async {
     // print log
@@ -859,10 +933,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[__result__];
     
-      return com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[__result__];
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setGeoLanguage(com_amap_api_location_AMapLocationClientOption_GeoLanguage var1) async {
     // print log
@@ -881,10 +957,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   static Future<void> setDownloadCoordinateConvertLibrary(bool var0) async {
     // print log
@@ -903,10 +981,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<bool> isDownloadCoordinateConvertLibrary() async {
     // print log
@@ -925,10 +1005,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getDeviceModeDistanceFilter() async {
     // print log
@@ -947,10 +1029,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setDeviceModeDistanceFilter(double var1) async {
     // print log
@@ -969,10 +1053,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption> setLocationPurpose(com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose var1) async {
     // print log
@@ -991,10 +1077,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose> getLocationPurpose() async {
     // print log
@@ -1013,10 +1101,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[__result__];
     
-      return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[__result__];
+      return __return__;
     }
   }
+  
   
   static Future<bool> isOpenAlwaysScanWifi() async {
     // print log
@@ -1035,10 +1125,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<void> setOpenAlwaysScanWifi(bool var0) async {
     // print log
@@ -1057,10 +1149,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<void> setScanWifiInterval(int var0) async {
     // print log
@@ -1079,10 +1173,12 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getScanWifiInterval() async {
     // print log
@@ -1101,8 +1197,9 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -1119,13 +1216,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   //endregion
 
   //region methods
-  Future<List<String>> getAPIKEY_batch() async {
+  
+  static Future<List<String>> getAPIKEY_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getAPIKEY_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::getAPIKEY_batch', );
   
   
     // convert native result to dart side object
@@ -1137,6 +1235,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isMockEnable_batch() async {
     if (false) {
@@ -1157,6 +1256,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setMockEnable_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1175,6 +1275,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getInterval_batch() async {
     if (false) {
@@ -1195,6 +1296,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setInterval_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1213,6 +1315,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isOnceLocation_batch() async {
     if (false) {
@@ -1233,6 +1336,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setOnceLocation_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1251,6 +1355,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isNeedAddress_batch() async {
     if (false) {
@@ -1271,6 +1376,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setNeedAddress_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1289,6 +1395,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isWifiActiveScan_batch() async {
     if (false) {
@@ -1309,6 +1416,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setWifiActiveScan_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1327,6 +1435,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isWifiScan_batch() async {
     if (false) {
@@ -1347,6 +1456,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setWifiScan_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1365,6 +1475,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption_AMapLocationMode>> getLocationMode_batch() async {
     if (false) {
@@ -1385,6 +1496,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLocationMode_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationMode> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1403,6 +1515,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol>> getLocationProtocol_batch() async {
     if (false) {
@@ -1423,13 +1536,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
-  Future<void> setLocationProtocol_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol> var0) async {
+  
+  static Future<List<void>> setLocationProtocol_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].index, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].index}]);
   
   
     // convert native result to dart side object
@@ -1441,6 +1555,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isKillProcess_batch() async {
     if (false) {
@@ -1461,6 +1576,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setKillProcess_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1479,6 +1595,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isGpsFirst_batch() async {
     if (false) {
@@ -1499,6 +1616,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setGpsFirst_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1517,6 +1635,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setGpsFirstTimeout_batch(List<int> var1) async {
     if (false) {
@@ -1537,6 +1656,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<int>> getGpsFirstTimeout_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1555,6 +1675,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> clone_batch() async {
     if (false) {
@@ -1575,6 +1696,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<int>> getHttpTimeOut_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1593,6 +1715,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setHttpTimeOut_batch(List<int> var1) async {
     if (false) {
@@ -1613,6 +1736,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<bool>> isOffset_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1631,6 +1755,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setOffset_batch(List<bool> var1) async {
     if (false) {
@@ -1651,6 +1776,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<bool>> isLocationCacheEnable_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1669,6 +1795,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLocationCacheEnable_batch(List<bool> var1) async {
     if (false) {
@@ -1689,6 +1816,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<bool>> isOnceLocationLatest_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1707,6 +1835,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setOnceLocationLatest_batch(List<bool> var1) async {
     if (false) {
@@ -1727,6 +1856,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<bool>> isSensorEnable_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1745,6 +1875,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setSensorEnable_batch(List<bool> var1) async {
     if (false) {
@@ -1765,6 +1896,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLastLocationLifeCycle_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1783,6 +1915,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getLastLocationLifeCycle_batch() async {
     if (false) {
@@ -1803,6 +1936,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption_GeoLanguage>> getGeoLanguage_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1821,6 +1955,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setGeoLanguage_batch(List<com_amap_api_location_AMapLocationClientOption_GeoLanguage> var1) async {
     if (false) {
@@ -1841,13 +1976,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
-  Future<void> setDownloadCoordinateConvertLibrary_batch(List<bool> var0) async {
+  
+  static Future<List<void>> setDownloadCoordinateConvertLibrary_batch(List<bool> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1860,13 +1996,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
-  Future<List<bool>> isDownloadCoordinateConvertLibrary_batch() async {
+  
+  static Future<List<bool>> isDownloadCoordinateConvertLibrary_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isDownloadCoordinateConvertLibrary_batch', );
   
   
     // convert native result to dart side object
@@ -1878,6 +2015,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getDeviceModeDistanceFilter_batch() async {
     if (false) {
@@ -1898,6 +2036,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption>> setDeviceModeDistanceFilter_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1916,6 +2055,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationClientOption>> setLocationPurpose_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose> var1) async {
     if (false) {
@@ -1936,6 +2076,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose>> getLocationPurpose_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1955,13 +2096,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
-  Future<List<bool>> isOpenAlwaysScanWifi_batch() async {
+  
+  static Future<List<bool>> isOpenAlwaysScanWifi_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::isOpenAlwaysScanWifi_batch', );
   
   
     // convert native result to dart side object
@@ -1974,13 +2116,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
-  Future<void> setOpenAlwaysScanWifi_batch(List<bool> var0) async {
+  
+  static Future<List<void>> setOpenAlwaysScanWifi_batch(List<bool> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1993,13 +2136,14 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     }
   }
   
-  Future<void> setScanWifiInterval_batch(List<int> var0) async {
+  
+  static Future<List<void>> setScanWifiInterval_batch(List<int> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setScanWifiInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setScanWifiInterval_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2011,6 +2155,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getScanWifiInterval_batch() async {
     if (false) {

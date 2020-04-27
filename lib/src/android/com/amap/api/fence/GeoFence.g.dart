@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -71,6 +72,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   //endregion
 
   //region methods
+  
   Future<String> getFenceId() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -88,10 +90,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFenceId(String var1) async {
     // print log
@@ -110,10 +114,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCustomId() async {
     // print log
@@ -132,10 +138,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCustomId(String var1) async {
     // print log
@@ -154,10 +162,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPendingIntentAction() async {
     // print log
@@ -176,10 +186,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPendingIntentAction(String var1) async {
     // print log
@@ -198,10 +210,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<android_app_PendingIntent> getPendingIntent() async {
     // print log
@@ -220,10 +234,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPendingIntent(android_app_PendingIntent var1) async {
     // print log
@@ -242,10 +258,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getType() async {
     // print log
@@ -264,10 +282,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setType(int var1) async {
     // print log
@@ -286,10 +306,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_fence_PoiItem> getPoiItem() async {
     // print log
@@ -308,10 +330,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiItem(com_amap_api_fence_PoiItem var1) async {
     // print log
@@ -330,10 +354,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_fence_DistrictItem>> getDistrictItemList() async {
     // print log
@@ -352,10 +378,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_DistrictItem()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setDistrictItemList(List<com_amap_api_fence_DistrictItem> var1) async {
     // print log
@@ -374,10 +402,36 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
+  
+  Future<void> setPointList(List<List<com_amap_api_location_DPoint>> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPointList([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPointList', {"var1": [], "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
+    }
+  }
+  
   
   Future<double> getRadius() async {
     // print log
@@ -396,10 +450,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setRadius(double var1) async {
     // print log
@@ -418,10 +474,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getExpiration() async {
     // print log
@@ -440,10 +498,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setExpiration(int var1) async {
     // print log
@@ -462,10 +522,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getActivatesAction() async {
     // print log
@@ -484,10 +546,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setActivatesAction(int var1) async {
     // print log
@@ -506,10 +570,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getStatus() async {
     // print log
@@ -528,10 +594,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setStatus(int var1) async {
     // print log
@@ -550,10 +618,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getEnterTime() async {
     // print log
@@ -572,10 +642,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setEnterTime(int var1) async {
     // print log
@@ -594,10 +666,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_DPoint> getCenter() async {
     // print log
@@ -616,10 +690,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setCenter(com_amap_api_location_DPoint var1) async {
     // print log
@@ -638,10 +714,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getMinDis2Center() async {
     // print log
@@ -660,10 +738,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setMinDis2Center(double var1) async {
     // print log
@@ -682,10 +762,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getMaxDis2Center() async {
     // print log
@@ -704,10 +786,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setMaxDis2Center(double var1) async {
     // print log
@@ -726,10 +810,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isAble() async {
     // print log
@@ -748,10 +834,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAble(bool var1) async {
     // print log
@@ -770,10 +858,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCurrentLocation(com_amap_api_location_AMapLocation var1) async {
     // print log
@@ -792,10 +882,12 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocation> getCurrentLocation() async {
     // print log
@@ -814,8 +906,9 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -832,6 +925,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
   //endregion
 
   //region methods
+  
   Future<List<String>> getFenceId_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -851,7 +945,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setFenceId_batch(List<String> var1) async {
+  
+  Future<List<void>> setFenceId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -869,6 +964,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCustomId_batch() async {
     if (false) {
@@ -889,7 +985,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setCustomId_batch(List<String> var1) async {
+  
+  Future<List<void>> setCustomId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -907,6 +1004,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPendingIntentAction_batch() async {
     if (false) {
@@ -927,7 +1025,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setPendingIntentAction_batch(List<String> var1) async {
+  
+  Future<List<void>> setPendingIntentAction_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -945,6 +1044,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<android_app_PendingIntent>> getPendingIntent_batch() async {
     if (false) {
@@ -965,7 +1065,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setPendingIntent_batch(List<android_app_PendingIntent> var1) async {
+  
+  Future<List<void>> setPendingIntent_batch(List<android_app_PendingIntent> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -983,6 +1084,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getType_batch() async {
     if (false) {
@@ -1003,7 +1105,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setType_batch(List<int> var1) async {
+  
+  Future<List<void>> setType_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1021,6 +1124,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_fence_PoiItem>> getPoiItem_batch() async {
     if (false) {
@@ -1041,7 +1145,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setPoiItem_batch(List<com_amap_api_fence_PoiItem> var1) async {
+  
+  Future<List<void>> setPoiItem_batch(List<com_amap_api_fence_PoiItem> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1059,6 +1164,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_fence_DistrictItem>>> getDistrictItemList_batch() async {
     if (false) {
@@ -1079,7 +1185,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setDistrictItemList_batch(List<List<com_amap_api_fence_DistrictItem>> var1) async {
+  
+  Future<List<void>> setDistrictItemList_batch(List<List<com_amap_api_fence_DistrictItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1097,6 +1204,27 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
+  
+  Future<List<void>> setPointList_batch(List<List<List<com_amap_api_location_DPoint>>> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPointList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": [], "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
   
   Future<List<double>> getRadius_batch() async {
     if (false) {
@@ -1117,7 +1245,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setRadius_batch(List<double> var1) async {
+  
+  Future<List<void>> setRadius_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1135,6 +1264,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getExpiration_batch() async {
     if (false) {
@@ -1155,7 +1285,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setExpiration_batch(List<int> var1) async {
+  
+  Future<List<void>> setExpiration_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1173,6 +1304,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getActivatesAction_batch() async {
     if (false) {
@@ -1193,7 +1325,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setActivatesAction_batch(List<int> var1) async {
+  
+  Future<List<void>> setActivatesAction_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1211,6 +1344,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getStatus_batch() async {
     if (false) {
@@ -1231,7 +1365,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setStatus_batch(List<int> var1) async {
+  
+  Future<List<void>> setStatus_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1249,6 +1384,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getEnterTime_batch() async {
     if (false) {
@@ -1269,7 +1405,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setEnterTime_batch(List<int> var1) async {
+  
+  Future<List<void>> setEnterTime_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1287,6 +1424,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_DPoint>> getCenter_batch() async {
     if (false) {
@@ -1307,7 +1445,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setCenter_batch(List<com_amap_api_location_DPoint> var1) async {
+  
+  Future<List<void>> setCenter_batch(List<com_amap_api_location_DPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1325,6 +1464,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getMinDis2Center_batch() async {
     if (false) {
@@ -1345,7 +1485,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setMinDis2Center_batch(List<double> var1) async {
+  
+  Future<List<void>> setMinDis2Center_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1363,6 +1504,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getMaxDis2Center_batch() async {
     if (false) {
@@ -1383,7 +1525,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setMaxDis2Center_batch(List<double> var1) async {
+  
+  Future<List<void>> setMaxDis2Center_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1401,6 +1544,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isAble_batch() async {
     if (false) {
@@ -1421,7 +1565,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setAble_batch(List<bool> var1) async {
+  
+  Future<List<void>> setAble_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1440,7 +1585,8 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
-  Future<void> setCurrentLocation_batch(List<com_amap_api_location_AMapLocation> var1) async {
+  
+  Future<List<void>> setCurrentLocation_batch(List<com_amap_api_location_AMapLocation> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1459,6 +1605,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocation>> getCurrentLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1472,7 +1619,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

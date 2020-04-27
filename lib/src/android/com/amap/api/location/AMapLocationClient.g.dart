@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // print log
@@ -116,7 +120,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1'])..tag__ = 'amap_location_fluttify');
+              var1?.onLocationChanged((com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = (args['var1'])..tag__ = 'amap_location_fluttify'));
               break;
             default:
               break;
@@ -127,10 +131,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> startLocation() async {
     // print log
@@ -149,10 +155,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> stopLocation() async {
     // print log
@@ -171,10 +179,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() async {
     // print log
@@ -193,10 +203,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> startAssistantLocation() async {
     // print log
@@ -215,10 +227,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> stopAssistantLocation() async {
     // print log
@@ -237,10 +251,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getVersion() async {
     // print log
@@ -259,10 +275,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<void> setApiKey(String var0) async {
     // print log
@@ -281,10 +299,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isStarted() async {
     // print log
@@ -303,10 +323,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // print log
@@ -333,7 +355,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onLocationChanged(com_amap_api_location_AMapLocation()..refId = (args['var1'])..tag__ = 'amap_location_fluttify');
+              var1?.onLocationChanged((com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = (args['var1'])..tag__ = 'amap_location_fluttify'));
               break;
             default:
               break;
@@ -344,10 +366,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> onDestroy() async {
     // print log
@@ -366,10 +390,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> enableBackgroundLocation(int var1, android_app_Notification var2) async {
     // print log
@@ -388,10 +414,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> disableBackgroundLocation(bool var1) async {
     // print log
@@ -410,10 +438,12 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<String> getDeviceId(android_content_Context var0) async {
     // print log
@@ -432,8 +462,9 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -450,7 +481,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
   //endregion
 
   //region methods
-  Future<void> setLocationOption_batch(List<com_amap_api_location_AMapLocationClientOption> var1) async {
+  
+  Future<List<void>> setLocationOption_batch(List<com_amap_api_location_AMapLocationClientOption> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -469,7 +501,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> startLocation_batch() async {
+  
+  Future<List<void>> startLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -488,7 +521,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> stopLocation_batch() async {
+  
+  Future<List<void>> stopLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -507,6 +541,7 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocation>> getLastKnownLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -520,13 +555,14 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> startAssistantLocation_batch() async {
+  
+  Future<List<void>> startAssistantLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -545,7 +581,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> stopAssistantLocation_batch() async {
+  
+  Future<List<void>> stopAssistantLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -563,6 +600,7 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getVersion_batch() async {
     if (false) {
@@ -583,13 +621,14 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> setApiKey_batch(List<String> var0) async {
+  
+  static Future<List<void>> setApiKey_batch(List<String> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::setApiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::setApiKey_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -601,6 +640,7 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isStarted_batch() async {
     if (false) {
@@ -621,7 +661,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> onDestroy_batch() async {
+  
+  Future<List<void>> onDestroy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -640,7 +681,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> enableBackgroundLocation_batch(List<int> var1, List<android_app_Notification> var2) async {
+  
+  Future<List<void>> enableBackgroundLocation_batch(List<int> var1, List<android_app_Notification> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
@@ -659,7 +701,8 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<void> disableBackgroundLocation_batch(List<bool> var1) async {
+  
+  Future<List<void>> disableBackgroundLocation_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -678,13 +721,14 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     }
   }
   
-  Future<List<String>> getDeviceId_batch(List<android_content_Context> var0) async {
+  
+  static Future<List<String>> getDeviceId_batch(List<android_content_Context> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::getDeviceId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClient::getDeviceId_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
   
   
     // convert native result to dart side object

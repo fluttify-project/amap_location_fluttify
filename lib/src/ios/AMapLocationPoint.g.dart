@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   //region constants
@@ -72,6 +73,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   //endregion
 
   //region methods
+  
   static Future<AMapLocationPoint> locationWithLatitude_longitude(double lat, double lon) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -89,8 +91,9 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -131,13 +134,14 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
   //endregion
 
   //region methods
-  Future<List<AMapLocationPoint>> locationWithLatitude_longitude_batch(List<double> lat, List<double> lon) async {
+  
+  static Future<List<AMapLocationPoint>> locationWithLatitude_longitude_batch(List<double> lat, List<double> lon) async {
     if (lat.length != lon.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
   
   
     // convert native result to dart side object

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   //region constants
@@ -61,6 +62,7 @@ class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   //endregion
 
   //region methods
+  
   Future<AMapLocationPolygonRegion> initWithCoordinates_count_identifier(List<CLLocationCoordinate2D> coordinates, int count, String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -78,8 +80,9 @@ class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationPolygonRegion()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return AMapLocationPolygonRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = AMapLocationPolygonRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -109,6 +112,7 @@ extension AMapLocationPolygonRegion_Batch on List<AMapLocationPolygonRegion> {
   //endregion
 
   //region methods
+  
   Future<List<AMapLocationPolygonRegion>> initWithCoordinates_count_identifier_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> identifier) async {
     if (coordinates.length != count.length || count.length != identifier.length) {
       return Future.error('all args must have same length!');

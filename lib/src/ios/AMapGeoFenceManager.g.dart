@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapGeoFenceManager extends NSObject  {
   //region constants
@@ -86,25 +87,25 @@ class AMapGeoFenceManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_doRequireLocationAuth(AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', CLLocationManager()..refId = (args['locationManager'])..tag__ = 'amap_location_fluttify');
+            delegate?.amapGeoFenceManager_doRequireLocationAuth((AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify'), (CLLocationManager()..refId = (args['locationManager'])..tag__ = 'amap_location_fluttify'));
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'customID\':$args[customID]])');
+              print('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'customID\':${args['customID']}])');
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['customID'], NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify');
+            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error((AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify'), (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['customID'], (NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify'));
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'customID\':$args[customID]])');
+              print('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'customID\':${args['customID']}])');
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify', AMapGeoFenceRegion()..refId = (args['region'])..tag__ = 'amap_location_fluttify', args['customID'], NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify');
+            delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error((AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify'), (AMapGeoFenceCircleRegion()..refId = (args['region'])..tag__ = 'amap_location_fluttify'), args['customID'], (NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify'));
             break;
           default:
             break;
@@ -139,6 +140,7 @@ class AMapGeoFenceManager extends NSObject  {
   //endregion
 
   //region methods
+  
   Future<void> addCircleRegionForMonitoringWithCenter_radius_customID(CLLocationCoordinate2D center, double radius, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -156,10 +158,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addPolygonRegionForMonitoringWithCoordinates_count_customID(List<CLLocationCoordinate2D> coordinates, int count, String customID) async {
     // print log
@@ -178,10 +182,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID(String keyword, String type, String city, int size, String customID) async {
     // print log
@@ -200,10 +206,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID(CLLocationCoordinate2D locationPoint, int aroundRadius, String keyword, String type, int size, String customID) async {
     // print log
@@ -222,10 +230,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addDistrictRegionForMonitoringWithDistrictName_customID(String districtName, String customID) async {
     // print log
@@ -244,10 +254,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<AMapGeoFenceRegionActiveStatus> statusWithGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
@@ -266,10 +278,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = AMapGeoFenceRegionActiveStatus.values[__result__];
     
-      return AMapGeoFenceRegionActiveStatus.values[__result__];
+      return __return__;
     }
   }
+  
   
   Future<List<NSObject>> geoFenceRegionsWithCustomID(String customID) async {
     // print log
@@ -288,10 +302,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<NSObject>> monitoringGeoFenceRegionsWithCustomID(String customID) async {
     // print log
@@ -310,10 +326,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<NSObject>> pausedGeoFenceRegionsWithCustomID(String customID) async {
     // print log
@@ -332,10 +350,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<NSObject>> pauseGeoFenceRegionsWithCustomID(String customID) async {
     // print log
@@ -354,10 +374,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> pauseTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
@@ -376,10 +398,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<NSObject>> startGeoFenceRegionsWithCustomID(String customID) async {
     // print log
@@ -398,10 +422,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> startTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
@@ -420,10 +446,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> removeTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
@@ -442,10 +470,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> removeGeoFenceRegionsWithCustomID(String customID) async {
     // print log
@@ -464,10 +494,12 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> removeAllGeoFenceRegions() async {
     // print log
@@ -486,8 +518,9 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -554,7 +587,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   //endregion
 
   //region methods
-  Future<void> addCircleRegionForMonitoringWithCenter_radius_customID_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> customID) async {
+  
+  Future<List<void>> addCircleRegionForMonitoringWithCenter_radius_customID_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> customID) async {
     if (center.length != radius.length || radius.length != customID.length) {
       return Future.error('all args must have same length!');
     }
@@ -573,7 +607,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> addPolygonRegionForMonitoringWithCoordinates_count_customID_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> customID) async {
+  
+  Future<List<void>> addPolygonRegionForMonitoringWithCoordinates_count_customID_batch(List<List<CLLocationCoordinate2D>> coordinates, List<int> count, List<String> customID) async {
     if (coordinates.length != count.length || count.length != customID.length) {
       return Future.error('all args must have same length!');
     }
@@ -592,7 +627,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID_batch(List<String> keyword, List<String> type, List<String> city, List<int> size, List<String> customID) async {
+  
+  Future<List<void>> addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID_batch(List<String> keyword, List<String> type, List<String> city, List<int> size, List<String> customID) async {
     if (keyword.length != type.length || type.length != city.length || city.length != size.length || size.length != customID.length) {
       return Future.error('all args must have same length!');
     }
@@ -611,7 +647,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID_batch(List<CLLocationCoordinate2D> locationPoint, List<int> aroundRadius, List<String> keyword, List<String> type, List<int> size, List<String> customID) async {
+  
+  Future<List<void>> addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID_batch(List<CLLocationCoordinate2D> locationPoint, List<int> aroundRadius, List<String> keyword, List<String> type, List<int> size, List<String> customID) async {
     if (locationPoint.length != aroundRadius.length || aroundRadius.length != keyword.length || keyword.length != type.length || type.length != size.length || size.length != customID.length) {
       return Future.error('all args must have same length!');
     }
@@ -630,7 +667,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> addDistrictRegionForMonitoringWithDistrictName_customID_batch(List<String> districtName, List<String> customID) async {
+  
+  Future<List<void>> addDistrictRegionForMonitoringWithDistrictName_customID_batch(List<String> districtName, List<String> customID) async {
     if (districtName.length != customID.length) {
       return Future.error('all args must have same length!');
     }
@@ -648,6 +686,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return typedResult;
     }
   }
+  
   
   Future<List<AMapGeoFenceRegionActiveStatus>> statusWithGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
     if (false) {
@@ -668,6 +707,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
+  
   Future<List<List<NSObject>>> geoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -681,11 +721,12 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<List<NSObject>>> monitoringGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
@@ -700,11 +741,12 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<List<NSObject>>> pausedGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
@@ -719,11 +761,12 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<List<NSObject>>> pauseGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
@@ -738,11 +781,12 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> pauseTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
     if (false) {
@@ -763,6 +807,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
+  
   Future<List<List<NSObject>>> startGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -776,11 +821,12 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> startTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
     if (false) {
@@ -801,7 +847,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> removeTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
+  
+  Future<List<void>> removeTheGeoFenceRegion_batch(List<AMapGeoFenceRegion> region) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -820,7 +867,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> removeGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  
+  Future<List<void>> removeGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -839,7 +887,8 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   }
   
-  Future<void> removeAllGeoFenceRegions_batch() async {
+  
+  Future<List<void>> removeAllGeoFenceRegions_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }

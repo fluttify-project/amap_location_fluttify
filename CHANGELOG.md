@@ -1,3 +1,6 @@
+## 0.12.0
+- enhance: 更新底层依赖
+
 ## 0.11.0
 - enhance: [breaking change] timeout类型换为更直观的Duration类
 - enhance: Location类增加speed字段 [#48]

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   //endregion
 
   //region methods
+  
   Future<double> getLatitude() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLatitude(double var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getLongitude() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLongitude(double var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPoiId() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiId(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPoiType() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiType(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTypeCode() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTypeCode(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAddress() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAddress(String var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTel() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTel(String var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getProvince() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setProvince(String var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCity() async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCity(String var1) async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdname() async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPoiName() async {
     // print log
@@ -485,10 +525,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiName(String var1) async {
     // print log
@@ -507,10 +549,12 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdname(String var1) async {
     // print log
@@ -529,8 +573,9 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -547,6 +592,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
   //endregion
 
   //region methods
+  
   Future<List<double>> getLatitude_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -566,7 +612,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setLatitude_batch(List<double> var1) async {
+  
+  Future<List<void>> setLatitude_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -584,6 +631,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getLongitude_batch() async {
     if (false) {
@@ -604,7 +652,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setLongitude_batch(List<double> var1) async {
+  
+  Future<List<void>> setLongitude_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -622,6 +671,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPoiId_batch() async {
     if (false) {
@@ -642,7 +692,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setPoiId_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -660,6 +711,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPoiType_batch() async {
     if (false) {
@@ -680,7 +732,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setPoiType_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -698,6 +751,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTypeCode_batch() async {
     if (false) {
@@ -718,7 +772,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setTypeCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setTypeCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -736,6 +791,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAddress_batch() async {
     if (false) {
@@ -756,7 +812,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setAddress_batch(List<String> var1) async {
+  
+  Future<List<void>> setAddress_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -774,6 +831,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTel_batch() async {
     if (false) {
@@ -794,7 +852,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setTel_batch(List<String> var1) async {
+  
+  Future<List<void>> setTel_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -812,6 +871,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getProvince_batch() async {
     if (false) {
@@ -832,7 +892,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setProvince_batch(List<String> var1) async {
+  
+  Future<List<void>> setProvince_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -850,6 +911,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCity_batch() async {
     if (false) {
@@ -870,7 +932,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setCity_batch(List<String> var1) async {
+  
+  Future<List<void>> setCity_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -888,6 +951,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdname_batch() async {
     if (false) {
@@ -908,6 +972,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
+  
   Future<List<String>> getPoiName_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -927,7 +992,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setPoiName_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -946,7 +1012,8 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   }
   
-  Future<void> setAdname_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdname_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

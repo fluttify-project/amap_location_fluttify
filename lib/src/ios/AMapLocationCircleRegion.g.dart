@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region constants
@@ -61,6 +62,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //endregion
 
   //region methods
+  
   Future<AMapLocationCircleRegion> initWithCenter_radius_identifier(CLLocationCoordinate2D center, double radius, String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -78,8 +80,9 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -109,6 +112,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //endregion
 
   //region methods
+  
   Future<List<AMapLocationCircleRegion>> initWithCenter_radius_identifier_batch(List<CLLocationCoordinate2D> center, List<double> radius, List<String> identifier) async {
     if (center.length != radius.length || radius.length != identifier.length) {
       return Future.error('all args must have same length!');

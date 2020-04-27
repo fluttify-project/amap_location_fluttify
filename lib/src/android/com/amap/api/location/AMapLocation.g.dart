@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_AMapLocation extends android_location_Location with android_os_Parcelable {
   //region constants
@@ -104,6 +105,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
   //endregion
 
   //region methods
+  
   Future<int> getGpsAccuracyStatus() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -121,10 +123,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setGpsAccuracyStatus(int var1) async {
     // print log
@@ -143,10 +147,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getLocationType() async {
     // print log
@@ -165,10 +171,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLocationType(int var1) async {
     // print log
@@ -187,10 +195,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getLocationDetail() async {
     // print log
@@ -209,10 +219,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLocationDetail(String var1) async {
     // print log
@@ -231,10 +243,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getErrorCode() async {
     // print log
@@ -253,10 +267,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setErrorCode(int var1) async {
     // print log
@@ -275,10 +291,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getErrorInfo() async {
     // print log
@@ -297,10 +315,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setErrorInfo(String var1) async {
     // print log
@@ -319,10 +339,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCountry() async {
     // print log
@@ -341,10 +363,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCountry(String var1) async {
     // print log
@@ -363,10 +387,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getRoad() async {
     // print log
@@ -385,10 +411,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setRoad(String var1) async {
     // print log
@@ -407,10 +435,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAddress() async {
     // print log
@@ -429,10 +459,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAddress(String var1) async {
     // print log
@@ -451,10 +483,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getProvince() async {
     // print log
@@ -473,10 +507,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setProvince(String var1) async {
     // print log
@@ -495,10 +531,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCity() async {
     // print log
@@ -517,10 +555,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCity(String var1) async {
     // print log
@@ -539,10 +579,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDistrict() async {
     // print log
@@ -561,10 +603,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistrict(String var1) async {
     // print log
@@ -583,10 +627,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCityCode() async {
     // print log
@@ -605,10 +651,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityCode(String var1) async {
     // print log
@@ -627,10 +675,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdCode() async {
     // print log
@@ -649,10 +699,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdCode(String var1) async {
     // print log
@@ -671,10 +723,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPoiName() async {
     // print log
@@ -693,10 +747,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiName(String var1) async {
     // print log
@@ -715,10 +771,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getLatitude() async {
     // print log
@@ -737,10 +795,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLatitude(double var1) async {
     // print log
@@ -759,10 +819,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getLongitude() async {
     // print log
@@ -781,10 +843,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLongitude(double var1) async {
     // print log
@@ -803,10 +867,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getSatellites() async {
     // print log
@@ -825,10 +891,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSatellites(int var1) async {
     // print log
@@ -847,10 +915,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getStreet() async {
     // print log
@@ -869,10 +939,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setStreet(String var1) async {
     // print log
@@ -891,10 +963,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getStreetNum() async {
     // print log
@@ -913,10 +987,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNumber(String var1) async {
     // print log
@@ -935,10 +1011,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOffset(bool var1) async {
     // print log
@@ -957,10 +1035,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isOffset() async {
     // print log
@@ -979,10 +1059,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAoiName() async {
     // print log
@@ -1001,10 +1083,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAoiName(String var1) async {
     // print log
@@ -1023,10 +1107,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBuildingId() async {
     // print log
@@ -1045,10 +1131,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBuildingId(String var1) async {
     // print log
@@ -1067,10 +1155,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getFloor() async {
     // print log
@@ -1089,10 +1179,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isFixLastLocation() async {
     // print log
@@ -1111,10 +1203,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFixLastLocation(bool var1) async {
     // print log
@@ -1133,10 +1227,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFloor(String var1) async {
     // print log
@@ -1155,10 +1251,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isMock() async {
     // print log
@@ -1177,10 +1275,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setMock(bool var1) async {
     // print log
@@ -1199,10 +1299,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDescription() async {
     // print log
@@ -1221,10 +1323,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDescription(String var1) async {
     // print log
@@ -1243,10 +1347,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> toStr() async {
     // print log
@@ -1265,10 +1371,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> toStr__int(int var1) async {
     // print log
@@ -1287,10 +1395,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getAccuracy() async {
     // print log
@@ -1309,10 +1419,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getBearing() async {
     // print log
@@ -1331,10 +1443,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getAltitude() async {
     // print log
@@ -1353,10 +1467,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getSpeed() async {
     // print log
@@ -1375,10 +1491,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getProvider() async {
     // print log
@@ -1397,10 +1515,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocation> clone() async {
     // print log
@@ -1419,10 +1539,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_AMapLocationQualityReport> getLocationQualityReport() async {
     // print log
@@ -1441,10 +1563,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setLocationQualityReport(com_amap_api_location_AMapLocationQualityReport var1) async {
     // print log
@@ -1463,10 +1587,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCoordType() async {
     // print log
@@ -1485,10 +1611,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCoordType(String var1) async {
     // print log
@@ -1507,10 +1635,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTrustedLevel(int var1) async {
     // print log
@@ -1529,10 +1659,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getTrustedLevel() async {
     // print log
@@ -1551,10 +1683,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getConScenario() async {
     // print log
@@ -1573,10 +1707,12 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setConScenario(int var1) async {
     // print log
@@ -1595,8 +1731,9 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -1613,6 +1750,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
   //endregion
 
   //region methods
+  
   Future<List<int>> getGpsAccuracyStatus_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1632,7 +1770,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setGpsAccuracyStatus_batch(List<int> var1) async {
+  
+  Future<List<void>> setGpsAccuracyStatus_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1650,6 +1789,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getLocationType_batch() async {
     if (false) {
@@ -1670,7 +1810,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setLocationType_batch(List<int> var1) async {
+  
+  Future<List<void>> setLocationType_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1688,6 +1829,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getLocationDetail_batch() async {
     if (false) {
@@ -1708,7 +1850,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setLocationDetail_batch(List<String> var1) async {
+  
+  Future<List<void>> setLocationDetail_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1726,6 +1869,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getErrorCode_batch() async {
     if (false) {
@@ -1746,7 +1890,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setErrorCode_batch(List<int> var1) async {
+  
+  Future<List<void>> setErrorCode_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1764,6 +1909,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getErrorInfo_batch() async {
     if (false) {
@@ -1784,7 +1930,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setErrorInfo_batch(List<String> var1) async {
+  
+  Future<List<void>> setErrorInfo_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1802,6 +1949,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCountry_batch() async {
     if (false) {
@@ -1822,7 +1970,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setCountry_batch(List<String> var1) async {
+  
+  Future<List<void>> setCountry_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1840,6 +1989,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getRoad_batch() async {
     if (false) {
@@ -1860,7 +2010,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setRoad_batch(List<String> var1) async {
+  
+  Future<List<void>> setRoad_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1878,6 +2029,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAddress_batch() async {
     if (false) {
@@ -1898,7 +2050,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setAddress_batch(List<String> var1) async {
+  
+  Future<List<void>> setAddress_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1916,6 +2069,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getProvince_batch() async {
     if (false) {
@@ -1936,7 +2090,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setProvince_batch(List<String> var1) async {
+  
+  Future<List<void>> setProvince_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1954,6 +2109,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCity_batch() async {
     if (false) {
@@ -1974,7 +2130,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setCity_batch(List<String> var1) async {
+  
+  Future<List<void>> setCity_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1992,6 +2149,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDistrict_batch() async {
     if (false) {
@@ -2012,7 +2170,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setDistrict_batch(List<String> var1) async {
+  
+  Future<List<void>> setDistrict_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2030,6 +2189,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCityCode_batch() async {
     if (false) {
@@ -2050,7 +2210,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setCityCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2068,6 +2229,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdCode_batch() async {
     if (false) {
@@ -2088,7 +2250,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setAdCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2106,6 +2269,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPoiName_batch() async {
     if (false) {
@@ -2126,7 +2290,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setPoiName_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2144,6 +2309,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getLatitude_batch() async {
     if (false) {
@@ -2164,7 +2330,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setLatitude_batch(List<double> var1) async {
+  
+  Future<List<void>> setLatitude_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2182,6 +2349,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getLongitude_batch() async {
     if (false) {
@@ -2202,7 +2370,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setLongitude_batch(List<double> var1) async {
+  
+  Future<List<void>> setLongitude_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2220,6 +2389,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getSatellites_batch() async {
     if (false) {
@@ -2240,7 +2410,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setSatellites_batch(List<int> var1) async {
+  
+  Future<List<void>> setSatellites_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2258,6 +2429,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getStreet_batch() async {
     if (false) {
@@ -2278,7 +2450,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setStreet_batch(List<String> var1) async {
+  
+  Future<List<void>> setStreet_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2296,6 +2469,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getStreetNum_batch() async {
     if (false) {
@@ -2316,7 +2490,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setNumber_batch(List<String> var1) async {
+  
+  Future<List<void>> setNumber_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2335,7 +2510,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setOffset_batch(List<bool> var1) async {
+  
+  Future<List<void>> setOffset_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2353,6 +2529,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isOffset_batch() async {
     if (false) {
@@ -2373,6 +2550,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<String>> getAoiName_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2392,7 +2570,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setAoiName_batch(List<String> var1) async {
+  
+  Future<List<void>> setAoiName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2410,6 +2589,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBuildingId_batch() async {
     if (false) {
@@ -2430,7 +2610,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setBuildingId_batch(List<String> var1) async {
+  
+  Future<List<void>> setBuildingId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2448,6 +2629,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getFloor_batch() async {
     if (false) {
@@ -2468,6 +2650,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<bool>> isFixLastLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2487,7 +2670,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setFixLastLocation_batch(List<bool> var1) async {
+  
+  Future<List<void>> setFixLastLocation_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2506,7 +2690,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setFloor_batch(List<String> var1) async {
+  
+  Future<List<void>> setFloor_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2524,6 +2709,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isMock_batch() async {
     if (false) {
@@ -2544,7 +2730,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setMock_batch(List<bool> var1) async {
+  
+  Future<List<void>> setMock_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2562,6 +2749,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDescription_batch() async {
     if (false) {
@@ -2582,7 +2770,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setDescription_batch(List<String> var1) async {
+  
+  Future<List<void>> setDescription_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2600,6 +2789,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> toStr_batch() async {
     if (false) {
@@ -2620,6 +2810,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<String>> toStr__int_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2638,6 +2829,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getAccuracy_batch() async {
     if (false) {
@@ -2658,6 +2850,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<double>> getBearing_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2676,6 +2869,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getAltitude_batch() async {
     if (false) {
@@ -2696,6 +2890,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<double>> getSpeed_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2714,6 +2909,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getProvider_batch() async {
     if (false) {
@@ -2734,6 +2930,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<com_amap_api_location_AMapLocation>> clone_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2747,11 +2944,12 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_AMapLocationQualityReport>> getLocationQualityReport_batch() async {
     if (false) {
@@ -2772,7 +2970,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setLocationQualityReport_batch(List<com_amap_api_location_AMapLocationQualityReport> var1) async {
+  
+  Future<List<void>> setLocationQualityReport_batch(List<com_amap_api_location_AMapLocationQualityReport> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2790,6 +2989,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCoordType_batch() async {
     if (false) {
@@ -2810,7 +3010,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setCoordType_batch(List<String> var1) async {
+  
+  Future<List<void>> setCoordType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2829,7 +3030,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setTrustedLevel_batch(List<int> var1) async {
+  
+  Future<List<void>> setTrustedLevel_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2847,6 +3049,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getTrustedLevel_batch() async {
     if (false) {
@@ -2867,6 +3070,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
+  
   Future<List<int>> getConScenario_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2886,7 +3090,8 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   }
   
-  Future<void> setConScenario_batch(List<int> var1) async {
+  
+  Future<List<void>> setConScenario_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

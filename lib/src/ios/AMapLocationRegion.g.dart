@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapLocationRegion extends NSObject with NSCopying {
   //region constants
@@ -78,6 +79,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
   //endregion
 
   //region methods
+  
   Future<AMapLocationRegion> initWithIdentifier(String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -95,10 +97,12 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> containsCoordinate(CLLocationCoordinate2D coordinate) async {
     // print log
@@ -117,8 +121,9 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -166,6 +171,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
   //endregion
 
   //region methods
+  
   Future<List<AMapLocationRegion>> initWithIdentifier_batch(List<String> identifier) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -179,11 +185,12 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> containsCoordinate_batch(List<CLLocationCoordinate2D> coordinate) async {
     if (false) {

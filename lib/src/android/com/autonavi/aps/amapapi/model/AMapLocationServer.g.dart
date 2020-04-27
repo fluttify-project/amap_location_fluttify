@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_location_AMapLocation with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   //endregion
 
   //region methods
+  
   Future<String> a() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> a__String(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> b() async {
     // print log
@@ -111,10 +117,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> b__String(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> c() async {
     // print log
@@ -155,10 +165,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> c__String(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> d() async {
     // print log
@@ -199,10 +213,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> d__String(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> e() async {
     // print log
@@ -243,10 +261,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> e__String(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> g() async {
     // print log
@@ -287,10 +309,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_autonavi_aps_amapapi_model_AMapLocationServer> h() async {
     // print log
@@ -309,10 +333,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> i() async {
     // print log
@@ -331,10 +357,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> a__bool(bool var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> j() async {
     // print log
@@ -375,10 +405,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> f__String(String var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> k() async {
     // print log
@@ -419,10 +453,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> a__int(int var1) async {
     // print log
@@ -441,10 +477,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> g__String(String var1) async {
     // print log
@@ -463,10 +501,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> l() async {
     // print log
@@ -485,10 +525,12 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> h__String(String var1) async {
     // print log
@@ -507,8 +549,9 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -525,6 +568,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
   //endregion
 
   //region methods
+  
   Future<List<String>> a_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -544,7 +588,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> a__String_batch(List<String> var1) async {
+  
+  Future<List<void>> a__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -562,6 +607,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<String>> b_batch() async {
     if (false) {
@@ -582,7 +628,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> b__String_batch(List<String> var1) async {
+  
+  Future<List<void>> b__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -600,6 +647,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<int>> c_batch() async {
     if (false) {
@@ -620,7 +668,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> c__String_batch(List<String> var1) async {
+  
+  Future<List<void>> c__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -638,6 +687,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<String>> d_batch() async {
     if (false) {
@@ -658,7 +708,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> d__String_batch(List<String> var1) async {
+  
+  Future<List<void>> d__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -676,6 +727,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<String>> e_batch() async {
     if (false) {
@@ -696,7 +748,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> e__String_batch(List<String> var1) async {
+  
+  Future<List<void>> e__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -714,6 +767,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<String>> g_batch() async {
     if (false) {
@@ -734,6 +788,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
+  
   Future<List<com_autonavi_aps_amapapi_model_AMapLocationServer>> h_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -752,6 +807,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> i_batch() async {
     if (false) {
@@ -772,7 +828,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> a__bool_batch(List<bool> var1) async {
+  
+  Future<List<void>> a__bool_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -790,6 +847,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<String>> j_batch() async {
     if (false) {
@@ -810,7 +868,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> f__String_batch(List<String> var1) async {
+  
+  Future<List<void>> f__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -828,6 +887,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<int>> k_batch() async {
     if (false) {
@@ -848,7 +908,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> a__int_batch(List<int> var1) async {
+  
+  Future<List<void>> a__int_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -867,7 +928,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> g__String_batch(List<String> var1) async {
+  
+  Future<List<void>> g__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -885,6 +947,7 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
       return typedResult;
     }
   }
+  
   
   Future<List<String>> l_batch() async {
     if (false) {
@@ -905,7 +968,8 @@ extension com_autonavi_aps_amapapi_model_AMapLocationServer_Batch on List<com_au
     }
   }
   
-  Future<void> h__String_batch(List<String> var1) async {
+  
+  Future<List<void>> h__String_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
