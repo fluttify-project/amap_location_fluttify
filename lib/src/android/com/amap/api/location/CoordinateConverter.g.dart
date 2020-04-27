@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_location_CoordinateConverter> from(com_amap_api_location_CoordinateConverter_CoordType var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_CoordinateConverter> coord(com_amap_api_location_DPoint var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_location_DPoint> convert() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   static Future<bool> isAMapDataAvailable(double var0, double var2) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<double> calculateLineDistance(com_amap_api_location_DPoint var0, com_amap_api_location_DPoint var1) async {
     // print log
@@ -155,8 +165,9 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -173,6 +184,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_location_CoordinateConverter>> from_batch(List<com_amap_api_location_CoordinateConverter_CoordType> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -191,6 +203,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_location_CoordinateConverter>> coord_batch(List<com_amap_api_location_DPoint> var1) async {
     if (false) {
@@ -211,6 +224,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   }
   
+  
   Future<List<com_amap_api_location_DPoint>> convert_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -230,13 +244,14 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   }
   
-  Future<List<bool>> isAMapDataAvailable_batch(List<double> var0, List<double> var2) async {
+  
+  static Future<List<bool>> isAMapDataAvailable_batch(List<double> var0, List<double> var2) async {
     if (var0.length != var2.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -249,13 +264,14 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   }
   
-  Future<List<double>> calculateLineDistance_batch(List<com_amap_api_location_DPoint> var0, List<com_amap_api_location_DPoint> var1) async {
+  
+  static Future<List<double>> calculateLineDistance_batch(List<com_amap_api_location_DPoint> var0, List<com_amap_api_location_DPoint> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId}]);
   
   
     // convert native result to dart side object

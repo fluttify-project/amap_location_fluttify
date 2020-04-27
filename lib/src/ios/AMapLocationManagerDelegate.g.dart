@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 mixin AMapLocationManagerDelegate on NSObject {
   
@@ -85,6 +86,57 @@ mixin AMapLocationManagerDelegate on NSObject {
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didUpdateHeading::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManager_didStartMonitoringForRegion(AMapLocationManager manager, AMapLocationRegion region) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(region);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('amapLocationManager_didStartMonitoringForRegion::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManager_didEnterRegion(AMapLocationManager manager, AMapLocationRegion region) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(region);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('amapLocationManager_didEnterRegion::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManager_didExitRegion(AMapLocationManager manager, AMapLocationRegion region) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(region);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('amapLocationManager_didExitRegion::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManager_didDetermineState_forRegion(AMapLocationManager manager, AMapLocationRegionState state, AMapLocationRegion region) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(region);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('amapLocationManager_didDetermineState_forRegion::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> amapLocationManager_monitoringDidFailForRegion_withError(AMapLocationManager manager, AMapLocationRegion region, NSError error) {
+    kNativeObjectPool.add(manager);
+    kNativeObjectPool.add(region);
+    kNativeObjectPool.add(error);
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('amapLocationManager_monitoringDidFailForRegion_withError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

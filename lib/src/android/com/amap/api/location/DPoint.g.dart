@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
   //endregion
 
   //region methods
+  
   Future<double> getLongitude() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLongitude(double var1) async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getLatitude() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLatitude(double var1) async {
     // print log
@@ -152,8 +160,9 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -170,6 +179,7 @@ extension com_amap_api_location_DPoint_Batch on List<com_amap_api_location_DPoin
   //endregion
 
   //region methods
+  
   Future<List<double>> getLongitude_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -189,7 +199,8 @@ extension com_amap_api_location_DPoint_Batch on List<com_amap_api_location_DPoin
     }
   }
   
-  Future<void> setLongitude_batch(List<double> var1) async {
+  
+  Future<List<void>> setLongitude_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -207,6 +218,7 @@ extension com_amap_api_location_DPoint_Batch on List<com_amap_api_location_DPoin
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getLatitude_batch() async {
     if (false) {
@@ -227,7 +239,8 @@ extension com_amap_api_location_DPoint_Batch on List<com_amap_api_location_DPoin
     }
   }
   
-  Future<void> setLatitude_batch(List<double> var1) async {
+  
+  Future<List<void>> setLatitude_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

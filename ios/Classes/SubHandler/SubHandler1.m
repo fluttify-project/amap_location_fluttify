@@ -14,6 +14,142 @@ extern BOOL enableLog;
 @implementation AmapLocationFluttifyPlugin (SubHandler1)
 - (NSDictionary<NSString*, Handler>*) getSubHandler1 {
     return @{
+        @"AMapLocationReGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_country");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* country = (NSString*) args[@"country"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.country = country;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_province");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* province = (NSString*) args[@"province"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.province = province;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_city");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* city = (NSString*) args[@"city"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.city = city;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_district");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* district = (NSString*) args[@"district"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.district = district;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_township": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_township");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* township = (NSString*) args[@"township"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.township = township;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_neighborhood");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* neighborhood = (NSString*) args[@"neighborhood"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.neighborhood = neighborhood;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_building": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_building");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* building = (NSString*) args[@"building"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.building = building;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_citycode");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* citycode = (NSString*) args[@"citycode"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.citycode = citycode;
+            methodResult(@"success");
+        },
+        
         @"AMapLocationReGeocode::set_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {

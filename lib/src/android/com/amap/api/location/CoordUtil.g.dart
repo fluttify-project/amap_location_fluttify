@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_CoordUtil extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   static Future<int> convertToGcj(Float64List var0, Float64List var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<bool> isLoadedSo() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<void> setLoadedSo(bool var0) async {
     // print log
@@ -111,8 +117,9 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -129,13 +136,14 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
   //endregion
 
   //region methods
-  Future<List<int>> convertToGcj_batch(List<Float64List> var0, List<Float64List> var1) async {
+  
+  static Future<List<int>> convertToGcj_batch(List<Float64List> var0, List<Float64List> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::convertToGcj_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::convertToGcj_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -148,13 +156,14 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     }
   }
   
-  Future<List<bool>> isLoadedSo_batch() async {
+  
+  static Future<List<bool>> isLoadedSo_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo_batch', );
   
   
     // convert native result to dart side object
@@ -167,13 +176,14 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     }
   }
   
-  Future<void> setLoadedSo_batch(List<bool> var0) async {
+  
+  static Future<List<void>> setLoadedSo_batch(List<bool> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object

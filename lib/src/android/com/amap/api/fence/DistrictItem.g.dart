@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
   //endregion
 
   //region methods
+  
   Future<String> getCitycode() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCitycode(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdcode() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdcode(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_location_DPoint>> getPolyline() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_location_DPoint()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPolyline(List<com_amap_api_location_DPoint> var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDistrictName() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistrictName(String var1) async {
     // print log
@@ -221,8 +237,9 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -239,6 +256,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
   //endregion
 
   //region methods
+  
   Future<List<String>> getCitycode_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -258,7 +276,8 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     }
   }
   
-  Future<void> setCitycode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCitycode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -276,6 +295,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdcode_batch() async {
     if (false) {
@@ -296,7 +316,8 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     }
   }
   
-  Future<void> setAdcode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdcode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -314,6 +335,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_location_DPoint>>> getPolyline_batch() async {
     if (false) {
@@ -334,7 +356,8 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     }
   }
   
-  Future<void> setPolyline_batch(List<List<com_amap_api_location_DPoint>> var1) async {
+  
+  Future<List<void>> setPolyline_batch(List<List<com_amap_api_location_DPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -352,6 +375,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDistrictName_batch() async {
     if (false) {
@@ -372,7 +396,8 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     }
   }
   
-  Future<void> setDistrictName_batch(List<String> var1) async {
+  
+  Future<List<void>> setDistrictName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

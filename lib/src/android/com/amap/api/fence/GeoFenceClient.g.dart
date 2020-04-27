@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   //region constants
@@ -52,6 +53,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<android_app_PendingIntent> createPendingIntent(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -69,10 +71,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify');
-      return android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setActivateAction(int var1) async {
     // print log
@@ -91,10 +95,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) async {
     // print log
@@ -117,7 +123,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
             case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':$args[var2], \'var3\':$args[var3]])');
+                print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':${args['var2']}, \'var3\':${args['var3']}])');
               }
         
               // handle the native call
@@ -132,10 +138,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addGeoFence__com_amap_api_location_DPoint__double__String(com_amap_api_location_DPoint var1, double var2, String var3) async {
     // print log
@@ -154,10 +162,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addGeoFence__List_com_amap_api_location_DPoint___String(List<com_amap_api_location_DPoint> var1, String var2) async {
     // print log
@@ -176,10 +186,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String(String var1, String var2, com_amap_api_location_DPoint var3, double var4, int var5, String var6) async {
     // print log
@@ -198,10 +210,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addGeoFence__String__String__String__int__String(String var1, String var2, String var3, int var4, String var5) async {
     // print log
@@ -220,10 +234,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addGeoFence__String__String(String var1, String var2) async {
     // print log
@@ -242,10 +258,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> removeGeoFence() async {
     // print log
@@ -264,10 +282,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> removeGeoFence__com_amap_api_fence_GeoFence(com_amap_api_fence_GeoFence var1) async {
     // print log
@@ -286,10 +306,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() async {
     // print log
@@ -308,10 +330,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_GeoFence()..refId = __it__..tag__ = 'amap_location_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_GeoFence()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_fence_GeoFence()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setGeoFenceAble(String var1, bool var2) async {
     // print log
@@ -330,10 +354,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> pauseGeoFence() async {
     // print log
@@ -352,10 +378,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> resumeGeoFence() async {
     // print log
@@ -374,10 +402,12 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isPause() async {
     // print log
@@ -396,8 +426,9 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -414,6 +445,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
   //endregion
 
   //region methods
+  
   Future<List<android_app_PendingIntent>> createPendingIntent_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -433,7 +465,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> setActivateAction_batch(List<int> var1) async {
+  
+  Future<List<void>> setActivateAction_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -452,7 +485,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> addGeoFence__com_amap_api_location_DPoint__double__String_batch(List<com_amap_api_location_DPoint> var1, List<double> var2, List<String> var3) async {
+  
+  Future<List<void>> addGeoFence__com_amap_api_location_DPoint__double__String_batch(List<com_amap_api_location_DPoint> var1, List<double> var2, List<String> var3) async {
     if (var1.length != var2.length || var2.length != var3.length) {
       return Future.error('all args must have same length!');
     }
@@ -471,7 +505,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> addGeoFence__List_com_amap_api_location_DPoint___String_batch(List<List<com_amap_api_location_DPoint>> var1, List<String> var2) async {
+  
+  Future<List<void>> addGeoFence__List_com_amap_api_location_DPoint___String_batch(List<List<com_amap_api_location_DPoint>> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
@@ -490,7 +525,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String_batch(List<String> var1, List<String> var2, List<com_amap_api_location_DPoint> var3, List<double> var4, List<int> var5, List<String> var6) async {
+  
+  Future<List<void>> addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String_batch(List<String> var1, List<String> var2, List<com_amap_api_location_DPoint> var3, List<double> var4, List<int> var5, List<String> var6) async {
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length || var4.length != var5.length || var5.length != var6.length) {
       return Future.error('all args must have same length!');
     }
@@ -509,7 +545,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> addGeoFence__String__String__String__int__String_batch(List<String> var1, List<String> var2, List<String> var3, List<int> var4, List<String> var5) async {
+  
+  Future<List<void>> addGeoFence__String__String__String__int__String_batch(List<String> var1, List<String> var2, List<String> var3, List<int> var4, List<String> var5) async {
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length || var4.length != var5.length) {
       return Future.error('all args must have same length!');
     }
@@ -528,7 +565,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> addGeoFence__String__String_batch(List<String> var1, List<String> var2) async {
+  
+  Future<List<void>> addGeoFence__String__String_batch(List<String> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
@@ -547,7 +585,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> removeGeoFence_batch() async {
+  
+  Future<List<void>> removeGeoFence_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -565,6 +604,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> removeGeoFence__com_amap_api_fence_GeoFence_batch(List<com_amap_api_fence_GeoFence> var1) async {
     if (false) {
@@ -585,6 +625,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
+  
   Future<List<List<com_amap_api_fence_GeoFence>>> getAllGeoFence_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -604,7 +645,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> setGeoFenceAble_batch(List<String> var1, List<bool> var2) async {
+  
+  Future<List<void>> setGeoFenceAble_batch(List<String> var1, List<bool> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
@@ -623,7 +665,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> pauseGeoFence_batch() async {
+  
+  Future<List<void>> pauseGeoFence_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -642,7 +685,8 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     }
   }
   
-  Future<void> resumeGeoFence_batch() async {
+  
+  Future<List<void>> resumeGeoFence_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -660,6 +704,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isPause_batch() async {
     if (false) {

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  {
   //region constants
@@ -54,6 +55,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   //endregion
 
   //region methods
+  
   Future<void> setWifiAble(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -71,10 +73,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setGpsStatus(int var1) async {
     // print log
@@ -93,10 +97,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setGPSSatellites(int var1) async {
     // print log
@@ -115,10 +121,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isWifiAble() async {
     // print log
@@ -137,10 +145,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getGPSStatus() async {
     // print log
@@ -159,10 +169,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getGPSSatellites() async {
     // print log
@@ -181,10 +193,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getNetworkType() async {
     // print log
@@ -203,10 +217,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNetworkType(String var1) async {
     // print log
@@ -225,10 +241,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getNetUseTime() async {
     // print log
@@ -247,10 +265,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNetUseTime(int var1) async {
     // print log
@@ -269,10 +289,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setInstallHighDangerMockApp(bool var1) async {
     // print log
@@ -291,10 +313,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isInstalledHighDangerMockApp() async {
     // print log
@@ -313,10 +337,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLocationMode(com_amap_api_location_AMapLocationClientOption_AMapLocationMode var1) async {
     // print log
@@ -335,10 +361,12 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdviseMessage() async {
     // print log
@@ -357,8 +385,9 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -375,7 +404,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
   //endregion
 
   //region methods
-  Future<void> setWifiAble_batch(List<bool> var1) async {
+  
+  Future<List<void>> setWifiAble_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -394,7 +424,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
-  Future<void> setGpsStatus_batch(List<int> var1) async {
+  
+  Future<List<void>> setGpsStatus_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -413,7 +444,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
-  Future<void> setGPSSatellites_batch(List<int> var1) async {
+  
+  Future<List<void>> setGPSSatellites_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -431,6 +463,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isWifiAble_batch() async {
     if (false) {
@@ -451,6 +484,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
+  
   Future<List<int>> getGPSStatus_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -469,6 +503,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getGPSSatellites_batch() async {
     if (false) {
@@ -489,6 +524,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
+  
   Future<List<String>> getNetworkType_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -508,7 +544,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
-  Future<void> setNetworkType_batch(List<String> var1) async {
+  
+  Future<List<void>> setNetworkType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -526,6 +563,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getNetUseTime_batch() async {
     if (false) {
@@ -546,7 +584,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
-  Future<void> setNetUseTime_batch(List<int> var1) async {
+  
+  Future<List<void>> setNetUseTime_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -565,7 +604,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
-  Future<void> setInstallHighDangerMockApp_batch(List<bool> var1) async {
+  
+  Future<List<void>> setInstallHighDangerMockApp_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -583,6 +623,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isInstalledHighDangerMockApp_batch() async {
     if (false) {
@@ -603,7 +644,8 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   }
   
-  Future<void> setLocationMode_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationMode> var1) async {
+  
+  Future<List<void>> setLocationMode_batch(List<com_amap_api_location_AMapLocationClientOption_AMapLocationMode> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -621,6 +663,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdviseMessage_batch() async {
     if (false) {
