@@ -24,7 +24,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::setLocationOption([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::setLocationOption([])');
     }
   
     // invoke native method
@@ -48,7 +48,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::setLocationListener([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::setLocationListener([])');
     }
   
     // invoke native method
@@ -66,7 +66,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
             case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onLocationChanged([])');
+                debugPrint('fluttify-dart-callback: onLocationChanged([])');
               }
         
               // handle the native call
@@ -91,7 +91,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> startLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::startLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::startLocation([])');
     }
   
     // invoke native method
@@ -115,7 +115,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> stopLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::stopLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::stopLocation([])');
     }
   
     // invoke native method
@@ -139,7 +139,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::getLastKnownLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::getLastKnownLocation([])');
     }
   
     // invoke native method
@@ -163,7 +163,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> startAssistantLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::startAssistantLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::startAssistantLocation([])');
     }
   
     // invoke native method
@@ -187,7 +187,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> stopAssistantLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::stopAssistantLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::stopAssistantLocation([])');
     }
   
     // invoke native method
@@ -211,7 +211,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<bool> isStarted() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::isStarted([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::isStarted([])');
     }
   
     // invoke native method
@@ -235,7 +235,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::unRegisterLocationListener([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::unRegisterLocationListener([])');
     }
   
     // invoke native method
@@ -253,7 +253,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
             case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onLocationChanged([])');
+                debugPrint('fluttify-dart-callback: onLocationChanged([])');
               }
         
               // handle the native call
@@ -278,7 +278,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> onDestroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::onDestroy([])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::onDestroy([])');
     }
   
     // invoke native method
@@ -302,7 +302,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> enableBackgroundLocation(int var1, android_app_Notification var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::enableBackgroundLocation([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::enableBackgroundLocation([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -326,7 +326,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
   Future<void> disableBackgroundLocation(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::disableBackgroundLocation([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.LocationManagerBase@$refId::disableBackgroundLocation([\'var1\':$var1])');
     }
   
     // invoke native method

@@ -66,7 +66,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   Future<AMapLocationCircleRegion> initWithCenter_radius_identifier(CLLocationCoordinate2D center, double radius, String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationCircleRegion@$refId::initWithCenter([\'radius\':$radius, \'identifier\':$identifier])');
+      debugPrint('fluttify-dart: AMapLocationCircleRegion@$refId::initWithCenter([\'radius\':$radius, \'identifier\':$identifier])');
     }
   
     // invoke native method

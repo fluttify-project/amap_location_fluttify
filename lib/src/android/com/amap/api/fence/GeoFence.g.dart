@@ -76,7 +76,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<String> getFenceId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getFenceId([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getFenceId([])');
     }
   
     // invoke native method
@@ -100,7 +100,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setFenceId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setFenceId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setFenceId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -124,7 +124,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<String> getCustomId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCustomId([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCustomId([])');
     }
   
     // invoke native method
@@ -148,7 +148,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setCustomId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCustomId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCustomId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -172,7 +172,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<String> getPendingIntentAction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPendingIntentAction([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPendingIntentAction([])');
     }
   
     // invoke native method
@@ -196,7 +196,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setPendingIntentAction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPendingIntentAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPendingIntentAction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -220,7 +220,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<android_app_PendingIntent> getPendingIntent() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPendingIntent([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPendingIntent([])');
     }
   
     // invoke native method
@@ -244,7 +244,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setPendingIntent(android_app_PendingIntent var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPendingIntent([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPendingIntent([])');
     }
   
     // invoke native method
@@ -268,7 +268,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<int> getType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getType([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getType([])');
     }
   
     // invoke native method
@@ -292,7 +292,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setType(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -316,7 +316,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<com_amap_api_fence_PoiItem> getPoiItem() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPoiItem([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getPoiItem([])');
     }
   
     // invoke native method
@@ -340,7 +340,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setPoiItem(com_amap_api_fence_PoiItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPoiItem([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPoiItem([])');
     }
   
     // invoke native method
@@ -364,7 +364,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<List<com_amap_api_fence_DistrictItem>> getDistrictItemList() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getDistrictItemList([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getDistrictItemList([])');
     }
   
     // invoke native method
@@ -388,7 +388,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setDistrictItemList(List<com_amap_api_fence_DistrictItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setDistrictItemList([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setDistrictItemList([])');
     }
   
     // invoke native method
@@ -412,7 +412,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setPointList(List<List<com_amap_api_location_DPoint>> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPointList([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setPointList([])');
     }
   
     // invoke native method
@@ -436,7 +436,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<double> getRadius() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getRadius([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getRadius([])');
     }
   
     // invoke native method
@@ -460,7 +460,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setRadius(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setRadius([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setRadius([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -484,7 +484,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<int> getExpiration() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getExpiration([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getExpiration([])');
     }
   
     // invoke native method
@@ -508,7 +508,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setExpiration(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setExpiration([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setExpiration([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -532,7 +532,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<int> getActivatesAction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getActivatesAction([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getActivatesAction([])');
     }
   
     // invoke native method
@@ -556,7 +556,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setActivatesAction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setActivatesAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setActivatesAction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -580,7 +580,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<int> getStatus() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getStatus([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getStatus([])');
     }
   
     // invoke native method
@@ -604,7 +604,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setStatus(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setStatus([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setStatus([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -628,7 +628,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<int> getEnterTime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getEnterTime([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getEnterTime([])');
     }
   
     // invoke native method
@@ -652,7 +652,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setEnterTime(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setEnterTime([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setEnterTime([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -676,7 +676,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<com_amap_api_location_DPoint> getCenter() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCenter([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCenter([])');
     }
   
     // invoke native method
@@ -700,7 +700,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setCenter(com_amap_api_location_DPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCenter([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCenter([])');
     }
   
     // invoke native method
@@ -724,7 +724,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<double> getMinDis2Center() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getMinDis2Center([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getMinDis2Center([])');
     }
   
     // invoke native method
@@ -748,7 +748,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setMinDis2Center(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setMinDis2Center([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setMinDis2Center([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -772,7 +772,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<double> getMaxDis2Center() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getMaxDis2Center([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getMaxDis2Center([])');
     }
   
     // invoke native method
@@ -796,7 +796,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setMaxDis2Center(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setMaxDis2Center([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setMaxDis2Center([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -820,7 +820,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<bool> isAble() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::isAble([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::isAble([])');
     }
   
     // invoke native method
@@ -844,7 +844,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setAble(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setAble([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setAble([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -868,7 +868,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<void> setCurrentLocation(com_amap_api_location_AMapLocation var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCurrentLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::setCurrentLocation([])');
     }
   
     // invoke native method
@@ -892,7 +892,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
   Future<com_amap_api_location_AMapLocation> getCurrentLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCurrentLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFence@$refId::getCurrentLocation([])');
     }
   
     // invoke native method

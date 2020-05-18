@@ -55,7 +55,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   Future<com_amap_api_location_CoordinateConverter> from(com_amap_api_location_CoordinateConverter_CoordType var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::from([])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::from([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   Future<com_amap_api_location_CoordinateConverter> coord(com_amap_api_location_DPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::coord([])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::coord([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   Future<com_amap_api_location_DPoint> convert() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::convert([])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::convert([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   static Future<bool> isAMapDataAvailable(double var0, double var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordinateConverter::isAMapDataAvailable([\'var0\':$var0, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordinateConverter::isAMapDataAvailable([\'var0\':$var0, \'var2\':$var2])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
   static Future<double> calculateLineDistance(com_amap_api_location_DPoint var0, com_amap_api_location_DPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordinateConverter::calculateLineDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordinateConverter::calculateLineDistance([])');
     }
   
     // invoke native method
