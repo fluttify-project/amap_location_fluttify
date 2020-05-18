@@ -119,7 +119,8 @@ class AmapLocation {
         // 是否返回地址描述
         if (needAddress != null) await options.setNeedAddress(needAddress);
         // 设置定位请求超时时间，默认为30秒。
-        if (timeout != null) await options.setHttpTimeOut(timeout.inSeconds);
+        if (timeout != null)
+          await options.setHttpTimeOut(timeout.inMilliseconds);
 
         await options.setSensorEnable(true);
 
