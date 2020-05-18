@@ -55,7 +55,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<double> getLatitude() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getLatitude([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getLatitude([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setLatitude(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setLatitude([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setLatitude([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<double> getLongitude() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getLongitude([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getLongitude([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setLongitude(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setLongitude([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setLongitude([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiId([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiId([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setPoiId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getPoiType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiType([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiType([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setPoiType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getTypeCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getTypeCode([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getTypeCode([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setTypeCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getAddress() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getAddress([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getAddress([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setAddress(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setAddress([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setAddress([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getTel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getTel([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getTel([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setTel(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setTel([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setTel([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getProvince() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getProvince([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getProvince([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setProvince(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setProvince([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setProvince([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getCity([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getCity([])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setCity(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setCity([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setCity([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -487,7 +487,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getAdname() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getAdname([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getAdname([])');
     }
   
     // invoke native method
@@ -511,7 +511,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<String> getPoiName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiName([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiName([])');
     }
   
     // invoke native method
@@ -535,7 +535,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setPoiName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -559,7 +559,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
   Future<void> setAdname(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setAdname([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setAdname([\'var1\':$var1])');
     }
   
     // invoke native method

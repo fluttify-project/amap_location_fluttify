@@ -83,7 +83,7 @@ class AMapGeoFenceManager extends NSObject  {
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapGeoFenceManager_doRequireLocationAuth([])');
+              debugPrint('fluttify-dart-callback: amapGeoFenceManager_doRequireLocationAuth([])');
             }
         
             // handle the native call
@@ -92,7 +92,7 @@ class AMapGeoFenceManager extends NSObject  {
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'customID\':${args['customID']}])');
+              debugPrint('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'customID\':${args['customID']}])');
             }
         
             // handle the native call
@@ -101,7 +101,7 @@ class AMapGeoFenceManager extends NSObject  {
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'customID\':${args['customID']}])');
+              debugPrint('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'customID\':${args['customID']}])');
             }
         
             // handle the native call
@@ -144,7 +144,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> addCircleRegionForMonitoringWithCenter_radius_customID(CLLocationCoordinate2D center, double radius, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::addCircleRegionForMonitoringWithCenter([\'radius\':$radius, \'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::addCircleRegionForMonitoringWithCenter([\'radius\':$radius, \'customID\':$customID])');
     }
   
     // invoke native method
@@ -168,7 +168,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> addPolygonRegionForMonitoringWithCoordinates_count_customID(List<CLLocationCoordinate2D> coordinates, int count, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::addPolygonRegionForMonitoringWithCoordinates([\'count\':$count, \'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::addPolygonRegionForMonitoringWithCoordinates([\'count\':$count, \'customID\':$customID])');
     }
   
     // invoke native method
@@ -192,7 +192,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID(String keyword, String type, String city, int size, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::addKeywordPOIRegionForMonitoringWithKeyword([\'keyword\':$keyword, \'type\':$type, \'city\':$city, \'size\':$size, \'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::addKeywordPOIRegionForMonitoringWithKeyword([\'keyword\':$keyword, \'type\':$type, \'city\':$city, \'size\':$size, \'customID\':$customID])');
     }
   
     // invoke native method
@@ -216,7 +216,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID(CLLocationCoordinate2D locationPoint, int aroundRadius, String keyword, String type, int size, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::addAroundPOIRegionForMonitoringWithLocationPoint([\'aroundRadius\':$aroundRadius, \'keyword\':$keyword, \'type\':$type, \'size\':$size, \'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::addAroundPOIRegionForMonitoringWithLocationPoint([\'aroundRadius\':$aroundRadius, \'keyword\':$keyword, \'type\':$type, \'size\':$size, \'customID\':$customID])');
     }
   
     // invoke native method
@@ -240,7 +240,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> addDistrictRegionForMonitoringWithDistrictName_customID(String districtName, String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::addDistrictRegionForMonitoringWithDistrictName([\'districtName\':$districtName, \'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::addDistrictRegionForMonitoringWithDistrictName([\'districtName\':$districtName, \'customID\':$customID])');
     }
   
     // invoke native method
@@ -264,7 +264,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<AMapGeoFenceRegionActiveStatus> statusWithGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::statusWithGeoFenceRegion([])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::statusWithGeoFenceRegion([])');
     }
   
     // invoke native method
@@ -288,7 +288,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<List<NSObject>> geoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::geoFenceRegionsWithCustomID([\'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::geoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
     // invoke native method
@@ -312,7 +312,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<List<NSObject>> monitoringGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::monitoringGeoFenceRegionsWithCustomID([\'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::monitoringGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
     // invoke native method
@@ -336,7 +336,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<List<NSObject>> pausedGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::pausedGeoFenceRegionsWithCustomID([\'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::pausedGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
     // invoke native method
@@ -360,7 +360,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<List<NSObject>> pauseGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::pauseGeoFenceRegionsWithCustomID([\'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::pauseGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
     // invoke native method
@@ -384,7 +384,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<bool> pauseTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::pauseTheGeoFenceRegion([])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::pauseTheGeoFenceRegion([])');
     }
   
     // invoke native method
@@ -408,7 +408,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<List<NSObject>> startGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::startGeoFenceRegionsWithCustomID([\'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::startGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
     // invoke native method
@@ -432,7 +432,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<bool> startTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::startTheGeoFenceRegion([])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::startTheGeoFenceRegion([])');
     }
   
     // invoke native method
@@ -456,7 +456,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> removeTheGeoFenceRegion(AMapGeoFenceRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::removeTheGeoFenceRegion([])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::removeTheGeoFenceRegion([])');
     }
   
     // invoke native method
@@ -480,7 +480,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> removeGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::removeGeoFenceRegionsWithCustomID([\'customID\':$customID])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::removeGeoFenceRegionsWithCustomID([\'customID\':$customID])');
     }
   
     // invoke native method
@@ -504,7 +504,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<void> removeAllGeoFenceRegions() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoFenceManager@$refId::removeAllGeoFenceRegions([])');
+      debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::removeAllGeoFenceRegions([])');
     }
   
     // invoke native method

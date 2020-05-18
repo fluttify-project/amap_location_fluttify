@@ -113,7 +113,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_doRequireLocationAuth([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_doRequireLocationAuth([])');
             }
         
             // handle the native call
@@ -122,7 +122,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didFailWithError([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didFailWithError([])');
             }
         
             // handle the native call
@@ -131,7 +131,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didUpdateLocation([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateLocation([])');
             }
         
             // handle the native call
@@ -140,7 +140,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didUpdateLocation_reGeocode([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateLocation_reGeocode([])');
             }
         
             // handle the native call
@@ -149,7 +149,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didChangeAuthorizationStatus([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didChangeAuthorizationStatus([])');
             }
         
             // handle the native call
@@ -158,7 +158,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
+              debugPrint('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([])');
             }
         
             // handle the native call
@@ -167,7 +167,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didUpdateHeading([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateHeading([])');
             }
         
             // handle the native call
@@ -176,7 +176,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didStartMonitoringForRegion([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didStartMonitoringForRegion([])');
             }
         
             // handle the native call
@@ -185,7 +185,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didEnterRegion([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didEnterRegion([])');
             }
         
             // handle the native call
@@ -194,7 +194,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didExitRegion([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didExitRegion([])');
             }
         
             // handle the native call
@@ -203,7 +203,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_didDetermineState_forRegion([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_didDetermineState_forRegion([])');
             }
         
             // handle the native call
@@ -212,7 +212,7 @@ class AMapLocationManager extends NSObject  {
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: amapLocationManager_monitoringDidFailForRegion_withError([])');
+              debugPrint('fluttify-dart-callback: amapLocationManager_monitoringDidFailForRegion_withError([])');
             }
         
             // handle the native call
@@ -285,7 +285,7 @@ class AMapLocationManager extends NSObject  {
   static Future<bool> headingAvailable() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager::headingAvailable([])');
+      debugPrint('fluttify-dart: AMapLocationManager::headingAvailable([])');
     }
   
     // invoke native method
@@ -309,7 +309,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> startUpdatingHeading() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::startUpdatingHeading([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::startUpdatingHeading([])');
     }
   
     // invoke native method
@@ -333,7 +333,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> stopUpdatingHeading() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingHeading([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::stopUpdatingHeading([])');
     }
   
     // invoke native method
@@ -357,7 +357,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> dismissHeadingCalibrationDisplay() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::dismissHeadingCalibrationDisplay([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::dismissHeadingCalibrationDisplay([])');
     }
   
     // invoke native method
@@ -381,7 +381,7 @@ class AMapLocationManager extends NSObject  {
   Future<bool> requestLocationWithReGeocode_completionBlock(bool withReGeocode, void completionBlock(CLLocation location, AMapLocationReGeocode regeocode, NSError error)) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::requestLocationWithReGeocode([\'withReGeocode\':$withReGeocode])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::requestLocationWithReGeocode([\'withReGeocode\':$withReGeocode])');
     }
   
     // invoke native method
@@ -424,7 +424,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> startUpdatingLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::startUpdatingLocation([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::startUpdatingLocation([])');
     }
   
     // invoke native method
@@ -448,7 +448,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> stopUpdatingLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::stopUpdatingLocation([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::stopUpdatingLocation([])');
     }
   
     // invoke native method
@@ -472,7 +472,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> startMonitoringForRegion(AMapLocationRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::startMonitoringForRegion([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::startMonitoringForRegion([])');
     }
   
     // invoke native method
@@ -496,7 +496,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> stopMonitoringForRegion(AMapLocationRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::stopMonitoringForRegion([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::stopMonitoringForRegion([])');
     }
   
     // invoke native method
@@ -520,7 +520,7 @@ class AMapLocationManager extends NSObject  {
   Future<void> requestStateForRegion(AMapLocationRegion region) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationManager@$refId::requestStateForRegion([])');
+      debugPrint('fluttify-dart: AMapLocationManager@$refId::requestStateForRegion([])');
     }
   
     // invoke native method

@@ -57,7 +57,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<android_app_PendingIntent> createPendingIntent(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::createPendingIntent([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::createPendingIntent([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -81,7 +81,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> setActivateAction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setActivateAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setActivateAction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -105,7 +105,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])');
     }
   
     // invoke native method
@@ -123,7 +123,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
             case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':${args['var2']}, \'var3\':${args['var3']}])');
+                debugPrint('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':${args['var2']}, \'var3\':${args['var3']}])');
               }
         
               // handle the native call
@@ -148,7 +148,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> addGeoFence__com_amap_api_location_DPoint__double__String(com_amap_api_location_DPoint var1, double var2, String var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
@@ -172,7 +172,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> addGeoFence__List_com_amap_api_location_DPoint___String(List<com_amap_api_location_DPoint> var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2])');
     }
   
     // invoke native method
@@ -196,7 +196,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String(String var1, String var2, com_amap_api_location_DPoint var3, double var4, int var5, String var6) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var1\':$var1, \'var2\':$var2, \'var4\':$var4, \'var5\':$var5, \'var6\':$var6])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var1\':$var1, \'var2\':$var2, \'var4\':$var4, \'var5\':$var5, \'var6\':$var6])');
     }
   
     // invoke native method
@@ -220,7 +220,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> addGeoFence__String__String__String__int__String(String var1, String var2, String var3, int var4, String var5) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3, \'var4\':$var4, \'var5\':$var5])');
     }
   
     // invoke native method
@@ -244,7 +244,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> addGeoFence__String__String(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
@@ -268,7 +268,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> removeGeoFence() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
     }
   
     // invoke native method
@@ -292,7 +292,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<bool> removeGeoFence__com_amap_api_fence_GeoFence(com_amap_api_fence_GeoFence var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
     }
   
     // invoke native method
@@ -316,7 +316,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])');
     }
   
     // invoke native method
@@ -340,7 +340,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> setGeoFenceAble(String var1, bool var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceAble([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceAble([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
@@ -364,7 +364,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> pauseGeoFence() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::pauseGeoFence([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::pauseGeoFence([])');
     }
   
     // invoke native method
@@ -388,7 +388,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<void> resumeGeoFence() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::resumeGeoFence([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::resumeGeoFence([])');
     }
   
     // invoke native method
@@ -412,7 +412,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   Future<bool> isPause() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::isPause([])');
+      debugPrint('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::isPause([])');
     }
   
     // invoke native method

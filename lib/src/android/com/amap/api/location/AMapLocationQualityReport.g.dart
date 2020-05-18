@@ -59,7 +59,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setWifiAble(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setWifiAble([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setWifiAble([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -83,7 +83,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setGpsStatus(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setGpsStatus([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setGpsStatus([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -107,7 +107,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setGPSSatellites(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setGPSSatellites([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setGPSSatellites([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -131,7 +131,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<bool> isWifiAble() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::isWifiAble([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::isWifiAble([])');
     }
   
     // invoke native method
@@ -155,7 +155,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<int> getGPSStatus() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSStatus([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSStatus([])');
     }
   
     // invoke native method
@@ -179,7 +179,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<int> getGPSSatellites() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSSatellites([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getGPSSatellites([])');
     }
   
     // invoke native method
@@ -203,7 +203,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<String> getNetworkType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getNetworkType([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getNetworkType([])');
     }
   
     // invoke native method
@@ -227,7 +227,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setNetworkType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setNetworkType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setNetworkType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -251,7 +251,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<int> getNetUseTime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getNetUseTime([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getNetUseTime([])');
     }
   
     // invoke native method
@@ -275,7 +275,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setNetUseTime(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setNetUseTime([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setNetUseTime([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -299,7 +299,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setInstallHighDangerMockApp(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setInstallHighDangerMockApp([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setInstallHighDangerMockApp([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -323,7 +323,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<bool> isInstalledHighDangerMockApp() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::isInstalledHighDangerMockApp([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::isInstalledHighDangerMockApp([])');
     }
   
     // invoke native method
@@ -347,7 +347,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<void> setLocationMode(com_amap_api_location_AMapLocationClientOption_AMapLocationMode var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setLocationMode([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::setLocationMode([])');
     }
   
     // invoke native method
@@ -371,7 +371,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
   Future<String> getAdviseMessage() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getAdviseMessage([])');
+      debugPrint('fluttify-dart: com.amap.api.location.AMapLocationQualityReport@$refId::getAdviseMessage([])');
     }
   
     // invoke native method
