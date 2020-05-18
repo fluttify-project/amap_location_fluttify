@@ -1,5 +1,6 @@
 ## 0.12.0
 - enhance: 更新底层依赖
+- fix: android超时时间单位为毫秒
 
 ## 0.11.0
 - enhance: [breaking change] timeout类型换为更直观的Duration类
