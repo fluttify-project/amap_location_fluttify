@@ -55,7 +55,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> a() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> a__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> b() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::b([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::b([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> b__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::b([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::b([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<int> c() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::c([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::c([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> c__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::c([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::c([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> d() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::d([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::d([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> d__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::d([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::d([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> e() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::e([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::e([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> e__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::e([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::e([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> g() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::g([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::g([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<com_autonavi_aps_amapapi_model_AMapLocationServer> h() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::h([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::h([])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<bool> i() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::i([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::i([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> a__bool(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> j() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::j([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::j([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> f__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::f([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::f([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<int> k() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::k([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::k([])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> a__int(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::a([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -487,7 +487,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> g__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::g([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::g([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -511,7 +511,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<String> l() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::l([])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::l([])');
     }
   
     // invoke native method
@@ -535,7 +535,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
   Future<void> h__String(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::h([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.autonavi.aps.amapapi.model.AMapLocationServer@$refId::h([\'var1\':$var1])');
     }
   
     // invoke native method

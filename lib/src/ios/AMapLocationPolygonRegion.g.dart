@@ -66,7 +66,7 @@ class AMapLocationPolygonRegion extends AMapLocationRegion with NSCopying {
   Future<AMapLocationPolygonRegion> initWithCoordinates_count_identifier(List<CLLocationCoordinate2D> coordinates, int count, String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationPolygonRegion@$refId::initWithCoordinates([\'count\':$count, \'identifier\':$identifier])');
+      debugPrint('fluttify-dart: AMapLocationPolygonRegion@$refId::initWithCoordinates([\'count\':$count, \'identifier\':$identifier])');
     }
   
     // invoke native method

@@ -83,7 +83,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
   Future<AMapLocationRegion> initWithIdentifier(String identifier) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationRegion@$refId::initWithIdentifier([\'identifier\':$identifier])');
+      debugPrint('fluttify-dart: AMapLocationRegion@$refId::initWithIdentifier([\'identifier\':$identifier])');
     }
   
     // invoke native method
@@ -107,7 +107,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
   Future<bool> containsCoordinate(CLLocationCoordinate2D coordinate) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapLocationRegion@$refId::containsCoordinate([])');
+      debugPrint('fluttify-dart: AMapLocationRegion@$refId::containsCoordinate([])');
     }
   
     // invoke native method

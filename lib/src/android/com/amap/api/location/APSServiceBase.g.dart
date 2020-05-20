@@ -24,7 +24,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   Future<void> onCreate() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.APSServiceBase@$refId::onCreate([])');
+      debugPrint('fluttify-dart: com.amap.api.location.APSServiceBase@$refId::onCreate([])');
     }
   
     // invoke native method
@@ -48,7 +48,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   Future<int> onStartCommand(android_content_Intent var1, int var2, int var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.APSServiceBase@$refId::onStartCommand([\'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.amap.api.location.APSServiceBase@$refId::onStartCommand([\'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method
@@ -72,7 +72,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
   Future<void> onDestroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.APSServiceBase@$refId::onDestroy([])');
+      debugPrint('fluttify-dart: com.amap.api.location.APSServiceBase@$refId::onDestroy([])');
     }
   
     // invoke native method

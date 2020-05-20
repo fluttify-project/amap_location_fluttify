@@ -55,7 +55,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   static Future<int> convertToGcj(Float64List var0, Float64List var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordUtil::convertToGcj([\'var0\':$var0, \'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordUtil::convertToGcj([\'var0\':$var0, \'var1\':$var1])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   static Future<bool> isLoadedSo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordUtil::isLoadedSo([])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordUtil::isLoadedSo([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
   static Future<void> setLoadedSo(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.CoordUtil::setLoadedSo([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.amap.api.location.CoordUtil::setLoadedSo([\'var0\':$var0])');
     }
   
     // invoke native method

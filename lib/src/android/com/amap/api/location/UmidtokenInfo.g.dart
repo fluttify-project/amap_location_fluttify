@@ -55,7 +55,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
   static Future<String> getUmidtoken() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.UmidtokenInfo::getUmidtoken([])');
+      debugPrint('fluttify-dart: com.amap.api.location.UmidtokenInfo::getUmidtoken([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
   static Future<void> setLocAble(bool var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.UmidtokenInfo::setLocAble([\'var0\':$var0])');
+      debugPrint('fluttify-dart: com.amap.api.location.UmidtokenInfo::setLocAble([\'var0\':$var0])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
   static Future<void> setUmidtoken(android_content_Context var0, String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.location.UmidtokenInfo::setUmidtoken([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.location.UmidtokenInfo::setUmidtoken([\'var1\':$var1])');
     }
   
     // invoke native method
