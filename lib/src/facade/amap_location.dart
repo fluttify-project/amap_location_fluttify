@@ -374,6 +374,56 @@ class AmapLocation {
     );
   }
 
+  /// 开启后台定位
+  static Future<void> enableBackgroundLocation(int id, BackgroundNotification bgNotification) {
+    return platform(
+      android: (pool) async {
+        final notification = await android_app_Notification.create(
+          contentTitle: bgNotification.contentTitle,
+          contentText: bgNotification.contentText,
+          when: bgNotification.when,
+          channelId: bgNotification.channelId,
+          channelName: bgNotification.channelName,
+          enableLights: bgNotification.enableLights ?? true,
+          showBadge: bgNotification.showBadge ?? true,
+        );
+        await checkClient();
+        await _androidClient?.enableBackgroundLocation(id, notification);
+        pool..add(notification);
+      },
+      ios: (pool) async {
+        // ios 不需要处理
+      },
+    );
+  }
+
+  /// 关闭后台定位
+  static Future<void> disableBackgroundLocation(bool var1) {
+    return platform(
+      android: (pool) async {
+        await checkClient();
+        await _androidClient?.disableBackgroundLocation(var1);
+      },
+      ios: (pool) async {
+        // ios 不需要处理
+      },
+    );
+  }
+
+  /// 确保client不为空
+  static Future<void> checkClient() async {
+    if (Platform.isAndroid) {
+      // 获取上下文, 这里获取的是Application
+      final context = await android_app_Application.get();
+
+      // 创建定位客户端
+      _androidClient ??= await com_amap_api_location_AMapLocationClient
+          .create__android_content_Context(context);
+    } else if (Platform.isIOS) {
+      _iosClient ??= await AMapLocationManager.create__();
+    }
+  }
+
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
   static Future<void> dispose() async {
     _locationController?.close();
