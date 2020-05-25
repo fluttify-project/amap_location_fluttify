@@ -77,3 +77,24 @@ class Location {
     return 'Location{\naddress: $address, \nlatLng: $latLng, \naltitude: $altitude, \nbearing: $bearing, \ncountry: $country, \nprovince: $province, \ncity: $city, \ncityCode: $cityCode, \nadCode: $adCode, \ndistrict: $district, \npoiName: $poiName, \nstreet: $street, \nstreetNumber: $streetNumber, \naoiName: $aoiName, \naccuracy: $accuracy\n}';
   }
 }
+
+/// 后台定位notification
+class BackgroundNotification {
+  BackgroundNotification({
+    @required this.contentTitle,
+    @required this.contentText,
+    this.when,
+    @required this.channelId,
+    @required this.channelName,
+    this.enableLights = true,
+    this.showBadge = true,
+  });
+
+  String contentTitle;
+  String contentText;
+  int when;
+  String channelId;
+  String channelName;
+  bool enableLights;
+  bool showBadge;
+}

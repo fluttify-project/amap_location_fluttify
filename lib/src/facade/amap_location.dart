@@ -190,11 +190,12 @@ class AmapLocation {
   /// 连续获取定位信息
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout]
-  /// 设置是否开启定位缓存机制[cacheEnable].
+  /// 设置定位间隔[interval], 默认2000 ms， 设置是否开启定位缓存机制[cacheEnable].
   static Stream<Location> listenLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     Duration timeout,
+    int interval,
   }) async* {
     _locationController ??= StreamController<Location>();
 
@@ -265,6 +266,8 @@ class AmapLocation {
       if (needAddress != null) await options.setNeedAddress(needAddress);
       // 设置定位请求超时时间，默认为30秒。
       if (timeout != null) await options.setHttpTimeOut(timeout.inSeconds);
+      // 设置定位间隔
+      if (interval != null) await options.setInterval(interval);
 
       await options.setSensorEnable(true);
 
@@ -295,6 +298,8 @@ class AmapLocation {
       if (timeout != null) {
         await _iosClient.set_locationTimeout(timeout.inSeconds);
       }
+      // 设置定位间隔
+//      if (interval != null)
 
       // 设置回调
       if (_iosLocationDelegate == null) {
@@ -367,6 +372,56 @@ class AmapLocation {
         );
       },
     );
+  }
+
+  /// 开启后台定位
+  static Future<void> enableBackgroundLocation(int id, BackgroundNotification bgNotification) {
+    return platform(
+      android: (pool) async {
+        final notification = await android_app_Notification.create(
+          contentTitle: bgNotification.contentTitle,
+          contentText: bgNotification.contentText,
+          when: bgNotification.when,
+          channelId: bgNotification.channelId,
+          channelName: bgNotification.channelName,
+          enableLights: bgNotification.enableLights ?? true,
+          showBadge: bgNotification.showBadge ?? true,
+        );
+        await checkClient();
+        await _androidClient?.enableBackgroundLocation(id, notification);
+        pool..add(notification);
+      },
+      ios: (pool) async {
+        // ios 不需要处理
+      },
+    );
+  }
+
+  /// 关闭后台定位
+  static Future<void> disableBackgroundLocation(bool var1) {
+    return platform(
+      android: (pool) async {
+        await checkClient();
+        await _androidClient?.disableBackgroundLocation(var1);
+      },
+      ios: (pool) async {
+        // ios 不需要处理
+      },
+    );
+  }
+
+  /// 确保client不为空
+  static Future<void> checkClient() async {
+    if (Platform.isAndroid) {
+      // 获取上下文, 这里获取的是Application
+      final context = await android_app_Application.get();
+
+      // 创建定位客户端
+      _androidClient ??= await com_amap_api_location_AMapLocationClient
+          .create__android_content_Context(context);
+    } else if (Platform.isIOS) {
+      _iosClient ??= await AMapLocationManager.create__();
+    }
   }
 
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
