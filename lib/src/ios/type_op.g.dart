@@ -7,153 +7,283 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpAmapLocationFluttifyIOS on Ref {
-  Future<bool> isAMapGeoFenceManager() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceManager', {'refId': refId});
-    return result;
+extension TypeOpAmapLocationFluttifyIOS on Object {
+  // type check
+  Future<bool> is__<T>() async {
+    final typeName = T.toString();
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this is T;
+    }
+    else if (T == AMapGeoFenceManager) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceManager', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationCircleRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationCircleRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationPolygonRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPolygonRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoFenceRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoFenceCircleRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceCircleRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoFencePolygonRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFencePolygonRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoFencePOIRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFencePOIRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoFenceDistrictRegion) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceDistrictRegion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationManager) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationManager', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationReGeocode) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationReGeocode', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationPoint) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationPOIItem) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPOIItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationDistrictItem) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationDistrictItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocation) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCLLocation', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLHeading) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCLHeading', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGRect) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCGRect', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGPoint) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCGPoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGSize) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCGSize', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIEdgeInsets) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfUIEdgeInsets', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocationCoordinate2D) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocationManager) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfCLLocationManager', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSError) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfNSError', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSCoding) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfNSCoding', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSCopying) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfNSCopying', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIView) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfUIView', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIViewController) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfUIViewController', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIControl) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfUIControl', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIImage) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfUIImage', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIColor) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfUIColor', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSData) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfNSData', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSOperation) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfNSOperation', {'refId': (this as Ref).refId});
+      return result;
+    }
   }
-  
-  Future<bool> isAMapLocationRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationCircleRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationCircleRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationPolygonRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPolygonRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoFenceRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoFenceCircleRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceCircleRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoFencePolygonRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFencePolygonRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoFencePOIRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFencePOIRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoFenceDistrictRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapGeoFenceDistrictRegion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationManager() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationManager', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationReGeocode() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationReGeocode', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationPoint() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPoint', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationPOIItem() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationPOIItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationDistrictItem() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfAMapLocationDistrictItem', {'refId': refId});
-    return result;
-  }
-  
 
-  Future<AMapGeoFenceManager> asAMapGeoFenceManager() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceManager', {'refId': refId});
-    return AMapGeoFenceManager()..refId = result;
+  // type cast
+  T as__<T>() {
+    final typeName = T.toString();
+    // jsonable 直接造型 返回
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this as T;
+    }
+    else if (T == AMapGeoFenceManager) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoFenceManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationCircleRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationPolygonRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationPolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapGeoFenceRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoFenceRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapGeoFenceCircleRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoFenceCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapGeoFencePolygonRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoFencePolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapGeoFencePOIRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoFencePOIRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapGeoFenceDistrictRegion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoFenceDistrictRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationManager) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationReGeocode) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationPoint) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationPOIItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationPOIItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == AMapLocationDistrictItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationDistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CLLocation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CLHeading) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CGRect) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CGPoint) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CGSize) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == UIEdgeInsets) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CLLocationCoordinate2D) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == CLLocationManager) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == NSError) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == NSCoding) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == NSCopying) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == UIView) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == UIViewController) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == UIControl) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == UIImage) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == UIColor) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == NSData) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == NSOperation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
   }
-  
-  Future<AMapLocationRegion> asAMapLocationRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationRegion', {'refId': refId});
-    return AMapLocationRegion()..refId = result;
-  }
-  
-  Future<AMapLocationCircleRegion> asAMapLocationCircleRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationCircleRegion', {'refId': refId});
-    return AMapLocationCircleRegion()..refId = result;
-  }
-  
-  Future<AMapLocationPolygonRegion> asAMapLocationPolygonRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationPolygonRegion', {'refId': refId});
-    return AMapLocationPolygonRegion()..refId = result;
-  }
-  
-  Future<AMapGeoFenceRegion> asAMapGeoFenceRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceRegion', {'refId': refId});
-    return AMapGeoFenceRegion()..refId = result;
-  }
-  
-  Future<AMapGeoFenceCircleRegion> asAMapGeoFenceCircleRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceCircleRegion', {'refId': refId});
-    return AMapGeoFenceCircleRegion()..refId = result;
-  }
-  
-  Future<AMapGeoFencePolygonRegion> asAMapGeoFencePolygonRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFencePolygonRegion', {'refId': refId});
-    return AMapGeoFencePolygonRegion()..refId = result;
-  }
-  
-  Future<AMapGeoFencePOIRegion> asAMapGeoFencePOIRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFencePOIRegion', {'refId': refId});
-    return AMapGeoFencePOIRegion()..refId = result;
-  }
-  
-  Future<AMapGeoFenceDistrictRegion> asAMapGeoFenceDistrictRegion() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapGeoFenceDistrictRegion', {'refId': refId});
-    return AMapGeoFenceDistrictRegion()..refId = result;
-  }
-  
-  Future<AMapLocationManager> asAMapLocationManager() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationManager', {'refId': refId});
-    return AMapLocationManager()..refId = result;
-  }
-  
-  Future<AMapLocationReGeocode> asAMapLocationReGeocode() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationReGeocode', {'refId': refId});
-    return AMapLocationReGeocode()..refId = result;
-  }
-  
-  Future<AMapLocationPoint> asAMapLocationPoint() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationPoint', {'refId': refId});
-    return AMapLocationPoint()..refId = result;
-  }
-  
-  Future<AMapLocationPOIItem> asAMapLocationPOIItem() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationPOIItem', {'refId': refId});
-    return AMapLocationPOIItem()..refId = result;
-  }
-  
-  Future<AMapLocationDistrictItem> asAMapLocationDistrictItem() async {
-    final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::asAMapLocationDistrictItem', {'refId': refId});
-    return AMapLocationDistrictItem()..refId = result;
-  }
-  
 }

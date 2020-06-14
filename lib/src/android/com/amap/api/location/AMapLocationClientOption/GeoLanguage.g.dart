@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_GeoLanguage {
-  DEFAULT,
-  ZH,
-  EN
+  DEFAULT /* 0 */,
+  ZH /* 0 */,
+  EN /* 0 */
 }

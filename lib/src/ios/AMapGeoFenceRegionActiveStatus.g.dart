@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum AMapGeoFenceRegionActiveStatus {
-  AMapGeoFenceRegionActiveUNMonitor,
-  AMapGeoFenceRegionActiveMonitoring,
-  AMapGeoFenceRegionActivePaused
+  AMapGeoFenceRegionActiveUNMonitor /* 0 */,
+  AMapGeoFenceRegionActiveMonitoring /* 0 */,
+  AMapGeoFenceRegionActivePaused /* 0 */
 }

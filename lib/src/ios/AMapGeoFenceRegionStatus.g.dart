@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////
 
 enum AMapGeoFenceRegionStatus {
-  AMapGeoFenceRegionStatusUnknown,
-  AMapGeoFenceRegionStatusInside,
-  AMapGeoFenceRegionStatusOutside,
-  AMapGeoFenceRegionStatusStayed
+  AMapGeoFenceRegionStatusUnknown /* 0 */,
+  AMapGeoFenceRegionStatusInside /* 1 */,
+  AMapGeoFenceRegionStatusOutside /* 2 */,
+  AMapGeoFenceRegionStatusStayed /* 3 */
 }

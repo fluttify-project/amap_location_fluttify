@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -120,7 +119,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onLocationChanged((com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = (args['var1'])..tag__ = 'amap_location_fluttify'));
+              var1?.onLocationChanged((args['var1'] as Object).as__<com_amap_api_location_AMapLocation>());
               break;
             default:
               break;
@@ -203,8 +202,8 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      final __return__ = com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -355,7 +354,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onLocationChanged((com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = (args['var1'])..tag__ = 'amap_location_fluttify'));
+              var1?.onLocationChanged((args['var1'] as Object).as__<com_amap_api_location_AMapLocation>());
               break;
             default:
               break;
@@ -555,7 +554,7 @@ extension com_amap_api_location_AMapLocationClient_Batch on List<com_amap_api_lo
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

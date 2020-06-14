@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -87,7 +86,7 @@ class AMapGeoFenceManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_doRequireLocationAuth((AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify'), (CLLocationManager()..refId = (args['locationManager'])..tag__ = 'amap_location_fluttify'));
+            delegate?.amapGeoFenceManager_doRequireLocationAuth((args['manager'] as Object).as__<AMapGeoFenceManager>(), (args['locationManager'] as Object).as__<CLLocationManager>());
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
             // print log
@@ -96,7 +95,7 @@ class AMapGeoFenceManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error((AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify'), (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['customID'], (NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify'));
+            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error((args['manager'] as Object).as__<AMapGeoFenceManager>(), (args['regions'] as List).cast<int>().map((it) => AMapGeoFenceRegion()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['customID'], (args['error'] as Object).as__<NSError>());
             break;
           case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
             // print log
@@ -105,7 +104,7 @@ class AMapGeoFenceManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error((AMapGeoFenceManager()..refId = (args['manager'])..tag__ = 'amap_location_fluttify'), (AMapGeoFenceCircleRegion()..refId = (args['region'])..tag__ = 'amap_location_fluttify'), args['customID'], (NSError()..refId = (args['error'])..tag__ = 'amap_location_fluttify'));
+            delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error((args['manager'] as Object).as__<AMapGeoFenceManager>(), (args['region'] as Object).as__<AMapGeoFenceRegion>(), args['customID'], (args['error'] as Object).as__<NSError>());
             break;
           default:
             break;
@@ -302,7 +301,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(__return__);
       return __return__;
     }
@@ -326,7 +325,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(__return__);
       return __return__;
     }
@@ -350,7 +349,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(__return__);
       return __return__;
     }
@@ -374,7 +373,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(__return__);
       return __return__;
     }
@@ -422,7 +421,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       kNativeObjectPool.addAll(__return__);
       return __return__;
     }
@@ -721,7 +720,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -741,7 +740,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -761,7 +760,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -781,7 +780,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -821,7 +820,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoFenceManager()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }

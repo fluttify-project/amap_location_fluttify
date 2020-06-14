@@ -4,11 +4,11 @@
 //////////////////////////////////////////////////////////
 
 enum AMapLocationCoordinateType {
-  AMapLocationCoordinateTypeBaidu,
-  AMapLocationCoordinateTypeMapBar,
-  AMapLocationCoordinateTypeMapABC,
-  AMapLocationCoordinateTypeSoSoMap,
-  AMapLocationCoordinateTypeAliYun,
-  AMapLocationCoordinateTypeGoogle,
-  AMapLocationCoordinateTypeGPS
+  AMapLocationCoordinateTypeBaidu /* 0 */,
+  AMapLocationCoordinateTypeMapBar /* 0 */,
+  AMapLocationCoordinateTypeMapABC /* 0 */,
+  AMapLocationCoordinateTypeSoSoMap /* 0 */,
+  AMapLocationCoordinateTypeAliYun /* 0 */,
+  AMapLocationCoordinateTypeGoogle /* 0 */,
+  AMapLocationCoordinateTypeGPS /* 0 */
 }

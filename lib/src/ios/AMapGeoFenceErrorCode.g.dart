@@ -4,10 +4,10 @@
 //////////////////////////////////////////////////////////
 
 enum AMapGeoFenceErrorCode {
-  AMapGeoFenceErrorUnknown,
-  AMapGeoFenceErrorInvalidParameter,
-  AMapGeoFenceErrorFailureConnection,
-  AMapGeoFenceErrorFailureAuth,
-  AMapGeoFenceErrorNoValidFence,
-  AMapGeoFenceErroFailureLocating
+  AMapGeoFenceErrorUnknown /* 1 */,
+  AMapGeoFenceErrorInvalidParameter /* 2 */,
+  AMapGeoFenceErrorFailureConnection /* 3 */,
+  AMapGeoFenceErrorFailureAuth /* 4 */,
+  AMapGeoFenceErrorNoValidFence /* 5 */,
+  AMapGeoFenceErroFailureLocating /* 6 */
 }

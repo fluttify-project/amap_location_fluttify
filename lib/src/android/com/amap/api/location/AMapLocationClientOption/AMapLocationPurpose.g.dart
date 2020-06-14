@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose {
-  SignIn,
-  Transport,
-  Sport
+  SignIn /* 0 */,
+  Transport /* 0 */,
+  Sport /* 0 */
 }

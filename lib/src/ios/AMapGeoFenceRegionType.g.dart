@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////
 
 enum AMapGeoFenceRegionType {
-  AMapGeoFenceRegionTypeCircle,
-  AMapGeoFenceRegionTypePolygon,
-  AMapGeoFenceRegionTypePOI,
-  AMapGeoFenceRegionTypeDistrict
+  AMapGeoFenceRegionTypeCircle /* 0 */,
+  AMapGeoFenceRegionTypePolygon /* 1 */,
+  AMapGeoFenceRegionTypePOI /* 2 */,
+  AMapGeoFenceRegionTypeDistrict /* 3 */
 }

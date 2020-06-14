@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum AMapLocationReGeocodeLanguage {
-  AMapLocationReGeocodeLanguageDefault,
-  AMapLocationReGeocodeLanguageChinse,
-  AMapLocationReGeocodeLanguageEnglish
+  AMapLocationReGeocodeLanguageDefault /* 0 */,
+  AMapLocationReGeocodeLanguageChinse /* 1 */,
+  AMapLocationReGeocodeLanguageEnglish /* 2 */
 }

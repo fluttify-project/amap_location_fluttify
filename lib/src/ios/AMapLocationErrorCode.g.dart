@@ -4,15 +4,15 @@
 //////////////////////////////////////////////////////////
 
 enum AMapLocationErrorCode {
-  AMapLocationErrorUnknown,
-  AMapLocationErrorLocateFailed,
-  AMapLocationErrorReGeocodeFailed,
-  AMapLocationErrorTimeOut,
-  AMapLocationErrorCanceled,
-  AMapLocationErrorCannotFindHost,
-  AMapLocationErrorBadURL,
-  AMapLocationErrorNotConnectedToInternet,
-  AMapLocationErrorCannotConnectToHost,
-  AMapLocationErrorRegionMonitoringFailure,
-  AMapLocationErrorRiskOfFakeLocation
+  AMapLocationErrorUnknown /* 1 */,
+  AMapLocationErrorLocateFailed /* 2 */,
+  AMapLocationErrorReGeocodeFailed /* 3 */,
+  AMapLocationErrorTimeOut /* 4 */,
+  AMapLocationErrorCanceled /* 5 */,
+  AMapLocationErrorCannotFindHost /* 6 */,
+  AMapLocationErrorBadURL /* 7 */,
+  AMapLocationErrorNotConnectedToInternet /* 8 */,
+  AMapLocationErrorCannotConnectToHost /* 9 */,
+  AMapLocationErrorRegionMonitoringFailure /* 10 */,
+  AMapLocationErrorRiskOfFakeLocation /* 11 */
 }

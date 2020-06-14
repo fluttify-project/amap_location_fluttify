@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////
 
 enum AMapGeoFenceActiveAction {
-  AMapGeoFenceActiveActionNone,
-  AMapGeoFenceActiveActionInside,
-  AMapGeoFenceActiveActionOutside,
-  AMapGeoFenceActiveActionStayed
+  AMapGeoFenceActiveActionNone /* 0 */,
+  AMapGeoFenceActiveActionInside /* 0 */,
+  AMapGeoFenceActiveActionOutside /* 0 */,
+  AMapGeoFenceActiveActionStayed /* 0 */
 }
