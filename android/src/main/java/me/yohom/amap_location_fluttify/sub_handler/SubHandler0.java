@@ -710,7 +710,8 @@ public class SubHandler0 {
             put("com.amap.api.location.LocationManagerBase::setLocationOption", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.location.AMapLocationClientOption var1 = (com.amap.api.location.AMapLocationClientOption) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.AMapLocationClientOption var1 = __var1__ != null ? (com.amap.api.location.AMapLocationClientOption) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1109,7 +1110,8 @@ public class SubHandler0 {
                 // jsonable arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                android.app.Notification var2 = (android.app.Notification) getHEAP().get((int) ((Map<String, Object>) __args__).get("var2"));
+                Integer __var2__ = (Integer) ((Map<String, Object>) __args__).get("var2");
+                android.app.Notification var2 = __var2__ != null ? (android.app.Notification) getHEAP().get(__var2__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1173,7 +1175,8 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClient::setLocationOption", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.location.AMapLocationClientOption var1 = (com.amap.api.location.AMapLocationClientOption) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.AMapLocationClientOption var1 = __var1__ != null ? (com.amap.api.location.AMapLocationClientOption) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1635,7 +1638,8 @@ public class SubHandler0 {
                 // jsonable arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                android.app.Notification var2 = (android.app.Notification) getHEAP().get((int) ((Map<String, Object>) __args__).get("var2"));
+                Integer __var2__ = (Integer) ((Map<String, Object>) __args__).get("var2");
+                android.app.Notification var2 = __var2__ != null ? (android.app.Notification) getHEAP().get(__var2__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1699,7 +1703,8 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClient::getDeviceId", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
             
                 // ref
             
@@ -1896,7 +1901,8 @@ public class SubHandler0 {
             put("com.amap.api.location.CoordinateConverter::coord", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2003,9 +2009,11 @@ public class SubHandler0 {
             put("com.amap.api.location.CoordinateConverter::calculateLineDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.location.DPoint var0 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.location.DPoint var0 = __var0__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var0__) : null;
                 // ref arg
-                com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
             
                 // ref
             
@@ -2227,7 +2235,8 @@ public class SubHandler0 {
             put("com.amap.api.location.UmidtokenInfo::setUmidtoken", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
                 // jsonable arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
@@ -4221,7 +4230,8 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocation::setLocationQualityReport", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.location.AMapLocationQualityReport var1 = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.AMapLocationQualityReport var1 = __var1__ != null ? (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4916,8 +4926,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
+                    jsonableResult = __result__.ordinal();
                 }
             
                 __methodResult__.success(jsonableResult);
@@ -4989,8 +4998,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
+                    jsonableResult = __result__.ordinal();
                 }
             
                 __methodResult__.success(jsonableResult);
@@ -5713,8 +5721,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
+                    jsonableResult = __result__.ordinal();
                 }
             
                 __methodResult__.success(jsonableResult);
@@ -5954,8 +5961,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
+                    jsonableResult = __result__.ordinal();
                 }
             
                 __methodResult__.success(jsonableResult);
@@ -6120,7 +6126,8 @@ public class SubHandler0 {
             put("com.amap.api.location.APSServiceBase::onStartCommand", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.content.Intent var1 = (android.content.Intent) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                android.content.Intent var1 = __var1__ != null ? (android.content.Intent) getHEAP().get(__var1__) : null;
                 // jsonable arg
                 int var2 = (int) ((Map<String, Object>) __args__).get("var2");
                 // jsonable arg

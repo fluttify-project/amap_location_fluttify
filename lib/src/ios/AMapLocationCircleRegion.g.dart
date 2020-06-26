@@ -69,7 +69,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center.refId, "radius": radius, "identifier": identifier, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center?.refId, "radius": radius, "identifier": identifier, "refId": refId});
   
   
     // handle native call
@@ -80,7 +80,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
       return null;
     } else {
       final __return__ = AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

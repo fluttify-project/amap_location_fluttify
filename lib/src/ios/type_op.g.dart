@@ -157,132 +157,101 @@ extension TypeOpAmapLocationFluttifyIOS on Object {
     if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
       return this as T;
     }
+    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapGeoFenceManager) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapGeoFenceManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationCircleRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationPolygonRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationPolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFenceRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapGeoFenceRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFenceCircleRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapGeoFenceCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFencePolygonRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapGeoFencePolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFencePOIRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapGeoFencePOIRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFenceDistrictRegion) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapGeoFenceDistrictRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationManager) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationReGeocode) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationPoint) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationPOIItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationPOIItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationDistrictItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (AMapLocationDistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLLocation) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLHeading) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CGRect) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CGPoint) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CGSize) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIEdgeInsets) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLLocationManager) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSError) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSCoding) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSCopying) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIViewController) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIControl) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIImage) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIColor) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSData) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSOperation) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
   }

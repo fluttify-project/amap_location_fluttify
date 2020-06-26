@@ -31,7 +31,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.LocationManagerBase::setLocationOption', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.LocationManagerBase::setLocationOption', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -62,18 +62,15 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
     MethodChannel('com.amap.api.location.LocationManagerBase::setLocationListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onLocationChanged([])');
+                debugPrint('fluttify-dart-callback: onLocationChanged([\'var1\':${args['var1']}])');
               }
         
               // handle the native call
-              var1?.onLocationChanged((args['var1'] as Object).as__<com_amap_api_location_AMapLocation>());
+              var1?.onLocationChanged(TypeOpAmapLocationFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_location_AMapLocation>());
               break;
             default:
               break;
@@ -157,7 +154,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -249,18 +246,15 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
     MethodChannel('com.amap.api.location.LocationManagerBase::unRegisterLocationListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onLocationChanged([])');
+                debugPrint('fluttify-dart-callback: onLocationChanged([\'var1\':${args['var1']}])');
               }
         
               // handle the native call
-              var1?.onLocationChanged((args['var1'] as Object).as__<com_amap_api_location_AMapLocation>());
+              var1?.onLocationChanged(TypeOpAmapLocationFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_location_AMapLocation>());
               break;
             default:
               break;
@@ -309,7 +303,7 @@ mixin com_amap_api_location_LocationManagerBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.LocationManagerBase::enableBackgroundLocation', {"var1": var1, "var2": var2.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.LocationManagerBase::enableBackgroundLocation', {"var1": var1, "var2": var2?.refId, "refId": refId});
   
   
     // handle native call

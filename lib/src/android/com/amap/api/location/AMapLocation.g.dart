@@ -1539,7 +1539,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -1563,7 +1563,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -1576,7 +1576,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call

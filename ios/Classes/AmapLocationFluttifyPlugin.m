@@ -6,7 +6,7 @@
 #import <objc/runtime.h>
 #import "SubHandler/SubHandler0.h"
 #import "SubHandler/SubHandler1.h"
-#import "SubHandler/SubHandlerCustom.h"
+#import "SubHandler/Custom/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -68,13 +68,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* arglocationManager = @(locationManager.hash);
-  HEAP[arglocationManager] = locationManager;
+  NSNumber* arglocationManager = [NSNull null];
+  if (locationManager != nil) {
+      arglocationManager = [NSNumber numberWithLong: locationManager.hash];
+      HEAP[arglocationManager] = locationManager;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
+  });
   
 }
 
@@ -90,24 +100,34 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // list callback arg
   NSMutableArray<NSNumber*>* argregions = [NSMutableArray arrayWithCapacity:regions.count];
   for (int __i__ = 0; __i__ < regions.count; __i__++) {
       NSObject* item = ((NSObject*) [regions objectAtIndex:__i__]);
       // return to dart side data
-      argregions[__i__] = @(item.hash);
+      argregions[__i__] = [NSNumber numberWithLong: item.hash];
       // add to HEAP
-      HEAP[@(item.hash)] = item;
+      HEAP[[NSNumber numberWithLong: item.hash]] = item;
   }
   // jsonable callback arg
   NSString* argcustomID = customID;
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error" arguments:@{@"manager": argmanager, @"regions": argregions, @"customID": argcustomID, @"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error" arguments:@{@"manager": argmanager, @"regions": argregions, @"customID": argcustomID, @"error": argerror}];
+  });
   
 }
 
@@ -123,18 +143,32 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argregion = @(region.hash);
-  HEAP[argregion] = region;
+  NSNumber* argregion = [NSNull null];
+  if (region != nil) {
+      argregion = [NSNumber numberWithLong: region.hash];
+      HEAP[argregion] = region;
+  }
+  
   // jsonable callback arg
   NSString* argcustomID = customID;
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error" arguments:@{@"manager": argmanager, @"region": argregion, @"customID": argcustomID, @"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error" arguments:@{@"manager": argmanager, @"region": argregion, @"customID": argcustomID, @"error": argerror}];
+  });
   
 }
 
@@ -150,13 +184,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* arglocationManager = @(locationManager.hash);
-  HEAP[arglocationManager] = locationManager;
+  NSNumber* arglocationManager = [NSNull null];
+  if (locationManager != nil) {
+      arglocationManager = [NSNumber numberWithLong: locationManager.hash];
+      HEAP[arglocationManager] = locationManager;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth" arguments:@{@"manager": argmanager, @"locationManager": arglocationManager}];
+  });
   
 }
 
@@ -172,13 +216,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError" arguments:@{@"manager": argmanager, @"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError" arguments:@{@"manager": argmanager, @"error": argerror}];
+  });
   
 }
 
@@ -194,13 +248,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* arglocation = @(location.hash);
-  HEAP[arglocation] = location;
+  NSNumber* arglocation = [NSNull null];
+  if (location != nil) {
+      arglocation = [NSNumber numberWithLong: location.hash];
+      HEAP[arglocation] = location;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation" arguments:@{@"manager": argmanager, @"location": arglocation}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation" arguments:@{@"manager": argmanager, @"location": arglocation}];
+  });
   
 }
 
@@ -216,16 +280,30 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* arglocation = @(location.hash);
-  HEAP[arglocation] = location;
+  NSNumber* arglocation = [NSNull null];
+  if (location != nil) {
+      arglocation = [NSNumber numberWithLong: location.hash];
+      HEAP[arglocation] = location;
+  }
+  
   // ref callback arg
-  NSNumber* argreGeocode = @(reGeocode.hash);
-  HEAP[argreGeocode] = reGeocode;
+  NSNumber* argreGeocode = [NSNull null];
+  if (reGeocode != nil) {
+      argreGeocode = [NSNumber numberWithLong: reGeocode.hash];
+      HEAP[argreGeocode] = reGeocode;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode" arguments:@{@"manager": argmanager, @"location": arglocation, @"reGeocode": argreGeocode}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode" arguments:@{@"manager": argmanager, @"location": arglocation, @"reGeocode": argreGeocode}];
+  });
   
 }
 
@@ -241,12 +319,18 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // enum callback arg
   NSNumber* argstatus = @((NSInteger) status);
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus" arguments:@{@"manager": argmanager, @"status": argstatus}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus" arguments:@{@"manager": argmanager, @"status": argstatus}];
+  });
   
 }
 
@@ -262,12 +346,18 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration"
-              arguments:@{}
-                 result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration"
+                  arguments:@{}
+                     result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
+  });
   
   // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
   // 相关issue https://github.com/flutter/flutter/issues/28310
@@ -292,13 +382,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argnewHeading = @(newHeading.hash);
-  HEAP[argnewHeading] = newHeading;
+  NSNumber* argnewHeading = [NSNull null];
+  if (newHeading != nil) {
+      argnewHeading = [NSNumber numberWithLong: newHeading.hash];
+      HEAP[argnewHeading] = newHeading;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading" arguments:@{@"manager": argmanager, @"newHeading": argnewHeading}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading" arguments:@{@"manager": argmanager, @"newHeading": argnewHeading}];
+  });
   
 }
 
@@ -314,13 +414,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argregion = @(region.hash);
-  HEAP[argregion] = region;
+  NSNumber* argregion = [NSNull null];
+  if (region != nil) {
+      argregion = [NSNumber numberWithLong: region.hash];
+      HEAP[argregion] = region;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  });
   
 }
 
@@ -336,13 +446,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argregion = @(region.hash);
-  HEAP[argregion] = region;
+  NSNumber* argregion = [NSNull null];
+  if (region != nil) {
+      argregion = [NSNumber numberWithLong: region.hash];
+      HEAP[argregion] = region;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  });
   
 }
 
@@ -358,13 +478,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argregion = @(region.hash);
-  HEAP[argregion] = region;
+  NSNumber* argregion = [NSNull null];
+  if (region != nil) {
+      argregion = [NSNumber numberWithLong: region.hash];
+      HEAP[argregion] = region;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion" arguments:@{@"manager": argmanager, @"region": argregion}];
+  });
   
 }
 
@@ -380,15 +510,25 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // enum callback arg
   NSNumber* argstate = @((NSInteger) state);
   // ref callback arg
-  NSNumber* argregion = @(region.hash);
-  HEAP[argregion] = region;
+  NSNumber* argregion = [NSNull null];
+  if (region != nil) {
+      argregion = [NSNumber numberWithLong: region.hash];
+      HEAP[argregion] = region;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion" arguments:@{@"manager": argmanager, @"state": argstate, @"region": argregion}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion" arguments:@{@"manager": argmanager, @"state": argstate, @"region": argregion}];
+  });
   
 }
 
@@ -404,16 +544,30 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
   // ref callback arg
-  NSNumber* argregion = @(region.hash);
-  HEAP[argregion] = region;
+  NSNumber* argregion = [NSNull null];
+  if (region != nil) {
+      argregion = [NSNumber numberWithLong: region.hash];
+      HEAP[argregion] = region;
+  }
+  
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError" arguments:@{@"manager": argmanager, @"region": argregion, @"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError" arguments:@{@"manager": argmanager, @"region": argregion, @"error": argerror}];
+  });
   
 }
 

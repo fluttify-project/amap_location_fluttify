@@ -234,7 +234,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
       return null;
     } else {
       final __return__ = android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -247,7 +247,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPendingIntent', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPendingIntent', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -330,7 +330,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
       return null;
     } else {
       final __return__ = com_amap_api_fence_PoiItem()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -343,7 +343,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPoiItem', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setPoiItem', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -391,7 +391,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setDistrictItemList', {"var1": var1.map((__it__) => __it__.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setDistrictItemList', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
   
   
     // handle native call
@@ -690,7 +690,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
       return null;
     } else {
       final __return__ = com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -703,7 +703,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setCenter', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setCenter', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -871,7 +871,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setCurrentLocation', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFence::setCurrentLocation', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -906,7 +906,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
