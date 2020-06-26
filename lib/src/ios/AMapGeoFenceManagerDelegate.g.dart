@@ -6,12 +6,13 @@
 import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+
+
 
 mixin AMapGeoFenceManagerDelegate on NSObject {
   
@@ -20,10 +21,12 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<void> amapGeoFenceManager_doRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(locationManager);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (locationManager is Ref) kNativeObjectPool.add(locationManager);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapGeoFenceManager_doRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
@@ -32,9 +35,9 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager manager, List<AMapGeoFenceRegion> regions, String customID, NSError error) {
-    kNativeObjectPool.add(manager);
+    if (manager is Ref) kNativeObjectPool.add(manager);
     kNativeObjectPool.addAll(regions);
-    kNativeObjectPool.add(error);
+    if (error is Ref) kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error::kNativeObjectPool: $kNativeObjectPool');
@@ -43,9 +46,9 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(AMapGeoFenceManager manager, AMapGeoFenceRegion region, String customID, NSError error) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(region);
-    kNativeObjectPool.add(error);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (region is Ref) kNativeObjectPool.add(region);
+    if (error is Ref) kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error::kNativeObjectPool: $kNativeObjectPool');
@@ -53,3 +56,4 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
   }
   
 }
+

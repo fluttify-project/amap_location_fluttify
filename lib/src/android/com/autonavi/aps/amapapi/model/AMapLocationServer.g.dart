@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -334,7 +333,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
       return null;
     } else {
       final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

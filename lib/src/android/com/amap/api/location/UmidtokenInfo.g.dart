@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -107,7 +106,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken', {"var0": var0.refId, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken', {"var0": var0?.refId, "var1": var1});
   
   
     // handle native call

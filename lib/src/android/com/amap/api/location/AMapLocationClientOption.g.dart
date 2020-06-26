@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -118,7 +117,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -166,7 +165,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -214,7 +213,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -262,7 +261,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -310,7 +309,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -358,7 +357,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -395,7 +394,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationMode', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationMode', {"var1": var1.index + 0, "refId": refId});
   
   
     // handle native call
@@ -406,7 +405,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -443,7 +442,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol', {"var0": var0.index});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol', {"var0": var0.index + 0});
   
   
     // handle native call
@@ -502,7 +501,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -550,7 +549,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -574,7 +573,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -622,7 +621,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -670,7 +669,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -718,7 +717,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -766,7 +765,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -814,7 +813,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -862,7 +861,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -886,7 +885,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -947,7 +946,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGeoLanguage', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setGeoLanguage', {"var1": var1.index + 0, "refId": refId});
   
   
     // handle native call
@@ -958,7 +957,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -1054,7 +1053,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -1067,7 +1066,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationPurpose', {"var1": var1.index, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationPurpose', {"var1": var1.index + 0, "refId": refId});
   
   
     // handle native call
@@ -1078,7 +1077,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationClientOption()..refId = __result__..tag__ = 'amap_location_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

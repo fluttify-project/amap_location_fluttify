@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum AMapLocationRegionState {
-  AMapLocationRegionStateUnknow,
-  AMapLocationRegionStateInside,
-  AMapLocationRegionStateOutside
+  AMapLocationRegionStateUnknow /* 0 */,
+  AMapLocationRegionStateInside /* 1 */,
+  AMapLocationRegionStateOutside /* 2 */
 }

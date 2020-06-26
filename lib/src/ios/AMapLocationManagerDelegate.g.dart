@@ -6,12 +6,13 @@
 import 'dart:typed_data';
 
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+
+
 
 mixin AMapLocationManagerDelegate on NSObject {
   
@@ -20,10 +21,12 @@ mixin AMapLocationManagerDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<void> amapLocationManager_doRequireLocationAuth(AMapLocationManager manager, CLLocationManager locationManager) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(locationManager);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (locationManager is Ref) kNativeObjectPool.add(locationManager);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_doRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
@@ -32,8 +35,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didFailWithError(AMapLocationManager manager, NSError error) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(error);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (error is Ref) kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didFailWithError::kNativeObjectPool: $kNativeObjectPool');
@@ -42,8 +45,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didUpdateLocation(AMapLocationManager manager, CLLocation location) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(location);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (location is Ref) kNativeObjectPool.add(location);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didUpdateLocation::kNativeObjectPool: $kNativeObjectPool');
@@ -52,9 +55,9 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didUpdateLocation_reGeocode(AMapLocationManager manager, CLLocation location, AMapLocationReGeocode reGeocode) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(location);
-    kNativeObjectPool.add(reGeocode);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (location is Ref) kNativeObjectPool.add(location);
+    if (reGeocode is Ref) kNativeObjectPool.add(reGeocode);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didUpdateLocation_reGeocode::kNativeObjectPool: $kNativeObjectPool');
@@ -63,7 +66,7 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didChangeAuthorizationStatus(AMapLocationManager manager, CLAuthorizationStatus status) {
-    kNativeObjectPool.add(manager);
+    if (manager is Ref) kNativeObjectPool.add(manager);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didChangeAuthorizationStatus::kNativeObjectPool: $kNativeObjectPool');
@@ -72,7 +75,7 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<bool> amapLocationManagerShouldDisplayHeadingCalibration(AMapLocationManager manager) {
-    kNativeObjectPool.add(manager);
+    if (manager is Ref) kNativeObjectPool.add(manager);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManagerShouldDisplayHeadingCalibration::kNativeObjectPool: $kNativeObjectPool');
@@ -81,8 +84,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didUpdateHeading(AMapLocationManager manager, CLHeading newHeading) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(newHeading);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (newHeading is Ref) kNativeObjectPool.add(newHeading);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didUpdateHeading::kNativeObjectPool: $kNativeObjectPool');
@@ -91,8 +94,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didStartMonitoringForRegion(AMapLocationManager manager, AMapLocationRegion region) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(region);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (region is Ref) kNativeObjectPool.add(region);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didStartMonitoringForRegion::kNativeObjectPool: $kNativeObjectPool');
@@ -101,8 +104,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didEnterRegion(AMapLocationManager manager, AMapLocationRegion region) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(region);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (region is Ref) kNativeObjectPool.add(region);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didEnterRegion::kNativeObjectPool: $kNativeObjectPool');
@@ -111,8 +114,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didExitRegion(AMapLocationManager manager, AMapLocationRegion region) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(region);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (region is Ref) kNativeObjectPool.add(region);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didExitRegion::kNativeObjectPool: $kNativeObjectPool');
@@ -121,8 +124,8 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_didDetermineState_forRegion(AMapLocationManager manager, AMapLocationRegionState state, AMapLocationRegion region) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(region);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (region is Ref) kNativeObjectPool.add(region);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_didDetermineState_forRegion::kNativeObjectPool: $kNativeObjectPool');
@@ -131,9 +134,9 @@ mixin AMapLocationManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> amapLocationManager_monitoringDidFailForRegion_withError(AMapLocationManager manager, AMapLocationRegion region, NSError error) {
-    kNativeObjectPool.add(manager);
-    kNativeObjectPool.add(region);
-    kNativeObjectPool.add(error);
+    if (manager is Ref) kNativeObjectPool.add(manager);
+    if (region is Ref) kNativeObjectPool.add(region);
+    if (error is Ref) kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
       debugPrint('amapLocationManager_monitoringDidFailForRegion_withError::kNativeObjectPool: $kNativeObjectPool');
@@ -141,3 +144,4 @@ mixin AMapLocationManagerDelegate on NSObject {
   }
   
 }
+

@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_AMapLocationMode {
-  Battery_Saving,
-  Device_Sensors,
-  Hight_Accuracy
+  Battery_Saving /* 0 */,
+  Device_Sensors /* 0 */,
+  Hight_Accuracy /* 0 */
 }
