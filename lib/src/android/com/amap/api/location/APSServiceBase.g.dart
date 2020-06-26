@@ -55,7 +55,7 @@ mixin com_amap_api_location_APSServiceBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.APSServiceBase::onStartCommand', {"var1": var1.refId, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.APSServiceBase::onStartCommand', {"var1": var1?.refId, "var2": var2, "var3": var3, "refId": refId});
   
   
     // handle native call

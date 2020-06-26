@@ -42,7 +42,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
       return null;
     } else {
       final __return__ = android_app_PendingIntent()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -86,18 +86,15 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
     MethodChannel('com.amap.api.fence.GeoFenceManagerBase::setGeoFenceListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onGeoFenceCreateFinished([\'var2\':${args['var2']}, \'var3\':${args['var3']}])');
+                debugPrint('fluttify-dart-callback: onGeoFenceCreateFinished([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
               }
         
               // handle the native call
-              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it..tag__ = 'amap_location_fluttify').toList(), args['var2'], args['var3']);
+              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((__it__) => TypeOpAmapLocationFluttifyAndroid(__it__).as__<com_amap_api_fence_GeoFence>()).toList(), args['var2'], args['var3']);
               break;
             default:
               break;
@@ -122,7 +119,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence', {"var1": var1.refId, "var2": var2, "var3": var3, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence', {"var1": var1?.refId, "var2": var2, "var3": var3, "refId": refId});
   
   
     // handle native call
@@ -146,7 +143,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::addPolygonGeoFence', {"var1": var1.map((__it__) => __it__.refId).toList(), "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::addPolygonGeoFence', {"var1": var1.map((__it__) => __it__?.refId).toList(), "var2": var2, "refId": refId});
   
   
     // handle native call
@@ -170,7 +167,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::addNearbyGeoFence', {"var1": var1, "var2": var2, "var3": var3.refId, "var4": var4, "var5": var5, "var6": var6, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::addNearbyGeoFence', {"var1": var1, "var2": var2, "var3": var3?.refId, "var4": var4, "var5": var5, "var6": var6, "refId": refId});
   
   
     // handle native call
@@ -266,7 +263,7 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::removeGeoFence__com_amap_api_fence_GeoFence', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.GeoFenceManagerBase::removeGeoFence__com_amap_api_fence_GeoFence', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call

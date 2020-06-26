@@ -362,7 +362,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapLocationPoint* location = (AMapLocationPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapLocationPoint* location = (AMapLocationPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -606,7 +606,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                CLLocation* currentLocation = (CLLocation*) HEAP[@([args[@"currentLocation"] integerValue])];
+                CLLocation* currentLocation = (CLLocation*) HEAP[args[@"currentLocation"]];
         
                 // ref
                 AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1164,7 +1164,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationPoint* location = (AMapLocationPoint*) HEAP[@([args[@"location"] integerValue])];
+                AMapLocationPoint* location = (AMapLocationPoint*) HEAP[args[@"location"]];
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1392,188 +1392,6 @@ extern BOOL enableLog;
             methodResult(@(isTargetType));
         },
         
-        @"RefClass::asAMapGeoFenceManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapGeoFenceManager *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationCircleRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationPolygonRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapGeoFenceRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapGeoFenceCircleRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapGeoFencePolygonRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapGeoFencePOIRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapGeoFenceDistrictRegion *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationManager *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationReGeocode *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationPoint *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationPOIItem *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
-        @"RefClass::asAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            // 转型
-            ref = (AMapLocationDistrictItem *) ref;
-            // 放回HEAP
-            HEAP[refId] = ref;
-        
-            methodResult(refId);
-        },
-        
         @"ObjectFactory::createAMapGeoFenceManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -1581,9 +1399,9 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1595,9 +1413,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1609,9 +1427,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1623,9 +1441,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1637,9 +1455,9 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1651,9 +1469,9 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1665,9 +1483,9 @@ extern BOOL enableLog;
             }
         
             AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1679,9 +1497,9 @@ extern BOOL enableLog;
             }
         
             AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1693,9 +1511,9 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1707,9 +1525,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationManager* ref = [[AMapLocationManager alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1721,9 +1539,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1735,9 +1553,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1749,9 +1567,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1763,9 +1581,9 @@ extern BOOL enableLog;
             }
         
             AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
-            HEAP[@(ref.hash)] = ref;
+            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult(@(ref.hash));
+            methodResult([NSNumber numberWithLong: ref.hash]);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1775,9 +1593,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1790,9 +1608,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1805,9 +1623,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1820,9 +1638,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1835,9 +1653,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1850,9 +1668,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1865,9 +1683,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1880,9 +1698,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1895,9 +1713,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1910,9 +1728,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationManager* ref = [[AMapLocationManager alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1925,9 +1743,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1940,9 +1758,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1955,9 +1773,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1970,9 +1788,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1983,7 +1801,7 @@ extern BOOL enableLog;
         @"AMapLocationCoordinateConvert::AMapLocationCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
             // enum arg
@@ -2003,15 +1821,15 @@ extern BOOL enableLog;
             // result
             // 返回值: 结构体
             NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[@(resultValue.hash)] = resultValue;
-            NSNumber* jsonableResult = @(resultValue.hash);
+            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
             methodResult(jsonableResult);
         },
         @"AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
+            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
         

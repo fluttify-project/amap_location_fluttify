@@ -97,7 +97,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
       return null;
     } else {
       final __return__ = AMapLocationRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -110,7 +110,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate?.refId, "refId": refId});
   
   
     // handle native call

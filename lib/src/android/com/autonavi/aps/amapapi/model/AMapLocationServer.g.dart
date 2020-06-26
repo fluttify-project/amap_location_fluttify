@@ -333,7 +333,7 @@ class com_autonavi_aps_amapapi_model_AMapLocationServer extends com_amap_api_loc
       return null;
     } else {
       final __return__ = com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

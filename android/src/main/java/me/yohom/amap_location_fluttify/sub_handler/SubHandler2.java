@@ -503,7 +503,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.location.AMapLocationQualityReport var1 = (com.amap.api.location.AMapLocationQualityReport) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.AMapLocationQualityReport var1 = __var1__ != null ? (com.amap.api.location.AMapLocationQualityReport) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2570,7 +2571,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    android.content.Intent var1 = (android.content.Intent) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.content.Intent var1 = __var1__ != null ? (android.content.Intent) getHEAP().get(__var1__) : null;
                     // jsonable arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
                     // jsonable arg
@@ -3500,7 +3502,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
                     // jsonable arg
                     Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                     // jsonable arg
@@ -3584,7 +3587,8 @@ public class SubHandler2 {
                     // jsonable arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    com.amap.api.location.DPoint var3 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var3"));
+                    Integer __var3__ = (Integer) ((Map<String, Object>) __args__).get("var3");
+                    com.amap.api.location.DPoint var3 = __var3__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var3__) : null;
                     // jsonable arg
                     Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
                     // jsonable arg
@@ -3739,7 +3743,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.fence.GeoFence var1 = (com.amap.api.fence.GeoFence) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.fence.GeoFence var1 = __var1__ != null ? (com.amap.api.fence.GeoFence) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4206,7 +4211,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    android.app.PendingIntent var1 = (android.app.PendingIntent) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    android.app.PendingIntent var1 = __var1__ != null ? (android.app.PendingIntent) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4350,7 +4356,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.fence.PoiItem var1 = (com.amap.api.fence.PoiItem) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.fence.PoiItem var1 = __var1__ != null ? (com.amap.api.fence.PoiItem) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4889,7 +4896,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5134,7 +5142,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.location.AMapLocation var1 = (com.amap.api.location.AMapLocation) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.AMapLocation var1 = __var1__ != null ? (com.amap.api.location.AMapLocation) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5283,7 +5292,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
                     // jsonable arg
                     Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                     // jsonable arg
@@ -5367,7 +5377,8 @@ public class SubHandler2 {
                     // jsonable arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    com.amap.api.location.DPoint var3 = (com.amap.api.location.DPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var3"));
+                    Integer __var3__ = (Integer) ((Map<String, Object>) __args__).get("var3");
+                    com.amap.api.location.DPoint var3 = __var3__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var3__) : null;
                     // jsonable arg
                     Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
                     // jsonable arg
@@ -5522,7 +5533,8 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    com.amap.api.fence.GeoFence var1 = (com.amap.api.fence.GeoFence) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.fence.GeoFence var1 = __var1__ != null ? (com.amap.api.fence.GeoFence) getHEAP().get(__var1__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6501,6 +6513,97 @@ public class SubHandler2 {
             
                 __methodResult__.success(__resultList__);
             });
+            put("RefClass::isKindOfcom_autonavi_aps_amapapi_model_AMapLocationServer", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.autonavi.aps.amapapi.model.AMapLocationServer);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_AMapLocationClient", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.AMapLocationClient);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_DPoint", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.DPoint);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_CoordinateConverter", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.CoordinateConverter);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_CoordUtil", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.CoordUtil);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_UmidtokenInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.UmidtokenInfo);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_AMapLocation", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.AMapLocation);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_AMapLocationClientOption", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.AMapLocationClientOption);
+            });
+            put("RefClass::isKindOfcom_amap_api_location_AMapLocationQualityReport", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.location.AMapLocationQualityReport);
+            });
+            put("RefClass::isKindOfcom_amap_api_fence_DistrictItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.fence.DistrictItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_fence_GeoFenceClient", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.fence.GeoFenceClient);
+            });
+            put("RefClass::isKindOfcom_amap_api_fence_GeoFence", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.fence.GeoFence);
+            });
+            put("RefClass::isKindOfcom_amap_api_fence_PoiItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                Object ref = getHEAP().get(refId);
+            
+                __methodResult__.success(ref instanceof com.amap.api.fence.PoiItem);
+            });
             // factory
             put("ObjectFactory::createcom_autonavi_aps_amapapi_model_AMapLocationServer__String", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
@@ -6530,7 +6633,8 @@ public class SubHandler2 {
             
                 // args
                 // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var1 = __var1__ != null ? (android.content.Context) getHEAP().get(__var1__) : null;
             
                 // create target object
                 com.amap.api.location.AMapLocationClient __obj__ = new com.amap.api.location.AMapLocationClient(var1);
@@ -6551,9 +6655,11 @@ public class SubHandler2 {
             
                 // args
                 // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var1 = __var1__ != null ? (android.content.Context) getHEAP().get(__var1__) : null;
                 // ref arg
-                android.content.Intent var2 = (android.content.Intent) getHEAP().get((int) ((Map<String, Object>) __args__).get("var2"));
+                Integer __var2__ = (Integer) ((Map<String, Object>) __args__).get("var2");
+                android.content.Intent var2 = __var2__ != null ? (android.content.Intent) getHEAP().get(__var2__) : null;
             
                 // create target object
                 com.amap.api.location.AMapLocationClient __obj__ = new com.amap.api.location.AMapLocationClient(var1, var2);
@@ -6617,7 +6723,8 @@ public class SubHandler2 {
             
                 // args
                 // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                android.content.Context var1 = __var1__ != null ? (android.content.Context) getHEAP().get(__var1__) : null;
             
                 // create target object
                 com.amap.api.location.CoordinateConverter __obj__ = new com.amap.api.location.CoordinateConverter(var1);
@@ -6690,391 +6797,6 @@ public class SubHandler2 {
                 }
             
                 __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocation__android_location_Location");
-                }
-            
-                // args
-                // ref arg
-                android.location.Location var1 = (android.location.Location) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
-            
-                // create target object
-                com.amap.api.location.AMapLocation __obj__ = new com.amap.api.location.AMapLocation(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationClientOption__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.location.AMapLocationClientOption __obj__ = new com.amap.api.location.AMapLocationClientOption();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_location_AMapLocationQualityReport__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.location.AMapLocationQualityReport __obj__ = new com.amap.api.location.AMapLocationQualityReport();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_fence_DistrictItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_DistrictItem__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.fence.DistrictItem __obj__ = new com.amap.api.fence.DistrictItem();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFenceClient__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
-            
-                // create target object
-                com.amap.api.fence.GeoFenceClient __obj__ = new com.amap.api.fence.GeoFenceClient(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_fence_GeoFence__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_GeoFence__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.fence.GeoFence __obj__ = new com.amap.api.fence.GeoFence();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_fence_PoiItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_fence_PoiItem__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.fence.PoiItem __obj__ = new com.amap.api.fence.PoiItem();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(System.identityHashCode(__obj__));
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_autonavi_aps_amapapi_model_AMapLocationServer__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // create target object
-                    com.autonavi.aps.amapapi.model.AMapLocationServer __obj__ = new com.autonavi.aps.amapapi.model.AMapLocationServer(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_amap_api_location_AMapLocationClient__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
-            
-                    // create target object
-                    com.amap.api.location.AMapLocationClient __obj__ = new com.amap.api.location.AMapLocationClient(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
-                    // ref arg
-                    android.content.Intent var2 = (android.content.Intent) getHEAP().get((int) ((Map<String, Object>) __args__).get("var2"));
-            
-                    // create target object
-                    com.amap.api.location.AMapLocationClient __obj__ = new com.amap.api.location.AMapLocationClient(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_amap_api_location_DPoint__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-            
-            
-                    // create target object
-                    com.amap.api.location.DPoint __obj__ = new com.amap.api.location.DPoint();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_amap_api_location_DPoint__double__double", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // jsonable arg
-                    double var1 = (double) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
-                    double var3 = (double) ((Map<String, Object>) __args__).get("var3");
-            
-                    // create target object
-                    com.amap.api.location.DPoint __obj__ = new com.amap.api.location.DPoint(var1, var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // factory
-            put("ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
-            
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
-            
-                    // create target object
-                    com.amap.api.location.CoordinateConverter __obj__ = new com.amap.api.location.CoordinateConverter(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
-            
-                    // print current HEAP
-                    if (getEnableLog()) {
-                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                    }
-            
-                    __resultList__.add(System.identityHashCode(__obj__));
-                }
-            
-                __methodResult__.success(__resultList__);
             });
         }};
     }
