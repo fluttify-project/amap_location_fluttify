@@ -20,7 +20,7 @@ Future<CLLocationCoordinate2D> AMapLocationCoordinateConvert(CLLocationCoordinat
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCoordinateConvert::AMapLocationCoordinateConvert', {"coordinate": coordinate?.refId, "type": type.index + 0});
+  final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCoordinateConvert::AMapLocationCoordinateConvert', {"coordinate": coordinate?.refId, "type": type.toValue()});
   
 
   // handle native call

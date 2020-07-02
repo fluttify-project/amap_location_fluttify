@@ -57,13 +57,13 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   Future<AMapGeoFenceRegionStatus> get_fenceStatus() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus", {'refId': refId});
   
-    return AMapGeoFenceRegionStatus.values[__result__];
+    return (__result__ as int).toAMapGeoFenceRegionStatus();
   }
   
   Future<AMapGeoFenceRegionType> get_regionType() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType", {'refId': refId});
   
-    return AMapGeoFenceRegionType.values[__result__];
+    return (__result__ as int).toAMapGeoFenceRegionType();
   }
   
   Future<CLLocation> get_currentLocation() async {
@@ -118,14 +118,14 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
   
   Future<List<AMapGeoFenceRegionStatus>> get_fenceStatus_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_fenceStatus_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoFenceRegionStatus.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionStatus()).toList();
   
     return typedResult;
   }
   
   Future<List<AMapGeoFenceRegionType>> get_regionType_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceRegion::get_regionType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoFenceRegionType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionType()).toList();
   
     return typedResult;
   }

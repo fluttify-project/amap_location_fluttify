@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapLocationFluttifyPlugin (SubHandler1)
 - (NSDictionary<NSString*, Handler>*) getSubHandler1 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapLocationReGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log

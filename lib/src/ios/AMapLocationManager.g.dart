@@ -87,7 +87,7 @@ class AMapLocationManager extends NSObject  {
   Future<AMapLocationReGeocodeLanguage> get_reGeocodeLanguage() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'refId': refId});
   
-    return AMapLocationReGeocodeLanguage.values[__result__];
+    return (__result__ as int).toAMapLocationReGeocodeLanguage();
   }
   
   Future<bool> get_detectRiskOfFakeLocation() async {
@@ -149,7 +149,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didChangeAuthorizationStatus(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), CLAuthorizationStatus.values[args['status'] - 0]);
+            delegate?.amapLocationManager_didChangeAuthorizationStatus(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), (args['status'] as int).toCLAuthorizationStatus());
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
             // print log
@@ -203,7 +203,7 @@ class AMapLocationManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.amapLocationManager_didDetermineState_forRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), AMapLocationRegionState.values[args['state'] - 0], TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
+            delegate?.amapLocationManager_didDetermineState_forRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), (args['state'] as int).toAMapLocationRegionState(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
             break;
           case 'Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError':
             // print log
@@ -589,7 +589,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   
   Future<List<AMapLocationReGeocodeLanguage>> get_reGeocodeLanguage_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapLocationManager::get_reGeocodeLanguage_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapLocationReGeocodeLanguage.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapLocationReGeocodeLanguage()).toList();
   
     return typedResult;
   }

@@ -5,7 +5,27 @@
 
 enum AMapGeoFenceActiveAction {
   AMapGeoFenceActiveActionNone /* 0 */,
-  AMapGeoFenceActiveActionInside /* 0 */,
-  AMapGeoFenceActiveActionOutside /* 0 */,
-  AMapGeoFenceActiveActionStayed /* 0 */
+  AMapGeoFenceActiveActionInside /* null */,
+  AMapGeoFenceActiveActionOutside /* null */,
+  AMapGeoFenceActiveActionStayed /* null */
+}
+
+extension AMapGeoFenceActiveActionToX on AMapGeoFenceActiveAction {
+  int toValue() {
+    switch (this) {
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionNone: return 0;
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.index + 0;
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside.index + 0;
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.index + 0;
+    }
+  }
+}
+
+extension AMapGeoFenceActiveActionFromX on int {
+  AMapGeoFenceActiveAction toAMapGeoFenceActiveAction() {
+    switch (this) {
+      case 0: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionNone;
+      default: return AMapGeoFenceActiveAction.values[this + 0];
+    }
+  }
 }

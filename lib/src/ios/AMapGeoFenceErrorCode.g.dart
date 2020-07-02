@@ -11,3 +11,30 @@ enum AMapGeoFenceErrorCode {
   AMapGeoFenceErrorNoValidFence /* 5 */,
   AMapGeoFenceErroFailureLocating /* 6 */
 }
+
+extension AMapGeoFenceErrorCodeToX on AMapGeoFenceErrorCode {
+  int toValue() {
+    switch (this) {
+      case AMapGeoFenceErrorCode.AMapGeoFenceErrorUnknown: return 1;
+      case AMapGeoFenceErrorCode.AMapGeoFenceErrorInvalidParameter: return 2;
+      case AMapGeoFenceErrorCode.AMapGeoFenceErrorFailureConnection: return 3;
+      case AMapGeoFenceErrorCode.AMapGeoFenceErrorFailureAuth: return 4;
+      case AMapGeoFenceErrorCode.AMapGeoFenceErrorNoValidFence: return 5;
+      case AMapGeoFenceErrorCode.AMapGeoFenceErroFailureLocating: return 6;
+    }
+  }
+}
+
+extension AMapGeoFenceErrorCodeFromX on int {
+  AMapGeoFenceErrorCode toAMapGeoFenceErrorCode() {
+    switch (this) {
+      case 1: return AMapGeoFenceErrorCode.AMapGeoFenceErrorUnknown;
+      case 2: return AMapGeoFenceErrorCode.AMapGeoFenceErrorInvalidParameter;
+      case 3: return AMapGeoFenceErrorCode.AMapGeoFenceErrorFailureConnection;
+      case 4: return AMapGeoFenceErrorCode.AMapGeoFenceErrorFailureAuth;
+      case 5: return AMapGeoFenceErrorCode.AMapGeoFenceErrorNoValidFence;
+      case 6: return AMapGeoFenceErrorCode.AMapGeoFenceErroFailureLocating;
+      default: return AMapGeoFenceErrorCode.values[this + 1];
+    }
+  }
+}

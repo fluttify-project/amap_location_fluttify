@@ -53,7 +53,7 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
         handlerMapList.add(SubHandler3.getSubHandler(messenger));
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
+        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, registrar.activity()));
 
         channel.setMethodCallHandler(plugin);
 
@@ -81,7 +81,6 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
         handlerMapList.add(SubHandler3.getSubHandler(messenger));
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);
     }
@@ -99,6 +98,8 @@ public class AmapLocationFluttifyPlugin implements FlutterPlugin, MethodChannel.
             Log.d("fluttify-java", "AmapLocationFluttifyPlugin::onAttachedToActivity@" + binding);
         }
         Activity activity = binding.getActivity();
+
+        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, activity));
 
         // register platform view
         
