@@ -9,3 +9,26 @@ enum AMapGeoFenceRegionStatus {
   AMapGeoFenceRegionStatusOutside /* 2 */,
   AMapGeoFenceRegionStatusStayed /* 3 */
 }
+
+extension AMapGeoFenceRegionStatusToX on AMapGeoFenceRegionStatus {
+  int toValue() {
+    switch (this) {
+      case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusUnknown: return 0;
+      case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusInside: return 1;
+      case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusOutside: return 2;
+      case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusStayed: return 3;
+    }
+  }
+}
+
+extension AMapGeoFenceRegionStatusFromX on int {
+  AMapGeoFenceRegionStatus toAMapGeoFenceRegionStatus() {
+    switch (this) {
+      case 0: return AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusUnknown;
+      case 1: return AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusInside;
+      case 2: return AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusOutside;
+      case 3: return AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusStayed;
+      default: return AMapGeoFenceRegionStatus.values[this + 0];
+    }
+  }
+}

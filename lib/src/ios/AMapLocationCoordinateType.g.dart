@@ -5,10 +5,33 @@
 
 enum AMapLocationCoordinateType {
   AMapLocationCoordinateTypeBaidu /* 0 */,
-  AMapLocationCoordinateTypeMapBar /* 0 */,
-  AMapLocationCoordinateTypeMapABC /* 0 */,
-  AMapLocationCoordinateTypeSoSoMap /* 0 */,
-  AMapLocationCoordinateTypeAliYun /* 0 */,
-  AMapLocationCoordinateTypeGoogle /* 0 */,
-  AMapLocationCoordinateTypeGPS /* 0 */
+  AMapLocationCoordinateTypeMapBar /* null */,
+  AMapLocationCoordinateTypeMapABC /* null */,
+  AMapLocationCoordinateTypeSoSoMap /* null */,
+  AMapLocationCoordinateTypeAliYun /* null */,
+  AMapLocationCoordinateTypeGoogle /* null */,
+  AMapLocationCoordinateTypeGPS /* null */
+}
+
+extension AMapLocationCoordinateTypeToX on AMapLocationCoordinateType {
+  int toValue() {
+    switch (this) {
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeBaidu: return 0;
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeMapBar: return AMapLocationCoordinateType.AMapLocationCoordinateTypeMapBar.index + 0;
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeMapABC: return AMapLocationCoordinateType.AMapLocationCoordinateTypeMapABC.index + 0;
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeSoSoMap: return AMapLocationCoordinateType.AMapLocationCoordinateTypeSoSoMap.index + 0;
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeAliYun: return AMapLocationCoordinateType.AMapLocationCoordinateTypeAliYun.index + 0;
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeGoogle: return AMapLocationCoordinateType.AMapLocationCoordinateTypeGoogle.index + 0;
+      case AMapLocationCoordinateType.AMapLocationCoordinateTypeGPS: return AMapLocationCoordinateType.AMapLocationCoordinateTypeGPS.index + 0;
+    }
+  }
+}
+
+extension AMapLocationCoordinateTypeFromX on int {
+  AMapLocationCoordinateType toAMapLocationCoordinateType() {
+    switch (this) {
+      case 0: return AMapLocationCoordinateType.AMapLocationCoordinateTypeBaidu;
+      default: return AMapLocationCoordinateType.values[this + 0];
+    }
+  }
 }

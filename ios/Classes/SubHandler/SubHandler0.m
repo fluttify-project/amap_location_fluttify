@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapLocationFluttifyPlugin (SubHandler0)
 - (NSDictionary<NSString*, Handler>*) getSubHandler0 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -643,7 +644,7 @@ extern BOOL enableLog;
             BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation* location, AMapLocationReGeocode* regeocode, NSError* error) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
                     methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
-                          binaryMessenger:[[self registrar] messenger]];
+                          binaryMessenger:[[weakSelf registrar] messenger]];
         
                 // print log
                 if (enableLog) {
@@ -3900,7 +3901,7 @@ extern BOOL enableLog;
             // ref
             AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
-            ref.delegate = self;
+            ref.delegate = weakSelf;
             methodResult(@"success");
         },
         
@@ -4069,7 +4070,7 @@ extern BOOL enableLog;
             // ref
             AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
-            ref.delegate = self;
+            ref.delegate = weakSelf;
             methodResult(@"success");
         },
         

@@ -4,7 +4,26 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_AMapLocationMode {
-  Battery_Saving /* 0 */,
-  Device_Sensors /* 0 */,
-  Hight_Accuracy /* 0 */
+  Battery_Saving /* null */,
+  Device_Sensors /* null */,
+  Hight_Accuracy /* null */
+}
+
+extension com_amap_api_location_AMapLocationClientOption_AMapLocationModeToX on com_amap_api_location_AMapLocationClientOption_AMapLocationMode {
+  int toValue() {
+    switch (this) {
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Battery_Saving: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Battery_Saving.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Device_Sensors: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Device_Sensors.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Hight_Accuracy: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Hight_Accuracy.index + 0;
+    }
+  }
+}
+
+extension com_amap_api_location_AMapLocationClientOption_AMapLocationModeFromX on int {
+  com_amap_api_location_AMapLocationClientOption_AMapLocationMode tocom_amap_api_location_AMapLocationClientOption_AMapLocationMode() {
+    switch (this) {
+      
+      default: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.values[this + 0];
+    }
+  }
 }

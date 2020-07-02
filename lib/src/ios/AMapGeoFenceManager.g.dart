@@ -45,7 +45,7 @@ class AMapGeoFenceManager extends NSObject  {
   Future<AMapGeoFenceActiveAction> get_activeAction() async {
     final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction", {'refId': refId});
   
-    return AMapGeoFenceActiveAction.values[__result__];
+    return (__result__ as int).toAMapGeoFenceActiveAction();
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
@@ -274,7 +274,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapGeoFenceRegionActiveStatus.values[__result__];
+      final __return__ = (__result__ as int).toAMapGeoFenceRegionActiveStatus();
     
       return __return__;
     }
@@ -527,7 +527,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   //region getters
   Future<List<AMapGeoFenceActiveAction>> get_activeAction_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoFenceActiveAction.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapGeoFenceActiveAction()).toList();
   
     return typedResult;
   }
@@ -697,7 +697,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoFenceRegionActiveStatus.values[__result__]).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionActiveStatus()).toList();
     
       return typedResult;
     }

@@ -8,3 +8,24 @@ enum AMapLocationReGeocodeLanguage {
   AMapLocationReGeocodeLanguageChinse /* 1 */,
   AMapLocationReGeocodeLanguageEnglish /* 2 */
 }
+
+extension AMapLocationReGeocodeLanguageToX on AMapLocationReGeocodeLanguage {
+  int toValue() {
+    switch (this) {
+      case AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageDefault: return 0;
+      case AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageChinse: return 1;
+      case AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageEnglish: return 2;
+    }
+  }
+}
+
+extension AMapLocationReGeocodeLanguageFromX on int {
+  AMapLocationReGeocodeLanguage toAMapLocationReGeocodeLanguage() {
+    switch (this) {
+      case 0: return AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageDefault;
+      case 1: return AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageChinse;
+      case 2: return AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageEnglish;
+      default: return AMapLocationReGeocodeLanguage.values[this + 0];
+    }
+  }
+}

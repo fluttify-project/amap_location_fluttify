@@ -9,3 +9,26 @@ enum AMapGeoFenceRegionType {
   AMapGeoFenceRegionTypePOI /* 2 */,
   AMapGeoFenceRegionTypeDistrict /* 3 */
 }
+
+extension AMapGeoFenceRegionTypeToX on AMapGeoFenceRegionType {
+  int toValue() {
+    switch (this) {
+      case AMapGeoFenceRegionType.AMapGeoFenceRegionTypeCircle: return 0;
+      case AMapGeoFenceRegionType.AMapGeoFenceRegionTypePolygon: return 1;
+      case AMapGeoFenceRegionType.AMapGeoFenceRegionTypePOI: return 2;
+      case AMapGeoFenceRegionType.AMapGeoFenceRegionTypeDistrict: return 3;
+    }
+  }
+}
+
+extension AMapGeoFenceRegionTypeFromX on int {
+  AMapGeoFenceRegionType toAMapGeoFenceRegionType() {
+    switch (this) {
+      case 0: return AMapGeoFenceRegionType.AMapGeoFenceRegionTypeCircle;
+      case 1: return AMapGeoFenceRegionType.AMapGeoFenceRegionTypePolygon;
+      case 2: return AMapGeoFenceRegionType.AMapGeoFenceRegionTypePOI;
+      case 3: return AMapGeoFenceRegionType.AMapGeoFenceRegionTypeDistrict;
+      default: return AMapGeoFenceRegionType.values[this + 0];
+    }
+  }
+}

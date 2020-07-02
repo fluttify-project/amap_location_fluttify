@@ -4,7 +4,26 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_GeoLanguage {
-  DEFAULT /* 0 */,
-  ZH /* 0 */,
-  EN /* 0 */
+  DEFAULT /* null */,
+  ZH /* null */,
+  EN /* null */
+}
+
+extension com_amap_api_location_AMapLocationClientOption_GeoLanguageToX on com_amap_api_location_AMapLocationClientOption_GeoLanguage {
+  int toValue() {
+    switch (this) {
+      case com_amap_api_location_AMapLocationClientOption_GeoLanguage.DEFAULT: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.DEFAULT.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_GeoLanguage.ZH: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.ZH.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_GeoLanguage.EN: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.EN.index + 0;
+    }
+  }
+}
+
+extension com_amap_api_location_AMapLocationClientOption_GeoLanguageFromX on int {
+  com_amap_api_location_AMapLocationClientOption_GeoLanguage tocom_amap_api_location_AMapLocationClientOption_GeoLanguage() {
+    switch (this) {
+      
+      default: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.values[this + 0];
+    }
+  }
 }

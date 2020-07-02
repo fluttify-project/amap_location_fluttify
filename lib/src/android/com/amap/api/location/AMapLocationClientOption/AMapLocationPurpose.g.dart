@@ -4,7 +4,26 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose {
-  SignIn /* 0 */,
-  Transport /* 0 */,
-  Sport /* 0 */
+  SignIn /* null */,
+  Transport /* null */,
+  Sport /* null */
+}
+
+extension com_amap_api_location_AMapLocationClientOption_AMapLocationPurposeToX on com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose {
+  int toValue() {
+    switch (this) {
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.SignIn: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.SignIn.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Transport: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Transport.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Sport: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Sport.index + 0;
+    }
+  }
+}
+
+extension com_amap_api_location_AMapLocationClientOption_AMapLocationPurposeFromX on int {
+  com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose tocom_amap_api_location_AMapLocationClientOption_AMapLocationPurpose() {
+    switch (this) {
+      
+      default: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.values[this + 0];
+    }
+  }
 }

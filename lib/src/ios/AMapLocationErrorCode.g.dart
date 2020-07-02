@@ -16,3 +16,40 @@ enum AMapLocationErrorCode {
   AMapLocationErrorRegionMonitoringFailure /* 10 */,
   AMapLocationErrorRiskOfFakeLocation /* 11 */
 }
+
+extension AMapLocationErrorCodeToX on AMapLocationErrorCode {
+  int toValue() {
+    switch (this) {
+      case AMapLocationErrorCode.AMapLocationErrorUnknown: return 1;
+      case AMapLocationErrorCode.AMapLocationErrorLocateFailed: return 2;
+      case AMapLocationErrorCode.AMapLocationErrorReGeocodeFailed: return 3;
+      case AMapLocationErrorCode.AMapLocationErrorTimeOut: return 4;
+      case AMapLocationErrorCode.AMapLocationErrorCanceled: return 5;
+      case AMapLocationErrorCode.AMapLocationErrorCannotFindHost: return 6;
+      case AMapLocationErrorCode.AMapLocationErrorBadURL: return 7;
+      case AMapLocationErrorCode.AMapLocationErrorNotConnectedToInternet: return 8;
+      case AMapLocationErrorCode.AMapLocationErrorCannotConnectToHost: return 9;
+      case AMapLocationErrorCode.AMapLocationErrorRegionMonitoringFailure: return 10;
+      case AMapLocationErrorCode.AMapLocationErrorRiskOfFakeLocation: return 11;
+    }
+  }
+}
+
+extension AMapLocationErrorCodeFromX on int {
+  AMapLocationErrorCode toAMapLocationErrorCode() {
+    switch (this) {
+      case 1: return AMapLocationErrorCode.AMapLocationErrorUnknown;
+      case 2: return AMapLocationErrorCode.AMapLocationErrorLocateFailed;
+      case 3: return AMapLocationErrorCode.AMapLocationErrorReGeocodeFailed;
+      case 4: return AMapLocationErrorCode.AMapLocationErrorTimeOut;
+      case 5: return AMapLocationErrorCode.AMapLocationErrorCanceled;
+      case 6: return AMapLocationErrorCode.AMapLocationErrorCannotFindHost;
+      case 7: return AMapLocationErrorCode.AMapLocationErrorBadURL;
+      case 8: return AMapLocationErrorCode.AMapLocationErrorNotConnectedToInternet;
+      case 9: return AMapLocationErrorCode.AMapLocationErrorCannotConnectToHost;
+      case 10: return AMapLocationErrorCode.AMapLocationErrorRegionMonitoringFailure;
+      case 11: return AMapLocationErrorCode.AMapLocationErrorRiskOfFakeLocation;
+      default: return AMapLocationErrorCode.values[this + 1];
+    }
+  }
+}

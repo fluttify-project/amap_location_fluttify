@@ -4,6 +4,24 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol {
-  HTTP /* 0 */,
-  HTTPS /* 0 */
+  HTTP /* null */,
+  HTTPS /* null */
+}
+
+extension com_amap_api_location_AMapLocationClientOption_AMapLocationProtocolToX on com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol {
+  int toValue() {
+    switch (this) {
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTP: return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTP.index + 0;
+      case com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTPS: return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTPS.index + 0;
+    }
+  }
+}
+
+extension com_amap_api_location_AMapLocationClientOption_AMapLocationProtocolFromX on int {
+  com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol tocom_amap_api_location_AMapLocationClientOption_AMapLocationProtocol() {
+    switch (this) {
+      
+      default: return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.values[this + 0];
+    }
+  }
 }
