@@ -159,23 +159,23 @@ class AmapLocation {
           (location, regeocode, error) async {
             if (!completer.isCompleted) {
               completer.complete(Location(
-                address: await regeocode.get_formattedAddress(),
+                address: await regeocode?.get_formattedAddress(),
                 latLng: LatLng(
                   await location.coordinate.then((it) => it.latitude),
                   await location.coordinate.then((it) => it.longitude),
                 ),
                 altitude: await location.altitude,
                 bearing: await location.course,
-                country: await regeocode.get_country(),
-                province: await regeocode.get_province(),
-                city: await regeocode.get_city(),
-                cityCode: await regeocode.get_citycode(),
-                adCode: await regeocode.get_adcode(),
-                district: await regeocode.get_district(),
-                poiName: await regeocode.get_POIName(),
-                street: await regeocode.get_street(),
-                streetNumber: await regeocode.get_number(),
-                aoiName: await regeocode.get_AOIName(),
+                country: await regeocode?.get_country(),
+                province: await regeocode?.get_province(),
+                city: await regeocode?.get_city(),
+                cityCode: await regeocode?.get_citycode(),
+                adCode: await regeocode?.get_adcode(),
+                district: await regeocode?.get_district(),
+                poiName: await regeocode?.get_POIName(),
+                street: await regeocode?.get_street(),
+                streetNumber: await regeocode?.get_number(),
+                aoiName: await regeocode?.get_AOIName(),
                 accuracy: await location.horizontalAccuracy,
                 speed: await location.speed,
               ));
@@ -312,23 +312,23 @@ class AmapLocation {
       }
       _iosLocationDelegate._onLocationChanged = (location, regeocode) async {
         _locationController.add(Location(
-          address: await regeocode.get_formattedAddress(),
+          address: await regeocode?.get_formattedAddress(),
           latLng: LatLng(
             await location.coordinate.then((it) => it.latitude),
             await location.coordinate.then((it) => it.longitude),
           ),
           altitude: await location.altitude,
           bearing: await location.course,
-          country: await regeocode.get_country(),
-          province: await regeocode.get_province(),
-          city: await regeocode.get_city(),
-          cityCode: await regeocode.get_citycode(),
-          adCode: await regeocode.get_adcode(),
-          district: await regeocode.get_district(),
-          poiName: await regeocode.get_POIName(),
-          street: await regeocode.get_street(),
-          streetNumber: await regeocode.get_number(),
-          aoiName: await regeocode.get_AOIName(),
+          country: await regeocode?.get_country(),
+          province: await regeocode?.get_province(),
+          city: await regeocode?.get_city(),
+          cityCode: await regeocode?.get_citycode(),
+          adCode: await regeocode?.get_adcode(),
+          district: await regeocode?.get_district(),
+          poiName: await regeocode?.get_POIName(),
+          street: await regeocode?.get_street(),
+          streetNumber: await regeocode?.get_number(),
+          aoiName: await regeocode?.get_AOIName(),
           accuracy: await location.horizontalAccuracy,
           speed: await location.speed,
         ));
@@ -379,7 +379,8 @@ class AmapLocation {
   }
 
   /// 开启后台定位
-  static Future<void> enableBackgroundLocation(int id, BackgroundNotification bgNotification) {
+  static Future<void> enableBackgroundLocation(
+      int id, BackgroundNotification bgNotification) {
     return platform(
       android: (pool) async {
         final notification = await android_app_Notification.create(
