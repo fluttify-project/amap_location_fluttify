@@ -191,11 +191,13 @@ class AmapLocation {
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout]
   /// 设置定位间隔[interval], 默认2000 ms， 设置是否开启定位缓存机制[cacheEnable].
+  /// [distanceFilter] ios only: 设置更新定位的最小偏移距离, 单位:米.
   static Stream<Location> listenLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     Duration timeout,
     int interval,
+    double distanceFilter,
   }) async* {
     _locationController ??= StreamController<Location>();
 
@@ -298,8 +300,10 @@ class AmapLocation {
       if (timeout != null) {
         await _iosClient.set_locationTimeout(timeout.inSeconds);
       }
-      // 设置定位间隔
-//      if (interval != null)
+      // 设定定位的最小更新距离
+      if (distanceFilter != null) {
+        await _iosClient.set_distanceFilter(distanceFilter);
+      }
 
       // 设置回调
       if (_iosLocationDelegate == null) {
