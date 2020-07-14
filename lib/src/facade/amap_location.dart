@@ -8,6 +8,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'enums.dart';
+import 'extensions.dart';
 import 'models.dart';
 
 typedef void _OnAndroidLocationChanged(
@@ -33,7 +34,9 @@ class AmapLocation {
   AmapLocation._();
 
   static com_amap_api_location_AMapLocationClient _androidClient;
+  static com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
   static AMapLocationManager _iosClient;
+  static AMapGeoFenceManager _iosGeoFenceClient;
 
   static StreamController<Location> _locationController;
 
@@ -427,6 +430,116 @@ class AmapLocation {
     } else if (Platform.isIOS) {
       _iosClient ??= await AMapLocationManager.create__();
     }
+  }
+
+  /// 创建圆形电子围栏
+  Future<void> addCircleGeoFence({
+    @required LatLng center,
+    @required double radius,
+    String customId = '',
+    List<GeoFenceActiveAction> activeActions = const [
+      GeoFenceActiveAction.In,
+      GeoFenceActiveAction.Out,
+      GeoFenceActiveAction.Stayed,
+    ],
+  }) async {
+    return platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
+            .create__android_content_Context(context);
+
+        int activeAction = 0;
+        if (activeActions.contains(GeoFenceActiveAction.In)) {
+          activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_IN;
+        } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+          activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_OUT;
+        } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+          activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_STAYED;
+        }
+        _androidGeoFenceClient.setActivateAction(activeAction);
+
+        final point = await com_amap_api_location_DPoint.create__double__double(
+            center.latitude, center.longitude);
+
+        await _androidGeoFenceClient
+            .addGeoFence__com_amap_api_location_DPoint__double__String(
+          point,
+          radius,
+          customId,
+        );
+      },
+      ios: (pool) async {
+        _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
+
+        int activeAction = 0;
+        if (activeActions.contains(GeoFenceActiveAction.In)) {
+          activeAction |=
+              AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.toValue();
+        } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+          activeAction |= AMapGeoFenceActiveAction
+              .AMapGeoFenceActiveActionOutside.toValue();
+        } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+          activeAction |=
+              AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.toValue();
+        }
+        await _iosGeoFenceClient.set_activeActionX(activeAction);
+
+        await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
+
+        final point = await CLLocationCoordinate2D.create(
+          center.latitude,
+          center.longitude,
+        );
+
+        await _iosGeoFenceClient
+            .addCircleRegionForMonitoringWithCenter_radius_customID(
+                point, radius, customId);
+      },
+    );
+  }
+
+  /// 创建多边形电子围栏
+  Future<void> addPolygonGeoFence({
+    @required List<LatLng> pointList,
+    String customId = '',
+    List<GeoFenceActiveAction> activeActions = const [
+      GeoFenceActiveAction.In,
+      GeoFenceActiveAction.Out,
+      GeoFenceActiveAction.Stayed,
+    ],
+  }) async {
+    final latitudeList = pointList.map((e) => e.latitude).toList();
+    final longitudeList = pointList.map((e) => e.longitude).toList();
+
+    return platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
+            .create__android_content_Context(context);
+
+        final _pointList = await com_amap_api_location_DPoint
+            .create_batch__double__double(latitudeList, longitudeList);
+
+        await _androidGeoFenceClient
+            .addGeoFence__List_com_amap_api_location_DPoint___String(
+          _pointList,
+          customId,
+        );
+      },
+      ios: (pool) async {
+        _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
+
+        await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
+
+        final _pointList = await CLLocationCoordinate2D.create_batch(
+            latitudeList, longitudeList);
+
+        await _iosGeoFenceClient
+            .addPolygonRegionForMonitoringWithCoordinates_count_customID(
+                _pointList, _pointList.length, customId);
+      },
+    );
   }
 
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
