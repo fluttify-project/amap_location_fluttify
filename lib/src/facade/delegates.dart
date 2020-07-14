@@ -9,6 +9,11 @@ typedef void _OnIOSLocationChanged(
   AMapLocationReGeocode reGeocode,
 );
 typedef void _OnRequireAlwaysAuth(CLLocationManager manager);
+typedef void _OnGeoFenceStatusChanged(
+  AMapGeoFenceRegion region,
+  String customID,
+  NSError error,
+);
 
 class _AndroidLocationDelegate extends java_lang_Object
     with com_amap_api_location_AMapLocationListener {
@@ -29,6 +34,7 @@ class _IOSLocationDelegate extends NSObject
     with AMapLocationManagerDelegate, AMapGeoFenceManagerDelegate {
   _OnIOSLocationChanged _onLocationChanged;
   _OnRequireAlwaysAuth _onRequireAlwaysAuth;
+  _OnGeoFenceStatusChanged _onGeoFenceStatusChanged;
 
   @override
   Future<void> amapLocationManager_didUpdateLocation_reGeocode(
@@ -54,6 +60,20 @@ class _IOSLocationDelegate extends NSObject
     super.amapLocationManager_doRequireLocationAuth(manager, locationManager);
     if (_onRequireAlwaysAuth != null) {
       _onRequireAlwaysAuth(locationManager);
+    }
+  }
+
+  @override
+  Future<void>
+      amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(
+          AMapGeoFenceManager manager,
+          AMapGeoFenceRegion region,
+          String customID,
+          NSError error) async {
+    super.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(
+        manager, region, customID, error);
+    if (_onGeoFenceStatusChanged != null) {
+      _onGeoFenceStatusChanged(region, customID, error);
     }
   }
 }

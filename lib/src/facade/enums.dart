@@ -16,3 +16,11 @@ enum GeoFenceActiveAction {
   Out,
   Stayed,
 }
+
+/// 电子围栏状态
+enum GeoFenceStatus {
+  Unknown,
+  In,
+  Out,
+  Stayed,
+}

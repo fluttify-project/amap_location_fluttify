@@ -32,6 +32,7 @@ class AmapLocation {
   static AMapGeoFenceManager _iosGeoFenceClient;
 
   static StreamController<Location> _locationController;
+  static StreamController<GeoFenceEvent> _geoFenceEventController;
 
   static _IOSLocationDelegate _iosLocationDelegate;
   static _AndroidLocationDelegate _androidLocationDelegate;
@@ -426,7 +427,7 @@ class AmapLocation {
   }
 
   /// 创建圆形电子围栏
-  Future<void> addCircleGeoFence({
+  Stream<GeoFenceEvent> addCircleGeoFence({
     @required LatLng center,
     @required double radius,
     String customId = '',
@@ -435,65 +436,97 @@ class AmapLocation {
       GeoFenceActiveAction.Out,
       GeoFenceActiveAction.Stayed,
     ],
-  }) async {
-    return platform(
-      android: (pool) async {
-        final context = await android_app_Application.get();
-        _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
-            .create__android_content_Context(context);
+  }) async* {
+    _geoFenceEventController ??= StreamController<GeoFenceEvent>();
 
-        int activeAction = 0;
-        if (activeActions.contains(GeoFenceActiveAction.In)) {
-          activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_IN;
-        } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
-          activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_OUT;
-        } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
-          activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_STAYED;
-        }
-        _androidGeoFenceClient.setActivateAction(activeAction);
+    if (Platform.isAndroid) {
+      final context = await android_app_Application.get();
+      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
+          .create__android_content_Context(context);
 
-        final point = await com_amap_api_location_DPoint.create__double__double(
-            center.latitude, center.longitude);
+      int activeAction = 0;
+      if (activeActions.contains(GeoFenceActiveAction.In)) {
+        activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_IN;
+      } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+        activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_OUT;
+      } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+        activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_STAYED;
+      }
+      _androidGeoFenceClient.setActivateAction(activeAction);
 
-        await _androidGeoFenceClient
-            .addGeoFence__com_amap_api_location_DPoint__double__String(
-          point,
-          radius,
-          customId,
+      final point = await com_amap_api_location_DPoint.create__double__double(
+          center.latitude, center.longitude);
+
+      await _androidGeoFenceClient
+          .addGeoFence__com_amap_api_location_DPoint__double__String(
+        point,
+        radius,
+        customId,
+      );
+
+      kBroadcastEventChannel.receiveBroadcastStream().listen((intent) async {
+        final bundle = await intent.bundle;
+        final status =
+            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_FENCESTATUS] as int;
+        final fenceId =
+            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_FENCEID] as String;
+        final customId =
+            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_CUSTOMID] as String;
+        _geoFenceEventController.add(
+          GeoFenceEvent(
+            customId: customId,
+            fenceId: fenceId,
+            status: GeoFenceStatusX.fromAndroid(status),
+          ),
         );
-      },
-      ios: (pool) async {
-        _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
+      });
+    } else if (Platform.isIOS) {
+      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
 
-        int activeAction = 0;
-        if (activeActions.contains(GeoFenceActiveAction.In)) {
-          activeAction |=
-              AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.toValue();
-        } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
-          activeAction |= AMapGeoFenceActiveAction
-              .AMapGeoFenceActiveActionOutside.toValue();
-        } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
-          activeAction |=
-              AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.toValue();
-        }
-        await _iosGeoFenceClient.set_activeActionX(activeAction);
+      int activeAction = 0;
+      if (activeActions.contains(GeoFenceActiveAction.In)) {
+        activeAction |=
+            AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.toValue();
+      } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+        activeAction |=
+            AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside.toValue();
+      } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+        activeAction |=
+            AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.toValue();
+      }
+      await _iosGeoFenceClient.set_activeActionX(activeAction);
 
-        await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
+      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
 
-        final point = await CLLocationCoordinate2D.create(
-          center.latitude,
-          center.longitude,
-        );
+      final point = await CLLocationCoordinate2D.create(
+        center.latitude,
+        center.longitude,
+      );
 
-        await _iosGeoFenceClient
-            .addCircleRegionForMonitoringWithCenter_radius_customID(
-                point, radius, customId);
-      },
-    );
+      await _iosGeoFenceClient.set_delegate(
+        _iosLocationDelegate
+          .._onGeoFenceStatusChanged = (region, customId, error) async {
+            _geoFenceEventController.add(
+              GeoFenceEvent(
+                customId: customId,
+                fenceId: await region.get_identifier(),
+                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+              ),
+            );
+          },
+      );
+      await _iosGeoFenceClient
+          .addCircleRegionForMonitoringWithCenter_radius_customID(
+              point, radius, customId);
+    } else {
+      throw '未实现的平台';
+    }
+
+    yield* _geoFenceEventController.stream;
   }
 
   /// 创建多边形电子围栏
-  Future<void> addPolygonGeoFence({
+  Stream<GeoFenceEvent> addPolygonGeoFence({
     @required List<LatLng> pointList,
     String customId = '',
     List<GeoFenceActiveAction> activeActions = const [
@@ -501,44 +534,103 @@ class AmapLocation {
       GeoFenceActiveAction.Out,
       GeoFenceActiveAction.Stayed,
     ],
-  }) async {
+  }) async* {
+    _geoFenceEventController ??= StreamController<GeoFenceEvent>();
+
     final latitudeList = pointList.map((e) => e.latitude).toList();
     final longitudeList = pointList.map((e) => e.longitude).toList();
 
-    return platform(
-      android: (pool) async {
-        final context = await android_app_Application.get();
-        _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
-            .create__android_content_Context(context);
+    if (Platform.isAndroid) {
+      final context = await android_app_Application.get();
+      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
+          .create__android_content_Context(context);
 
-        final _pointList = await com_amap_api_location_DPoint
-            .create_batch__double__double(latitudeList, longitudeList);
+      int activeAction = 0;
+      if (activeActions.contains(GeoFenceActiveAction.In)) {
+        activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_IN;
+      } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+        activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_OUT;
+      } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+        activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_STAYED;
+      }
+      _androidGeoFenceClient.setActivateAction(activeAction);
 
-        await _androidGeoFenceClient
-            .addGeoFence__List_com_amap_api_location_DPoint___String(
-          _pointList,
-          customId,
+      final _pointList = await com_amap_api_location_DPoint
+          .create_batch__double__double(latitudeList, longitudeList);
+
+      await _androidGeoFenceClient
+          .addGeoFence__List_com_amap_api_location_DPoint___String(
+        _pointList,
+        customId,
+      );
+
+      kBroadcastEventChannel.receiveBroadcastStream().listen((intent) async {
+        final bundle = await intent.bundle;
+        final status =
+            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_FENCESTATUS] as int;
+        final fenceId =
+            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_FENCEID] as String;
+        final customId =
+            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_CUSTOMID] as String;
+        _geoFenceEventController.add(
+          GeoFenceEvent(
+            customId: customId,
+            fenceId: fenceId,
+            status: GeoFenceStatusX.fromAndroid(status),
+          ),
         );
-      },
-      ios: (pool) async {
-        _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
+      });
+    } else if (Platform.isIOS) {
+      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
 
-        await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
+      int activeAction = 0;
+      if (activeActions.contains(GeoFenceActiveAction.In)) {
+        activeAction |=
+            AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.toValue();
+      } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+        activeAction |=
+            AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside.toValue();
+      } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+        activeAction |=
+            AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.toValue();
+      }
+      await _iosGeoFenceClient.set_activeActionX(activeAction);
 
-        final _pointList = await CLLocationCoordinate2D.create_batch(
-            latitudeList, longitudeList);
+      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
 
-        await _iosGeoFenceClient
-            .addPolygonRegionForMonitoringWithCoordinates_count_customID(
-                _pointList, _pointList.length, customId);
-      },
-    );
+      await _iosGeoFenceClient.set_delegate(
+        _iosLocationDelegate
+          .._onGeoFenceStatusChanged = (region, customId, error) async {
+            _geoFenceEventController.add(
+              GeoFenceEvent(
+                customId: customId,
+                fenceId: await region.get_identifier(),
+                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+              ),
+            );
+          },
+      );
+
+      final _pointList = await CLLocationCoordinate2D.create_batch(
+          latitudeList, longitudeList);
+
+      await _iosGeoFenceClient
+          .addPolygonRegionForMonitoringWithCoordinates_count_customID(
+              _pointList, _pointList.length, customId);
+    } else {
+      throw '未实现的平台';
+    }
+
+    yield* _geoFenceEventController.stream;
   }
 
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
   static Future<void> dispose() async {
     _locationController?.close();
     _locationController = null;
+
+    _geoFenceEventController?.close();
+    _geoFenceEventController = null;
 
     _androidLocationDelegate = null;
     _iosLocationDelegate = null;
