@@ -13,15 +13,6 @@ import 'models.dart';
 
 part 'delegates.dart';
 
-typedef void _OnAndroidLocationChanged(
-  com_amap_api_location_AMapLocation location,
-);
-typedef void _OnIOSLocationChanged(
-  CLLocation location,
-  AMapLocationReGeocode reGeocode,
-);
-typedef void _OnRequireAlwaysAuth(CLLocationManager manager);
-
 /// 释放原生对象Mixin
 mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
   @override

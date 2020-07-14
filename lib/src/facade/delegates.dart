@@ -1,6 +1,15 @@
 // ignore_for_file: non_constant_identifier_names
 part of 'amap_location.dart';
 
+typedef void _OnAndroidLocationChanged(
+  com_amap_api_location_AMapLocation location,
+);
+typedef void _OnIOSLocationChanged(
+  CLLocation location,
+  AMapLocationReGeocode reGeocode,
+);
+typedef void _OnRequireAlwaysAuth(CLLocationManager manager);
+
 class _AndroidLocationDelegate extends java_lang_Object
     with com_amap_api_location_AMapLocationListener {
   _OnAndroidLocationChanged _onLocationChanged;
@@ -16,7 +25,8 @@ class _AndroidLocationDelegate extends java_lang_Object
   }
 }
 
-class _IOSLocationDelegate extends NSObject with AMapLocationManagerDelegate {
+class _IOSLocationDelegate extends NSObject
+    with AMapLocationManagerDelegate, AMapGeoFenceManagerDelegate {
   _OnIOSLocationChanged _onLocationChanged;
   _OnRequireAlwaysAuth _onRequireAlwaysAuth;
 
