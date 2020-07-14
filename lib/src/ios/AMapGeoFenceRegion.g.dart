@@ -76,13 +76,13 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
 
   //region setters
   Future<void> set_fenceStatus(AMapGeoFenceRegionStatus fenceStatus) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_fenceStatus', {'refId': refId, "fenceStatus": fenceStatus.index});
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_fenceStatus', {'refId': refId, "fenceStatus": fenceStatus.toValue()});
   
   
   }
   
   Future<void> set_regionType(AMapGeoFenceRegionType regionType) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_regionType', {'refId': refId, "regionType": regionType.index});
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_regionType', {'refId': refId, "regionType": regionType.toValue()});
   
   
   }
@@ -141,13 +141,13 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
 
   //region setters
   Future<void> set_fenceStatus_batch(List<AMapGeoFenceRegionStatus> fenceStatus) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_fenceStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "fenceStatus": fenceStatus[__i__].index}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_fenceStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "fenceStatus": fenceStatus[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_regionType_batch(List<AMapGeoFenceRegionType> regionType) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_regionType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "regionType": regionType[__i__].index}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceRegion::set_regionType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "regionType": regionType[__i__].toValue()}]);
   
   
   }

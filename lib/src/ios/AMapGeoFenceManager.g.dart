@@ -110,7 +110,7 @@ class AMapGeoFenceManager extends NSObject  {
   }
   
   Future<void> set_activeAction(AMapGeoFenceActiveAction activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction', {'refId': refId, "activeAction": activeAction.index});
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction', {'refId': refId, "activeAction": activeAction.toValue()});
   
   
   }
@@ -557,7 +557,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
 
   //region setters
   Future<void> set_activeAction_batch(List<AMapGeoFenceActiveAction> activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "activeAction": activeAction[__i__].index}]);
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "activeAction": activeAction[__i__].toValue()}]);
   
   
   }

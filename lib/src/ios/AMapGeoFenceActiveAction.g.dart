@@ -5,18 +5,18 @@
 
 enum AMapGeoFenceActiveAction {
   AMapGeoFenceActiveActionNone /* 0 */,
-  AMapGeoFenceActiveActionInside /* null */,
-  AMapGeoFenceActiveActionOutside /* null */,
-  AMapGeoFenceActiveActionStayed /* null */
+  AMapGeoFenceActiveActionInside /* 1<<0 */,
+  AMapGeoFenceActiveActionOutside /* 1<<1 */,
+  AMapGeoFenceActiveActionStayed /* 1<<2 */
 }
 
 extension AMapGeoFenceActiveActionToX on AMapGeoFenceActiveAction {
   int toValue() {
     switch (this) {
       case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionNone: return 0;
-      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.index + 0;
-      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside.index + 0;
-      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.index + 0;
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside: return 1<<0;
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside: return 1<<1;
+      case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed: return 1<<2;
     }
   }
 }
@@ -25,6 +25,9 @@ extension AMapGeoFenceActiveActionFromX on int {
   AMapGeoFenceActiveAction toAMapGeoFenceActiveAction() {
     switch (this) {
       case 0: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionNone;
+      case 1<<0: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside;
+      case 1<<1: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside;
+      case 1<<2: return AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed;
       default: return AMapGeoFenceActiveAction.values[this + 0];
     }
   }
