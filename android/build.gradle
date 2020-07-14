@@ -49,17 +49,17 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
-    buildTypes {
-        release {
-            consumerProguardFiles "proguard-rules.pro"
-        }
-    }
     packagingOptions {
         merge 'res/values/values.xml'
         merge 'AndroidManifest.xml'
         merge 'R.txt'
         merge 'classes.jar'
         merge 'proguard.txt'
+    }
+    buildTypes {
+        release {
+            consumerProguardFiles "proguard-rules.pro"
+        }
     }
 }
 

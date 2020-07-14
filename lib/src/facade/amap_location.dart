@@ -159,23 +159,23 @@ class AmapLocation {
           (location, regeocode, error) async {
             if (!completer.isCompleted) {
               completer.complete(Location(
-                address: await regeocode.get_formattedAddress(),
+                address: await regeocode?.get_formattedAddress(),
                 latLng: LatLng(
                   await location.coordinate.then((it) => it.latitude),
                   await location.coordinate.then((it) => it.longitude),
                 ),
                 altitude: await location.altitude,
                 bearing: await location.course,
-                country: await regeocode.get_country(),
-                province: await regeocode.get_province(),
-                city: await regeocode.get_city(),
-                cityCode: await regeocode.get_citycode(),
-                adCode: await regeocode.get_adcode(),
-                district: await regeocode.get_district(),
-                poiName: await regeocode.get_POIName(),
-                street: await regeocode.get_street(),
-                streetNumber: await regeocode.get_number(),
-                aoiName: await regeocode.get_AOIName(),
+                country: await regeocode?.get_country(),
+                province: await regeocode?.get_province(),
+                city: await regeocode?.get_city(),
+                cityCode: await regeocode?.get_citycode(),
+                adCode: await regeocode?.get_adcode(),
+                district: await regeocode?.get_district(),
+                poiName: await regeocode?.get_POIName(),
+                street: await regeocode?.get_street(),
+                streetNumber: await regeocode?.get_number(),
+                aoiName: await regeocode?.get_AOIName(),
                 accuracy: await location.horizontalAccuracy,
                 speed: await location.speed,
               ));
@@ -191,11 +191,13 @@ class AmapLocation {
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout]
   /// 设置定位间隔[interval], 默认2000 ms， 设置是否开启定位缓存机制[cacheEnable].
+  /// [distanceFilter] ios only: 设置更新定位的最小偏移距离, 单位:米.
   static Stream<Location> listenLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     Duration timeout,
     int interval,
+    double distanceFilter,
   }) async* {
     _locationController ??= StreamController<Location>();
 
@@ -298,8 +300,10 @@ class AmapLocation {
       if (timeout != null) {
         await _iosClient.set_locationTimeout(timeout.inSeconds);
       }
-      // 设置定位间隔
-//      if (interval != null)
+      // 设定定位的最小更新距离
+      if (distanceFilter != null) {
+        await _iosClient.set_distanceFilter(distanceFilter);
+      }
 
       // 设置回调
       if (_iosLocationDelegate == null) {
@@ -308,23 +312,23 @@ class AmapLocation {
       }
       _iosLocationDelegate._onLocationChanged = (location, regeocode) async {
         _locationController.add(Location(
-          address: await regeocode.get_formattedAddress(),
+          address: await regeocode?.get_formattedAddress(),
           latLng: LatLng(
             await location.coordinate.then((it) => it.latitude),
             await location.coordinate.then((it) => it.longitude),
           ),
           altitude: await location.altitude,
           bearing: await location.course,
-          country: await regeocode.get_country(),
-          province: await regeocode.get_province(),
-          city: await regeocode.get_city(),
-          cityCode: await regeocode.get_citycode(),
-          adCode: await regeocode.get_adcode(),
-          district: await regeocode.get_district(),
-          poiName: await regeocode.get_POIName(),
-          street: await regeocode.get_street(),
-          streetNumber: await regeocode.get_number(),
-          aoiName: await regeocode.get_AOIName(),
+          country: await regeocode?.get_country(),
+          province: await regeocode?.get_province(),
+          city: await regeocode?.get_city(),
+          cityCode: await regeocode?.get_citycode(),
+          adCode: await regeocode?.get_adcode(),
+          district: await regeocode?.get_district(),
+          poiName: await regeocode?.get_POIName(),
+          street: await regeocode?.get_street(),
+          streetNumber: await regeocode?.get_number(),
+          aoiName: await regeocode?.get_AOIName(),
           accuracy: await location.horizontalAccuracy,
           speed: await location.speed,
         ));
@@ -375,7 +379,8 @@ class AmapLocation {
   }
 
   /// 开启后台定位
-  static Future<void> enableBackgroundLocation(int id, BackgroundNotification bgNotification) {
+  static Future<void> enableBackgroundLocation(
+      int id, BackgroundNotification bgNotification) {
     return platform(
       android: (pool) async {
         final notification = await android_app_Notification.create(

@@ -69,7 +69,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center?.refId, "radius": radius, "identifier": identifier, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center is Ref ? (center as Ref)?.refId : center, "radius": radius, "identifier": identifier, "refId": refId});
   
   
     // handle native call
