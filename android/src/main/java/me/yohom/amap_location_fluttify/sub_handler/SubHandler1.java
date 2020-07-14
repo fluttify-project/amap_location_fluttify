@@ -349,8 +349,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__double__String", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.DPoint var1 = __var1RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1RefId__) : null;
                 // jsonable arg
                 Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                 // jsonable arg
@@ -428,8 +428,8 @@ public class SubHandler1 {
                 // jsonable arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                Integer __var3__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                com.amap.api.location.DPoint var3 = __var3__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var3__) : null;
+                Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
+                com.amap.api.location.DPoint var3 = __var3RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var3RefId__) : null;
                 // jsonable arg
                 Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
                 // jsonable arg
@@ -572,8 +572,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFenceClient::removeGeoFence__com_amap_api_fence_GeoFence", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.fence.GeoFence var1 = __var1__ != null ? (com.amap.api.fence.GeoFence) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.fence.GeoFence var1 = __var1RefId__ != null ? (com.amap.api.fence.GeoFence) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1001,8 +1001,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setPendingIntent", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.app.PendingIntent var1 = __var1__ != null ? (android.app.PendingIntent) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                android.app.PendingIntent var1 = __var1RefId__ != null ? (android.app.PendingIntent) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1134,8 +1134,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setPoiItem", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.fence.PoiItem var1 = __var1__ != null ? (com.amap.api.fence.PoiItem) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.fence.PoiItem var1 = __var1RefId__ != null ? (com.amap.api.fence.PoiItem) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1629,8 +1629,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setCenter", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.DPoint var1 = __var1RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1854,8 +1854,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setCurrentLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.location.AMapLocation var1 = __var1__ != null ? (com.amap.api.location.AMapLocation) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.AMapLocation var1 = __var1RefId__ != null ? (com.amap.api.location.AMapLocation) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2067,8 +2067,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFenceManagerBase::addRoundGeoFence", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.location.DPoint var1 = __var1RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1RefId__) : null;
                 // jsonable arg
                 Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                 // jsonable arg
@@ -2146,8 +2146,8 @@ public class SubHandler1 {
                 // jsonable arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                Integer __var3__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                com.amap.api.location.DPoint var3 = __var3__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var3__) : null;
+                Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
+                com.amap.api.location.DPoint var3 = __var3RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var3RefId__) : null;
                 // jsonable arg
                 Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
                 // jsonable arg
@@ -2290,8 +2290,8 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFenceManagerBase::removeGeoFence__com_amap_api_fence_GeoFence", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.fence.GeoFence var1 = __var1__ != null ? (com.amap.api.fence.GeoFence) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.fence.GeoFence var1 = __var1RefId__ != null ? (com.amap.api.fence.GeoFence) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3939,8 +3939,8 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.location.AMapLocationClientOption var1 = __var1__ != null ? (com.amap.api.location.AMapLocationClientOption) getHEAP().get(__var1__) : null;
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.AMapLocationClientOption var1 = __var1RefId__ != null ? (com.amap.api.location.AMapLocationClientOption) getHEAP().get(__var1RefId__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4221,8 +4221,8 @@ public class SubHandler1 {
                     // jsonable arg
                     int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    android.app.Notification var2 = __var2__ != null ? (android.app.Notification) getHEAP().get(__var2__) : null;
+                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
+                    android.app.Notification var2 = __var2RefId__ != null ? (android.app.Notification) getHEAP().get(__var2RefId__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4292,8 +4292,8 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.location.AMapLocationClientOption var1 = __var1__ != null ? (com.amap.api.location.AMapLocationClientOption) getHEAP().get(__var1__) : null;
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.AMapLocationClientOption var1 = __var1RefId__ != null ? (com.amap.api.location.AMapLocationClientOption) getHEAP().get(__var1RefId__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4643,8 +4643,8 @@ public class SubHandler1 {
                     // jsonable arg
                     int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    android.app.Notification var2 = __var2__ != null ? (android.app.Notification) getHEAP().get(__var2__) : null;
+                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
+                    android.app.Notification var2 = __var2RefId__ != null ? (android.app.Notification) getHEAP().get(__var2RefId__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4714,8 +4714,8 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
             
                     // ref
             
@@ -4930,8 +4930,8 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.DPoint var1 = __var1RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1RefId__) : null;
             
                     // ref
                     int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5047,11 +5047,11 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    com.amap.api.location.DPoint var0 = __var0__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var0__) : null;
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    com.amap.api.location.DPoint var0 = __var0RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var0RefId__) : null;
                     // ref arg
-                    Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.location.DPoint var1 = __var1__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1__) : null;
+                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    com.amap.api.location.DPoint var1 = __var1RefId__ != null ? (com.amap.api.location.DPoint) getHEAP().get(__var1RefId__) : null;
             
                     // ref
             
@@ -5294,8 +5294,8 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                    android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
+                    Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                    android.content.Context var0 = __var0RefId__ != null ? (android.content.Context) getHEAP().get(__var0RefId__) : null;
                     // jsonable arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             

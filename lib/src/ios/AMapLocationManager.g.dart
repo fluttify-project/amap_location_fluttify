@@ -469,7 +469,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::startMonitoringForRegion', {"region": region?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::startMonitoringForRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
   
   
     // handle native call
@@ -493,7 +493,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::stopMonitoringForRegion', {"region": region?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::stopMonitoringForRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
   
   
     // handle native call
@@ -517,7 +517,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::requestStateForRegion', {"region": region?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapLocationManager::requestStateForRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
   
   
     // handle native call

@@ -116,7 +116,7 @@ extern BOOL enableLog;
       HEAP[[NSNumber numberWithLong: item.hash]] = item;
   }
   // jsonable callback arg
-  NSString* argcustomID = customID;
+  NSString* argcustomID = customID == nil ? [NSNull null] : customID;
   // ref callback arg
   NSNumber* argerror = [NSNull null];
   if (error != nil) {
@@ -157,7 +157,7 @@ extern BOOL enableLog;
   }
   
   // jsonable callback arg
-  NSString* argcustomID = customID;
+  NSString* argcustomID = customID == nil ? [NSNull null] : customID;
   // ref callback arg
   NSNumber* argerror = [NSNull null];
   if (error != nil) {
