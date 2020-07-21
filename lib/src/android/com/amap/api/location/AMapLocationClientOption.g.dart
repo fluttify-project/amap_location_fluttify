@@ -42,6 +42,17 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
   //endregion
 
   //region getters
+  static Future<bool> get_static_OPEN_ALWAYS_SCAN_WIFI() async {
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("com.amap.api.location.AMapLocationClientOption::get_OPEN_ALWAYS_SCAN_WIFI", );
+  
+    return __result__;
+  }
+  
+  static Future<int> get_static_SCAN_WIFI_INTERVAL() async {
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("com.amap.api.location.AMapLocationClientOption::get_SCAN_WIFI_INTERVAL", );
+  
+    return __result__;
+  }
   
   //endregion
 
@@ -1207,6 +1218,19 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
 
 extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_api_location_AMapLocationClientOption> {
   //region getters
+  Future<List<bool>> get_static_OPEN_ALWAYS_SCAN_WIFI_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("com.amap.api.location.AMapLocationClientOption::get_OPEN_ALWAYS_SCAN_WIFI_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<int>> get_static_SCAN_WIFI_INTERVAL_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("com.amap.api.location.AMapLocationClientOption::get_SCAN_WIFI_INTERVAL_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+  
+    return typedResult;
+  }
   
   //endregion
 

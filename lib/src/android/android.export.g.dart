@@ -6,6 +6,7 @@ export 'com/amap/api/location/AMapLocationClientOption/AMapLocationPurpose.g.dar
 export 'com/amap/api/location/AMapLocationClientOption/GeoLanguage.g.dart';
 export 'com/amap/api/location/AMapLocationClientOption/AMapLocationMode.g.dart';
 export 'com/amap/api/location/CoordUtil.g.dart';
+export 'com/amap/api/location/APSService.g.dart';
 export 'com/amap/api/location/UmidtokenInfo.g.dart';
 export 'com/amap/api/location/LocationManagerBase.g.dart';
 export 'com/amap/api/location/AMapLocationClientOption.g.dart';
