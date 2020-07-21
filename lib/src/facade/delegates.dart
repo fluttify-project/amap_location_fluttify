@@ -16,7 +16,9 @@ typedef void _OnGeoFenceStatusChanged(
 );
 
 class _AndroidLocationDelegate extends java_lang_Object
-    with com_amap_api_location_AMapLocationListener {
+    with
+        com_amap_api_location_AMapLocationListener,
+        com_amap_api_fence_GeoFenceListener {
   _OnAndroidLocationChanged _onLocationChanged;
 
   @override
@@ -27,6 +29,14 @@ class _AndroidLocationDelegate extends java_lang_Object
     if (_onLocationChanged != null) {
       _onLocationChanged(var1);
     }
+  }
+
+  @override
+  Future<void> onGeoFenceCreateFinished(
+      List<com_amap_api_fence_GeoFence> var1, int var2, String var3) async {
+    super.onGeoFenceCreateFinished(var1, var2, var3);
+    debugPrint(
+        '围栏创建结果: $var2, ${com_amap_api_fence_GeoFence.ADDGEOFENCE_SUCCESS}');
   }
 }
 

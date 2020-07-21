@@ -12,6 +12,11 @@ dependencies:
   decorated_flutter: ^0.12.0+1
   permission_handler: ^4.3.0
 
+
+dependency_overrides:
+  foundation_fluttify:
+    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

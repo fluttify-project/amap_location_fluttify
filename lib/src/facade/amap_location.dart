@@ -6,6 +6,7 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 
 import 'enums.dart';
 import 'extensions.dart';
@@ -427,7 +428,7 @@ class AmapLocation {
   }
 
   /// 创建圆形电子围栏
-  Stream<GeoFenceEvent> addCircleGeoFence({
+  static Stream<GeoFenceEvent> addCircleGeoFence({
     @required LatLng center,
     @required double radius,
     String customId = '',
@@ -447,39 +448,46 @@ class AmapLocation {
       int activeAction = 0;
       if (activeActions.contains(GeoFenceActiveAction.In)) {
         activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_IN;
-      } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+      }
+      if (activeActions.contains(GeoFenceActiveAction.Out)) {
         activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_OUT;
-      } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+      }
+      if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
         activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_STAYED;
       }
-      _androidGeoFenceClient.setActivateAction(activeAction);
 
       final point = await com_amap_api_location_DPoint.create__double__double(
           center.latitude, center.longitude);
 
-      await _androidGeoFenceClient
-          .addGeoFence__com_amap_api_location_DPoint__double__String(
+      MethodChannel(
+              'com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX::Callback')
+          .setMethodCallHandler((call) async {
+        if (call.method ==
+            'Callback::com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX') {
+          final args = await call.arguments as Map;
+          final status = args['status'] as int;
+          final customId = args['customId'] as String;
+          final fenceId = args['fenceId'] as String;
+          debugPrint(
+              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
+          final fence = com_amap_api_fence_GeoFence()
+            ..refId = args['fence'] as int;
+          _geoFenceEventController.add(
+            GeoFenceEvent(
+              customId: customId,
+              fenceId: fenceId,
+              status: GeoFenceStatusX.fromAndroid(status),
+            ),
+          );
+        }
+      });
+
+      await _androidGeoFenceClient.addCircleGeoFence(
+        activeAction,
         point,
         radius,
         customId,
       );
-
-      kBroadcastEventChannel.receiveBroadcastStream().listen((intent) async {
-        final bundle = await intent.bundle;
-        final status =
-            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_FENCESTATUS] as int;
-        final fenceId =
-            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_FENCEID] as String;
-        final customId =
-            bundle[com_amap_api_fence_GeoFence.BUNDLE_KEY_CUSTOMID] as String;
-        _geoFenceEventController.add(
-          GeoFenceEvent(
-            customId: customId,
-            fenceId: fenceId,
-            status: GeoFenceStatusX.fromAndroid(status),
-          ),
-        );
-      });
     } else if (Platform.isIOS) {
       _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
 
@@ -487,10 +495,12 @@ class AmapLocation {
       if (activeActions.contains(GeoFenceActiveAction.In)) {
         activeAction |=
             AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside.toValue();
-      } else if (activeActions.contains(GeoFenceActiveAction.Out)) {
+      }
+      if (activeActions.contains(GeoFenceActiveAction.Out)) {
         activeAction |=
             AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside.toValue();
-      } else if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
+      }
+      if (activeActions.contains(GeoFenceActiveAction.Stayed)) {
         activeAction |=
             AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed.toValue();
       }
@@ -526,7 +536,7 @@ class AmapLocation {
   }
 
   /// 创建多边形电子围栏
-  Stream<GeoFenceEvent> addPolygonGeoFence({
+  static Stream<GeoFenceEvent> addPolygonGeoFence({
     @required List<LatLng> pointList,
     String customId = '',
     List<GeoFenceActiveAction> activeActions = const [

@@ -4,23 +4,23 @@
 
 package me.yohom.amap_location_fluttify.sub_handler.custom;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import com.amap.api.fence.GeoFence;
+import com.amap.api.fence.GeoFenceClient;
+import com.amap.api.location.DPoint;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.NonNull;
-import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.BinaryMessenger;
-import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
-import io.flutter.plugin.platform.PlatformViewRegistry;
-
 import me.yohom.amap_location_fluttify.AmapLocationFluttifyPlugin.Handler;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
@@ -30,14 +30,55 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 public class SubHandlerCustom {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger, android.app.Activity activity) {
         return new HashMap<String, Handler>() {{
-            put("", (args, methodResult) -> {
+            put("com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX", (rawArgs, methodResult) -> {
                 // args
+                Map<String, Object> args = (Map<String, Object>) rawArgs;
+                int refId = (int) args.get("refId");
+                int activeAction = (int) args.get("activeAction");
+                DPoint center = (DPoint) getHEAP().get((int) args.get("center"));
+                Double radius = (Double) args.get("radius");
+                String customId = (String) args.get("customId");
 
                 // ref
+                GeoFenceClient ref = (GeoFenceClient) getHEAP().get(refId);
 
                 // invoke native method
                 try {
+                    final String GEOFENCE_BROADCAST_ACTION = "com.location.apis.geofencedemo.broadcast";
 
+                    ref.setActivateAction(activeAction);
+                    ref.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
+                    ref.addGeoFence(center, radius.floatValue(), customId);
+
+                    IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+                    filter.addAction(GEOFENCE_BROADCAST_ACTION);
+                    activity.registerReceiver(new BroadcastReceiver() {
+                        @Override
+                        public void onReceive(Context context, Intent intent) {
+                            if (GEOFENCE_BROADCAST_ACTION.equals(intent.getAction())) {
+                                Bundle bundle = intent.getExtras();
+                                Log.d(GEOFENCE_BROADCAST_ACTION, "收到围栏消息: " + bundle);    //获取Bundle
+                                //获取围栏行为：
+                                int status = bundle.getInt(GeoFence.BUNDLE_KEY_FENCESTATUS);
+                                //获取自定义的围栏标识：
+                                String customId = bundle.getString(GeoFence.BUNDLE_KEY_CUSTOMID);
+                                //获取围栏ID:
+                                String fenceId = bundle.getString(GeoFence.BUNDLE_KEY_FENCEID);
+                                //获取当前有触发的围栏对象：
+                                GeoFence fence = bundle.getParcelable(GeoFence.BUNDLE_KEY_FENCE);
+                                getHEAP().put(System.identityHashCode(fence), fence);
+
+                                Map<String, Object> arguments = new HashMap<>();
+                                arguments.put("status", status);
+                                arguments.put("customId", customId);
+                                arguments.put("fenceId", fenceId);
+                                arguments.put("fence", System.identityHashCode(fence));
+
+                                new MethodChannel(messenger, "com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX::Callback")
+                                        .invokeMethod("Callback::com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX", arguments);
+                            }
+                        }
+                    }, filter);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

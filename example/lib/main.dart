@@ -57,6 +57,16 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
                 }
               },
             ),
+            RaisedButton(
+              child: Text('添加围栏'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  AmapLocation.addCircleGeoFence(
+                          center: LatLng(29, 119), radius: 1000)
+                      .listen((event) => debugPrint(event.status.toString()));
+                }
+              },
+            ),
             if (_location != null)
               Center(
                 child: Text(

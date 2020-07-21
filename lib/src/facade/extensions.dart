@@ -1,4 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
+import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:flutter/services.dart';
 
@@ -33,5 +34,26 @@ extension GeoFenceStatusX on GeoFenceStatus {
       default:
         return GeoFenceStatus.Unknown;
     }
+  }
+}
+
+extension com_amap_api_fence_GeoFenceClient_X
+    on com_amap_api_fence_GeoFenceClient {
+  Future<void> addCircleGeoFence(
+    int activeAction,
+    com_amap_api_location_DPoint center,
+    double radius,
+    String customId,
+  ) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX',
+      {
+        'refId': refId,
+        'activeAction': activeAction,
+        'center': center.refId,
+        'radius': radius,
+        'customId': customId,
+      },
+    );
   }
 }
