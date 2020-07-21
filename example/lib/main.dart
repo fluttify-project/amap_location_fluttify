@@ -18,6 +18,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
   Location _location;
+  String _fenceStatus;
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +63,15 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               onPressed: () async {
                 if (await requestPermission()) {
                   AmapLocation.addCircleGeoFence(
-                          center: LatLng(29, 119), radius: 1000)
-                      .listen((event) => debugPrint(event.status.toString()));
+                    center: LatLng(29, 119),
+                    radius: 1000,
+                    customId: 'testid',
+                  ).listen((event) {
+                    setState(() {
+                      _fenceStatus =
+                          '状态: ${event.status}, 围栏id: ${event.fenceId}, 自定义id: ${event.customId}';
+                    });
+                  });
                 }
               },
             ),
@@ -71,6 +79,13 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               Center(
                 child: Text(
                   _location.toString(),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            if (_fenceStatus != null)
+              Center(
+                child: Text(
+                  _fenceStatus.toString(),
                   textAlign: TextAlign.center,
                 ),
               ),

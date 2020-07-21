@@ -438,7 +438,7 @@ class AmapLocation {
       GeoFenceActiveAction.Stayed,
     ],
   }) async* {
-    _geoFenceEventController ??= StreamController<GeoFenceEvent>();
+    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
 
     if (Platform.isAndroid) {
       final context = await android_app_Application.get();
@@ -490,6 +490,12 @@ class AmapLocation {
       );
     } else if (Platform.isIOS) {
       _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
+
+      // 设置回调
+      if (_iosLocationDelegate == null) {
+        _iosLocationDelegate = _IOSLocationDelegate();
+        await _iosGeoFenceClient.set_delegate(_iosLocationDelegate);
+      }
 
       int activeAction = 0;
       if (activeActions.contains(GeoFenceActiveAction.In)) {
