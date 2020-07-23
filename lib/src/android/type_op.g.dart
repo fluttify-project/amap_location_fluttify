@@ -20,10 +20,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
       return this is T;
     }
-    else if (T == com_autonavi_aps_amapapi_model_AMapLocationServer) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_autonavi_aps_amapapi_model_AMapLocationServer', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == com_amap_api_location_AMapLocationClient) {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationClient', {'refId': (this as Ref).refId});
       return result;
@@ -190,9 +186,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
       return this as T;
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-    else if (T == com_autonavi_aps_amapapi_model_AMapLocationServer) {
-      return (com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
-    }
     else if (T == com_amap_api_location_AMapLocationClient) {
       return (com_amap_api_location_AMapLocationClient()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }

@@ -15,6 +15,74 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler1 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"AMapLocationReGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_country");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* country = (NSString*) args[@"country"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.country = country;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_province");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* province = (NSString*) args[@"province"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.province = province;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_city");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* city = (NSString*) args[@"city"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.city = city;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationReGeocode::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationReGeocode::set_district");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* district = (NSString*) args[@"district"];
+        
+            // ref
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.district = district;
+            methodResult(@"success");
+        },
+        
         @"AMapLocationReGeocode::set_township": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -321,6 +389,57 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
+        @"AMapLocationPOIItem::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationPOIItem::set_province");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* province = (NSString*) args[@"province"];
+        
+            // ref
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.province = province;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationPOIItem::set_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationPOIItem::set_city");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* city = (NSString*) args[@"city"];
+        
+            // ref
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.city = city;
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationPOIItem::set_district": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapLocationPOIItem::set_district");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* district = (NSString*) args[@"district"];
+        
+            // ref
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.district = district;
+            methodResult(@"success");
+        },
+        
         @"AMapLocationDistrictItem::set_cityCode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -536,6 +655,42 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
+        @"AMapLocationManager::set_pausesLocationUpdatesAutomatically_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
+        
+                // ref
+                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_allowsBackgroundLocationUpdates_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
+        
+                // ref
+                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
         @"AMapLocationManager::set_locationTimeout_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
@@ -602,6 +757,24 @@ extern BOOL enableLog;
                 AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
                 ref.reGeocodeLanguage = reGeocodeLanguage;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationManager::set_detectRiskOfFakeLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
+        
+                // ref
+                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
                 methodResult(@"success");
             }
         
@@ -1016,6 +1189,60 @@ extern BOOL enableLog;
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
                 ref.tel = tel;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationPOIItem::set_province_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* province = (NSString*) args[@"province"];
+        
+                // ref
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.province = province;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationPOIItem::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* city = (NSString*) args[@"city"];
+        
+                // ref
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.city = city;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapLocationPOIItem::set_district_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* district = (NSString*) args[@"district"];
+        
+                // ref
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.district = district;
                 methodResult(@"success");
             }
         
@@ -1620,7 +1847,7 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            id jsonableResult = @(result);
+            NSObject* jsonableResult = @(result);
         
             methodResult(jsonableResult);
         },

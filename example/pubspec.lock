@@ -14,7 +14,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.13.2"
+    version: "0.0.1"
   archive:
     dependency: transitive
     description:
@@ -157,12 +157,12 @@ packages:
     source: sdk
     version: "0.0.0"
   foundation_fluttify:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "/Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify"
-      relative: false
-    source: path
-    version: "0.8.11-dev.6"
+      name: foundation_fluttify
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.11"
   http:
     dependency: transitive
     description:

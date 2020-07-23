@@ -87,7 +87,7 @@ packages:
       name: foundation_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.8.11-dev.6"
+    version: "0.8.11"
   image:
     dependency: transitive
     description:
