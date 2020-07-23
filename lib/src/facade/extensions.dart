@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'enums.dart';
@@ -55,5 +56,60 @@ extension com_amap_api_fence_GeoFenceClient_X
         'customId': customId,
       },
     );
+  }
+
+  Future<void> addPoiGeoFence({
+    @required String keyword,
+    String poiType,
+    String city,
+    int size,
+    String customId = '',
+    int activeAction,
+  }) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addPoiGeoFenceX',
+      {
+        'refId': refId,
+        'activeAction': activeAction,
+        'keyword': keyword,
+        'poiType': poiType,
+        'city': city,
+        'size': size,
+        'customId': customId,
+      },
+    );
+  }
+
+  Future<void> addPolygonGeoFence({
+    @required List<com_amap_api_location_DPoint> polygon,
+    String customId = '',
+    int activeAction,
+  }) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addPolygonGeoFenceX',
+      {
+        'refId': refId,
+        'polygon': polygon.map((e) => e.refId).toList(),
+        'customId': customId,
+      },
+    );
+  }
+}
+
+extension ListX on List<GeoFenceActiveAction> {
+  int getActiveAction() {
+    debugPrint('激活动作: $this');
+    int activeAction = 0;
+    if (contains(GeoFenceActiveAction.In)) {
+      activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_IN;
+    }
+    if (contains(GeoFenceActiveAction.Out)) {
+      activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_OUT;
+    }
+    if (contains(GeoFenceActiveAction.Stayed)) {
+      activeAction |= com_amap_api_fence_GeoFenceClient.GEOFENCE_STAYED;
+    }
+    debugPrint('激活动作解析结果: $activeAction');
+    return activeAction;
   }
 }
