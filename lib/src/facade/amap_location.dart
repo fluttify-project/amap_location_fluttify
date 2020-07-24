@@ -43,18 +43,23 @@ class AmapLocation with _Holder, _Community, _Pro {
         }
       });
     } else if (Platform.isIOS) {
-      _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-              ),
-            );
-          },
-      );
+      _iosLocationDelegate ??= _IOSLocationDelegate();
+      AMapGeoFenceManager.create__().then((value) {
+        _iosGeoFenceClient ??= value;
+        _iosGeoFenceClient.set_delegate(
+          _iosLocationDelegate
+            .._onGeoFenceStatusChanged = (region, customId, error) async {
+              _geoFenceEventController.add(
+                GeoFenceEvent(
+                  customId: customId,
+                  fenceId: await region.get_identifier(),
+                  status:
+                      GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+                ),
+              );
+            },
+        );
+      });
     }
   }
 }
@@ -517,14 +522,6 @@ mixin _Pro on _Holder {
         customId,
       );
     } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-
-      // 设置回调
-      if (_iosLocationDelegate == null) {
-        _iosLocationDelegate = _IOSLocationDelegate();
-        await _iosGeoFenceClient.set_delegate(_iosLocationDelegate);
-      }
-
       await _iosGeoFenceClient
           .set_activeActionX(activeActions.getActiveAction());
 
@@ -574,14 +571,6 @@ mixin _Pro on _Holder {
         activeAction: activeActions.getActiveAction(),
       );
     } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-
-      // 设置回调
-      if (_iosLocationDelegate == null) {
-        _iosLocationDelegate = _IOSLocationDelegate();
-        await _iosGeoFenceClient.set_delegate(_iosLocationDelegate);
-      }
-
       await _iosGeoFenceClient
           .set_activeActionX(activeActions.getActiveAction());
 
@@ -631,8 +620,6 @@ mixin _Pro on _Holder {
         activeAction: activeActions.getActiveAction(),
       );
     } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-
       await _iosGeoFenceClient
           .set_activeActionX(activeActions.getActiveAction());
       await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
@@ -673,8 +660,6 @@ mixin _Pro on _Holder {
         activeAction: activeActions.getActiveAction(),
       );
     } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-
       await _iosGeoFenceClient
           .set_activeActionX(activeActions.getActiveAction());
       await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
