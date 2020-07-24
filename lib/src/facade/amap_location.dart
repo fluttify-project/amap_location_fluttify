@@ -15,7 +15,7 @@ import 'models.dart';
 part 'delegates.dart';
 
 /// 高德定位 主类
-class AmapLocation {
+class AmapLocation with _Holder, _Community, _Pro {
   static AmapLocation instance = AmapLocation._();
 
   AmapLocation._() {
@@ -42,7 +42,9 @@ class AmapLocation {
       }
     });
   }
+}
 
+class _Holder {
   com_amap_api_location_AMapLocationClient _androidClient;
   com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
   AMapLocationManager _iosClient;
@@ -53,7 +55,9 @@ class AmapLocation {
 
   _IOSLocationDelegate _iosLocationDelegate;
   _AndroidLocationDelegate _androidLocationDelegate;
+}
 
+mixin _Community on _Holder {
   /// 单次获取定位信息
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout].
@@ -443,6 +447,33 @@ class AmapLocation {
     }
   }
 
+  /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
+  Future<void> dispose() async {
+    _locationController?.close();
+    _locationController = null;
+
+    _geoFenceEventController?.close();
+    _geoFenceEventController = null;
+
+    _androidLocationDelegate = null;
+    _iosLocationDelegate = null;
+
+    final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
+    await kNativeObjectPool.where(isCurrentPlugin).release_batch();
+    kNativeObjectPool.removeWhere(isCurrentPlugin);
+
+    if (_androidClient != null) {
+      await _androidClient.onDestroy();
+      await _androidClient.release__();
+    }
+    if (_iosClient != null) await _iosClient.release__();
+
+    _androidClient = null;
+    _iosClient = null;
+  }
+}
+
+mixin _Pro on _Holder {
   /// 创建圆形电子围栏
   Stream<GeoFenceEvent> addCircleGeoFence({
     @required LatLng center,
@@ -640,30 +671,5 @@ class AmapLocation {
     }
 
     yield* _geoFenceEventController.stream;
-  }
-
-  /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
-  Future<void> dispose() async {
-    _locationController?.close();
-    _locationController = null;
-
-    _geoFenceEventController?.close();
-    _geoFenceEventController = null;
-
-    _androidLocationDelegate = null;
-    _iosLocationDelegate = null;
-
-    final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
-    await kNativeObjectPool.where(isCurrentPlugin).release_batch();
-    kNativeObjectPool.removeWhere(isCurrentPlugin);
-
-    if (_androidClient != null) {
-      await _androidClient.onDestroy();
-      await _androidClient.release__();
-    }
-    if (_iosClient != null) await _iosClient.release__();
-
-    _androidClient = null;
-    _iosClient = null;
   }
 }
