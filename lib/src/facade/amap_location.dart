@@ -19,6 +19,7 @@ class AmapLocation {
   static AmapLocation instance = AmapLocation._();
 
   AmapLocation._() {
+    // 电子围栏回调
     MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
         .setMethodCallHandler((call) async {
       if (call.method ==
