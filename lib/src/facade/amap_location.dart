@@ -18,7 +18,29 @@ part 'delegates.dart';
 class AmapLocation {
   static AmapLocation instance = AmapLocation._();
 
-  AmapLocation._();
+  AmapLocation._() {
+    MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
+        .setMethodCallHandler((call) async {
+      if (call.method ==
+          'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
+        final args = await call.arguments as Map;
+        final status = args['status'] as int;
+        final customId = args['customId'] as String;
+        final fenceId = args['fenceId'] as String;
+        debugPrint(
+            '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
+        final fence = com_amap_api_fence_GeoFence()
+          ..refId = args['fence'] as int;
+        _geoFenceEventController?.add(
+          GeoFenceEvent(
+            customId: customId,
+            fenceId: fenceId,
+            status: GeoFenceStatusX.fromAndroid(status),
+          ),
+        );
+      }
+    });
+  }
 
   com_amap_api_location_AMapLocationClient _androidClient;
   com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
@@ -441,28 +463,6 @@ class AmapLocation {
       final point = await com_amap_api_location_DPoint.create__double__double(
           center.latitude, center.longitude);
 
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
-          .setMethodCallHandler((call) async {
-        if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
-          final args = await call.arguments as Map;
-          final status = args['status'] as int;
-          final customId = args['customId'] as String;
-          final fenceId = args['fenceId'] as String;
-          debugPrint(
-              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
-          final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as int;
-          _geoFenceEventController.add(
-            GeoFenceEvent(
-              customId: customId,
-              fenceId: fenceId,
-              status: GeoFenceStatusX.fromAndroid(status),
-            ),
-          );
-        }
-      });
-
       await _androidGeoFenceClient.addCircleGeoFence(
         activeActions.getActiveAction(),
         point,
@@ -529,28 +529,6 @@ class AmapLocation {
       final context = await android_app_Application.get();
       _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
           .create__android_content_Context(context);
-
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
-          .setMethodCallHandler((call) async {
-        if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
-          final args = await call.arguments as Map;
-          final status = args['status'] as int;
-          final customId = args['customId'] as String;
-          final fenceId = args['fenceId'] as String;
-          debugPrint(
-              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
-          final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as int;
-          _geoFenceEventController.add(
-            GeoFenceEvent(
-              customId: customId,
-              fenceId: fenceId,
-              status: GeoFenceStatusX.fromAndroid(status),
-            ),
-          );
-        }
-      });
 
       await _androidGeoFenceClient.addPoiGeoFence(
         keyword: keyword,
@@ -620,28 +598,6 @@ class AmapLocation {
       final context = await android_app_Application.get();
       _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
           .create__android_content_Context(context);
-
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
-          .setMethodCallHandler((call) async {
-        if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
-          final args = await call.arguments as Map;
-          final status = args['status'] as int;
-          final customId = args['customId'] as String;
-          final fenceId = args['fenceId'] as String;
-          debugPrint(
-              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
-          final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as int;
-          _geoFenceEventController.add(
-            GeoFenceEvent(
-              customId: customId,
-              fenceId: fenceId,
-              status: GeoFenceStatusX.fromAndroid(status),
-            ),
-          );
-        }
-      });
 
       final _pointList = await com_amap_api_location_DPoint
           .create_batch__double__double(latitudeList, longitudeList);
