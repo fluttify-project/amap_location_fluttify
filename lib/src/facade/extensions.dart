@@ -62,7 +62,7 @@ extension com_amap_api_fence_GeoFenceClient_X
     @required String keyword,
     String poiType,
     String city,
-    int size,
+    int aroundRadius,
     String customId = '',
     int activeAction,
   }) async {
@@ -74,7 +74,7 @@ extension com_amap_api_fence_GeoFenceClient_X
         'keyword': keyword,
         'poiType': poiType,
         'city': city,
-        'size': size,
+        'size': aroundRadius,
         'customId': customId,
       },
     );

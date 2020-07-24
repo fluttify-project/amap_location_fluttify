@@ -14,34 +14,27 @@ import 'models.dart';
 
 part 'delegates.dart';
 
-/// 释放原生对象Mixin
-mixin AmapLocationDisposeMixin<T extends StatefulWidget> on State<T> {
-  @override
-  void dispose() {
-    AmapLocation.dispose();
-    super.dispose();
-  }
-}
-
 /// 高德定位 主类
 class AmapLocation {
+  static AmapLocation instance = AmapLocation._();
+
   AmapLocation._();
 
-  static com_amap_api_location_AMapLocationClient _androidClient;
-  static com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
-  static AMapLocationManager _iosClient;
-  static AMapGeoFenceManager _iosGeoFenceClient;
+  com_amap_api_location_AMapLocationClient _androidClient;
+  com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
+  AMapLocationManager _iosClient;
+  AMapGeoFenceManager _iosGeoFenceClient;
 
-  static StreamController<Location> _locationController;
-  static StreamController<GeoFenceEvent> _geoFenceEventController;
+  StreamController<Location> _locationController;
+  StreamController<GeoFenceEvent> _geoFenceEventController;
 
-  static _IOSLocationDelegate _iosLocationDelegate;
-  static _AndroidLocationDelegate _androidLocationDelegate;
+  _IOSLocationDelegate _iosLocationDelegate;
+  _AndroidLocationDelegate _androidLocationDelegate;
 
   /// 单次获取定位信息
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout].
-  static Future<Location> fetchLocation({
+  Future<Location> fetchLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     Duration timeout,
@@ -190,7 +183,7 @@ class AmapLocation {
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout]
   /// 设置定位间隔[interval], 默认2000 ms， 设置是否开启定位缓存机制[cacheEnable].
   /// [distanceFilter] ios only: 设置更新定位的最小偏移距离, 单位:米.
-  static Stream<Location> listenLocation({
+  Stream<Location> listenLocation({
     LocationAccuracy mode = LocationAccuracy.Low,
     bool needAddress,
     Duration timeout,
@@ -340,7 +333,7 @@ class AmapLocation {
   }
 
   /// 停止定位
-  static Future<void> stopLocation() {
+  Future<void> stopLocation() {
     return platform(
       android: (pool) async {
         _locationController?.close();
@@ -362,7 +355,7 @@ class AmapLocation {
   }
 
   /// 请求后台定位 *仅iOS
-  static Future<void> requireAlwaysAuth() {
+  Future<void> requireAlwaysAuth() {
     return platform(
       android: (pool) async {},
       ios: (pool) async {
@@ -377,7 +370,7 @@ class AmapLocation {
   }
 
   /// 开启后台定位
-  static Future<void> enableBackgroundLocation(
+  Future<void> enableBackgroundLocation(
       int id, BackgroundNotification bgNotification) {
     return platform(
       android: (pool) async {
@@ -401,7 +394,7 @@ class AmapLocation {
   }
 
   /// 关闭后台定位
-  static Future<void> disableBackgroundLocation(bool var1) {
+  Future<void> disableBackgroundLocation(bool var1) {
     return platform(
       android: (pool) async {
         await checkClient();
@@ -414,7 +407,7 @@ class AmapLocation {
   }
 
   /// 确保client不为空
-  static Future<void> checkClient() async {
+  Future<void> checkClient() async {
     if (Platform.isAndroid) {
       // 获取上下文, 这里获取的是Application
       final context = await android_app_Application.get();
@@ -428,7 +421,7 @@ class AmapLocation {
   }
 
   /// 创建圆形电子围栏
-  static Stream<GeoFenceEvent> addCircleGeoFence({
+  Stream<GeoFenceEvent> addCircleGeoFence({
     @required LatLng center,
     @required double radius,
     String customId = '',
@@ -448,11 +441,10 @@ class AmapLocation {
       final point = await com_amap_api_location_DPoint.create__double__double(
           center.latitude, center.longitude);
 
-      MethodChannel(
-              'com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX::Callback')
+      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
           .setMethodCallHandler((call) async {
         if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX') {
+            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
           final args = await call.arguments as Map;
           final status = args['status'] as int;
           final customId = args['customId'] as String;
@@ -519,11 +511,11 @@ class AmapLocation {
   }
 
   /// 创POI电子围栏
-  static Stream<GeoFenceEvent> addPoiGeoFence({
+  Stream<GeoFenceEvent> addPoiGeoFence({
     @required String keyword,
-    String poiType,
-    String city,
-    int size,
+    String poiType = '',
+    String city = '',
+    int aroundRadius = 10,
     String customId = '',
     List<GeoFenceActiveAction> activeActions = const [
       GeoFenceActiveAction.In,
@@ -538,11 +530,10 @@ class AmapLocation {
       _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
           .create__android_content_Context(context);
 
-      MethodChannel(
-              'com.amap.api.fence.GeoFenceClient::addPoiGeoFenceX::Callback')
+      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
           .setMethodCallHandler((call) async {
         if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addPoiGeoFenceX') {
+            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
           final args = await call.arguments as Map;
           final status = args['status'] as int;
           final customId = args['customId'] as String;
@@ -565,7 +556,7 @@ class AmapLocation {
         keyword: keyword,
         poiType: poiType,
         city: city,
-        size: size,
+        aroundRadius: aroundRadius,
         customId: customId,
         activeAction: activeActions.getActiveAction(),
       );
@@ -600,7 +591,7 @@ class AmapLocation {
         keyword,
         poiType,
         city,
-        size,
+        aroundRadius,
         customId,
       );
     } else {
@@ -611,7 +602,7 @@ class AmapLocation {
   }
 
   /// 创建多边形电子围栏
-  static Stream<GeoFenceEvent> addPolygonGeoFence({
+  Stream<GeoFenceEvent> addPolygonGeoFence({
     @required List<LatLng> pointList,
     String customId = '',
     List<GeoFenceActiveAction> activeActions = const [
@@ -630,11 +621,10 @@ class AmapLocation {
       _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
           .create__android_content_Context(context);
 
-      MethodChannel(
-              'com.amap.api.fence.GeoFenceClient::addPolygonGeoFenceX::Callback')
+      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
           .setMethodCallHandler((call) async {
         if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addPolygonGeoFenceX') {
+            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
           final args = await call.arguments as Map;
           final status = args['status'] as int;
           final customId = args['customId'] as String;
@@ -696,7 +686,7 @@ class AmapLocation {
   }
 
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
-  static Future<void> dispose() async {
+  Future<void> dispose() async {
     _locationController?.close();
     _locationController = null;
 

@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
+class _MyAppState extends State<MyApp> {
   Location _location;
   String _fenceStatus;
 
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('获取单次定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  final location = await AmapLocation.fetchLocation();
+                  final location = await AmapLocation.instance.fetchLocation();
                   setState(() => _location = location);
                 }
               },
@@ -43,7 +43,8 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('获取连续定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  await for (final location in AmapLocation.listenLocation()) {
+                  await for (final location
+                      in AmapLocation.instance.listenLocation()) {
                     setState(() => _location = location);
                   }
                 }
@@ -53,20 +54,42 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
               child: Text('停止定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  await AmapLocation.stopLocation();
+                  await AmapLocation.instance.stopLocation();
                   setState(() => _location = null);
                 }
               },
             ),
             RaisedButton(
-              child: Text('添加围栏'),
+              child: Text('添加原型围栏'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  AmapLocation.addCircleGeoFence(
+                  AmapLocation.instance
+                      .addCircleGeoFence(
                     center: LatLng(29, 119),
                     radius: 1000,
                     customId: 'testid',
-                  ).listen((event) {
+                  )
+                      .listen((event) {
+                    setState(() {
+                      _fenceStatus =
+                          '状态: ${event.status}, 围栏id: ${event.fenceId}, 自定义id: ${event.customId}';
+                    });
+                  });
+                }
+              },
+            ),
+            RaisedButton(
+              child: Text('添加poi围栏'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  AmapLocation.instance
+                      .addPoiGeoFence(
+                    keyword: '肯德基',
+                    customId: 'testid',
+                    city: '兰溪',
+                    aroundRadius: 10000,
+                  )
+                      .listen((event) {
                     setState(() {
                       _fenceStatus =
                           '状态: ${event.status}, 围栏id: ${event.fenceId}, 自定义id: ${event.customId}';
@@ -93,6 +116,12 @@ class _MyAppState extends State<MyApp> with AmapLocationDisposeMixin {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    AmapLocation.instance.dispose();
+    super.dispose();
   }
 }
 
