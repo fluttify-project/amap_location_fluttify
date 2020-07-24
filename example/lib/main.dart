@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
               },
             ),
             RaisedButton(
-              child: Text('添加原型围栏'),
+              child: Text('添加圆形围栏'),
               onPressed: () async {
                 if (await requestPermission()) {
                   AmapLocation.instance
@@ -70,6 +70,27 @@ class _MyAppState extends State<MyApp> {
                     customId: 'testid',
                   )
                       .listen((event) {
+                    setState(() {
+                      _fenceStatus =
+                          '状态: ${event.status}, 围栏id: ${event.fenceId}, 自定义id: ${event.customId}';
+                    });
+                  });
+                }
+              },
+            ),
+            RaisedButton(
+              child: Text('添加多边形围栏'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  AmapLocation.instance.addPolygonGeoFence(
+                    pointList: <LatLng>[
+                      LatLng(29.255201, 119.353437),
+                      LatLng(28.974455, 119.508619),
+                      LatLng(29.172496, 119.560804),
+                      LatLng(29.306707, 119.422101),
+                    ],
+                    customId: 'testid',
+                  ).listen((event) {
                     setState(() {
                       _fenceStatus =
                           '状态: ${event.status}, 围栏id: ${event.fenceId}, 自定义id: ${event.customId}';
@@ -89,6 +110,21 @@ class _MyAppState extends State<MyApp> {
                     city: '兰溪',
                     aroundRadius: 10000,
                   )
+                      .listen((event) {
+                    setState(() {
+                      _fenceStatus =
+                          '状态: ${event.status}, 围栏id: ${event.fenceId}, 自定义id: ${event.customId}';
+                    });
+                  });
+                }
+              },
+            ),
+            RaisedButton(
+              child: Text('添加行政区划围栏'),
+              onPressed: () async {
+                if (await requestPermission()) {
+                  AmapLocation.instance
+                      .addDistrictGeoFence(keyword: '兰溪')
                       .listen((event) {
                     setState(() {
                       _fenceStatus =

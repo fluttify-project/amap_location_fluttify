@@ -91,6 +91,23 @@ extension com_amap_api_fence_GeoFenceClient_X
         'refId': refId,
         'polygon': polygon.map((e) => e.refId).toList(),
         'customId': customId,
+        'activeAction': activeAction,
+      },
+    );
+  }
+
+  Future<void> addDistrictGeoFence({
+    @required String keyword,
+    String customId = '',
+    @required int activeAction,
+  }) async {
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addDistrictGeoFenceX',
+      {
+        'refId': refId,
+        'keyword': keyword,
+        'customId': customId,
+        'activeAction': activeAction,
       },
     );
   }

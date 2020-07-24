@@ -19,28 +19,43 @@ class AmapLocation with _Holder, _Community, _Pro {
   static AmapLocation instance = AmapLocation._();
 
   AmapLocation._() {
-    // 电子围栏回调
-    MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
-        .setMethodCallHandler((call) async {
-      if (call.method ==
-          'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
-        final args = await call.arguments as Map;
-        final status = args['status'] as int;
-        final customId = args['customId'] as String;
-        final fenceId = args['fenceId'] as String;
-        debugPrint(
-            '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
-        final fence = com_amap_api_fence_GeoFence()
-          ..refId = args['fence'] as int;
-        _geoFenceEventController?.add(
-          GeoFenceEvent(
-            customId: customId,
-            fenceId: fenceId,
-            status: GeoFenceStatusX.fromAndroid(status),
-          ),
-        );
-      }
-    });
+    if (Platform.isAndroid) {
+      // 电子围栏回调
+      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
+          .setMethodCallHandler((call) async {
+        if (call.method ==
+            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
+          final args = await call.arguments as Map;
+          final status = args['status'] as int;
+          final customId = args['customId'] as String;
+          final fenceId = args['fenceId'] as String;
+          debugPrint(
+              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
+          final fence = com_amap_api_fence_GeoFence()
+            ..refId = args['fence'] as int;
+          _geoFenceEventController?.add(
+            GeoFenceEvent(
+              customId: customId,
+              fenceId: fenceId,
+              status: GeoFenceStatusX.fromAndroid(status),
+            ),
+          );
+        }
+      });
+    } else if (Platform.isIOS) {
+      _iosGeoFenceClient.set_delegate(
+        _iosLocationDelegate
+          .._onGeoFenceStatusChanged = (region, customId, error) async {
+            _geoFenceEventController.add(
+              GeoFenceEvent(
+                customId: customId,
+                fenceId: await region.get_identifier(),
+                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+              ),
+            );
+          },
+      );
+    }
   }
 }
 
@@ -520,18 +535,6 @@ mixin _Pro on _Holder {
         center.longitude,
       );
 
-      await _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-              ),
-            );
-          },
-      );
       await _iosGeoFenceClient
           .addCircleRegionForMonitoringWithCenter_radius_customID(
               point, radius, customId);
@@ -584,18 +587,6 @@ mixin _Pro on _Holder {
 
       await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
 
-      await _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-              ),
-            );
-          },
-      );
       await _iosGeoFenceClient
           .addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID(
         keyword,
@@ -621,7 +612,7 @@ mixin _Pro on _Holder {
       GeoFenceActiveAction.Stayed,
     ],
   }) async* {
-    _geoFenceEventController ??= StreamController<GeoFenceEvent>();
+    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
 
     final latitudeList = pointList.map((e) => e.latitude).toList();
     final longitudeList = pointList.map((e) => e.longitude).toList();
@@ -644,21 +635,7 @@ mixin _Pro on _Holder {
 
       await _iosGeoFenceClient
           .set_activeActionX(activeActions.getActiveAction());
-
       await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
-
-      await _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-              ),
-            );
-          },
-      );
 
       final _pointList = await CLLocationCoordinate2D.create_batch(
           latitudeList, longitudeList);
@@ -666,6 +643,44 @@ mixin _Pro on _Holder {
       await _iosGeoFenceClient
           .addPolygonRegionForMonitoringWithCoordinates_count_customID(
               _pointList, _pointList.length, customId);
+    } else {
+      throw '未实现的平台';
+    }
+
+    yield* _geoFenceEventController.stream;
+  }
+
+  /// 创建行政区划电子围栏
+  Stream<GeoFenceEvent> addDistrictGeoFence({
+    @required String keyword,
+    String customId = '',
+    List<GeoFenceActiveAction> activeActions = const [
+      GeoFenceActiveAction.In,
+      GeoFenceActiveAction.Out,
+      GeoFenceActiveAction.Stayed,
+    ],
+  }) async* {
+    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
+
+    if (Platform.isAndroid) {
+      final context = await android_app_Application.get();
+      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
+          .create__android_content_Context(context);
+
+      await _androidGeoFenceClient.addDistrictGeoFence(
+        keyword: keyword,
+        customId: customId,
+        activeAction: activeActions.getActiveAction(),
+      );
+    } else if (Platform.isIOS) {
+      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
+
+      await _iosGeoFenceClient
+          .set_activeActionX(activeActions.getActiveAction());
+      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
+      await _iosGeoFenceClient
+          .addDistrictRegionForMonitoringWithDistrictName_customID(
+              keyword, customId);
     } else {
       throw '未实现的平台';
     }

@@ -156,6 +156,34 @@ public class SubHandlerCustom {
 
                 methodResult.success("success");
             });
+            put("com.amap.api.fence.GeoFenceClient::addDistrictGeoFenceX", (rawArgs, methodResult) -> {
+                // args
+                Map<String, Object> args = (Map<String, Object>) rawArgs;
+                int refId = (int) args.get("refId");
+                int activeAction = (int) args.get("activeAction");
+                String keyword = (String) args.get("keyword");
+                String customId = (String) args.get("customId");
+
+                // ref
+                GeoFenceClient ref = (GeoFenceClient) getHEAP().get(refId);
+
+                // invoke native method
+                try {
+                    ref.setActivateAction(activeAction);
+                    ref.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
+
+                    ref.addGeoFence(keyword, customId);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+
+                methodResult.success("success");
+            });
         }};
     }
 }
