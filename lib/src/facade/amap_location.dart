@@ -38,6 +38,7 @@ class AmapLocation with _Holder, _Community, _Pro {
               customId: customId,
               fenceId: fenceId,
               status: GeoFenceStatusX.fromAndroid(status),
+              genFence: GeoFence.android(fence),
             ),
           );
         }
@@ -515,6 +516,7 @@ mixin _Pro on _Holder {
                 customId: customId,
                 fenceId: await region.get_identifier(),
                 status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+                genFence: GeoFence.ios(region),
               ),
             );
           },
@@ -580,6 +582,7 @@ mixin _Pro on _Holder {
                 customId: customId,
                 fenceId: await region.get_identifier(),
                 status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+                genFence: GeoFence.ios(region),
               ),
             );
           },
@@ -645,6 +648,7 @@ mixin _Pro on _Holder {
                 customId: customId,
                 fenceId: await region.get_identifier(),
                 status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+                genFence: GeoFence.ios(region),
               ),
             );
           },
@@ -701,6 +705,7 @@ mixin _Pro on _Holder {
                 customId: customId,
                 fenceId: await region.get_identifier(),
                 status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
+                genFence: GeoFence.ios(region),
               ),
             );
           },
@@ -717,5 +722,23 @@ mixin _Pro on _Holder {
     }
 
     yield* _geoFenceEventController.stream;
+  }
+
+  /// 删除单个围栏
+  Future<void> removeGeoFence(GeoFence geoFence) async {
+    return platform(
+      android: (pool) => _androidGeoFenceClient
+          ?.removeGeoFence__com_amap_api_fence_GeoFence(geoFence.androidModel),
+      ios: (pool) =>
+          _iosGeoFenceClient?.removeTheGeoFenceRegion(geoFence.iosModel),
+    );
+  }
+
+  /// 删除所有围栏
+  Future<void> removeAllGeoFence() async {
+    return platform(
+      android: (pool) => _androidGeoFenceClient?.removeGeoFence(),
+      ios: (pool) => _iosGeoFenceClient?.removeAllGeoFenceRegions(),
+    );
   }
 }

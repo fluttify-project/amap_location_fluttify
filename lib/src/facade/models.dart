@@ -104,11 +104,33 @@ class GeoFenceEvent {
   final String customId;
   final String fenceId;
   final GeoFenceStatus status;
+  final GeoFence genFence;
 
-  GeoFenceEvent({this.customId, this.fenceId, this.status});
+  GeoFenceEvent({
+    this.customId,
+    this.fenceId,
+    this.status,
+    this.genFence,
+  });
 
   @override
   String toString() {
-    return 'GeoFenceEvent{customId: $customId, fenceId: $fenceId, action: $status}';
+    return 'GeoFenceEvent{customId: $customId, fenceId: $fenceId, status: $status, genFence: $genFence}';
+  }
+}
+
+class GeoFence {
+  final com_amap_api_fence_GeoFence androidModel;
+  final AMapGeoFenceRegion iosModel;
+
+  GeoFence.android(this.androidModel) : this.iosModel = null;
+
+  GeoFence.ios(this.iosModel) : this.androidModel = null;
+
+  Future<String> get customId async {
+    return platform(
+      android: (pool) => androidModel.getCustomId(),
+      ios: (pool) => iosModel.get_customID(),
+    );
   }
 }
