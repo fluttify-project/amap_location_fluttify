@@ -5,16 +5,16 @@
 
 enum AMapGeoFenceRegionActiveStatus {
   AMapGeoFenceRegionActiveUNMonitor /* 0 */,
-  AMapGeoFenceRegionActiveMonitoring /* null */,
-  AMapGeoFenceRegionActivePaused /* null */
+  AMapGeoFenceRegionActiveMonitoring /* 1<<0 */,
+  AMapGeoFenceRegionActivePaused /* 1<<1 */
 }
 
 extension AMapGeoFenceRegionActiveStatusToX on AMapGeoFenceRegionActiveStatus {
   int toValue() {
     switch (this) {
       case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveUNMonitor: return 0;
-      case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveMonitoring: return AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveMonitoring.index + 0;
-      case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActivePaused: return AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActivePaused.index + 0;
+      case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveMonitoring: return 1<<0;
+      case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActivePaused: return 1<<1;
     }
   }
 }
@@ -23,6 +23,8 @@ extension AMapGeoFenceRegionActiveStatusFromX on int {
   AMapGeoFenceRegionActiveStatus toAMapGeoFenceRegionActiveStatus() {
     switch (this) {
       case 0: return AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveUNMonitor;
+      case 1<<0: return AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveMonitoring;
+      case 1<<1: return AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActivePaused;
       default: return AMapGeoFenceRegionActiveStatus.values[this + 0];
     }
   }

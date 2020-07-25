@@ -20,16 +20,12 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
       return this is T;
     }
-    else if (T == com_autonavi_aps_amapapi_model_AMapLocationServer) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_autonavi_aps_amapapi_model_AMapLocationServer', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_location_LocationManagerBase) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_LocationManagerBase', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == com_amap_api_location_AMapLocationClient) {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationClient', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_location_APSService) {
+      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_APSService', {'refId': (this as Ref).refId});
       return result;
     }
     else if (T == com_amap_api_location_DPoint) {
@@ -56,10 +52,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationClientOption', {'refId': (this as Ref).refId});
       return result;
     }
-    else if (T == com_amap_api_location_APSServiceBase) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_APSServiceBase', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == com_amap_api_location_AMapLocationQualityReport) {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationQualityReport', {'refId': (this as Ref).refId});
       return result;
@@ -74,10 +66,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     }
     else if (T == com_amap_api_fence_GeoFence) {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_fence_GeoFence', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_fence_GeoFenceManagerBase) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_fence_GeoFenceManagerBase', {'refId': (this as Ref).refId});
       return result;
     }
     else if (T == com_amap_api_fence_PoiItem) {
@@ -148,10 +136,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'refId': (this as Ref).refId});
       return result;
     }
-    else if (T == java_io_Closeable) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfjava_io_Closeable', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == java_io_File) {
       final result = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('RefClass::isKindOfjava_io_File', {'refId': (this as Ref).refId});
       return result;
@@ -202,14 +186,11 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
       return this as T;
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-    else if (T == com_autonavi_aps_amapapi_model_AMapLocationServer) {
-      return (com_autonavi_aps_amapapi_model_AMapLocationServer()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
-    }
-    else if (T == com_amap_api_location_LocationManagerBase) {
-      return (com_amap_api_location_LocationManagerBase.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
-    }
     else if (T == com_amap_api_location_AMapLocationClient) {
       return (com_amap_api_location_AMapLocationClient()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+    }
+    else if (T == com_amap_api_location_APSService) {
+      return (com_amap_api_location_APSService()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_DPoint) {
       return (com_amap_api_location_DPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
@@ -229,9 +210,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     else if (T == com_amap_api_location_AMapLocationClientOption) {
       return (com_amap_api_location_AMapLocationClientOption()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
-    else if (T == com_amap_api_location_APSServiceBase) {
-      return (com_amap_api_location_APSServiceBase.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
-    }
     else if (T == com_amap_api_location_AMapLocationQualityReport) {
       return (com_amap_api_location_AMapLocationQualityReport()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
@@ -243,9 +221,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     }
     else if (T == com_amap_api_fence_GeoFence) {
       return (com_amap_api_fence_GeoFence()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
-    }
-    else if (T == com_amap_api_fence_GeoFenceManagerBase) {
-      return (com_amap_api_fence_GeoFenceManagerBase.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_fence_PoiItem) {
       return (com_amap_api_fence_PoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
@@ -297,9 +272,6 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     }
     else if (T == android_widget_ImageView) {
       return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
-    }
-    else if (T == java_io_Closeable) {
-      return (java_io_Closeable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == java_io_File) {
       return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
