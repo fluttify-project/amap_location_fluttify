@@ -19,31 +19,7 @@ class AmapLocation with _Holder, _Community, _Pro {
   static AmapLocation instance = AmapLocation._();
 
   AmapLocation._() {
-    if (Platform.isAndroid) {
-      // 电子围栏回调
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
-          .setMethodCallHandler((call) async {
-        if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
-          final args = await call.arguments as Map;
-          final status = args['status'] as int;
-          final customId = args['customId'] as String;
-          final fenceId = args['fenceId'] as String;
-          debugPrint(
-              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
-          final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as int;
-          _geoFenceEventController?.add(
-            GeoFenceEvent(
-              customId: customId,
-              fenceId: fenceId,
-              status: GeoFenceStatusX.fromAndroid(status),
-              genFence: GeoFence.android(fence),
-            ),
-          );
-        }
-      });
-    }
+    initAndroidListener();
   }
 }
 
@@ -477,6 +453,34 @@ mixin _Community on _Holder {
 }
 
 mixin _Pro on _Holder {
+  void initAndroidListener() {
+    if (Platform.isAndroid) {
+      // 电子围栏回调
+      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
+          .setMethodCallHandler((call) async {
+        if (call.method ==
+            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
+          final args = await call.arguments as Map;
+          final status = args['status'] as int;
+          final customId = args['customId'] as String;
+          final fenceId = args['fenceId'] as String;
+          debugPrint(
+              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
+          final fence = com_amap_api_fence_GeoFence()
+            ..refId = args['fence'] as int;
+          _geoFenceEventController?.add(
+            GeoFenceEvent(
+              customId: customId,
+              fenceId: fenceId,
+              status: GeoFenceStatusX.fromAndroid(status),
+              genFence: GeoFence.android(fence),
+            ),
+          );
+        }
+      });
+    }
+  }
+
   /// 创建圆形电子围栏
   Stream<GeoFenceEvent> addCircleGeoFence({
     @required LatLng center,
