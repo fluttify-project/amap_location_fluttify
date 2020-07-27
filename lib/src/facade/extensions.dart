@@ -46,7 +46,16 @@ extension com_amap_api_fence_GeoFenceClient_X
     double radius,
     String customId,
   ) async {
-    throw UnimplementedError('请联系qq 382146139使用专业版');
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX',
+      {
+        'refId': refId,
+        'activeAction': activeAction,
+        'center': center.refId,
+        'radius': radius,
+        'customId': customId,
+      },
+    );
   }
 
   Future<void> addPoiGeoFence({
@@ -57,7 +66,18 @@ extension com_amap_api_fence_GeoFenceClient_X
     String customId = '',
     int activeAction,
   }) async {
-    throw UnimplementedError('请联系qq 382146139使用专业版');
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addPoiGeoFenceX',
+      {
+        'refId': refId,
+        'activeAction': activeAction,
+        'keyword': keyword,
+        'poiType': poiType,
+        'city': city,
+        'size': aroundRadius,
+        'customId': customId,
+      },
+    );
   }
 
   Future<void> addPolygonGeoFence({
@@ -65,7 +85,15 @@ extension com_amap_api_fence_GeoFenceClient_X
     String customId = '',
     int activeAction,
   }) async {
-    throw UnimplementedError('请联系qq 382146139使用专业版');
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addPolygonGeoFenceX',
+      {
+        'refId': refId,
+        'polygon': polygon.map((e) => e.refId).toList(),
+        'customId': customId,
+        'activeAction': activeAction,
+      },
+    );
   }
 
   Future<void> addDistrictGeoFence({
@@ -73,7 +101,15 @@ extension com_amap_api_fence_GeoFenceClient_X
     String customId = '',
     @required int activeAction,
   }) async {
-    throw UnimplementedError('请联系qq 382146139使用专业版');
+    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+      'com.amap.api.fence.GeoFenceClient::addDistrictGeoFenceX',
+      {
+        'refId': refId,
+        'keyword': keyword,
+        'customId': customId,
+        'activeAction': activeAction,
+      },
+    );
   }
 }
 
