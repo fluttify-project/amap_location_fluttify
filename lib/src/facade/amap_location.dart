@@ -6,10 +6,8 @@ import 'package:amap_location_fluttify/src/android/android.export.g.dart';
 import 'package:amap_location_fluttify/src/ios/ios.export.g.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
 
 import 'enums.dart';
-import 'extensions.dart';
 import 'models.dart';
 
 part 'delegates.dart';
@@ -453,33 +451,7 @@ mixin _Community on _Holder {
 }
 
 mixin _Pro on _Holder {
-  void initAndroidListener() {
-    if (Platform.isAndroid) {
-      // 电子围栏回调
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
-          .setMethodCallHandler((call) async {
-        if (call.method ==
-            'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
-          final args = await call.arguments as Map;
-          final status = args['status'] as int;
-          final customId = args['customId'] as String;
-          final fenceId = args['fenceId'] as String;
-          debugPrint(
-              '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
-          final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as int;
-          _geoFenceEventController?.add(
-            GeoFenceEvent(
-              customId: customId,
-              fenceId: fenceId,
-              status: GeoFenceStatusX.fromAndroid(status),
-              genFence: GeoFence.android(fence),
-            ),
-          );
-        }
-      });
-    }
-  }
+  void initAndroidListener() {}
 
   /// 创建圆形电子围栏
   Stream<GeoFenceEvent> addCircleGeoFence({
@@ -492,58 +464,7 @@ mixin _Pro on _Holder {
       GeoFenceActiveAction.Stayed,
     ],
   }) async* {
-    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
-
-    if (Platform.isAndroid) {
-      final context = await android_app_Application.get();
-      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
-          .create__android_content_Context(context);
-
-      final point = await com_amap_api_location_DPoint.create__double__double(
-          center.latitude, center.longitude);
-
-      await _androidGeoFenceClient.addCircleGeoFence(
-        activeActions.getActiveAction(),
-        point,
-        radius,
-        customId,
-      );
-    } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-      _iosLocationDelegate ??= _IOSLocationDelegate();
-
-      _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-                genFence: GeoFence.ios(region),
-              ),
-            );
-          },
-      );
-
-      await _iosGeoFenceClient
-          .set_activeActionX(activeActions.getActiveAction());
-
-      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
-
-      final point = await CLLocationCoordinate2D.create(
-        center.latitude,
-        center.longitude,
-      );
-
-      await _iosGeoFenceClient
-          .addCircleRegionForMonitoringWithCenter_radius_customID(
-              point, radius, customId);
-    } else {
-      throw '未实现的平台';
-    }
-
-    yield* _geoFenceEventController.stream;
+    throw UnimplementedError('请联系qq 382146139使用专业版');
   }
 
   /// 创POI电子围栏
@@ -559,57 +480,7 @@ mixin _Pro on _Holder {
       GeoFenceActiveAction.Stayed,
     ],
   }) async* {
-    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
-
-    if (Platform.isAndroid) {
-      final context = await android_app_Application.get();
-      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
-          .create__android_content_Context(context);
-
-      await _androidGeoFenceClient.addPoiGeoFence(
-        keyword: keyword,
-        poiType: poiType,
-        city: city,
-        aroundRadius: aroundRadius,
-        customId: customId,
-        activeAction: activeActions.getActiveAction(),
-      );
-    } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-      _iosLocationDelegate ??= _IOSLocationDelegate();
-
-      _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-                genFence: GeoFence.ios(region),
-              ),
-            );
-          },
-      );
-
-      await _iosGeoFenceClient
-          .set_activeActionX(activeActions.getActiveAction());
-
-      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
-
-      await _iosGeoFenceClient
-          .addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID(
-        keyword,
-        poiType,
-        city,
-        aroundRadius,
-        customId,
-      );
-    } else {
-      throw '未实现的平台';
-    }
-
-    yield* _geoFenceEventController.stream;
+    throw UnimplementedError('请联系qq 382146139使用专业版');
   }
 
   /// 创建多边形电子围栏
@@ -622,57 +493,7 @@ mixin _Pro on _Holder {
       GeoFenceActiveAction.Stayed,
     ],
   }) async* {
-    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
-
-    final latitudeList = pointList.map((e) => e.latitude).toList();
-    final longitudeList = pointList.map((e) => e.longitude).toList();
-
-    if (Platform.isAndroid) {
-      final context = await android_app_Application.get();
-      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
-          .create__android_content_Context(context);
-
-      final _pointList = await com_amap_api_location_DPoint
-          .create_batch__double__double(latitudeList, longitudeList);
-
-      await _androidGeoFenceClient.addPolygonGeoFence(
-        polygon: _pointList,
-        customId: customId,
-        activeAction: activeActions.getActiveAction(),
-      );
-    } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-      _iosLocationDelegate ??= _IOSLocationDelegate();
-
-      _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-                genFence: GeoFence.ios(region),
-              ),
-            );
-          },
-      );
-
-      await _iosGeoFenceClient
-          .set_activeActionX(activeActions.getActiveAction());
-      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
-
-      final _pointList = await CLLocationCoordinate2D.create_batch(
-          latitudeList, longitudeList);
-
-      await _iosGeoFenceClient
-          .addPolygonRegionForMonitoringWithCoordinates_count_customID(
-              _pointList, _pointList.length, customId);
-    } else {
-      throw '未实现的平台';
-    }
-
-    yield* _geoFenceEventController.stream;
+    throw UnimplementedError('请联系qq 382146139使用专业版');
   }
 
   /// 创建行政区划电子围栏
@@ -685,64 +506,16 @@ mixin _Pro on _Holder {
       GeoFenceActiveAction.Stayed,
     ],
   }) async* {
-    _geoFenceEventController ??= StreamController<GeoFenceEvent>.broadcast();
-
-    if (Platform.isAndroid) {
-      final context = await android_app_Application.get();
-      _androidGeoFenceClient ??= await com_amap_api_fence_GeoFenceClient
-          .create__android_content_Context(context);
-
-      await _androidGeoFenceClient.addDistrictGeoFence(
-        keyword: keyword,
-        customId: customId,
-        activeAction: activeActions.getActiveAction(),
-      );
-    } else if (Platform.isIOS) {
-      _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
-      _iosLocationDelegate ??= _IOSLocationDelegate();
-
-      _iosGeoFenceClient.set_delegate(
-        _iosLocationDelegate
-          .._onGeoFenceStatusChanged = (region, customId, error) async {
-            _geoFenceEventController.add(
-              GeoFenceEvent(
-                customId: customId,
-                fenceId: await region.get_identifier(),
-                status: GeoFenceStatusX.fromIOS(await region.get_fenceStatus()),
-                genFence: GeoFence.ios(region),
-              ),
-            );
-          },
-      );
-
-      await _iosGeoFenceClient
-          .set_activeActionX(activeActions.getActiveAction());
-      await _iosGeoFenceClient.set_allowsBackgroundLocationUpdates(true);
-      await _iosGeoFenceClient
-          .addDistrictRegionForMonitoringWithDistrictName_customID(
-              keyword, customId);
-    } else {
-      throw '未实现的平台';
-    }
-
-    yield* _geoFenceEventController.stream;
+    throw UnimplementedError('请联系qq 382146139使用专业版');
   }
 
   /// 删除单个围栏
   Future<void> removeGeoFence(GeoFence geoFence) async {
-    return platform(
-      android: (pool) => _androidGeoFenceClient
-          ?.removeGeoFence__com_amap_api_fence_GeoFence(geoFence.androidModel),
-      ios: (pool) =>
-          _iosGeoFenceClient?.removeTheGeoFenceRegion(geoFence.iosModel),
-    );
+    throw UnimplementedError('请联系qq 382146139使用专业版');
   }
 
   /// 删除所有围栏
   Future<void> removeAllGeoFence() async {
-    return platform(
-      android: (pool) => _androidGeoFenceClient?.removeGeoFence(),
-      ios: (pool) => _iosGeoFenceClient?.removeAllGeoFenceRegions(),
-    );
+    throw UnimplementedError('请联系qq 382146139使用专业版');
   }
 }
