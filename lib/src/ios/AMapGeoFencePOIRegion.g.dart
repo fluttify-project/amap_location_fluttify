@@ -21,10 +21,8 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
 
   //region creators
   static Future<AMapGeoFencePOIRegion> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion');
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion');
     final object = AMapGeoFencePOIRegion()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length});
   
     final List<AMapGeoFencePOIRegion> typedResult = resultBatch.map((result) => AMapGeoFencePOIRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,7 +40,7 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
 
   //region getters
   Future<AMapLocationPOIItem> get_POIItem() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePOIRegion::get_POIItem", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapGeoFencePOIRegion::get_POIItem", {'refId': refId});
     kNativeObjectPool.add(AMapLocationPOIItem()..refId = __result__..tag__ = 'amap_location_fluttify');
     return AMapLocationPOIItem()..refId = __result__..tag__ = 'amap_location_fluttify';
   }
@@ -62,7 +59,7 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
 extension AMapGeoFencePOIRegion_Batch on List<AMapGeoFencePOIRegion> {
   //region getters
   Future<List<AMapLocationPOIItem>> get_POIItem_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFencePOIRegion::get_POIItem_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapGeoFencePOIRegion::get_POIItem_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapLocationPOIItem()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;

@@ -21,10 +21,8 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_UmidtokenInfo> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_UmidtokenInfo__');
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_location_UmidtokenInfo__');
     final object = com_amap_api_location_UmidtokenInfo()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_UmidtokenInfo__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_UmidtokenInfo__', {'length': length});
   
     final List<com_amap_api_location_UmidtokenInfo> typedResult = resultBatch.map((result) => com_amap_api_location_UmidtokenInfo()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken', );
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken', );
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble', {"var0": var0});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -142,7 +136,7 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken_batch', );
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken_batch', );
   
   
     // convert native result to dart side object
@@ -150,7 +144,6 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -162,7 +155,7 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -170,7 +163,6 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -182,7 +174,7 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -190,7 +182,6 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

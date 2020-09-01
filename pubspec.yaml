@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   amap_core_fluttify: ^0.9.5
-  foundation_fluttify: ^0.8.11
+  foundation_fluttify: ^0.8.12-pre.3
   core_location_fluttify: ^0.2.4
 
 dev_dependencies:

@@ -21,10 +21,8 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_CoordinateConverter> create__android_content_Context(android_content_Context var1) async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context', {"var1": var1.refId});
+    final int refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context', {"var1": var1});
     final object = com_amap_api_location_CoordinateConverter()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_amap_api_location_CoordinateConverter> typedResult = resultBatch.map((result) => com_amap_api_location_CoordinateConverter()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::from', {"var1": var1.toValue(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::from', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::coord', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::coord', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::convert', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::convert', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -130,7 +124,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable', {"var0": var0, "var2": var2});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable', {"var0": var0, "var2": var2});
   
   
     // handle native call
@@ -141,7 +135,6 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -154,7 +147,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1 is Ref ? (var1 as Ref)?.refId : var1});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -165,7 +158,6 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -190,7 +182,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::from_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::from_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -198,7 +190,6 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
@@ -210,7 +201,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::coord_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::coord_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "__this__": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -218,7 +209,6 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_CoordinateConverter()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
@@ -230,7 +220,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::convert_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::convert_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -238,7 +228,6 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_DPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
@@ -250,7 +239,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::isAMapDataAvailable_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var2": var2[__i__]}]);
   
   
     // convert native result to dart side object
@@ -258,7 +247,6 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -270,7 +258,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordinateConverter::calculateLineDistance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -278,7 +266,6 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
