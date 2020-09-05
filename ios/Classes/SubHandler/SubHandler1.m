@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "SubHandler1.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -26,7 +27,7 @@ extern BOOL enableLog;
             NSString* country = (NSString*) args[@"country"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.country = country;
             methodResult(@"success");
@@ -43,7 +44,7 @@ extern BOOL enableLog;
             NSString* province = (NSString*) args[@"province"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.province = province;
             methodResult(@"success");
@@ -60,7 +61,7 @@ extern BOOL enableLog;
             NSString* city = (NSString*) args[@"city"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.city = city;
             methodResult(@"success");
@@ -77,7 +78,7 @@ extern BOOL enableLog;
             NSString* district = (NSString*) args[@"district"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.district = district;
             methodResult(@"success");
@@ -94,7 +95,7 @@ extern BOOL enableLog;
             NSString* township = (NSString*) args[@"township"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.township = township;
             methodResult(@"success");
@@ -111,7 +112,7 @@ extern BOOL enableLog;
             NSString* neighborhood = (NSString*) args[@"neighborhood"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.neighborhood = neighborhood;
             methodResult(@"success");
@@ -128,7 +129,7 @@ extern BOOL enableLog;
             NSString* building = (NSString*) args[@"building"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.building = building;
             methodResult(@"success");
@@ -145,7 +146,7 @@ extern BOOL enableLog;
             NSString* citycode = (NSString*) args[@"citycode"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.citycode = citycode;
             methodResult(@"success");
@@ -162,7 +163,7 @@ extern BOOL enableLog;
             NSString* adcode = (NSString*) args[@"adcode"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.adcode = adcode;
             methodResult(@"success");
@@ -179,7 +180,7 @@ extern BOOL enableLog;
             NSString* street = (NSString*) args[@"street"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.street = street;
             methodResult(@"success");
@@ -196,7 +197,7 @@ extern BOOL enableLog;
             NSString* number = (NSString*) args[@"number"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.number = number;
             methodResult(@"success");
@@ -213,7 +214,7 @@ extern BOOL enableLog;
             NSString* POIName = (NSString*) args[@"POIName"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.POIName = POIName;
             methodResult(@"success");
@@ -230,7 +231,7 @@ extern BOOL enableLog;
             NSString* AOIName = (NSString*) args[@"AOIName"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.AOIName = AOIName;
             methodResult(@"success");
@@ -247,7 +248,7 @@ extern BOOL enableLog;
             CGFloat latitude = [args[@"latitude"] floatValue];
         
             // ref
-            AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPoint* ref = (AMapLocationPoint*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.latitude = latitude;
             methodResult(@"success");
@@ -264,7 +265,7 @@ extern BOOL enableLog;
             CGFloat longitude = [args[@"longitude"] floatValue];
         
             // ref
-            AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPoint* ref = (AMapLocationPoint*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.longitude = longitude;
             methodResult(@"success");
@@ -281,7 +282,7 @@ extern BOOL enableLog;
             NSString* pId = (NSString*) args[@"pId"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.pId = pId;
             methodResult(@"success");
@@ -298,7 +299,7 @@ extern BOOL enableLog;
             NSString* name = (NSString*) args[@"name"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.name = name;
             methodResult(@"success");
@@ -315,7 +316,7 @@ extern BOOL enableLog;
             NSString* type = (NSString*) args[@"type"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.type = type;
             methodResult(@"success");
@@ -332,7 +333,7 @@ extern BOOL enableLog;
             NSString* typeCode = (NSString*) args[@"typeCode"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.typeCode = typeCode;
             methodResult(@"success");
@@ -349,7 +350,7 @@ extern BOOL enableLog;
             NSString* address = (NSString*) args[@"address"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.address = address;
             methodResult(@"success");
@@ -366,7 +367,7 @@ extern BOOL enableLog;
             AMapLocationPoint* location = (AMapLocationPoint*) HEAP[args[@"location"]];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.location = location;
             methodResult(@"success");
@@ -383,7 +384,7 @@ extern BOOL enableLog;
             NSString* tel = (NSString*) args[@"tel"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.tel = tel;
             methodResult(@"success");
@@ -400,7 +401,7 @@ extern BOOL enableLog;
             NSString* province = (NSString*) args[@"province"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.province = province;
             methodResult(@"success");
@@ -417,7 +418,7 @@ extern BOOL enableLog;
             NSString* city = (NSString*) args[@"city"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.city = city;
             methodResult(@"success");
@@ -434,7 +435,7 @@ extern BOOL enableLog;
             NSString* district = (NSString*) args[@"district"];
         
             // ref
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.district = district;
             methodResult(@"success");
@@ -451,7 +452,7 @@ extern BOOL enableLog;
             NSString* cityCode = (NSString*) args[@"cityCode"];
         
             // ref
-            AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             ref.cityCode = cityCode;
             methodResult(@"success");
@@ -466,7 +467,7 @@ extern BOOL enableLog;
                 AMapGeoFenceActiveAction activeAction = (AMapGeoFenceActiveAction) [args[@"activeAction"] integerValue];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.activeAction = activeAction;
                 methodResult(@"success");
@@ -484,7 +485,7 @@ extern BOOL enableLog;
                 BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
                 methodResult(@"success");
@@ -502,7 +503,7 @@ extern BOOL enableLog;
                 BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
                 methodResult(@"success");
@@ -520,7 +521,7 @@ extern BOOL enableLog;
                 BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
                 methodResult(@"success");
@@ -538,7 +539,7 @@ extern BOOL enableLog;
                 BOOL notifyOnEntry = [args[@"notifyOnEntry"] boolValue];
         
                 // ref
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.notifyOnEntry = notifyOnEntry;
                 methodResult(@"success");
@@ -556,7 +557,7 @@ extern BOOL enableLog;
                 BOOL notifyOnExit = [args[@"notifyOnExit"] boolValue];
         
                 // ref
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.notifyOnExit = notifyOnExit;
                 methodResult(@"success");
@@ -574,7 +575,7 @@ extern BOOL enableLog;
                 AMapGeoFenceRegionStatus fenceStatus = (AMapGeoFenceRegionStatus) [args[@"fenceStatus"] integerValue];
         
                 // ref
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.fenceStatus = fenceStatus;
                 methodResult(@"success");
@@ -592,7 +593,7 @@ extern BOOL enableLog;
                 AMapGeoFenceRegionType regionType = (AMapGeoFenceRegionType) [args[@"regionType"] integerValue];
         
                 // ref
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.regionType = regionType;
                 methodResult(@"success");
@@ -610,7 +611,7 @@ extern BOOL enableLog;
                 CLLocation* currentLocation = (CLLocation*) HEAP[args[@"currentLocation"]];
         
                 // ref
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.currentLocation = currentLocation;
                 methodResult(@"success");
@@ -628,7 +629,7 @@ extern BOOL enableLog;
                 CLLocationDistance distanceFilter = [args[@"distanceFilter"] doubleValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.distanceFilter = distanceFilter;
                 methodResult(@"success");
@@ -646,7 +647,7 @@ extern BOOL enableLog;
                 CLLocationAccuracy desiredAccuracy = [args[@"desiredAccuracy"] doubleValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.desiredAccuracy = desiredAccuracy;
                 methodResult(@"success");
@@ -664,7 +665,7 @@ extern BOOL enableLog;
                 BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
                 methodResult(@"success");
@@ -682,7 +683,7 @@ extern BOOL enableLog;
                 BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
                 methodResult(@"success");
@@ -700,7 +701,7 @@ extern BOOL enableLog;
                 NSInteger locationTimeout = [args[@"locationTimeout"] longValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.locationTimeout = locationTimeout;
                 methodResult(@"success");
@@ -718,7 +719,7 @@ extern BOOL enableLog;
                 NSInteger reGeocodeTimeout = [args[@"reGeocodeTimeout"] longValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.reGeocodeTimeout = reGeocodeTimeout;
                 methodResult(@"success");
@@ -736,7 +737,7 @@ extern BOOL enableLog;
                 BOOL locatingWithReGeocode = [args[@"locatingWithReGeocode"] boolValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.locatingWithReGeocode = locatingWithReGeocode;
                 methodResult(@"success");
@@ -754,7 +755,7 @@ extern BOOL enableLog;
                 AMapLocationReGeocodeLanguage reGeocodeLanguage = (AMapLocationReGeocodeLanguage) [args[@"reGeocodeLanguage"] integerValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.reGeocodeLanguage = reGeocodeLanguage;
                 methodResult(@"success");
@@ -772,7 +773,7 @@ extern BOOL enableLog;
                 BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
                 methodResult(@"success");
@@ -790,7 +791,7 @@ extern BOOL enableLog;
                 NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.formattedAddress = formattedAddress;
                 methodResult(@"success");
@@ -808,7 +809,7 @@ extern BOOL enableLog;
                 NSString* country = (NSString*) args[@"country"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.country = country;
                 methodResult(@"success");
@@ -826,7 +827,7 @@ extern BOOL enableLog;
                 NSString* province = (NSString*) args[@"province"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.province = province;
                 methodResult(@"success");
@@ -844,7 +845,7 @@ extern BOOL enableLog;
                 NSString* city = (NSString*) args[@"city"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.city = city;
                 methodResult(@"success");
@@ -862,7 +863,7 @@ extern BOOL enableLog;
                 NSString* district = (NSString*) args[@"district"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.district = district;
                 methodResult(@"success");
@@ -880,7 +881,7 @@ extern BOOL enableLog;
                 NSString* township = (NSString*) args[@"township"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.township = township;
                 methodResult(@"success");
@@ -898,7 +899,7 @@ extern BOOL enableLog;
                 NSString* neighborhood = (NSString*) args[@"neighborhood"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.neighborhood = neighborhood;
                 methodResult(@"success");
@@ -916,7 +917,7 @@ extern BOOL enableLog;
                 NSString* building = (NSString*) args[@"building"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.building = building;
                 methodResult(@"success");
@@ -934,7 +935,7 @@ extern BOOL enableLog;
                 NSString* citycode = (NSString*) args[@"citycode"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.citycode = citycode;
                 methodResult(@"success");
@@ -952,7 +953,7 @@ extern BOOL enableLog;
                 NSString* adcode = (NSString*) args[@"adcode"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -970,7 +971,7 @@ extern BOOL enableLog;
                 NSString* street = (NSString*) args[@"street"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.street = street;
                 methodResult(@"success");
@@ -988,7 +989,7 @@ extern BOOL enableLog;
                 NSString* number = (NSString*) args[@"number"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.number = number;
                 methodResult(@"success");
@@ -1006,7 +1007,7 @@ extern BOOL enableLog;
                 NSString* POIName = (NSString*) args[@"POIName"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.POIName = POIName;
                 methodResult(@"success");
@@ -1024,7 +1025,7 @@ extern BOOL enableLog;
                 NSString* AOIName = (NSString*) args[@"AOIName"];
         
                 // ref
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.AOIName = AOIName;
                 methodResult(@"success");
@@ -1042,7 +1043,7 @@ extern BOOL enableLog;
                 CGFloat latitude = [args[@"latitude"] floatValue];
         
                 // ref
-                AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPoint* ref = (AMapLocationPoint*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.latitude = latitude;
                 methodResult(@"success");
@@ -1060,7 +1061,7 @@ extern BOOL enableLog;
                 CGFloat longitude = [args[@"longitude"] floatValue];
         
                 // ref
-                AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPoint* ref = (AMapLocationPoint*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.longitude = longitude;
                 methodResult(@"success");
@@ -1078,7 +1079,7 @@ extern BOOL enableLog;
                 NSString* pId = (NSString*) args[@"pId"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.pId = pId;
                 methodResult(@"success");
@@ -1096,7 +1097,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -1114,7 +1115,7 @@ extern BOOL enableLog;
                 NSString* type = (NSString*) args[@"type"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.type = type;
                 methodResult(@"success");
@@ -1132,7 +1133,7 @@ extern BOOL enableLog;
                 NSString* typeCode = (NSString*) args[@"typeCode"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.typeCode = typeCode;
                 methodResult(@"success");
@@ -1150,7 +1151,7 @@ extern BOOL enableLog;
                 NSString* address = (NSString*) args[@"address"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.address = address;
                 methodResult(@"success");
@@ -1168,7 +1169,7 @@ extern BOOL enableLog;
                 AMapLocationPoint* location = (AMapLocationPoint*) HEAP[args[@"location"]];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.location = location;
                 methodResult(@"success");
@@ -1186,7 +1187,7 @@ extern BOOL enableLog;
                 NSString* tel = (NSString*) args[@"tel"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.tel = tel;
                 methodResult(@"success");
@@ -1204,7 +1205,7 @@ extern BOOL enableLog;
                 NSString* province = (NSString*) args[@"province"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.province = province;
                 methodResult(@"success");
@@ -1222,7 +1223,7 @@ extern BOOL enableLog;
                 NSString* city = (NSString*) args[@"city"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.city = city;
                 methodResult(@"success");
@@ -1240,7 +1241,7 @@ extern BOOL enableLog;
                 NSString* district = (NSString*) args[@"district"];
         
                 // ref
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.district = district;
                 methodResult(@"success");
@@ -1258,7 +1259,7 @@ extern BOOL enableLog;
                 NSString* cityCode = (NSString*) args[@"cityCode"];
         
                 // ref
-                AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
                 ref.cityCode = cityCode;
                 methodResult(@"success");
@@ -1269,127 +1270,113 @@ extern BOOL enableLog;
         
         @"RefClass::isKindOfAMapGeoFenceManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoFenceManager class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoFenceManager class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationCircleRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationCircleRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationPolygonRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationPolygonRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoFenceRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoFenceRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoFenceCircleRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoFenceCircleRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoFencePolygonRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoFencePolygonRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoFencePOIRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoFencePOIRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoFenceDistrictRegion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoFenceDistrictRegion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationManager class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationManager class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationReGeocode class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationReGeocode class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationPoint class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationPoint class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationPOIItem class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationPOIItem class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationDistrictItem class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationDistrictItem class]];
             methodResult(@(isTargetType));
         },
         
@@ -1400,9 +1387,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1414,9 +1400,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1428,9 +1413,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1442,9 +1426,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1456,9 +1439,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1470,9 +1452,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1484,9 +1465,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1498,9 +1478,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1512,9 +1491,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1526,9 +1504,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationManager* ref = [[AMapLocationManager alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1540,9 +1517,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1554,9 +1530,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1568,9 +1543,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1582,21 +1556,18 @@ extern BOOL enableLog;
             }
         
             AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
         @"ObjectFactory::create_batchAMapGeoFenceManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1605,13 +1576,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1620,13 +1589,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1635,13 +1602,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1650,13 +1615,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1665,13 +1628,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1680,13 +1641,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1695,13 +1654,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1710,13 +1667,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1725,13 +1680,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationManager* ref = [[AMapLocationManager alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1740,13 +1693,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1755,13 +1706,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1770,13 +1719,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1785,13 +1732,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -1821,11 +1766,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 结构体
-            NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -1847,9 +1790,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
     };
 }
