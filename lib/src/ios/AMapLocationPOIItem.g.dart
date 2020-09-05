@@ -21,7 +21,7 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationPOIItem> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationPOIItem');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationPOIItem');
     final object = AMapLocationPOIItem()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -40,62 +40,52 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_pId() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_pId", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_pId", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_name() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_name", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_name", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_type() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_type", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_type", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_typeCode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_typeCode", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_typeCode", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_address() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_address", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_address", {'__this__': this});
     return __result__;
   }
   
   Future<AMapLocationPoint> get_location() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_location", {'refId': refId});
-    kNativeObjectPool.add(AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify');
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_location", {'__this__': this});
     return AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify';
   }
   
   Future<String> get_tel() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_tel", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_tel", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_province() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_province", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_province", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_city() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_city", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_city", {'__this__': this});
     return __result__;
   }
   
   Future<String> get_district() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_district", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_district", {'__this__': this});
     return __result__;
   }
   
@@ -172,72 +162,62 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
 extension AMapLocationPOIItem_Batch on List<AMapLocationPOIItem> {
   //region getters
   Future<List<String>> get_pId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_pId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_pId_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_name_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_name_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_name_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_type_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_type_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_typeCode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_typeCode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_typeCode_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_address_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_address_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_address_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<AMapLocationPoint>> get_location_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_location_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_location_batch", this);
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
     return typedResult;
   }
   
   Future<List<String>> get_tel_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_tel_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_tel_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_province_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_province_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_province_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_city_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_city_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_city_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<String>> get_district_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_district_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPOIItem::get_district_batch", this);
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   

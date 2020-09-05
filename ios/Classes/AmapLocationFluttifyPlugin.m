@@ -7,6 +7,7 @@
 #import "SubHandler/SubHandler0.h"
 #import "SubHandler/SubHandler1.h"
 #import "SubHandler/Custom/SubHandlerCustom.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -37,7 +38,8 @@ extern BOOL enableLog;
 + (void)registerWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar {
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"me.yohom/amap_location_fluttify"
-            binaryMessenger:[registrar messenger]];
+            binaryMessenger:[registrar messenger]
+                      codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
 
   [registrar addMethodCallDelegate:[[AmapLocationFluttifyPlugin alloc] initWithFlutterPluginRegistrar:registrar]
                            channel:channel];

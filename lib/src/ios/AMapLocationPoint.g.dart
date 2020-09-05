@@ -21,7 +21,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationPoint> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationPoint');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationPoint');
     final object = AMapLocationPoint()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -40,14 +40,12 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<double> get_latitude() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_latitude", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_latitude", {'__this__': this});
     return __result__;
   }
   
   Future<double> get_longitude() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_longitude", {'refId': refId});
-  
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_longitude", {'__this__': this});
     return __result__;
   }
   
@@ -98,16 +96,14 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_latitude_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_latitude_batch", this);
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
   Future<List<double>> get_longitude_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_longitude_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_longitude_batch", this);
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-  
     return typedResult;
   }
   
@@ -143,7 +139,7 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationPoint()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       return typedResult;
     }
   }

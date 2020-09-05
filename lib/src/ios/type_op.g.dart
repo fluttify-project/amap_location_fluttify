@@ -21,131 +21,131 @@ extension TypeOpAmapLocationFluttifyIOS on Object {
       return this is T;
     }
     else if (T == AMapGeoFenceManager) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceManager', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceManager', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationCircleRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationCircleRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationCircleRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationPolygonRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationPolygonRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationPolygonRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoFenceRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoFenceCircleRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceCircleRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceCircleRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoFencePolygonRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFencePolygonRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFencePolygonRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoFencePOIRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFencePOIRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFencePOIRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoFenceDistrictRegion) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceDistrictRegion', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoFenceDistrictRegion', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationManager) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationManager', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationManager', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationReGeocode) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationReGeocode', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationReGeocode', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationPoint) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationPoint', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationPoint', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationPOIItem) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationPOIItem', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationPOIItem', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationDistrictItem) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationDistrictItem', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationDistrictItem', {'__this__': this});
       return result;
     }
     else if (T == CLLocation) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocation', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocation', {'__this__': this});
       return result;
     }
     else if (T == CLHeading) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLHeading', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLHeading', {'__this__': this});
       return result;
     }
     else if (T == CGRect) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGRect', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGRect', {'__this__': this});
       return result;
     }
     else if (T == CGPoint) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGPoint', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGPoint', {'__this__': this});
       return result;
     }
     else if (T == CGSize) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGSize', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGSize', {'__this__': this});
       return result;
     }
     else if (T == UIEdgeInsets) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIEdgeInsets', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': this});
       return result;
     }
     else if (T == CLLocationCoordinate2D) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': this});
       return result;
     }
     else if (T == CLLocationManager) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationManager', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': this});
       return result;
     }
     else if (T == NSError) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSError', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSError', {'__this__': this});
       return result;
     }
     else if (T == NSCoding) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSCoding', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSCoding', {'__this__': this});
       return result;
     }
     else if (T == NSCopying) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSCopying', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSCopying', {'__this__': this});
       return result;
     }
     else if (T == UIView) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIView', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIView', {'__this__': this});
       return result;
     }
     else if (T == UIViewController) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIViewController', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIViewController', {'__this__': this});
       return result;
     }
     else if (T == UIControl) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIControl', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIControl', {'__this__': this});
       return result;
     }
     else if (T == UIImage) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIImage', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIImage', {'__this__': this});
       return result;
     }
     else if (T == UIColor) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIColor', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIColor', {'__this__': this});
       return result;
     }
     else if (T == NSData) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSData', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSData', {'__this__': this});
       return result;
     }
     else if (T == NSOperation) {
-      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSOperation', {'refId': (this as Ref).refId});
+      final result = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSOperation', {'__this__': this});
       return result;
     }
   }

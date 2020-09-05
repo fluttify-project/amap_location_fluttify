@@ -467,7 +467,7 @@ mixin _Pro on _Holder {
           debugPrint(
               '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
           final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as int;
+            ..refId = args['fence'] as String;
           _geoFenceEventController?.add(
             GeoFenceEvent(
               customId: customId,

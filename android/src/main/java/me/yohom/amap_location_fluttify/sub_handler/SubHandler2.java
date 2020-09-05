@@ -3304,7 +3304,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_AMapLocationClient__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.AMapLocationClient> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3343,7 +3343,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_AMapLocationClient__android_content_Context__android_content_Intent", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.AMapLocationClient> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3384,7 +3384,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_DPoint__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.DPoint> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3422,7 +3422,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_DPoint__double__double", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.DPoint> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3463,7 +3463,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.CoordinateConverter> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3502,7 +3502,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_CoordUtil__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.CoordUtil> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3540,7 +3540,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_UmidtokenInfo__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.UmidtokenInfo> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3578,7 +3578,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_AMapLocation__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.AMapLocation> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3617,7 +3617,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_AMapLocation__android_location_Location", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.AMapLocation> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3656,7 +3656,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_AMapLocationClientOption__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.AMapLocationClientOption> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3694,7 +3694,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_location_AMapLocationQualityReport__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.location.AMapLocationQualityReport> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3732,7 +3732,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_fence_DistrictItem__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.fence.DistrictItem> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3770,7 +3770,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_fence_GeoFenceClient__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.fence.GeoFenceClient> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3809,7 +3809,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_fence_GeoFence__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.fence.GeoFence> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -3847,7 +3847,7 @@ public class SubHandler2 {
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_fence_PoiItem__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.fence.PoiItem> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length

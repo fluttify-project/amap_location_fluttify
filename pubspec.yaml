@@ -11,13 +11,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  amap_core_fluttify: ^0.9.5
-  foundation_fluttify: ^0.8.12-pre.3
-  core_location_fluttify: ^0.2.4
+#  amap_core_fluttify: ^0.9.5
+#  foundation_fluttify: ^0.8.13-pre.10
+#  core_location_fluttify: ^0.2.4
+  amap_core_fluttify:
+    path: /Users/yohom/Github/Me/All/fluttify/amap/amap_core_fluttify/output-project/amap_core_fluttify
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+override_dependencies:
+  foundation_fluttify:
+    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
+  core_location_fluttify:
+    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/core_location_fluttify
 
 flutter:
   plugin:
