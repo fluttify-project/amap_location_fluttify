@@ -4,10 +4,10 @@ packages:
   amap_core_fluttify:
     dependency: transitive
     description:
-      path: "/Users/yohom/Github/Me/All/fluttify/amap/amap_core_fluttify/output-project/amap_core_fluttify"
-      relative: false
-    source: path
-    version: "0.10.0-pre.0"
+      name: amap_core_fluttify
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.0-pre.1"
   amap_location_fluttify:
     dependency: "direct dev"
     description:
@@ -86,11 +86,11 @@ packages:
     source: hosted
     version: "2.1.1"
   core_location_fluttify:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "/Users/yohom/Github/Me/All/fluttify/fluttify_infra/core_location_fluttify"
-      relative: false
-    source: path
+      name: core_location_fluttify
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.3.0-pre.1"
   crypto:
     dependency: transitive
@@ -178,12 +178,12 @@ packages:
     source: sdk
     version: "0.0.0"
   foundation_fluttify:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "/Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify"
-      relative: false
-    source: path
-    version: "0.9.0-pre.1"
+      name: foundation_fluttify
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.0-pre.2"
   http:
     dependency: transitive
     description:

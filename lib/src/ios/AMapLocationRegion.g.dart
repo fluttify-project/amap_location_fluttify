@@ -58,13 +58,13 @@ class AMapLocationRegion extends NSObject with NSCopying {
 
   //region setters
   Future<void> set_notifyOnEntry(bool notifyOnEntry) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry', {'refId': refId, "notifyOnEntry": notifyOnEntry});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry', {'__this__': this, "notifyOnEntry": notifyOnEntry});
   
   
   }
   
   Future<void> set_notifyOnExit(bool notifyOnExit) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit', {'refId': refId, "notifyOnExit": notifyOnExit});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit', {'__this__': this, "notifyOnExit": notifyOnExit});
   
   
   }
@@ -145,13 +145,13 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
 
   //region setters
   Future<void> set_notifyOnEntry_batch(List<bool> notifyOnEntry) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "notifyOnEntry": notifyOnEntry[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "notifyOnEntry": notifyOnEntry[__i__]}]);
   
   
   }
   
   Future<void> set_notifyOnExit_batch(List<bool> notifyOnExit) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "notifyOnExit": notifyOnExit[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "notifyOnExit": notifyOnExit[__i__]}]);
   
   
   }

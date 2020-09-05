@@ -88,176 +88,181 @@ class AMapLocationManager extends NSObject  {
 
   //region setters
   Future<void> set_delegate(AMapLocationManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_delegate', {'__this__': this, "delegate": delegate.refId});
   
-    MethodChannel('AMapLocationManagerDelegate::Callback')
+    MethodChannel('AMapLocationManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        switch (methodCall.method) {
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_doRequireLocationAuth([\'manager\':${args['manager']}, \'locationManager\':${args['locationManager']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_doRequireLocationAuth(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['locationManager'] as Object))?.as__<CLLocationManager>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didFailWithError([\'manager\':${args['manager']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didFailWithError(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateLocation([\'manager\':${args['manager']}, \'location\':${args['location']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didUpdateLocation(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['location'] as Object))?.as__<CLLocation>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateLocation_reGeocode([\'manager\':${args['manager']}, \'location\':${args['location']}, \'reGeocode\':${args['reGeocode']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didUpdateLocation_reGeocode(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['location'] as Object))?.as__<CLLocation>(), TypeOpAmapLocationFluttifyIOS((args['reGeocode'] as Object))?.as__<AMapLocationReGeocode>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didChangeAuthorizationStatus([\'manager\':${args['manager']}, \'status\':${args['status']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didChangeAuthorizationStatus(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), (args['status'] as int).toCLAuthorizationStatus());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([\'manager\':${args['manager']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManagerShouldDisplayHeadingCalibration(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateHeading([\'manager\':${args['manager']}, \'newHeading\':${args['newHeading']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didUpdateHeading(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['newHeading'] as Object))?.as__<CLHeading>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didStartMonitoringForRegion([\'manager\':${args['manager']}, \'region\':${args['region']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didStartMonitoringForRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didEnterRegion([\'manager\':${args['manager']}, \'region\':${args['region']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didEnterRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didExitRegion([\'manager\':${args['manager']}, \'region\':${args['region']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didExitRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_didDetermineState_forRegion([\'manager\':${args['manager']}, \'state\':${args['state']}, \'region\':${args['region']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_didDetermineState_forRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), (args['state'] as int).toAMapLocationRegionState(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
-            break;
-          case 'Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapLocationManager_monitoringDidFailForRegion_withError([\'manager\':${args['manager']}, \'region\':${args['region']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapLocationManager_monitoringDidFailForRegion_withError(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>(), TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_doRequireLocationAuth([\'manager\':${args['manager']}, \'locationManager\':${args['locationManager']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_doRequireLocationAuth(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['locationManager'] as Object))?.as__<CLLocationManager>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didFailWithError([\'manager\':${args['manager']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didFailWithError(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateLocation([\'manager\':${args['manager']}, \'location\':${args['location']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didUpdateLocation(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['location'] as Object))?.as__<CLLocation>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateLocation_reGeocode([\'manager\':${args['manager']}, \'location\':${args['location']}, \'reGeocode\':${args['reGeocode']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didUpdateLocation_reGeocode(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['location'] as Object))?.as__<CLLocation>(), TypeOpAmapLocationFluttifyIOS((args['reGeocode'] as Object))?.as__<AMapLocationReGeocode>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didChangeAuthorizationStatus([\'manager\':${args['manager']}, \'status\':${args['status']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didChangeAuthorizationStatus(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), (args['status'] as int).toCLAuthorizationStatus());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManagerShouldDisplayHeadingCalibration([\'manager\':${args['manager']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManagerShouldDisplayHeadingCalibration(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didUpdateHeading([\'manager\':${args['manager']}, \'newHeading\':${args['newHeading']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didUpdateHeading(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['newHeading'] as Object))?.as__<CLHeading>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didStartMonitoringForRegion([\'manager\':${args['manager']}, \'region\':${args['region']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didStartMonitoringForRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didEnterRegion([\'manager\':${args['manager']}, \'region\':${args['region']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didEnterRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didExitRegion([\'manager\':${args['manager']}, \'region\':${args['region']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didExitRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_didDetermineState_forRegion([\'manager\':${args['manager']}, \'state\':${args['state']}, \'region\':${args['region']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_didDetermineState_forRegion(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), (args['state'] as int).toAMapLocationRegionState(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>());
+              break;
+            case 'Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapLocationManager_monitoringDidFailForRegion_withError([\'manager\':${args['manager']}, \'region\':${args['region']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapLocationManager_monitoringDidFailForRegion_withError(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapLocationManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapLocationRegion>(), TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
   
   Future<void> set_distanceFilter(double distanceFilter) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter', {'refId': refId, "distanceFilter": distanceFilter});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter', {'__this__': this, "distanceFilter": distanceFilter});
   
   
   }
   
   Future<void> set_desiredAccuracy(double desiredAccuracy) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy', {'refId': refId, "desiredAccuracy": desiredAccuracy});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy', {'__this__': this, "desiredAccuracy": desiredAccuracy});
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', {'refId': refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', {'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates', {'refId': refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates', {'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
   
   
   }
   
   Future<void> set_locationTimeout(int locationTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout', {'refId': refId, "locationTimeout": locationTimeout});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout', {'__this__': this, "locationTimeout": locationTimeout});
   
   
   }
   
   Future<void> set_reGeocodeTimeout(int reGeocodeTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout', {'refId': refId, "reGeocodeTimeout": reGeocodeTimeout});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout', {'__this__': this, "reGeocodeTimeout": reGeocodeTimeout});
   
   
   }
   
   Future<void> set_locatingWithReGeocode(bool locatingWithReGeocode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode', {'refId': refId, "locatingWithReGeocode": locatingWithReGeocode});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode', {'__this__': this, "locatingWithReGeocode": locatingWithReGeocode});
   
   
   }
   
   Future<void> set_reGeocodeLanguage(AMapLocationReGeocodeLanguage reGeocodeLanguage) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage', {'refId': refId, "reGeocodeLanguage": reGeocodeLanguage.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage', {'__this__': this, "reGeocodeLanguage": reGeocodeLanguage.toValue()});
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation(bool detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation', {'refId': refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation', {'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
   
   
   }
@@ -369,21 +374,26 @@ class AMapLocationManager extends NSObject  {
   
   
     // handle native call
-    MethodChannel('AMapLocatingCompletionBlock::Callback')
+    MethodChannel('AMapLocatingCompletionBlock::Callback', StandardMethodCodec(FluttifyMessageCodec()))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock':
-              // print log
-              if (fluttifyLogEnabled) {
-        
-              }
-        
-              // handle the native call
-              if (completionBlock != null) completionBlock(TypeOpAmapLocationFluttifyIOS((args['location'] as Object))?.as__<CLLocation>(), TypeOpAmapLocationFluttifyIOS((args['regeocode'] as Object))?.as__<AMapLocationReGeocode>(), TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock':
+                // print log
+                if (fluttifyLogEnabled) {
+          
+                }
+          
+                // handle the native call
+                if (completionBlock != null) completionBlock(TypeOpAmapLocationFluttifyIOS((args['location'] as Object))?.as__<CLLocation>(), TypeOpAmapLocationFluttifyIOS((args['regeocode'] as Object))?.as__<AMapLocationReGeocode>(), TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -574,55 +584,55 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
 
   //region setters
   Future<void> set_distanceFilter_batch(List<double> distanceFilter) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "distanceFilter": distanceFilter[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "distanceFilter": distanceFilter[__i__]}]);
   
   
   }
   
   Future<void> set_desiredAccuracy_batch(List<double> desiredAccuracy) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "desiredAccuracy": desiredAccuracy[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "desiredAccuracy": desiredAccuracy[__i__]}]);
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[__i__]}]);
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[__i__]}]);
   
   
   }
   
   Future<void> set_locationTimeout_batch(List<int> locationTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "locationTimeout": locationTimeout[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "locationTimeout": locationTimeout[__i__]}]);
   
   
   }
   
   Future<void> set_reGeocodeTimeout_batch(List<int> reGeocodeTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "reGeocodeTimeout": reGeocodeTimeout[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "reGeocodeTimeout": reGeocodeTimeout[__i__]}]);
   
   
   }
   
   Future<void> set_locatingWithReGeocode_batch(List<bool> locatingWithReGeocode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "locatingWithReGeocode": locatingWithReGeocode[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "locatingWithReGeocode": locatingWithReGeocode[__i__]}]);
   
   
   }
   
   Future<void> set_reGeocodeLanguage_batch(List<AMapLocationReGeocodeLanguage> reGeocodeLanguage) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "reGeocodeLanguage": reGeocodeLanguage[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "reGeocodeLanguage": reGeocodeLanguage[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "detectRiskOfFakeLocation": detectRiskOfFakeLocation[__i__]}]);
   
   
   }

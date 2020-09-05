@@ -187,121 +187,121 @@ extension TypeOpAmapLocationFluttifyAndroid on Object {
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == com_amap_api_location_AMapLocationClient) {
-      return (com_amap_api_location_AMapLocationClient()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_AMapLocationClient()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_APSService) {
-      return (com_amap_api_location_APSService()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_APSService()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_DPoint) {
-      return (com_amap_api_location_DPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_DPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_CoordinateConverter) {
-      return (com_amap_api_location_CoordinateConverter()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_CoordinateConverter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_CoordUtil) {
-      return (com_amap_api_location_CoordUtil()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_CoordUtil()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_UmidtokenInfo) {
-      return (com_amap_api_location_UmidtokenInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_UmidtokenInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_AMapLocation) {
-      return (com_amap_api_location_AMapLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_AMapLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_AMapLocationClientOption) {
-      return (com_amap_api_location_AMapLocationClientOption()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_AMapLocationClientOption()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_location_AMapLocationQualityReport) {
-      return (com_amap_api_location_AMapLocationQualityReport()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_location_AMapLocationQualityReport()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_fence_DistrictItem) {
-      return (com_amap_api_fence_DistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_fence_DistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_fence_GeoFenceClient) {
-      return (com_amap_api_fence_GeoFenceClient()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_fence_GeoFenceClient()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_fence_GeoFence) {
-      return (com_amap_api_fence_GeoFence()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_fence_GeoFence()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == com_amap_api_fence_PoiItem) {
-      return (com_amap_api_fence_PoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (com_amap_api_fence_PoiItem()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_content_Context) {
-      return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_content_Intent) {
-      return (android_content_Intent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_content_Intent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_content_ContentProvider) {
-      return (android_content_ContentProvider()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_content_ContentProvider()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_app_Application) {
-      return (android_app_Application()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_app_Application()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_app_Notification) {
-      return (android_app_Notification()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_app_Notification()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_app_Activity) {
-      return (android_app_Activity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_app_Activity()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_app_PendingIntent) {
-      return (android_app_PendingIntent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_app_PendingIntent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_os_Bundle) {
-      return (android_os_Bundle()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_os_Bundle()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_os_Binder) {
-      return (android_os_Binder()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_os_Binder()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_view_View) {
-      return (android_view_View()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_view_View()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_view_SurfaceView) {
-      return (android_view_SurfaceView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_view_SurfaceView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_view_ViewGroup) {
-      return (android_view_ViewGroup()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_view_ViewGroup()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_graphics_Point) {
-      return (android_graphics_Point()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_graphics_Point()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_graphics_PointF) {
-      return (android_graphics_PointF()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_graphics_PointF()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_graphics_Bitmap) {
-      return (android_graphics_Bitmap()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_graphics_Bitmap()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_widget_ImageView) {
-      return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == java_io_File) {
-      return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_location_Location) {
-      return (android_location_Location()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_location_Location()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_view_MotionEvent) {
-      return (android_view_MotionEvent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_view_MotionEvent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_graphics_drawable_Drawable) {
-      return (android_graphics_drawable_Drawable()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_graphics_drawable_Drawable()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_widget_FrameLayout) {
-      return (android_widget_FrameLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_widget_FrameLayout()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_widget_TextView) {
-      return (android_widget_TextView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_widget_TextView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_widget_LinearLayout) {
-      return (android_widget_LinearLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_widget_LinearLayout()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_widget_RelativeLayout) {
-      return (android_widget_RelativeLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_widget_RelativeLayout()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_os_Parcelable) {
-      return (android_os_Parcelable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_os_Parcelable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == android_util_Pair) {
-      return (android_util_Pair()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (android_util_Pair()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
   }
 }

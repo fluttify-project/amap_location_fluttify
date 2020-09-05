@@ -63,65 +63,70 @@ class AMapGeoFenceManager extends NSObject  {
 
   //region setters
   Future<void> set_delegate(AMapGeoFenceManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_delegate', {'__this__': this, "delegate": delegate.refId});
   
-    MethodChannel('AMapGeoFenceManagerDelegate::Callback')
+    MethodChannel('AMapGeoFenceManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        switch (methodCall.method) {
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapGeoFenceManager_doRequireLocationAuth([\'manager\':${args['manager']}, \'locationManager\':${args['locationManager']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManager_doRequireLocationAuth(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['locationManager'] as Object))?.as__<CLLocationManager>());
-            break;
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'manager\':${args['manager']}, \'regions\':${args['regions']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), (args['regions'] as List).cast<int>().map((__it__) => TypeOpAmapLocationFluttifyIOS(__it__).as__<AMapGeoFenceRegion>()).toList(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'manager\':${args['manager']}, \'region\':${args['region']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapGeoFenceRegion>(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapGeoFenceManager_doRequireLocationAuth([\'manager\':${args['manager']}, \'locationManager\':${args['locationManager']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapGeoFenceManager_doRequireLocationAuth(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['locationManager'] as Object))?.as__<CLLocationManager>());
+              break;
+            case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'manager\':${args['manager']}, \'regions\':${args['regions']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), (args['regions'] as List).cast<int>().map((__it__) => TypeOpAmapLocationFluttifyIOS(__it__).as__<AMapGeoFenceRegion>()).toList(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'manager\':${args['manager']}, \'region\':${args['region']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapGeoFenceRegion>(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
   
   Future<void> set_activeAction(AMapGeoFenceActiveAction activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_activeAction', {'refId': refId, "activeAction": activeAction.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_activeAction', {'__this__': this, "activeAction": activeAction.toValue()});
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically', {'refId': refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically', {'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates', {'refId': refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates', {'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation(bool detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation', {'refId': refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation', {'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
   
   
   }
@@ -530,25 +535,25 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
 
   //region setters
   Future<void> set_activeAction_batch(List<AMapGeoFenceActiveAction> activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "activeAction": activeAction[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "activeAction": activeAction[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[__i__]}]);
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[__i__]}]);
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "detectRiskOfFakeLocation": detectRiskOfFakeLocation[__i__]}]);
   
   
   }

@@ -12,11 +12,11 @@ dependencies:
   decorated_flutter: ^0.18.0
   permission_handler: ^4.3.0
 
-dependency_overrides:
-  foundation_fluttify:
-    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
-  core_location_fluttify:
-    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/core_location_fluttify
+#dependency_overrides:
+#  foundation_fluttify:
+#    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
+#  core_location_fluttify:
+#    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/core_location_fluttify
 
 dev_dependencies:
   flutter_test:

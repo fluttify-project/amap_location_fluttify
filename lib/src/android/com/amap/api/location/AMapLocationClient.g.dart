@@ -98,21 +98,26 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.location.AMapLocationClient::setLocationListener::Callback')
+    MethodChannel('com.amap.api.location.AMapLocationClient::setLocationListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onLocationChanged([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onLocationChanged(TypeOpAmapLocationFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_location_AMapLocation>());
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onLocationChanged([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onLocationChanged(TypeOpAmapLocationFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_location_AMapLocation>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   
@@ -321,21 +326,26 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback')
+    MethodChannel('com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onLocationChanged([\'var1\':${args['var1']}])');
-              }
-        
-              // handle the native call
-              var1?.onLocationChanged(TypeOpAmapLocationFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_location_AMapLocation>());
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.amap.api.location.AMapLocationListener::onLocationChanged':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onLocationChanged([\'var1\':${args['var1']}])');
+                }
+          
+                // handle the native call
+                var1?.onLocationChanged(TypeOpAmapLocationFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_location_AMapLocation>());
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   

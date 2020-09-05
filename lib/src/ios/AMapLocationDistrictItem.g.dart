@@ -48,7 +48,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_cityCode(String cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationDistrictItem::set_cityCode', {'refId': refId, "cityCode": cityCode});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationDistrictItem::set_cityCode', {'__this__': this, "cityCode": cityCode});
   
   
   }
@@ -72,7 +72,7 @@ extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
 
   //region setters
   Future<void> set_cityCode_batch(List<String> cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "cityCode": cityCode[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cityCode": cityCode[__i__]}]);
   
   
   }

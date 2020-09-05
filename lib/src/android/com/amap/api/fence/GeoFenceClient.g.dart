@@ -107,21 +107,26 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback')
+    MethodChannel('com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
         .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onGeoFenceCreateFinished([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-              }
-        
-              // handle the native call
-              var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((__it__) => TypeOpAmapLocationFluttifyAndroid(__it__).as__<com_amap_api_fence_GeoFence>()).toList(), args['var2'], args['var3']);
-              break;
-            default:
-              break;
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onGeoFenceCreateFinished([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
+                }
+          
+                // handle the native call
+                var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<int>().map((__it__) => TypeOpAmapLocationFluttifyAndroid(__it__).as__<com_amap_api_fence_GeoFence>()).toList(), args['var2'], args['var3']);
+                break;
+              default:
+                break;
+            }
+          } catch (e) {
+            debugPrint(e);
+            throw e;
           }
         });
   

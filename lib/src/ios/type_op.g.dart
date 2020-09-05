@@ -159,100 +159,100 @@ extension TypeOpAmapLocationFluttifyIOS on Object {
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapGeoFenceManager) {
-      return (AMapGeoFenceManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapGeoFenceManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationRegion) {
-      return (AMapLocationRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationCircleRegion) {
-      return (AMapLocationCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationPolygonRegion) {
-      return (AMapLocationPolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationPolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFenceRegion) {
-      return (AMapGeoFenceRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapGeoFenceRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFenceCircleRegion) {
-      return (AMapGeoFenceCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapGeoFenceCircleRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFencePolygonRegion) {
-      return (AMapGeoFencePolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapGeoFencePolygonRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFencePOIRegion) {
-      return (AMapGeoFencePOIRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapGeoFencePOIRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapGeoFenceDistrictRegion) {
-      return (AMapGeoFenceDistrictRegion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapGeoFenceDistrictRegion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationManager) {
-      return (AMapLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationReGeocode) {
-      return (AMapLocationReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationPoint) {
-      return (AMapLocationPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationPOIItem) {
-      return (AMapLocationPOIItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationPOIItem()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == AMapLocationDistrictItem) {
-      return (AMapLocationDistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (AMapLocationDistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLLocation) {
-      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLHeading) {
-      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CGRect) {
-      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CGPoint) {
-      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CGSize) {
-      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIEdgeInsets) {
-      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == CLLocationManager) {
-      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSError) {
-      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSCoding) {
-      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSCopying) {
-      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIView) {
-      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIViewController) {
-      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIControl) {
-      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIImage) {
-      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == UIColor) {
-      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSData) {
-      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
     else if (T == NSOperation) {
-      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_location_fluttify') as T;
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_location_fluttify') as T;
     }
   }
 }

@@ -647,29 +647,22 @@ extern BOOL enableLog;
         
                 // 构造可以直接传输的参数
                 // ref callback arg
-                NSNumber* arglocation = [NSNull null];
-                if (location != nil) {
-                    arglocation = [NSNumber numberWithLong: location.hash];
-                    HEAP[arglocation] = location;
-                }
+                NSObject* arglocation = location;
         
                 // ref callback arg
-                NSNumber* argregeocode = [NSNull null];
-                if (regeocode != nil) {
-                    argregeocode = [NSNumber numberWithLong: regeocode.hash];
-                    HEAP[argregeocode] = regeocode;
-                }
+                NSObject* argregeocode = regeocode;
         
                 // ref callback arg
-                NSNumber* argerror = [NSNull null];
-                if (error != nil) {
-                    argerror = [NSNumber numberWithLong: error.hash];
-                    HEAP[argerror] = error;
-                }
+                NSObject* argerror = error;
         
         
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation, @"regeocode": argregeocode, @"error": argerror}];
+                  FlutterMethodChannel *channel = [FlutterMethodChannel
+                        methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
+                              binaryMessenger:[[self registrar] messenger]
+                                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+        
+                  [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation == nil ? [NSNull null] : arglocation, @"regeocode": argregeocode == nil ? [NSNull null] : argregeocode, @"error": argerror == nil ? [NSNull null] : argerror}];
                 });
         
             }];
