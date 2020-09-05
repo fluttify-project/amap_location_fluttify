@@ -21,7 +21,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-override_dependencies:
+dependency_overrides:
   foundation_fluttify:
     path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
   core_location_fluttify:

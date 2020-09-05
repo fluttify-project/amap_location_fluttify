@@ -1766,11 +1766,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 结构体
-            NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -1792,9 +1790,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
     };
 }
