@@ -27,7 +27,7 @@ import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_location_fluttify.sub_handler.*;
 import me.yohom.amap_location_fluttify.sub_handler.custom.SubHandlerCustom;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;

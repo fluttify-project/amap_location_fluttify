@@ -25,7 +25,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
 
   //region creators
   static Future<com_amap_api_location_AMapLocationQualityReport> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
     final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -34,7 +34,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocationQualityReport__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocationQualityReport__', {'length': length});
   
     final List<com_amap_api_location_AMapLocationQualityReport> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocationQualityReport()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;
@@ -59,7 +59,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setWifiAble', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setWifiAble', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -82,7 +82,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGpsStatus', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGpsStatus', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -105,7 +105,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGPSSatellites', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGPSSatellites', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -128,7 +128,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isWifiAble', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isWifiAble', {"__this__": this});
   
   
     // handle native call
@@ -151,7 +151,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSStatus', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSStatus', {"__this__": this});
   
   
     // handle native call
@@ -174,7 +174,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSSatellites', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSSatellites', {"__this__": this});
   
   
     // handle native call
@@ -197,7 +197,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetworkType', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetworkType', {"__this__": this});
   
   
     // handle native call
@@ -220,7 +220,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetworkType', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetworkType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -243,7 +243,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetUseTime', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetUseTime', {"__this__": this});
   
   
     // handle native call
@@ -266,7 +266,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetUseTime', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetUseTime', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -289,7 +289,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -312,7 +312,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isInstalledHighDangerMockApp', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isInstalledHighDangerMockApp', {"__this__": this});
   
   
     // handle native call
@@ -335,7 +335,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setLocationMode', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setLocationMode', {"var1": var1.toValue(), "__this__": this});
   
   
     // handle native call
@@ -358,7 +358,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getAdviseMessage', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getAdviseMessage', {"__this__": this});
   
   
     // handle native call
@@ -393,7 +393,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setWifiAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setWifiAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -412,7 +412,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGpsStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGpsStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -431,7 +431,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGPSSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGPSSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -450,7 +450,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isWifiAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isWifiAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -469,7 +469,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -488,7 +488,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getGPSSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -507,7 +507,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetworkType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetworkType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -526,7 +526,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetworkType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetworkType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -545,7 +545,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetUseTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getNetUseTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -564,7 +564,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetUseTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetUseTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -583,7 +583,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -602,7 +602,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isInstalledHighDangerMockApp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::isInstalledHighDangerMockApp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -621,7 +621,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setLocationMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::setLocationMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -640,7 +640,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getAdviseMessage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocationQualityReport::getAdviseMessage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

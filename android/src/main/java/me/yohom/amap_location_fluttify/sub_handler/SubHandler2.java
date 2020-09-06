@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_location_fluttify.AmapLocationFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -583,7 +583,7 @@ public class SubHandler2 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPolyline((ArrayList) var1);
+                        __this__.setPolyline(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -736,7 +736,7 @@ public class SubHandler2 {
                     // ref arg
                     com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    float var2 = (float) ((Map<String, Object>) __args__).get("var2");
+                    Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
@@ -780,7 +780,7 @@ public class SubHandler2 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.addGeoFence((ArrayList) var1, var2);
+                        __this__.addGeoFence(var1, var2);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -810,7 +810,7 @@ public class SubHandler2 {
                     // ref arg
                     com.amap.api.location.DPoint var3 = (com.amap.api.location.DPoint) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    float var4 = (float) ((Map<String, Object>) __args__).get("var4");
+                    Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
                     // ref arg
                     int var5 = (int) ((Map<String, Object>) __args__).get("var5");
                     // ref arg
@@ -1558,7 +1558,7 @@ public class SubHandler2 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistrictItemList((ArrayList) var1);
+                        __this__.setDistrictItemList(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1590,7 +1590,7 @@ public class SubHandler2 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPointList((ArrayList) var1);
+                        __this__.setPointList(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1645,7 +1645,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -2023,7 +2023,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -2086,7 +2086,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -3443,9 +3443,9 @@ public class SubHandler2 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     double var1 = (double) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     double var3 = (double) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
@@ -3599,7 +3599,7 @@ public class SubHandler2 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object

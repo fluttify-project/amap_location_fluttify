@@ -21,7 +21,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
 
   //region creators
   static Future<AMapLocationRegion> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationRegion');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationRegion');
     final object = AMapLocationRegion()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -30,7 +30,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapLocationRegion', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationRegion', {'length': length});
   
     final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;
@@ -40,31 +40,31 @@ class AMapLocationRegion extends NSObject with NSCopying {
 
   //region getters
   Future<String> get_identifier() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationRegion::get_identifier", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationRegion::get_identifier", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_notifyOnEntry() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationRegion::get_notifyOnEntry", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationRegion::get_notifyOnEntry", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_notifyOnExit() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationRegion::get_notifyOnExit", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationRegion::get_notifyOnExit", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_notifyOnEntry(bool notifyOnEntry) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry', {'__this__': this, "notifyOnEntry": notifyOnEntry});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry', <String, dynamic>{'__this__': this, "notifyOnEntry": notifyOnEntry});
   
   
   }
   
   Future<void> set_notifyOnExit(bool notifyOnExit) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit', {'__this__': this, "notifyOnExit": notifyOnExit});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit', <String, dynamic>{'__this__': this, "notifyOnExit": notifyOnExit});
   
   
   }
@@ -80,7 +80,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::initWithIdentifier', {"identifier": identifier, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationRegion::initWithIdentifier', {"identifier": identifier, "__this__": this});
   
   
     // handle native call
@@ -103,7 +103,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationRegion::containsCoordinate', {"coordinate": coordinate, "__this__": this});
   
   
     // handle native call
@@ -124,19 +124,22 @@ class AMapLocationRegion extends NSObject with NSCopying {
 extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
   //region getters
   Future<List<String>> get_identifier_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationRegion::get_identifier_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationRegion::get_identifier_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_notifyOnEntry_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationRegion::get_notifyOnEntry_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationRegion::get_notifyOnEntry_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_notifyOnExit_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationRegion::get_notifyOnExit_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationRegion::get_notifyOnExit_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
@@ -166,7 +169,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::initWithIdentifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"identifier": identifier[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationRegion::initWithIdentifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"identifier": identifier[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -185,7 +188,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::containsCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"coordinate": coordinate[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationRegion::containsCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"coordinate": coordinate[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

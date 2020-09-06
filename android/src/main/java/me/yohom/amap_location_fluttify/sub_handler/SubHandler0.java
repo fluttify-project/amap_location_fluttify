@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_location_fluttify.AmapLocationFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -146,16 +146,6 @@ public class SubHandler0 {
                                 Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -163,7 +153,7 @@ public class SubHandler0 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -439,16 +429,6 @@ public class SubHandler0 {
                                 Log.d("java-callback", "fluttify-java-callback: onLocationChanged(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -456,7 +436,7 @@ public class SubHandler0 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.location.AMapLocationListener::onLocationChanged",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -4285,7 +4265,7 @@ public class SubHandler0 {
             put("com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) ((Map<String, Object>) __args__).get("__this__");
@@ -5039,7 +5019,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPolyline((ArrayList) var1);
+                    __this__.setPolyline(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5195,18 +5175,6 @@ public class SubHandler0 {
                                 Log.d("java-callback", "fluttify-java-callback: onGeoFenceCreateFinished(" + var1 + var2 + var3 + ")");
                             }
             
-                            // convert to jsonable data
-                            // list arg
-                            List<Integer> argvar1 = new ArrayList<>();
-                            for (com.amap.api.fence.GeoFence item : var1) {
-                                getHEAP().put(System.identityHashCode(item), item);
-                                argvar1.add(System.identityHashCode(item));
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-                            // jsonable arg
-                            String argvar3 = var3;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -5214,9 +5182,9 @@ public class SubHandler0 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
-                                            put("var3", argvar3);
+                                            put("var1", var1);
+                                            put("var2", var2);
+                                            put("var3", var3);
                                         }}
                                     );
                                 }
@@ -5244,7 +5212,7 @@ public class SubHandler0 {
                 // ref arg
                 com.amap.api.location.DPoint var1 = (com.amap.api.location.DPoint) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                float var2 = (float) ((Map<String, Object>) __args__).get("var2");
+                Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
@@ -5290,7 +5258,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.addGeoFence((ArrayList) var1, var2);
+                    __this__.addGeoFence(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5312,7 +5280,7 @@ public class SubHandler0 {
                 // ref arg
                 com.amap.api.location.DPoint var3 = (com.amap.api.location.DPoint) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
-                float var4 = (float) ((Map<String, Object>) __args__).get("var4");
+                Double var4 = (Double) ((Map<String, Object>) __args__).get("var4");
                 // ref arg
                 int var5 = (int) ((Map<String, Object>) __args__).get("var5");
                 // ref arg

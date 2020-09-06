@@ -21,7 +21,7 @@ class AMapLocationManager extends NSObject  {
 
   //region creators
   static Future<AMapLocationManager> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationManager');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationManager');
     final object = AMapLocationManager()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -30,7 +30,7 @@ class AMapLocationManager extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapLocationManager', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationManager', {'length': length});
   
     final List<AMapLocationManager> typedResult = resultBatch.map((result) => AMapLocationManager()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;
@@ -40,55 +40,55 @@ class AMapLocationManager extends NSObject  {
 
   //region getters
   Future<double> get_distanceFilter() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_distanceFilter", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_distanceFilter", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_desiredAccuracy() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_desiredAccuracy", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_desiredAccuracy", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_allowsBackgroundLocationUpdates() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_allowsBackgroundLocationUpdates", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_allowsBackgroundLocationUpdates", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_locationTimeout() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_locationTimeout", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_locationTimeout", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_reGeocodeTimeout() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_reGeocodeTimeout", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_reGeocodeTimeout", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_locatingWithReGeocode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_locatingWithReGeocode", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_locatingWithReGeocode", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<AMapLocationReGeocodeLanguage> get_reGeocodeLanguage() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'__this__': this});
-    return (__result__ as int).toAMapLocationReGeocodeLanguage();
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as int).toAMapLocationReGeocodeLanguage());
   }
   
   Future<bool> get_detectRiskOfFakeLocation() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_delegate(AMapLocationManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_delegate', {'__this__': this, "delegate": delegate.refId});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_delegate', <String, dynamic>{'__this__': this, });
   
     MethodChannel('AMapLocationManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
@@ -214,55 +214,55 @@ class AMapLocationManager extends NSObject  {
   }
   
   Future<void> set_distanceFilter(double distanceFilter) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter', {'__this__': this, "distanceFilter": distanceFilter});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter', <String, dynamic>{'__this__': this, "distanceFilter": distanceFilter});
   
   
   }
   
   Future<void> set_desiredAccuracy(double desiredAccuracy) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy', {'__this__': this, "desiredAccuracy": desiredAccuracy});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy', <String, dynamic>{'__this__': this, "desiredAccuracy": desiredAccuracy});
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', {'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', <String, dynamic>{'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates', {'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates', <String, dynamic>{'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
   
   
   }
   
   Future<void> set_locationTimeout(int locationTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout', {'__this__': this, "locationTimeout": locationTimeout});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout', <String, dynamic>{'__this__': this, "locationTimeout": locationTimeout});
   
   
   }
   
   Future<void> set_reGeocodeTimeout(int reGeocodeTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout', {'__this__': this, "reGeocodeTimeout": reGeocodeTimeout});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout', <String, dynamic>{'__this__': this, "reGeocodeTimeout": reGeocodeTimeout});
   
   
   }
   
   Future<void> set_locatingWithReGeocode(bool locatingWithReGeocode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode', {'__this__': this, "locatingWithReGeocode": locatingWithReGeocode});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode', <String, dynamic>{'__this__': this, "locatingWithReGeocode": locatingWithReGeocode});
   
   
   }
   
   Future<void> set_reGeocodeLanguage(AMapLocationReGeocodeLanguage reGeocodeLanguage) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage', {'__this__': this, "reGeocodeLanguage": reGeocodeLanguage.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage', <String, dynamic>{'__this__': this, "reGeocodeLanguage": reGeocodeLanguage.toValue()});
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation(bool detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation', {'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation', <String, dynamic>{'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
   
   
   }
@@ -278,7 +278,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::headingAvailable', );
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::headingAvailable', );
   
   
     // handle native call
@@ -301,7 +301,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::startUpdatingHeading', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::startUpdatingHeading', {"__this__": this});
   
   
     // handle native call
@@ -324,7 +324,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::stopUpdatingHeading', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::stopUpdatingHeading', {"__this__": this});
   
   
     // handle native call
@@ -347,7 +347,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay', {"__this__": this});
   
   
     // handle native call
@@ -370,7 +370,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::requestLocationWithReGeocode_completionBlock', {"withReGeocode": withReGeocode, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::requestLocationWithReGeocode_completionBlock', {"withReGeocode": withReGeocode, "__this__": this});
   
   
     // handle native call
@@ -414,7 +414,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::startUpdatingLocation', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::startUpdatingLocation', {"__this__": this});
   
   
     // handle native call
@@ -437,7 +437,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::stopUpdatingLocation', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::stopUpdatingLocation', {"__this__": this});
   
   
     // handle native call
@@ -460,7 +460,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::startMonitoringForRegion', {"region": region, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::startMonitoringForRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -483,7 +483,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::stopMonitoringForRegion', {"region": region, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::stopMonitoringForRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -506,7 +506,7 @@ class AMapLocationManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::requestStateForRegion', {"region": region, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::requestStateForRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -527,55 +527,64 @@ class AMapLocationManager extends NSObject  {
 extension AMapLocationManager_Batch on List<AMapLocationManager> {
   //region getters
   Future<List<double>> get_distanceFilter_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_distanceFilter_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_distanceFilter_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_desiredAccuracy_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_desiredAccuracy_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_desiredAccuracy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_pausesLocationUpdatesAutomatically_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_allowsBackgroundLocationUpdates_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_allowsBackgroundLocationUpdates_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_allowsBackgroundLocationUpdates_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_locationTimeout_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_locationTimeout_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_locationTimeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_reGeocodeTimeout_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_reGeocodeTimeout_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_reGeocodeTimeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_locatingWithReGeocode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_locatingWithReGeocode_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_locatingWithReGeocode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapLocationReGeocodeLanguage>> get_reGeocodeLanguage_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_reGeocodeLanguage_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_reGeocodeLanguage_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapLocationReGeocodeLanguage()).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_detectRiskOfFakeLocation_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
@@ -647,7 +656,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::headingAvailable_batch', );
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::headingAvailable_batch', );
   
   
     // convert native result to dart side object
@@ -666,7 +675,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::startUpdatingHeading_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::startUpdatingHeading_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -685,7 +694,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::stopUpdatingHeading_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::stopUpdatingHeading_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -704,7 +713,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -723,7 +732,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::startUpdatingLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::startUpdatingLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -742,7 +751,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::stopUpdatingLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::stopUpdatingLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -761,7 +770,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::startMonitoringForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::startMonitoringForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -780,7 +789,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::stopMonitoringForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::stopMonitoringForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -799,7 +808,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::requestStateForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::requestStateForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

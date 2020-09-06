@@ -21,7 +21,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_CoordUtil> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__');
     final object = com_amap_api_location_CoordUtil()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -30,7 +30,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_CoordUtil__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_CoordUtil__', {'length': length});
   
     final List<com_amap_api_location_CoordUtil> typedResult = resultBatch.map((result) => com_amap_api_location_CoordUtil()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;
@@ -55,7 +55,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordUtil::convertToGcj', {"var0": var0, "var1": var1});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::convertToGcj', {"var0": Array.ofList(var0), "var1": Array.ofList(var1)});
   
   
     // handle native call
@@ -78,7 +78,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo', );
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo', );
   
   
     // handle native call
@@ -101,7 +101,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo', {"var0": var0});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo', {"var0": var0});
   
   
     // handle native call
@@ -136,7 +136,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordUtil::convertToGcj_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::convertToGcj_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
@@ -155,7 +155,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo_batch', );
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo_batch', );
   
   
     // convert native result to dart side object
@@ -174,7 +174,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object

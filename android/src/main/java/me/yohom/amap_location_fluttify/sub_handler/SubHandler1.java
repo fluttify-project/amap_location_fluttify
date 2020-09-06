@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_location_fluttify.AmapLocationFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -191,7 +191,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setDistrictItemList((ArrayList) var1);
+                    __this__.setDistrictItemList(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -220,7 +220,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPointList((ArrayList) var1);
+                    __this__.setPointList(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -264,7 +264,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setRadius", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -606,7 +606,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setMinDis2Center", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -663,7 +663,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setMaxDis2Center", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -5921,7 +5921,7 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) ((Map<String, Object>) __args__).get("__this__");

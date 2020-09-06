@@ -10,9 +10,11 @@ extension AMapGeoFenceManagerX on AMapGeoFenceManager {
   // 由于ios端的枚举实际上是由int构成的, 所以枚举值拿来`或`, 但是dart这边枚举就是枚举, 或了之后就只能是int了
   // 这里需要加一个传递int值的相同方法
   Future<void> set_activeActionX(int activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+    await MethodChannel('me.yohom/amap_location_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod(
       'AMapGeoFenceManager::set_activeAction',
-      {'refId': refId, "activeAction": activeAction},
+      {'__this__': this, "activeAction": activeAction},
     );
   }
 }
@@ -46,12 +48,14 @@ extension com_amap_api_fence_GeoFenceClient_X
     double radius,
     String customId,
   ) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+    await MethodChannel('me.yohom/amap_location_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod(
       'com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX',
       {
-        'refId': refId,
+        '__this__': this,
         'activeAction': activeAction,
-        'center': center.refId,
+        'center': center,
         'radius': radius,
         'customId': customId,
       },
@@ -66,10 +70,12 @@ extension com_amap_api_fence_GeoFenceClient_X
     String customId = '',
     int activeAction,
   }) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+    await MethodChannel('me.yohom/amap_location_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod(
       'com.amap.api.fence.GeoFenceClient::addPoiGeoFenceX',
       {
-        'refId': refId,
+        '__this__': this,
         'activeAction': activeAction,
         'keyword': keyword,
         'poiType': poiType,
@@ -85,11 +91,13 @@ extension com_amap_api_fence_GeoFenceClient_X
     String customId = '',
     int activeAction,
   }) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+    await MethodChannel('me.yohom/amap_location_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod(
       'com.amap.api.fence.GeoFenceClient::addPolygonGeoFenceX',
       {
-        'refId': refId,
-        'polygon': polygon.map((e) => e.refId).toList(),
+        '__this__': this,
+        'polygon': polygon,
         'customId': customId,
         'activeAction': activeAction,
       },
@@ -101,10 +109,12 @@ extension com_amap_api_fence_GeoFenceClient_X
     String customId = '',
     @required int activeAction,
   }) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod(
+    await MethodChannel('me.yohom/amap_location_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod(
       'com.amap.api.fence.GeoFenceClient::addDistrictGeoFenceX',
       {
-        'refId': refId,
+        '__this__': this,
         'keyword': keyword,
         'customId': customId,
         'activeAction': activeAction,

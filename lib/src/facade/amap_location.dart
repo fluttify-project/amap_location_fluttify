@@ -438,8 +438,8 @@ mixin _Community on _Holder {
     _iosLocationDelegate = null;
 
     final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
-    await kNativeObjectPool.where(isCurrentPlugin).release_batch();
-    kNativeObjectPool.removeWhere(isCurrentPlugin);
+    await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
+    gGlobalReleasePool.removeWhere(isCurrentPlugin);
 
     if (_androidClient != null) {
       await _androidClient.onDestroy();
@@ -456,7 +456,8 @@ mixin _Pro on _Holder {
   void initAndroidListener() {
     if (Platform.isAndroid) {
       // 电子围栏回调
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback')
+      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback',
+              StandardMethodCodec(FluttifyMessageCodec()))
           .setMethodCallHandler((call) async {
         if (call.method ==
             'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {

@@ -21,7 +21,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationPoint> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapLocationPoint');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationPoint');
     final object = AMapLocationPoint()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
@@ -30,7 +30,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length});
   
     final List<AMapLocationPoint> typedResult = resultBatch.map((result) => AMapLocationPoint()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;
@@ -40,26 +40,26 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<double> get_latitude() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_latitude", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationPoint::get_latitude", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_longitude() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_longitude", {'__this__': this});
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationPoint::get_longitude", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_latitude(double latitude) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPoint::set_latitude', {'__this__': this, "latitude": latitude});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
   
   
   }
   
   Future<void> set_longitude(double longitude) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPoint::set_longitude', {'__this__': this, "longitude": longitude});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
   
   
   }
@@ -75,7 +75,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPoint::locationWithLatitude_longitude', {"lat": lat, "lon": lon});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPoint::locationWithLatitude_longitude', {"lat": lat, "lon": lon});
   
   
     // handle native call
@@ -96,13 +96,15 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_latitude_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationPoint::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_longitude_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapLocationPoint::get_longitude_batch", this);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationPoint::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
@@ -132,7 +134,7 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
   
   
     // convert native result to dart side object
