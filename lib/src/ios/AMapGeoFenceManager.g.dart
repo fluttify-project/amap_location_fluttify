@@ -21,10 +21,8 @@ class AMapGeoFenceManager extends NSObject  {
 
   //region creators
   static Future<AMapGeoFenceManager> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createAMapGeoFenceManager');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapGeoFenceManager');
     final object = AMapGeoFenceManager()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapGeoFenceManager extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoFenceManager', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapGeoFenceManager', {'length': length});
   
     final List<AMapGeoFenceManager> typedResult = resultBatch.map((result) => AMapGeoFenceManager()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,92 +40,93 @@ class AMapGeoFenceManager extends NSObject  {
 
   //region getters
   Future<AMapGeoFenceActiveAction> get_activeAction() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction", {'refId': refId});
-  
-    return (__result__ as int).toAMapGeoFenceActiveAction();
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_activeAction", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as int).toAMapGeoFenceActiveAction());
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_allowsBackgroundLocationUpdates() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_allowsBackgroundLocationUpdates", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_allowsBackgroundLocationUpdates", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_detectRiskOfFakeLocation() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_detectRiskOfFakeLocation", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_detectRiskOfFakeLocation", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_delegate(AMapGeoFenceManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapGeoFenceManagerDelegate::Callback')
+    MethodChannel('AMapGeoFenceManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        switch (methodCall.method) {
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapGeoFenceManager_doRequireLocationAuth([\'manager\':${args['manager']}, \'locationManager\':${args['locationManager']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManager_doRequireLocationAuth(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['locationManager'] as Object))?.as__<CLLocationManager>());
-            break;
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'manager\':${args['manager']}, \'regions\':${args['regions']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), (args['regions'] as List).cast<int>().map((__it__) => TypeOpAmapLocationFluttifyIOS(__it__).as__<AMapGeoFenceRegion>()).toList(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'manager\':${args['manager']}, \'region\':${args['region']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapGeoFenceRegion>(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapGeoFenceManager_doRequireLocationAuth([\'manager\':${args['manager']}, \'locationManager\':${args['locationManager']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapGeoFenceManager_doRequireLocationAuth(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['locationManager'] as Object))?.as__<CLLocationManager>());
+              break;
+            case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error([\'manager\':${args['manager']}, \'regions\':${args['regions']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), (args['regions'] as List).cast<String>().map((__it__) => TypeOpAmapLocationFluttifyIOS(__it__).as__<AMapGeoFenceRegion>()).toList(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            case 'Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error([\'manager\':${args['manager']}, \'region\':${args['region']}, \'customID\':${args['customID']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(TypeOpAmapLocationFluttifyIOS((args['manager'] as Object))?.as__<AMapGeoFenceManager>(), TypeOpAmapLocationFluttifyIOS((args['region'] as Object))?.as__<AMapGeoFenceRegion>(), args['customID'], TypeOpAmapLocationFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
   
   Future<void> set_activeAction(AMapGeoFenceActiveAction activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction', {'refId': refId, "activeAction": activeAction.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_activeAction', <String, dynamic>{'__this__': this, "activeAction": activeAction.toValue()});
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically', {'refId': refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically', <String, dynamic>{'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates', {'refId': refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates', <String, dynamic>{'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation(bool detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation', {'refId': refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation', <String, dynamic>{'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
   
   
   }
@@ -144,7 +142,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID', {"center": center is Ref ? (center as Ref)?.refId : center, "radius": radius, "customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID', {"center": center, "radius": radius, "customID": customID, "__this__": this});
   
   
     // handle native call
@@ -155,7 +153,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -168,7 +165,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID', {"coordinates": coordinates.map((__it__) => __it__?.refId).toList(), "count": count, "customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID', {"coordinates": coordinates, "count": count, "customID": customID, "__this__": this});
   
   
     // handle native call
@@ -179,7 +176,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -192,7 +188,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID', {"keyword": keyword, "type": type, "city": city, "size": size, "customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID', {"keyword": keyword, "type": type, "city": city, "size": size, "customID": customID, "__this__": this});
   
   
     // handle native call
@@ -203,7 +199,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -216,7 +211,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID', {"locationPoint": locationPoint is Ref ? (locationPoint as Ref)?.refId : locationPoint, "aroundRadius": aroundRadius, "keyword": keyword, "type": type, "size": size, "customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID', {"locationPoint": locationPoint, "aroundRadius": aroundRadius, "keyword": keyword, "type": type, "size": size, "customID": customID, "__this__": this});
   
   
     // handle native call
@@ -227,7 +222,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -240,7 +234,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID', {"districtName": districtName, "customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID', {"districtName": districtName, "customID": customID, "__this__": this});
   
   
     // handle native call
@@ -251,7 +245,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -264,7 +257,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::statusWithGeoFenceRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::statusWithGeoFenceRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -275,7 +268,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = (__result__ as int).toAMapGeoFenceRegionActiveStatus();
-    
       return __return__;
     }
   }
@@ -288,7 +280,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::geoFenceRegionsWithCustomID', {"customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::geoFenceRegionsWithCustomID', {"customID": customID, "__this__": this});
   
   
     // handle native call
@@ -298,8 +290,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       return __return__;
     }
   }
@@ -312,7 +303,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID', {"customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID', {"customID": customID, "__this__": this});
   
   
     // handle native call
@@ -322,8 +313,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       return __return__;
     }
   }
@@ -336,7 +326,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID', {"customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID', {"customID": customID, "__this__": this});
   
   
     // handle native call
@@ -346,8 +336,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       return __return__;
     }
   }
@@ -360,7 +349,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID', {"customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID', {"customID": customID, "__this__": this});
   
   
     // handle native call
@@ -370,8 +359,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       return __return__;
     }
   }
@@ -384,7 +372,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseTheGeoFenceRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::pauseTheGeoFenceRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -395,7 +383,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -408,7 +395,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startGeoFenceRegionsWithCustomID', {"customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::startGeoFenceRegionsWithCustomID', {"customID": customID, "__this__": this});
   
   
     // handle native call
@@ -418,8 +405,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
       return __return__;
     }
   }
@@ -432,7 +418,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startTheGeoFenceRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::startTheGeoFenceRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -443,7 +429,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -456,7 +441,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeTheGeoFenceRegion', {"region": region is Ref ? (region as Ref)?.refId : region, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::removeTheGeoFenceRegion', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -467,7 +452,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -480,7 +464,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID', {"customID": customID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID', {"customID": customID, "__this__": this});
   
   
     // handle native call
@@ -491,7 +475,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -504,7 +487,7 @@ class AMapGeoFenceManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeAllGeoFenceRegions', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::removeAllGeoFenceRegions', {"__this__": this});
   
   
     // handle native call
@@ -515,7 +498,6 @@ class AMapGeoFenceManager extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -526,30 +508,30 @@ class AMapGeoFenceManager extends NSObject  {
 extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   //region getters
   Future<List<AMapGeoFenceActiveAction>> get_activeAction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_activeAction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapGeoFenceActiveAction()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_activeAction_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapGeoFenceActiveAction()).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_pausesLocationUpdatesAutomatically_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_allowsBackgroundLocationUpdates_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_allowsBackgroundLocationUpdates_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_allowsBackgroundLocationUpdates_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_detectRiskOfFakeLocation_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod("AMapGeoFenceManager::get_detectRiskOfFakeLocation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceManager::get_detectRiskOfFakeLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -557,25 +539,25 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
 
   //region setters
   Future<void> set_activeAction_batch(List<AMapGeoFenceActiveAction> activeAction) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "activeAction": activeAction[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_activeAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "activeAction": activeAction[__i__].toValue()}]);
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically_batch(List<bool> pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_pausesLocationUpdatesAutomatically_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically[__i__]}]);
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates_batch(List<bool> allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_allowsBackgroundLocationUpdates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates[__i__]}]);
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation_batch(List<bool> detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "detectRiskOfFakeLocation": detectRiskOfFakeLocation[__i__]}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceManager::set_detectRiskOfFakeLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "detectRiskOfFakeLocation": detectRiskOfFakeLocation[__i__]}]);
   
   
   }
@@ -590,7 +572,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__].refId, "radius": radius[__i__], "customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__], "radius": radius[__i__], "customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -598,7 +580,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -610,7 +591,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"coordinates": coordinates[__i__].map((it) => it.refId).toList(), "count": count[__i__], "customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"coordinates": coordinates[__i__], "count": count[__i__], "customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -618,7 +599,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -630,7 +610,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"keyword": keyword[__i__], "type": type[__i__], "city": city[__i__], "size": size[__i__], "customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"keyword": keyword[__i__], "type": type[__i__], "city": city[__i__], "size": size[__i__], "customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -638,7 +618,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -650,7 +629,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"locationPoint": locationPoint[__i__].refId, "aroundRadius": aroundRadius[__i__], "keyword": keyword[__i__], "type": type[__i__], "size": size[__i__], "customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"locationPoint": locationPoint[__i__], "aroundRadius": aroundRadius[__i__], "keyword": keyword[__i__], "type": type[__i__], "size": size[__i__], "customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -658,7 +637,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -670,7 +648,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"districtName": districtName[__i__], "customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"districtName": districtName[__i__], "customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -678,7 +656,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -690,15 +667,14 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::statusWithGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::statusWithGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionActiveStatus()).toList();
-    
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionActiveStatus()).toList();
       return typedResult;
     }
   }
@@ -710,15 +686,14 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::geoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::geoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -730,15 +705,14 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -750,15 +724,14 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -770,15 +743,14 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -790,7 +762,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::pauseTheGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::pauseTheGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -798,7 +770,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -810,15 +781,14 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::startGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -830,7 +800,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::startTheGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::startTheGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -838,7 +808,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -850,7 +819,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeTheGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::removeTheGeoFenceRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -858,7 +827,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -870,7 +838,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"customID": customID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -878,7 +846,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -890,7 +857,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('AMapGeoFenceManager::removeAllGeoFenceRegions_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceManager::removeAllGeoFenceRegions_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -898,7 +865,6 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

@@ -16,14 +16,15 @@ import com.amap.api.fence.GeoFence;
 import com.amap.api.fence.GeoFenceClient;
 import com.amap.api.location.DPoint;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugin.common.StandardMethodCodec;
 import me.yohom.amap_location_fluttify.AmapLocationFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -49,15 +50,14 @@ public class SubHandlerCustom {
                     String fenceId = bundle.getString(GeoFence.BUNDLE_KEY_FENCEID);
                     //获取当前有触发的围栏对象：
                     GeoFence fence = bundle.getParcelable(GeoFence.BUNDLE_KEY_FENCE);
-                    getHEAP().put(System.identityHashCode(fence), fence);
 
                     Map<String, Object> arguments = new HashMap<>();
                     arguments.put("status", status);
                     arguments.put("customId", customId);
                     arguments.put("fenceId", fenceId);
-                    arguments.put("fence", System.identityHashCode(fence));
+                    arguments.put("fence", fence);
 
-                    new MethodChannel(messenger, "com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback")
+                    new MethodChannel(messenger, "com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback", new StandardMethodCodec(new FluttifyMessageCodec()))
                             .invokeMethod("Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX", arguments);
                 }
             }
@@ -67,20 +67,18 @@ public class SubHandlerCustom {
             put("com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX", (rawArgs, methodResult) -> {
                 // args
                 Map<String, Object> args = (Map<String, Object>) rawArgs;
-                int refId = (int) args.get("refId");
+
+                GeoFenceClient __this__ = (GeoFenceClient) args.get("__this__");
                 int activeAction = (int) args.get("activeAction");
-                DPoint center = (DPoint) getHEAP().get((int) args.get("center"));
+                DPoint center = (DPoint) args.get("center");
                 Double radius = (Double) args.get("radius");
                 String customId = (String) args.get("customId");
 
-                // ref
-                GeoFenceClient ref = (GeoFenceClient) getHEAP().get(refId);
-
                 // invoke native method
                 try {
-                    ref.setActivateAction(activeAction);
-                    ref.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
-                    ref.addGeoFence(center, radius.floatValue(), customId);
+                    __this__.setActivateAction(activeAction);
+                    __this__.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
+                    __this__.addGeoFence(center, radius.floatValue(), customId);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -95,7 +93,8 @@ public class SubHandlerCustom {
             put("com.amap.api.fence.GeoFenceClient::addPoiGeoFenceX", (rawArgs, methodResult) -> {
                 // args
                 Map<String, Object> args = (Map<String, Object>) rawArgs;
-                int refId = (int) args.get("refId");
+
+                GeoFenceClient __this__ = (GeoFenceClient) args.get("__this__");
                 int activeAction = (int) args.get("activeAction");
                 String keyword = (String) args.get("keyword");
                 String poiType = (String) args.get("poiType");
@@ -103,14 +102,11 @@ public class SubHandlerCustom {
                 int size = (int) args.get("size");
                 String customId = (String) args.get("customId");
 
-                // ref
-                GeoFenceClient ref = (GeoFenceClient) getHEAP().get(refId);
-
                 // invoke native method
                 try {
-                    ref.setActivateAction(activeAction);
-                    ref.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
-                    ref.addGeoFence(keyword, poiType, city, size, customId);
+                    __this__.setActivateAction(activeAction);
+                    __this__.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
+                    __this__.addGeoFence(keyword, poiType, city, size, customId);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -125,26 +121,18 @@ public class SubHandlerCustom {
             put("com.amap.api.fence.GeoFenceClient::addPolygonGeoFenceX", (rawArgs, methodResult) -> {
                 // args
                 Map<String, Object> args = (Map<String, Object>) rawArgs;
-                int refId = (int) args.get("refId");
+                GeoFenceClient __this__ = (GeoFenceClient) args.get("__this__");
                 int activeAction = (int) args.get("activeAction");
 
-                List<Integer> polygonRefIdList = (List<Integer>) args.get("polygon");
-                List<DPoint> polygon = new ArrayList<>();
-                for (Integer integer : polygonRefIdList) {
-                    polygon.add((DPoint) getHEAP().get(integer));
-                }
+                List<DPoint> polygon = (List<DPoint>) args.get("polygon");
 
                 String customId = (String) args.get("customId");
 
-                // ref
-                GeoFenceClient ref = (GeoFenceClient) getHEAP().get(refId);
-
                 // invoke native method
                 try {
-                    ref.setActivateAction(activeAction);
-                    ref.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
-
-                    ref.addGeoFence(polygon, customId);
+                    __this__.setActivateAction(activeAction);
+                    __this__.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
+                    __this__.addGeoFence(polygon, customId);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -159,20 +147,18 @@ public class SubHandlerCustom {
             put("com.amap.api.fence.GeoFenceClient::addDistrictGeoFenceX", (rawArgs, methodResult) -> {
                 // args
                 Map<String, Object> args = (Map<String, Object>) rawArgs;
-                int refId = (int) args.get("refId");
+
+                GeoFenceClient __this__ = (GeoFenceClient) args.get("__this__");
                 int activeAction = (int) args.get("activeAction");
                 String keyword = (String) args.get("keyword");
                 String customId = (String) args.get("customId");
 
-                // ref
-                GeoFenceClient ref = (GeoFenceClient) getHEAP().get(refId);
-
                 // invoke native method
                 try {
-                    ref.setActivateAction(activeAction);
-                    ref.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
+                    __this__.setActivateAction(activeAction);
+                    __this__.createPendingIntent(GEOFENCE_BROADCAST_ACTION);
 
-                    ref.addGeoFence(keyword, customId);
+                    __this__.addGeoFence(keyword, customId);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

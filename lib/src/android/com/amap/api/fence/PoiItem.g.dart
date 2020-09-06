@@ -21,10 +21,8 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
 
   //region creators
   static Future<com_amap_api_fence_PoiItem> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_fence_PoiItem__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_fence_PoiItem__');
     final object = com_amap_api_fence_PoiItem()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_fence_PoiItem__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_fence_PoiItem__', {'length': length});
   
     final List<com_amap_api_fence_PoiItem> typedResult = resultBatch.map((result) => com_amap_api_fence_PoiItem()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getLatitude', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getLatitude', {"__this__": this});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setLatitude', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setLatitude', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getLongitude', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getLongitude', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -130,7 +124,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setLongitude', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setLongitude', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -141,7 +135,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -154,7 +147,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getPoiId', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getPoiId', {"__this__": this});
   
   
     // handle native call
@@ -165,7 +158,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -178,7 +170,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setPoiId', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setPoiId', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -189,7 +181,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -202,7 +193,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getPoiType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getPoiType', {"__this__": this});
   
   
     // handle native call
@@ -213,7 +204,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -226,7 +216,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setPoiType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setPoiType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -237,7 +227,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -250,7 +239,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getTypeCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getTypeCode', {"__this__": this});
   
   
     // handle native call
@@ -261,7 +250,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -274,7 +262,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setTypeCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setTypeCode', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -285,7 +273,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -298,7 +285,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getAddress', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getAddress', {"__this__": this});
   
   
     // handle native call
@@ -309,7 +296,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -322,7 +308,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setAddress', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setAddress', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -333,7 +319,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -346,7 +331,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getTel', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getTel', {"__this__": this});
   
   
     // handle native call
@@ -357,7 +342,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -370,7 +354,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setTel', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setTel', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -381,7 +365,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -394,7 +377,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getProvince', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getProvince', {"__this__": this});
   
   
     // handle native call
@@ -405,7 +388,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -418,7 +400,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setProvince', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setProvince', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -429,7 +411,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -442,7 +423,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getCity', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getCity', {"__this__": this});
   
   
     // handle native call
@@ -453,7 +434,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -466,7 +446,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setCity', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setCity', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -477,7 +457,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -490,7 +469,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getAdname', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getAdname', {"__this__": this});
   
   
     // handle native call
@@ -501,7 +480,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -514,7 +492,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getPoiName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getPoiName', {"__this__": this});
   
   
     // handle native call
@@ -525,7 +503,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -538,7 +515,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setPoiName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setPoiName', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -549,7 +526,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -562,7 +538,7 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setAdname', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setAdname', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -573,7 +549,6 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -598,7 +573,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -606,7 +581,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -618,7 +592,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -626,7 +600,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -638,7 +611,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -646,7 +619,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -658,7 +630,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -666,7 +638,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -678,7 +649,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -686,7 +657,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -698,7 +668,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -706,7 +676,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -718,7 +687,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getPoiType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getPoiType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -726,7 +695,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -738,7 +706,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setPoiType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setPoiType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -746,7 +714,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -758,7 +725,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -766,7 +733,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -778,7 +744,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -786,7 +752,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -798,7 +763,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -806,7 +771,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -818,7 +782,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -826,7 +790,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -838,7 +801,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -846,7 +809,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -858,7 +820,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -866,7 +828,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -878,7 +839,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -886,7 +847,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -898,7 +858,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -906,7 +866,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -918,7 +877,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -926,7 +885,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -938,7 +896,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -946,7 +904,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -958,7 +915,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getAdname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getAdname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -966,7 +923,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -978,7 +934,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::getPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::getPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -986,7 +942,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -998,7 +953,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1006,7 +961,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1018,7 +972,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.fence.PoiItem::setAdname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.fence.PoiItem::setAdname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1026,7 +980,6 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

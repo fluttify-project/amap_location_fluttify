@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "SubHandler0.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -27,7 +28,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -39,9 +40,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -61,7 +62,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -73,9 +74,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -91,7 +92,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -103,9 +104,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -125,7 +126,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -137,9 +138,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -149,7 +150,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -161,17 +162,17 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::statusWithGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -183,9 +184,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::geoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -193,7 +194,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -205,14 +206,13 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 列表
-            NSMutableArray* jsonableResult = [NSMutableArray array];
+            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                [__result__ addObject: object];
             }
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -220,7 +220,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -232,14 +232,13 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 列表
-            NSMutableArray* jsonableResult = [NSMutableArray array];
+            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                [__result__ addObject: object];
             }
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -247,7 +246,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -259,14 +258,13 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 列表
-            NSMutableArray* jsonableResult = [NSMutableArray array];
+            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                [__result__ addObject: object];
             }
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -274,7 +272,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -286,22 +284,21 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 列表
-            NSMutableArray* jsonableResult = [NSMutableArray array];
+            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                [__result__ addObject: object];
             }
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::pauseTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -313,9 +310,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::startGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -323,7 +320,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -335,22 +332,21 @@ extern BOOL enableLog;
         
             // result
             // 返回值: 列表
-            NSMutableArray* jsonableResult = [NSMutableArray array];
+            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                [__result__ addObject: object];
             }
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::startTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -362,17 +358,17 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::removeTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -384,9 +380,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -394,7 +390,7 @@ extern BOOL enableLog;
             NSString* customID = (NSString*) args[@"customID"];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -406,16 +402,16 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::removeAllGeoFenceRegions": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -427,9 +423,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationRegion::initWithIdentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -437,7 +433,7 @@ extern BOOL enableLog;
             NSString* identifier = (NSString*) args[@"identifier"];
         
             // ref
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -449,10 +445,9 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationRegion::containsCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -462,7 +457,7 @@ extern BOOL enableLog;
             [coordinateValue getValue:&coordinate];
         
             // ref
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -474,9 +469,9 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationCircleRegion::initWithCenter_radius_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -490,7 +485,7 @@ extern BOOL enableLog;
             NSString* identifier = (NSString*) args[@"identifier"];
         
             // ref
-            AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -502,10 +497,9 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationPolygonRegion::initWithCoordinates_count_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -525,7 +519,7 @@ extern BOOL enableLog;
             NSString* identifier = (NSString*) args[@"identifier"];
         
             // ref
-            AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -537,10 +531,9 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::headingAvailable": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -559,16 +552,16 @@ extern BOOL enableLog;
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::startUpdatingHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -580,16 +573,16 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::stopUpdatingHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -601,16 +594,16 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::dismissHeadingCalibrationDisplay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -622,9 +615,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::requestLocationWithReGeocode_completionBlock": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -633,7 +626,7 @@ extern BOOL enableLog;
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -643,8 +636,9 @@ extern BOOL enableLog;
             // invoke native method
             BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation* location, AMapLocationReGeocode* regeocode, NSError* error) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                    methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
-                          binaryMessenger:[[weakSelf registrar] messenger]];
+                      methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
+                            binaryMessenger:[[weakSelf registrar] messenger]
+                                      codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
         
                 // print log
                 if (enableLog) {
@@ -653,45 +647,38 @@ extern BOOL enableLog;
         
                 // 构造可以直接传输的参数
                 // ref callback arg
-                NSNumber* arglocation = [NSNull null];
-                if (location != nil) {
-                    arglocation = [NSNumber numberWithLong: location.hash];
-                    HEAP[arglocation] = location;
-                }
+                NSObject* arglocation = location;
         
                 // ref callback arg
-                NSNumber* argregeocode = [NSNull null];
-                if (regeocode != nil) {
-                    argregeocode = [NSNumber numberWithLong: regeocode.hash];
-                    HEAP[argregeocode] = regeocode;
-                }
+                NSObject* argregeocode = regeocode;
         
                 // ref callback arg
-                NSNumber* argerror = [NSNull null];
-                if (error != nil) {
-                    argerror = [NSNumber numberWithLong: error.hash];
-                    HEAP[argerror] = error;
-                }
+                NSObject* argerror = error;
         
         
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation, @"regeocode": argregeocode, @"error": argerror}];
+                  FlutterMethodChannel *channel = [FlutterMethodChannel
+                        methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
+                              binaryMessenger:[[self registrar] messenger]
+                                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
+        
+                  [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation == nil ? [NSNull null] : arglocation, @"regeocode": argregeocode == nil ? [NSNull null] : argregeocode, @"error": argerror == nil ? [NSNull null] : argerror}];
                 });
         
             }];
         
             // result
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::startUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -703,16 +690,16 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::stopUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -724,17 +711,17 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::startMonitoringForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationRegion* region = (AMapLocationRegion*) HEAP[args[@"region"]];
+            AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -746,17 +733,17 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::stopMonitoringForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationRegion* region = (AMapLocationRegion*) HEAP[args[@"region"]];
+            AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -768,17 +755,17 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationManager::requestStateForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationRegion* region = (AMapLocationRegion*) HEAP[args[@"region"]];
+            AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
@@ -790,9 +777,9 @@ extern BOOL enableLog;
         
             // result
             // 无返回值
-            NSString* jsonableResult = @"success";
+            NSString* __result__ = @"success";
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapLocationPoint::locationWithLatitude_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
@@ -814,10 +801,9 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         @"AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
@@ -836,16 +822,16 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref addCircleRegionForMonitoringWithCenter : center radius: radius customID: customID];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -873,16 +859,16 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref addPolygonRegionForMonitoringWithCoordinates : coordinates count: count customID: customID];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -906,16 +892,16 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref addKeywordPOIRegionForMonitoringWithKeyword : keyword POIType: type city: city size: size customID: customID];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -943,16 +929,16 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref addAroundPOIRegionForMonitoringWithLocationPoint : locationPoint aroundRadius: aroundRadius keyword: keyword POIType: type size: size customID: customID];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -970,16 +956,16 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref addDistrictRegionForMonitoringWithDistrictName : districtName customID: customID];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -992,19 +978,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 AMapGeoFenceRegionActiveStatus result = [ref statusWithGeoFenceRegion: region];
         
                 // result
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1020,21 +1006,20 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 NSArray* result = [ref geoFenceRegionsWithCustomID: customID];
         
                 // result
                 // 返回值: 列表
-                NSMutableArray* jsonableResult = [NSMutableArray array];
+                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                    [__result__ addObject: object];
                 }
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1050,21 +1035,20 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 NSArray* result = [ref monitoringGeoFenceRegionsWithCustomID: customID];
         
                 // result
                 // 返回值: 列表
-                NSMutableArray* jsonableResult = [NSMutableArray array];
+                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                    [__result__ addObject: object];
                 }
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1080,21 +1064,20 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 NSArray* result = [ref pausedGeoFenceRegionsWithCustomID: customID];
         
                 // result
                 // 返回值: 列表
-                NSMutableArray* jsonableResult = [NSMutableArray array];
+                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                    [__result__ addObject: object];
                 }
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1110,21 +1093,20 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 NSArray* result = [ref pauseGeoFenceRegionsWithCustomID: customID];
         
                 // result
                 // 返回值: 列表
-                NSMutableArray* jsonableResult = [NSMutableArray array];
+                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                    [__result__ addObject: object];
                 }
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1137,19 +1119,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 BOOL result = [ref pauseTheGeoFenceRegion: region];
         
                 // result
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1165,21 +1147,20 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 NSArray* result = [ref startGeoFenceRegionsWithCustomID: customID];
         
                 // result
                 // 返回值: 列表
-                NSMutableArray* jsonableResult = [NSMutableArray array];
+                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
-                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
+                    [__result__ addObject: object];
                 }
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1192,19 +1173,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 BOOL result = [ref startTheGeoFenceRegion: region];
         
                 // result
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1217,19 +1198,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) HEAP[args[@"region"]];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref removeTheGeoFenceRegion : region];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1245,16 +1226,16 @@ extern BOOL enableLog;
                 NSString* customID = (NSString*) args[@"customID"];
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref removeGeoFenceRegionsWithCustomID : customID];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1269,16 +1250,16 @@ extern BOOL enableLog;
         
         
                 // ref
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref removeAllGeoFenceRegions ];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1294,17 +1275,16 @@ extern BOOL enableLog;
                 NSString* identifier = (NSString*) args[@"identifier"];
         
                 // ref
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
                 // invoke native method
                 AMapLocationRegion* result = [ref initWithIdentifier: identifier];
         
                 // result
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1322,16 +1302,16 @@ extern BOOL enableLog;
                 [coordinateValue getValue:&coordinate];
         
                 // ref
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
                 // invoke native method
                 BOOL result = [ref containsCoordinate: coordinate];
         
                 // result
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1353,17 +1333,16 @@ extern BOOL enableLog;
                 NSString* identifier = (NSString*) args[@"identifier"];
         
                 // ref
-                AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) args[@"__this__"];
         
                 // invoke native method
                 AMapLocationCircleRegion* result = [ref initWithCenter: center radius: radius identifier: identifier];
         
                 // result
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1391,17 +1370,16 @@ extern BOOL enableLog;
                 NSString* identifier = (NSString*) args[@"identifier"];
         
                 // ref
-                AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) args[@"__this__"];
         
                 // invoke native method
                 AMapLocationPolygonRegion* result = [ref initWithCoordinates: coordinates count: count identifier: identifier];
         
                 // result
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1423,9 +1401,9 @@ extern BOOL enableLog;
         
                 // result
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1440,16 +1418,16 @@ extern BOOL enableLog;
         
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref startUpdatingHeading ];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1464,16 +1442,16 @@ extern BOOL enableLog;
         
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref stopUpdatingHeading ];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1488,16 +1466,16 @@ extern BOOL enableLog;
         
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref dismissHeadingCalibrationDisplay ];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1512,16 +1490,16 @@ extern BOOL enableLog;
         
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref startUpdatingLocation ];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1536,16 +1514,16 @@ extern BOOL enableLog;
         
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref stopUpdatingLocation ];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1558,19 +1536,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationRegion* region = (AMapLocationRegion*) HEAP[args[@"region"]];
+                AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref startMonitoringForRegion : region];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1583,19 +1561,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationRegion* region = (AMapLocationRegion*) HEAP[args[@"region"]];
+                AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref stopMonitoringForRegion : region];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1608,19 +1586,19 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationRegion* region = (AMapLocationRegion*) HEAP[args[@"region"]];
+                AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
         
                 // ref
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 // invoke native method
                 [ref requestStateForRegion : region];
         
                 // result
                 // 无返回值
-                NSString* jsonableResult = @"success";
+                NSString* __result__ = @"success";
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1645,10 +1623,9 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -1668,15 +1645,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // invoke native method
             AMapGeoFenceActiveAction result = ref.activeAction;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1686,15 +1663,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.pausesLocationUpdatesAutomatically;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1704,15 +1681,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.allowsBackgroundLocationUpdates;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceManager::get_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1722,15 +1699,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.detectRiskOfFakeLocation;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationRegion::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1740,15 +1717,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.identifier;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationRegion::get_notifyOnEntry": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1758,15 +1735,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.notifyOnEntry;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationRegion::get_notifyOnExit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1776,15 +1753,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.notifyOnExit;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationCircleRegion::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1794,17 +1771,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.center;
         
             // 返回值: 结构体
-            NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationCircleRegion::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1814,15 +1789,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocationDistance result = ref.radius;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPolygonRegion::get_coordinates": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1832,17 +1807,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D* result = ref.coordinates;
         
             // 返回值: 结构体
-            NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
-            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPolygonRegion::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1852,15 +1825,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) args[@"__this__"];
         
             // invoke native method
             NSInteger result = ref.count;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceRegion::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1870,15 +1843,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.identifier;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceRegion::get_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1888,15 +1861,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.customID;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceRegion::get_fenceStatus": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1906,15 +1879,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             // invoke native method
             AMapGeoFenceRegionStatus result = ref.fenceStatus;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceRegion::get_regionType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1924,15 +1897,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             // invoke native method
             AMapGeoFenceRegionType result = ref.regionType;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceRegion::get_currentLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1942,16 +1915,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocation* result = ref.currentLocation;
         
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceCircleRegion::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1961,17 +1933,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D result = ref.center;
         
             // 返回值: 结构体
-            NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceCircleRegion::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1981,15 +1951,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocationDistance result = ref.radius;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFencePolygonRegion::get_coordinates": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -1999,17 +1969,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) args[@"__this__"];
         
             // invoke native method
             CLLocationCoordinate2D* result = ref.coordinates;
         
             // 返回值: 结构体
-            NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
-            HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFencePolygonRegion::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2019,15 +1987,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) args[@"__this__"];
         
             // invoke native method
             NSInteger result = ref.count;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFencePOIRegion::get_POIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2037,16 +2005,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFencePOIRegion* ref = (AMapGeoFencePOIRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFencePOIRegion* ref = (AMapGeoFencePOIRegion*) args[@"__this__"];
         
             // invoke native method
             AMapLocationPOIItem* result = ref.POIItem;
         
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceDistrictRegion::get_districtItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2056,16 +2023,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapGeoFenceDistrictRegion* ref = (AMapGeoFenceDistrictRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceDistrictRegion* ref = (AMapGeoFenceDistrictRegion*) args[@"__this__"];
         
             // invoke native method
             AMapLocationDistrictItem* result = ref.districtItem;
         
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_distanceFilter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2075,15 +2041,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             CLLocationDistance result = ref.distanceFilter;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_desiredAccuracy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2093,15 +2059,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             CLLocationAccuracy result = ref.desiredAccuracy;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_pausesLocationUpdatesAutomatically": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2111,15 +2077,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.pausesLocationUpdatesAutomatically;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_allowsBackgroundLocationUpdates": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2129,15 +2095,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.allowsBackgroundLocationUpdates;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_locationTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2147,15 +2113,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             NSInteger result = ref.locationTimeout;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_reGeocodeTimeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2165,15 +2131,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             NSInteger result = ref.reGeocodeTimeout;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_locatingWithReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2183,15 +2149,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.locatingWithReGeocode;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_reGeocodeLanguage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2201,15 +2167,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             AMapLocationReGeocodeLanguage result = ref.reGeocodeLanguage;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationManager::get_detectRiskOfFakeLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2219,15 +2185,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             // invoke native method
             BOOL result = ref.detectRiskOfFakeLocation;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2237,15 +2203,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.formattedAddress;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_country": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2255,15 +2221,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.country;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2273,15 +2239,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.province;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2291,15 +2257,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2309,15 +2275,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.district;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_township": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2327,15 +2293,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.township;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2345,15 +2311,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.neighborhood;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_building": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2363,15 +2329,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.building;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2381,15 +2347,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.citycode;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2399,15 +2365,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_street": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2417,15 +2383,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.street;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_number": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2435,15 +2401,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.number;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_POIName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2453,15 +2419,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.POIName;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationReGeocode::get_AOIName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2471,15 +2437,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.AOIName;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPoint::get_latitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2489,15 +2455,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
         
             // invoke native method
             CGFloat result = ref.latitude;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPoint::get_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2507,15 +2473,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
         
             // invoke native method
             CGFloat result = ref.longitude;
         
             // 返回值: Value
-            NSObject* jsonableResult = @(result);
+            NSObject* __result__ = @(result);
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_pId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2525,15 +2491,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.pId;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2543,15 +2509,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2561,15 +2527,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.type;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_typeCode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2579,15 +2545,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.typeCode;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2597,15 +2563,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.address;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2615,16 +2581,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             AMapLocationPoint* result = ref.location;
         
             // return a ref
-            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_tel": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2634,15 +2599,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.tel;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2652,15 +2617,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.province;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2670,15 +2635,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationPOIItem::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2688,15 +2653,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.district;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapLocationDistrictItem::get_cityCode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
@@ -2706,15 +2671,15 @@ extern BOOL enableLog;
             }
         
             // ref object
-            AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) args[@"__this__"];
         
             // invoke native method
             NSString* result = ref.cityCode;
         
             // 返回值: jsonable
-            id jsonableResult = result;
+            id __result__ = result;
         
-            methodResult(jsonableResult);
+            methodResult(__result__);
         },
         
         @"AMapGeoFenceManager::get_activeAction_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
@@ -2724,14 +2689,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 AMapGeoFenceActiveAction result = ref.activeAction;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2744,14 +2709,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 BOOL result = ref.pausesLocationUpdatesAutomatically;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2764,14 +2729,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 BOOL result = ref.allowsBackgroundLocationUpdates;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2784,14 +2749,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
                 BOOL result = ref.detectRiskOfFakeLocation;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2804,14 +2769,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
                 NSString* result = ref.identifier;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2824,14 +2789,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
                 BOOL result = ref.notifyOnEntry;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2844,14 +2809,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
                 BOOL result = ref.notifyOnExit;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2864,16 +2829,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.center;
         
                 // 返回值: 结构体
-                NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2886,14 +2849,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationCircleRegion* ref = (AMapLocationCircleRegion*) args[@"__this__"];
         
                 CLLocationDistance result = ref.radius;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2906,16 +2869,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) args[@"__this__"];
         
                 CLLocationCoordinate2D* result = ref.coordinates;
         
                 // 返回值: 结构体
-                NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
-                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2928,14 +2889,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPolygonRegion* ref = (AMapLocationPolygonRegion*) args[@"__this__"];
         
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2948,14 +2909,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
                 NSString* result = ref.identifier;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2968,14 +2929,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
                 NSString* result = ref.customID;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -2988,14 +2949,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
                 AMapGeoFenceRegionStatus result = ref.fenceStatus;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3008,14 +2969,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
                 AMapGeoFenceRegionType result = ref.regionType;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3028,15 +2989,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
                 CLLocation* result = ref.currentLocation;
         
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3049,16 +3009,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) args[@"__this__"];
         
                 CLLocationCoordinate2D result = ref.center;
         
                 // 返回值: 结构体
-                NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3071,14 +3029,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceCircleRegion* ref = (AMapGeoFenceCircleRegion*) args[@"__this__"];
         
                 CLLocationDistance result = ref.radius;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3091,16 +3049,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) args[@"__this__"];
         
                 CLLocationCoordinate2D* result = ref.coordinates;
         
                 // 返回值: 结构体
-                NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
-                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
+                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D*)];
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3113,14 +3069,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFencePolygonRegion* ref = (AMapGeoFencePolygonRegion*) args[@"__this__"];
         
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3133,15 +3089,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFencePOIRegion* ref = (AMapGeoFencePOIRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFencePOIRegion* ref = (AMapGeoFencePOIRegion*) args[@"__this__"];
         
                 AMapLocationPOIItem* result = ref.POIItem;
         
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3154,15 +3109,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapGeoFenceDistrictRegion* ref = (AMapGeoFenceDistrictRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeoFenceDistrictRegion* ref = (AMapGeoFenceDistrictRegion*) args[@"__this__"];
         
                 AMapLocationDistrictItem* result = ref.districtItem;
         
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3175,14 +3129,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 CLLocationDistance result = ref.distanceFilter;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3195,14 +3149,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 CLLocationAccuracy result = ref.desiredAccuracy;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3215,14 +3169,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 BOOL result = ref.pausesLocationUpdatesAutomatically;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3235,14 +3189,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 BOOL result = ref.allowsBackgroundLocationUpdates;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3255,14 +3209,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 NSInteger result = ref.locationTimeout;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3275,14 +3229,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 NSInteger result = ref.reGeocodeTimeout;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3295,14 +3249,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 BOOL result = ref.locatingWithReGeocode;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3315,14 +3269,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 AMapLocationReGeocodeLanguage result = ref.reGeocodeLanguage;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3335,14 +3289,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
                 BOOL result = ref.detectRiskOfFakeLocation;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3355,14 +3309,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.formattedAddress;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3375,14 +3329,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.country;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3395,14 +3349,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.province;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3415,14 +3369,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.city;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3435,14 +3389,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.district;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3455,14 +3409,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.township;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3475,14 +3429,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.neighborhood;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3495,14 +3449,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.building;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3515,14 +3469,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.citycode;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3535,14 +3489,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.adcode;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3555,14 +3509,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.street;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3575,14 +3529,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.number;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3595,14 +3549,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.POIName;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3615,14 +3569,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
                 NSString* result = ref.AOIName;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3635,14 +3589,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
         
                 CGFloat result = ref.latitude;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3655,14 +3609,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPoint* ref = (AMapLocationPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
         
                 CGFloat result = ref.longitude;
         
                 // 返回值: Value
-                NSObject* jsonableResult = @(result);
+                NSObject* __result__ = @(result);
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3675,14 +3629,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.pId;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3695,14 +3649,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.name;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3715,14 +3669,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.type;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3735,14 +3689,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.typeCode;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3755,14 +3709,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.address;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3775,15 +3729,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 AMapLocationPoint* result = ref.location;
         
                 // return a ref
-                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
-                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3796,14 +3749,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.tel;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3816,14 +3769,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.province;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3836,14 +3789,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.city;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3856,14 +3809,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
         
                 NSString* result = ref.district;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3876,14 +3829,14 @@ extern BOOL enableLog;
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
-                AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) args[@"__this__"];
         
                 NSString* result = ref.cityCode;
         
                 // 返回值: jsonable
-                id jsonableResult = result;
+                id __result__ = result;
         
-                [resultList addObject:jsonableResult];
+                [resultList addObject:__result__];
             }
         
             methodResult(resultList);
@@ -3899,7 +3852,7 @@ extern BOOL enableLog;
         
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             ref.delegate = weakSelf;
             methodResult(@"success");
@@ -3916,7 +3869,7 @@ extern BOOL enableLog;
             AMapGeoFenceActiveAction activeAction = (AMapGeoFenceActiveAction) [args[@"activeAction"] integerValue];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             ref.activeAction = activeAction;
             methodResult(@"success");
@@ -3933,7 +3886,7 @@ extern BOOL enableLog;
             BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
             methodResult(@"success");
@@ -3950,7 +3903,7 @@ extern BOOL enableLog;
             BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
             methodResult(@"success");
@@ -3967,7 +3920,7 @@ extern BOOL enableLog;
             BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
         
             // ref
-            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
         
             ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
             methodResult(@"success");
@@ -3984,7 +3937,7 @@ extern BOOL enableLog;
             BOOL notifyOnEntry = [args[@"notifyOnEntry"] boolValue];
         
             // ref
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             ref.notifyOnEntry = notifyOnEntry;
             methodResult(@"success");
@@ -4001,7 +3954,7 @@ extern BOOL enableLog;
             BOOL notifyOnExit = [args[@"notifyOnExit"] boolValue];
         
             // ref
-            AMapLocationRegion* ref = (AMapLocationRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
         
             ref.notifyOnExit = notifyOnExit;
             methodResult(@"success");
@@ -4018,7 +3971,7 @@ extern BOOL enableLog;
             AMapGeoFenceRegionStatus fenceStatus = (AMapGeoFenceRegionStatus) [args[@"fenceStatus"] integerValue];
         
             // ref
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             ref.fenceStatus = fenceStatus;
             methodResult(@"success");
@@ -4035,7 +3988,7 @@ extern BOOL enableLog;
             AMapGeoFenceRegionType regionType = (AMapGeoFenceRegionType) [args[@"regionType"] integerValue];
         
             // ref
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             ref.regionType = regionType;
             methodResult(@"success");
@@ -4049,10 +4002,10 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            CLLocation* currentLocation = (CLLocation*) HEAP[args[@"currentLocation"]];
+            CLLocation* currentLocation = (CLLocation*) args[@"currentLocation"];
         
             // ref
-            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
         
             ref.currentLocation = currentLocation;
             methodResult(@"success");
@@ -4068,7 +4021,7 @@ extern BOOL enableLog;
         
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.delegate = weakSelf;
             methodResult(@"success");
@@ -4085,7 +4038,7 @@ extern BOOL enableLog;
             CLLocationDistance distanceFilter = [args[@"distanceFilter"] doubleValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.distanceFilter = distanceFilter;
             methodResult(@"success");
@@ -4102,7 +4055,7 @@ extern BOOL enableLog;
             CLLocationAccuracy desiredAccuracy = [args[@"desiredAccuracy"] doubleValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.desiredAccuracy = desiredAccuracy;
             methodResult(@"success");
@@ -4119,7 +4072,7 @@ extern BOOL enableLog;
             BOOL pausesLocationUpdatesAutomatically = [args[@"pausesLocationUpdatesAutomatically"] boolValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
             methodResult(@"success");
@@ -4136,7 +4089,7 @@ extern BOOL enableLog;
             BOOL allowsBackgroundLocationUpdates = [args[@"allowsBackgroundLocationUpdates"] boolValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
             methodResult(@"success");
@@ -4153,7 +4106,7 @@ extern BOOL enableLog;
             NSInteger locationTimeout = [args[@"locationTimeout"] longValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.locationTimeout = locationTimeout;
             methodResult(@"success");
@@ -4170,7 +4123,7 @@ extern BOOL enableLog;
             NSInteger reGeocodeTimeout = [args[@"reGeocodeTimeout"] longValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.reGeocodeTimeout = reGeocodeTimeout;
             methodResult(@"success");
@@ -4187,7 +4140,7 @@ extern BOOL enableLog;
             BOOL locatingWithReGeocode = [args[@"locatingWithReGeocode"] boolValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.locatingWithReGeocode = locatingWithReGeocode;
             methodResult(@"success");
@@ -4204,7 +4157,7 @@ extern BOOL enableLog;
             AMapLocationReGeocodeLanguage reGeocodeLanguage = (AMapLocationReGeocodeLanguage) [args[@"reGeocodeLanguage"] integerValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.reGeocodeLanguage = reGeocodeLanguage;
             methodResult(@"success");
@@ -4221,7 +4174,7 @@ extern BOOL enableLog;
             BOOL detectRiskOfFakeLocation = [args[@"detectRiskOfFakeLocation"] boolValue];
         
             // ref
-            AMapLocationManager* ref = (AMapLocationManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
         
             ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
             methodResult(@"success");
@@ -4238,7 +4191,7 @@ extern BOOL enableLog;
             NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
         
             // ref
-            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+            AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
         
             ref.formattedAddress = formattedAddress;
             methodResult(@"success");

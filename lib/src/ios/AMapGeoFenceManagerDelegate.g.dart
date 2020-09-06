@@ -24,36 +24,13 @@ mixin AMapGeoFenceManagerDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> amapGeoFenceManager_doRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {
-    if (manager is Ref) kNativeObjectPool.add(manager);
-    if (locationManager is Ref) kNativeObjectPool.add(locationManager);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('amapGeoFenceManager_doRequireLocationAuth::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> amapGeoFenceManager_doRequireLocationAuth(AMapGeoFenceManager manager, CLLocationManager locationManager) {}
   
   @mustCallSuper
-  Future<void> amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager manager, List<AMapGeoFenceRegion> regions, String customID, NSError error) {
-    if (manager is Ref) kNativeObjectPool.add(manager);
-    kNativeObjectPool.addAll(regions);
-    if (error is Ref) kNativeObjectPool.add(error);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error(AMapGeoFenceManager manager, List<AMapGeoFenceRegion> regions, String customID, NSError error) {}
   
   @mustCallSuper
-  Future<void> amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(AMapGeoFenceManager manager, AMapGeoFenceRegion region, String customID, NSError error) {
-    if (manager is Ref) kNativeObjectPool.add(manager);
-    if (region is Ref) kNativeObjectPool.add(region);
-    if (error is Ref) kNativeObjectPool.add(error);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error(AMapGeoFenceManager manager, AMapGeoFenceRegion region, String customID, NSError error) {}
   
 }
 

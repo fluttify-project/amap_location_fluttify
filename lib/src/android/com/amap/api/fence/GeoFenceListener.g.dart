@@ -24,13 +24,7 @@ mixin com_amap_api_fence_GeoFenceListener on java_lang_Object {
   
 
   @mustCallSuper
-  Future<void> onGeoFenceCreateFinished(List<com_amap_api_fence_GeoFence> var1, int var2, String var3) {
-    kNativeObjectPool.addAll(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onGeoFenceCreateFinished::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onGeoFenceCreateFinished(List<com_amap_api_fence_GeoFence> var1, int var2, String var3) {}
   
 }
 

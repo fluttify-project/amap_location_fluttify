@@ -56,18 +56,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
 
   //region creators
   static Future<com_amap_api_location_AMapLocation> create__String(String var1) async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
     final object = com_amap_api_location_AMapLocation()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
   static Future<com_amap_api_location_AMapLocation> create__android_location_Location(android_location_Location var1) async {
-    final int refId = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1.refId});
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1});
     final object = com_amap_api_location_AMapLocation()..refId = refId..tag__ = 'amap_location_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -75,10 +71,9 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_amap_api_location_AMapLocation> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocation()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -86,10 +81,9 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__android_location_Location', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__android_location_Location', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_amap_api_location_AMapLocation> typedResult = resultBatch.map((result) => com_amap_api_location_AMapLocation()..refId = result..tag__ = 'amap_location_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -112,7 +106,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getGpsAccuracyStatus', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getGpsAccuracyStatus', {"__this__": this});
   
   
     // handle native call
@@ -123,7 +117,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -136,7 +129,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setGpsAccuracyStatus', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setGpsAccuracyStatus', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -147,7 +140,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -160,7 +152,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLocationType', {"__this__": this});
   
   
     // handle native call
@@ -171,7 +163,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -184,7 +175,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLocationType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -195,7 +186,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -208,7 +198,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationDetail', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLocationDetail', {"__this__": this});
   
   
     // handle native call
@@ -219,7 +209,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -232,7 +221,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationDetail', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLocationDetail', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -243,7 +232,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -256,7 +244,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getErrorCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getErrorCode', {"__this__": this});
   
   
     // handle native call
@@ -267,7 +255,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -280,7 +267,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setErrorCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setErrorCode', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -291,7 +278,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -304,7 +290,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getErrorInfo', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getErrorInfo', {"__this__": this});
   
   
     // handle native call
@@ -315,7 +301,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -328,7 +313,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setErrorInfo', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setErrorInfo', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -339,7 +324,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -352,7 +336,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCountry', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCountry', {"__this__": this});
   
   
     // handle native call
@@ -363,7 +347,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -376,7 +359,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCountry', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCountry', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -387,7 +370,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -400,7 +382,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getRoad', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getRoad', {"__this__": this});
   
   
     // handle native call
@@ -411,7 +393,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -424,7 +405,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setRoad', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setRoad', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -435,7 +416,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -448,7 +428,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAddress', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAddress', {"__this__": this});
   
   
     // handle native call
@@ -459,7 +439,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -472,7 +451,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setAddress', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setAddress', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -483,7 +462,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -496,7 +474,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getProvince', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getProvince', {"__this__": this});
   
   
     // handle native call
@@ -507,7 +485,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -520,7 +497,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setProvince', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setProvince', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -531,7 +508,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -544,7 +520,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCity', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCity', {"__this__": this});
   
   
     // handle native call
@@ -555,7 +531,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -568,7 +543,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCity', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCity', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -579,7 +554,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -592,7 +566,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getDistrict', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getDistrict', {"__this__": this});
   
   
     // handle native call
@@ -603,7 +577,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -616,7 +589,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setDistrict', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setDistrict', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -627,7 +600,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -640,7 +612,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCityCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCityCode', {"__this__": this});
   
   
     // handle native call
@@ -651,7 +623,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -664,7 +635,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCityCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCityCode', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -675,7 +646,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -688,7 +658,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAdCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAdCode', {"__this__": this});
   
   
     // handle native call
@@ -699,7 +669,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -712,7 +681,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setAdCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setAdCode', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -723,7 +692,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -736,7 +704,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getPoiName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getPoiName', {"__this__": this});
   
   
     // handle native call
@@ -747,7 +715,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -760,7 +727,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setPoiName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setPoiName', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -771,7 +738,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -784,7 +750,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLatitude', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLatitude', {"__this__": this});
   
   
     // handle native call
@@ -795,7 +761,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -808,7 +773,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLatitude', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLatitude', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -819,7 +784,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -832,7 +796,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLongitude', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLongitude', {"__this__": this});
   
   
     // handle native call
@@ -843,7 +807,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -856,7 +819,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLongitude', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLongitude', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -867,7 +830,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -880,7 +842,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getSatellites', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getSatellites', {"__this__": this});
   
   
     // handle native call
@@ -891,7 +853,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -904,7 +865,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setSatellites', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setSatellites', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -915,7 +876,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -928,7 +888,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getStreet', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getStreet', {"__this__": this});
   
   
     // handle native call
@@ -939,7 +899,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -952,7 +911,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setStreet', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setStreet', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -963,7 +922,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -976,7 +934,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getStreetNum', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getStreetNum', {"__this__": this});
   
   
     // handle native call
@@ -987,7 +945,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1000,7 +957,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setNumber', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setNumber', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1011,7 +968,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1024,7 +980,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setOffset', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setOffset', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1035,7 +991,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1048,7 +1003,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::isOffset', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::isOffset', {"__this__": this});
   
   
     // handle native call
@@ -1059,7 +1014,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1072,7 +1026,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAoiName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAoiName', {"__this__": this});
   
   
     // handle native call
@@ -1083,7 +1037,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1096,7 +1049,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setAoiName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setAoiName', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1107,7 +1060,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1120,7 +1072,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getBuildingId', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getBuildingId', {"__this__": this});
   
   
     // handle native call
@@ -1131,7 +1083,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1144,7 +1095,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setBuildingId', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setBuildingId', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1155,7 +1106,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1168,7 +1118,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getFloor', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getFloor', {"__this__": this});
   
   
     // handle native call
@@ -1179,7 +1129,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1192,7 +1141,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::isFixLastLocation', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::isFixLastLocation', {"__this__": this});
   
   
     // handle native call
@@ -1203,7 +1152,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1216,7 +1164,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setFixLastLocation', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setFixLastLocation', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1227,7 +1175,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1240,7 +1187,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setFloor', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setFloor', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1251,7 +1198,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1264,7 +1210,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::isMock', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::isMock', {"__this__": this});
   
   
     // handle native call
@@ -1275,7 +1221,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1288,7 +1233,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setMock', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setMock', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1299,7 +1244,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1312,7 +1256,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getDescription', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getDescription', {"__this__": this});
   
   
     // handle native call
@@ -1323,7 +1267,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1336,7 +1279,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setDescription', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setDescription', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1347,7 +1290,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1360,7 +1302,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::toStr', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::toStr', {"__this__": this});
   
   
     // handle native call
@@ -1371,7 +1313,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1384,7 +1325,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::toStr__int', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::toStr__int', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1395,7 +1336,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1408,7 +1348,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAccuracy', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAccuracy', {"__this__": this});
   
   
     // handle native call
@@ -1419,7 +1359,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1432,7 +1371,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getBearing', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getBearing', {"__this__": this});
   
   
     // handle native call
@@ -1443,7 +1382,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1456,7 +1394,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAltitude', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAltitude', {"__this__": this});
   
   
     // handle native call
@@ -1467,7 +1405,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1480,7 +1417,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getSpeed', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getSpeed', {"__this__": this});
   
   
     // handle native call
@@ -1491,7 +1428,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1504,7 +1440,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getProvider', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getProvider', {"__this__": this});
   
   
     // handle native call
@@ -1515,7 +1451,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1528,7 +1463,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::clone', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::clone', {"__this__": this});
   
   
     // handle native call
@@ -1539,7 +1474,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -1552,7 +1486,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationQualityReport', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLocationQualityReport', {"__this__": this});
   
   
     // handle native call
@@ -1563,7 +1497,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -1576,7 +1509,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1587,7 +1520,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1600,7 +1532,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCoordType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCoordType', {"__this__": this});
   
   
     // handle native call
@@ -1611,7 +1543,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1624,7 +1555,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCoordType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCoordType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1635,7 +1566,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1648,7 +1578,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setTrustedLevel', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setTrustedLevel', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1659,7 +1589,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1672,7 +1601,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getTrustedLevel', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getTrustedLevel', {"__this__": this});
   
   
     // handle native call
@@ -1683,7 +1612,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1696,7 +1624,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getConScenario', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getConScenario', {"__this__": this});
   
   
     // handle native call
@@ -1707,7 +1635,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1720,7 +1647,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setConScenario', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setConScenario', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -1731,7 +1658,6 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1756,7 +1682,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getGpsAccuracyStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getGpsAccuracyStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1764,7 +1690,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1776,7 +1701,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setGpsAccuracyStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setGpsAccuracyStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1784,7 +1709,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1796,7 +1720,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLocationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1804,7 +1728,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1816,7 +1739,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLocationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1824,7 +1747,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1836,7 +1758,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationDetail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLocationDetail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1844,7 +1766,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1856,7 +1777,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationDetail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLocationDetail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1864,7 +1785,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1876,7 +1796,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1884,7 +1804,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1896,7 +1815,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1904,7 +1823,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1916,7 +1834,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1924,7 +1842,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1936,7 +1853,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1944,7 +1861,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1956,7 +1872,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1964,7 +1880,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1976,7 +1891,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1984,7 +1899,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1996,7 +1910,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2004,7 +1918,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2016,7 +1929,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2024,7 +1937,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2036,7 +1948,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2044,7 +1956,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2056,7 +1967,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2064,7 +1975,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2076,7 +1986,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2084,7 +1994,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2096,7 +2005,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2104,7 +2013,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2116,7 +2024,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2124,7 +2032,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2136,7 +2043,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2144,7 +2051,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2156,7 +2062,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2164,7 +2070,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2176,7 +2081,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2184,7 +2089,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2196,7 +2100,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2204,7 +2108,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2216,7 +2119,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2224,7 +2127,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2236,7 +2138,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2244,7 +2146,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2256,7 +2157,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2264,7 +2165,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2276,7 +2176,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2284,7 +2184,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2296,7 +2195,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2304,7 +2203,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2316,7 +2214,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2324,7 +2222,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2336,7 +2233,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2344,7 +2241,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2356,7 +2252,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2364,7 +2260,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2376,7 +2271,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2384,7 +2279,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2396,7 +2290,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2404,7 +2298,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2416,7 +2309,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2424,7 +2317,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2436,7 +2328,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getStreet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getStreet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2444,7 +2336,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2456,7 +2347,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setStreet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setStreet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2464,7 +2355,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2476,7 +2366,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getStreetNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getStreetNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2484,7 +2374,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2496,7 +2385,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2504,7 +2393,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2516,7 +2404,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setOffset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setOffset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2524,7 +2412,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2536,7 +2423,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::isOffset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::isOffset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2544,7 +2431,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2556,7 +2442,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2564,7 +2450,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2576,7 +2461,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setAoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setAoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2584,7 +2469,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2596,7 +2480,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getBuildingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getBuildingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2604,7 +2488,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2616,7 +2499,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setBuildingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setBuildingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2624,7 +2507,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2636,7 +2518,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getFloor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getFloor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2644,7 +2526,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2656,7 +2537,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::isFixLastLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::isFixLastLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2664,7 +2545,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2676,7 +2556,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setFixLastLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setFixLastLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2684,7 +2564,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2696,7 +2575,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setFloor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setFloor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2704,7 +2583,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2716,7 +2594,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::isMock_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::isMock_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2724,7 +2602,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2736,7 +2613,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setMock_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setMock_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2744,7 +2621,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2756,7 +2632,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2764,7 +2640,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2776,7 +2651,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2784,7 +2659,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2796,7 +2670,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::toStr_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::toStr_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2804,7 +2678,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2816,7 +2689,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::toStr__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::toStr__int_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2824,7 +2697,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2836,7 +2708,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAccuracy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAccuracy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2844,7 +2716,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2856,7 +2727,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getBearing_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getBearing_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2864,7 +2735,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2876,7 +2746,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getAltitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getAltitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2884,7 +2754,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2896,7 +2765,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getSpeed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getSpeed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2904,7 +2773,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2916,7 +2784,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getProvider_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getProvider_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2924,7 +2792,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2936,15 +2803,14 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_location_AMapLocation()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       return typedResult;
     }
   }
@@ -2956,15 +2822,14 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getLocationQualityReport_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getLocationQualityReport_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_location_AMapLocationQualityReport()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
       return typedResult;
     }
   }
@@ -2976,7 +2841,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -2984,7 +2849,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -2996,7 +2860,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3004,7 +2868,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3016,7 +2879,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3024,7 +2887,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3036,7 +2898,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setTrustedLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setTrustedLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3044,7 +2906,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3056,7 +2917,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getTrustedLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getTrustedLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3064,7 +2925,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3076,7 +2936,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::getConScenario_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::getConScenario_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3084,7 +2944,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -3096,7 +2955,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify').invokeMethod('com.amap.api.location.AMapLocation::setConScenario_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.AMapLocation::setConScenario_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3104,7 +2963,6 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
