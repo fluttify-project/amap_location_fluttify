@@ -48,7 +48,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_cityCode(String cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationDistrictItem::set_cityCode', <String, dynamic>{'__this__': this, "cityCode": cityCode});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationDistrictItem::set_cityCode', <String, dynamic>{'__this__': this, "cityCode": cityCode});
   
   
   }

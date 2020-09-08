@@ -260,7 +260,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.location.AMapLocationQualityReport __this__ = (com.amap.api.location.AMapLocationQualityReport) ((Map<String, Object>) __args__).get("__this__");
@@ -1708,7 +1708,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -1897,7 +1897,7 @@ public class SubHandler2 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");

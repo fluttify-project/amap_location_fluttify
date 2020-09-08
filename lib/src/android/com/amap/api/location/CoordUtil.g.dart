@@ -55,7 +55,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::convertToGcj', {"var0": Array.ofList(var0), "var1": Array.ofList(var1)});
+    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.CoordUtil::convertToGcj', {"var0": var0, "var1": var1});
   
   
     // handle native call

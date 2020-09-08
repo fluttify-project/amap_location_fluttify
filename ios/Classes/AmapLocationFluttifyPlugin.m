@@ -60,6 +60,10 @@ extern BOOL enableLog;
 // 委托方法们
 - (void)amapGeoFenceManager : (AMapGeoFenceManager*)manager doRequireLocationAuth: (CLLocationManager*)locationManager
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth");
@@ -74,11 +78,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"locationManager": arglocationManager == nil ? [NSNull null] : arglocationManager}];
   });
   
@@ -86,6 +85,10 @@ extern BOOL enableLog;
 
 - (void)amapGeoFenceManager : (AMapGeoFenceManager*)manager didAddRegionForMonitoringFinished: (NSArray<AMapGeoFenceRegion*>*)regions customID: (NSString*)customID error: (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error");
@@ -104,11 +107,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"regions": argregions == nil ? [NSNull null] : argregions, @"customID": argcustomID == nil ? [NSNull null] : argcustomID, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
@@ -116,6 +114,10 @@ extern BOOL enableLog;
 
 - (void)amapGeoFenceManager : (AMapGeoFenceManager*)manager didGeoFencesStatusChangedForRegion: (AMapGeoFenceRegion*)region customID: (NSString*)customID error: (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error");
@@ -135,11 +137,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapGeoFenceManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion, @"customID": argcustomID == nil ? [NSNull null] : argcustomID, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
@@ -147,6 +144,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager doRequireLocationAuth: (CLLocationManager*)locationManager
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth");
@@ -161,11 +162,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"locationManager": arglocationManager == nil ? [NSNull null] : arglocationManager}];
   });
   
@@ -173,6 +169,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didFailWithError: (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didFailWithError");
@@ -187,11 +187,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
@@ -199,6 +194,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didUpdateLocation: (CLLocation*)location
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation");
@@ -213,11 +212,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"location": arglocation == nil ? [NSNull null] : arglocation}];
   });
   
@@ -225,6 +219,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didUpdateLocation: (CLLocation*)location reGeocode: (AMapLocationReGeocode*)reGeocode
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode");
@@ -242,11 +240,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"location": arglocation == nil ? [NSNull null] : arglocation, @"reGeocode": argreGeocode == nil ? [NSNull null] : argreGeocode}];
   });
   
@@ -254,6 +247,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didChangeAuthorizationStatus: (CLAuthorizationStatus)status
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus");
@@ -267,11 +264,6 @@ extern BOOL enableLog;
   NSNumber* argstatus = @((NSInteger) status);
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didChangeAuthorizationStatus" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"status": argstatus == nil ? [NSNull null] : argstatus}];
   });
   
@@ -279,6 +271,10 @@ extern BOOL enableLog;
 
 - (BOOL)amapLocationManagerShouldDisplayHeadingCalibration : (AMapLocationManager*)manager
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration");
@@ -290,11 +286,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration"
                 arguments:@{}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
@@ -313,6 +304,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didUpdateHeading: (CLHeading*)newHeading
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading");
@@ -327,11 +322,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"newHeading": argnewHeading == nil ? [NSNull null] : argnewHeading}];
   });
   
@@ -339,6 +329,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didStartMonitoringForRegion: (AMapLocationRegion*)region
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion");
@@ -353,11 +347,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion}];
   });
   
@@ -365,6 +354,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didEnterRegion: (AMapLocationRegion*)region
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didEnterRegion");
@@ -379,11 +372,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion}];
   });
   
@@ -391,6 +379,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didExitRegion: (AMapLocationRegion*)region
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didExitRegion");
@@ -405,11 +397,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion}];
   });
   
@@ -417,6 +404,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager didDetermineState: (AMapLocationRegionState)state forRegion: (AMapLocationRegion*)region
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion");
@@ -433,11 +424,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"state": argstate == nil ? [NSNull null] : argstate, @"region": argregion == nil ? [NSNull null] : argregion}];
   });
   
@@ -445,6 +431,10 @@ extern BOOL enableLog;
 
 - (void)amapLocationManager : (AMapLocationManager*)manager monitoringDidFailForRegion: (AMapLocationRegion*)region withError: (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError");
@@ -462,11 +452,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   

@@ -88,9 +88,9 @@ class AMapLocationManager extends NSObject  {
 
   //region setters
   Future<void> set_delegate(AMapLocationManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapLocationManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('AMapLocationManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -214,55 +214,55 @@ class AMapLocationManager extends NSObject  {
   }
   
   Future<void> set_distanceFilter(double distanceFilter) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_distanceFilter', <String, dynamic>{'__this__': this, "distanceFilter": distanceFilter});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_distanceFilter', <String, dynamic>{'__this__': this, "distanceFilter": distanceFilter});
   
   
   }
   
   Future<void> set_desiredAccuracy(double desiredAccuracy) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_desiredAccuracy', <String, dynamic>{'__this__': this, "desiredAccuracy": desiredAccuracy});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_desiredAccuracy', <String, dynamic>{'__this__': this, "desiredAccuracy": desiredAccuracy});
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', <String, dynamic>{'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_pausesLocationUpdatesAutomatically', <String, dynamic>{'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates', <String, dynamic>{'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_allowsBackgroundLocationUpdates', <String, dynamic>{'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
   
   
   }
   
   Future<void> set_locationTimeout(int locationTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locationTimeout', <String, dynamic>{'__this__': this, "locationTimeout": locationTimeout});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_locationTimeout', <String, dynamic>{'__this__': this, "locationTimeout": locationTimeout});
   
   
   }
   
   Future<void> set_reGeocodeTimeout(int reGeocodeTimeout) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeTimeout', <String, dynamic>{'__this__': this, "reGeocodeTimeout": reGeocodeTimeout});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_reGeocodeTimeout', <String, dynamic>{'__this__': this, "reGeocodeTimeout": reGeocodeTimeout});
   
   
   }
   
   Future<void> set_locatingWithReGeocode(bool locatingWithReGeocode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_locatingWithReGeocode', <String, dynamic>{'__this__': this, "locatingWithReGeocode": locatingWithReGeocode});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_locatingWithReGeocode', <String, dynamic>{'__this__': this, "locatingWithReGeocode": locatingWithReGeocode});
   
   
   }
   
   Future<void> set_reGeocodeLanguage(AMapLocationReGeocodeLanguage reGeocodeLanguage) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_reGeocodeLanguage', <String, dynamic>{'__this__': this, "reGeocodeLanguage": reGeocodeLanguage.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_reGeocodeLanguage', <String, dynamic>{'__this__': this, "reGeocodeLanguage": reGeocodeLanguage.toValue()});
   
   
   }
   
   Future<void> set_detectRiskOfFakeLocation(bool detectRiskOfFakeLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation', <String, dynamic>{'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationManager::set_detectRiskOfFakeLocation', <String, dynamic>{'__this__': this, "detectRiskOfFakeLocation": detectRiskOfFakeLocation});
   
   
   }
@@ -374,7 +374,7 @@ class AMapLocationManager extends NSObject  {
   
   
     // handle native call
-    MethodChannel('AMapLocatingCompletionBlock::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('AMapLocatingCompletionBlock::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

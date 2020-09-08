@@ -93,61 +93,61 @@ class AMapLocationPOIItem extends NSObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_pId(String pId) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_pId', <String, dynamic>{'__this__': this, "pId": pId});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_pId', <String, dynamic>{'__this__': this, "pId": pId});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_type(String type) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_type', <String, dynamic>{'__this__': this, "type": type});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_type', <String, dynamic>{'__this__': this, "type": type});
   
   
   }
   
   Future<void> set_typeCode(String typeCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_typeCode', <String, dynamic>{'__this__': this, "typeCode": typeCode});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_typeCode', <String, dynamic>{'__this__': this, "typeCode": typeCode});
   
   
   }
   
   Future<void> set_address(String address) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_address', <String, dynamic>{'__this__': this, "address": address});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_address', <String, dynamic>{'__this__': this, "address": address});
   
   
   }
   
   Future<void> set_location(AMapLocationPoint location) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_tel(String tel) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_tel', <String, dynamic>{'__this__': this, "tel": tel});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_tel', <String, dynamic>{'__this__': this, "tel": tel});
   
   
   }
   
   Future<void> set_province(String province) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_province', <String, dynamic>{'__this__': this, "province": province});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_province', <String, dynamic>{'__this__': this, "province": province});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_district(String district) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_district', <String, dynamic>{'__this__': this, "district": district});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationPOIItem::set_district', <String, dynamic>{'__this__': this, "district": district});
   
   
   }
@@ -265,7 +265,7 @@ extension AMapLocationPOIItem_Batch on List<AMapLocationPOIItem> {
   }
   
   Future<void> set_location_batch(List<AMapLocationPoint> location) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationPOIItem::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }

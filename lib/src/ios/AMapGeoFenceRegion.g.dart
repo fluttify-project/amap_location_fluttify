@@ -68,19 +68,19 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
 
   //region setters
   Future<void> set_fenceStatus(AMapGeoFenceRegionStatus fenceStatus) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceRegion::set_fenceStatus', <String, dynamic>{'__this__': this, "fenceStatus": fenceStatus.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceRegion::set_fenceStatus', <String, dynamic>{'__this__': this, "fenceStatus": fenceStatus.toValue()});
   
   
   }
   
   Future<void> set_regionType(AMapGeoFenceRegionType regionType) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceRegion::set_regionType', <String, dynamic>{'__this__': this, "regionType": regionType.toValue()});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceRegion::set_regionType', <String, dynamic>{'__this__': this, "regionType": regionType.toValue()});
   
   
   }
   
   Future<void> set_currentLocation(CLLocation currentLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceRegion::set_currentLocation', <String, dynamic>{'__this__': this, "currentLocation": currentLocation});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapGeoFenceRegion::set_currentLocation', <String, dynamic>{'__this__': this, "currentLocation": currentLocation});
   
   
   }
@@ -145,7 +145,7 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
   }
   
   Future<void> set_currentLocation_batch(List<CLLocation> currentLocation) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceRegion::set_currentLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "currentLocation": currentLocation[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoFenceRegion::set_currentLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "currentLocation": currentLocation[__i__]}]);
   
   
   }

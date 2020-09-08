@@ -98,7 +98,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.location.AMapLocationClient::setLocationListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.location.AMapLocationClient::setLocationListener::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -326,7 +326,7 @@ class com_amap_api_location_AMapLocationClient extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

@@ -58,13 +58,13 @@ class AMapLocationRegion extends NSObject with NSCopying {
 
   //region setters
   Future<void> set_notifyOnEntry(bool notifyOnEntry) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnEntry', <String, dynamic>{'__this__': this, "notifyOnEntry": notifyOnEntry});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationRegion::set_notifyOnEntry', <String, dynamic>{'__this__': this, "notifyOnEntry": notifyOnEntry});
   
   
   }
   
   Future<void> set_notifyOnExit(bool notifyOnExit) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationRegion::set_notifyOnExit', <String, dynamic>{'__this__': this, "notifyOnExit": notifyOnExit});
+    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationRegion::set_notifyOnExit', <String, dynamic>{'__this__': this, "notifyOnExit": notifyOnExit});
   
   
   }
