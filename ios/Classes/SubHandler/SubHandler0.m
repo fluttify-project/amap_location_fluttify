@@ -19,7 +19,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* centerValue = (NSValue*) HEAP[args[@"center"]];
+            NSValue* centerValue = (NSValue*) args[@"center"];
             CLLocationCoordinate2D center;
             [centerValue getValue:&center];
             // jsonable arg
@@ -47,11 +47,10 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // list arg struct
-            NSArray* coordinatesRefIdArray = (NSArray*) args[@"coordinates"];
-            CLLocationCoordinate2D coordinates[coordinatesRefIdArray.count];
-        
-            for (int __i__ = 0; __i__ < coordinatesRefIdArray.count; __i__++) {
-                NSValue* coordinatesValue = (NSValue*) HEAP[[coordinatesRefIdArray objectAtIndex:__i__]];
+            NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
+            CLLocationCoordinate2D coordinates[coordinatesValueList.count];
+            for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+                NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                 CLLocationCoordinate2D coordinatesItem;
                 [coordinatesValue getValue:&coordinatesItem];
                 coordinates[__i__] = coordinatesItem;
@@ -111,7 +110,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* locationPointValue = (NSValue*) HEAP[args[@"locationPoint"]];
+            NSValue* locationPointValue = (NSValue*) args[@"locationPoint"];
             CLLocationCoordinate2D locationPoint;
             [locationPointValue getValue:&locationPoint];
             // jsonable arg
@@ -452,7 +451,7 @@ extern BOOL enableLog;
         @"AMapLocationRegion::containsCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
+            NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
         
@@ -476,7 +475,7 @@ extern BOOL enableLog;
         @"AMapLocationCircleRegion::initWithCenter_radius_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* centerValue = (NSValue*) HEAP[args[@"center"]];
+            NSValue* centerValue = (NSValue*) args[@"center"];
             CLLocationCoordinate2D center;
             [centerValue getValue:&center];
             // jsonable arg
@@ -504,11 +503,10 @@ extern BOOL enableLog;
         @"AMapLocationPolygonRegion::initWithCoordinates_count_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // list arg struct
-            NSArray* coordinatesRefIdArray = (NSArray*) args[@"coordinates"];
-            CLLocationCoordinate2D coordinates[coordinatesRefIdArray.count];
-        
-            for (int __i__ = 0; __i__ < coordinatesRefIdArray.count; __i__++) {
-                NSValue* coordinatesValue = (NSValue*) HEAP[[coordinatesRefIdArray objectAtIndex:__i__]];
+            NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
+            CLLocationCoordinate2D coordinates[coordinatesValueList.count];
+            for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+                NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                 CLLocationCoordinate2D coordinatesItem;
                 [coordinatesValue getValue:&coordinatesItem];
                 coordinates[__i__] = coordinatesItem;
@@ -657,11 +655,6 @@ extern BOOL enableLog;
         
         
                 dispatch_async(dispatch_get_main_queue(), ^{
-                  FlutterMethodChannel *channel = [FlutterMethodChannel
-                        methodChannelWithName:@"AMapLocatingCompletionBlock::Callback"
-                              binaryMessenger:[[self registrar] messenger]
-                                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-        
                   [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation == nil ? [NSNull null] : arglocation, @"regeocode": argregeocode == nil ? [NSNull null] : argregeocode, @"error": argerror == nil ? [NSNull null] : argerror}];
                 });
         
@@ -813,7 +806,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* centerValue = (NSValue*) HEAP[args[@"center"]];
+                NSValue* centerValue = (NSValue*) args[@"center"];
                 CLLocationCoordinate2D center;
                 [centerValue getValue:&center];
                 // jsonable arg
@@ -844,11 +837,10 @@ extern BOOL enableLog;
         
                 // args
                 // list arg struct
-                NSArray* coordinatesRefIdArray = (NSArray*) args[@"coordinates"];
-                CLLocationCoordinate2D coordinates[coordinatesRefIdArray.count];
-        
-                for (int __i__ = 0; __i__ < coordinatesRefIdArray.count; __i__++) {
-                    NSValue* coordinatesValue = (NSValue*) HEAP[[coordinatesRefIdArray objectAtIndex:__i__]];
+                NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
+                CLLocationCoordinate2D coordinates[coordinatesValueList.count];
+                for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+                    NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                     CLLocationCoordinate2D coordinatesItem;
                     [coordinatesValue getValue:&coordinatesItem];
                     coordinates[__i__] = coordinatesItem;
@@ -914,7 +906,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* locationPointValue = (NSValue*) HEAP[args[@"locationPoint"]];
+                NSValue* locationPointValue = (NSValue*) args[@"locationPoint"];
                 CLLocationCoordinate2D locationPoint;
                 [locationPointValue getValue:&locationPoint];
                 // jsonable arg
@@ -1297,7 +1289,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
+                NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
                 CLLocationCoordinate2D coordinate;
                 [coordinateValue getValue:&coordinate];
         
@@ -1324,7 +1316,7 @@ extern BOOL enableLog;
         
                 // args
                 // struct arg
-                NSValue* centerValue = (NSValue*) HEAP[args[@"center"]];
+                NSValue* centerValue = (NSValue*) args[@"center"];
                 CLLocationCoordinate2D center;
                 [centerValue getValue:&center];
                 // jsonable arg
@@ -1355,11 +1347,10 @@ extern BOOL enableLog;
         
                 // args
                 // list arg struct
-                NSArray* coordinatesRefIdArray = (NSArray*) args[@"coordinates"];
-                CLLocationCoordinate2D coordinates[coordinatesRefIdArray.count];
-        
-                for (int __i__ = 0; __i__ < coordinatesRefIdArray.count; __i__++) {
-                    NSValue* coordinatesValue = (NSValue*) HEAP[[coordinatesRefIdArray objectAtIndex:__i__]];
+                NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
+                CLLocationCoordinate2D coordinates[coordinatesValueList.count];
+                for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+                    NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                     CLLocationCoordinate2D coordinatesItem;
                     [coordinatesValue getValue:&coordinatesItem];
                     coordinates[__i__] = coordinatesItem;

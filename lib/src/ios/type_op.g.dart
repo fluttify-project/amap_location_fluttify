@@ -17,7 +17,7 @@ extension TypeOpAmapLocationFluttifyIOS on Object {
   // type check
   Future<bool> is__<T>() async {
     final typeName = T.toString();
-    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+    if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
       return this is T;
     }
     else if (T == AMapGeoFenceManager) {
@@ -154,7 +154,7 @@ extension TypeOpAmapLocationFluttifyIOS on Object {
   T as__<T>() {
     final typeName = T.toString();
     // jsonable 直接造型 返回
-    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+    if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
       return this as T;
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)

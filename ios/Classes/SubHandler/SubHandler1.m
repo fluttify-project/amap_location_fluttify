@@ -1747,7 +1747,7 @@ extern BOOL enableLog;
         @"AMapLocationCoordinateConvert::AMapLocationCoordinateConvert": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
+            NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
             // enum arg
@@ -1773,7 +1773,7 @@ extern BOOL enableLog;
         @"AMapLocationDataAvailableForCoordinate::AMapLocationDataAvailableForCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // struct arg
-            NSValue* coordinateValue = (NSValue*) HEAP[args[@"coordinate"]];
+            NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
             CLLocationCoordinate2D coordinate;
             [coordinateValue getValue:&coordinate];
         

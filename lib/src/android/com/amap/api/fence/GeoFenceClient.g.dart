@@ -107,7 +107,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

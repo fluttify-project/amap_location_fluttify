@@ -321,7 +321,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setExpiration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -492,7 +492,7 @@ public class SubHandler1 {
             put("com.amap.api.fence.GeoFence::setEnterTime", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.fence.GeoFence __this__ = (com.amap.api.fence.GeoFence) ((Map<String, Object>) __args__).get("__this__");
@@ -4756,7 +4756,7 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) ((Map<String, Object>) __args__).get("__this__");
@@ -5292,7 +5292,7 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) ((Map<String, Object>) __args__).get("__this__");
@@ -5417,7 +5417,7 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) ((Map<String, Object>) __args__).get("__this__");
@@ -5701,7 +5701,7 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) ((Map<String, Object>) __args__).get("__this__");
@@ -6079,7 +6079,7 @@ public class SubHandler1 {
             
                     // args
                     // ref arg
-                    long var0 = (long) ((Map<String, Object>) __args__).get("var0");
+                    Integer var0 = (Integer) ((Map<String, Object>) __args__).get("var0");
             
                     // ref
             
