@@ -36,7 +36,8 @@ public class SubHandlerCustom {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger, android.app.Activity activity) {
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         filter.addAction(GEOFENCE_BROADCAST_ACTION);
-        activity.registerReceiver(new BroadcastReceiver() {
+
+        final BroadcastReceiver receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (GEOFENCE_BROADCAST_ACTION.equals(intent.getAction())) {
@@ -61,7 +62,9 @@ public class SubHandlerCustom {
                             .invokeMethod("Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX", arguments);
                 }
             }
-        }, filter);
+        };
+
+        activity.registerReceiver(receiver, filter);
 
         return new HashMap<String, Handler>() {{
             put("com.amap.api.fence.GeoFenceClient::addCircleGeoFenceX", (rawArgs, methodResult) -> {
@@ -169,6 +172,16 @@ public class SubHandlerCustom {
                 }
 
                 methodResult.success("success");
+            });
+            put("com.amap.api.fence.GeoFenceClient::unregisterBroadcastReceiver", (rawArgs, methodResult) -> {
+                try {
+                    activity.unregisterReceiver(receiver);
+                    if (getEnableLog()) Log.d("GeoFenceClient", "取消注册围栏广播");
+                    methodResult.success("success");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    methodResult.error(e.getMessage(), e.getMessage(), e.getMessage());
+                }
             });
         }};
     }

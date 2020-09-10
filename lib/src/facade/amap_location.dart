@@ -437,6 +437,14 @@ mixin _Community on _Holder {
     _androidLocationDelegate = null;
     _iosLocationDelegate = null;
 
+    // 取消注册广播
+    if (Platform.isAndroid) {
+      await MethodChannel('me.yohom/amap_location_fluttify',
+              StandardMethodCodec(FluttifyMessageCodec()))
+          .invokeMethod(
+              'com.amap.api.fence.GeoFenceClient::unregisterBroadcastReceiver');
+    }
+
     final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
     await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
     gGlobalReleasePool.removeWhere(isCurrentPlugin);
