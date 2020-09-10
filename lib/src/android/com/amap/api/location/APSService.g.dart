@@ -20,6 +20,21 @@ class com_amap_api_location_APSService extends java_lang_Object  {
   //endregion
 
   //region creators
+  static Future<com_amap_api_location_APSService> create__() async {
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_APSService__');
+    final object = com_amap_api_location_APSService()..refId = refId..tag__ = 'amap_location_fluttify';
+    return object;
+  }
+  
+  static Future<List<com_amap_api_location_APSService>> create_batch__(int length) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_APSService__', {'length': length});
+  
+    final List<com_amap_api_location_APSService> typedResult = resultBatch.map((result) => com_amap_api_location_APSService()..refId = result..tag__ = 'amap_location_fluttify').toList();
+    return typedResult;
+  }
   
   //endregion
 
