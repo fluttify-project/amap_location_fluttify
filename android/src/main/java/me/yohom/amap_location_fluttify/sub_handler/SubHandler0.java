@@ -39,7 +39,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) __args__.get("__this__");
             
-               boolean __result__ = __this__.OPEN_ALWAYS_SCAN_WIFI;
+               Boolean __result__ = __this__.OPEN_ALWAYS_SCAN_WIFI;
             
                 __methodResult__.success(__result__);
             });
@@ -50,7 +50,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) __args__.get("__this__");
             
-               long __result__ = __this__.SCAN_WIFI_INTERVAL;
+               Long __result__ = __this__.SCAN_WIFI_INTERVAL;
             
                 __methodResult__.success(__result__);
             });
@@ -64,7 +64,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) __args__.get("__this__");
             
-                    boolean __result__ = __this__.OPEN_ALWAYS_SCAN_WIFI;
+                    Boolean __result__ = __this__.OPEN_ALWAYS_SCAN_WIFI;
             
                     __resultList__.add(__result__);
                 }
@@ -81,7 +81,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.location.AMapLocationClientOption __this__ = (com.amap.api.location.AMapLocationClientOption) __args__.get("__this__");
             
-                    long __result__ = __this__.SCAN_WIFI_INTERVAL;
+                    Long __result__ = __this__.SCAN_WIFI_INTERVAL;
             
                     __resultList__.add(__result__);
                 }
@@ -135,7 +135,7 @@ public class SubHandler0 {
                 try {
                     __this__.setLocationListener(new com.amap.api.location.AMapLocationListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.AMapLocationClient::setLocationListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.AMapLocationClient::setLocationListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -418,7 +418,7 @@ public class SubHandler0 {
                 try {
                     __this__.unRegisterLocationListener(new com.amap.api.location.AMapLocationListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.location.AMapLocationClient::unRegisterLocationListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5164,7 +5164,7 @@ public class SubHandler0 {
                 try {
                     __this__.setGeoFenceListener(new com.amap.api.fence.GeoFenceListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.fence.GeoFenceClient::setGeoFenceListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method

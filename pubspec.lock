@@ -7,7 +7,7 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.10.0-pre.2"
+    version: "0.10.0-pre.4"
   async:
     dependency: transitive
     description:
@@ -56,7 +56,7 @@ packages:
       name: core_location_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0-pre.1"
+    version: "0.3.0-pre.3"
   fake_async:
     dependency: transitive
     description:
@@ -80,7 +80,7 @@ packages:
       name: foundation_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.0-pre.6"
+    version: "0.9.0-pre.11"
   latlng:
     dependency: transitive
     description:
