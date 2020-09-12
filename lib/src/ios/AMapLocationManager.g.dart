@@ -374,7 +374,7 @@ class AMapLocationManager extends NSObject  {
   
   
     // handle native call
-    MethodChannel('AMapLocatingCompletionBlock::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
+    MethodChannel('AMapLocatingCompletionBlock::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
