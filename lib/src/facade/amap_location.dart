@@ -445,15 +445,15 @@ mixin _Community on _Holder {
               'com.amap.api.fence.GeoFenceClient::unregisterBroadcastReceiver');
     }
 
-    final isCurrentPlugin = (it) => it.tag == 'amap_location_fluttify';
-    await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
-    gGlobalReleasePool.removeWhere(isCurrentPlugin);
-
     if (_androidClient != null) {
       await _androidClient.onDestroy();
       await _androidClient.release__();
     }
     if (_iosClient != null) await _iosClient.release__();
+
+    final isCurrentPlugin = (Ref it) => it.tag__ == 'amap_location_fluttify';
+    await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
+    gGlobalReleasePool.removeWhere(isCurrentPlugin);
 
     _androidClient = null;
     _iosClient = null;

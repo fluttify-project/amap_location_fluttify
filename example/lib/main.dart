@@ -134,6 +134,12 @@ class _MyAppState extends State<MyApp> {
                 }
               },
             ),
+            RaisedButton(
+              child: Text('释放资源'),
+              onPressed: () async {
+                AmapLocation.instance.dispose();
+              },
+            ),
             if (_location != null)
               Center(
                 child: Text(
@@ -152,12 +158,6 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    AmapLocation.instance.dispose();
-    super.dispose();
   }
 }
 
