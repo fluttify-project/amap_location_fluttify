@@ -140,20 +140,26 @@ class _MyAppState extends State<MyApp> {
                 AmapLocation.instance.dispose();
               },
             ),
-            if (_location != null)
-              Center(
-                child: Text(
-                  _location.toString(),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            if (_fenceStatus != null)
-              Center(
-                child: Text(
-                  _fenceStatus.toString(),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+            DecoratedColumn(
+              expanded: true,
+              scrollable: true,
+              children: [
+                if (_location != null)
+                  Center(
+                    child: Text(
+                      _location.toString(),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                if (_fenceStatus != null)
+                  Center(
+                    child: Text(
+                      _fenceStatus.toString(),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+              ],
+            ),
           ],
         ),
       ),
