@@ -134,30 +134,36 @@ class _MyAppState extends State<MyApp> {
                 }
               },
             ),
-            if (_location != null)
-              Center(
-                child: Text(
-                  _location.toString(),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            if (_fenceStatus != null)
-              Center(
-                child: Text(
-                  _fenceStatus.toString(),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+            RaisedButton(
+              child: Text('释放资源'),
+              onPressed: () async {
+                AmapLocation.instance.dispose();
+              },
+            ),
+            DecoratedColumn(
+              expanded: true,
+              scrollable: true,
+              children: [
+                if (_location != null)
+                  Center(
+                    child: Text(
+                      _location.toString(),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                if (_fenceStatus != null)
+                  Center(
+                    child: Text(
+                      _fenceStatus.toString(),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+              ],
+            ),
           ],
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    AmapLocation.instance.dispose();
-    super.dispose();
   }
 }
 
