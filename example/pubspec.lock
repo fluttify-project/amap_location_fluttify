@@ -7,7 +7,7 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.10.0"
+    version: "0.11.0"
   amap_location_fluttify:
     dependency: "direct dev"
     description:
@@ -91,7 +91,7 @@ packages:
       name: core_location_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0"
+    version: "0.4.0"
   crypto:
     dependency: transitive
     description:
@@ -212,13 +212,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
-  latlng:
-    dependency: transitive
-    description:
-      name: latlng
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.2"
   logger:
     dependency: transitive
     description:
