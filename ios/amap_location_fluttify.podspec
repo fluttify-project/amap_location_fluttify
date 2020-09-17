@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   s.dependency 'amap_core_fluttify'
   # sdk dependency
-  s.dependency 'AMapLocation', '~> 2.6.5'
+  s.dependency 'AMapLocation-NO-IDFA', '~> 2.6.5'
 
   s.static_framework = true
   s.ios.deployment_target = '8.0'

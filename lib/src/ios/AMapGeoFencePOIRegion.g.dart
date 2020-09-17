@@ -20,17 +20,17 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapGeoFencePOIRegion> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion');
+  static Future<AMapGeoFencePOIRegion> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion', {'init': init});
     final object = AMapGeoFencePOIRegion()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
   
-  static Future<List<AMapGeoFencePOIRegion>> create_batch__(int length) async {
+  static Future<List<AMapGeoFencePOIRegion>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length, 'init': init});
   
     final List<AMapGeoFencePOIRegion> typedResult = resultBatch.map((result) => AMapGeoFencePOIRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;

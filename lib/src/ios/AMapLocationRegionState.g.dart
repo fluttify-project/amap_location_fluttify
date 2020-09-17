@@ -15,6 +15,7 @@ extension AMapLocationRegionStateToX on AMapLocationRegionState {
       case AMapLocationRegionState.AMapLocationRegionStateUnknow: return 0;
       case AMapLocationRegionState.AMapLocationRegionStateInside: return 1;
       case AMapLocationRegionState.AMapLocationRegionStateOutside: return 2;
+      default: return 0;
     }
   }
 }

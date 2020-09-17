@@ -17,6 +17,7 @@ extension AMapGeoFenceRegionStatusToX on AMapGeoFenceRegionStatus {
       case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusInside: return 1;
       case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusOutside: return 2;
       case AMapGeoFenceRegionStatus.AMapGeoFenceRegionStatusStayed: return 3;
+      default: return 0;
     }
   }
 }

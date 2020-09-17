@@ -21,7 +21,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_CoordUtil> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__', );
     final object = com_amap_api_location_CoordUtil()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }

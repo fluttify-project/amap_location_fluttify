@@ -20,17 +20,17 @@ class AMapGeoFenceManager extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapGeoFenceManager> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapGeoFenceManager');
+  static Future<AMapGeoFenceManager> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapGeoFenceManager', {'init': init});
     final object = AMapGeoFenceManager()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
   
-  static Future<List<AMapGeoFenceManager>> create_batch__(int length) async {
+  static Future<List<AMapGeoFenceManager>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapGeoFenceManager', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapGeoFenceManager', {'length': length, 'init': init});
   
     final List<AMapGeoFenceManager> typedResult = resultBatch.map((result) => AMapGeoFenceManager()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;

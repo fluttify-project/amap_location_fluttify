@@ -13,6 +13,7 @@ extension com_amap_api_location_AMapLocationClientOption_AMapLocationProtocolToX
     switch (this) {
       case com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTP: return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTP.index + 0;
       case com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTPS: return com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol.HTTPS.index + 0;
+      default: return 0;
     }
   }
 }

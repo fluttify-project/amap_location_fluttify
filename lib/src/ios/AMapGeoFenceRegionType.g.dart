@@ -17,6 +17,7 @@ extension AMapGeoFenceRegionTypeToX on AMapGeoFenceRegionType {
       case AMapGeoFenceRegionType.AMapGeoFenceRegionTypePolygon: return 1;
       case AMapGeoFenceRegionType.AMapGeoFenceRegionTypePOI: return 2;
       case AMapGeoFenceRegionType.AMapGeoFenceRegionTypeDistrict: return 3;
+      default: return 0;
     }
   }
 }

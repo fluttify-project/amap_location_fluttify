@@ -15,6 +15,7 @@ extension com_amap_api_location_AMapLocationClientOption_AMapLocationPurposeToX 
       case com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.SignIn: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.SignIn.index + 0;
       case com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Transport: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Transport.index + 0;
       case com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Sport: return com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose.Sport.index + 0;
+      default: return 0;
     }
   }
 }

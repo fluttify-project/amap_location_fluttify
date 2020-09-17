@@ -15,6 +15,7 @@ extension com_amap_api_location_AMapLocationClientOption_GeoLanguageToX on com_a
       case com_amap_api_location_AMapLocationClientOption_GeoLanguage.DEFAULT: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.DEFAULT.index + 0;
       case com_amap_api_location_AMapLocationClientOption_GeoLanguage.ZH: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.ZH.index + 0;
       case com_amap_api_location_AMapLocationClientOption_GeoLanguage.EN: return com_amap_api_location_AMapLocationClientOption_GeoLanguage.EN.index + 0;
+      default: return 0;
     }
   }
 }

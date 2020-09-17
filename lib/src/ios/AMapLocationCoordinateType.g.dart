@@ -23,6 +23,7 @@ extension AMapLocationCoordinateTypeToX on AMapLocationCoordinateType {
       case AMapLocationCoordinateType.AMapLocationCoordinateTypeAliYun: return AMapLocationCoordinateType.AMapLocationCoordinateTypeAliYun.index + 0;
       case AMapLocationCoordinateType.AMapLocationCoordinateTypeGoogle: return AMapLocationCoordinateType.AMapLocationCoordinateTypeGoogle.index + 0;
       case AMapLocationCoordinateType.AMapLocationCoordinateTypeGPS: return AMapLocationCoordinateType.AMapLocationCoordinateTypeGPS.index + 0;
+      default: return 0;
     }
   }
 }
