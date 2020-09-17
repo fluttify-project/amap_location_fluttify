@@ -15,6 +15,7 @@ extension com_amap_api_location_AMapLocationClientOption_AMapLocationModeToX on 
       case com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Battery_Saving: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Battery_Saving.index + 0;
       case com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Device_Sensors: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Device_Sensors.index + 0;
       case com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Hight_Accuracy: return com_amap_api_location_AMapLocationClientOption_AMapLocationMode.Hight_Accuracy.index + 0;
+      default: return 0;
     }
   }
 }

@@ -23,6 +23,7 @@ extension com_amap_api_location_CoordinateConverter_CoordTypeToX on com_amap_api
       case com_amap_api_location_CoordinateConverter_CoordType.ALIYUN: return com_amap_api_location_CoordinateConverter_CoordType.ALIYUN.index + 0;
       case com_amap_api_location_CoordinateConverter_CoordType.GOOGLE: return com_amap_api_location_CoordinateConverter_CoordType.GOOGLE.index + 0;
       case com_amap_api_location_CoordinateConverter_CoordType.GPS: return com_amap_api_location_CoordinateConverter_CoordType.GPS.index + 0;
+      default: return 0;
     }
   }
 }

@@ -21,7 +21,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
 
   //region creators
   static Future<com_amap_api_fence_DistrictItem> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_fence_DistrictItem__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_fence_DistrictItem__', );
     final object = com_amap_api_fence_DistrictItem()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }

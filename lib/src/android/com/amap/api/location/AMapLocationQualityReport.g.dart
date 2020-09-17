@@ -25,7 +25,7 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
 
   //region creators
   static Future<com_amap_api_location_AMapLocationQualityReport> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__', );
     final object = com_amap_api_location_AMapLocationQualityReport()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }

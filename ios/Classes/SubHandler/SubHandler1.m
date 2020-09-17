@@ -1386,9 +1386,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoFenceManager");
             }
         
-            AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
+            AMapGeoFenceManager* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoFenceManager alloc] init];
+            } else {
+                __this__ = [AMapGeoFenceManager alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1399,9 +1404,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationRegion");
             }
         
-            AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
+            AMapLocationRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationRegion alloc] init];
+            } else {
+                __this__ = [AMapLocationRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1412,9 +1422,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationCircleRegion");
             }
         
-            AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
+            AMapLocationCircleRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationCircleRegion alloc] init];
+            } else {
+                __this__ = [AMapLocationCircleRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1425,9 +1440,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationPolygonRegion");
             }
         
-            AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
+            AMapLocationPolygonRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationPolygonRegion alloc] init];
+            } else {
+                __this__ = [AMapLocationPolygonRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1438,9 +1458,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoFenceRegion");
             }
         
-            AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
+            AMapGeoFenceRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoFenceRegion alloc] init];
+            } else {
+                __this__ = [AMapGeoFenceRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1451,9 +1476,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoFenceCircleRegion");
             }
         
-            AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
+            AMapGeoFenceCircleRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoFenceCircleRegion alloc] init];
+            } else {
+                __this__ = [AMapGeoFenceCircleRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1464,9 +1494,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoFencePolygonRegion");
             }
         
-            AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
+            AMapGeoFencePolygonRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoFencePolygonRegion alloc] init];
+            } else {
+                __this__ = [AMapGeoFencePolygonRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1477,9 +1512,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoFencePOIRegion");
             }
         
-            AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
+            AMapGeoFencePOIRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoFencePOIRegion alloc] init];
+            } else {
+                __this__ = [AMapGeoFencePOIRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1490,9 +1530,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoFenceDistrictRegion");
             }
         
-            AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
+            AMapGeoFenceDistrictRegion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoFenceDistrictRegion alloc] init];
+            } else {
+                __this__ = [AMapGeoFenceDistrictRegion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1503,9 +1548,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationManager");
             }
         
-            AMapLocationManager* ref = [[AMapLocationManager alloc] init];
+            AMapLocationManager* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationManager alloc] init];
+            } else {
+                __this__ = [AMapLocationManager alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1516,9 +1566,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationReGeocode");
             }
         
-            AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
+            AMapLocationReGeocode* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationReGeocode alloc] init];
+            } else {
+                __this__ = [AMapLocationReGeocode alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1529,9 +1584,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationPoint");
             }
         
-            AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
+            AMapLocationPoint* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationPoint alloc] init];
+            } else {
+                __this__ = [AMapLocationPoint alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1542,9 +1602,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationPOIItem");
             }
         
-            AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
+            AMapLocationPOIItem* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationPOIItem alloc] init];
+            } else {
+                __this__ = [AMapLocationPOIItem alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1555,9 +1620,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationDistrictItem");
             }
         
-            AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
+            AMapLocationDistrictItem* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationDistrictItem alloc] init];
+            } else {
+                __this__ = [AMapLocationDistrictItem alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1565,9 +1635,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoFenceManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeoFenceManager* ref = [[AMapGeoFenceManager alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeoFenceManager* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeoFenceManager alloc] init];
+                } else {
+                    __this__ = [AMapGeoFenceManager alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1578,9 +1655,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationRegion* ref = [[AMapLocationRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationRegion alloc] init];
+                } else {
+                    __this__ = [AMapLocationRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1591,9 +1675,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationCircleRegion* ref = [[AMapLocationCircleRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationCircleRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationCircleRegion alloc] init];
+                } else {
+                    __this__ = [AMapLocationCircleRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1604,9 +1695,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationPolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationPolygonRegion* ref = [[AMapLocationPolygonRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationPolygonRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationPolygonRegion alloc] init];
+                } else {
+                    __this__ = [AMapLocationPolygonRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1617,9 +1715,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeoFenceRegion* ref = [[AMapGeoFenceRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeoFenceRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeoFenceRegion alloc] init];
+                } else {
+                    __this__ = [AMapGeoFenceRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1630,9 +1735,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoFenceCircleRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeoFenceCircleRegion* ref = [[AMapGeoFenceCircleRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeoFenceCircleRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeoFenceCircleRegion alloc] init];
+                } else {
+                    __this__ = [AMapGeoFenceCircleRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1643,9 +1755,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoFencePolygonRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeoFencePolygonRegion* ref = [[AMapGeoFencePolygonRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeoFencePolygonRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeoFencePolygonRegion alloc] init];
+                } else {
+                    __this__ = [AMapGeoFencePolygonRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1656,9 +1775,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoFencePOIRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeoFencePOIRegion* ref = [[AMapGeoFencePOIRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeoFencePOIRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeoFencePOIRegion alloc] init];
+                } else {
+                    __this__ = [AMapGeoFencePOIRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1669,9 +1795,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoFenceDistrictRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeoFenceDistrictRegion* ref = [[AMapGeoFenceDistrictRegion alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeoFenceDistrictRegion* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeoFenceDistrictRegion alloc] init];
+                } else {
+                    __this__ = [AMapGeoFenceDistrictRegion alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1682,9 +1815,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationManager* ref = [[AMapLocationManager alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationManager* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationManager alloc] init];
+                } else {
+                    __this__ = [AMapLocationManager alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1695,9 +1835,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationReGeocode* ref = [[AMapLocationReGeocode alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationReGeocode* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationReGeocode alloc] init];
+                } else {
+                    __this__ = [AMapLocationReGeocode alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1708,9 +1855,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationPoint* ref = [[AMapLocationPoint alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationPoint* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationPoint alloc] init];
+                } else {
+                    __this__ = [AMapLocationPoint alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1721,9 +1875,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationPOIItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationPOIItem* ref = [[AMapLocationPOIItem alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationPOIItem* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationPOIItem alloc] init];
+                } else {
+                    __this__ = [AMapLocationPOIItem alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -1734,9 +1895,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationDistrictItem": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapLocationDistrictItem* ref = [[AMapLocationDistrictItem alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapLocationDistrictItem* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapLocationDistrictItem alloc] init];
+                } else {
+                    __this__ = [AMapLocationDistrictItem alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);

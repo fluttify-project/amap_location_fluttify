@@ -15,6 +15,7 @@ extension AMapLocationReGeocodeLanguageToX on AMapLocationReGeocodeLanguage {
       case AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageDefault: return 0;
       case AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageChinse: return 1;
       case AMapLocationReGeocodeLanguage.AMapLocationReGeocodeLanguageEnglish: return 2;
+      default: return 0;
     }
   }
 }

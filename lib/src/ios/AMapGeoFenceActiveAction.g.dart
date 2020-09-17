@@ -17,6 +17,7 @@ extension AMapGeoFenceActiveActionToX on AMapGeoFenceActiveAction {
       case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionInside: return 1<<0;
       case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionOutside: return 1<<1;
       case AMapGeoFenceActiveAction.AMapGeoFenceActiveActionStayed: return 1<<2;
+      default: return 0;
     }
   }
 }

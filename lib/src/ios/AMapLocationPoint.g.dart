@@ -20,17 +20,17 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapLocationPoint> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationPoint');
+  static Future<AMapLocationPoint> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationPoint', {'init': init});
     final object = AMapLocationPoint()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }
   
-  static Future<List<AMapLocationPoint>> create_batch__(int length) async {
+  static Future<List<AMapLocationPoint>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length, 'init': init});
   
     final List<AMapLocationPoint> typedResult = resultBatch.map((result) => AMapLocationPoint()..refId = result..tag__ = 'amap_location_fluttify').toList();
     return typedResult;

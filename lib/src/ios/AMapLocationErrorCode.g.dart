@@ -31,6 +31,7 @@ extension AMapLocationErrorCodeToX on AMapLocationErrorCode {
       case AMapLocationErrorCode.AMapLocationErrorCannotConnectToHost: return 9;
       case AMapLocationErrorCode.AMapLocationErrorRegionMonitoringFailure: return 10;
       case AMapLocationErrorCode.AMapLocationErrorRiskOfFakeLocation: return 11;
+      default: return 0;
     }
   }
 }

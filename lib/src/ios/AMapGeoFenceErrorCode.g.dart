@@ -21,6 +21,7 @@ extension AMapGeoFenceErrorCodeToX on AMapGeoFenceErrorCode {
       case AMapGeoFenceErrorCode.AMapGeoFenceErrorFailureAuth: return 4;
       case AMapGeoFenceErrorCode.AMapGeoFenceErrorNoValidFence: return 5;
       case AMapGeoFenceErrorCode.AMapGeoFenceErroFailureLocating: return 6;
+      default: return 0;
     }
   }
 }

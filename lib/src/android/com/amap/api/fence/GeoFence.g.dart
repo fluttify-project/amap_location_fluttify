@@ -42,7 +42,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
 
   //region creators
   static Future<com_amap_api_fence_GeoFence> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFence__');
+    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFence__', );
     final object = com_amap_api_fence_GeoFence()..refId = refId..tag__ = 'amap_location_fluttify';
     return object;
   }

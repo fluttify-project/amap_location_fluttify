@@ -15,6 +15,7 @@ extension AMapGeoFenceRegionActiveStatusToX on AMapGeoFenceRegionActiveStatus {
       case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveUNMonitor: return 0;
       case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActiveMonitoring: return 1<<0;
       case AMapGeoFenceRegionActiveStatus.AMapGeoFenceRegionActivePaused: return 1<<1;
+      default: return 0;
     }
   }
 }
