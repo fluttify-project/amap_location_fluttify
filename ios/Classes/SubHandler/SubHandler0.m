@@ -645,14 +645,11 @@ extern BOOL enableLog;
         
                 // 构造可以直接传输的参数
                 // ref callback arg
-                NSObject* arglocation = location;
-        
+                CLLocation* arglocation = location;
                 // ref callback arg
-                NSObject* argregeocode = regeocode;
-        
+                AMapLocationReGeocode* argregeocode = regeocode;
                 // ref callback arg
-                NSObject* argerror = error;
-        
+                NSError* argerror = error;
         
                 dispatch_async(dispatch_get_main_queue(), ^{
                   [channel invokeMethod:@"Callback::AMapLocatingCompletionBlock::AMapLocatingCompletionBlock" arguments:@{@"location": arglocation == nil ? [NSNull null] : arglocation, @"regeocode": argregeocode == nil ? [NSNull null] : argregeocode, @"error": argerror == nil ? [NSNull null] : argerror}];
