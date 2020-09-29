@@ -24,7 +24,7 @@ class AmapLocation with _Holder, _Community, _Pro {
 }
 
 mixin _Community on _Holder {
-  Future<void> init() {
+  Future<void> init({@required String iosKey}) {
     return platform(
       android: (pool) async {
         // 获取上下文, 这里获取的是Application
@@ -35,6 +35,8 @@ mixin _Community on _Holder {
             .create__android_content_Context(context);
       },
       ios: (pool) async {
+        assert(iosKey != null, '请设置iosKey!');
+        await AmapCore.init(iosKey);
         _iosClient ??= await AMapLocationManager.create__();
       },
     );
@@ -51,7 +53,7 @@ mixin _Community on _Holder {
     final completer = Completer<Location>();
     return platform(
       android: (pool) async {
-        assert(_androidClient != null, '请先调用AmapLocation.init()进行初始化!');
+        assert(_androidClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
         if (_androidLocationDelegate == null) {
           _androidLocationDelegate = _AndroidLocationDelegate();
           // 设置回调
@@ -127,7 +129,7 @@ mixin _Community on _Holder {
         return completer.future;
       },
       ios: (pool) async {
-        assert(_iosClient != null, '请先调用AmapLocation.init()进行初始化!');
+        assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
         // 设置定位模式
         if (mode != null) {
           switch (mode) {
@@ -195,7 +197,7 @@ mixin _Community on _Holder {
     _locationController ??= StreamController<Location>();
 
     if (Platform.isAndroid) {
-      assert(_androidClient != null, '请先调用AmapLocation.init()进行初始化!');
+      assert(_androidClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
       // 设置回调
       if (_androidLocationDelegate == null) {
         _androidLocationDelegate = _AndroidLocationDelegate();
@@ -268,7 +270,7 @@ mixin _Community on _Holder {
 
       yield* _locationController.stream;
     } else if (Platform.isIOS) {
-      assert(_iosClient != null, '请先调用AmapLocation.init()进行初始化!');
+      assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
       // 设置定位模式
       if (mode != null)
         switch (mode) {
@@ -354,7 +356,7 @@ mixin _Community on _Holder {
     return platform(
       android: (pool) async {},
       ios: (pool) async {
-        assert(_iosClient != null, '请先调用AmapLocation.init()进行初始化!');
+        assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
         final onRequireAuth = (manager) async {
           await manager?.requestAlwaysAuthorization();
         };

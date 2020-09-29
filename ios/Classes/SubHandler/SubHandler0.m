@@ -168,7 +168,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::statusWithGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -204,12 +204,8 @@ extern BOOL enableLog;
             NSArray* result = [ref geoFenceRegionsWithCustomID: customID];
         
             // result
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -230,12 +226,8 @@ extern BOOL enableLog;
             NSArray* result = [ref monitoringGeoFenceRegionsWithCustomID: customID];
         
             // result
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -256,12 +248,8 @@ extern BOOL enableLog;
             NSArray* result = [ref pausedGeoFenceRegionsWithCustomID: customID];
         
             // result
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -282,19 +270,15 @@ extern BOOL enableLog;
             NSArray* result = [ref pauseGeoFenceRegionsWithCustomID: customID];
         
             // result
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::pauseTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -330,19 +314,15 @@ extern BOOL enableLog;
             NSArray* result = [ref startGeoFenceRegionsWithCustomID: customID];
         
             // result
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::startTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -364,7 +344,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::removeTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+            AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -444,7 +424,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -496,7 +476,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -529,7 +509,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -708,7 +688,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::startMonitoringForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
+            AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
@@ -730,7 +710,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::stopMonitoringForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
+            AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
@@ -752,7 +732,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::requestStateForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
+            AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
             // ref
             AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
@@ -791,7 +771,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -967,7 +947,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -1001,12 +981,8 @@ extern BOOL enableLog;
                 NSArray* result = [ref geoFenceRegionsWithCustomID: customID];
         
                 // result
-                // 返回值: 列表
-                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-                for (int __i__ = 0; __i__ < result.count; __i__++) {
-                    NSObject* object = [result objectAtIndex:__i__];
-                    [__result__ addObject: object];
-                }
+                // return a ref
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1030,12 +1006,8 @@ extern BOOL enableLog;
                 NSArray* result = [ref monitoringGeoFenceRegionsWithCustomID: customID];
         
                 // result
-                // 返回值: 列表
-                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-                for (int __i__ = 0; __i__ < result.count; __i__++) {
-                    NSObject* object = [result objectAtIndex:__i__];
-                    [__result__ addObject: object];
-                }
+                // return a ref
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1059,12 +1031,8 @@ extern BOOL enableLog;
                 NSArray* result = [ref pausedGeoFenceRegionsWithCustomID: customID];
         
                 // result
-                // 返回值: 列表
-                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-                for (int __i__ = 0; __i__ < result.count; __i__++) {
-                    NSObject* object = [result objectAtIndex:__i__];
-                    [__result__ addObject: object];
-                }
+                // return a ref
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1088,12 +1056,8 @@ extern BOOL enableLog;
                 NSArray* result = [ref pauseGeoFenceRegionsWithCustomID: customID];
         
                 // result
-                // 返回值: 列表
-                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-                for (int __i__ = 0; __i__ < result.count; __i__++) {
-                    NSObject* object = [result objectAtIndex:__i__];
-                    [__result__ addObject: object];
-                }
+                // return a ref
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1108,7 +1072,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -1142,12 +1106,8 @@ extern BOOL enableLog;
                 NSArray* result = [ref startGeoFenceRegionsWithCustomID: customID];
         
                 // result
-                // 返回值: 列表
-                NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-                for (int __i__ = 0; __i__ < result.count; __i__++) {
-                    NSObject* object = [result objectAtIndex:__i__];
-                    [__result__ addObject: object];
-                }
+                // return a ref
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1162,7 +1122,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -1187,7 +1147,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) args[@"region"];
+                AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
@@ -1271,7 +1231,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1329,7 +1289,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1365,7 +1325,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1524,7 +1484,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
+                AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
@@ -1549,7 +1509,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
+                AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
@@ -1574,7 +1534,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationRegion* region = (AMapLocationRegion*) args[@"region"];
+                AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
@@ -1611,7 +1571,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1909,7 +1869,7 @@ extern BOOL enableLog;
             CLLocation* result = ref.currentLocation;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1999,7 +1959,7 @@ extern BOOL enableLog;
             AMapLocationPOIItem* result = ref.POIItem;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2017,7 +1977,7 @@ extern BOOL enableLog;
             AMapLocationDistrictItem* result = ref.districtItem;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2575,7 +2535,7 @@ extern BOOL enableLog;
             AMapLocationPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2982,7 +2942,7 @@ extern BOOL enableLog;
                 CLLocation* result = ref.currentLocation;
         
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -3082,7 +3042,7 @@ extern BOOL enableLog;
                 AMapLocationPOIItem* result = ref.POIItem;
         
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -3102,7 +3062,7 @@ extern BOOL enableLog;
                 AMapLocationDistrictItem* result = ref.districtItem;
         
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -3722,7 +3682,7 @@ extern BOOL enableLog;
                 AMapLocationPoint* result = ref.location;
         
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -3990,7 +3950,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            CLLocation* currentLocation = (CLLocation*) args[@"currentLocation"];
+            CLLocation* currentLocation = (CLLocation*) (args[@"currentLocation"] == [NSNull null] ? nil : args[@"currentLocation"]);
         
             // ref
             AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
