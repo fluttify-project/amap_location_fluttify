@@ -7,7 +7,7 @@ import 'package:permission_handler/permission_handler.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await AmapCore.init('f6422eadda731fb0d9ffb3260a5cf899');
+  await AmapLocation.instance.init(iosKey: 'f6422eadda731fb0d9ffb3260a5cf899');
   runApp(MyApp());
 }
 

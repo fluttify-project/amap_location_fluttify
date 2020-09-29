@@ -23,20 +23,25 @@ class AmapLocation with _Holder, _Community, _Pro {
   }
 }
 
-class _Holder {
-  com_amap_api_location_AMapLocationClient _androidClient;
-  com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
-  AMapLocationManager _iosClient;
-  AMapGeoFenceManager _iosGeoFenceClient;
-
-  StreamController<Location> _locationController;
-  StreamController<GeoFenceEvent> _geoFenceEventController;
-
-  _IOSLocationDelegate _iosLocationDelegate;
-  _AndroidLocationDelegate _androidLocationDelegate;
-}
-
 mixin _Community on _Holder {
+  Future<void> init({@required String iosKey}) {
+    return platform(
+      android: (pool) async {
+        // 获取上下文, 这里获取的是Application
+        final context = await android_app_Application.get();
+
+        // 创建定位客户端
+        _androidClient ??= await com_amap_api_location_AMapLocationClient
+            .create__android_content_Context(context);
+      },
+      ios: (pool) async {
+        assert(iosKey != null, '请设置iosKey!');
+        await AmapCore.init(iosKey);
+        _iosClient ??= await AMapLocationManager.create__();
+      },
+    );
+  }
+
   /// 单次获取定位信息
   ///
   /// 选择定位模式[mode], 设置定位同时是否需要返回地址描述[needAddress], 设置定位请求超时时间，默认为30秒[timeout].
@@ -48,13 +53,7 @@ mixin _Community on _Holder {
     final completer = Completer<Location>();
     return platform(
       android: (pool) async {
-        // 获取上下文, 这里获取的是Application
-        final context = await android_app_Application.get();
-
-        // 创建定位客户端
-        _androidClient ??= await com_amap_api_location_AMapLocationClient
-            .create__android_content_Context(context);
-
+        assert(_androidClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
         if (_androidLocationDelegate == null) {
           _androidLocationDelegate = _AndroidLocationDelegate();
           // 设置回调
@@ -130,8 +129,7 @@ mixin _Community on _Holder {
         return completer.future;
       },
       ios: (pool) async {
-        _iosClient ??= await AMapLocationManager.create__();
-
+        assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
         // 设置定位模式
         if (mode != null) {
           switch (mode) {
@@ -199,13 +197,7 @@ mixin _Community on _Holder {
     _locationController ??= StreamController<Location>();
 
     if (Platform.isAndroid) {
-      // 获取上下文, 这里获取的是Application
-      final context = await android_app_Application.get();
-
-      // 创建定位客户端
-      _androidClient ??= await com_amap_api_location_AMapLocationClient
-          .create__android_content_Context(context);
-
+      assert(_androidClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
       // 设置回调
       if (_androidLocationDelegate == null) {
         _androidLocationDelegate = _AndroidLocationDelegate();
@@ -278,8 +270,7 @@ mixin _Community on _Holder {
 
       yield* _locationController.stream;
     } else if (Platform.isIOS) {
-      _iosClient ??= await AMapLocationManager.create__();
-
+      assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
       // 设置定位模式
       if (mode != null)
         switch (mode) {
@@ -365,6 +356,7 @@ mixin _Community on _Holder {
     return platform(
       android: (pool) async {},
       ios: (pool) async {
+        assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
         final onRequireAuth = (manager) async {
           await manager?.requestAlwaysAuthorization();
         };
@@ -754,4 +746,17 @@ mixin _Pro on _Holder {
       ios: (pool) => _iosGeoFenceClient?.removeAllGeoFenceRegions(),
     );
   }
+}
+
+class _Holder {
+  com_amap_api_location_AMapLocationClient _androidClient;
+  com_amap_api_fence_GeoFenceClient _androidGeoFenceClient;
+  AMapLocationManager _iosClient;
+  AMapGeoFenceManager _iosGeoFenceClient;
+
+  StreamController<Location> _locationController;
+  StreamController<GeoFenceEvent> _geoFenceEventController;
+
+  _IOSLocationDelegate _iosLocationDelegate;
+  _AndroidLocationDelegate _androidLocationDelegate;
 }

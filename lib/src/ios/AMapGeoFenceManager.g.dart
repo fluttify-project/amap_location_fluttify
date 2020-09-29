@@ -273,7 +273,7 @@ class AMapGeoFenceManager extends NSObject  {
   }
   
   
-  Future<List<NSObject>> geoFenceRegionsWithCustomID(String customID) async {
+  Future<List<dynamic>> geoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::geoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -290,13 +290,13 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<dynamic>();
       return __return__;
     }
   }
   
   
-  Future<List<NSObject>> monitoringGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<dynamic>> monitoringGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::monitoringGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -313,13 +313,13 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<dynamic>();
       return __return__;
     }
   }
   
   
-  Future<List<NSObject>> pausedGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<dynamic>> pausedGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::pausedGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -336,13 +336,13 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<dynamic>();
       return __return__;
     }
   }
   
   
-  Future<List<NSObject>> pauseGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<dynamic>> pauseGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::pauseGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -359,7 +359,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<dynamic>();
       return __return__;
     }
   }
@@ -388,7 +388,7 @@ class AMapGeoFenceManager extends NSObject  {
   }
   
   
-  Future<List<NSObject>> startGeoFenceRegionsWithCustomID(String customID) async {
+  Future<List<dynamic>> startGeoFenceRegionsWithCustomID(String customID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoFenceManager@$refId::startGeoFenceRegionsWithCustomID([\'customID\':$customID])');
@@ -405,7 +405,7 @@ class AMapGeoFenceManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList();
+      final __return__ = (__result__ as List).cast<dynamic>();
       return __return__;
     }
   }
@@ -680,7 +680,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   
-  Future<List<List<NSObject>>> geoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<dynamic>>> geoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -693,13 +693,13 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
       return typedResult;
     }
   }
   
   
-  Future<List<List<NSObject>>> monitoringGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<dynamic>>> monitoringGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -712,13 +712,13 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
       return typedResult;
     }
   }
   
   
-  Future<List<List<NSObject>>> pausedGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<dynamic>>> pausedGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -731,13 +731,13 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
       return typedResult;
     }
   }
   
   
-  Future<List<List<NSObject>>> pauseGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<dynamic>>> pauseGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -750,7 +750,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
       return typedResult;
     }
   }
@@ -775,7 +775,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
   }
   
   
-  Future<List<List<NSObject>>> startGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
+  Future<List<List<dynamic>>> startGeoFenceRegionsWithCustomID_batch(List<String> customID) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -788,7 +788,7 @@ extension AMapGeoFenceManager_Batch on List<AMapGeoFenceManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => NSObject()..refId = __it__..tag__ = 'amap_location_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
       return typedResult;
     }
   }

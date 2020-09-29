@@ -71,11 +71,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapGeoFenceManager* argmanager = manager;
   // ref callback arg
-  NSObject* arglocationManager = locationManager;
-  
+  CLLocationManager* arglocationManager = locationManager;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_doRequireLocationAuth" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"locationManager": arglocationManager == nil ? [NSNull null] : arglocationManager}];
@@ -96,15 +94,13 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
-  // list callback arg
-  NSArray<NSObject*>* argregions = regions;
-  // jsonable callback arg
+  AMapGeoFenceManager* argmanager = manager;
+  // ref callback arg
+  NSArray<AMapGeoFenceRegion*>* argregions = regions;
+  // ref callback arg
   NSString* argcustomID = customID;
   // ref callback arg
-  NSObject* argerror = error;
-  
+  NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didAddRegionForMonitoringFinished_customID_error" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"regions": argregions == nil ? [NSNull null] : argregions, @"customID": argcustomID == nil ? [NSNull null] : argcustomID, @"error": argerror == nil ? [NSNull null] : argerror}];
@@ -125,16 +121,13 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapGeoFenceManager* argmanager = manager;
   // ref callback arg
-  NSObject* argregion = region;
-  
-  // jsonable callback arg
+  AMapGeoFenceRegion* argregion = region;
+  // ref callback arg
   NSString* argcustomID = customID;
   // ref callback arg
-  NSObject* argerror = error;
-  
+  NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapGeoFenceManagerDelegate::amapGeoFenceManager_didGeoFencesStatusChangedForRegion_customID_error" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion, @"customID": argcustomID == nil ? [NSNull null] : argcustomID, @"error": argerror == nil ? [NSNull null] : argerror}];
@@ -155,11 +148,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
   // ref callback arg
-  NSObject* arglocationManager = locationManager;
-  
+  CLLocationManager* arglocationManager = locationManager;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_doRequireLocationAuth" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"locationManager": arglocationManager == nil ? [NSNull null] : arglocationManager}];
@@ -180,11 +171,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
   // ref callback arg
-  NSObject* argerror = error;
-  
+  NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didFailWithError" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"error": argerror == nil ? [NSNull null] : argerror}];
@@ -205,11 +194,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
   // ref callback arg
-  NSObject* arglocation = location;
-  
+  CLLocation* arglocation = location;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"location": arglocation == nil ? [NSNull null] : arglocation}];
@@ -230,14 +217,11 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
   // ref callback arg
-  NSObject* arglocation = location;
-  
+  CLLocation* arglocation = location;
   // ref callback arg
-  NSObject* argreGeocode = reGeocode;
-  
+  AMapLocationReGeocode* argreGeocode = reGeocode;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateLocation_reGeocode" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"location": arglocation == nil ? [NSNull null] : arglocation, @"reGeocode": argreGeocode == nil ? [NSNull null] : argreGeocode}];
@@ -258,8 +242,7 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
   // enum callback arg
   NSNumber* argstatus = @((NSInteger) status);
 
@@ -282,12 +265,11 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManagerShouldDisplayHeadingCalibration"
-                arguments:@{}
+                arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });
   
@@ -315,144 +297,12 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapLocationManager* argmanager = manager;
   // ref callback arg
-  NSObject* argnewHeading = newHeading;
-  
+  CLHeading* argnewHeading = newHeading;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didUpdateHeading" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"newHeading": argnewHeading == nil ? [NSNull null] : argnewHeading}];
-  });
-  
-}
-
-- (void)amapLocationManager : (AMapLocationManager*)manager didStartMonitoringForRegion: (AMapLocationRegion*)region
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSObject* argmanager = manager;
-  
-  // ref callback arg
-  NSObject* argregion = region;
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didStartMonitoringForRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion}];
-  });
-  
-}
-
-- (void)amapLocationManager : (AMapLocationManager*)manager didEnterRegion: (AMapLocationRegion*)region
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didEnterRegion");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSObject* argmanager = manager;
-  
-  // ref callback arg
-  NSObject* argregion = region;
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didEnterRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion}];
-  });
-  
-}
-
-- (void)amapLocationManager : (AMapLocationManager*)manager didExitRegion: (AMapLocationRegion*)region
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didExitRegion");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSObject* argmanager = manager;
-  
-  // ref callback arg
-  NSObject* argregion = region;
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didExitRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion}];
-  });
-  
-}
-
-- (void)amapLocationManager : (AMapLocationManager*)manager didDetermineState: (AMapLocationRegionState)state forRegion: (AMapLocationRegion*)region
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSObject* argmanager = manager;
-  
-  // enum callback arg
-  NSNumber* argstate = @((NSInteger) state);
-  // ref callback arg
-  NSObject* argregion = region;
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_didDetermineState_forRegion" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"state": argstate == nil ? [NSNull null] : argstate, @"region": argregion == nil ? [NSNull null] : argregion}];
-  });
-  
-}
-
-- (void)amapLocationManager : (AMapLocationManager*)manager monitoringDidFailForRegion: (AMapLocationRegion*)region withError: (NSError*)error
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:@"AMapLocationManagerDelegate::Callback"
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  NSObject* argmanager = manager;
-  
-  // ref callback arg
-  NSObject* argregion = region;
-  
-  // ref callback arg
-  NSObject* argerror = error;
-  
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::AMapLocationManagerDelegate::amapLocationManager_monitoringDidFailForRegion_withError" arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager, @"region": argregion == nil ? [NSNull null] : argregion, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
 }

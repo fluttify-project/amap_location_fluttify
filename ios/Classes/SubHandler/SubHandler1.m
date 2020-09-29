@@ -364,7 +364,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapLocationPoint* location = (AMapLocationPoint*) args[@"location"];
+            AMapLocationPoint* location = (AMapLocationPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
@@ -608,7 +608,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                CLLocation* currentLocation = (CLLocation*) args[@"currentLocation"];
+                CLLocation* currentLocation = (CLLocation*) (args[@"currentLocation"] == [NSNull null] ? nil : args[@"currentLocation"]);
         
                 // ref
                 AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
@@ -1166,7 +1166,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationPoint* location = (AMapLocationPoint*) args[@"location"];
+                AMapLocationPoint* location = (AMapLocationPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
