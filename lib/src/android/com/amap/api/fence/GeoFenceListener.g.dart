@@ -19,6 +19,9 @@ mixin com_amap_api_fence_GeoFenceListener on java_lang_Object {
 
   
 
+  @override
+  final String tag__ = 'amap_location_fluttify';
+
   
 
   

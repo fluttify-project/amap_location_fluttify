@@ -33,7 +33,11 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 public class SubHandlerCustom {
     static final String GEOFENCE_BROADCAST_ACTION = "com.location.apis.geofencedemo.broadcast";
 
-    public static Map<String, Handler> getSubHandler(BinaryMessenger messenger, android.app.Activity activity) {
+    public static final SubHandlerCustom instance = new SubHandlerCustom();
+
+    private SubHandlerCustom() { }
+
+    public Map<String, Handler> getSubHandler(BinaryMessenger messenger, android.app.Activity activity) {
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         filter.addAction(GEOFENCE_BROADCAST_ACTION);
 

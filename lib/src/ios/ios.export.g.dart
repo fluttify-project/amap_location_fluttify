@@ -27,3 +27,4 @@ export 'AMapGeoFenceManager.g.dart';
 export 'AMapLocationCircleRegion.g.dart';
 export 'AMapLocationReGeocode.g.dart';
 export 'package:amap_core_fluttify/amap_core_fluttify.dart';
+export '../facade/objects.g.dart';

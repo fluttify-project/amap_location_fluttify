@@ -32,7 +32,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(%@, %@, %@)", args[@"refId"], args[@"center"], args[@"radius"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(%@, %@, %@)", args[@"__this__"], args[@"center"], args[@"radius"], args[@"customID"]);
             }
         
             // invoke native method
@@ -65,7 +65,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(%@, %@, %@)", args[@"refId"], args[@"coordinates"], args[@"count"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(%@, %@, %@)", args[@"__this__"], args[@"coordinates"], args[@"count"], args[@"customID"]);
             }
         
             // invoke native method
@@ -95,7 +95,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(%@, %@, %@, %@, %@)", args[@"refId"], args[@"keyword"], args[@"type"], args[@"city"], args[@"size"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(%@, %@, %@, %@, %@)", args[@"__this__"], args[@"keyword"], args[@"type"], args[@"city"], args[@"size"], args[@"customID"]);
             }
         
             // invoke native method
@@ -129,7 +129,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(%@, %@, %@, %@, %@, %@)", args[@"refId"], args[@"locationPoint"], args[@"aroundRadius"], args[@"keyword"], args[@"type"], args[@"size"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(%@, %@, %@, %@, %@, %@)", args[@"__this__"], args[@"locationPoint"], args[@"aroundRadius"], args[@"keyword"], args[@"type"], args[@"size"], args[@"customID"]);
             }
         
             // invoke native method
@@ -153,7 +153,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(%@, %@)", args[@"refId"], args[@"districtName"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(%@, %@)", args[@"__this__"], args[@"districtName"], args[@"customID"]);
             }
         
             // invoke native method
@@ -175,7 +175,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -197,7 +197,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(%@)", args[@"refId"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -219,7 +219,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(%@)", args[@"refId"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -241,7 +241,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(%@)", args[@"refId"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -263,7 +263,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(%@)", args[@"refId"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -285,7 +285,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -307,7 +307,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(%@)", args[@"refId"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -329,7 +329,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -351,7 +351,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -373,7 +373,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(%@)", args[@"refId"], args[@"customID"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -394,7 +394,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -416,7 +416,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(%@)", args[@"refId"], args[@"identifier"]);
+                NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(%@)", args[@"__this__"], args[@"identifier"]);
             }
         
             // invoke native method
@@ -440,7 +440,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(%@)", args[@"refId"], args[@"coordinate"]);
+                NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(%@)", args[@"__this__"], args[@"coordinate"]);
             }
         
             // invoke native method
@@ -468,7 +468,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(%@, %@, %@)", args[@"refId"], args[@"center"], args[@"radius"], args[@"identifier"]);
+                NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(%@, %@, %@)", args[@"__this__"], args[@"center"], args[@"radius"], args[@"identifier"]);
             }
         
             // invoke native method
@@ -501,7 +501,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(%@, %@, %@)", args[@"refId"], args[@"coordinates"], args[@"count"], args[@"identifier"]);
+                NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(%@, %@, %@)", args[@"__this__"], args[@"coordinates"], args[@"count"], args[@"identifier"]);
             }
         
             // invoke native method
@@ -543,7 +543,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -564,7 +564,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -585,7 +585,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -608,7 +608,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(%@, %@)", args[@"refId"], args[@"withReGeocode"], args[@"completionBlock"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(%@, %@)", args[@"__this__"], args[@"withReGeocode"], args[@"completionBlock"]);
             }
         
             // invoke native method
@@ -652,7 +652,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -673,7 +673,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -695,7 +695,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::startMonitoringForRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::startMonitoringForRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -717,7 +717,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopMonitoringForRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopMonitoringForRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -739,7 +739,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::requestStateForRegion(%@)", args[@"refId"], args[@"region"]);
+                NSLog(@"fluttify-objc: AMapLocationManager@%@::requestStateForRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method

@@ -19,6 +19,9 @@ mixin AMapLocationManagerDelegate on NSObject {
 
   
 
+  @override
+  final String tag__ = 'amap_location_fluttify';
+
   
 
   

@@ -3,16 +3,8 @@
 # 高德 `定位`组件
 
 [![pub package](https://img.shields.io/pub/v/amap_location_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_location_fluttify)
-![CI](https://github.com/fluttify-project/amap_location_fluttify/workflows/CI/badge.svg)
-[![Gitter](https://badges.gitter.im/fluttify_project/community.svg)](https://gitter.im/fluttify_project/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Dart接口基于[fluttify](https://github.com/yohom/fluttify-core-example)引擎生成. dartdoc[接口文档](https://pub.flutter-io.cn/documentation/amap_location_fluttify/latest/).
-
-## 技术支持
-- 请参考 [technical-support-plan](https://github.com/fluttify-project/technical-support-plan) 进行操作, 技术支持工单将以最高优先级处理.
-
-## 接外包
-**本人承接外包项目(地图类app优先), 有意者请联系qq 382146139.**
 
 ## DEMO 与 社区
 
@@ -51,10 +43,6 @@ if (await requestPermission()) {
     .listen((location) => setState(() => _location = location));
 }
 ```
-
-| 微信支持 | 支付宝支持 |
-| :----------: | :----------: |
-| <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true" height="300"> | <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true" height="300"> |
 
 ## LICENSE
 > Copyright 2020 yohom

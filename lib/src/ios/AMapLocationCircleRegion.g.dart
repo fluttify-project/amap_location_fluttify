@@ -16,13 +16,16 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region constants
   static const String name__ = 'AMapLocationCircleRegion';
 
+  @override
+  final String tag__ = 'amap_location_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapLocationCircleRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationCircleRegion', {'init': init});
-    final object = AMapLocationCircleRegion()..refId = refId..tag__ = 'amap_location_fluttify';
+    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationCircleRegion', {'init': init});
+    final object = AMapLocationCircleRegion()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length, 'init': init});
+    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length, 'init': init});
   
-    final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
+    final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,12 +43,12 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
 
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationCircleRegion::get_center", {'__this__': this});
-    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify');
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_center", {'__this__': this});
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<double> get_radius() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationCircleRegion::get_radius", {'__this__': this});
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_radius", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -64,7 +67,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center, "radius": radius, "identifier": identifier, "__this__": this});
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier', {"center": center, "radius": radius, "identifier": identifier, "__this__": this});
   
   
     // handle native call
@@ -74,25 +77,30 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify';
+      final __return__ = AMapLocationCircleRegion()..refId = __result__;
       return __return__;
     }
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapLocationCircleRegion{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_radius_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
@@ -112,14 +120,14 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__], "radius": radius[__i__], "identifier": identifier[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__], "radius": radius[__i__], "identifier": identifier[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationCircleRegion()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationCircleRegion()..refId = __result__).toList();
       return typedResult;
     }
   }
