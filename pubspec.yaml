@@ -1,6 +1,6 @@
 name: amap_location_fluttify
 description: An `Amap` Location Component, Powered By `Fluttify`, A Compiler Generating Dart Bindings For Native SDK.
-version: 0.18.0
+version: 0.19.0
 author: yohom <yohombao@qq.com>
 homepage: https://github.com/fluttify-project/amap_location_fluttify
 
