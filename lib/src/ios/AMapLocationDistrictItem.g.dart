@@ -16,13 +16,16 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //region constants
   static const String name__ = 'AMapLocationDistrictItem';
 
+  @override
+  final String tag__ = 'amap_location_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapLocationDistrictItem> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationDistrictItem', {'init': init});
-    final object = AMapLocationDistrictItem()..refId = refId..tag__ = 'amap_location_fluttify';
+    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationDistrictItem', {'init': init});
+    final object = AMapLocationDistrictItem()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length, 'init': init});
+    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length, 'init': init});
   
-    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result..tag__ = 'amap_location_fluttify').toList();
+    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,7 +43,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_cityCode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationDistrictItem::get_cityCode", {'__this__': this});
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationDistrictItem::get_cityCode", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -48,7 +51,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_cityCode(String cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('AMapLocationDistrictItem::set_cityCode', <String, dynamic>{'__this__': this, "cityCode": cityCode});
+    await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationDistrictItem::set_cityCode', <String, dynamic>{'__this__': this, "cityCode": cityCode});
   
   
   }
@@ -58,12 +61,17 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapLocationDistrictItem{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
   //region getters
   Future<List<String>> get_cityCode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapLocationDistrictItem::get_cityCode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationDistrictItem::get_cityCode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
@@ -73,7 +81,7 @@ extension AMapLocationDistrictItem_Batch on List<AMapLocationDistrictItem> {
 
   //region setters
   Future<void> set_cityCode_batch(List<String> cityCode) async {
-    await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cityCode": cityCode[__i__]}]);
+    await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationDistrictItem::set_cityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cityCode": cityCode[__i__]}]);
   
   
   }

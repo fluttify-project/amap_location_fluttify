@@ -16,13 +16,16 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
   //region constants
   static const String name__ = 'AMapGeoFenceDistrictRegion';
 
+  @override
+  final String tag__ = 'amap_location_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapGeoFenceDistrictRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createAMapGeoFenceDistrictRegion', {'init': init});
-    final object = AMapGeoFenceDistrictRegion()..refId = refId..tag__ = 'amap_location_fluttify';
+    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFenceDistrictRegion', {'init': init});
+    final object = AMapGeoFenceDistrictRegion()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapGeoFenceDistrictRegion', {'length': length, 'init': init});
+    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoFenceDistrictRegion', {'length': length, 'init': init});
   
-    final List<AMapGeoFenceDistrictRegion> typedResult = resultBatch.map((result) => AMapGeoFenceDistrictRegion()..refId = result..tag__ = 'amap_location_fluttify').toList();
+    final List<AMapGeoFenceDistrictRegion> typedResult = resultBatch.map((result) => AMapGeoFenceDistrictRegion()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,8 +43,8 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
 
   //region getters
   Future<AMapLocationDistrictItem> get_districtItem() async {
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem", {'__this__': this});
-    return __result__ == null ? null : (AMapLocationDistrictItem()..refId = __result__..tag__ = 'amap_location_fluttify');
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem", {'__this__': this});
+    return __result__ == null ? null : (AMapLocationDistrictItem()..refId = __result__);
   }
   
   //endregion
@@ -53,14 +56,19 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapGeoFenceDistrictRegion{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapGeoFenceDistrictRegion_Batch on List<AMapGeoFenceDistrictRegion> {
   //region getters
   Future<List<AMapLocationDistrictItem>> get_districtItem_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationDistrictItem()..refId = __result__..tag__ = 'amap_location_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationDistrictItem()..refId = __result__).toList();
     return typedResult;
   }
   

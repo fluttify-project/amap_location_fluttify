@@ -53,7 +53,8 @@ mixin _Community on _Holder {
     final completer = Completer<Location>();
     return platform(
       android: (pool) async {
-        assert(_androidClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
+        assert(_androidClient != null,
+            '请先在main方法中调用AmapLocation.instance.init()进行初始化!');
         if (_androidLocationDelegate == null) {
           _androidLocationDelegate = _AndroidLocationDelegate();
           // 设置回调
@@ -92,7 +93,7 @@ mixin _Community on _Holder {
         // 设置单次定位
         await options.setOnceLocation(true);
         // 设置定位模式
-        if (mode != null)
+        if (mode != null) {
           switch (mode) {
             // 高精度定位模式：会同时使用网络定位和GPS定位，优先返回最高精度的定位结果，以及对应的地址描述信息。
             case LocationAccuracy.High:
@@ -112,11 +113,13 @@ mixin _Community on _Holder {
                       .Device_Sensors);
               break;
           }
+        }
         // 是否返回地址描述
         if (needAddress != null) await options.setNeedAddress(needAddress);
         // 设置定位请求超时时间，默认为30秒。
-        if (timeout != null)
+        if (timeout != null) {
           await options.setHttpTimeOut(timeout.inMilliseconds);
+        }
 
         await options.setSensorEnable(true);
 
@@ -129,7 +132,8 @@ mixin _Community on _Holder {
         return completer.future;
       },
       ios: (pool) async {
-        assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
+        assert(_iosClient != null,
+            '请先在main方法中调用AmapLocation.instance.init()进行初始化!');
         // 设置定位模式
         if (mode != null) {
           switch (mode) {
@@ -197,7 +201,8 @@ mixin _Community on _Holder {
     _locationController ??= StreamController<Location>();
 
     if (Platform.isAndroid) {
-      assert(_androidClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
+      assert(_androidClient != null,
+          '请先在main方法中调用AmapLocation.instance.init()进行初始化!');
       // 设置回调
       if (_androidLocationDelegate == null) {
         _androidLocationDelegate = _AndroidLocationDelegate();
@@ -233,7 +238,7 @@ mixin _Community on _Holder {
       // 设置连续定位
       await options.setOnceLocation(false);
       // 设置定位模式
-      if (mode != null)
+      if (mode != null) {
         switch (mode) {
           // 高精度定位模式：会同时使用网络定位和GPS定位，优先返回最高精度的定位结果，以及对应的地址描述信息。
           case LocationAccuracy.High:
@@ -253,6 +258,7 @@ mixin _Community on _Holder {
                     .Device_Sensors);
             break;
         }
+      }
       // 是否返回地址描述
       if (needAddress != null) await options.setNeedAddress(needAddress);
       // 设置定位请求超时时间，默认为30秒。
@@ -270,9 +276,10 @@ mixin _Community on _Holder {
 
       yield* _locationController.stream;
     } else if (Platform.isIOS) {
-      assert(_iosClient != null, '请先在main方法中调用AmapLocation.init()进行初始化!');
+      assert(
+          _iosClient != null, '请先在main方法中调用AmapLocation.instance.init()进行初始化!');
       // 设置定位模式
-      if (mode != null)
+      if (mode != null) {
         switch (mode) {
           // 高精度定位模式：会同时使用网络定位和GPS定位，优先返回最高精度的定位结果，以及对应的地址描述信息。
           case LocationAccuracy.High:
@@ -284,6 +291,7 @@ mixin _Community on _Holder {
             await _iosClient.set_desiredAccuracy(100);
             break;
         }
+      }
       // 设置定位请求超时时间，默认为30秒。
       if (timeout != null) {
         await _iosClient.set_locationTimeout(timeout.inSeconds);
@@ -333,7 +341,7 @@ mixin _Community on _Holder {
   Future<void> stopLocation() {
     return platform(
       android: (pool) async {
-        _locationController?.close();
+        await _locationController?.close();
         _locationController = null;
 
         _androidLocationDelegate = null;
@@ -341,7 +349,7 @@ mixin _Community on _Holder {
         await _androidClient?.stopLocation();
       },
       ios: (pool) async {
-        _locationController?.close();
+        await _locationController?.close();
         _locationController = null;
 
         _iosLocationDelegate = null;
@@ -420,10 +428,10 @@ mixin _Community on _Holder {
 
   /// 释放对象, 如果[AmapLocationDisposeMixin]不能满足需求时再使用这个方法
   Future<void> dispose() async {
-    _locationController?.close();
+    await _locationController?.close();
     _locationController = null;
 
-    _geoFenceEventController?.close();
+    await _geoFenceEventController?.close();
     _geoFenceEventController = null;
 
     _androidLocationDelegate = null;
@@ -431,10 +439,13 @@ mixin _Community on _Holder {
 
     // 取消注册广播
     if (Platform.isAndroid) {
-      await MethodChannel('me.yohom/amap_location_fluttify',
-              StandardMethodCodec(FluttifyMessageCodec()))
-          .invokeMethod(
-              'com.amap.api.fence.GeoFenceClient::unregisterBroadcastReceiver');
+      await MethodChannel(
+        'me.yohom/amap_location_fluttify',
+        StandardMethodCodec(
+          FluttifyMessageCodec(kAmapLocationFluttifyProjectName),
+        ),
+      ).invokeMethod(
+          'com.amap.api.fence.GeoFenceClient::unregisterBroadcastReceiver');
     }
 
     if (_androidClient != null) {
@@ -456,9 +467,12 @@ mixin _Pro on _Holder {
   void initAndroidListener() {
     if (Platform.isAndroid) {
       // 电子围栏回调
-      MethodChannel('com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback',
-              StandardMethodCodec(FluttifyMessageCodec()))
-          .setMethodCallHandler((call) async {
+      MethodChannel(
+        'com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback',
+        StandardMethodCodec(
+          FluttifyMessageCodec(kAmapLocationFluttifyProjectName),
+        ),
+      ).setMethodCallHandler((call) async {
         if (call.method ==
             'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {
           final args = await call.arguments as Map;
@@ -513,7 +527,7 @@ mixin _Pro on _Holder {
       _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
       _iosLocationDelegate ??= _IOSLocationDelegate();
 
-      _iosGeoFenceClient.set_delegate(
+      await _iosGeoFenceClient.set_delegate(
         _iosLocationDelegate
           .._onGeoFenceStatusChanged = (region, customId, error) async {
             _geoFenceEventController.add(
@@ -579,7 +593,7 @@ mixin _Pro on _Holder {
       _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
       _iosLocationDelegate ??= _IOSLocationDelegate();
 
-      _iosGeoFenceClient.set_delegate(
+      await _iosGeoFenceClient.set_delegate(
         _iosLocationDelegate
           .._onGeoFenceStatusChanged = (region, customId, error) async {
             _geoFenceEventController.add(
@@ -645,7 +659,7 @@ mixin _Pro on _Holder {
       _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
       _iosLocationDelegate ??= _IOSLocationDelegate();
 
-      _iosGeoFenceClient.set_delegate(
+      await _iosGeoFenceClient.set_delegate(
         _iosLocationDelegate
           .._onGeoFenceStatusChanged = (region, customId, error) async {
             _geoFenceEventController.add(
@@ -702,7 +716,7 @@ mixin _Pro on _Holder {
       _iosGeoFenceClient ??= await AMapGeoFenceManager.create__();
       _iosLocationDelegate ??= _IOSLocationDelegate();
 
-      _iosGeoFenceClient.set_delegate(
+      await _iosGeoFenceClient.set_delegate(
         _iosLocationDelegate
           .._onGeoFenceStatusChanged = (region, customId, error) async {
             _geoFenceEventController.add(

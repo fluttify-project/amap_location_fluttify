@@ -16,13 +16,16 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
   //region constants
   static const String name__ = 'com.amap.api.location.UmidtokenInfo';
 
+  @override
+  final String tag__ = 'amap_location_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_location_UmidtokenInfo> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_location_UmidtokenInfo__', );
-    final object = com_amap_api_location_UmidtokenInfo()..refId = refId..tag__ = 'amap_location_fluttify';
+    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_UmidtokenInfo__', );
+    final object = com_amap_api_location_UmidtokenInfo()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_location_UmidtokenInfo__', {'length': length});
+    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_location_UmidtokenInfo__', {'length': length});
   
-    final List<com_amap_api_location_UmidtokenInfo> typedResult = resultBatch.map((result) => com_amap_api_location_UmidtokenInfo()..refId = result..tag__ = 'amap_location_fluttify').toList();
+    final List<com_amap_api_location_UmidtokenInfo> typedResult = resultBatch.map((result) => com_amap_api_location_UmidtokenInfo()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken', );
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken', );
   
   
     // handle native call
@@ -78,7 +81,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble', {"var0": var0});
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble', {"var0": var0});
   
   
     // handle native call
@@ -101,7 +104,7 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken', {"var0": var0, "var1": var1});
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -117,6 +120,11 @@ class com_amap_api_location_UmidtokenInfo extends java_lang_Object  {
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_location_UmidtokenInfo{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_location_UmidtokenInfo> {
@@ -136,7 +144,7 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken_batch', );
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.UmidtokenInfo::getUmidtoken_batch', );
   
   
     // convert native result to dart side object
@@ -155,7 +163,7 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.UmidtokenInfo::setLocAble_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
     // convert native result to dart side object
@@ -174,7 +182,7 @@ extension com_amap_api_location_UmidtokenInfo_Batch on List<com_amap_api_locatio
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_location_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_location_fluttify'))).invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.UmidtokenInfo::setUmidtoken_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
