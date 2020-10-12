@@ -28,6 +28,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.country = country;
             methodResult(@"success");
@@ -45,6 +49,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.province = province;
             methodResult(@"success");
@@ -62,6 +70,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.city = city;
             methodResult(@"success");
@@ -79,6 +91,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.district = district;
             methodResult(@"success");
@@ -96,6 +112,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.township = township;
             methodResult(@"success");
@@ -113,6 +133,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.neighborhood = neighborhood;
             methodResult(@"success");
@@ -130,6 +154,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.building = building;
             methodResult(@"success");
@@ -147,6 +175,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.citycode = citycode;
             methodResult(@"success");
@@ -164,6 +196,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.adcode = adcode;
             methodResult(@"success");
@@ -181,6 +217,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.street = street;
             methodResult(@"success");
@@ -198,6 +238,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.number = number;
             methodResult(@"success");
@@ -215,6 +259,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.POIName = POIName;
             methodResult(@"success");
@@ -232,6 +280,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.AOIName = AOIName;
             methodResult(@"success");
@@ -249,6 +301,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.latitude = latitude;
             methodResult(@"success");
@@ -266,6 +322,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.longitude = longitude;
             methodResult(@"success");
@@ -283,6 +343,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.pId = pId;
             methodResult(@"success");
@@ -300,6 +364,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.name = name;
             methodResult(@"success");
@@ -317,6 +385,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.type = type;
             methodResult(@"success");
@@ -334,6 +406,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.typeCode = typeCode;
             methodResult(@"success");
@@ -351,6 +427,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.address = address;
             methodResult(@"success");
@@ -368,6 +448,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.location = location;
             methodResult(@"success");
@@ -385,6 +469,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.tel = tel;
             methodResult(@"success");
@@ -402,6 +490,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.province = province;
             methodResult(@"success");
@@ -419,6 +511,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.city = city;
             methodResult(@"success");
@@ -436,6 +532,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.district = district;
             methodResult(@"success");
@@ -453,6 +553,10 @@ extern BOOL enableLog;
         
             // ref
             AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
         
             ref.cityCode = cityCode;
             methodResult(@"success");
@@ -468,6 +572,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.activeAction = activeAction;
                 methodResult(@"success");
@@ -486,6 +594,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
                 methodResult(@"success");
@@ -504,6 +616,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
                 methodResult(@"success");
@@ -522,6 +638,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceManager* ref = (AMapGeoFenceManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
                 methodResult(@"success");
@@ -540,6 +660,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.notifyOnEntry = notifyOnEntry;
                 methodResult(@"success");
@@ -558,6 +682,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.notifyOnExit = notifyOnExit;
                 methodResult(@"success");
@@ -576,6 +704,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.fenceStatus = fenceStatus;
                 methodResult(@"success");
@@ -594,6 +726,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.regionType = regionType;
                 methodResult(@"success");
@@ -612,6 +748,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapGeoFenceRegion* ref = (AMapGeoFenceRegion*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.currentLocation = currentLocation;
                 methodResult(@"success");
@@ -630,6 +770,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.distanceFilter = distanceFilter;
                 methodResult(@"success");
@@ -648,6 +792,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.desiredAccuracy = desiredAccuracy;
                 methodResult(@"success");
@@ -666,6 +814,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.pausesLocationUpdatesAutomatically = pausesLocationUpdatesAutomatically;
                 methodResult(@"success");
@@ -684,6 +836,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.allowsBackgroundLocationUpdates = allowsBackgroundLocationUpdates;
                 methodResult(@"success");
@@ -702,6 +858,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.locationTimeout = locationTimeout;
                 methodResult(@"success");
@@ -720,6 +880,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.reGeocodeTimeout = reGeocodeTimeout;
                 methodResult(@"success");
@@ -738,6 +902,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.locatingWithReGeocode = locatingWithReGeocode;
                 methodResult(@"success");
@@ -756,6 +924,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.reGeocodeLanguage = reGeocodeLanguage;
                 methodResult(@"success");
@@ -774,6 +946,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationManager* ref = (AMapLocationManager*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.detectRiskOfFakeLocation = detectRiskOfFakeLocation;
                 methodResult(@"success");
@@ -792,6 +968,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.formattedAddress = formattedAddress;
                 methodResult(@"success");
@@ -810,6 +990,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.country = country;
                 methodResult(@"success");
@@ -828,6 +1012,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.province = province;
                 methodResult(@"success");
@@ -846,6 +1034,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.city = city;
                 methodResult(@"success");
@@ -864,6 +1056,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.district = district;
                 methodResult(@"success");
@@ -882,6 +1078,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.township = township;
                 methodResult(@"success");
@@ -900,6 +1100,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.neighborhood = neighborhood;
                 methodResult(@"success");
@@ -918,6 +1122,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.building = building;
                 methodResult(@"success");
@@ -936,6 +1144,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.citycode = citycode;
                 methodResult(@"success");
@@ -954,6 +1166,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -972,6 +1188,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.street = street;
                 methodResult(@"success");
@@ -990,6 +1210,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.number = number;
                 methodResult(@"success");
@@ -1008,6 +1232,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.POIName = POIName;
                 methodResult(@"success");
@@ -1026,6 +1254,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationReGeocode* ref = (AMapLocationReGeocode*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.AOIName = AOIName;
                 methodResult(@"success");
@@ -1044,6 +1276,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.latitude = latitude;
                 methodResult(@"success");
@@ -1062,6 +1298,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPoint* ref = (AMapLocationPoint*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.longitude = longitude;
                 methodResult(@"success");
@@ -1080,6 +1320,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.pId = pId;
                 methodResult(@"success");
@@ -1098,6 +1342,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.name = name;
                 methodResult(@"success");
@@ -1116,6 +1364,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.type = type;
                 methodResult(@"success");
@@ -1134,6 +1386,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.typeCode = typeCode;
                 methodResult(@"success");
@@ -1152,6 +1408,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.address = address;
                 methodResult(@"success");
@@ -1170,6 +1430,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.location = location;
                 methodResult(@"success");
@@ -1188,6 +1452,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.tel = tel;
                 methodResult(@"success");
@@ -1206,6 +1474,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.province = province;
                 methodResult(@"success");
@@ -1224,6 +1496,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.city = city;
                 methodResult(@"success");
@@ -1242,6 +1518,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationPOIItem* ref = (AMapLocationPOIItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.district = district;
                 methodResult(@"success");
@@ -1260,6 +1540,10 @@ extern BOOL enableLog;
         
                 // ref
                 AMapLocationDistrictItem* ref = (AMapLocationDistrictItem*) args[@"__this__"];
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                    return;
+                }
         
                 ref.cityCode = cityCode;
                 methodResult(@"success");
