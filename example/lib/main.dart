@@ -43,10 +43,9 @@ class _MyAppState extends State<MyApp> {
               child: Text('获取连续定位'),
               onPressed: () async {
                 if (await requestPermission()) {
-                  await for (final location
-                      in AmapLocation.instance.listenLocation()) {
-                    setState(() => _location = location);
-                  }
+                  AmapLocation.instance
+                      .listenLocation()
+                      .listen((event) => setState(() => _location = event));
                 }
               },
             ),
@@ -136,7 +135,7 @@ class _MyAppState extends State<MyApp> {
             ),
             RaisedButton(
               child: Text('释放资源'),
-              onPressed: () async {
+              onPressed: () {
                 AmapLocation.instance.dispose();
               },
             ),
@@ -168,10 +167,9 @@ class _MyAppState extends State<MyApp> {
 }
 
 Future<bool> requestPermission() async {
-  final permissions =
-      await PermissionHandler().requestPermissions([PermissionGroup.location]);
+  final permissions = await Permission.locationWhenInUse.request();
 
-  if (permissions[PermissionGroup.location] == PermissionStatus.granted) {
+  if (permissions.isGranted) {
     return true;
   } else {
     toast('需要定位权限!');

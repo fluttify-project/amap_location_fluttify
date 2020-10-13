@@ -377,7 +377,9 @@ mixin _Community on _Holder {
 
   /// 开启后台定位
   Future<void> enableBackgroundLocation(
-      int id, BackgroundNotification bgNotification) {
+    int id,
+    BackgroundNotification bgNotification,
+  ) {
     return platform(
       android: (pool) async {
         final notification = await android_app_Notification.create(
@@ -394,7 +396,8 @@ mixin _Community on _Holder {
         pool..add(notification);
       },
       ios: (pool) async {
-        // ios 不需要处理
+        await _iosClient.set_allowsBackgroundLocationUpdates(true);
+        await _iosClient.set_pausesLocationUpdatesAutomatically(false);
       },
     );
   }
@@ -407,7 +410,8 @@ mixin _Community on _Holder {
         await _androidClient?.disableBackgroundLocation(var1);
       },
       ios: (pool) async {
-        // ios 不需要处理
+        await _iosClient.set_allowsBackgroundLocationUpdates(false);
+        await _iosClient.set_pausesLocationUpdatesAutomatically(true);
       },
     );
   }
