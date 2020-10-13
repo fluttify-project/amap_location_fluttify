@@ -17,11 +17,23 @@ extern BOOL enableLog;
     __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID(%@)", args);
+            }
+        
             // args
             // struct arg
             NSValue* centerValue = (NSValue*) args[@"center"];
             CLLocationCoordinate2D center;
-            [centerValue getValue:&center];
+            if (centerValue != nil && (NSNull*) centerValue != [NSNull null]) {
+              [centerValue getValue:&center];
+            } else {
+              methodResult([FlutterError errorWithCode:@"参数非法"
+                                               message:@"参数非法"
+                                               details:@"center不能为null"]);
+              return;
+            }
+        
             // jsonable arg
             CLLocationDistance radius = [args[@"radius"] doubleValue];
             // jsonable arg
@@ -34,11 +46,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addCircleRegionForMonitoringWithCenter(%@, %@, %@)", args[@"__this__"], args[@"center"], args[@"radius"], args[@"customID"]);
-            }
-        
             // invoke native method
             [ref addCircleRegionForMonitoringWithCenter : center radius: radius customID: customID];
         
@@ -49,11 +56,15 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID(%@)", args);
+            }
+        
             // args
             // list arg struct
             NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
             CLLocationCoordinate2D coordinates[coordinatesValueList.count];
-            for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
                 NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                 CLLocationCoordinate2D coordinatesItem;
                 [coordinatesValue getValue:&coordinatesItem];
@@ -71,11 +82,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addPolygonRegionForMonitoringWithCoordinates(%@, %@, %@)", args[@"__this__"], args[@"coordinates"], args[@"count"], args[@"customID"]);
-            }
-        
             // invoke native method
             [ref addPolygonRegionForMonitoringWithCoordinates : coordinates count: count customID: customID];
         
@@ -86,6 +92,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* keyword = (NSString*) args[@"keyword"];
@@ -105,11 +115,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addKeywordPOIRegionForMonitoringWithKeyword(%@, %@, %@, %@, %@)", args[@"__this__"], args[@"keyword"], args[@"type"], args[@"city"], args[@"size"], args[@"customID"]);
-            }
-        
             // invoke native method
             [ref addKeywordPOIRegionForMonitoringWithKeyword : keyword POIType: type city: city size: size customID: customID];
         
@@ -120,11 +125,23 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID(%@)", args);
+            }
+        
             // args
             // struct arg
             NSValue* locationPointValue = (NSValue*) args[@"locationPoint"];
             CLLocationCoordinate2D locationPoint;
-            [locationPointValue getValue:&locationPoint];
+            if (locationPointValue != nil && (NSNull*) locationPointValue != [NSNull null]) {
+              [locationPointValue getValue:&locationPoint];
+            } else {
+              methodResult([FlutterError errorWithCode:@"参数非法"
+                                               message:@"参数非法"
+                                               details:@"locationPoint不能为null"]);
+              return;
+            }
+        
             // jsonable arg
             NSInteger aroundRadius = [args[@"aroundRadius"] longValue];
             // jsonable arg
@@ -143,11 +160,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addAroundPOIRegionForMonitoringWithLocationPoint(%@, %@, %@, %@, %@, %@)", args[@"__this__"], args[@"locationPoint"], args[@"aroundRadius"], args[@"keyword"], args[@"type"], args[@"size"], args[@"customID"]);
-            }
-        
             // invoke native method
             [ref addAroundPOIRegionForMonitoringWithLocationPoint : locationPoint aroundRadius: aroundRadius keyword: keyword POIType: type size: size customID: customID];
         
@@ -158,6 +170,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* districtName = (NSString*) args[@"districtName"];
@@ -171,11 +187,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::addDistrictRegionForMonitoringWithDistrictName(%@, %@)", args[@"__this__"], args[@"districtName"], args[@"customID"]);
-            }
-        
             // invoke native method
             [ref addDistrictRegionForMonitoringWithDistrictName : districtName customID: customID];
         
@@ -186,6 +197,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::statusWithGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::statusWithGeoFenceRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -195,11 +210,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::statusWithGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -212,6 +222,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::geoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::geoFenceRegionsWithCustomID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* customID = (NSString*) args[@"customID"];
@@ -221,11 +235,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::geoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -238,6 +247,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* customID = (NSString*) args[@"customID"];
@@ -247,11 +260,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::monitoringGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -264,6 +272,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* customID = (NSString*) args[@"customID"];
@@ -273,11 +285,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pausedGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -290,6 +297,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* customID = (NSString*) args[@"customID"];
@@ -299,11 +310,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -316,6 +322,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::pauseTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::pauseTheGeoFenceRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -325,11 +335,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::pauseTheGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -342,6 +347,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::startGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::startGeoFenceRegionsWithCustomID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* customID = (NSString*) args[@"customID"];
@@ -351,11 +360,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -368,6 +372,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::startTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::startTheGeoFenceRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -377,11 +385,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::startTheGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -394,6 +397,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::removeTheGeoFenceRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::removeTheGeoFenceRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapGeoFenceRegion* region = (AMapGeoFenceRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -403,11 +410,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeTheGeoFenceRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -420,6 +422,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* customID = (NSString*) args[@"customID"];
@@ -429,11 +435,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeGeoFenceRegionsWithCustomID(%@)", args[@"__this__"], args[@"customID"]);
             }
         
             // invoke native method
@@ -446,6 +447,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::removeAllGeoFenceRegions": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::removeAllGeoFenceRegions(%@)", args);
+            }
+        
             // args
         
         
@@ -454,11 +459,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapGeoFenceManager@%@::removeAllGeoFenceRegions()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -471,6 +471,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationRegion::initWithIdentifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationRegion::initWithIdentifier(%@)", args);
+            }
+        
             // args
             // jsonable arg
             NSString* identifier = (NSString*) args[@"identifier"];
@@ -480,11 +484,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationRegion@%@::initWithIdentifier(%@)", args[@"__this__"], args[@"identifier"]);
             }
         
             // invoke native method
@@ -497,22 +496,29 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationRegion::containsCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationRegion::containsCoordinate(%@)", args);
+            }
+        
             // args
             // struct arg
             NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
             CLLocationCoordinate2D coordinate;
-            [coordinateValue getValue:&coordinate];
+            if (coordinateValue != nil && (NSNull*) coordinateValue != [NSNull null]) {
+              [coordinateValue getValue:&coordinate];
+            } else {
+              methodResult([FlutterError errorWithCode:@"参数非法"
+                                               message:@"参数非法"
+                                               details:@"coordinate不能为null"]);
+              return;
+            }
+        
         
             // ref
             AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationRegion@%@::containsCoordinate(%@)", args[@"__this__"], args[@"coordinate"]);
             }
         
             // invoke native method
@@ -525,11 +531,23 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationCircleRegion::initWithCenter_radius_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationCircleRegion::initWithCenter_radius_identifier(%@)", args);
+            }
+        
             // args
             // struct arg
             NSValue* centerValue = (NSValue*) args[@"center"];
             CLLocationCoordinate2D center;
-            [centerValue getValue:&center];
+            if (centerValue != nil && (NSNull*) centerValue != [NSNull null]) {
+              [centerValue getValue:&center];
+            } else {
+              methodResult([FlutterError errorWithCode:@"参数非法"
+                                               message:@"参数非法"
+                                               details:@"center不能为null"]);
+              return;
+            }
+        
             // jsonable arg
             CLLocationDistance radius = [args[@"radius"] doubleValue];
             // jsonable arg
@@ -542,11 +560,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationCircleRegion@%@::initWithCenter(%@, %@, %@)", args[@"__this__"], args[@"center"], args[@"radius"], args[@"identifier"]);
-            }
-        
             // invoke native method
             AMapLocationCircleRegion* result = [ref initWithCenter: center radius: radius identifier: identifier];
         
@@ -557,11 +570,15 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationPolygonRegion::initWithCoordinates_count_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationPolygonRegion::initWithCoordinates_count_identifier(%@)", args);
+            }
+        
             // args
             // list arg struct
             NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
             CLLocationCoordinate2D coordinates[coordinatesValueList.count];
-            for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
                 NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                 CLLocationCoordinate2D coordinatesItem;
                 [coordinatesValue getValue:&coordinatesItem];
@@ -579,11 +596,6 @@ extern BOOL enableLog;
                 return;
             }
         
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationPolygonRegion@%@::initWithCoordinates(%@, %@, %@)", args[@"__this__"], args[@"coordinates"], args[@"count"], args[@"identifier"]);
-            }
-        
             // invoke native method
             AMapLocationPolygonRegion* result = [ref initWithCoordinates: coordinates count: count identifier: identifier];
         
@@ -594,16 +606,15 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::headingAvailable": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::headingAvailable(%@)", args);
+            }
+        
             // args
         
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager::headingAvailable()");
-            }
         
             // invoke native method
             BOOL result = [AMapLocationManager headingAvailable];
@@ -615,6 +626,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::startUpdatingHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::startUpdatingHeading(%@)", args);
+            }
+        
             // args
         
         
@@ -623,11 +638,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingHeading()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -640,6 +650,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::stopUpdatingHeading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::stopUpdatingHeading(%@)", args);
+            }
+        
             // args
         
         
@@ -648,11 +662,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingHeading()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -665,6 +674,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::dismissHeadingCalibrationDisplay": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::dismissHeadingCalibrationDisplay(%@)", args);
+            }
+        
             // args
         
         
@@ -673,11 +686,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::dismissHeadingCalibrationDisplay()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -690,6 +698,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::requestLocationWithReGeocode_completionBlock": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::requestLocationWithReGeocode_completionBlock(%@)", args);
+            }
+        
             // args
             // jsonable arg
             BOOL withReGeocode = [args[@"withReGeocode"] boolValue];
@@ -700,11 +712,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::requestLocationWithReGeocode(%@, %@)", args[@"__this__"], args[@"withReGeocode"], args[@"completionBlock"]);
             }
         
             // invoke native method
@@ -740,6 +747,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::startUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::startUpdatingLocation(%@)", args);
+            }
+        
             // args
         
         
@@ -748,11 +759,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::startUpdatingLocation()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -765,6 +771,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::stopUpdatingLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::stopUpdatingLocation(%@)", args);
+            }
+        
             // args
         
         
@@ -773,11 +783,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopUpdatingLocation()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -790,6 +795,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::startMonitoringForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::startMonitoringForRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -799,11 +808,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::startMonitoringForRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -816,6 +820,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::stopMonitoringForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::stopMonitoringForRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -825,11 +833,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::stopMonitoringForRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -842,6 +845,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationManager::requestStateForRegion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::requestStateForRegion(%@)", args);
+            }
+        
             // args
             // ref arg
             AMapLocationRegion* region = (AMapLocationRegion*) (args[@"region"] == [NSNull null] ? nil : args[@"region"]);
@@ -851,11 +858,6 @@ extern BOOL enableLog;
             if ((NSNull *) ref == [NSNull null] || ref == nil) {
                 methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
                 return;
-            }
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationManager@%@::requestStateForRegion(%@)", args[@"__this__"], args[@"region"]);
             }
         
             // invoke native method
@@ -868,6 +870,10 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapLocationPoint::locationWithLatitude_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationPoint::locationWithLatitude_longitude(%@)", args);
+            }
+        
             // args
             // jsonable arg
             CGFloat lat = [args[@"lat"] floatValue];
@@ -876,11 +882,6 @@ extern BOOL enableLog;
         
             // ref
         
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapLocationPoint::locationWithLatitude(%@, %@)", args[@"lat"], args[@"lon"]);
-            }
         
             // invoke native method
             AMapLocationPoint* result = [AMapLocationPoint locationWithLatitude: lat longitude: lon];
@@ -892,16 +893,28 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         @"AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addCircleRegionForMonitoringWithCenter_radius_customID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // struct arg
                 NSValue* centerValue = (NSValue*) args[@"center"];
                 CLLocationCoordinate2D center;
-                [centerValue getValue:&center];
+                if (centerValue != nil && (NSNull*) centerValue != [NSNull null]) {
+                  [centerValue getValue:&center];
+                } else {
+                  methodResult([FlutterError errorWithCode:@"参数非法"
+                                                   message:@"参数非法"
+                                                   details:@"center不能为null"]);
+                  return;
+                }
+        
                 // jsonable arg
                 CLLocationDistance radius = [args[@"radius"] doubleValue];
                 // jsonable arg
@@ -927,16 +940,20 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addPolygonRegionForMonitoringWithCoordinates_count_customID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg struct
                 NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
                 CLLocationCoordinate2D coordinates[coordinatesValueList.count];
-                for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+                for (NSUInteger __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
                     NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                     CLLocationCoordinate2D coordinatesItem;
                     [coordinatesValue getValue:&coordinatesItem];
@@ -967,9 +984,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addKeywordPOIRegionForMonitoringWithKeyword_POIType_city_size_customID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1004,16 +1025,28 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addAroundPOIRegionForMonitoringWithLocationPoint_aroundRadius_keyword_POIType_size_customID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // struct arg
                 NSValue* locationPointValue = (NSValue*) args[@"locationPoint"];
                 CLLocationCoordinate2D locationPoint;
-                [locationPointValue getValue:&locationPoint];
+                if (locationPointValue != nil && (NSNull*) locationPointValue != [NSNull null]) {
+                  [locationPointValue getValue:&locationPoint];
+                } else {
+                  methodResult([FlutterError errorWithCode:@"参数非法"
+                                                   message:@"参数非法"
+                                                   details:@"locationPoint不能为null"]);
+                  return;
+                }
+        
                 // jsonable arg
                 NSInteger aroundRadius = [args[@"aroundRadius"] longValue];
                 // jsonable arg
@@ -1045,9 +1078,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::addDistrictRegionForMonitoringWithDistrictName_customID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1076,9 +1113,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::statusWithGeoFenceRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::statusWithGeoFenceRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1105,9 +1146,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::geoFenceRegionsWithCustomID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::geoFenceRegionsWithCustomID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1134,9 +1179,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::monitoringGeoFenceRegionsWithCustomID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1163,9 +1212,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::pausedGeoFenceRegionsWithCustomID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1192,9 +1245,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::pauseGeoFenceRegionsWithCustomID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1221,9 +1278,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::pauseTheGeoFenceRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::pauseTheGeoFenceRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1250,9 +1311,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::startGeoFenceRegionsWithCustomID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::startGeoFenceRegionsWithCustomID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1279,9 +1344,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::startTheGeoFenceRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::startTheGeoFenceRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1308,9 +1377,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::removeTheGeoFenceRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::removeTheGeoFenceRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1337,9 +1410,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::removeGeoFenceRegionsWithCustomID(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1366,9 +1443,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapGeoFenceManager::removeAllGeoFenceRegions_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapGeoFenceManager::removeAllGeoFenceRegions(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1394,9 +1475,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationRegion::initWithIdentifier_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationRegion::initWithIdentifier(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1423,16 +1508,28 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationRegion::containsCoordinate_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationRegion::containsCoordinate(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // struct arg
                 NSValue* coordinateValue = (NSValue*) args[@"coordinate"];
                 CLLocationCoordinate2D coordinate;
-                [coordinateValue getValue:&coordinate];
+                if (coordinateValue != nil && (NSNull*) coordinateValue != [NSNull null]) {
+                  [coordinateValue getValue:&coordinate];
+                } else {
+                  methodResult([FlutterError errorWithCode:@"参数非法"
+                                                   message:@"参数非法"
+                                                   details:@"coordinate不能为null"]);
+                  return;
+                }
+        
         
                 // ref
                 AMapLocationRegion* ref = (AMapLocationRegion*) args[@"__this__"];
@@ -1454,16 +1551,28 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationCircleRegion::initWithCenter_radius_identifier_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationCircleRegion::initWithCenter_radius_identifier(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // struct arg
                 NSValue* centerValue = (NSValue*) args[@"center"];
                 CLLocationCoordinate2D center;
-                [centerValue getValue:&center];
+                if (centerValue != nil && (NSNull*) centerValue != [NSNull null]) {
+                  [centerValue getValue:&center];
+                } else {
+                  methodResult([FlutterError errorWithCode:@"参数非法"
+                                                   message:@"参数非法"
+                                                   details:@"center不能为null"]);
+                  return;
+                }
+        
                 // jsonable arg
                 CLLocationDistance radius = [args[@"radius"] doubleValue];
                 // jsonable arg
@@ -1489,16 +1598,20 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationPolygonRegion::initWithCoordinates_count_identifier_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationPolygonRegion::initWithCoordinates_count_identifier(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg struct
                 NSArray<NSValue*>* coordinatesValueList = (NSArray<NSValue*>*) args[@"coordinates"];
                 CLLocationCoordinate2D coordinates[coordinatesValueList.count];
-                for (int __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
+                for (NSUInteger __i__ = 0; __i__ < coordinatesValueList.count; __i__++) {
                     NSValue* coordinatesValue = (NSValue*) [coordinatesValueList objectAtIndex:__i__];
                     CLLocationCoordinate2D coordinatesItem;
                     [coordinatesValue getValue:&coordinatesItem];
@@ -1529,9 +1642,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::headingAvailable_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::headingAvailable(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1553,9 +1670,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::startUpdatingHeading_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::startUpdatingHeading(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1581,9 +1702,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::stopUpdatingHeading_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::stopUpdatingHeading(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1609,9 +1734,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::dismissHeadingCalibrationDisplay_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::dismissHeadingCalibrationDisplay(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1637,9 +1766,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::startUpdatingLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::startUpdatingLocation(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1665,9 +1798,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::stopUpdatingLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::stopUpdatingLocation(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1693,9 +1830,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::startMonitoringForRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::startMonitoringForRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1722,9 +1863,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::stopMonitoringForRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::stopMonitoringForRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1751,9 +1896,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationManager::requestStateForRegion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationManager::requestStateForRegion(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -1780,9 +1929,13 @@ extern BOOL enableLog;
             methodResult(resultList);
         },
         @"AMapLocationPoint::locationWithLatitude_longitude_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapLocationPoint::locationWithLatitude_longitude(%@)", argsBatch);
+            }
+        
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
@@ -3093,7 +3246,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::get_activeAction_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3117,7 +3270,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::get_pausesLocationUpdatesAutomatically_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3141,7 +3294,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::get_allowsBackgroundLocationUpdates_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3165,7 +3318,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceManager::get_detectRiskOfFakeLocation_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3189,7 +3342,7 @@ extern BOOL enableLog;
         @"AMapLocationRegion::get_identifier_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3213,7 +3366,7 @@ extern BOOL enableLog;
         @"AMapLocationRegion::get_notifyOnEntry_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3237,7 +3390,7 @@ extern BOOL enableLog;
         @"AMapLocationRegion::get_notifyOnExit_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3261,7 +3414,7 @@ extern BOOL enableLog;
         @"AMapLocationCircleRegion::get_center_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3285,7 +3438,7 @@ extern BOOL enableLog;
         @"AMapLocationCircleRegion::get_radius_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3309,7 +3462,7 @@ extern BOOL enableLog;
         @"AMapLocationPolygonRegion::get_coordinates_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3333,7 +3486,7 @@ extern BOOL enableLog;
         @"AMapLocationPolygonRegion::get_count_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3357,7 +3510,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceRegion::get_identifier_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3381,7 +3534,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceRegion::get_customID_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3405,7 +3558,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceRegion::get_fenceStatus_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3429,7 +3582,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceRegion::get_regionType_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3453,7 +3606,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceRegion::get_currentLocation_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3477,7 +3630,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceCircleRegion::get_center_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3501,7 +3654,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceCircleRegion::get_radius_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3525,7 +3678,7 @@ extern BOOL enableLog;
         @"AMapGeoFencePolygonRegion::get_coordinates_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3549,7 +3702,7 @@ extern BOOL enableLog;
         @"AMapGeoFencePolygonRegion::get_count_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3573,7 +3726,7 @@ extern BOOL enableLog;
         @"AMapGeoFencePOIRegion::get_POIItem_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3597,7 +3750,7 @@ extern BOOL enableLog;
         @"AMapGeoFenceDistrictRegion::get_districtItem_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3621,7 +3774,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_distanceFilter_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3645,7 +3798,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_desiredAccuracy_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3669,7 +3822,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_pausesLocationUpdatesAutomatically_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3693,7 +3846,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_allowsBackgroundLocationUpdates_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3717,7 +3870,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_locationTimeout_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3741,7 +3894,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_reGeocodeTimeout_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3765,7 +3918,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_locatingWithReGeocode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3789,7 +3942,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_reGeocodeLanguage_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3813,7 +3966,7 @@ extern BOOL enableLog;
         @"AMapLocationManager::get_detectRiskOfFakeLocation_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3837,7 +3990,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_formattedAddress_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3861,7 +4014,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_country_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3885,7 +4038,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_province_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3909,7 +4062,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_city_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3933,7 +4086,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_district_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3957,7 +4110,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_township_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -3981,7 +4134,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_neighborhood_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4005,7 +4158,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_building_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4029,7 +4182,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_citycode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4053,7 +4206,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_adcode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4077,7 +4230,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_street_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4101,7 +4254,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_number_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4125,7 +4278,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_POIName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4149,7 +4302,7 @@ extern BOOL enableLog;
         @"AMapLocationReGeocode::get_AOIName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4173,7 +4326,7 @@ extern BOOL enableLog;
         @"AMapLocationPoint::get_latitude_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4197,7 +4350,7 @@ extern BOOL enableLog;
         @"AMapLocationPoint::get_longitude_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4221,7 +4374,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_pId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4245,7 +4398,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4269,7 +4422,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_type_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4293,7 +4446,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_typeCode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4317,7 +4470,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_address_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4341,7 +4494,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4365,7 +4518,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_tel_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4389,7 +4542,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_province_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4413,7 +4566,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_city_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4437,7 +4590,7 @@ extern BOOL enableLog;
         @"AMapLocationPOIItem::get_district_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
@@ -4461,7 +4614,7 @@ extern BOOL enableLog;
         @"AMapLocationDistrictItem::get_cityCode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // ref object
