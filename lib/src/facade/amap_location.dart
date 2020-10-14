@@ -360,6 +360,7 @@ mixin _Community on _Holder {
   }
 
   /// 请求后台定位 *仅iOS
+  @Deprecated('此方法与直接使用权限请求插件请求定位权限的效果一样')
   Future<void> requireAlwaysAuth() {
     return platform(
       android: (pool) async {},
@@ -486,7 +487,7 @@ mixin _Pro on _Holder {
           debugPrint(
               '收到围栏消息: status: $status, customId: $customId, fenceId:$fenceId');
           final fence = com_amap_api_fence_GeoFence()
-            ..refId = args['fence'] as String;
+            ..refId = (args['fence'] as Ref).refId;
           _geoFenceEventController?.add(
             GeoFenceEvent(
               customId: customId,
