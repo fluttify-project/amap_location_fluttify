@@ -24,8 +24,8 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationReGeocode> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationReGeocode', {'init': init});
-    final object = AMapLocationReGeocode()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationReGeocode', {'init': init});
+    final object = AMapLocationReGeocode()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationReGeocode', {'length': length, 'init': init});
-  
-    final List<AMapLocationReGeocode> typedResult = resultBatch.map((result) => AMapLocationReGeocode()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationReGeocode', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocationReGeocode()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,72 +42,72 @@ class AMapLocationReGeocode extends NSObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_formattedAddress() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_formattedAddress", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_country() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_country", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_province() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_province", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_city() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_district() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_district", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_township() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_township", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_neighborhood() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_neighborhood", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_building() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_building", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_citycode() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_citycode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_adcode() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_adcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_street() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_street", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_number() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_number", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_POIName() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_POIName", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_AOIName() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationReGeocode::get_AOIName", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

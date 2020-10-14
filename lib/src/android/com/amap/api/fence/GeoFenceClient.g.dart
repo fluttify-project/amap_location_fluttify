@@ -26,8 +26,8 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_fence_GeoFenceClient> create__android_content_Context(android_content_Context var1) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context', {"var1": var1});
-    final object = com_amap_api_fence_GeoFenceClient()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context', {"var1": var1});
+    final object = com_amap_api_fence_GeoFenceClient()..refId = __result__.refId;
     return object;
   }
   
@@ -35,10 +35,8 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_fence_GeoFenceClient__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_fence_GeoFenceClient> typedResult = resultBatch.map((result) => com_amap_api_fence_GeoFenceClient()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_fence_GeoFenceClient__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    return resultBatch.map((it) => com_amap_api_fence_GeoFenceClient()..refId = it.refId).toList();
   }
   
   //endregion
@@ -66,13 +64,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = android_app_PendingIntent()..refId = __result__;
-      return __return__;
-    }
+    return __result__ == null ? null : (android_app_PendingIntent()..refId = __result__.refId);
   }
   
   
@@ -89,13 +81,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -122,24 +108,18 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<String>().map((__it__) => TypeOpAmapLocationFluttifyAndroid(__it__).as__<com_amap_api_fence_GeoFence>()).toList(), args['var2'], args['var3']);
+                var1?.onGeoFenceCreateFinished((args['var1'] as List).cast<Ref>().map((__it__) => TypeOpAmapLocationFluttifyAndroid(__it__).as__<com_amap_api_fence_GeoFence>()).toList(), args['var2'], args['var3']);
                 break;
               default:
                 break;
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -156,13 +136,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -179,13 +153,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -202,13 +170,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -225,13 +187,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -248,13 +204,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -271,13 +221,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -294,13 +238,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -317,13 +255,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_fence_GeoFence()..refId = __it__).toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_fence_GeoFence()..refId = __it__.refId))?.toList();
   }
   
   
@@ -340,13 +272,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -363,13 +289,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -386,13 +306,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -409,13 +323,7 @@ class com_amap_api_fence_GeoFenceClient extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -446,13 +354,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::createPendingIntent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_app_PendingIntent()..refId = __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (android_app_PendingIntent()..refId = __result__.refId)).toList();
   }
   
   
@@ -465,13 +367,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::setActivateAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -484,13 +380,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::addGeoFence__com_amap_api_location_DPoint__double__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -503,13 +393,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::addGeoFence__List_com_amap_api_location_DPoint___String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -522,13 +406,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__com_amap_api_location_DPoint__double__int__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -541,13 +419,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::addGeoFence__String__String__String__int__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -560,13 +432,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::addGeoFence__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -579,13 +445,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::removeGeoFence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -598,13 +458,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::removeGeoFence__com_amap_api_fence_GeoFence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   
@@ -617,13 +471,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::getAllGeoFence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_fence_GeoFence()..refId = __it__).toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_fence_GeoFence()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -636,13 +484,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::setGeoFenceAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -655,13 +497,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::pauseGeoFence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -674,13 +510,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::resumeGeoFence_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -693,13 +523,7 @@ extension com_amap_api_fence_GeoFenceClient_Batch on List<com_amap_api_fence_Geo
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFenceClient::isPause_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   //endregion

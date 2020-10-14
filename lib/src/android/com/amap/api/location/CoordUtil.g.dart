@@ -24,8 +24,8 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_CoordUtil> create__() async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__', );
-    final object = com_amap_api_location_CoordUtil()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_CoordUtil__', );
+    final object = com_amap_api_location_CoordUtil()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_location_CoordUtil__', {'length': length});
-  
-    final List<com_amap_api_location_CoordUtil> typedResult = resultBatch.map((result) => com_amap_api_location_CoordUtil()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_CoordUtil__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_location_CoordUtil()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -110,13 +96,7 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -147,13 +127,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordUtil::convertToGcj_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -166,13 +140,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordUtil::isLoadedSo_batch', );
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   
@@ -185,13 +153,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

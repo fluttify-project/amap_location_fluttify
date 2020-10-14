@@ -24,8 +24,8 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationPoint> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationPoint', {'init': init});
-    final object = AMapLocationPoint()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationPoint', {'init': init});
+    final object = AMapLocationPoint()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationPoint', {'length': length, 'init': init});
-  
-    final List<AMapLocationPoint> typedResult = resultBatch.map((result) => AMapLocationPoint()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationPoint', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocationPoint()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,12 +42,12 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
   //region getters
   Future<double> get_latitude() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationPoint::get_latitude", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<double> get_longitude() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationPoint::get_longitude", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -84,13 +82,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = AMapLocationPoint()..refId = __result__;
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapLocationPoint()..refId = __result__.refId);
   }
   
   //endregion
@@ -145,13 +137,7 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationPoint()..refId = __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationPoint()..refId = __result__.refId)).toList();
   }
   
   //endregion

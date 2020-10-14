@@ -24,8 +24,8 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationDistrictItem> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationDistrictItem', {'init': init});
-    final object = AMapLocationDistrictItem()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationDistrictItem', {'init': init});
+    final object = AMapLocationDistrictItem()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length, 'init': init});
-  
-    final List<AMapLocationDistrictItem> typedResult = resultBatch.map((result) => AMapLocationDistrictItem()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationDistrictItem', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocationDistrictItem()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,7 +42,7 @@ class AMapLocationDistrictItem extends NSObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_cityCode() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationDistrictItem::get_cityCode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

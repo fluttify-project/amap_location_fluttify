@@ -24,8 +24,8 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
 
   //region creators
   static Future<AMapLocationCircleRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationCircleRegion', {'init': init});
-    final object = AMapLocationCircleRegion()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationCircleRegion', {'init': init});
+    final object = AMapLocationCircleRegion()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length, 'init': init});
-  
-    final List<AMapLocationCircleRegion> typedResult = resultBatch.map((result) => AMapLocationCircleRegion()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocationCircleRegion()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,12 +42,12 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_center", {'__this__': this});
-    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
+    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId);
   }
   
   Future<double> get_radius() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_radius", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -73,13 +71,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = AMapLocationCircleRegion()..refId = __result__;
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapLocationCircleRegion()..refId = __result__.refId);
   }
   
   //endregion
@@ -95,7 +87,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
@@ -123,13 +115,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__], "radius": radius[__i__], "identifier": identifier[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationCircleRegion()..refId = __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationCircleRegion()..refId = __result__.refId)).toList();
   }
   
   //endregion

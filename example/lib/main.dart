@@ -43,6 +43,15 @@ class _MyAppState extends State<MyApp> {
               child: Text('获取连续定位'),
               onPressed: () async {
                 if (await requestPermission()) {
+                  await AmapLocation.instance.enableBackgroundLocation(
+                    10,
+                    BackgroundNotification(
+                      contentTitle: 'contentTitle',
+                      channelId: 'channelId',
+                      contentText: 'contentText',
+                      channelName: 'channelName',
+                    ),
+                  );
                   AmapLocation.instance
                       .listenLocation()
                       .listen((event) => setState(() => _location = event));
