@@ -24,8 +24,8 @@ class AMapLocationRegion extends NSObject with NSCopying {
 
   //region creators
   static Future<AMapLocationRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationRegion', {'init': init});
-    final object = AMapLocationRegion()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationRegion', {'init': init});
+    final object = AMapLocationRegion()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocationRegion extends NSObject with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationRegion', {'length': length, 'init': init});
-  
-    final List<AMapLocationRegion> typedResult = resultBatch.map((result) => AMapLocationRegion()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationRegion', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocationRegion()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,17 +42,17 @@ class AMapLocationRegion extends NSObject with NSCopying {
   //region getters
   Future<String> get_identifier() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationRegion::get_identifier", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_notifyOnEntry() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationRegion::get_notifyOnEntry", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_notifyOnExit() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationRegion::get_notifyOnExit", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -89,13 +87,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = AMapLocationRegion()..refId = __result__;
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapLocationRegion()..refId = __result__.refId);
   }
   
   
@@ -112,13 +104,7 @@ class AMapLocationRegion extends NSObject with NSCopying {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -180,13 +166,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationRegion::initWithIdentifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"identifier": identifier[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationRegion()..refId = __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationRegion()..refId = __result__.refId)).toList();
   }
   
   
@@ -199,13 +179,7 @@ extension AMapLocationRegion_Batch on List<AMapLocationRegion> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationRegion::containsCoordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"coordinate": coordinate[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   //endregion

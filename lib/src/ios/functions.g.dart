@@ -26,12 +26,7 @@ Future<CLLocationCoordinate2D> AMapLocationCoordinateConvert(CLLocationCoordinat
   // handle native call
   
 
-  // convert native result to dart side object
-  if (__result__ == null) {
-    return null;
-  } else {
-    return CLLocationCoordinate2D()..refId = __result__;
-  }
+  return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId);
 }
 
 Future<bool> AMapLocationDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
@@ -47,10 +42,5 @@ Future<bool> AMapLocationDataAvailableForCoordinate(CLLocationCoordinate2D coord
   // handle native call
   
 
-  // convert native result to dart side object
-  if (__result__ == null) {
-    return null;
-  } else {
-    return __result__;
-  }
+  return __result__;
 }

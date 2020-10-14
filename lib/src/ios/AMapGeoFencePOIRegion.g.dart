@@ -24,8 +24,8 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
 
   //region creators
   static Future<AMapGeoFencePOIRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion', {'init': init});
-    final object = AMapGeoFencePOIRegion()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoFencePOIRegion', {'init': init});
+    final object = AMapGeoFencePOIRegion()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length, 'init': init});
-  
-    final List<AMapGeoFencePOIRegion> typedResult = resultBatch.map((result) => AMapGeoFencePOIRegion()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeoFencePOIRegion()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,7 +42,7 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
   //region getters
   Future<AMapLocationPOIItem> get_POIItem() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePOIRegion::get_POIItem", {'__this__': this});
-    return __result__ == null ? null : (AMapLocationPOIItem()..refId = __result__);
+    return __result__ == null ? null : (AMapLocationPOIItem()..refId = __result__.refId);
   }
   
   //endregion
@@ -68,7 +66,7 @@ extension AMapGeoFencePOIRegion_Batch on List<AMapGeoFencePOIRegion> {
   Future<List<AMapLocationPOIItem>> get_POIItem_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePOIRegion::get_POIItem_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapLocationPOIItem()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationPOIItem()..refId = __result__.refId)).toList();
     return typedResult;
   }
   

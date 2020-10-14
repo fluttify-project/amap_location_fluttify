@@ -24,8 +24,8 @@ class AMapLocationManager extends NSObject  {
 
   //region creators
   static Future<AMapLocationManager> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationManager', {'init': init});
-    final object = AMapLocationManager()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationManager', {'init': init});
+    final object = AMapLocationManager()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocationManager extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationManager', {'length': length, 'init': init});
-  
-    final List<AMapLocationManager> typedResult = resultBatch.map((result) => AMapLocationManager()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationManager', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocationManager()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,47 +42,47 @@ class AMapLocationManager extends NSObject  {
   //region getters
   Future<double> get_distanceFilter() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_distanceFilter", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<double> get_desiredAccuracy() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_desiredAccuracy", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_pausesLocationUpdatesAutomatically", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_allowsBackgroundLocationUpdates() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_allowsBackgroundLocationUpdates", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_locationTimeout() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_locationTimeout", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_reGeocodeTimeout() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_reGeocodeTimeout", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_locatingWithReGeocode() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_locatingWithReGeocode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapLocationReGeocodeLanguage> get_reGeocodeLanguage() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_reGeocodeLanguage", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapLocationReGeocodeLanguage());
+    return (__result__ as int).toAMapLocationReGeocodeLanguage();
   }
   
   Future<bool> get_detectRiskOfFakeLocation() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_detectRiskOfFakeLocation", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -211,7 +209,7 @@ class AMapLocationManager extends NSObject  {
           }
         } catch (e) {
           debugPrint(e);
-          throw e;
+          rethrow;
         }
       });
   }
@@ -287,13 +285,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -310,13 +302,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -333,13 +319,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -356,13 +336,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -396,17 +370,11 @@ class AMapLocationManager extends NSObject  {
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -423,13 +391,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -446,13 +408,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   @deprecated
@@ -469,13 +425,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   @deprecated
@@ -492,13 +442,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   @deprecated
@@ -515,13 +459,7 @@ class AMapLocationManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -586,7 +524,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
   Future<List<AMapLocationReGeocodeLanguage>> get_reGeocodeLanguage_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationManager::get_reGeocodeLanguage_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapLocationReGeocodeLanguage()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapLocationReGeocodeLanguage()).toList();
     return typedResult;
   }
   
@@ -667,13 +605,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::headingAvailable_batch', );
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   
@@ -686,13 +618,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::startUpdatingHeading_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -705,13 +631,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::stopUpdatingHeading_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -724,13 +644,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::dismissHeadingCalibrationDisplay_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -743,13 +657,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::startUpdatingLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -762,13 +670,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::stopUpdatingLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   @deprecated
@@ -781,13 +683,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::startMonitoringForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   @deprecated
@@ -800,13 +696,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::stopMonitoringForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   @deprecated
@@ -819,13 +709,7 @@ extension AMapLocationManager_Batch on List<AMapLocationManager> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationManager::requestStateForRegion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

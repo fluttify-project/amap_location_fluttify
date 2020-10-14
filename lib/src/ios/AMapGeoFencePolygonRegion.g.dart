@@ -24,8 +24,8 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion with NSCopying {
 
   //region creators
   static Future<AMapGeoFencePolygonRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFencePolygonRegion', {'init': init});
-    final object = AMapGeoFencePolygonRegion()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoFencePolygonRegion', {'init': init});
+    final object = AMapGeoFencePolygonRegion()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoFencePolygonRegion', {'length': length, 'init': init});
-  
-    final List<AMapGeoFencePolygonRegion> typedResult = resultBatch.map((result) => AMapGeoFencePolygonRegion()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoFencePolygonRegion', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeoFencePolygonRegion()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,12 +42,12 @@ class AMapGeoFencePolygonRegion extends AMapGeoFenceRegion with NSCopying {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_coordinates() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePolygonRegion::get_coordinates", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => CLLocationCoordinate2D()..refId = __it__).toList());
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (CLLocationCoordinate2D()..refId = __it__.refId))?.toList();
   }
   
   Future<int> get_count() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePolygonRegion::get_count", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -73,7 +71,7 @@ extension AMapGeoFencePolygonRegion_Batch on List<AMapGeoFencePolygonRegion> {
   Future<List<List<CLLocationCoordinate2D>>> get_coordinates_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePolygonRegion::get_coordinates_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => CLLocationCoordinate2D()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (CLLocationCoordinate2D()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

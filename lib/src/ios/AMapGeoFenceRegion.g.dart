@@ -24,8 +24,8 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
 
   //region creators
   static Future<AMapGeoFenceRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFenceRegion', {'init': init});
-    final object = AMapGeoFenceRegion()..refId = refId;
+    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoFenceRegion', {'init': init});
+    final object = AMapGeoFenceRegion()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoFenceRegion', {'length': length, 'init': init});
-  
-    final List<AMapGeoFenceRegion> typedResult = resultBatch.map((result) => AMapGeoFenceRegion()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoFenceRegion', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeoFenceRegion()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,27 +42,27 @@ class AMapGeoFenceRegion extends NSObject with NSCopying {
   //region getters
   Future<String> get_identifier() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_identifier", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_customID() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_customID", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapGeoFenceRegionStatus> get_fenceStatus() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_fenceStatus", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapGeoFenceRegionStatus());
+    return (__result__ as int).toAMapGeoFenceRegionStatus();
   }
   
   Future<AMapGeoFenceRegionType> get_regionType() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_regionType", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapGeoFenceRegionType());
+    return (__result__ as int).toAMapGeoFenceRegionType();
   }
   
   Future<CLLocation> get_currentLocation() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_currentLocation", {'__this__': this});
-    return __result__ == null ? null : (CLLocation()..refId = __result__);
+    return __result__ == null ? null : (CLLocation()..refId = __result__.refId);
   }
   
   //endregion
@@ -119,21 +117,21 @@ extension AMapGeoFenceRegion_Batch on List<AMapGeoFenceRegion> {
   Future<List<AMapGeoFenceRegionStatus>> get_fenceStatus_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_fenceStatus_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionStatus()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionStatus()).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoFenceRegionType>> get_regionType_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_regionType_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionType()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapGeoFenceRegionType()).toList();
     return typedResult;
   }
   
   Future<List<CLLocation>> get_currentLocation_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceRegion::get_currentLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocation()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (CLLocation()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
