@@ -59,31 +59,25 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
 
   //region creators
   static Future<com_amap_api_location_AMapLocation> create__String(String var1) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
-    final object = com_amap_api_location_AMapLocation()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__String', {"var1": var1});
   }
   
   static Future<com_amap_api_location_AMapLocation> create__android_location_Location(android_location_Location var1) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1});
-    final object = com_amap_api_location_AMapLocation()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location', {"var1": var1});
   }
   
   static Future<List<com_amap_api_location_AMapLocation>> create_batch__String(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_location_AMapLocation()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_AMapLocation>('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   static Future<List<com_amap_api_location_AMapLocation>> create_batch__android_location_Location(List<android_location_Location> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__android_location_Location', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_location_AMapLocation()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_AMapLocation>('ObjectFactory::create_batchcom_amap_api_location_AMapLocation__android_location_Location', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   //endregion
@@ -1114,7 +1108,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocation()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -1131,7 +1125,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location with 
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationQualityReport()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -1294,7 +1288,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setGpsAccuracyStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1320,7 +1314,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setLocationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1346,7 +1340,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setLocationDetail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1372,7 +1366,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1398,7 +1392,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1424,7 +1418,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1450,7 +1444,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1476,7 +1470,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1502,7 +1496,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1528,7 +1522,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1554,7 +1548,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1580,7 +1574,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1606,7 +1600,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1632,7 +1626,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1658,7 +1652,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1684,7 +1678,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1710,7 +1704,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1736,7 +1730,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setStreet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1762,7 +1756,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1775,7 +1769,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setOffset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1814,7 +1808,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setAoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1840,7 +1834,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setBuildingId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1879,7 +1873,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setFixLastLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1892,7 +1886,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setFloor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1918,7 +1912,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setMock_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1944,7 +1938,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -2048,7 +2042,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocation()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocation>().map((__result__) => __result__).toList();
   }
   
   
@@ -2061,7 +2055,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::getLocationQualityReport_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationQualityReport()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationQualityReport>().map((__result__) => __result__).toList();
   }
   
   
@@ -2074,7 +2068,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setLocationQualityReport_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -2100,7 +2094,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -2113,7 +2107,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setTrustedLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -2152,7 +2146,7 @@ extension com_amap_api_location_AMapLocation_Batch on List<com_amap_api_location
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocation::setConScenario_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

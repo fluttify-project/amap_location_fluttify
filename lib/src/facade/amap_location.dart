@@ -446,9 +446,7 @@ mixin _Community on _Holder {
     if (Platform.isAndroid) {
       await MethodChannel(
         'me.yohom/amap_location_fluttify',
-        StandardMethodCodec(
-          FluttifyMessageCodec(kAmapLocationFluttifyProjectName),
-        ),
+        kAmapLocationFluttifyMethodCodec,
       ).invokeMethod(
           'com.amap.api.fence.GeoFenceClient::unregisterBroadcastReceiver');
     }
@@ -474,9 +472,7 @@ mixin _Pro on _Holder {
       // 电子围栏回调
       MethodChannel(
         'com.amap.api.fence.GeoFenceClient::addGeoFenceX::Callback',
-        StandardMethodCodec(
-          FluttifyMessageCodec(kAmapLocationFluttifyProjectName),
-        ),
+        kAmapLocationFluttifyMethodCodec,
       ).setMethodCallHandler((call) async {
         if (call.method ==
             'Callback::com.amap.api.fence.GeoFenceClient::addGeoFenceX') {

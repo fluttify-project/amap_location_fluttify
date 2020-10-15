@@ -24,17 +24,14 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
 
   //region creators
   static Future<com_amap_api_location_AMapLocationClientOption> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__', );
-    final object = com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__', );
   }
   
   static Future<List<com_amap_api_location_AMapLocationClientOption>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_AMapLocationClientOption__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_location_AMapLocationClientOption()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_AMapLocationClientOption>('ObjectFactory::create_batchcom_amap_api_location_AMapLocationClientOption__', {'length': length});
   }
   
   //endregion
@@ -105,7 +102,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -139,7 +136,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -173,7 +170,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -207,7 +204,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -241,7 +238,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -275,7 +272,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -309,7 +306,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -377,7 +374,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -411,7 +408,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -428,7 +425,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -462,7 +459,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -496,7 +493,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -530,7 +527,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -564,7 +561,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -598,7 +595,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -632,7 +629,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -649,7 +646,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -700,7 +697,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -768,7 +765,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -785,7 +782,7 @@ class com_amap_api_location_AMapLocationClientOption extends java_lang_Object wi
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -885,16 +882,12 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
   //region getters
   Future<List<bool>> get_static_OPEN_ALWAYS_SCAN_WIFI_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("com.amap.api.location.AMapLocationClientOption::get_OPEN_ALWAYS_SCAN_WIFI_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_static_SCAN_WIFI_INTERVAL_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("com.amap.api.location.AMapLocationClientOption::get_SCAN_WIFI_INTERVAL_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion
@@ -940,7 +933,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setMockEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -966,7 +959,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -992,7 +985,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1018,7 +1011,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setNeedAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1044,7 +1037,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiActiveScan_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1070,7 +1063,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setWifiScan_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1083,7 +1076,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_AMapLocationMode()).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption_AMapLocationMode>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_AMapLocationMode()).toList();
   }
   
   
@@ -1096,7 +1089,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1109,7 +1102,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationProtocol_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_AMapLocationProtocol()).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption_AMapLocationProtocol>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_AMapLocationProtocol()).toList();
   }
   
   
@@ -1122,7 +1115,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationProtocol_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].toValue()}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1148,7 +1141,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setKillProcess_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1174,7 +1167,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirst_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1187,7 +1180,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setGpsFirstTimeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1213,7 +1206,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1239,7 +1232,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setHttpTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1265,7 +1258,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setOffset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1291,7 +1284,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationCacheEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1317,7 +1310,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setOnceLocationLatest_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1343,7 +1336,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setSensorEnable_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1356,7 +1349,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setLastLocationLifeCycle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1382,7 +1375,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::getGeoLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_GeoLanguage()).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption_GeoLanguage>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_GeoLanguage()).toList();
   }
   
   
@@ -1395,7 +1388,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setGeoLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1408,7 +1401,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setDownloadCoordinateConvertLibrary_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1447,7 +1440,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setDeviceModeDistanceFilter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1460,7 +1453,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setLocationPurpose_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocationClientOption()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption>().map((__result__) => __result__).toList();
   }
   
   
@@ -1473,7 +1466,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::getLocationPurpose_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_AMapLocationPurpose()).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocationClientOption_AMapLocationPurpose>().map((__result__) => (__result__ as int).tocom_amap_api_location_AMapLocationClientOption_AMapLocationPurpose()).toList();
   }
   
   
@@ -1499,7 +1492,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setOpenAlwaysScanWifi_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1512,7 +1505,7 @@ extension com_amap_api_location_AMapLocationClientOption_Batch on List<com_amap_
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationClientOption::setScanWifiInterval_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   

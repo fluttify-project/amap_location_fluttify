@@ -24,17 +24,14 @@ class com_amap_api_location_CoordUtil extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_CoordUtil> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_CoordUtil__', );
-    final object = com_amap_api_location_CoordUtil()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_CoordUtil__', );
   }
   
   static Future<List<com_amap_api_location_CoordUtil>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_CoordUtil__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_location_CoordUtil()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_CoordUtil>('ObjectFactory::create_batchcom_amap_api_location_CoordUtil__', {'length': length});
   }
   
   //endregion
@@ -153,7 +150,7 @@ extension com_amap_api_location_CoordUtil_Batch on List<com_amap_api_location_Co
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordUtil::setLoadedSo_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

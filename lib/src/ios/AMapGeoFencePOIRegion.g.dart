@@ -24,17 +24,14 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
 
   //region creators
   static Future<AMapGeoFencePOIRegion> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoFencePOIRegion', {'init': init});
-    final object = AMapGeoFencePOIRegion()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFencePOIRegion', {'init': init});
   }
   
   static Future<List<AMapGeoFencePOIRegion>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapGeoFencePOIRegion()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<AMapGeoFencePOIRegion>('ObjectFactory::create_batchAMapGeoFencePOIRegion', {'length': length, 'init': init});
   }
   
   //endregion
@@ -42,7 +39,7 @@ class AMapGeoFencePOIRegion extends AMapGeoFenceCircleRegion with NSCopying {
   //region getters
   Future<AMapLocationPOIItem> get_POIItem() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePOIRegion::get_POIItem", {'__this__': this});
-    return __result__ == null ? null : (AMapLocationPOIItem()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -65,9 +62,7 @@ extension AMapGeoFencePOIRegion_Batch on List<AMapGeoFencePOIRegion> {
   //region getters
   Future<List<AMapLocationPOIItem>> get_POIItem_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFencePOIRegion::get_POIItem_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationPOIItem()..refId = __result__.refId)).toList();
-    return typedResult;
+    return (resultBatch as List).cast<AMapLocationPOIItem>().map((__result__) => __result__).toList();
   }
   
   //endregion

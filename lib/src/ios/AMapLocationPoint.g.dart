@@ -24,17 +24,14 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocationPoint> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationPoint', {'init': init});
-    final object = AMapLocationPoint()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationPoint', {'init': init});
   }
   
   static Future<List<AMapLocationPoint>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationPoint', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapLocationPoint()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<AMapLocationPoint>('ObjectFactory::create_batchAMapLocationPoint', {'length': length, 'init': init});
   }
   
   //endregion
@@ -82,7 +79,7 @@ class AMapLocationPoint extends NSObject with NSCoding, NSCopying {
     // handle native call
   
   
-    return __result__ == null ? null : (AMapLocationPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -97,16 +94,12 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationPoint::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   Future<List<double>> get_longitude_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationPoint::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   //endregion
@@ -137,7 +130,7 @@ extension AMapLocationPoint_Batch on List<AMapLocationPoint> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<AMapLocationPoint>().map((__result__) => __result__).toList();
   }
   
   //endregion

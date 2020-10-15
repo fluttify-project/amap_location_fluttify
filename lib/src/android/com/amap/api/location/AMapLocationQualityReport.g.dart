@@ -28,17 +28,14 @@ class com_amap_api_location_AMapLocationQualityReport extends java_lang_Object  
 
   //region creators
   static Future<com_amap_api_location_AMapLocationQualityReport> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__', );
-    final object = com_amap_api_location_AMapLocationQualityReport()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__', );
   }
   
   static Future<List<com_amap_api_location_AMapLocationQualityReport>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_AMapLocationQualityReport__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_location_AMapLocationQualityReport()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_AMapLocationQualityReport>('ObjectFactory::create_batchcom_amap_api_location_AMapLocationQualityReport__', {'length': length});
   }
   
   //endregion
@@ -318,7 +315,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setWifiAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -331,7 +328,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGpsStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -344,7 +341,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setGPSSatellites_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -409,7 +406,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetworkType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -435,7 +432,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setNetUseTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -448,7 +445,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setInstallHighDangerMockApp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -474,7 +471,7 @@ extension com_amap_api_location_AMapLocationQualityReport_Batch on List<com_amap
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.AMapLocationQualityReport::setLocationMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   

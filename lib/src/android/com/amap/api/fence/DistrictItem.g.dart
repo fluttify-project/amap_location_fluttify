@@ -24,17 +24,14 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
 
   //region creators
   static Future<com_amap_api_fence_DistrictItem> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_fence_DistrictItem__', );
-    final object = com_amap_api_fence_DistrictItem()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_fence_DistrictItem__', );
   }
   
   static Future<List<com_amap_api_fence_DistrictItem>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_fence_DistrictItem__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_fence_DistrictItem()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_fence_DistrictItem>('ObjectFactory::create_batchcom_amap_api_fence_DistrictItem__', {'length': length});
   }
   
   //endregion
@@ -130,7 +127,7 @@ class com_amap_api_fence_DistrictItem extends java_lang_Object with android_os_P
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_location_DPoint()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_location_DPoint>();
   }
   
   
@@ -225,7 +222,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.DistrictItem::setCitycode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -251,7 +248,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.DistrictItem::setAdcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -264,7 +261,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.DistrictItem::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_location_DPoint()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_location_DPoint>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_location_DPoint>()).toList();
   }
   
   
@@ -277,7 +274,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.DistrictItem::setPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -303,7 +300,7 @@ extension com_amap_api_fence_DistrictItem_Batch on List<com_amap_api_fence_Distr
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.DistrictItem::setDistrictName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

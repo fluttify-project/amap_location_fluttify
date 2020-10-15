@@ -24,17 +24,14 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
 
   //region creators
   static Future<AMapGeoFenceDistrictRegion> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoFenceDistrictRegion', {'init': init});
-    final object = AMapGeoFenceDistrictRegion()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoFenceDistrictRegion', {'init': init});
   }
   
   static Future<List<AMapGeoFenceDistrictRegion>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoFenceDistrictRegion', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapGeoFenceDistrictRegion()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<AMapGeoFenceDistrictRegion>('ObjectFactory::create_batchAMapGeoFenceDistrictRegion', {'length': length, 'init': init});
   }
   
   //endregion
@@ -42,7 +39,7 @@ class AMapGeoFenceDistrictRegion extends AMapGeoFenceRegion with NSCopying {
   //region getters
   Future<AMapLocationDistrictItem> get_districtItem() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem", {'__this__': this});
-    return __result__ == null ? null : (AMapLocationDistrictItem()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -65,9 +62,7 @@ extension AMapGeoFenceDistrictRegion_Batch on List<AMapGeoFenceDistrictRegion> {
   //region getters
   Future<List<AMapLocationDistrictItem>> get_districtItem_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapGeoFenceDistrictRegion::get_districtItem_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationDistrictItem()..refId = __result__.refId)).toList();
-    return typedResult;
+    return (resultBatch as List).cast<AMapLocationDistrictItem>().map((__result__) => __result__).toList();
   }
   
   //endregion

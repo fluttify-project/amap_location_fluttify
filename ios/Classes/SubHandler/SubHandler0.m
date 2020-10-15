@@ -717,7 +717,7 @@ extern BOOL enableLog;
             // invoke native method
             BOOL result = [ref requestLocationWithReGeocode: withReGeocode completionBlock: ^(CLLocation* location, AMapLocationReGeocode* regeocode, NSError* error) {
                 FlutterMethodChannel *channel = [FlutterMethodChannel
-                      methodChannelWithName:[NSString stringWithFormat:@"AMapLocatingCompletionBlock::Callback@%@", @(ref.hash)]
+                      methodChannelWithName:[NSString stringWithFormat:@"AMapLocatingCompletionBlock::Callback@%@:%@", NSStringFromClass([ref class]), @(ref.hash)]
                             binaryMessenger:[[weakSelf registrar] messenger]
                                       codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
         

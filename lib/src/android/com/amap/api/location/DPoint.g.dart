@@ -24,31 +24,25 @@ class com_amap_api_location_DPoint extends java_lang_Object with android_os_Parc
 
   //region creators
   static Future<com_amap_api_location_DPoint> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_DPoint__', );
-    final object = com_amap_api_location_DPoint()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__', );
   }
   
   static Future<com_amap_api_location_DPoint> create__double__double(double var1, double var3) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_DPoint__double__double', {"var1": var1, "var3": var3});
-    final object = com_amap_api_location_DPoint()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_DPoint__double__double', {"var1": var1, "var3": var3});
   }
   
   static Future<List<com_amap_api_location_DPoint>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_DPoint__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_location_DPoint()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_DPoint>('ObjectFactory::create_batchcom_amap_api_location_DPoint__', {'length': length});
   }
   
   static Future<List<com_amap_api_location_DPoint>> create_batch__double__double(List<double> var1, List<double> var3) async {
     if (var1.length != var3.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_DPoint__double__double', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_location_DPoint()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_DPoint>('ObjectFactory::create_batchcom_amap_api_location_DPoint__double__double', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__]}]);
   }
   
   //endregion
@@ -171,7 +165,7 @@ extension com_amap_api_location_DPoint_Batch on List<com_amap_api_location_DPoin
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.DPoint::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -197,7 +191,7 @@ extension com_amap_api_location_DPoint_Batch on List<com_amap_api_location_DPoin
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.DPoint::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

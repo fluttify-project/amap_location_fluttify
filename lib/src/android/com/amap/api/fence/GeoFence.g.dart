@@ -45,17 +45,14 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
 
   //region creators
   static Future<com_amap_api_fence_GeoFence> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_fence_GeoFence__', );
-    final object = com_amap_api_fence_GeoFence()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_fence_GeoFence__', );
   }
   
   static Future<List<com_amap_api_fence_GeoFence>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_fence_GeoFence__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_fence_GeoFence()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_fence_GeoFence>('ObjectFactory::create_batchcom_amap_api_fence_GeoFence__', {'length': length});
   }
   
   //endregion
@@ -185,7 +182,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     // handle native call
   
   
-    return __result__ == null ? null : (android_app_PendingIntent()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -253,7 +250,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_fence_PoiItem()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -287,7 +284,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_fence_DistrictItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_fence_DistrictItem>();
   }
   
   
@@ -508,7 +505,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_DPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -661,7 +658,7 @@ class com_amap_api_fence_GeoFence extends java_lang_Object with android_os_Parce
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_AMapLocation()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -705,7 +702,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setFenceId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -731,7 +728,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setCustomId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -757,7 +754,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setPendingIntentAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -770,7 +767,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::getPendingIntent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (android_app_PendingIntent()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<android_app_PendingIntent>().map((__result__) => __result__).toList();
   }
   
   
@@ -783,7 +780,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setPendingIntent_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -809,7 +806,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -822,7 +819,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::getPoiItem_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_fence_PoiItem()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_fence_PoiItem>().map((__result__) => __result__).toList();
   }
   
   
@@ -835,7 +832,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setPoiItem_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -848,7 +845,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::getDistrictItemList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_fence_DistrictItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_fence_DistrictItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_fence_DistrictItem>()).toList();
   }
   
   
@@ -861,7 +858,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setDistrictItemList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -874,7 +871,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setPointList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -900,7 +897,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -926,7 +923,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setExpiration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -952,7 +949,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setActivatesAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -978,7 +975,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1004,7 +1001,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setEnterTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1017,7 +1014,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::getCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_DPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_DPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -1030,7 +1027,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1056,7 +1053,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setMinDis2Center_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1082,7 +1079,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setMaxDis2Center_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1108,7 +1105,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setAble_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1121,7 +1118,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::setCurrentLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1134,7 +1131,7 @@ extension com_amap_api_fence_GeoFence_Batch on List<com_amap_api_fence_GeoFence>
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.GeoFence::getCurrentLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_AMapLocation()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_AMapLocation>().map((__result__) => __result__).toList();
   }
   
   //endregion

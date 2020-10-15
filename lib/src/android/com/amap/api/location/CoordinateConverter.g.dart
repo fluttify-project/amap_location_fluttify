@@ -24,17 +24,14 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_CoordinateConverter> create__android_content_Context(android_content_Context var1) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context', {"var1": var1});
-    final object = com_amap_api_location_CoordinateConverter()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context', {"var1": var1});
   }
   
   static Future<List<com_amap_api_location_CoordinateConverter>> create_batch__android_content_Context(List<android_content_Context> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_location_CoordinateConverter()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_CoordinateConverter>('ObjectFactory::create_batchcom_amap_api_location_CoordinateConverter__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   //endregion
@@ -62,7 +59,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_CoordinateConverter()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -79,7 +76,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_CoordinateConverter()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -96,7 +93,7 @@ class com_amap_api_location_CoordinateConverter extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_location_DPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -161,7 +158,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordinateConverter::from_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_CoordinateConverter()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_CoordinateConverter>().map((__result__) => __result__).toList();
   }
   
   
@@ -174,7 +171,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordinateConverter::coord_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_CoordinateConverter()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_CoordinateConverter>().map((__result__) => __result__).toList();
   }
   
   
@@ -187,7 +184,7 @@ extension com_amap_api_location_CoordinateConverter_Batch on List<com_amap_api_l
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.CoordinateConverter::convert_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_location_DPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_location_DPoint>().map((__result__) => __result__).toList();
   }
   
   
