@@ -24,17 +24,14 @@ class com_amap_api_fence_PoiItem extends java_lang_Object with android_os_Parcel
 
   //region creators
   static Future<com_amap_api_fence_PoiItem> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_fence_PoiItem__', );
-    final object = com_amap_api_fence_PoiItem()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_fence_PoiItem__', );
   }
   
   static Future<List<com_amap_api_fence_PoiItem>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_fence_PoiItem__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_fence_PoiItem()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_fence_PoiItem>('ObjectFactory::create_batchcom_amap_api_fence_PoiItem__', {'length': length});
   }
   
   //endregion
@@ -463,7 +460,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setLatitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -489,7 +486,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setLongitude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -515,7 +512,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -541,7 +538,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setPoiType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -567,7 +564,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -593,7 +590,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -619,7 +616,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -645,7 +642,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -671,7 +668,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -710,7 +707,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setPoiName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -723,7 +720,7 @@ extension com_amap_api_fence_PoiItem_Batch on List<com_amap_api_fence_PoiItem> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.fence.PoiItem::setAdname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

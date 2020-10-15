@@ -24,17 +24,14 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
 
   //region creators
   static Future<AMapLocationCircleRegion> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocationCircleRegion', {'init': init});
-    final object = AMapLocationCircleRegion()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationCircleRegion', {'init': init});
   }
   
   static Future<List<AMapLocationCircleRegion>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapLocationCircleRegion()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<AMapLocationCircleRegion>('ObjectFactory::create_batchAMapLocationCircleRegion', {'length': length, 'init': init});
   }
   
   //endregion
@@ -42,7 +39,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
     final __result__ = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_center", {'__this__': this});
-    return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId);
+    return __result__;
   }
   
   Future<double> get_radius() async {
@@ -71,7 +68,7 @@ class AMapLocationCircleRegion extends AMapLocationRegion with NSCopying {
     // handle native call
   
   
-    return __result__ == null ? null : (AMapLocationCircleRegion()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -86,16 +83,12 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__.refId)).toList();
-    return typedResult;
+    return (resultBatch as List).cast<CLLocationCoordinate2D>().map((__result__) => __result__).toList();
   }
   
   Future<List<double>> get_radius_batch() async {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod("AMapLocationCircleRegion::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   //endregion
@@ -115,7 +108,7 @@ extension AMapLocationCircleRegion_Batch on List<AMapLocationCircleRegion> {
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('AMapLocationCircleRegion::initWithCenter_radius_identifier_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"center": center[__i__], "radius": radius[__i__], "identifier": identifier[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapLocationCircleRegion()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<AMapLocationCircleRegion>().map((__result__) => __result__).toList();
   }
   
   //endregion

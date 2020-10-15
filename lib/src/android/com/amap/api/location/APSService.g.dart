@@ -24,17 +24,14 @@ class com_amap_api_location_APSService extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_location_APSService> create__() async {
-    final __result__ = await kAmapLocationFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_location_APSService__', );
-    final object = com_amap_api_location_APSService()..refId = __result__.refId;
-    return object;
+    return kAmapLocationFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_location_APSService__', );
   }
   
   static Future<List<com_amap_api_location_APSService>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapLocationFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_location_APSService__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_location_APSService()..refId = it.refId).toList();
+    return kAmapLocationFluttifyChannel.invokeListMethod<com_amap_api_location_APSService>('ObjectFactory::create_batchcom_amap_api_location_APSService__', {'length': length});
   }
   
   //endregion
@@ -144,7 +141,7 @@ extension com_amap_api_location_APSService_Batch on List<com_amap_api_location_A
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.APSService::onCreate__android_content_Context_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -157,7 +154,7 @@ extension com_amap_api_location_APSService_Batch on List<com_amap_api_location_A
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.APSService::onCreate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -183,7 +180,7 @@ extension com_amap_api_location_APSService_Batch on List<com_amap_api_location_A
     final resultBatch = await kAmapLocationFluttifyChannel.invokeMethod('com.amap.api.location.APSService::onDestroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion
